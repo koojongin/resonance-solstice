@@ -7,6 +7,7 @@ export enum RS_GROUP {
   NIGHT_CHAINS = '흑월',
   CHAOS = '혼돈해',
 }
+
 export enum RS_COLUMN {
   FRONT = 'FRONT',
   MIDDLE = 'MIDDLE',
@@ -19,4 +20,3 @@ export enum RS_GRADE {
   R = 'R',
   N = 'N',
 }
-
