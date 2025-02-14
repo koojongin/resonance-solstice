@@ -1,22 +1,6 @@
 import { RS_COLUMN, RS_GRADE, RS_FACTION } from '@/const/character/character.enum'
 import { RSCharacter } from '@/const/character/character.interface'
 
-export const LIVIA = {
-  name: '리비아',
-  faction: RS_FACTION.COLUMBAR,
-  grade: RS_GRADE.SR,
-  column: RS_COLUMN.MIDDLE,
-  thumbnail: '013_zuppm4.png',
-}
-
-export const DESIREE = {
-  name: '데시레',
-  faction: RS_FACTION.COLUMBAR,
-  grade: RS_GRADE.SR,
-  column: RS_COLUMN.BACK,
-  thumbnail: '049_tq3d4v.png',
-}
-
 export const CONNOR = {
   name: '코나',
   faction: RS_FACTION.MUNDUS,
@@ -123,6 +107,21 @@ export const TENNIE = {
 }
 
 // SSR =================================================================================
+export const LIVIA = {
+  name: '리비아',
+  faction: RS_FACTION.COLUMBAR,
+  grade: RS_GRADE.SR,
+  column: RS_COLUMN.MIDDLE,
+  thumbnail: '013_zuppm4.png',
+}
+
+export const DESIREE = {
+  name: '데시레',
+  faction: RS_FACTION.COLUMBAR,
+  grade: RS_GRADE.SR,
+  column: RS_COLUMN.BACK,
+  thumbnail: '049_tq3d4v.png',
+}
 export const LIN = {
   name: '린',
   faction: RS_FACTION.NIGHT_CHAINS,
@@ -234,6 +233,8 @@ export const MHAR = {
   column: RS_COLUMN.FRONT,
   thumbnail: '022_ziugkz.png',
 }
+
+// R=============================================================================
 export const YAMAARASHI = {
   name: '야마아라시',
   faction: RS_FACTION.NIGHT_CHAINS,
@@ -344,38 +345,31 @@ export const BOX = {
 }
 
 export const RS_CHARACTERS: RSCharacter[] = [
-  LIVIA,
-  FLAN,
-  ELIOT,
-  HARUKA,
-  DESIREE,
-  BOX,
-  EXCALIBUR_BOX,
-  ARCANA,
-  GALORE,
   CONNOR,
   VERLAINE,
   CHARLOTTE,
-  TARA,
-  GANYA,
-  RACHEL,
-  SHIZURU,
-  PRIMING,
+  SUEN,
+  NAYUTA,
+  KATAS,
+  WENSHENG,
+  MARGIELA,
+  ARINA,
   JULIAN,
   ILONA,
-  KAREN,
-  TENNIE,
-  YEJUE,
-  AKIRA,
   STELLA,
   CAROLINE,
+  TENNIE,
+  LIVIA,
+  DESIREE,
+  LIN,
+  NABI,
+  GANYA,
+  YEJUE,
+  AKIRA,
   ACHIWA,
   KALEYA,
   YER,
   FENIA,
-  SUEN,
-  NAYUTA,
-  KATAS,
   RINA_F,
   VALENTINE,
   YOIDUKI,
@@ -383,11 +377,18 @@ export const RS_CHARACTERS: RSCharacter[] = [
   CECIL,
   MHAR,
   YAMAARASHI,
+  EXCALIBUR_BOX,
+  FLAN,
+  ELIOT,
+  HARUKA,
+  ARCANA,
+  GALORE,
+  RACHEL,
+  TARA,
+  SHIZURU,
+  PRIMING,
+  KAREN,
   JERBOA,
   SOLUM,
-  WENSHENG,
-  MARGIELA,
-  LIN,
-  NABI,
-  ARINA,
+  BOX,
 ]
