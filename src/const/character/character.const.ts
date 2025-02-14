@@ -9,27 +9,6 @@ export const LIVIA = {
   thumbnail: '013_zuppm4.png',
 }
 
-export const FLAN = {
-  name: '프란',
-  faction: RS_FACTION.COLUMBAR,
-  grade: RS_GRADE.R,
-  column: RS_COLUMN.FRONT,
-  thumbnail: '030_ucw0tu.png',
-}
-export const ELIOT = {
-  name: '엘리엇',
-  faction: RS_FACTION.COLUMBAR,
-  grade: RS_GRADE.R,
-  column: RS_COLUMN.BACK,
-  thumbnail: '060_ofbbar.png',
-}
-export const HARUKA = {
-  name: '하루카',
-  faction: RS_FACTION.COLUMBAR,
-  grade: RS_GRADE.R,
-  column: RS_COLUMN.FRONT,
-  thumbnail: '003_cbdnjj.png',
-}
 export const DESIREE = {
   name: '데시레',
   faction: RS_FACTION.COLUMBAR,
@@ -37,38 +16,7 @@ export const DESIREE = {
   column: RS_COLUMN.BACK,
   thumbnail: '049_tq3d4v.png',
 }
-export const BOX = {
-  name: 'BO-X',
-  faction: RS_FACTION.COLUMBAR,
-  grade: RS_GRADE.N,
-  column: RS_COLUMN.MIDDLE,
-  thumbnail: '034_cpyy6x.png',
-}
 
-export const EXCALIBUR_BOX = {
-  name: '성검 BO-X',
-  faction: RS_FACTION.COLUMBAR,
-  grade: RS_GRADE.R,
-  column: RS_COLUMN.FRONT,
-  thumbnail: '054_nsnyau.png',
-}
-
-//----
-
-export const ARCANA = {
-  name: '아르카나',
-  faction: RS_FACTION.MUNDUS,
-  grade: RS_GRADE.R,
-  column: RS_COLUMN.BACK,
-  thumbnail: '038_pk1pjo.png',
-}
-export const GALORE = {
-  name: '게롤',
-  faction: RS_FACTION.MUNDUS,
-  grade: RS_GRADE.R,
-  column: RS_COLUMN.MIDDLE,
-  thumbnail: '040_abq6wi.png',
-}
 export const CONNOR = {
   name: '코나',
   faction: RS_FACTION.MUNDUS,
@@ -92,42 +40,51 @@ export const CHARLOTTE = {
   thumbnail: '029_tylcoe.png',
 }
 
-export const TARA = {
-  name: '타라',
-  faction: RS_FACTION.MUNDUS,
-  grade: RS_GRADE.R,
+export const SUEN = {
+  name: '수엔',
+  faction: RS_FACTION.SOURCE_CITADEL,
+  grade: RS_GRADE.SSR,
+  column: RS_COLUMN.FRONT,
+  thumbnail: '047_w33fbf.png',
+}
+export const NAYUTA = {
+  name: '나유타',
+  faction: RS_FACTION.SOURCE_CITADEL,
+  grade: RS_GRADE.SSR,
   column: RS_COLUMN.MIDDLE,
-  thumbnail: '042_tshoce.png',
+  thumbnail: '036_fchyle.png',
 }
 
-export const GANYA = {
-  name: '간야',
-  faction: RS_FACTION.RAILWAY,
-  grade: RS_GRADE.SR,
+export const KATAS = {
+  name: '카타스',
+  faction: RS_FACTION.SOURCE_CITADEL,
+  grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
-  thumbnail: '037_tomqqk.png',
+  thumbnail: '001_b2n6ti.png',
 }
-export const RACHEL = {
-  name: '레이첼',
-  faction: RS_FACTION.RAILWAY,
-  grade: RS_GRADE.R,
+export const WENSHENG = {
+  name: '문생',
+  faction: RS_FACTION.NIGHT_CHAINS,
+  grade: RS_GRADE.SSR,
+  column: RS_COLUMN.FRONT,
+  thumbnail: '015_zihuk6.png',
+}
+
+export const MARGIELA = {
+  name: '마키라',
+  faction: RS_FACTION.NIGHT_CHAINS,
+  grade: RS_GRADE.SSR,
   column: RS_COLUMN.BACK,
-  thumbnail: '031_yxiz16.png',
+  thumbnail: '059_truhkd.png',
 }
-export const SHIZURU = {
-  name: '시즈루',
-  faction: RS_FACTION.RAILWAY,
-  grade: RS_GRADE.R,
-  column: RS_COLUMN.MIDDLE,
-  thumbnail: '055_ppvvkz.png',
-}
-export const PRIMING = {
-  name: '레이카',
-  faction: RS_FACTION.RAILWAY,
-  grade: RS_GRADE.R,
+export const ARINA = {
+  name: '아리나',
+  faction: RS_FACTION.NIGHT_CHAINS,
+  grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
-  thumbnail: '046_eonjon.png',
+  thumbnail: '066.png',
 }
+
 export const JULIAN = {
   name: '줄리안',
   faction: RS_FACTION.RAILWAY,
@@ -142,12 +99,19 @@ export const ILONA = {
   column: RS_COLUMN.BACK,
   thumbnail: '064_lfv9yi.png',
 }
-export const KAREN = {
-  name: '카렌',
-  faction: RS_FACTION.RAILWAY,
-  grade: RS_GRADE.R,
+export const STELLA = {
+  name: '스텔라',
+  faction: RS_FACTION.GARDENERS,
+  grade: RS_GRADE.SSR,
+  column: RS_COLUMN.FRONT,
+  thumbnail: '052_njx0wo.png',
+}
+export const CAROLINE = {
+  name: '캐롤라인',
+  faction: RS_FACTION.GARDENERS,
+  grade: RS_GRADE.SSR,
   column: RS_COLUMN.MIDDLE,
-  thumbnail: '035_emy63f.png',
+  thumbnail: '026_xunqec.png',
 }
 
 export const TENNIE = {
@@ -156,6 +120,29 @@ export const TENNIE = {
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
   thumbnail: '007_ptpyvu.png',
+}
+
+// SSR =================================================================================
+export const LIN = {
+  name: '린',
+  faction: RS_FACTION.NIGHT_CHAINS,
+  grade: RS_GRADE.SR,
+  column: RS_COLUMN.FRONT,
+  thumbnail: '057_apdern.png',
+}
+export const NABI = {
+  name: '나비',
+  faction: RS_FACTION.NIGHT_CHAINS,
+  grade: RS_GRADE.SR,
+  column: RS_COLUMN.FRONT,
+  thumbnail: '053_u4apx5.png',
+}
+export const GANYA = {
+  name: '간야',
+  faction: RS_FACTION.RAILWAY,
+  grade: RS_GRADE.SR,
+  column: RS_COLUMN.FRONT,
+  thumbnail: '037_tomqqk.png',
 }
 
 export const YEJUE = {
@@ -173,20 +160,7 @@ export const AKIRA = {
   column: RS_COLUMN.FRONT,
   thumbnail: '002_f2geke.png',
 }
-export const STELLA = {
-  name: '스텔라',
-  faction: RS_FACTION.GARDENERS,
-  grade: RS_GRADE.SSR,
-  column: RS_COLUMN.FRONT,
-  thumbnail: '052_njx0wo.png',
-}
-export const CAROLINE = {
-  name: '캐롤라인',
-  faction: RS_FACTION.GARDENERS,
-  grade: RS_GRADE.SSR,
-  column: RS_COLUMN.MIDDLE,
-  thumbnail: '026_xunqec.png',
-}
+
 export const ACHIWA = {
   name: '아치와',
   faction: RS_FACTION.GARDENERS,
@@ -215,28 +189,6 @@ export const FENIA = {
   grade: RS_GRADE.SR,
   column: RS_COLUMN.MIDDLE,
   thumbnail: '011_zvrizk.png',
-}
-export const SUEN = {
-  name: '수엔',
-  faction: RS_FACTION.SOURCE_CITADEL,
-  grade: RS_GRADE.SSR,
-  column: RS_COLUMN.FRONT,
-  thumbnail: '047_w33fbf.png',
-}
-export const NAYUTA = {
-  name: '나유타',
-  faction: RS_FACTION.SOURCE_CITADEL,
-  grade: RS_GRADE.SSR,
-  column: RS_COLUMN.MIDDLE,
-  thumbnail: '036_fchyle.png',
-}
-
-export const KATAS = {
-  name: '카타스',
-  faction: RS_FACTION.SOURCE_CITADEL,
-  grade: RS_GRADE.SSR,
-  column: RS_COLUMN.FRONT,
-  thumbnail: '001_b2n6ti.png',
 }
 
 export const RINA_F = {
@@ -289,6 +241,85 @@ export const YAMAARASHI = {
   column: RS_COLUMN.MIDDLE,
   thumbnail: '056_zyouus.png',
 }
+export const EXCALIBUR_BOX = {
+  name: '성검 BO-X',
+  faction: RS_FACTION.COLUMBAR,
+  grade: RS_GRADE.R,
+  column: RS_COLUMN.FRONT,
+  thumbnail: '054_nsnyau.png',
+}
+export const FLAN = {
+  name: '프란',
+  faction: RS_FACTION.COLUMBAR,
+  grade: RS_GRADE.R,
+  column: RS_COLUMN.FRONT,
+  thumbnail: '030_ucw0tu.png',
+}
+export const ELIOT = {
+  name: '엘리엇',
+  faction: RS_FACTION.COLUMBAR,
+  grade: RS_GRADE.R,
+  column: RS_COLUMN.BACK,
+  thumbnail: '060_ofbbar.png',
+}
+export const HARUKA = {
+  name: '하루카',
+  faction: RS_FACTION.COLUMBAR,
+  grade: RS_GRADE.R,
+  column: RS_COLUMN.FRONT,
+  thumbnail: '003_cbdnjj.png',
+}
+
+export const ARCANA = {
+  name: '아르카나',
+  faction: RS_FACTION.MUNDUS,
+  grade: RS_GRADE.R,
+  column: RS_COLUMN.BACK,
+  thumbnail: '038_pk1pjo.png',
+}
+export const GALORE = {
+  name: '게롤',
+  faction: RS_FACTION.MUNDUS,
+  grade: RS_GRADE.R,
+  column: RS_COLUMN.MIDDLE,
+  thumbnail: '040_abq6wi.png',
+}
+export const RACHEL = {
+  name: '레이첼',
+  faction: RS_FACTION.RAILWAY,
+  grade: RS_GRADE.R,
+  column: RS_COLUMN.BACK,
+  thumbnail: '031_yxiz16.png',
+}
+export const TARA = {
+  name: '타라',
+  faction: RS_FACTION.MUNDUS,
+  grade: RS_GRADE.R,
+  column: RS_COLUMN.MIDDLE,
+  thumbnail: '042_tshoce.png',
+}
+export const SHIZURU = {
+  name: '시즈루',
+  faction: RS_FACTION.RAILWAY,
+  grade: RS_GRADE.R,
+  column: RS_COLUMN.MIDDLE,
+  thumbnail: '055_ppvvkz.png',
+}
+export const PRIMING = {
+  name: '레이카',
+  faction: RS_FACTION.RAILWAY,
+  grade: RS_GRADE.R,
+  column: RS_COLUMN.FRONT,
+  thumbnail: '046_eonjon.png',
+}
+
+export const KAREN = {
+  name: '카렌',
+  faction: RS_FACTION.RAILWAY,
+  grade: RS_GRADE.R,
+  column: RS_COLUMN.MIDDLE,
+  thumbnail: '035_emy63f.png',
+}
 export const JERBOA = {
   name: '네즈미',
   faction: RS_FACTION.NIGHT_CHAINS,
@@ -303,42 +334,13 @@ export const SOLUM = {
   column: RS_COLUMN.FRONT,
   thumbnail: '043_tk92wy.png',
 }
-
-export const WENSHENG = {
-  name: '문생',
-  faction: RS_FACTION.NIGHT_CHAINS,
-  grade: RS_GRADE.SSR,
-  column: RS_COLUMN.FRONT,
-  thumbnail: '015_zihuk6.png',
-}
-
-export const MARGIELA = {
-  name: '마키라',
-  faction: RS_FACTION.NIGHT_CHAINS,
-  grade: RS_GRADE.SSR,
-  column: RS_COLUMN.BACK,
-  thumbnail: '059_truhkd.png',
-}
-export const LIN = {
-  name: '린',
-  faction: RS_FACTION.NIGHT_CHAINS,
-  grade: RS_GRADE.SR,
-  column: RS_COLUMN.FRONT,
-  thumbnail: '057_apdern.png',
-}
-export const NABI = {
-  name: '나비',
-  faction: RS_FACTION.NIGHT_CHAINS,
-  grade: RS_GRADE.SR,
-  column: RS_COLUMN.FRONT,
-  thumbnail: '053_u4apx5.png',
-}
-export const ARINA = {
-  name: '아리나',
-  faction: RS_FACTION.NIGHT_CHAINS,
-  grade: RS_GRADE.SSR,
-  column: RS_COLUMN.FRONT,
-  thumbnail: '066.png',
+// N ====================================================
+export const BOX = {
+  name: 'BO-X',
+  faction: RS_FACTION.COLUMBAR,
+  grade: RS_GRADE.N,
+  column: RS_COLUMN.MIDDLE,
+  thumbnail: '034_cpyy6x.png',
 }
 
 export const RS_CHARACTERS: RSCharacter[] = [
