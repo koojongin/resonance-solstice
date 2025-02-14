@@ -1,7 +1,7 @@
 import { RS_COLUMN, RS_GRADE, RS_GROUP } from '@/const/character/character.enum'
 import { RSCharacter } from '@/const/character/character.interface'
 
-const LIVIA = {
+export const LIVIA = {
   name: '리비아',
   group: RS_GROUP.COLUMBAR,
   grade: RS_GRADE.SR,
@@ -9,35 +9,35 @@ const LIVIA = {
   thumbnail: '013_zuppm4.png',
 }
 
-const FLAN = {
+export const FLAN = {
   name: '프란',
   group: RS_GROUP.COLUMBAR,
   grade: RS_GRADE.R,
   column: RS_COLUMN.FRONT,
   thumbnail: '030_ucw0tu.png',
 }
-const ELIOT = {
+export const ELIOT = {
   name: '엘리엇',
   group: RS_GROUP.COLUMBAR,
   grade: RS_GRADE.R,
   column: RS_COLUMN.BACK,
   thumbnail: '060_ofbbar.png',
 }
-const HARUKA = {
+export const HARUKA = {
   name: '하루카',
   group: RS_GROUP.COLUMBAR,
   grade: RS_GRADE.R,
   column: RS_COLUMN.FRONT,
   thumbnail: '003_cbdnjj.png',
 }
-const DESIREE = {
+export const DESIREE = {
   name: '데시레',
   group: RS_GROUP.COLUMBAR,
   grade: RS_GRADE.SR,
   column: RS_COLUMN.BACK,
   thumbnail: '049_tq3d4v.png',
 }
-const BOX = {
+export const BOX = {
   name: 'BO-X',
   group: RS_GROUP.COLUMBAR,
   grade: RS_GRADE.N,
@@ -45,7 +45,7 @@ const BOX = {
   thumbnail: '034_cpyy6x.png',
 }
 
-const EXCALIBUR_BOX = {
+export const EXCALIBUR_BOX = {
   name: '성검 BO-X',
   group: RS_GROUP.COLUMBAR,
   grade: RS_GRADE.R,
@@ -55,28 +55,28 @@ const EXCALIBUR_BOX = {
 
 //----
 
-const ARCANA = {
+export const ARCANA = {
   name: '아르카나',
   group: RS_GROUP.MUNDUS,
   grade: RS_GRADE.R,
   column: RS_COLUMN.BACK,
   thumbnail: '038_pk1pjo.png',
 }
-const GALORE = {
+export const GALORE = {
   name: '게롤',
   group: RS_GROUP.MUNDUS,
   grade: RS_GRADE.R,
   column: RS_COLUMN.MIDDLE,
   thumbnail: '040_abq6wi.png',
 }
-const CONNOR = {
+export const CONNOR = {
   name: '코나',
   group: RS_GROUP.MUNDUS,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
   thumbnail: '010_ixpccf.png',
 }
-const VERLAINE = {
+export const VERLAINE = {
   name: '베를렌',
   group: RS_GROUP.MUNDUS,
   grade: RS_GRADE.SSR,
@@ -84,7 +84,7 @@ const VERLAINE = {
   thumbnail: '025_dpzzhb.png',
 }
 
-const CHARLOTTE = {
+export const CHARLOTTE = {
   name: '샬롯',
   group: RS_GROUP.MUNDUS,
   grade: RS_GRADE.SSR,
@@ -92,7 +92,7 @@ const CHARLOTTE = {
   thumbnail: '029_tylcoe.png',
 }
 
-const TARA = {
+export const TARA = {
   name: '타라',
   group: RS_GROUP.MUNDUS,
   grade: RS_GRADE.R,
@@ -100,49 +100,49 @@ const TARA = {
   thumbnail: '042_tshoce.png',
 }
 
-const GANYA = {
+export const GANYA = {
   name: '간야',
   group: RS_GROUP.RAILWAY,
   grade: RS_GRADE.SR,
   column: RS_COLUMN.FRONT,
   thumbnail: '037_tomqqk.png',
 }
-const RACHEL = {
+export const RACHEL = {
   name: '레이첼',
   group: RS_GROUP.RAILWAY,
   grade: RS_GRADE.R,
   column: RS_COLUMN.BACK,
   thumbnail: '031_yxiz16.png',
 }
-const SHIZURU = {
+export const SHIZURU = {
   name: '시즈루',
   group: RS_GROUP.RAILWAY,
   grade: RS_GRADE.R,
   column: RS_COLUMN.MIDDLE,
   thumbnail: '055_ppvvkz.png',
 }
-const PRIMING = {
+export const PRIMING = {
   name: '레이카',
   group: RS_GROUP.RAILWAY,
   grade: RS_GRADE.R,
   column: RS_COLUMN.FRONT,
   thumbnail: '046_eonjon.png',
 }
-const JULIAN = {
+export const JULIAN = {
   name: '줄리안',
   group: RS_GROUP.RAILWAY,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.MIDDLE,
   thumbnail: '065_lypaah.png',
 }
-const ILONA = {
+export const ILONA = {
   name: '이로나',
   group: RS_GROUP.RAILWAY,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.BACK,
   thumbnail: '064_lfv9yi.png',
 }
-const KAREN = {
+export const KAREN = {
   name: '카렌',
   group: RS_GROUP.RAILWAY,
   grade: RS_GRADE.R,
@@ -150,7 +150,7 @@ const KAREN = {
   thumbnail: '035_emy63f.png',
 }
 
-const TENNIE = {
+export const TENNIE = {
   name: '테니',
   group: RS_GROUP.GARDNERS,
   grade: RS_GRADE.SSR,
@@ -158,7 +158,7 @@ const TENNIE = {
   thumbnail: '007_ptpyvu.png',
 }
 
-const YEJUE = {
+export const YEJUE = {
   name: '예주',
   group: RS_GROUP.GARDNERS,
   grade: RS_GRADE.SR,
@@ -166,42 +166,42 @@ const YEJUE = {
   thumbnail: '009_yqd9d8.png',
 }
 
-const AKIRA = {
+export const AKIRA = {
   name: '아키라',
   group: RS_GROUP.GARDNERS,
   grade: RS_GRADE.SR,
   column: RS_COLUMN.FRONT,
   thumbnail: '002_f2geke.png',
 }
-const STELLA = {
+export const STELLA = {
   name: '스텔라',
   group: RS_GROUP.GARDNERS,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
   thumbnail: '052_njx0wo.png',
 }
-const CAROLINE = {
+export const CAROLINE = {
   name: '캐롤라인',
   group: RS_GROUP.GARDNERS,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.MIDDLE,
   thumbnail: '026_xunqec.png',
 }
-const ACHIWA = {
+export const ACHIWA = {
   name: '아치와',
   group: RS_GROUP.GARDNERS,
   grade: RS_GRADE.SR,
   column: RS_COLUMN.FRONT,
   thumbnail: '024_p8vhzf.png',
 }
-const KALEYA = {
+export const KALEYA = {
   name: '카리야',
   group: RS_GROUP.GARDNERS,
   grade: RS_GRADE.SR,
   column: RS_COLUMN.MIDDLE,
   thumbnail: '006_rwxgsi.png',
 }
-const YER = {
+export const YER = {
   name: '이엘',
   group: RS_GROUP.GARDNERS,
   grade: RS_GRADE.SR,
@@ -209,21 +209,21 @@ const YER = {
   thumbnail: '050_bjsmpq.png',
 }
 
-const FENIA = {
+export const FENIA = {
   name: '페니아',
   group: RS_GROUP.SOURCE_CITADEL,
   grade: RS_GRADE.SR,
   column: RS_COLUMN.MIDDLE,
   thumbnail: '011_zvrizk.png',
 }
-const SUEN = {
+export const SUEN = {
   name: '수엔',
   group: RS_GROUP.SOURCE_CITADEL,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
   thumbnail: '047_w33fbf.png',
 }
-const NAYUTA = {
+export const NAYUTA = {
   name: '나유타',
   group: RS_GROUP.SOURCE_CITADEL,
   grade: RS_GRADE.SSR,
@@ -231,7 +231,7 @@ const NAYUTA = {
   thumbnail: '036_fchyle.png',
 }
 
-const KATAS = {
+export const KATAS = {
   name: '카타스',
   group: RS_GROUP.SOURCE_CITADEL,
   grade: RS_GRADE.SSR,
@@ -239,14 +239,14 @@ const KATAS = {
   thumbnail: '001_b2n6ti.png',
 }
 
-const RINA_F = {
+export const RINA_F = {
   name: '리나 본',
   group: RS_GROUP.SOURCE_CITADEL,
   grade: RS_GRADE.SR,
   column: RS_COLUMN.FRONT,
   thumbnail: '062_rgfnts.png',
 }
-const VALENTINE = {
+export const VALENTINE = {
   name: '발렌타인',
   group: RS_GROUP.SOURCE_CITADEL,
   grade: RS_GRADE.SR,
@@ -254,49 +254,49 @@ const VALENTINE = {
   thumbnail: '045_yljsgb.png',
 }
 
-const YOIDUKI = {
+export const YOIDUKI = {
   name: '요이즈키',
   group: RS_GROUP.NIGHT_CHAINS,
   grade: RS_GRADE.SR,
   column: RS_COLUMN.BACK,
   thumbnail: '021_xg2nff.png',
 }
-const AOBA = {
+export const AOBA = {
   name: '아오바',
   group: RS_GROUP.NIGHT_CHAINS,
   grade: RS_GRADE.SR,
   column: RS_COLUMN.MIDDLE,
   thumbnail: '063_lkf96k.png',
 }
-const CECIL = {
+export const CECIL = {
   name: '세실',
   group: RS_GROUP.NIGHT_CHAINS,
   grade: RS_GRADE.SR,
   column: RS_COLUMN.BACK,
   thumbnail: '051_i9mmmh.png',
 }
-const MHAR = {
+export const MHAR = {
   name: '마루하',
   group: RS_GROUP.NIGHT_CHAINS,
   grade: RS_GRADE.SR,
   column: RS_COLUMN.FRONT,
   thumbnail: '022_ziugkz.png',
 }
-const YAMAARASHI = {
+export const YAMAARASHI = {
   name: '야마아라시',
   group: RS_GROUP.NIGHT_CHAINS,
   grade: RS_GRADE.R,
   column: RS_COLUMN.MIDDLE,
   thumbnail: '056_zyouus.png',
 }
-const JERBOA = {
+export const JERBOA = {
   name: '네즈미',
   group: RS_GROUP.NIGHT_CHAINS,
   grade: RS_GRADE.R,
   column: RS_COLUMN.FRONT,
   thumbnail: '039_pvm3z0.png',
 }
-const SOLUM = {
+export const SOLUM = {
   name: '솔럼',
   group: RS_GROUP.NIGHT_CHAINS,
   grade: RS_GRADE.R,
@@ -304,7 +304,7 @@ const SOLUM = {
   thumbnail: '043_tk92wy.png',
 }
 
-const WENSHENG = {
+export const WENSHENG = {
   name: '문생',
   group: RS_GROUP.NIGHT_CHAINS,
   grade: RS_GRADE.SSR,
@@ -312,28 +312,28 @@ const WENSHENG = {
   thumbnail: '015_zihuk6.png',
 }
 
-const MARGIELA = {
+export const MARGIELA = {
   name: '마키라',
   group: RS_GROUP.NIGHT_CHAINS,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.BACK,
   thumbnail: '059_truhkd.png',
 }
-const LIN = {
+export const LIN = {
   name: '린',
   group: RS_GROUP.NIGHT_CHAINS,
   grade: RS_GRADE.SR,
   column: RS_COLUMN.FRONT,
   thumbnail: '057_apdern.png',
 }
-const NABI = {
+export const NABI = {
   name: '나비',
   group: RS_GROUP.NIGHT_CHAINS,
   grade: RS_GRADE.SR,
   column: RS_COLUMN.FRONT,
   thumbnail: '053_u4apx5.png',
 }
-const ARINA = {
+export const ARINA = {
   name: '아리나',
   group: RS_GROUP.NIGHT_CHAINS,
   grade: RS_GRADE.SSR,
