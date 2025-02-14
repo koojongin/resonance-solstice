@@ -1,12 +1,17 @@
 import { RSCharacter } from '@/const/character/character.interface'
 import createKey from '@/services/key-generator'
-import { convertCharacterThumbnailUrl, getFrameBgUrl } from '@/services/character-url'
-import { RS_GRADE } from '@/const/character/character.enum'
+import {
+  convertCharacterThumbnailUrl,
+  getColumnUrl,
+  getFactionUrl,
+  getFrameBgUrl,
+} from '@/services/character-url'
+import { RS_COLUMN, RS_FACTION, RS_GRADE } from '@/const/character/character.enum'
 import { useEffect, useState } from 'react'
 import { RS_CHARACTERS } from '@/const/character/character.const'
 import _ from 'lodash'
 
-export function RsCharacterList({ checkedGrades }: any) {
+export function RsCharacterList({ checkedGrades, checkedFactions, checkedColumns }: any) {
   const [characters, setCharacters] = useState<RSCharacter[]>(RS_CHARACTERS)
 
   useEffect(() => {
@@ -14,10 +19,21 @@ export function RsCharacterList({ checkedGrades }: any) {
       [...RS_CHARACTERS].filter((character) => {
         const validGrades: string[] = _.keys(_.pickBy(checkedGrades, Boolean))
         const isValidGrade = validGrades.includes(character.grade)
-        return isValidGrade
+
+        const validFactions: string[] = _.keys(_.pickBy(checkedFactions, Boolean)).map(
+          (key) => RS_FACTION[key as keyof typeof RS_FACTION],
+        )
+        const isValidFaction = validFactions.includes(character.faction)
+
+        const validColumns: string[] = _.keys(_.pickBy(checkedColumns, Boolean)).map(
+          (key) => RS_COLUMN[key as keyof typeof RS_COLUMN],
+        )
+        const isValidColumn = validColumns.includes(character.column)
+
+        return isValidGrade && isValidFaction && isValidColumn
       }),
     )
-  }, [checkedGrades])
+  }, [checkedColumns, checkedFactions, checkedGrades])
 
   return (
     <div>
@@ -36,10 +52,12 @@ export function RsCharacterList({ checkedGrades }: any) {
     </div>
   )
 }
+
 export enum RsCardSize {
   SMALL = 'SMALL',
   MEDIUM = 'MEDIUM',
 }
+
 export function RsCharacterCard({
   character,
   size = RsCardSize.MEDIUM,
@@ -90,6 +108,12 @@ export function RsCharacterCardMedium({
           src={convertCharacterThumbnailUrl(character.thumbnail, 140)}
           className="w-full z-10 absolute"
         />
+        <div className="z-20 absolute w-[40px] flex justify-center items-center m-[4px] right-0">
+          <img src={getFactionUrl(character.faction)} className="w-full" />
+        </div>
+        <div className="z-20 absolute w-[40px] flex justify-center items-center m-[4px] left-0">
+          <img src={getColumnUrl(character.column)} className="w-full" />
+        </div>
         <RsCharacterBorderBox grade={character.grade} />
       </div>
       <div className="font-bold text-gray-700 mt-[4px] text-[15px] text-center">
