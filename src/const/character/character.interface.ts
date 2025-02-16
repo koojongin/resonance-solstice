@@ -1,4 +1,4 @@
-import { RS_COLUMN, RS_FACTION, RS_GRADE } from '@/const/character/character.enum'
+import { RS_COLUMN, RS_FACTION, RS_GENDER, RS_GRADE } from '@/const/character/character.enum'
 
 export interface RSCharacter {
   name: string
@@ -7,4 +7,6 @@ export interface RSCharacter {
   faction: RS_FACTION
 
   thumbnail: string
+
+  gender: RS_GENDER
 }

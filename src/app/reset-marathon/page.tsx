@@ -1,6 +1,5 @@
 'use client'
 
-import { RsCardSize, RsCharacterCard } from '@/app/characters/rs-character-list'
 import createKey from '@/services/key-generator'
 import {
   ACHIWA,
@@ -49,6 +48,8 @@ import {
   YER,
   YOIDUKI,
 } from '@/const/character/character.const'
+import { RsCardSize } from '@/app/components/character-frame/rs-card-size.enum'
+import { RsCharacterCard } from '@/app/components/character-frame/rs-character-card'
 
 export default function ResetMarathonPage() {
   return (

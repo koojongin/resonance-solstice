@@ -100,4 +100,13 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     descLink:
       'https://wiki.biligame.com/resonance/%E5%8D%95%E9%87%91%E5%86%B0%E6%A0%B8%EF%BC%9A%E9%82%A3%E7%94%B1%E4%BB%96',
   },
+
+  {
+    title: '페니아 인뢰덱 찐종결 올인원덱',
+    leaderName: FENIA.name,
+    characters: [FENIA, STELLA, CAROLINE, TENNIE, NAYUTA],
+    desc: '해당 덱은 모든 캐릭터의 모든 장비와 옵션작이 되어 있는 상태이므로\n현재 실현 가능성이 매우 낮음',
+    descLink: 'https://arca.live/b/resonance/129033582',
+    owner: EXTERNAL_USERS['1'],
+  },
 ]

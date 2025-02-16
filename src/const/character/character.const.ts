@@ -1,4 +1,4 @@
-import { RS_COLUMN, RS_GRADE, RS_FACTION } from '@/const/character/character.enum'
+import { RS_COLUMN, RS_GRADE, RS_FACTION, RS_GENDER } from '@/const/character/character.enum'
 import { RSCharacter } from '@/const/character/character.interface'
 
 export const CONNOR = {
@@ -7,6 +7,7 @@ export const CONNOR = {
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
   thumbnail: '010_ixpccf.png',
+  gender: RS_GENDER.FEMALE,
 }
 export const VERLAINE = {
   name: '베를렌',
@@ -14,6 +15,7 @@ export const VERLAINE = {
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.BACK,
   thumbnail: '025_dpzzhb.png',
+  gender: RS_GENDER.FEMALE,
 }
 
 export const CHARLOTTE = {
@@ -22,6 +24,7 @@ export const CHARLOTTE = {
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
   thumbnail: '029_tylcoe.png',
+  gender: RS_GENDER.FEMALE,
 }
 
 export const SUEN = {
@@ -30,6 +33,7 @@ export const SUEN = {
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
   thumbnail: '047_w33fbf.png',
+  gender: RS_GENDER.FEMALE,
 }
 export const NAYUTA = {
   name: '나유타',
@@ -37,6 +41,7 @@ export const NAYUTA = {
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.MIDDLE,
   thumbnail: '036_fchyle.png',
+  gender: RS_GENDER.MALE,
 }
 
 export const KATAS = {
@@ -45,6 +50,7 @@ export const KATAS = {
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
   thumbnail: '001_b2n6ti.png',
+  gender: RS_GENDER.FEMALE,
 }
 export const WENSHENG = {
   name: '문생',
@@ -52,6 +58,7 @@ export const WENSHENG = {
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
   thumbnail: '015_zihuk6.png',
+  gender: RS_GENDER.MALE,
 }
 
 export const MARGIELA = {
@@ -60,6 +67,7 @@ export const MARGIELA = {
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.BACK,
   thumbnail: '059_truhkd.png',
+  gender: RS_GENDER.FEMALE,
 }
 export const ARINA = {
   name: '아리나',
@@ -67,6 +75,7 @@ export const ARINA = {
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
   thumbnail: '066.png',
+  gender: RS_GENDER.FEMALE,
 }
 
 export const JULIAN = {
@@ -75,6 +84,7 @@ export const JULIAN = {
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.MIDDLE,
   thumbnail: '065_lypaah.png',
+  gender: RS_GENDER.FEMALE,
 }
 export const ILONA = {
   name: '이로나',
@@ -82,6 +92,7 @@ export const ILONA = {
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.BACK,
   thumbnail: '064_lfv9yi.png',
+  gender: RS_GENDER.FEMALE,
 }
 export const STELLA = {
   name: '스텔라',
@@ -89,6 +100,7 @@ export const STELLA = {
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
   thumbnail: '052_njx0wo.png',
+  gender: RS_GENDER.FEMALE,
 }
 export const CAROLINE = {
   name: '캐롤라인',
@@ -96,6 +108,7 @@ export const CAROLINE = {
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.MIDDLE,
   thumbnail: '026_xunqec.png',
+  gender: RS_GENDER.FEMALE,
 }
 
 export const TENNIE = {
@@ -104,6 +117,7 @@ export const TENNIE = {
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
   thumbnail: '007_ptpyvu.png',
+  gender: RS_GENDER.FEMALE,
 }
 
 // SSR =================================================================================
@@ -113,6 +127,7 @@ export const LIVIA = {
   grade: RS_GRADE.SR,
   column: RS_COLUMN.MIDDLE,
   thumbnail: '013_zuppm4.png',
+  gender: RS_GENDER.FEMALE,
 }
 
 export const DESIREE = {
@@ -121,6 +136,7 @@ export const DESIREE = {
   grade: RS_GRADE.SR,
   column: RS_COLUMN.BACK,
   thumbnail: '049_tq3d4v.png',
+  gender: RS_GENDER.FEMALE,
 }
 export const LIN = {
   name: '린',
@@ -128,6 +144,7 @@ export const LIN = {
   grade: RS_GRADE.SR,
   column: RS_COLUMN.FRONT,
   thumbnail: '057_apdern.png',
+  gender: RS_GENDER.FEMALE,
 }
 export const NABI = {
   name: '나비',
@@ -135,6 +152,7 @@ export const NABI = {
   grade: RS_GRADE.SR,
   column: RS_COLUMN.FRONT,
   thumbnail: '053_u4apx5.png',
+  gender: RS_GENDER.FEMALE,
 }
 export const GANYA = {
   name: '간야',
@@ -142,6 +160,7 @@ export const GANYA = {
   grade: RS_GRADE.SR,
   column: RS_COLUMN.FRONT,
   thumbnail: '037_tomqqk.png',
+  gender: RS_GENDER.FEMALE,
 }
 
 export const YEJUE = {
@@ -150,6 +169,7 @@ export const YEJUE = {
   grade: RS_GRADE.SR,
   column: RS_COLUMN.BACK,
   thumbnail: '009_yqd9d8.png',
+  gender: RS_GENDER.FEMALE,
 }
 
 export const AKIRA = {
@@ -158,6 +178,7 @@ export const AKIRA = {
   grade: RS_GRADE.SR,
   column: RS_COLUMN.FRONT,
   thumbnail: '002_f2geke.png',
+  gender: RS_GENDER.MALE,
 }
 
 export const ACHIWA = {
@@ -166,6 +187,7 @@ export const ACHIWA = {
   grade: RS_GRADE.SR,
   column: RS_COLUMN.FRONT,
   thumbnail: '024_p8vhzf.png',
+  gender: RS_GENDER.FEMALE,
 }
 export const KALEYA = {
   name: '카리야',
@@ -173,6 +195,7 @@ export const KALEYA = {
   grade: RS_GRADE.SR,
   column: RS_COLUMN.MIDDLE,
   thumbnail: '006_rwxgsi.png',
+  gender: RS_GENDER.FEMALE,
 }
 export const YER = {
   name: '이엘',
@@ -180,6 +203,7 @@ export const YER = {
   grade: RS_GRADE.SR,
   column: RS_COLUMN.BACK,
   thumbnail: '050_bjsmpq.png',
+  gender: RS_GENDER.FEMALE,
 }
 
 export const FENIA = {
@@ -188,6 +212,7 @@ export const FENIA = {
   grade: RS_GRADE.SR,
   column: RS_COLUMN.MIDDLE,
   thumbnail: '011_zvrizk.png',
+  gender: RS_GENDER.FEMALE,
 }
 
 export const RINA_F = {
@@ -196,6 +221,7 @@ export const RINA_F = {
   grade: RS_GRADE.SR,
   column: RS_COLUMN.FRONT,
   thumbnail: '062_rgfnts.png',
+  gender: RS_GENDER.FEMALE,
 }
 export const VALENTINE = {
   name: '발렌타인',
@@ -203,6 +229,7 @@ export const VALENTINE = {
   grade: RS_GRADE.SR,
   column: RS_COLUMN.BACK,
   thumbnail: '045_yljsgb.png',
+  gender: RS_GENDER.FEMALE,
 }
 
 export const YOIDUKI = {
@@ -211,6 +238,7 @@ export const YOIDUKI = {
   grade: RS_GRADE.SR,
   column: RS_COLUMN.BACK,
   thumbnail: '021_xg2nff.png',
+  gender: RS_GENDER.FEMALE,
 }
 export const AOBA = {
   name: '아오바',
@@ -218,6 +246,7 @@ export const AOBA = {
   grade: RS_GRADE.SR,
   column: RS_COLUMN.MIDDLE,
   thumbnail: '063_lkf96k.png',
+  gender: RS_GENDER.FEMALE,
 }
 export const CECIL = {
   name: '세실',
@@ -225,6 +254,7 @@ export const CECIL = {
   grade: RS_GRADE.SR,
   column: RS_COLUMN.BACK,
   thumbnail: '051_i9mmmh.png',
+  gender: RS_GENDER.FEMALE,
 }
 export const MHAR = {
   name: '마루하',
@@ -232,6 +262,7 @@ export const MHAR = {
   grade: RS_GRADE.SR,
   column: RS_COLUMN.FRONT,
   thumbnail: '022_ziugkz.png',
+  gender: RS_GENDER.FEMALE,
 }
 
 // R=============================================================================
@@ -241,6 +272,7 @@ export const YAMAARASHI = {
   grade: RS_GRADE.R,
   column: RS_COLUMN.MIDDLE,
   thumbnail: '056_zyouus.png',
+  gender: RS_GENDER.FEMALE,
 }
 export const EXCALIBUR_BOX = {
   name: '성검 BO-X',
@@ -248,6 +280,7 @@ export const EXCALIBUR_BOX = {
   grade: RS_GRADE.R,
   column: RS_COLUMN.FRONT,
   thumbnail: '054_nsnyau.png',
+  gender: RS_GENDER.BOT,
 }
 export const FLAN = {
   name: '프란',
@@ -255,6 +288,7 @@ export const FLAN = {
   grade: RS_GRADE.R,
   column: RS_COLUMN.FRONT,
   thumbnail: '030_ucw0tu.png',
+  gender: RS_GENDER.FEMALE,
 }
 export const ELIOT = {
   name: '엘리엇',
@@ -262,6 +296,7 @@ export const ELIOT = {
   grade: RS_GRADE.R,
   column: RS_COLUMN.BACK,
   thumbnail: '060_ofbbar.png',
+  gender: RS_GENDER.FEMALE,
 }
 export const HARUKA = {
   name: '하루카',
@@ -269,6 +304,7 @@ export const HARUKA = {
   grade: RS_GRADE.R,
   column: RS_COLUMN.FRONT,
   thumbnail: '003_cbdnjj.png',
+  gender: RS_GENDER.FEMALE,
 }
 
 export const ARCANA = {
@@ -277,6 +313,7 @@ export const ARCANA = {
   grade: RS_GRADE.R,
   column: RS_COLUMN.BACK,
   thumbnail: '038_pk1pjo.png',
+  gender: RS_GENDER.FEMALE,
 }
 export const GALORE = {
   name: '게롤',
@@ -284,6 +321,7 @@ export const GALORE = {
   grade: RS_GRADE.R,
   column: RS_COLUMN.MIDDLE,
   thumbnail: '040_abq6wi.png',
+  gender: RS_GENDER.MALE,
 }
 export const RACHEL = {
   name: '레이첼',
@@ -291,6 +329,7 @@ export const RACHEL = {
   grade: RS_GRADE.R,
   column: RS_COLUMN.BACK,
   thumbnail: '031_yxiz16.png',
+  gender: RS_GENDER.FEMALE,
 }
 export const TARA = {
   name: '타라',
@@ -298,6 +337,7 @@ export const TARA = {
   grade: RS_GRADE.R,
   column: RS_COLUMN.MIDDLE,
   thumbnail: '042_tshoce.png',
+  gender: RS_GENDER.FEMALE,
 }
 export const SHIZURU = {
   name: '시즈루',
@@ -305,6 +345,7 @@ export const SHIZURU = {
   grade: RS_GRADE.R,
   column: RS_COLUMN.MIDDLE,
   thumbnail: '055_ppvvkz.png',
+  gender: RS_GENDER.FEMALE,
 }
 export const PRIMING = {
   name: '레이카',
@@ -312,6 +353,7 @@ export const PRIMING = {
   grade: RS_GRADE.R,
   column: RS_COLUMN.FRONT,
   thumbnail: '046_eonjon.png',
+  gender: RS_GENDER.FEMALE,
 }
 
 export const KAREN = {
@@ -320,6 +362,7 @@ export const KAREN = {
   grade: RS_GRADE.R,
   column: RS_COLUMN.MIDDLE,
   thumbnail: '035_emy63f.png',
+  gender: RS_GENDER.FEMALE,
 }
 export const JERBOA = {
   name: '네즈미',
@@ -327,6 +370,7 @@ export const JERBOA = {
   grade: RS_GRADE.R,
   column: RS_COLUMN.FRONT,
   thumbnail: '039_pvm3z0.png',
+  gender: RS_GENDER.FEMALE,
 }
 export const SOLUM = {
   name: '솔럼',
@@ -334,6 +378,7 @@ export const SOLUM = {
   grade: RS_GRADE.R,
   column: RS_COLUMN.FRONT,
   thumbnail: '043_tk92wy.png',
+  gender: RS_GENDER.UNKNOWN,
 }
 // N ====================================================
 export const BOX = {
@@ -342,6 +387,7 @@ export const BOX = {
   grade: RS_GRADE.N,
   column: RS_COLUMN.MIDDLE,
   thumbnail: '034_cpyy6x.png',
+  gender: RS_GENDER.BOT,
 }
 
 export const RS_CHARACTERS: RSCharacter[] = [

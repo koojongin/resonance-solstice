@@ -1,21 +1,17 @@
 import { RSCharacter } from '@/const/character/character.interface'
 import createKey from '@/services/key-generator'
-import {
-  convertCharacterThumbnailUrl,
-  getColumnUrl,
-  getFactionUrl,
-  getFrameBgUrl,
-} from '@/services/character-url'
-import { RS_COLUMN, RS_FACTION, RS_GRADE } from '@/const/character/character.enum'
+import { RS_COLUMN, RS_FACTION, RS_GENDER } from '@/const/character/character.enum'
 import { useEffect, useState } from 'react'
 import { RS_CHARACTERS } from '@/const/character/character.const'
 import _ from 'lodash'
+import { RsCharacterCard } from '@/app/components/character-frame/rs-character-card'
 
 export function RsCharacterList({
   checkedGrades,
   checkedFactions,
   checkedColumns,
   searchedKeyword,
+  checkedGenders,
 }: any) {
   const [characters, setCharacters] = useState<RSCharacter[]>(RS_CHARACTERS)
 
@@ -30,6 +26,11 @@ export function RsCharacterList({
         )
         const isValidFaction = validFactions.includes(character.faction)
 
+        const validGenders: string[] = _.keys(_.pickBy(checkedGenders, Boolean)).map(
+          (key) => RS_GENDER[key as keyof typeof RS_GENDER],
+        )
+        const isValidGender = validGenders.includes(character.gender)
+
         const validColumns: string[] = _.keys(_.pickBy(checkedColumns, Boolean)).map(
           (key) => RS_COLUMN[key as keyof typeof RS_COLUMN],
         )
@@ -37,6 +38,7 @@ export function RsCharacterList({
 
         const isValidKeyword = character.name.indexOf(searchedKeyword) >= 0
         return (
+          isValidGender &&
           isValidGrade &&
           isValidFaction &&
           isValidColumn &&
@@ -44,7 +46,7 @@ export function RsCharacterList({
         )
       }),
     )
-  }, [checkedColumns, checkedFactions, checkedGrades, searchedKeyword])
+  }, [checkedColumns, checkedFactions, checkedGenders, checkedGrades, searchedKeyword])
 
   return (
     <div>
@@ -67,85 +69,4 @@ export function RsCharacterList({
       </div>
     </div>
   )
-}
-
-export enum RsCardSize {
-  SMALL = 'SMALL',
-  MEDIUM = 'MEDIUM',
-}
-
-export function RsCharacterCard({
-  character,
-  size = RsCardSize.MEDIUM,
-}: {
-  character: RSCharacter
-  size?: RsCardSize
-}) {
-  if (size === RsCardSize.SMALL) return <RsCharacterCardSmall character={character} size={size} />
-  if (size === RsCardSize.MEDIUM) return <RsCharacterCardMedium character={character} size={size} />
-}
-
-export function RsCharacterCardSmall({
-  character,
-  size = RsCardSize.MEDIUM,
-}: {
-  character: RSCharacter
-  size?: RsCardSize
-}) {
-  return (
-    <div className="border-2 border-gray-400/80 rounded-[6px] shadow-md shadow-gray-800/70 p-[2px] cursor-pointer">
-      <div className="w-[70px] h-[70px] overflow-hidden relative rounded-[4px]">
-        <img src={getFrameBgUrl(character.grade)} className="absolute z-0 w-full bottom-[-40px]" />
-        <img
-          src={convertCharacterThumbnailUrl(character.thumbnail, 100)}
-          className="w-full z-10 absolute"
-        />
-        <RsCharacterBorderBox grade={character.grade} />
-      </div>
-      <div className="font-bold text-gray-700 mt-[4px] text-[15px] text-center">
-        {character.name}
-      </div>
-    </div>
-  )
-}
-
-export function RsCharacterCardMedium({
-  character,
-  size = RsCardSize.MEDIUM,
-}: {
-  character: RSCharacter
-  size?: RsCardSize
-}) {
-  return (
-    <div className="border-2 border-gray-400/80 rounded-[6px] shadow-md shadow-gray-800/70 p-[2px] cursor-pointer">
-      <div className="w-[140px] h-[160px] overflow-hidden relative rounded-[4px]">
-        <img src={getFrameBgUrl(character.grade)} className="absolute z-0 w-full bottom-[-40px]" />
-        <img
-          src={convertCharacterThumbnailUrl(character.thumbnail, 140)}
-          className="w-full z-10 absolute"
-        />
-        <div className="z-20 absolute w-[40px] flex justify-center items-center m-[4px] right-0">
-          <img src={getFactionUrl(character.faction)} className="w-full" />
-        </div>
-        <div className="z-20 absolute w-[40px] flex justify-center items-center m-[4px] left-0">
-          <img src={getColumnUrl(character.column)} className="w-full" />
-        </div>
-        <RsCharacterBorderBox grade={character.grade} />
-      </div>
-      <div className="font-bold text-gray-700 mt-[4px] text-[15px] text-center">
-        {character.name}
-      </div>
-    </div>
-  )
-}
-
-export function RsCharacterBorderBox({ grade }: { grade: RS_GRADE }) {
-  if (grade === RS_GRADE.N)
-    return <div className="border-[4px] border-gray-700 relative w-full h-full" />
-  if (grade === RS_GRADE.R)
-    return <div className="border-[4px] border-blue-300 relative w-full h-full" />
-  if (grade === RS_GRADE.SR)
-    return <div className="border-[4px] border-purple-500 relative w-full h-full" />
-  if (grade === RS_GRADE.SSR)
-    return <div className="border-[4px] border-yellow-500 relative w-full h-full" />
 }

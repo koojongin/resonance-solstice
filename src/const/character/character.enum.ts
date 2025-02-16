@@ -1,3 +1,10 @@
+export enum RS_GENDER {
+  MALE = '남자',
+  FEMALE = '여자',
+  UNKNOWN = '알수없음',
+  BOT = '기계',
+}
+
 export enum RS_FACTION {
   GARDENERS = '가드너',
   SOURCE_CITADEL = '소스 시타델',

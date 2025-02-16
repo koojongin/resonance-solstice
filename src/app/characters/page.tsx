@@ -1,7 +1,7 @@
 'use client'
 
 import createKey from '@/services/key-generator'
-import { RS_COLUMN, RS_FACTION, RS_GRADE } from '@/const/character/character.enum'
+import { RS_COLUMN, RS_FACTION, RS_GENDER, RS_GRADE } from '@/const/character/character.enum'
 import { useState } from 'react'
 import { CheckBoxGroup } from '@/services/common.enum'
 import { RsCharacterList } from '@/app/characters/rs-character-list'
@@ -16,6 +16,10 @@ export default function CharactersPage() {
 
   const [checkedFactions, setCheckedFactions] = useState<CheckBoxGroup>(
     Object.keys(RS_FACTION).reduce((acc, key) => ({ ...acc, [key]: true }), {}),
+  )
+
+  const [checkedGenders, setCheckedGenders] = useState<CheckBoxGroup>(
+    Object.keys(RS_GENDER).reduce((acc, key) => ({ ...acc, [key]: true }), {}),
   )
 
   const [checkedColumns, setCheckedColumns] = useState<CheckBoxGroup>(
@@ -41,6 +45,14 @@ export default function CharactersPage() {
   const handleChangeColumn = (event: any) => {
     const { name, checked } = event.target
     setCheckedColumns((prev) => ({
+      ...prev,
+      [name]: checked,
+    }))
+  }
+
+  const handleChangeGender = (event: any) => {
+    const { name, checked } = event.target
+    setCheckedGenders((prev) => ({
       ...prev,
       [name]: checked,
     }))
@@ -73,6 +85,29 @@ export default function CharactersPage() {
                     onChange={handleChangeGrade}
                   />
                   <div className="ml-[2px]">{grade}</div>
+                </label>
+              )
+            })}
+          </div>
+        </div>
+
+        <div className="flex justify-start">
+          <div className="w-[100px] flex justify-start">성별</div>
+          <div className="flex items-center gap-[4px]">
+            {Object.keys(RS_GENDER).map((gender) => {
+              return (
+                <label
+                  className="flex items-center cursor-pointer select-none px-[4px]"
+                  key={createKey()}
+                >
+                  <input
+                    type="checkbox"
+                    className="flex border-2 rounded-md border-blue-200"
+                    name={gender}
+                    checked={checkedGenders[gender]}
+                    onChange={handleChangeGender}
+                  />
+                  <div className="ml-[2px]">{RS_GENDER[gender as keyof typeof RS_GENDER]}</div>
                 </label>
               )
             })}
@@ -132,7 +167,7 @@ export default function CharactersPage() {
               className="border border-gray-400 min-w-[300px] p-[4px]"
               type="text"
               onChange={handleSearchedKeywordChange}
-              placeholder="검색할 덱 이름을 입력하세요."
+              placeholder="검색할 승무원 이름을 입력하세요."
             />
           </div>
         </div>
@@ -146,6 +181,7 @@ export default function CharactersPage() {
           checkedFactions={checkedFactions}
           checkedColumns={checkedColumns}
           searchedKeyword={searchedKeyword}
+          checkedGenders={checkedGenders}
         />
       </div>
     </div>

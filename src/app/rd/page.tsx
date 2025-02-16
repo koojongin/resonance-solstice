@@ -1,13 +1,15 @@
 'use client'
 
-import { RsCardSize, RsCharacterCard } from '@/app/characters/rs-character-list'
 import createKey from '@/services/key-generator'
 import { useEffect, useState } from 'react'
 import { RECOMMENDATION_DECKS } from '@/app/rd/rd-decks.const'
-import { debounce } from 'lodash'
+import _, { debounce } from 'lodash'
+import { RsCharacterCard } from '@/app/components/character-frame/rs-character-card'
+import { RsCardSize } from '@/app/components/character-frame/rs-card-size.enum'
 
 export default function RecommendationDeckPage() {
-  const [rdDecks, setRdDecks] = useState(RECOMMENDATION_DECKS)
+  const REVERSED_ALL_DECKS = _.reverse(RECOMMENDATION_DECKS)
+  const [rdDecks, setRdDecks] = useState(REVERSED_ALL_DECKS)
   const [searchedKeyword, setSearchedKeyword] = useState('')
 
   const openLink = (link?: string) => {
@@ -20,9 +22,9 @@ export default function RecommendationDeckPage() {
   }, 300)
 
   useEffect(() => {
-    if (!searchedKeyword) setRdDecks(RECOMMENDATION_DECKS)
+    if (!searchedKeyword) setRdDecks(REVERSED_ALL_DECKS)
     setRdDecks(
-      RECOMMENDATION_DECKS.filter((deck) => {
+      REVERSED_ALL_DECKS.filter((deck) => {
         return (
           deck.characters
             .map((c) => c.name)
@@ -35,6 +37,10 @@ export default function RecommendationDeckPage() {
 
   return (
     <div>
+      <div className="mb-[10px] text-gray-600/90 font-bold">
+        * 모든 덱은 설명과, 가이드 링크를 읽어 보시는것을 추천드립니다. 현재 한섭 상황과 돌파수에
+        따라 가능성 유뮤가 존재합니다.
+      </div>
       <div className="mb-[10px] flex flex-col gap-[8px]">
         <div className="border rounded p-[8px]">
           <div className="flex items-center gap-[10px]">
@@ -50,7 +56,7 @@ export default function RecommendationDeckPage() {
 
         <div className="flex items-stretch gap-[10px] mb-[4px]">
           <div className="rounded-[4px] inline-flex p-[4px] text-white bg-gray-700 border-white/50 border-dotted border">
-            덱 - {rdDecks.length} / {RECOMMENDATION_DECKS.length}
+            덱 - {rdDecks.length} / {REVERSED_ALL_DECKS.length}
           </div>
           {searchedKeyword && (
             <div className="rounded-[4px] flex items-center">"{searchedKeyword}" 검색됨</div>
