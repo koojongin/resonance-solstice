@@ -52,6 +52,10 @@ export default function RootLayout({
           content="https://res.cloudinary.com/dqihpypxi/image/upload/v1739699861/resonance/etc/banner_001_bkltao.png"
         />
         <meta property="og:url" content="https://resonance-solstice.vercel.app/" />
+        <meta
+          name="google-site-verification"
+          content="tF9OdRRToB9MDttTVe3pdTXv1M5m2yoYbhHIvySVtgw"
+        />
       </head>
       <body className={`relative ${cls(nanumGothic.className)}`}>
         <Analytics />
