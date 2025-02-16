@@ -6,7 +6,7 @@ import Link from 'next/link'
 export default function MainHeaderBar() {
   const router = useRouter()
   return (
-    <div className="flex flex-wrap gap-[10px]">
+    <div className="flex flex-wrap gap-[10px] ff-dh text-[22px]">
       <Link href="https://arca.live/b/resonance" target="_blank">
         <div className="flex items-center text-white gap-[10px] cursor-pointer">
           <img className="w-[30px] rounded-full border-[2px]" src="/img/arca.svg" />

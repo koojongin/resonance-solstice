@@ -2,6 +2,7 @@ import { RS_COLUMN, RS_GRADE, RS_FACTION, RS_GENDER } from '@/const/character/ch
 import { RSCharacter } from '@/const/character/character.interface'
 
 export const CONNOR = {
+  originName: 'CONNOR',
   name: '코나',
   faction: RS_FACTION.MUNDUS,
   grade: RS_GRADE.SSR,
@@ -10,6 +11,7 @@ export const CONNOR = {
   gender: RS_GENDER.FEMALE,
 }
 export const VERLAINE = {
+  originName: 'VERLAINE',
   name: '베를렌',
   faction: RS_FACTION.MUNDUS,
   grade: RS_GRADE.SSR,
@@ -19,6 +21,7 @@ export const VERLAINE = {
 }
 
 export const CHARLOTTE = {
+  originName: 'CHARLOTTE',
   name: '샬롯',
   faction: RS_FACTION.MUNDUS,
   grade: RS_GRADE.SSR,
@@ -28,6 +31,7 @@ export const CHARLOTTE = {
 }
 
 export const SUEN = {
+  originName: 'SUEN',
   name: '수엔',
   faction: RS_FACTION.SOURCE_CITADEL,
   grade: RS_GRADE.SSR,
@@ -36,6 +40,7 @@ export const SUEN = {
   gender: RS_GENDER.FEMALE,
 }
 export const NAYUTA = {
+  originName: 'NAYUTA',
   name: '나유타',
   faction: RS_FACTION.SOURCE_CITADEL,
   grade: RS_GRADE.SSR,
@@ -45,6 +50,7 @@ export const NAYUTA = {
 }
 
 export const KATAS = {
+  originName: 'KATAS',
   name: '카타스',
   faction: RS_FACTION.SOURCE_CITADEL,
   grade: RS_GRADE.SSR,
@@ -53,6 +59,7 @@ export const KATAS = {
   gender: RS_GENDER.FEMALE,
 }
 export const WENSHENG = {
+  originName: 'WENSHENG',
   name: '문생',
   faction: RS_FACTION.NIGHT_CHAINS,
   grade: RS_GRADE.SSR,
@@ -62,6 +69,7 @@ export const WENSHENG = {
 }
 
 export const MARGIELA = {
+  originName: 'MARGIELA',
   name: '마키라',
   faction: RS_FACTION.NIGHT_CHAINS,
   grade: RS_GRADE.SSR,
@@ -70,6 +78,7 @@ export const MARGIELA = {
   gender: RS_GENDER.FEMALE,
 }
 export const ARINA = {
+  originName: 'ARINA',
   name: '아리나',
   faction: RS_FACTION.NIGHT_CHAINS,
   grade: RS_GRADE.SSR,
@@ -79,6 +88,7 @@ export const ARINA = {
 }
 
 export const JULIAN = {
+  originName: 'JULIAN',
   name: '줄리안',
   faction: RS_FACTION.RAILWAY,
   grade: RS_GRADE.SSR,
@@ -87,6 +97,7 @@ export const JULIAN = {
   gender: RS_GENDER.FEMALE,
 }
 export const ILONA = {
+  originName: 'ILONA',
   name: '이로나',
   faction: RS_FACTION.RAILWAY,
   grade: RS_GRADE.SSR,
@@ -95,6 +106,7 @@ export const ILONA = {
   gender: RS_GENDER.FEMALE,
 }
 export const STELLA = {
+  originName: 'STELLA',
   name: '스텔라',
   faction: RS_FACTION.GARDENERS,
   grade: RS_GRADE.SSR,
@@ -103,6 +115,7 @@ export const STELLA = {
   gender: RS_GENDER.FEMALE,
 }
 export const CAROLINE = {
+  originName: 'CAROLINE',
   name: '캐롤라인',
   faction: RS_FACTION.GARDENERS,
   grade: RS_GRADE.SSR,
@@ -112,6 +125,7 @@ export const CAROLINE = {
 }
 
 export const TENNIE = {
+  originName: 'TENNIE',
   name: '테니',
   faction: RS_FACTION.GARDENERS,
   grade: RS_GRADE.SSR,
@@ -122,6 +136,7 @@ export const TENNIE = {
 
 // SSR =================================================================================
 export const LIVIA = {
+  originName: 'LIVIA',
   name: '리비아',
   faction: RS_FACTION.COLUMBAR,
   grade: RS_GRADE.SR,
@@ -131,6 +146,7 @@ export const LIVIA = {
 }
 
 export const DESIREE = {
+  originName: 'DESIREE',
   name: '데시레',
   faction: RS_FACTION.COLUMBAR,
   grade: RS_GRADE.SR,
@@ -139,6 +155,7 @@ export const DESIREE = {
   gender: RS_GENDER.FEMALE,
 }
 export const LIN = {
+  originName: 'LIN',
   name: '린',
   faction: RS_FACTION.NIGHT_CHAINS,
   grade: RS_GRADE.SR,
@@ -147,6 +164,7 @@ export const LIN = {
   gender: RS_GENDER.FEMALE,
 }
 export const NABI = {
+  originName: 'NABI',
   name: '나비',
   faction: RS_FACTION.NIGHT_CHAINS,
   grade: RS_GRADE.SR,
@@ -155,6 +173,7 @@ export const NABI = {
   gender: RS_GENDER.FEMALE,
 }
 export const GANYA = {
+  originName: 'GANYA',
   name: '간야',
   faction: RS_FACTION.RAILWAY,
   grade: RS_GRADE.SR,
@@ -164,6 +183,7 @@ export const GANYA = {
 }
 
 export const YEJUE = {
+  originName: 'YEJUE',
   name: '예주',
   faction: RS_FACTION.GARDENERS,
   grade: RS_GRADE.SR,
@@ -173,6 +193,7 @@ export const YEJUE = {
 }
 
 export const AKIRA = {
+  originName: 'AKIRA',
   name: '아키라',
   faction: RS_FACTION.GARDENERS,
   grade: RS_GRADE.SR,
@@ -182,6 +203,7 @@ export const AKIRA = {
 }
 
 export const ACHIWA = {
+  originName: 'ACHIWA',
   name: '아치와',
   faction: RS_FACTION.GARDENERS,
   grade: RS_GRADE.SR,
@@ -190,6 +212,7 @@ export const ACHIWA = {
   gender: RS_GENDER.FEMALE,
 }
 export const KALEYA = {
+  originName: 'KALEYA',
   name: '카리야',
   faction: RS_FACTION.GARDENERS,
   grade: RS_GRADE.SR,
@@ -198,6 +221,7 @@ export const KALEYA = {
   gender: RS_GENDER.FEMALE,
 }
 export const YER = {
+  originName: 'YER',
   name: '이엘',
   faction: RS_FACTION.GARDENERS,
   grade: RS_GRADE.SR,
@@ -207,6 +231,7 @@ export const YER = {
 }
 
 export const FENIA = {
+  originName: 'FENIA',
   name: '페니아',
   faction: RS_FACTION.SOURCE_CITADEL,
   grade: RS_GRADE.SR,
@@ -216,6 +241,7 @@ export const FENIA = {
 }
 
 export const RINA_F = {
+  originName: 'RINA_F',
   name: '리나 본',
   faction: RS_FACTION.SOURCE_CITADEL,
   grade: RS_GRADE.SR,
@@ -224,6 +250,7 @@ export const RINA_F = {
   gender: RS_GENDER.FEMALE,
 }
 export const VALENTINE = {
+  originName: 'VALENTINE',
   name: '발렌타인',
   faction: RS_FACTION.SOURCE_CITADEL,
   grade: RS_GRADE.SR,
@@ -233,6 +260,7 @@ export const VALENTINE = {
 }
 
 export const YOIDUKI = {
+  originName: 'YOIDUKI',
   name: '요이즈키',
   faction: RS_FACTION.NIGHT_CHAINS,
   grade: RS_GRADE.SR,
@@ -241,6 +269,7 @@ export const YOIDUKI = {
   gender: RS_GENDER.FEMALE,
 }
 export const AOBA = {
+  originName: 'AOBA',
   name: '아오바',
   faction: RS_FACTION.NIGHT_CHAINS,
   grade: RS_GRADE.SR,
@@ -249,6 +278,7 @@ export const AOBA = {
   gender: RS_GENDER.FEMALE,
 }
 export const CECIL = {
+  originName: 'CECIL',
   name: '세실',
   faction: RS_FACTION.NIGHT_CHAINS,
   grade: RS_GRADE.SR,
@@ -257,6 +287,7 @@ export const CECIL = {
   gender: RS_GENDER.FEMALE,
 }
 export const MHAR = {
+  originName: 'MHAR',
   name: '마루하',
   faction: RS_FACTION.NIGHT_CHAINS,
   grade: RS_GRADE.SR,
@@ -267,6 +298,7 @@ export const MHAR = {
 
 // R=============================================================================
 export const YAMAARASHI = {
+  originName: 'YAMAARASHI',
   name: '야마아라시',
   faction: RS_FACTION.NIGHT_CHAINS,
   grade: RS_GRADE.R,
@@ -275,6 +307,7 @@ export const YAMAARASHI = {
   gender: RS_GENDER.FEMALE,
 }
 export const EXCALIBUR_BOX = {
+  originName: 'EXCALIBUR_BOX',
   name: '성검 BO-X',
   faction: RS_FACTION.COLUMBAR,
   grade: RS_GRADE.R,
@@ -283,6 +316,7 @@ export const EXCALIBUR_BOX = {
   gender: RS_GENDER.BOT,
 }
 export const FLAN = {
+  originName: 'FLAN',
   name: '프란',
   faction: RS_FACTION.COLUMBAR,
   grade: RS_GRADE.R,
@@ -291,6 +325,7 @@ export const FLAN = {
   gender: RS_GENDER.FEMALE,
 }
 export const ELIOT = {
+  originName: 'ELIOT',
   name: '엘리엇',
   faction: RS_FACTION.COLUMBAR,
   grade: RS_GRADE.R,
@@ -299,6 +334,7 @@ export const ELIOT = {
   gender: RS_GENDER.FEMALE,
 }
 export const HARUKA = {
+  originName: 'HARUKA',
   name: '하루카',
   faction: RS_FACTION.COLUMBAR,
   grade: RS_GRADE.R,
@@ -308,6 +344,7 @@ export const HARUKA = {
 }
 
 export const ARCANA = {
+  originName: 'ARCANA',
   name: '아르카나',
   faction: RS_FACTION.MUNDUS,
   grade: RS_GRADE.R,
@@ -316,6 +353,7 @@ export const ARCANA = {
   gender: RS_GENDER.FEMALE,
 }
 export const GALORE = {
+  originName: 'GALORE',
   name: '게롤',
   faction: RS_FACTION.MUNDUS,
   grade: RS_GRADE.R,
@@ -324,6 +362,7 @@ export const GALORE = {
   gender: RS_GENDER.MALE,
 }
 export const RACHEL = {
+  originName: 'RACHEL',
   name: '레이첼',
   faction: RS_FACTION.RAILWAY,
   grade: RS_GRADE.R,
@@ -332,6 +371,7 @@ export const RACHEL = {
   gender: RS_GENDER.FEMALE,
 }
 export const TARA = {
+  originName: 'TARA',
   name: '타라',
   faction: RS_FACTION.MUNDUS,
   grade: RS_GRADE.R,
@@ -340,6 +380,7 @@ export const TARA = {
   gender: RS_GENDER.FEMALE,
 }
 export const SHIZURU = {
+  originName: 'SHIZURU',
   name: '시즈루',
   faction: RS_FACTION.RAILWAY,
   grade: RS_GRADE.R,
@@ -348,6 +389,7 @@ export const SHIZURU = {
   gender: RS_GENDER.FEMALE,
 }
 export const PRIMING = {
+  originName: 'PRIMING',
   name: '레이카',
   faction: RS_FACTION.RAILWAY,
   grade: RS_GRADE.R,
@@ -357,6 +399,7 @@ export const PRIMING = {
 }
 
 export const KAREN = {
+  originName: 'KAREN',
   name: '카렌',
   faction: RS_FACTION.RAILWAY,
   grade: RS_GRADE.R,
@@ -365,6 +408,7 @@ export const KAREN = {
   gender: RS_GENDER.FEMALE,
 }
 export const JERBOA = {
+  originName: 'JERBOA',
   name: '네즈미',
   faction: RS_FACTION.NIGHT_CHAINS,
   grade: RS_GRADE.R,
@@ -373,6 +417,7 @@ export const JERBOA = {
   gender: RS_GENDER.FEMALE,
 }
 export const SOLUM = {
+  originName: 'SOLUM',
   name: '솔럼',
   faction: RS_FACTION.NIGHT_CHAINS,
   grade: RS_GRADE.R,
@@ -382,6 +427,7 @@ export const SOLUM = {
 }
 // N ====================================================
 export const BOX = {
+  originName: 'BOX',
   name: 'BO-X',
   faction: RS_FACTION.COLUMBAR,
   grade: RS_GRADE.N,

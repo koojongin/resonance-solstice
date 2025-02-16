@@ -2,14 +2,20 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
 import { Analytics } from '@vercel/analytics/react'
-import { Nanum_Gothic } from 'next/font/google'
+import { Do_Hyeon, Nanum_Gothic } from 'next/font/google'
 import React, { ReactNode } from 'react'
 import MainSideBar from '@/app/components/main-side-bar/main-side-bar'
 import MainHeaderBar from '@/app/components/main-side-bar/main-header-bar'
+import { cls } from '@/services/util'
 
-const notoSansKr = Nanum_Gothic({
-  subsets: ['latin'], // 또는 preload: false
-  weight: ['400', '700', '800'], // 가변 폰트가 아닌 경우, 사용할 fontWeight 배열
+const nanumGothic = Nanum_Gothic({
+  subsets: ['latin'],
+  weight: ['400', '700', '800'],
+})
+
+const doHyeonKr = Do_Hyeon({
+  subsets: ['latin'],
+  weight: ['400'],
 })
 
 const geistSans = localFont({
@@ -28,10 +34,6 @@ export const metadata: Metadata = {
   description: '레조넌스',
 }
 
-const cls = (...classnames: string[]) => {
-  return classnames.join(' ')
-}
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -42,7 +44,7 @@ export default function RootLayout({
       <head>
         <link href="./globals.css" rel="stylesheet" />
       </head>
-      <body className={`relative ${cls(notoSansKr.className)}`}>
+      <body className={`relative ${cls(nanumGothic.className)}`}>
         <Analytics />
         <div
           className="bg-center bg-cover min-w-full h-full absolute -z-10 opacity-10 bg-repeat"

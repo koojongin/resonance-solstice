@@ -5,3 +5,15 @@
 html {
     line-height: initial;
 }
+
+:root {
+    --font-primary: 'Nanum Gothic', sans-serif;
+    --font-secondary: 'Do Hyeon', sans-serif;
+}
+
+.ff-ng{
+    font-family: var(--font-primary);
+}
+.ff-dh{
+    font-family: var(--font-secondary);
+}

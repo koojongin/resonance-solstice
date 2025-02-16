@@ -2,6 +2,7 @@ import { RsCardSize } from '@/app/components/character-frame/rs-card-size.enum'
 import { RSCharacter } from '@/const/character/character.interface'
 import { RsCharacterCardSmall } from '@/app/components/character-frame/rs-character-card-small'
 import { RsCharacterCardMedium } from '@/app/components/character-frame/rs-character-card-medium'
+import { useRouter } from 'next/navigation'
 
 export function RsCharacterCard({
   character,
@@ -10,6 +11,22 @@ export function RsCharacterCard({
   character: RSCharacter
   size?: RsCardSize
 }) {
-  if (size === RsCardSize.SMALL) return <RsCharacterCardSmall character={character} size={size} />
-  if (size === RsCardSize.MEDIUM) return <RsCharacterCardMedium character={character} size={size} />
+  const router = useRouter()
+  const routeToDetail = (selectedCharacter: RSCharacter) => {
+    if (!selectedCharacter) return
+    router.push(`/characters/${character.originName}`)
+  }
+
+  if (size === RsCardSize.SMALL)
+    return (
+      <div onClick={() => routeToDetail(character)}>
+        <RsCharacterCardSmall character={character} size={size} />
+      </div>
+    )
+  if (size === RsCardSize.MEDIUM)
+    return (
+      <div onClick={() => routeToDetail(character)}>
+        <RsCharacterCardMedium character={character} size={size} />
+      </div>
+    )
 }
