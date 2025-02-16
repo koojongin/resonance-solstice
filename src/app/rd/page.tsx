@@ -6,6 +6,7 @@ import { RECOMMENDATION_DECKS } from '@/app/rd/rd-decks.const'
 import _, { debounce } from 'lodash'
 import { RsCharacterCard } from '@/app/components/character-frame/rs-character-card'
 import { RsCardSize } from '@/app/components/character-frame/rs-card-size.enum'
+import { getColumnUrl } from '@/services/character-url'
 
 export default function RecommendationDeckPage() {
   const REVERSED_ALL_DECKS = _.reverse(RECOMMENDATION_DECKS)
@@ -84,6 +85,9 @@ export default function RecommendationDeckPage() {
                           </div>
                         )}
                         <RsCharacterCard size={RsCardSize.SMALL} character={character} />
+                        <div className="h-[30px] py-[4px] flex items-center justify-center">
+                          <img src={getColumnUrl(character.column)} className="h-full" />
+                        </div>
                       </div>
                     )
                   })}
