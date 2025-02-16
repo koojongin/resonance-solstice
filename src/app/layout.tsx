@@ -7,6 +7,7 @@ import React, { ReactNode } from 'react'
 import MainSideBar from '@/app/components/main-side-bar/main-side-bar'
 import MainHeaderBar from '@/app/components/main-side-bar/main-header-bar'
 import { cls } from '@/services/util'
+import GoogleAnalyticsComponent from '@/services/google-analytics'
 
 const nanumGothic = Nanum_Gothic({
   subsets: ['latin'],
@@ -58,6 +59,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`relative ${cls(nanumGothic.className)}`}>
+        <GoogleAnalyticsComponent />
         <Analytics />
         <div
           className="bg-center bg-cover min-w-full h-full absolute -z-10 opacity-10 bg-repeat"
