@@ -44,6 +44,8 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link href="./globals.css" rel="stylesheet" />
+        <meta name="application-name" content="레조넌스: 솔스티스 정보 공유 사이트" />
+        <meta name="og:site_name" content="레조넌스: 솔스티스 정보 공유 사이트" />
         <meta name="description" content="레조넌스: 솔스티스 정보 공유 사이트" />
         <meta name="keywords" content="레조넌스, resonance, solstice" />
         <meta property="og:title" content="레조넌스: 솔스티스 정보 공유 사이트" />
