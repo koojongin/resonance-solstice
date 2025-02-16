@@ -17,6 +17,7 @@ import {
   MARGIELA,
   NAYUTA,
   PRIMING,
+  RACHEL,
   RINA_F,
   SHIZURU,
   STELLA,
@@ -167,6 +168,22 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     leaderName: WENSHENG.name,
     characters: [WENSHENG, CONNOR, ELIOT, LIVIA, AKIRA],
     desc: '동결을 사용할 수 있는 캐릭터는 많지 않기 때문에 약간 제한이 있습니다만, 동결 상태의 적은 찢어지는 것이 효과가 있기 때문에 샬롯과도 궁합이 좋을 것입니다.',
+    descLink: 'https://gamerch.com/resonance/877307',
+  },
+
+  {
+    title: '보라 카드 덱 1',
+    leaderName: MARGIELA.name,
+    characters: [MARGIELA, ARINA, STELLA, NAYUTA, VERLAINE],
+    desc: '마키라 의 강력한 일격으로 적을 닦을 수 있습니다.\n보라색 카드의 특징으로서 혼수 나 혼돈 등의 상태 이상 부여를 자랑으로 하는 캐릭터를 편성하고 있습니다.',
+    descLink: 'https://gamerch.com/resonance/877307',
+  },
+
+  {
+    title: '레드 카드 샬롯 덱',
+    leaderName: CHARLOTTE.name,
+    characters: [CHARLOTTE, STELLA, ELIOT, ARCANA, RACHEL],
+    desc: '드로우 범용으로서 나유타,스텔라를 편성해, 한층 더 레드 카드를 드로우 하기 쉽게 시즈루, 타라 등을 편성하면 좋을 것입니다.\n공격을 받기 쉬운 샬롯을 지킬 수 있도록 아리나, 아르카나 등의 회복역도 편성합시다.',
     descLink: 'https://gamerch.com/resonance/877307',
   },
 ]
