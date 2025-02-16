@@ -1,17 +1,29 @@
 import {
+  AKIRA,
   AOBA,
   ARCANA,
+  ARINA,
   CAROLINE,
+  CHARLOTTE,
+  CONNOR,
   ELIOT,
   FENIA,
+  FLAN,
+  JERBOA,
   KALEYA,
+  KAREN,
   KATAS,
+  LIVIA,
   MARGIELA,
   NAYUTA,
+  PRIMING,
   RINA_F,
+  SHIZURU,
   STELLA,
   TENNIE,
   VALENTINE,
+  VERLAINE,
+  WENSHENG,
   YEJUE,
   YER,
   YOIDUKI,
@@ -108,5 +120,53 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     desc: '해당 덱은 모든 캐릭터의 모든 장비와 옵션작이 되어 있는 상태이므로\n현재 실현 가능성이 매우 낮음',
     descLink: 'https://arca.live/b/resonance/129033582',
     owner: EXTERNAL_USERS['1'],
+  },
+
+  {
+    title: '샬롯 덱 1',
+    leaderName: CHARLOTTE.name,
+    characters: [CHARLOTTE, NAYUTA, LIVIA, ARCANA, SHIZURU],
+    desc: '주로 적이 많은 무대에서 활약할 수 있습니다.\n드로우 범용으로서 나유타나 스텔라 를 편성해, 한층 더 레드 카드를 드로우 하기 쉽게 시즈 르나 타라 등을 편성하면 좋을 것입니다.\n공격을 받기 쉬운 샬롯을 지킬 수 있도록 아리나,아르카나 등의 회복역도 편성합시다.',
+    descLink: 'https://gamerch.com/resonance/877307',
+  },
+
+  {
+    title: '샬롯 덱 2',
+    leaderName: CHARLOTTE.name,
+    characters: [CHARLOTTE, NAYUTA, ARINA, ARCANA, SHIZURU],
+    desc: '주로 적이 많은 무대에서 활약할 수 있습니다.\n드로우 범용으로서 나유타나 스텔라 를 편성해, 한층 더 레드 카드를 드로우 하기 쉽게 시즈 르나 타라 등을 편성하면 좋을 것입니다.\n공격을 받기 쉬운 샬롯을 지킬 수 있도록 아리나,아르카나 등의 회복역도 편성합시다.',
+    descLink: 'https://gamerch.com/resonance/877307',
+  },
+
+  {
+    title: '초반 초보자용 무과금 덱 1',
+    leaderName: FENIA.name,
+    characters: [FENIA, YEJUE, LIVIA, FLAN, ARCANA],
+    desc: '배포 캐릭터를 중심으로 매우 편성하기 쉬운 SR 페니아 번개 덱입니다.\n프란(R)이 탱커로 녹기 쉽기 때문에, 아르카나(R)로 HP나 코스트의 회복을 돕습니다.',
+    descLink: 'https://gamerch.com/resonance/877307',
+  },
+
+  {
+    title: '초반 초보자용 무과금 덱 2',
+    leaderName: JERBOA.name,
+    characters: [JERBOA, PRIMING, LIVIA, ARCANA, KAREN],
+    desc: '네즈미(R)의 레드 카드를 끌어당기는 덱입니다.\n앞열이 버틸수 있도록 카렌(R) 등의 힐러를 편성합시다.\n타라(R)도 궁합이 좋습니다.',
+    descLink: 'https://gamerch.com/resonance/877307',
+  },
+
+  {
+    title: '냉기 덱 1',
+    leaderName: WENSHENG.name,
+    characters: [WENSHENG, TENNIE, VERLAINE, LIVIA, YER],
+    desc: '동결을 사용할 수 있는 캐릭터는 많지 않기 때문에 약간 제한이 있습니다만, 동결 상태의 적은 찢어지는 것이 효과가 있기 때문에 샬롯과도 궁합이 좋을 것입니다.',
+    descLink: 'https://gamerch.com/resonance/877307',
+  },
+
+  {
+    title: '냉기 덱 2',
+    leaderName: WENSHENG.name,
+    characters: [WENSHENG, CONNOR, ELIOT, LIVIA, AKIRA],
+    desc: '동결을 사용할 수 있는 캐릭터는 많지 않기 때문에 약간 제한이 있습니다만, 동결 상태의 적은 찢어지는 것이 효과가 있기 때문에 샬롯과도 궁합이 좋을 것입니다.',
+    descLink: 'https://gamerch.com/resonance/877307',
   },
 ]

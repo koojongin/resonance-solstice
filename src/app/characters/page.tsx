@@ -11,7 +11,8 @@ export default function CharactersPage() {
   const [searchedKeyword, setSearchedKeyword] = useState('')
 
   const [checkedGrades, setCheckedGrades] = useState<CheckBoxGroup>(
-    Object.keys(RS_GRADE).reduce((acc, key) => ({ ...acc, [key]: key === RS_GRADE.SSR }), {}),
+    // Object.keys(RS_GRADE).reduce((acc, key) => ({ ...acc, [key]: key === RS_GRADE.SSR }), {}),
+    Object.keys(RS_GRADE).reduce((acc, key) => ({ ...acc, [key]: true }), {}),
   )
 
   const [checkedFactions, setCheckedFactions] = useState<CheckBoxGroup>(

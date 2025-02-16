@@ -8,8 +8,8 @@ import { RsCharacterCard } from '@/app/components/character-frame/rs-character-c
 import { RsCardSize } from '@/app/components/character-frame/rs-card-size.enum'
 import { getColumnUrl } from '@/services/character-url'
 
+const REVERSED_ALL_DECKS = _.reverse(RECOMMENDATION_DECKS)
 export default function RecommendationDeckPage() {
-  const REVERSED_ALL_DECKS = _.reverse(RECOMMENDATION_DECKS)
   const [rdDecks, setRdDecks] = useState(REVERSED_ALL_DECKS)
   const [searchedKeyword, setSearchedKeyword] = useState('')
 
@@ -93,7 +93,7 @@ export default function RecommendationDeckPage() {
                   })}
                 </div>
                 <div
-                  className={`w-full whitespace-pre-line p-[8px] border border-gray-300 rounded-[4px] shadow-gray-400/30 shadow-md ${descLink ? 'cursor-pointer hover:bg-blue-300/10' : ''}`}
+                  className={`overflow-y-scroll w-full whitespace-pre-line break-words p-[8px] border border-gray-300 rounded-[4px] shadow-gray-400/30 shadow-md ${descLink ? 'cursor-pointer hover:bg-blue-300/10' : ''}`}
                   onClick={() => openLink(descLink)}
                 >
                   {desc}
