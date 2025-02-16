@@ -43,6 +43,15 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link href="./globals.css" rel="stylesheet" />
+        <meta name="description" content="레조넌스: 솔스티스 정보 공유 사이트" />
+        <meta name="keywords" content="레조넌스, resonance, solstice" />
+        <meta property="og:title" content="레조넌스: 솔스티스 정보 공유 사이트" />
+        <meta name="robots" content="index, follow" />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/dqihpypxi/image/upload/v1739699861/resonance/etc/banner_001_bkltao.png"
+        />
+        <meta property="og:url" content="https://resonance-solstice.vercel.app/" />
       </head>
       <body className={`relative ${cls(nanumGothic.className)}`}>
         <Analytics />

@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://kairisei-million-author-ring.vercel.app/
+Host: https://resonance-solstice.vercel.app/
 
 # Sitemaps
 Sitemap: https://kairisei-million-author-ring.vercel.app/sitemap.xml
