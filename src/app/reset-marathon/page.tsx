@@ -53,14 +53,25 @@ import { RsCardSize } from '@/app/components/character-frame/rs-card-size.enum'
 
 export default function ResetMarathonPage() {
   return (
-    <div>
+    <div className="flex flex-col gap-[10px]">
       <div>
         <div>* 오픈 당시 기준 이륙 티어 리스트 정보글(2025/02/14)</div>
-        <div>* 누군가 쓴 주관적 글을 정보 기반의 데이터라 개인적으로 잘 판단해서 사용해주세요)</div>
-        <div>
-          아카라이브 원문 :{' '}
-          <a href="https://arca.live/b/resonance/128851764?mode=best&p=1" target="_blank">
-            [바로가기]
+        <div>* 누군가 주관적으로 쓴 글을 퍼온거라 개인적으로 잘 판단해서 사용해주세요)</div>
+        <div className="font-bold text-red-400">무기한 쿠폰 코드 : CBCRR23, RESONANCE</div>
+        <div className="mt-[4px] flex gap-[4px]">
+          <a
+            href="https://arca.live/b/resonance/128851764?mode=best&p=1"
+            target="_blank"
+            className="bg-blue-300 p-[4px] rounded text-white shadow shadow-blue-200"
+          >
+            [티어리스트 원문 링크]
+          </a>
+          <a
+            href="https://arca.live/b/resonance/128890448"
+            target="_blank"
+            className="bg-blue-300 p-[4px] rounded text-white shadow shadow-blue-200"
+          >
+            [리세마라 가이드 링크]
           </a>
         </div>
       </div>
