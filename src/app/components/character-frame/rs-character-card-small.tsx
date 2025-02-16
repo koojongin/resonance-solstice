@@ -1,7 +1,7 @@
 import { RSCharacter } from '@/const/character/character.interface'
 import { convertCharacterThumbnailUrl, getFrameBgUrl } from '@/services/character-url'
-import { RsCardSize } from '@/app/characters/rs-character-list'
 import { RsCharacterBorderBox } from '@/app/components/character-frame/rs-character-border-box'
+import { RsCardSize } from '@/app/components/character-frame/rs-card-size.enum'
 
 export function RsCharacterCardSmall({
   character,

@@ -48,8 +48,8 @@ import {
   YER,
   YOIDUKI,
 } from '@/const/character/character.const'
-import { RsCardSize } from '@/app/components/character-frame/rs-card-size.enum'
 import { RsCharacterCard } from '@/app/components/character-frame/rs-character-card'
+import { RsCardSize } from '@/app/components/character-frame/rs-card-size.enum'
 
 export default function ResetMarathonPage() {
   return (
