@@ -5,7 +5,6 @@ import createKey from '@/services/key-generator'
 import { useEffect, useState } from 'react'
 import { RECOMMENDATION_DECKS } from '@/app/rd/rd-decks.const'
 import { debounce } from 'lodash'
-import { RS_CHARACTERS } from '@/const/character/character.const'
 
 export default function RecommendationDeckPage() {
   const [rdDecks, setRdDecks] = useState(RECOMMENDATION_DECKS)
@@ -37,7 +36,7 @@ export default function RecommendationDeckPage() {
   return (
     <div>
       <div className="mb-[10px] flex flex-col gap-[8px]">
-        <div className={'border rounded p-[8px]'}>
+        <div className="border rounded p-[8px]">
           <div className="flex items-center gap-[10px]">
             <div>검색:</div>
             <input
