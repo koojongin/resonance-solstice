@@ -1,13 +1,15 @@
 'use client'
 
-import { RS_CHARACTERS } from '@/const/character/character.const'
 import createKey from '@/services/key-generator'
 import { RS_COLUMN, RS_FACTION, RS_GRADE } from '@/const/character/character.enum'
 import { useState } from 'react'
 import { CheckBoxGroup } from '@/services/common.enum'
 import { RsCharacterList } from '@/app/characters/rs-character-list'
+import { debounce } from 'lodash'
 
 export default function CharactersPage() {
+  const [searchedKeyword, setSearchedKeyword] = useState('')
+
   const [checkedGrades, setCheckedGrades] = useState<CheckBoxGroup>(
     Object.keys(RS_GRADE).reduce((acc, key) => ({ ...acc, [key]: key === RS_GRADE.SSR }), {}),
   )
@@ -43,6 +45,10 @@ export default function CharactersPage() {
       [name]: checked,
     }))
   }
+
+  const handleSearchedKeywordChange = debounce((event: any) => {
+    setSearchedKeyword(event.target.value)
+  }, 300)
 
   return (
     <div>
@@ -118,6 +124,18 @@ export default function CharactersPage() {
             })}
           </div>
         </div>
+
+        <div className="flex justify-start">
+          <div className="w-[100px] flex justify-start items-center">검색</div>
+          <div className="flex items-center gap-[4px] my-[5px]">
+            <input
+              className="border border-gray-400 min-w-[300px] p-[4px]"
+              type="text"
+              onChange={handleSearchedKeywordChange}
+              placeholder="검색할 덱 이름을 입력하세요."
+            />
+          </div>
+        </div>
         {/* /////// */}
       </div>
 
@@ -127,6 +145,7 @@ export default function CharactersPage() {
           checkedGrades={checkedGrades}
           checkedFactions={checkedFactions}
           checkedColumns={checkedColumns}
+          searchedKeyword={searchedKeyword}
         />
       </div>
     </div>

@@ -11,7 +11,12 @@ import { useEffect, useState } from 'react'
 import { RS_CHARACTERS } from '@/const/character/character.const'
 import _ from 'lodash'
 
-export function RsCharacterList({ checkedGrades, checkedFactions, checkedColumns }: any) {
+export function RsCharacterList({
+  checkedGrades,
+  checkedFactions,
+  checkedColumns,
+  searchedKeyword,
+}: any) {
   const [characters, setCharacters] = useState<RSCharacter[]>(RS_CHARACTERS)
 
   useEffect(() => {
@@ -30,15 +35,26 @@ export function RsCharacterList({ checkedGrades, checkedFactions, checkedColumns
         )
         const isValidColumn = validColumns.includes(character.column)
 
-        return isValidGrade && isValidFaction && isValidColumn
+        const isValidKeyword = character.name.indexOf(searchedKeyword) >= 0
+        return (
+          isValidGrade &&
+          isValidFaction &&
+          isValidColumn &&
+          (searchedKeyword ? isValidKeyword : true)
+        )
       }),
     )
-  }, [checkedColumns, checkedFactions, checkedGrades])
+  }, [checkedColumns, checkedFactions, checkedGrades, searchedKeyword])
 
   return (
     <div>
-      <div className="rounded-[4px] inline-flex mb-[4px] p-[4px] text-white bg-gray-700 border-white/50 border-dotted border">
-        {characters.length} / {RS_CHARACTERS.length}
+      <div className="flex items-stretch gap-[10px] mb-[4px]">
+        <div className="rounded-[4px] inline-flex p-[4px] text-white bg-gray-700 border-white/50 border-dotted border">
+          승무원 - {characters.length} / {RS_CHARACTERS.length}
+        </div>
+        {searchedKeyword && (
+          <div className="rounded-[4px] flex items-center">"{searchedKeyword}" 검색됨</div>
+        )}
       </div>
       <div className="flex flex-wrap gap-[10px]">
         {characters.map((character) => {

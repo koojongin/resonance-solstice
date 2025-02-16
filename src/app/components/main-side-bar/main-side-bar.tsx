@@ -11,6 +11,9 @@ export default function MainSideBar() {
       <div className={`border-l-[1px]${menuCss}`} onClick={() => router.push('/characters')}>
         캐릭터
       </div>
+      <div className={menuCss} onClick={() => router.push('/rd')}>
+        추천덱
+      </div>
       <div className={menuCss} onClick={() => router.push('/reset-marathon')}>
         티어표
       </div>
