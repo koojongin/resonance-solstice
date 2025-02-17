@@ -2,16 +2,21 @@
 
 import { useParams } from 'next/navigation'
 import { ALL_SALE_ITEMS } from '@/app/shop/shop.menu.const'
-import { ShopSaleItem, ThumbnailDirection } from '@/app/shop/shop.enum'
-import { transformCImage } from '@/services/character-url'
+import { ShopSaleItemType, ThumbnailDirection } from '@/app/shop/shop.enum'
+import { convertCharacterThumbnailUrl, transformCImage } from '@/services/character-url'
 import createKey from '@/services/key-generator'
+import { ShopSaleItem, ShopSalePackage } from '@/app/shop/shop.interface'
+import { RS_CHARACTERS } from '@/const/character/character.const'
+import { useNextDepthNavigator } from '@/services/navigation'
 
 export default function ShopItemNamePage() {
   const { shopItemName } = useParams()
   const decodedShopItemName = decodeURIComponent(shopItemName as string)
-  const saleItem: ShopSaleItem = ALL_SALE_ITEMS.find((item) => item.name === decodedShopItemName)!
+  const salePackage: ShopSalePackage = ALL_SALE_ITEMS.find(
+    (item) => item.name === decodedShopItemName,
+  )!
 
-  if (!saleItem) return <div className="ff-dh text-[30px]">잘못된 접근입니다.</div>
+  if (!salePackage) return <div className="ff-dh text-[30px]">잘못된 접근입니다.</div>
 
   return (
     <div className="flex flex-col gap-[4px]">
@@ -22,31 +27,34 @@ export default function ShopItemNamePage() {
           backgroundPosition: '-500px 0px',
         }}
         onClick={() => {
-          window.open(saleItem.thumbnail, '_blank')
+          window.open(salePackage.thumbnail, '_blank')
         }}
       >
-        {saleItem.thumbnailDirection === ThumbnailDirection.VERTICAL && (
-          <img src={transformCImage(saleItem.thumbnail, 200)} className="w-[200px] rounded-[4px]" />
+        {salePackage.thumbnailDirection === ThumbnailDirection.VERTICAL && (
+          <img
+            src={transformCImage(salePackage.thumbnail, 200)}
+            className="w-[200px] rounded-[4px]"
+          />
         )}
-        {saleItem.thumbnailDirection === ThumbnailDirection.HORIZONTAL && (
-          <img src={transformCImage(saleItem.thumbnail, 600)} className="w-[600px]" />
+        {salePackage.thumbnailDirection === ThumbnailDirection.HORIZONTAL && (
+          <img src={transformCImage(salePackage.thumbnail, 600)} className="w-[600px]" />
         )}
       </div>
 
       <hr className="my-[10px]" />
 
       <div className="ff-dh text-[30px] text-gray-700/90 flex items-center gap-[4px]">
-        {saleItem.category && <div>{saleItem.category} &gt;</div>}
-        {saleItem.name}
+        {salePackage.category && <div>{salePackage.category} &gt;</div>}
+        {salePackage.name}
       </div>
 
       <div>
-        {!saleItem.items && (
+        {!salePackage.items && (
           <div>상세 설명이 와야되는 영역 - 아이템 상세 데이터가 현재 등록되지 않음.</div>
         )}
-        {saleItem.items && (
+        {salePackage.items && (
           <div className="flex flex-wrap gap-[4px] w-full">
-            {saleItem.items?.map((item) => {
+            {salePackage.items?.map((item) => {
               return (
                 <div
                   key={createKey()}
@@ -57,7 +65,7 @@ export default function ShopItemNamePage() {
                       {item.earnType}
                     </div>
                   )}
-                  <div className="p-[4px] min-w-[200px] border-r text-gray-700">{item.name}</div>
+                  <ShopPackageItemNameBox item={item} />
                   <div className="min-w-[50px] w-full flex items-center justify-end ff-ng text-[16px] px-[4px]">
                     {item.amount.toLocaleString()}
                   </div>
@@ -67,6 +75,33 @@ export default function ShopItemNamePage() {
           </div>
         )}
       </div>
+    </div>
+  )
+}
+
+function ShopPackageItemNameBox({ item }: { item: ShopSaleItem }) {
+  const { iType, name } = item
+  const { router } = useNextDepthNavigator()
+  if (iType === ShopSaleItemType.CHARACTER) {
+    const character = RS_CHARACTERS.find((c) => c.originName === name)!
+    return (
+      <div
+        className="p-[4px] min-w-[200px] border-r text-gray-700 cursor-pointer hover:bg-gray-300"
+        onClick={() => router.push(`/characters/${character.originName}`)}
+      >
+        <div className="h-[50px] overflow-hidden relative">
+          <div className="absolute left-0 bg-black/30 px-[4px] py-[2px] text-white">
+            {character.name}
+          </div>
+          <img src={convertCharacterThumbnailUrl(character.thumbnail, 100)} />
+        </div>
+      </div>
+    )
+  }
+
+  return (
+    <div className="p-[4px] min-w-[200px] flex items-center border-r text-gray-700">
+      {item.name}
     </div>
   )
 }

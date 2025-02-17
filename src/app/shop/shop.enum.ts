@@ -7,29 +7,20 @@ export enum ShopMenuName {
   COMMAND_MARKET = 'command-market',
 }
 
-export interface ShopMenu {
-  key: ShopMenuName
-  name: string
-  saleItems: ShopSaleItem[]
-}
-
 export enum ThumbnailDirection {
   HORIZONTAL = 'HORIZONTAL',
   VERTICAL = 'VERTICAL',
-}
-
-export interface ShopSaleItem {
-  name: string
-  thumbnail: string
-  thumbnailDirection: ThumbnailDirection
-  price: number
-  category?: string
-
-  items?: any[]
 }
 
 export enum SaleItemEarnType {
   DIRECT = '즉시',
   DAILY_LOGIN = '매일 로그인 시',
   FIRST_PURCHASE = '첫 충전 시',
+}
+
+export enum ShopSaleItemType {
+  CHARACTER = 'CHARACTER',
+  WEAPON = 'WEAPON',
+  ARMOR = 'ARMOR',
+  ACCESSORY = 'ACCESSORY',
 }
