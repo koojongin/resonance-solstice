@@ -29,10 +29,46 @@ export const saleItemsRecommendation = [
 
 export const saleItemsSpecialPackage = [
   {
-    name: '크리스탈 트리 재배 키트',
+    name: '60 크리스탈',
     thumbnail:
-      'https://res.cloudinary.com/dqihpypxi/image/upload/v1739760064/resonance/shop/%ED%81%AC%EB%A6%AC%EC%8A%A4%ED%83%88_%ED%8A%B8%EB%A6%AC_%EC%9E%AC%EB%B0%B0_%ED%82%A4%ED%8A%B8_j80ulh.webp',
-    price: 0,
+      'https://res.cloudinary.com/dqihpypxi/image/upload/v1739765328/resonance/shop/60crystal_jahiiq.webp',
+    price: 1500,
+  },
+  {
+    name: '300 크리스탈',
+    thumbnail:
+      'https://res.cloudinary.com/dqihpypxi/image/upload/v1739765328/resonance/shop/300cry_ayn2lm.webp',
+    price: 7500,
+  },
+  {
+    name: '980 크리스탈',
+    thumbnail:
+      'https://res.cloudinary.com/dqihpypxi/image/upload/v1739765328/resonance/shop/980cry_vwhrsz.webp',
+    price: 23000,
+  },
+  {
+    name: '1980 크리스탈',
+    thumbnail:
+      'https://res.cloudinary.com/dqihpypxi/image/upload/v1739765328/resonance/shop/1980cry_m8hzbs.webp',
+    price: 45000,
+  },
+  {
+    name: '3280 크리스탈',
+    thumbnail:
+      'https://res.cloudinary.com/dqihpypxi/image/upload/v1739765328/resonance/shop/3280cry_gzcawl.webp',
+    price: 75000,
+  },
+  {
+    name: '4880 크리스탈',
+    thumbnail:
+      'https://res.cloudinary.com/dqihpypxi/image/upload/v1739765328/resonance/shop/4880cry_bfspse.webp',
+    price: 110000,
+  },
+  {
+    name: '6480 크리스탈',
+    thumbnail:
+      'https://res.cloudinary.com/dqihpypxi/image/upload/v1739765328/resonance/shop/6480cry_msdlej.webp',
+    price: 149000,
   },
 ]
 
