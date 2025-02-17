@@ -20,15 +20,22 @@ export default function CharacterDetailPage() {
     <div>
       {character && (
         <div className="flex justify-center">
-          <div className="relative w-[800px] rounded-[4px] border overflow-hidden shadow-md shadow-gray-800">
+          <div className="relative w-full rounded-[4px] border overflow-hidden shadow-md shadow-gray-800">
             <img
               className="w-full z-0"
-              src="https://res.cloudinary.com/dqihpypxi/image/upload/w_600/v1739699861/resonance/etc/profile-bg_pxdpv5.png"
+              // src="https://res.cloudinary.com/dqihpypxi/image/upload/w_600/v1739699861/resonance/etc/profile-bg_pxdpv5.png"
+              src="https://patchwiki.biligame.com/images/resonance/1/15/rnk1ixlziks176gslros7c3tfon5xz7.png"
             />
-            <img
-              src={convertCharacterThumbnailUrl(character.thumbnail)}
-              className="absolute bottom-0 left-0 z-10"
-            />
+            {!character.thumbnailLarge && (
+              <img
+                src={convertCharacterThumbnailUrl(character.thumbnail)}
+                className="absolute bottom-0 left-0 z-10"
+              />
+            )}
+            {character.thumbnailLarge && (
+              <img src={character.thumbnailLarge} className="absolute top-0 z-10 w-1/2" />
+            )}
+
             <div className="w-[450px] absolute right-0 z-20 top-0 text-white">
               {/* Profile Right Top */}
               <div className="relative mt-[20px] ff-dh">

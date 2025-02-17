@@ -8,6 +8,8 @@ export const CONNOR = {
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
   thumbnail: '010_ixpccf.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/0/05/9a0t69tjgc5kdplwl14qtjrvwoktl0l.png',
   gender: RS_GENDER.FEMALE,
 }
 export const VERLAINE = {
@@ -17,6 +19,8 @@ export const VERLAINE = {
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.BACK,
   thumbnail: '025_dpzzhb.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/b/bf/6ojswpyudt2itmzc18etludn6upy1jw.png',
   gender: RS_GENDER.FEMALE,
 }
 
@@ -27,6 +31,8 @@ export const CHARLOTTE = {
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
   thumbnail: '029_tylcoe.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/b/b0/41834ks3migirhg4rpeny08yn82kac9.png',
   gender: RS_GENDER.FEMALE,
 }
 
@@ -37,6 +43,8 @@ export const SUEN = {
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
   thumbnail: '047_w33fbf.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/c/cf/0tqy7eq6ssf7ig3awcbz5ryhj99enuo.png',
   gender: RS_GENDER.FEMALE,
 }
 export const NAYUTA = {
@@ -46,6 +54,8 @@ export const NAYUTA = {
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.MIDDLE,
   thumbnail: '036_fchyle.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/a/a5/qivpzu3hp9xcf8pbee78v62mamhcg54.png',
   gender: RS_GENDER.MALE,
 }
 
@@ -56,6 +66,8 @@ export const KATAS = {
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
   thumbnail: '001_b2n6ti.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/2/26/d0zmjdgbaavvz65rt1x75wmz98mzhlf.png',
   gender: RS_GENDER.FEMALE,
 }
 export const WENSHENG = {
@@ -65,6 +77,8 @@ export const WENSHENG = {
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
   thumbnail: '015_zihuk6.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/5/57/9ee53solbl2ad9nnnqgi66d4qz65jt5.png',
   gender: RS_GENDER.MALE,
 }
 
@@ -75,6 +89,8 @@ export const MARGIELA = {
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.BACK,
   thumbnail: '059_truhkd.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/c/c8/j6u0kb1tkny7frnqpb31dh5lqtjeuhm.png',
   gender: RS_GENDER.FEMALE,
 }
 export const ARINA = {
@@ -84,6 +100,8 @@ export const ARINA = {
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
   thumbnail: '066.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/b/b3/0hgvwlxnn90ej5gdegr626qfu2qd3k6.png',
   gender: RS_GENDER.FEMALE,
 }
 
@@ -91,9 +109,11 @@ export const JULIAN = {
   originName: 'JULIAN',
   name: '줄리안',
   faction: RS_FACTION.RAILWAY,
-  grade: RS_GRADE.SSR,
+  grade: RS_GRADE.R,
   column: RS_COLUMN.MIDDLE,
   thumbnail: '065_lypaah.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/2/28/ekt8mn8h5jrr3om99vbk9fncnh40n7p.png',
   gender: RS_GENDER.FEMALE,
 }
 export const ILONA = {
@@ -103,6 +123,8 @@ export const ILONA = {
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.BACK,
   thumbnail: '064_lfv9yi.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/3/36/6sxqoudj4yquts61juhjndbjjkizkg8.png',
   gender: RS_GENDER.FEMALE,
 }
 export const STELLA = {
@@ -112,6 +134,8 @@ export const STELLA = {
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
   thumbnail: '052_njx0wo.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/f/f0/p4cfdxs2i4o1en2a0frfazvdrrgco7b.png',
   gender: RS_GENDER.FEMALE,
 }
 export const CAROLINE = {
@@ -121,6 +145,8 @@ export const CAROLINE = {
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.MIDDLE,
   thumbnail: '026_xunqec.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/0/05/3frnu76sjtpwxxgcxanptudema2wcny.png',
   gender: RS_GENDER.FEMALE,
 }
 
@@ -131,6 +157,8 @@ export const TENNIE = {
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
   thumbnail: '007_ptpyvu.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/0/01/4szdlgh32hs2a2ix0xrykkda6r3n59t.png',
   gender: RS_GENDER.FEMALE,
 }
 
@@ -142,6 +170,8 @@ export const LIVIA = {
   grade: RS_GRADE.SR,
   column: RS_COLUMN.MIDDLE,
   thumbnail: '013_zuppm4.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/f/fa/cmc116ksybrtm9nju6dgtnncf3cowxq.png',
   gender: RS_GENDER.FEMALE,
 }
 
@@ -152,6 +182,8 @@ export const DESIREE = {
   grade: RS_GRADE.SR,
   column: RS_COLUMN.BACK,
   thumbnail: '049_tq3d4v.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/e/e3/f5y6bkv6plh4ys6t511q6dhh3wqc8yf.png',
   gender: RS_GENDER.FEMALE,
 }
 export const LIN = {
@@ -161,6 +193,8 @@ export const LIN = {
   grade: RS_GRADE.SR,
   column: RS_COLUMN.FRONT,
   thumbnail: '057_apdern.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/a/aa/6hgt3kpwto7r7nsw74qp25ul1ivum4m.png',
   gender: RS_GENDER.FEMALE,
 }
 export const NABI = {
@@ -170,6 +204,8 @@ export const NABI = {
   grade: RS_GRADE.SR,
   column: RS_COLUMN.FRONT,
   thumbnail: '053_u4apx5.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/a/a4/0xgfv0hmtqp6xp4ipeg07ww4t1kb3if.png',
   gender: RS_GENDER.FEMALE,
 }
 export const GANYA = {
@@ -179,6 +215,8 @@ export const GANYA = {
   grade: RS_GRADE.SR,
   column: RS_COLUMN.FRONT,
   thumbnail: '037_tomqqk.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/8/80/ohu80ok7b7frhq2boq5rdgu05xn266l.png',
   gender: RS_GENDER.FEMALE,
 }
 
@@ -189,6 +227,8 @@ export const YEJUE = {
   grade: RS_GRADE.SR,
   column: RS_COLUMN.BACK,
   thumbnail: '009_yqd9d8.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/1/16/imcfwq3032e74e87bvouc4brkdbu1zk.png',
   gender: RS_GENDER.FEMALE,
 }
 
@@ -199,6 +239,8 @@ export const AKIRA = {
   grade: RS_GRADE.SR,
   column: RS_COLUMN.FRONT,
   thumbnail: '002_f2geke.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/5/5b/p6j6dw7ca61qwin8ku21o2wkrpiuqw6.png',
   gender: RS_GENDER.MALE,
 }
 
@@ -209,6 +251,8 @@ export const ACHIWA = {
   grade: RS_GRADE.SR,
   column: RS_COLUMN.FRONT,
   thumbnail: '024_p8vhzf.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/8/88/7qwv1i6zw6khr70y8n2s0jkp1ek1vwv.png',
   gender: RS_GENDER.FEMALE,
 }
 export const KALEYA = {
@@ -218,8 +262,11 @@ export const KALEYA = {
   grade: RS_GRADE.SR,
   column: RS_COLUMN.MIDDLE,
   thumbnail: '006_rwxgsi.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/f/f2/3xvfr0qdm6maz8xhxdsww9lu69o5ol7.png',
   gender: RS_GENDER.FEMALE,
 }
+
 export const YER = {
   originName: 'YER',
   name: '이엘',
@@ -227,6 +274,8 @@ export const YER = {
   grade: RS_GRADE.SR,
   column: RS_COLUMN.BACK,
   thumbnail: '050_bjsmpq.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/1/1c/dh1zi289rrhvfl9mqa7ekdh19hxxfej.png',
   gender: RS_GENDER.FEMALE,
 }
 
@@ -237,6 +286,8 @@ export const FENIA = {
   grade: RS_GRADE.SR,
   column: RS_COLUMN.MIDDLE,
   thumbnail: '011_zvrizk.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/b/b6/s1o9vzq86fheyu8gf6syl7w5xm5ju74.png',
   gender: RS_GENDER.FEMALE,
 }
 
@@ -247,6 +298,8 @@ export const RINA_F = {
   grade: RS_GRADE.SR,
   column: RS_COLUMN.FRONT,
   thumbnail: '062_rgfnts.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/2/21/5ifvgdu1em67ce3tg9fb2wy4rytf7cp.png',
   gender: RS_GENDER.FEMALE,
 }
 export const VALENTINE = {
@@ -256,6 +309,8 @@ export const VALENTINE = {
   grade: RS_GRADE.SR,
   column: RS_COLUMN.BACK,
   thumbnail: '045_yljsgb.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/5/57/bpxtexr875z8o462i1noghr8ioph5lp.png',
   gender: RS_GENDER.FEMALE,
 }
 
@@ -266,6 +321,8 @@ export const YOIDUKI = {
   grade: RS_GRADE.SR,
   column: RS_COLUMN.BACK,
   thumbnail: '021_xg2nff.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/8/81/lib7qd47f8d372gyzo9oxcfsgrtq80b.png',
   gender: RS_GENDER.FEMALE,
 }
 export const AOBA = {
@@ -275,6 +332,8 @@ export const AOBA = {
   grade: RS_GRADE.SR,
   column: RS_COLUMN.MIDDLE,
   thumbnail: '063_lkf96k.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/5/52/5sh1ae1n6madncxvo5w3kuak8jodax3.png',
   gender: RS_GENDER.FEMALE,
 }
 export const CECIL = {
@@ -284,6 +343,8 @@ export const CECIL = {
   grade: RS_GRADE.SR,
   column: RS_COLUMN.BACK,
   thumbnail: '051_i9mmmh.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/c/c6/6zz7xcvfbotjyp4dmfwg09f167tt6en.png',
   gender: RS_GENDER.FEMALE,
 }
 export const MHAR = {
@@ -293,6 +354,8 @@ export const MHAR = {
   grade: RS_GRADE.SR,
   column: RS_COLUMN.FRONT,
   thumbnail: '022_ziugkz.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/f/f4/sw3uqn61nf49rzdl945n6chvl25y2z5.png',
   gender: RS_GENDER.FEMALE,
 }
 
@@ -304,6 +367,8 @@ export const YAMAARASHI = {
   grade: RS_GRADE.R,
   column: RS_COLUMN.MIDDLE,
   thumbnail: '056_zyouus.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/d/d0/8gmzp72szrtejhb609zejwaxc761agn.png',
   gender: RS_GENDER.FEMALE,
 }
 export const EXCALIBUR_BOX = {
@@ -313,6 +378,8 @@ export const EXCALIBUR_BOX = {
   grade: RS_GRADE.R,
   column: RS_COLUMN.FRONT,
   thumbnail: '054_nsnyau.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/d/df/5lndyg3jd75ur83nfu7hqoo0jalmox3.png',
   gender: RS_GENDER.BOT,
 }
 export const FLAN = {
@@ -322,6 +389,8 @@ export const FLAN = {
   grade: RS_GRADE.R,
   column: RS_COLUMN.FRONT,
   thumbnail: '030_ucw0tu.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/d/d8/4umt38z7ssnzv3ng1f80vxopnykk8k8.png',
   gender: RS_GENDER.FEMALE,
 }
 export const ELIOT = {
@@ -331,6 +400,8 @@ export const ELIOT = {
   grade: RS_GRADE.R,
   column: RS_COLUMN.BACK,
   thumbnail: '060_ofbbar.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/4/45/gxhue5iozrskitwt438t8qxdqeyerro.png',
   gender: RS_GENDER.FEMALE,
 }
 export const HARUKA = {
@@ -340,6 +411,8 @@ export const HARUKA = {
   grade: RS_GRADE.R,
   column: RS_COLUMN.FRONT,
   thumbnail: '003_cbdnjj.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/b/bd/5rd3yqxd1dqol98zs7fhksl82dy6j8b.png',
   gender: RS_GENDER.FEMALE,
 }
 
@@ -350,6 +423,8 @@ export const ARCANA = {
   grade: RS_GRADE.R,
   column: RS_COLUMN.BACK,
   thumbnail: '038_pk1pjo.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/0/06/haejh1ofar1493iqzhug2omvdbgca58.png',
   gender: RS_GENDER.FEMALE,
 }
 export const GALORE = {
@@ -359,6 +434,8 @@ export const GALORE = {
   grade: RS_GRADE.R,
   column: RS_COLUMN.MIDDLE,
   thumbnail: '040_abq6wi.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/e/e1/c381dey854jyytr9ddm6ozqsd5wfcb8.png',
   gender: RS_GENDER.MALE,
 }
 export const RACHEL = {
@@ -368,6 +445,8 @@ export const RACHEL = {
   grade: RS_GRADE.R,
   column: RS_COLUMN.BACK,
   thumbnail: '031_yxiz16.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/0/06/gpx0k50kqbrja07qzv28908hjdx6lx8.png',
   gender: RS_GENDER.FEMALE,
 }
 export const TARA = {
@@ -377,6 +456,8 @@ export const TARA = {
   grade: RS_GRADE.R,
   column: RS_COLUMN.MIDDLE,
   thumbnail: '042_tshoce.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/f/f6/n5qm4f12tqviyxo8dzipn18akz5eanl.png',
   gender: RS_GENDER.FEMALE,
 }
 export const SHIZURU = {
@@ -386,6 +467,8 @@ export const SHIZURU = {
   grade: RS_GRADE.R,
   column: RS_COLUMN.MIDDLE,
   thumbnail: '055_ppvvkz.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/0/0f/9lq2jonjzrlm1dato70haldspkawlro.png',
   gender: RS_GENDER.FEMALE,
 }
 export const PRIMING = {
@@ -395,6 +478,8 @@ export const PRIMING = {
   grade: RS_GRADE.R,
   column: RS_COLUMN.FRONT,
   thumbnail: '046_eonjon.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/5/5e/1sp4lmybycse6qggx54lyy47rnvcudw.png',
   gender: RS_GENDER.FEMALE,
 }
 
@@ -405,6 +490,8 @@ export const KAREN = {
   grade: RS_GRADE.R,
   column: RS_COLUMN.MIDDLE,
   thumbnail: '035_emy63f.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/9/97/aqznvlhzyyynldsm4rzl0jyjttgliqw.png',
   gender: RS_GENDER.FEMALE,
 }
 export const JERBOA = {
@@ -414,6 +501,8 @@ export const JERBOA = {
   grade: RS_GRADE.R,
   column: RS_COLUMN.FRONT,
   thumbnail: '039_pvm3z0.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/d/d7/8ax6f0mj5856na4ewm6bv65hqroofox.png',
   gender: RS_GENDER.FEMALE,
 }
 export const SOLUM = {
@@ -423,6 +512,8 @@ export const SOLUM = {
   grade: RS_GRADE.R,
   column: RS_COLUMN.FRONT,
   thumbnail: '043_tk92wy.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/d/d2/alm4gcw9rrnlw39y9m8zami54owvjx2.png',
   gender: RS_GENDER.UNKNOWN,
 }
 // N ====================================================
@@ -433,6 +524,8 @@ export const BOX = {
   grade: RS_GRADE.N,
   column: RS_COLUMN.MIDDLE,
   thumbnail: '034_cpyy6x.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/2/2e/0boywua8ilo6dx0x5yhoem087zd6ubo.png',
   gender: RS_GENDER.BOT,
 }
 

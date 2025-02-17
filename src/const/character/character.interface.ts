@@ -8,6 +8,7 @@ export interface RSCharacter {
   faction: RS_FACTION
 
   thumbnail: string
+  thumbnailLarge?: string
 
   gender: RS_GENDER
 }
