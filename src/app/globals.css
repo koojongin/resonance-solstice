@@ -16,4 +16,5 @@ html {
 }
 .ff-dh{
     font-family: var(--font-secondary);
+    line-height: 1;
 }

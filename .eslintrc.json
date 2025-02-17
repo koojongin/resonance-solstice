@@ -26,7 +26,8 @@
   "ignorePatterns": [
     "node_modules/",
     "tailwind.config.js",
-    "next.config.js"
+    "next.config.js",
+    "next.config.ts"
   ],
   "rules": {
     "react/no-unescaped-entities": "off",
