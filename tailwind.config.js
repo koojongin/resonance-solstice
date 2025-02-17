@@ -1,5 +1,5 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+const withMT = require('@material-tailwind/react/utils/withMT')
+module.exports = withMT({
   content: [
     './app/**/**/*.{js,ts,jsx,tsx,mdx}',
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -11,10 +11,10 @@ module.exports = {
   theme: {
     extend: {
       boxShadow: {
-        'outline': '1px 1px 0 black, -1px 1px 0 black, 1px -1px 0 black, -1px -1px 0 black', // 작은 텍스트용 외곽선
+        outline: '1px 1px 0 black, -1px 1px 0 black, 1px -1px 0 black, -1px -1px 0 black', // 작은 텍스트용 외곽선
         'outline-lg': '2px 2px 0 black, -2px 2px 0 black, 2px -2px 0 black, -2px -2px 0 black', // 큰 텍스트용 외곽선
       },
     },
   },
   // plugins: [require('tailwindcss-textshadow')],
-}
+})

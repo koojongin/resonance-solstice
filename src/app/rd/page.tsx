@@ -1,17 +1,19 @@
 'use client'
 
 import createKey from '@/services/key-generator'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { RECOMMENDATION_DECKS } from '@/app/rd/rd-decks.const'
 import _, { debounce } from 'lodash'
 import { RsCharacterCard } from '@/app/components/character-frame/rs-character-card'
 import { RsCardSize } from '@/app/components/character-frame/rs-card-size.enum'
 import { getColumnUrl } from '@/services/character-url'
+import { Button, Tooltip } from '@material-tailwind/react'
 
 const REVERSED_ALL_DECKS = _.reverse(RECOMMENDATION_DECKS)
 export default function RecommendationDeckPage() {
   const [rdDecks, setRdDecks] = useState(REVERSED_ALL_DECKS)
   const [searchedKeyword, setSearchedKeyword] = useState('')
+  const [checkedAutoPreset, setCheckedAutoPreset] = useState(false)
 
   const openLink = (link?: string) => {
     if (!link) return
@@ -22,11 +24,26 @@ export default function RecommendationDeckPage() {
     setSearchedKeyword(event.target.value)
   }, 300)
 
+  const handleChangeAutoPreset = (event: any) => {
+    setCheckedAutoPreset(event.target.checked)
+  }
+
+  const copyToClipboard = async (text: string) => {
+    try {
+      await navigator.clipboard.writeText(text)
+      alert('복사되었습니다.')
+    } catch (error) {
+      alert(`Failed to copy text: ${error}`)
+    }
+  }
+
   useEffect(() => {
     if (!searchedKeyword) setRdDecks(REVERSED_ALL_DECKS)
     setRdDecks(
       REVERSED_ALL_DECKS.filter((deck) => {
+        const isValidAutoPresetOption = checkedAutoPreset ? !!deck.autoPreset : true
         return (
+          isValidAutoPresetOption &&
           deck.characters
             .map((c) => c.name)
             .join(',')
@@ -34,7 +51,7 @@ export default function RecommendationDeckPage() {
         )
       }),
     )
-  }, [searchedKeyword])
+  }, [checkedAutoPreset, searchedKeyword])
 
   return (
     <div>
@@ -43,7 +60,11 @@ export default function RecommendationDeckPage() {
         따라 가능성 유뮤가 존재합니다.
       </div>
       <div className="mb-[10px] flex flex-col gap-[8px]">
-        <div className="border rounded p-[8px]">
+        <div className="border rounded p-[8px] flex flex-col gap-[4px]">
+          <label className="flex items-center gap-[10px] cursor-pointer">
+            <input type="checkbox" checked={checkedAutoPreset} onChange={handleChangeAutoPreset} />
+            <Tooltip content="체크시 오토프리셋 정보가 있는 덱만 필터합니다.">오토프리셋</Tooltip>
+          </label>
           <div className="flex items-center gap-[10px]">
             <div>검색:</div>
             <input
@@ -66,13 +87,29 @@ export default function RecommendationDeckPage() {
       </div>
       <div className="flex flex-col gap-[8px]">
         {rdDecks.map((deck) => {
-          const { title, desc, characters, leaderName, owner, descLink } = deck
+          const { autoPreset, title, desc, characters, leaderName, owner, descLink } = deck
           return (
             <div
               key={createKey()}
               className="flex flex-col p-[8px] border w-full border-gray-300 rounded shadow-md shadow-gray-400/30"
             >
-              <div className="text-[17px] mb-[4px]">{title}</div>
+              <div className="flex items-center gap-[4px] mb-[4px]">
+                <div className="text-[17px]">{title}</div>
+                {autoPreset && (
+                  <div>
+                    <Tooltip content="클릭시 오토 프리셋이 복사됩니다.">
+                      <img
+                        src="/img/clipboard.svg"
+                        className="w-[24px] cursor-pointer"
+                        onClick={async () => {
+                          await copyToClipboard(autoPreset)
+                        }}
+                      />
+                    </Tooltip>
+                  </div>
+                )}
+              </div>
+
               <div className="flex gap-[4px] justify-between">
                 <div className="flex flex-wrap min-w-[410px] gap-[4px]">
                   {characters.map((character) => {
