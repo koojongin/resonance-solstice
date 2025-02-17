@@ -5,6 +5,7 @@ import { SHOP_MENUS } from '@/app/shop/shop.menu.const'
 import createKey from '@/services/key-generator'
 import { ShopSaleItem } from '@/app/shop/shop.enum'
 import { transformCImage } from '@/services/character-url'
+import { useNextDepthNavigator } from '@/services/navigation'
 
 enum ShopItemViewPort {
   HORIZONTAL = 'HORIZONTAL',
@@ -37,21 +38,33 @@ export default function ShopMenuPage() {
 }
 
 function ShopItemHorizontal({ saleItem }: { saleItem: ShopSaleItem }) {
+  const { router } = useNextDepthNavigator()
   return (
-    <div className="w-[400px] border rounded shadow">
+    <div
+      className="w-[200px] border rounded shadow cursor-pointer"
+      onClick={() => router.push(`/shop-detail/${saleItem.name}`)}
+    >
       <img src={transformCImage(saleItem.thumbnail, 400)} />
       <div className="p-[10px] ff-ng text-gray-700">
         <div className="text-[20px]">{saleItem.name}</div>
-        <div className="text-right ff-dh text-[20px] text-gray-700">{saleItem.price}₩</div>
+        <div className="text-right ff-dh text-[20px] text-gray-700">
+          {saleItem.price.toLocaleString()}₩
+        </div>
       </div>
     </div>
   )
 }
 
 function ShopItemVertical({ saleItem }: { saleItem: ShopSaleItem }) {
+  const { router } = useNextDepthNavigator()
   return (
-    <div className="w-[140px] border rounded shadow overflow-hidden">
-      <img src={transformCImage(saleItem.thumbnail, 140)} />
+    <div
+      className="w-[140px] border rounded shadow overflow-hidden cursor-pointer"
+      onClick={() => router.push(`/shop-detail/${saleItem.name}`)}
+    >
+      <div className="h-[250px] overflow-hidden">
+        <img src={transformCImage(saleItem.thumbnail, 140)} />
+      </div>
       <div className="p-[10px] ff-ng text-gray-700">
         <div className="text-[16px]">{saleItem.name}</div>
         <div className="text-right ff-dh text-[20px] text-gray-700">{saleItem.price}₩</div>

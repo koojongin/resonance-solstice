@@ -24,4 +24,12 @@ export interface ShopSaleItem {
   thumbnailDirection: ThumbnailDirection
   price: number
   category?: string
+
+  items?: any[]
+}
+
+export enum SaleItemEarnType {
+  DIRECT = '즉시',
+  DAILY_LOGIN = '매일 로그인 시',
+  FIRST_PURCHASE = '첫 충전 시',
 }
