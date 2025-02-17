@@ -15,6 +15,18 @@ export const getFrameBgUrl = (grade: RS_GRADE, width?: number) => {
   return `https://res.cloudinary.com/dqihpypxi/image/upload${widthKey}/v1739518264/resonance/frame/${grade.toLowerCase()}-bg.png`
 }
 
+export const transformCImage = (url: string, width: number): string => {
+  // Cloudinary용
+  const regex = /(upload\/)(v\d+)(\/)/
+  const match = url.match(regex)
+
+  if (match) {
+    return url.replace(match[0], `${match[1]}w_${width}/${match[2]}/`)
+  }
+
+  return url
+}
+
 export const getFactionUrl = (faction: RS_FACTION, width?: number) => {
   const widthKey = width ? `/w_${width}` : ''
 
