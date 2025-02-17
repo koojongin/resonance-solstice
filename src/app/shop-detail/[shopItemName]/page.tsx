@@ -48,9 +48,14 @@ export default function ShopItemNamePage() {
         {salePackage.name}
       </div>
 
+      {salePackage.desc && <div className="border p-[8px] rounded ">{salePackage.desc}</div>}
+
       <div>
         {!salePackage.items && (
-          <div>상세 설명이 와야되는 영역 - 아이템 상세 데이터가 현재 등록되지 않음.</div>
+          <div>
+            패키지에 포함된 아이템 목록이 와야되는 영역 - 아이템 데이터가 현재 등록되지 않거나 없는
+            패키지.
+          </div>
         )}
         {salePackage.items && (
           <div className="flex flex-wrap gap-[4px] w-full">

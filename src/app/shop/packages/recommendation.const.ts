@@ -7,10 +7,12 @@ export const salePackagesRecommendation = [
       'https://res.cloudinary.com/dqihpypxi/image/upload/v1739760064/resonance/shop/%ED%81%AC%EB%A6%AC%EC%8A%A4%ED%83%88_%ED%8A%B8%EB%A6%AC_%EC%9E%AC%EB%B0%B0_%ED%82%A4%ED%8A%B8_j80ulh.webp',
     price: 7500,
     thumbnailDirection: ThumbnailDirection.HORIZONTAL,
+    desc: '구매 시 재배키트의 30일 사용권을 받을 수 있습니다. 직행 서비스 매일 무료 서비스 횟수 +2, 직행속도 +30 KM/H, 일일 좋아요 횟수 +1',
     items: [
       { name: '크리스탈', amount: 300, earnType: SaleItemEarnType.DIRECT },
       { name: '크리스탈', amount: 90, earnType: SaleItemEarnType.DAILY_LOGIN },
       { name: '선인장 에너지 사탕', amount: 1, earnType: SaleItemEarnType.DAILY_LOGIN },
+      { name: '피로 회복 사탕', amount: 1, earnType: SaleItemEarnType.DAILY_LOGIN },
     ],
   },
   {

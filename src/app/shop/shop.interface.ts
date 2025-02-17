@@ -11,14 +11,14 @@ export interface ShopSalePackage {
   thumbnailDirection: ThumbnailDirection
   price: number
   category?: string
+  desc?: string
 
-  items?: ShopSaleItem[]
+  items: ShopSaleItem[]
 }
 
 export interface ShopSaleItem {
   name: string
   amount: number
-  desc?: string
   iType?: ShopSaleItemType
   earnType?: SaleItemEarnType
 }
