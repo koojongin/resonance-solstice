@@ -355,7 +355,7 @@ export const TENNIE = {
 // SSR =================================================================================
 export const HEINRICH = {
   originName: 'HEINRICH',
-  name: 'Heinrich',
+  name: '하인리히',
   faction: RS_FACTION.RAILWAY,
   grade: RS_GRADE.SR,
   column: RS_COLUMN.FRONT,

@@ -40,8 +40,8 @@ export default function RecommendationDeckPage() {
   return (
     <div>
       <div className="mb-[10px] text-gray-600/90 font-bold">
-        * 모든 덱은 설명과, 가이드 링크를 읽어 보시는것을 추천드립니다. 현재 한섭 상황과 돌파수에
-        따라 가능성 유뮤가 존재합니다.
+        * 모든 덱은 설명과, 가이드 링크를 읽어 보시는 것을 추천드립니다. 현재 한섭 상황과 돌파수에
+        따라 가능성 유무가 존재합니다.
       </div>
       <div className="mb-[10px] flex flex-col gap-[8px]">
         <div className="border rounded p-[8px] flex flex-col gap-[4px]">
