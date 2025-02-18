@@ -2,83 +2,37 @@
 
 import { useParams } from 'next/navigation'
 import { RS_CHARACTERS } from '@/const/character/character.const'
-import { convertCharacterThumbnailUrl, getColumnUrl, getFactionUrl } from '@/services/character-url'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { RSCharacter } from '@/const/character/character.interface'
+import { CharacterProfileCard } from '@/app/characters/[name]/character-profile-card'
+import { RECOMMENDATION_DECKS } from '@/app/rd/rd-decks.const'
+import createKey from '@/services/key-generator'
+import { RecommendationDeckCard } from '@/app/components/deck/recommendation-deck-card'
 
 export default function CharacterDetailPage() {
-  const params = useParams()
-  const [character, setCharacter] = useState<RSCharacter>()
+  const { name } = useParams()
+  const [character, setCharacter] = useState<RSCharacter>(
+    RS_CHARACTERS.find((c) => c.originName === name)!,
+  )
 
-  useEffect(() => {
-    if (!params) return
-    const { name } = params
-    if (!name) return
-    setCharacter(RS_CHARACTERS.find((c) => c.originName === name)!)
-  }, [params])
+  const linkedRecommendationDecks = RECOMMENDATION_DECKS.filter((deck) =>
+    deck.characters.find((c) => c.name === character.name),
+  )
+
   return (
     <div>
       {character && (
-        <div className="flex justify-center">
-          <div className="relative w-full rounded-[4px] border overflow-hidden shadow-md shadow-gray-800">
-            <img
-              className="w-full z-0"
-              // src="https://res.cloudinary.com/dqihpypxi/image/upload/w_600/v1739699861/resonance/etc/profile-bg_pxdpv5.png"
-              src="https://patchwiki.biligame.com/images/resonance/1/15/rnk1ixlziks176gslros7c3tfon5xz7.png"
-            />
-            {!character.thumbnailLarge && (
-              <img
-                src={convertCharacterThumbnailUrl(character.thumbnail)}
-                className="absolute bottom-0 left-0 z-10"
-              />
-            )}
-            {character.thumbnailLarge && (
-              <img src={character.thumbnailLarge} className="absolute top-0 z-10 w-1/2" />
-            )}
-
-            <div className="w-[450px] absolute right-0 z-20 top-0 text-white">
-              {/* Profile Right Top */}
-              <div className="relative mt-[20px] ff-dh">
-                <div className="ml-[100px]">
-                  <div className="text-[50px]">{character.name}</div>
-                  <div className="ml-[10px] ff-ng">
-                    <div className="">{character.originName}</div>
-                    <div className="flex items-center gap-[10px]">
-                      <div className="">{character.faction}</div>
-                      <div className="ff-dh text-[20px]">{character.grade}</div>
-                    </div>
-                    <div className="flex items-center gap-[4px]">
-                      <img src={getColumnUrl(character.column)} className="w-[60px]" />
-                      {character.column}
-                    </div>
-                  </div>
-                </div>
-                <img
-                  src={getFactionUrl(character.faction)}
-                  className="w-[100px] top-0 left-[0] absolute"
-                />
-              </div>
-              {/* ///////////////// */}
-              <div className="p-[10px] pl-0">
-                <hr className="border-white w-full" />
-              </div>
-
-              <div className="flex flex-col gap-[4px]">
-                <div className="flex items-center gap-[10px]">
-                  <div className="bg-gray-700 p-[4px]">생일</div>
-                  <div className="bg-gray-700 p-[4px]">99월 99일</div>
-                </div>
-
-                <div className="flex items-center gap-[10px]">
-                  <div className="bg-gray-700 p-[4px]">성별</div>
-                  <div className="bg-gray-700 p-[4px]">{character.gender}</div>
-                </div>
-
-                <div className="flex items-center gap-[10px]">
-                  <div className="bg-gray-700 p-[4px]">키</div>
-                  <div className="bg-gray-700 p-[4px]">?cm</div>
-                </div>
-              </div>
+        <div className="flex flex-col gap-[20px] justify-center">
+          <CharacterProfileCard character={character} />
+          <hr />
+          <div className="flex flex-col gap-[4px]">
+            <div className="bg-gradient-to-r from-gray-900 to-white text-white ff-dh text-[26px] p-[8px] rounded">
+              연결된 추천덱({linkedRecommendationDecks.length})
+            </div>
+            <div className="flex flex-col gap-[10px]">
+              {linkedRecommendationDecks.map((deck) => {
+                return <RecommendationDeckCard deck={deck} key={createKey()} />
+              })}
             </div>
           </div>
         </div>
