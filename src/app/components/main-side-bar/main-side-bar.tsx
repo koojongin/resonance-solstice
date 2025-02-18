@@ -20,7 +20,7 @@ export default function MainSideBar() {
       <div className={menuCss} onClick={() => router.push('/reset-marathon')}>
         티어표
       </div>
-      <div className={menuCss} onClick={() => router.push('/shop')}>
+      <div className={menuCss} onClick={() => router.push('/shop/all')}>
         상점
       </div>
       {/* <div */}
