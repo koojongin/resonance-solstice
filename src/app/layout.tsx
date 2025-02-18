@@ -86,9 +86,11 @@ export default function RootLayout({
               <MainSideBar />
             </div>
           </div>
-          <div className="w-[980px] min-h-[700px] m-auto bg-white px-[10px]">{children}</div>
+          <div className="w-[980px] min-h-[700px] m-auto bg-white px-[10px] pb-[10px]">
+            {children}
+          </div>
         </div>
-        <div className="bg-white/50 flex justify-center p-[8px] py-[20px] text-[14px] mt-[100px]">
+        <div className="bg-white/50 flex justify-center p-[8px] py-[20px] text-[14px] py-[30px]">
           2025년 02월 14일, 이 프로젝트가 시작되었습니다.
         </div>
       </body>

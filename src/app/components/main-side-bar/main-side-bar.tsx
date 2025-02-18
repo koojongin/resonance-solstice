@@ -7,7 +7,7 @@ export default function MainSideBar() {
 
   const menuCss = ` hover:bg-gray-200 border border-l-0 border-gray-400 px-[8px] py-[4px]`
   return (
-    <div className="py-[10px] text-[22px] flex cursor-pointer border-b border-gray-300 mb-[10px] ff-dh text-[18px] text-gray-700">
+    <div className="py-[10px] text-[22px] flex cursor-pointer border-b border-gray-300 mb-[10px] ff-dh text-[18px] text-blue-gray-800">
       <div className={`border-l-[1px]${menuCss}`} onClick={() => router.push('/home')}>
         메인
       </div>

@@ -8,6 +8,8 @@ import { useNextDepthNavigator } from '@/services/navigation'
 import { ShopSalePackage } from '@/app/shop/shop.interface'
 import _, { debounce } from 'lodash'
 import { useEffect, useState } from 'react'
+import { ShopMenuName, ThumbnailDirection } from '@/app/shop/shop.enum'
+import { Tooltip } from '@material-tailwind/react'
 
 enum ShopItemViewPort {
   HORIZONTAL = 'HORIZONTAL',
@@ -158,15 +160,60 @@ export default function ShopMenuPage() {
       <div className="bg-gradient-to-r from-gray-700 to-white text-white ff-dh text-[40px] p-[10px]">
         {shopMenu.name}
       </div>
-      <div className="flex flex-wrap gap-[10px]">
+      <div
+        className={`flex flex-wrap gap-[10px] ${shopMenu.key === ShopMenuName.ALL && 'gap-[4px]'}`}
+      >
         {selectedPackages.map((salePackage) => {
           const viewport: ShopItemViewPort =
             (salePackage.thumbnailDirection as unknown as ShopItemViewPort) ||
             ShopItemViewPort.HORIZONTAL
+          if (shopMenu.key === ShopMenuName.ALL)
+            return <ShopItemSquare key={createKey()} salePackage={salePackage} />
           if (viewport === ShopItemViewPort.VERTICAL)
             return <ShopItemVertical key={createKey()} salePackage={salePackage} />
           return <ShopItemHorizontal key={createKey()} salePackage={salePackage} />
         })}
+      </div>
+    </div>
+  )
+}
+
+function ShopItemSquare({ salePackage }: { salePackage: ShopSalePackage }) {
+  const { router } = useNextDepthNavigator()
+
+  const { thumbnailDirection } = salePackage
+  return (
+    <div
+      className="w-[100px] border rounded shadow cursor-pointer"
+      onClick={() => router.push(`/shop-detail/${salePackage.name}`)}
+    >
+      <Tooltip
+        content={
+          <>
+            {thumbnailDirection === ThumbnailDirection.VERTICAL && (
+              <img src={transformCImage(salePackage.thumbnail, 200)} />
+            )}
+
+            {thumbnailDirection === ThumbnailDirection.HORIZONTAL && (
+              <img src={transformCImage(salePackage.thumbnail, 400)} />
+            )}
+          </>
+        }
+      >
+        <div
+          className="w-full h-[100px] bg-cover bg-center"
+          style={{
+            backgroundImage: `url('${transformCImage(salePackage.thumbnail, 400)}')`,
+          }}
+        />
+      </Tooltip>
+      <div className="p-[10px] ff-ng text-gray-700">
+        <div className="text-[16px] truncate">
+          <Tooltip content={salePackage.name}>{salePackage.name}</Tooltip>
+        </div>
+        <div className="text-right ff-dh text-[16px] text-gray-700">
+          {salePackage.price.toLocaleString()}₩
+        </div>
       </div>
     </div>
   )
