@@ -781,12 +781,12 @@ export const RS_CHARACTERS: RSCharacter[] = [
   WENSHENG,
   MARGIELA,
   ARINA,
-  JULIAN,
   ILONA,
   STELLA,
   CAROLINE,
   TENNIE,
 
+  /// ////////////
   HEINRICH,
   LIVIA,
   DESIREE,
@@ -807,6 +807,7 @@ export const RS_CHARACTERS: RSCharacter[] = [
   MHAR,
   /// //////
   MSGOLD,
+  JULIAN,
   YAMAARASHI,
   EXCALIBUR_BOX,
   FLAN,
