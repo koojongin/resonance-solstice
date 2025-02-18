@@ -13,6 +13,7 @@ export enum RS_FACTION {
   RAILWAY = '철도연맹',
   NIGHT_CHAINS = '흑월',
   CHAOS = '혼돈해',
+  CREW_STRANGER = 'CREW STRANGER',
 }
 
 export enum RS_COLUMN {

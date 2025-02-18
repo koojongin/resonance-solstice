@@ -7,6 +7,7 @@ import {
 } from '@/services/character-url'
 import { RsCharacterBorderBox } from '@/app/components/character-frame/rs-character-border-box'
 import { RsCardSize } from '@/app/components/character-frame/rs-card-size.enum'
+import { Tooltip } from '@material-tailwind/react'
 
 export function RsCharacterCardMedium({
   character,
@@ -16,8 +17,8 @@ export function RsCharacterCardMedium({
   size?: RsCardSize
 }) {
   return (
-    <div className="border-2 border-gray-400/80 rounded-[6px] shadow-md shadow-gray-800/70 p-[2px] cursor-pointer">
-      <div className="w-[140px] h-[160px] overflow-hidden relative rounded-[4px]">
+    <div className="w-[140px] border-2 border-gray-400/80 rounded-[6px] shadow-md shadow-gray-800/70 p-[2px] cursor-pointer">
+      <div className="h-[160px] overflow-hidden relative rounded-[4px]">
         <img src={getFrameBgUrl(character.grade)} className="absolute z-0 w-full bottom-[-40px]" />
         <img
           src={convertCharacterThumbnailUrl(character.thumbnail, 140)}
@@ -31,9 +32,11 @@ export function RsCharacterCardMedium({
         </div>
         <RsCharacterBorderBox grade={character.grade} />
       </div>
-      <div className="font-bold text-gray-700 mt-[4px] text-[15px] text-center">
-        {character.name}
-      </div>
+      <Tooltip content={character.name}>
+        <div className="font-bold text-gray-700 mt-[4px] text-[15px] text-center truncate px-[4px]">
+          {character.name}
+        </div>
+      </Tooltip>
     </div>
   )
 }

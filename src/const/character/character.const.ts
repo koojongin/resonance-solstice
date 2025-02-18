@@ -1,6 +1,206 @@
 import { RS_COLUMN, RS_GRADE, RS_FACTION, RS_GENDER } from '@/const/character/character.enum'
 import { RSCharacter } from '@/const/character/character.interface'
 
+export const RAZIEL_THE_REMINISCE = {
+  originName: 'RAZIEL_THE_REMINISCE',
+  name: 'Raziel_The_Reminisce',
+  faction: RS_FACTION.SOURCE_CITADEL,
+  grade: RS_GRADE.SSR,
+  column: RS_COLUMN.BACK,
+  thumbnail: '061Raziel_The_Reminisce_pc9t1x.webp',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/7/70/7gs2pbi5d6ik1aoupvevwx06ginu2pz.png',
+  gender: RS_GENDER.FEMALE,
+}
+export const SHIRE = {
+  originName: 'SHIRE',
+  name: 'Shire',
+  faction: RS_FACTION.CHAOS,
+  grade: RS_GRADE.SSR,
+  column: RS_COLUMN.BACK,
+  thumbnail: '058Shire_zzadoa.webp',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/6/68/9mmcj7lmk4g2zltt3hs9n1c7p6fhf8t.png',
+  gender: RS_GENDER.FEMALE,
+}
+export const PELOTA = {
+  originName: 'PELOTA',
+  name: 'Pelota',
+  faction: RS_FACTION.GARDENERS,
+  grade: RS_GRADE.SSR,
+  column: RS_COLUMN.BACK,
+  thumbnail: '048Pelota_abdwxs.webp',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/a/af/ls5mioc4m8xbpy9xvkzcqlvh6ljtun5.png',
+  gender: RS_GENDER.FEMALE,
+}
+
+export const DOROTHY = {
+  originName: 'DOROTHY',
+  name: 'Dorothy',
+  faction: RS_FACTION.RAILWAY,
+  grade: RS_GRADE.SSR,
+  column: RS_COLUMN.BACK,
+  thumbnail: '041Dorothy_yuuxgr.webp',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/0/05/f8qhtxzx5f58jq7mbfetsxib42t8nic.png',
+  gender: RS_GENDER.FEMALE,
+}
+export const JOSHUA = {
+  originName: 'JOSHUA',
+  name: 'Joshua',
+  faction: RS_FACTION.SOURCE_CITADEL,
+  grade: RS_GRADE.SSR,
+  column: RS_COLUMN.MIDDLE,
+  thumbnail: '020Joshua_zmpjhn.webp',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/5/57/3kup3cenwdozp42f8vdc325slyohgr0.png',
+  gender: RS_GENDER.UNKNOWN,
+}
+export const SOMMER = {
+  originName: 'SOMMER',
+  name: 'Sommer',
+  faction: RS_FACTION.SOURCE_CITADEL,
+  grade: RS_GRADE.SSR,
+  column: RS_COLUMN.FRONT,
+  thumbnail: '023Sommer_qe2idd.webp',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/b/b6/07qf581995pkz0uaiyke42d912jkyu6.png',
+  gender: RS_GENDER.FEMALE,
+}
+export const USHANA = {
+  originName: 'USHANA',
+  name: 'Ushana',
+  faction: RS_FACTION.SOURCE_CITADEL,
+  grade: RS_GRADE.SSR,
+  column: RS_COLUMN.FRONT,
+  thumbnail: '032Ushana_dd3xwt.webp',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/a/a8/7y2podgu54y2130do72ivzfkpghdvfc.png',
+  gender: RS_GENDER.FEMALE,
+}
+export const SUMMERSHIZURU = {
+  originName: 'SUMMERSHIZURU',
+  name: 'SummerShizuru',
+  faction: RS_FACTION.RAILWAY,
+  grade: RS_GRADE.SSR,
+  column: RS_COLUMN.BACK,
+  thumbnail: '027SummerShizuru_bja7jh.webp',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/d/df/kp7ts66zs784d7875s28l5p52130skq.png',
+  gender: RS_GENDER.FEMALE,
+}
+export const NICOLA = {
+  originName: 'NICOLA',
+  name: 'Nicola',
+  faction: RS_FACTION.GARDENERS,
+  grade: RS_GRADE.SSR,
+  column: RS_COLUMN.BACK,
+  thumbnail: '017Nicola_hp0hvx.webp',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/0/05/hfa2364b0y8776o60zavvmaana3aksg.png',
+  gender: RS_GENDER.FEMALE,
+}
+export const DUSTIN = {
+  originName: 'DUSTIN',
+  name: 'Dustin',
+  faction: RS_FACTION.SOURCE_CITADEL,
+  grade: RS_GRADE.SSR,
+  column: RS_COLUMN.FRONT,
+  thumbnail: '033Dustin_cvrvso.webp',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/c/c6/9waw3wiw3pthlqvgmahgk2inkgyhgem.png',
+  gender: RS_GENDER.MALE,
+}
+export const ANFIYA = {
+  originName: 'ANFIYA',
+  name: 'Anfiya',
+  faction: RS_FACTION.GARDENERS,
+  grade: RS_GRADE.SSR,
+  column: RS_COLUMN.MIDDLE,
+  thumbnail: '019Anfiya_tsmwz5.webp',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/b/ba/nnvs3gmn6u4sl9hbrr7ry19eplvvtqf.png',
+  gender: RS_GENDER.FEMALE,
+}
+export const HAYABUSA = {
+  originName: 'HAYABUSA',
+  name: 'Hayabusa',
+  faction: RS_FACTION.NIGHT_CHAINS,
+  grade: RS_GRADE.SSR,
+  column: RS_COLUMN.MIDDLE,
+  thumbnail: '014Hayabusa_htq8bi.webp',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/f/f8/t64gzdu51up59c7rgmjfznj2gq4hf0r.png',
+  gender: RS_GENDER.MALE,
+}
+export const JALHAY = {
+  originName: 'JALHAY',
+  name: 'Jalhay',
+  faction: RS_FACTION.SOURCE_CITADEL,
+  grade: RS_GRADE.SSR,
+  column: RS_COLUMN.BACK,
+  thumbnail: '008Jalhay_sm91ha.webp',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/3/32/5plh6grqi7bop057usmeg2llvpjn72x.png',
+  gender: RS_GENDER.FEMALE,
+}
+export const ITHOS = {
+  originName: 'ITHOS',
+  name: 'Ithos',
+  faction: RS_FACTION.SOURCE_CITADEL,
+  grade: RS_GRADE.SSR,
+  column: RS_COLUMN.BACK,
+  thumbnail: '005Ithos_gswwyz.webp',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/c/ce/82nthbmin655kajh2nx9ytaxxdxg9hw.png',
+  gender: RS_GENDER.MALE,
+}
+export const IKUMA = {
+  originName: 'IKUMA',
+  name: 'Ikuma',
+  faction: RS_FACTION.CREW_STRANGER,
+  grade: RS_GRADE.SSR,
+  column: RS_COLUMN.FRONT,
+  thumbnail: '012Ikuma_bdadfk.webp',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/c/cb/7fgnp0pxb86bbwq4rit2xxg9uk4uc7k.png',
+  gender: RS_GENDER.MALE,
+}
+export const LISSANDRA = {
+  originName: 'LISSANDRA',
+  name: 'Lissandra',
+  faction: RS_FACTION.SOURCE_CITADEL,
+  grade: RS_GRADE.SSR,
+  column: RS_COLUMN.FRONT,
+  thumbnail: '004Lissandra_t7kok4.webp',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/b/b3/r6y79wdsj5qbifib04lcj6ve1prv4iy.png',
+  gender: RS_GENDER.FEMALE,
+}
+export const MUMEI = {
+  originName: 'MUMEI',
+  name: 'Mumei',
+  faction: RS_FACTION.CREW_STRANGER,
+  grade: RS_GRADE.SSR,
+  column: RS_COLUMN.FRONT,
+  thumbnail: '018Mumei_itervx.webp',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/f/fc/5jdzkm0t3u9s6dribvpi9da9drkar55.png',
+  gender: RS_GENDER.FEMALE,
+}
+export const PALADI = {
+  originName: 'PALADI',
+  name: 'Paladi',
+  faction: RS_FACTION.RAILWAY,
+  grade: RS_GRADE.SSR,
+  column: RS_COLUMN.MIDDLE,
+  thumbnail: '016Paladi_awt63u.webp',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/5/5a/pe6oaj0kexh9t9kpqlfjdm9yiq6flh0.png',
+  gender: RS_GENDER.FEMALE,
+}
+
 export const CONNOR = {
   originName: 'CONNOR',
   name: '코나',
@@ -12,6 +212,7 @@ export const CONNOR = {
     'https://patchwiki.biligame.com/images/resonance/0/05/9a0t69tjgc5kdplwl14qtjrvwoktl0l.png',
   gender: RS_GENDER.FEMALE,
 }
+
 export const VERLAINE = {
   originName: 'VERLAINE',
   name: '베를렌',
@@ -152,6 +353,17 @@ export const TENNIE = {
 }
 
 // SSR =================================================================================
+export const HEINRICH = {
+  originName: 'HEINRICH',
+  name: 'Heinrich',
+  faction: RS_FACTION.RAILWAY,
+  grade: RS_GRADE.SR,
+  column: RS_COLUMN.FRONT,
+  thumbnail: '044Heinrich_vzkfef.webp',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/7/79/chvn2j4j6ccfx4hh38uvr27fugqdhdo.png',
+  gender: RS_GENDER.MALE,
+}
 export const LIVIA = {
   originName: 'LIVIA',
   name: '리비아',
@@ -349,6 +561,17 @@ export const MHAR = {
 }
 
 // R=============================================================================
+export const MSGOLD = {
+  originName: 'MSGOLD',
+  name: 'MsGold',
+  faction: RS_FACTION.MUNDUS,
+  grade: RS_GRADE.R,
+  column: RS_COLUMN.BACK,
+  thumbnail: '028MsGold_taba04.webp',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/4/41/p2gtna8jyu34fp0wc3i6po0bo790dcu.png',
+  gender: RS_GENDER.BOT,
+}
 export const YAMAARASHI = {
   originName: 'YAMAARASHI',
   name: '야마아라시',
@@ -531,6 +754,24 @@ export const BOX = {
 }
 
 export const RS_CHARACTERS: RSCharacter[] = [
+  RAZIEL_THE_REMINISCE,
+  SHIRE,
+  PELOTA,
+  DOROTHY,
+  JOSHUA,
+  SOMMER,
+  USHANA,
+  SUMMERSHIZURU,
+  NICOLA,
+  DUSTIN,
+  ANFIYA,
+  HAYABUSA,
+  JALHAY,
+  ITHOS,
+  IKUMA,
+  LISSANDRA,
+  MUMEI,
+  PALADI,
   CONNOR,
   VERLAINE,
   CHARLOTTE,
@@ -545,6 +786,8 @@ export const RS_CHARACTERS: RSCharacter[] = [
   STELLA,
   CAROLINE,
   TENNIE,
+
+  HEINRICH,
   LIVIA,
   DESIREE,
   LIN,
@@ -562,6 +805,8 @@ export const RS_CHARACTERS: RSCharacter[] = [
   AOBA,
   CECIL,
   MHAR,
+  /// //////
+  MSGOLD,
   YAMAARASHI,
   EXCALIBUR_BOX,
   FLAN,

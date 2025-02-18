@@ -83,11 +83,20 @@ export default function CharactersPage() {
   }
 
   return (
-    <div>
-      <div className="text-[24px] font-bold">캐릭터 목록</div>
-      <div className="mb-[10px]" />
+    <div className="flex-col flex gap-[10px]">
+      <div className="text-[24px] font-bold flex items-center gap-[4px]">
+        <div>캐릭터 목록</div>
+      </div>
+      <div className="flex flex-col gap-[4px]">
+        <div className="font-normal text-[16px] text-red-600">
+          * 미래시 캐릭터도 포함되어있습니다.
+        </div>
+        <div className="font-normal text-[16px] text-red-600">
+          * 영문명인 경우, 한국서버에 배포되지 않은 승무원 일 수 있습니다.
+        </div>
+      </div>
 
-      <div className="flex flex-col items-start justify-start border p-[4px] border-gray-400">
+      <div className="flex flex-col gap-[6px] items-start justify-start border p-[8px] rounded shadow border-gray-400">
         <div className="flex justify-start">
           <div className="w-[100px] flex justify-start">등급</div>
           <div className="flex items-center gap-[4px]">
@@ -212,7 +221,7 @@ export default function CharactersPage() {
         {/* /////// */}
       </div>
 
-      <div className="mb-[10px]" />
+      <hr />
       <div>
         <RsCharacterList
           checkedGrades={checkedGrades}

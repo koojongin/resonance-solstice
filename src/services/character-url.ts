@@ -54,6 +54,9 @@ export const getFactionUrl = (faction: RS_FACTION, width?: number) => {
     case RS_FACTION.CHAOS:
       factionImageUrl = 'chaos_kkgomt.png'
       break
+    case RS_FACTION.CREW_STRANGER:
+      factionImageUrl = 'crew-stranger_hvasgh.png'
+      break
     default:
       break
   }
