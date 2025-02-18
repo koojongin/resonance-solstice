@@ -241,7 +241,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   },
 
   {
-    title: '코어 돌파 덱 - 과부화 - 인뢰',
+    title: '코어 60렙 돌파 덱 - 과부화 - 인뢰',
     leaderName: NAYUTA.name,
     characters: [NAYUTA, AOBA, RINA_F, PRIMING, YEJUE],
     desc: '나유타(SSR) / 아오바(SR) / 리나 본(SR) / 레이카(R)\n위 4명 승무원을 고정 후 각 코어별 1개의 승무원만 추가하면 됨\n장점: 편성에 한명만 제외하고 나머지가 동일 승무원이라 성장 재화를 아낄수 있음',
@@ -252,7 +252,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   },
 
   {
-    title: '코어 돌파 덱 - 용광로 - 점화',
+    title: '코어 60렙 돌파 덱 - 용광로 - 점화',
     leaderName: NAYUTA.name,
     characters: [NAYUTA, AOBA, RINA_F, PRIMING, KALEYA],
     desc: '나유타(SSR) / 아오바(SR) / 리나 본(SR) / 레이카(R)\n위 4명 승무원을 고정 후 각 코어별 1개의 승무원만 추가하면 됨\n장점: 편성에 한명만 제외하고 나머지가 동일 승무원이라 성장 재화를 아낄수 있음',
@@ -263,7 +263,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   },
 
   {
-    title: '코어 돌파 덱 - 콘덴싱 - 냉동',
+    title: '코어 60렙 돌파 덱 - 콘덴싱 - 냉동',
     leaderName: NAYUTA.name,
     characters: [NAYUTA, AOBA, RINA_F, PRIMING, YER],
     desc: '나유타(SSR) / 아오바(SR) / 리나 본(SR) / 레이카(R)\n위 4명 승무원을 고정 후 각 코어별 1개의 승무원만 추가하면 됨\n장점: 편성에 한명만 제외하고 나머지가 동일 승무원이라 성장 재화를 아낄수 있음',
