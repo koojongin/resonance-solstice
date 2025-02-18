@@ -105,17 +105,6 @@ export const ARINA = {
   gender: RS_GENDER.FEMALE,
 }
 
-export const JULIAN = {
-  originName: 'JULIAN',
-  name: '줄리안',
-  faction: RS_FACTION.RAILWAY,
-  grade: RS_GRADE.R,
-  column: RS_COLUMN.MIDDLE,
-  thumbnail: '065_lypaah.png',
-  thumbnailLarge:
-    'https://patchwiki.biligame.com/images/resonance/2/28/ekt8mn8h5jrr3om99vbk9fncnh40n7p.png',
-  gender: RS_GENDER.FEMALE,
-}
 export const ILONA = {
   originName: 'ILONA',
   name: '이로나',
@@ -480,6 +469,18 @@ export const PRIMING = {
   thumbnail: '046_eonjon.png',
   thumbnailLarge:
     'https://patchwiki.biligame.com/images/resonance/5/5e/1sp4lmybycse6qggx54lyy47rnvcudw.png',
+  gender: RS_GENDER.FEMALE,
+}
+
+export const JULIAN = {
+  originName: 'JULIAN',
+  name: '줄리안',
+  faction: RS_FACTION.RAILWAY,
+  grade: RS_GRADE.R,
+  column: RS_COLUMN.MIDDLE,
+  thumbnail: '065_lypaah.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/2/28/ekt8mn8h5jrr3om99vbk9fncnh40n7p.png',
   gender: RS_GENDER.FEMALE,
 }
 

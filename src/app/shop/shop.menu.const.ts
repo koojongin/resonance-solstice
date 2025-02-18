@@ -8,7 +8,7 @@ import { salePackagesTrainSkin } from '@/app/shop/packages/train-skin.const'
 
 export const salePackagesCommandMarket = []
 
-export const ALL_SALE_ITEMS = [
+export const ALL_SALE_PACKAGES = [
   ...salePackagesRecommendation,
   ...salePackagesCrystal,
   ...salePackagesSpecialPackage,
@@ -18,6 +18,7 @@ export const ALL_SALE_ITEMS = [
 ]
 
 export const SHOP_MENUS: ShopMenu[] = [
+  { key: ShopMenuName.ALL, name: '전체', salePackages: ALL_SALE_PACKAGES },
   { key: ShopMenuName.RECOMMENDATION, name: '특별 추천', salePackages: salePackagesRecommendation },
   { key: ShopMenuName.CRYSTAL, name: '크리스탈', salePackages: salePackagesCrystal },
   {

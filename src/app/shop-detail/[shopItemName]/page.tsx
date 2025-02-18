@@ -1,18 +1,18 @@
 'use client'
 
 import { useParams } from 'next/navigation'
-import { ALL_SALE_ITEMS } from '@/app/shop/shop.menu.const'
 import { ShopSaleItemType, ThumbnailDirection } from '@/app/shop/shop.enum'
 import { convertCharacterThumbnailUrl, transformCImage } from '@/services/character-url'
 import createKey from '@/services/key-generator'
 import { ShopSaleItem, ShopSalePackage } from '@/app/shop/shop.interface'
 import { RS_CHARACTERS } from '@/const/character/character.const'
 import { useNextDepthNavigator } from '@/services/navigation'
+import { ALL_SALE_PACKAGES } from '@/app/shop/shop.menu.const'
 
 export default function ShopItemNamePage() {
   const { shopItemName } = useParams()
   const decodedShopItemName = decodeURIComponent(shopItemName as string)
-  const salePackage: ShopSalePackage = ALL_SALE_ITEMS.find(
+  const salePackage: ShopSalePackage = ALL_SALE_PACKAGES.find(
     (item) => item.name === decodedShopItemName,
   )!
 

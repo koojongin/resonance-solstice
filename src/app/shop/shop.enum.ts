@@ -1,4 +1,5 @@
 export enum ShopMenuName {
+  ALL = 'all',
   RECOMMENDATION = 'recommend',
   CRYSTAL = 'crystal',
   SPECIAL_PACKAGE = 'special-package',

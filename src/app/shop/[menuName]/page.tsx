@@ -1,13 +1,13 @@
 'use client'
 
 import { useParams } from 'next/navigation'
-import { SHOP_MENUS } from '@/app/shop/shop.menu.const'
+import { ALL_SALE_PACKAGES, SHOP_MENUS } from '@/app/shop/shop.menu.const'
 import createKey from '@/services/key-generator'
 import { transformCImage } from '@/services/character-url'
 import { useNextDepthNavigator } from '@/services/navigation'
 import { ShopSalePackage } from '@/app/shop/shop.interface'
 import _, { debounce } from 'lodash'
-import { useCallback, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 enum ShopItemViewPort {
   HORIZONTAL = 'HORIZONTAL',
@@ -33,12 +33,35 @@ export default function ShopMenuPage() {
   const [searchedKeyword, setSearchedKeyword] = useState('')
   const [selectedSortType, setSelectedSortType] = useState(SORT_OPTIONS[0])
 
-  const handleSearchedKeywordChange = debounce((event: any) => {
-    setSearchedKeyword(event.target.value)
+  const [showKeywordSuggestions, setShowKeywordSuggestions] = useState(false)
+  const [filteredKeywordSuggestions, setFilteredKeywordSuggestions] = useState<string[]>([])
+
+  const allItemNames = _.uniq(
+    ALL_SALE_PACKAGES.map((salePackage) => salePackage.items.map((item) => item.name)).flat(),
+  )
+
+  const debouncedSearchedKeywordChange = debounce((value) => {
+    const isExistKeyword = value.length > 0
+    if (isExistKeyword) {
+      const filtered = allItemNames.filter((s) => s.toLowerCase().includes(value.toLowerCase()))
+      setFilteredKeywordSuggestions(filtered)
+    }
+    setShowKeywordSuggestions(isExistKeyword)
   }, 300)
+
+  const handleSearchedKeywordChange = (event: any) => {
+    const { value } = event.target
+    setSearchedKeyword(value)
+    debouncedSearchedKeywordChange(value)
+  }
 
   const handleSortTypeChange = (event: any) => {
     setSelectedSortType(SORT_OPTIONS.find((option) => option.key === event.target.value)!)
+  }
+
+  const handleKeywordSelect = (suggestion: string) => {
+    setSearchedKeyword(suggestion)
+    setShowKeywordSuggestions(false)
   }
 
   const getSortingPackages = (packages: any[], sortType: SortOption) => {
@@ -91,12 +114,32 @@ export default function ShopMenuPage() {
         </div>
         <div className="flex items-center gap-[10px]">
           <div className="font-bold text-gray-700 min-w-[50px]">검색</div>
-          <input
-            className="border border-gray-400 min-w-[300px] p-[4px]"
-            type="text"
-            onChange={handleSearchedKeywordChange}
-            placeholder="아이템 이름을 검색하세요."
-          />
+          <div className="relative">
+            <input
+              className="border border-gray-400 min-w-[300px] p-[4px]"
+              type="text"
+              value={searchedKeyword}
+              onChange={handleSearchedKeywordChange}
+              placeholder="아이템 이름을 검색하세요."
+            />
+            {showKeywordSuggestions && (
+              <ul className="absolute top-[26px] z-50 left-0 right-0 mt-1 bg-gray-100 border border-gray-300 shadow-lg overflow-y-scroll max-h-[200px]">
+                {filteredKeywordSuggestions.length > 0 ? (
+                  filteredKeywordSuggestions.map((s, i) => (
+                    <li
+                      key={i}
+                      className="p-2 hover:bg-gray-100 cursor-pointer border-b last:border-b-0 border-gray-700 border-dashed"
+                      onClick={() => handleKeywordSelect(s)}
+                    >
+                      {s}
+                    </li>
+                  ))
+                ) : (
+                  <li className="p-2 text-gray-500">"{searchedKeyword}" 포함된 검색결과 없음</li>
+                )}
+              </ul>
+            )}
+          </div>
         </div>
       </div>
 

@@ -6,9 +6,12 @@ import { useState } from 'react'
 import { CheckBoxGroup } from '@/services/common.enum'
 import { RsCharacterList } from '@/app/characters/rs-character-list'
 import { debounce } from 'lodash'
+import { RS_CHARACTERS } from '@/const/character/character.const'
 
 export default function CharactersPage() {
   const [searchedKeyword, setSearchedKeyword] = useState('')
+  const [filteredKeywordSuggestions, setFilteredKeywordSuggestions] = useState<string[]>([])
+  const [showKeywordSuggestions, setShowKeywordSuggestions] = useState(false)
 
   const [checkedGrades, setCheckedGrades] = useState<CheckBoxGroup>(
     // Object.keys(RS_GRADE).reduce((acc, key) => ({ ...acc, [key]: key === RS_GRADE.SSR }), {}),
@@ -26,6 +29,8 @@ export default function CharactersPage() {
   const [checkedColumns, setCheckedColumns] = useState<CheckBoxGroup>(
     Object.keys(RS_COLUMN).reduce((acc, key) => ({ ...acc, [key]: true }), {}),
   )
+
+  const characterNames = RS_CHARACTERS.map((c) => c.name)
 
   const handleChangeGrade = (event: any) => {
     const { name, checked } = event.target
@@ -58,10 +63,24 @@ export default function CharactersPage() {
       [name]: checked,
     }))
   }
-
-  const handleSearchedKeywordChange = debounce((event: any) => {
-    setSearchedKeyword(event.target.value)
+  const handleSearchedKeywordChange = (event: any) => {
+    const { value } = event.target
+    setSearchedKeyword(value)
+    debouncedSearchedKeywordChange(value)
+  }
+  const debouncedSearchedKeywordChange = debounce((value) => {
+    const isExistKeyword = value.length > 0
+    if (isExistKeyword) {
+      const filtered = characterNames.filter((s) => s.toLowerCase().includes(value.toLowerCase()))
+      setFilteredKeywordSuggestions(filtered)
+    }
+    setShowKeywordSuggestions(isExistKeyword)
   }, 300)
+
+  const handleKeywordSelect = (suggestion: string) => {
+    setSearchedKeyword(suggestion)
+    setShowKeywordSuggestions(false)
+  }
 
   return (
     <div>
@@ -163,13 +182,31 @@ export default function CharactersPage() {
 
         <div className="flex justify-start">
           <div className="w-[100px] flex justify-start items-center">검색</div>
-          <div className="flex items-center gap-[4px] my-[5px]">
+          <div className="flex items-center gap-[4px] my-[5px] relative">
             <input
               className="border border-gray-400 min-w-[300px] p-[4px]"
               type="text"
+              value={searchedKeyword}
               onChange={handleSearchedKeywordChange}
               placeholder="검색할 승무원 이름을 입력하세요."
             />
+            {showKeywordSuggestions && (
+              <ul className="absolute top-[26px] z-50 left-0 right-0 mt-1 bg-gray-100 border border-gray-300 shadow-lg">
+                {filteredKeywordSuggestions.length > 0 ? (
+                  filteredKeywordSuggestions.map((s, i) => (
+                    <li
+                      key={i}
+                      className="p-2 hover:bg-gray-100 cursor-pointer border-b last:border-b-0 border-gray-700 border-dashed"
+                      onClick={() => handleKeywordSelect(s)}
+                    >
+                      {s}
+                    </li>
+                  ))
+                ) : (
+                  <li className="p-2 text-gray-500">"{searchedKeyword}" 포함된 검색결과 없음</li>
+                )}
+              </ul>
+            )}
           </div>
         </div>
         {/* /////// */}
