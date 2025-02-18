@@ -1,12 +1,10 @@
 import type { Metadata } from 'next'
-import localFont from 'next/font/local'
 import './globals.css'
 import { Analytics } from '@vercel/analytics/react'
 import { Do_Hyeon, Nanum_Gothic } from 'next/font/google'
 import React, { ReactNode } from 'react'
 import MainSideBar from '@/app/components/main-side-bar/main-side-bar'
 import MainHeaderBar from '@/app/components/main-side-bar/main-header-bar'
-import { cls } from '@/services/util'
 import GoogleAnalyticsComponent from '@/services/google-analytics'
 
 const nanumGothic = Nanum_Gothic({
@@ -17,17 +15,6 @@ const nanumGothic = Nanum_Gothic({
 const doHyeonKr = Do_Hyeon({
   subsets: ['latin'],
   weight: ['400'],
-})
-
-const geistSans = localFont({
-  src: '../fonts/GeistVF.woff',
-  variable: '--font-geist-sans',
-  weight: '100 900',
-})
-const geistMono = localFont({
-  src: '../fonts/GeistMonoVF.woff',
-  variable: '--font-geist-mono',
-  weight: '100 900',
 })
 
 export const metadata: Metadata = {
@@ -61,7 +48,8 @@ export default function RootLayout({
           content="tF9OdRRToB9MDttTVe3pdTXv1M5m2yoYbhHIvySVtgw"
         />
       </head>
-      <body className={`relative bg-contain ${cls(nanumGothic.className)}`}>
+      {/* <body className={`relative bg-contain ${cls(nanumGothic.className)}`}> */}
+      <body className="relative bg-contain ff-sdn">
         <div
           className="absolute -z-10 w-full h-full opacity-20 bg-contain"
           style={{

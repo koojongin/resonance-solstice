@@ -30,13 +30,15 @@ export function RecommendationDeckCard({ deck }: { deck: RecommendationDeck }) {
         {autoPreset && (
           <div>
             <Tooltip content="클릭시 오토 프리셋이 복사됩니다.">
-              <img
-                src="/img/clipboard.svg"
-                className="w-[24px] cursor-pointer"
-                onClick={async () => {
-                  await copyToClipboard(autoPreset)
-                }}
-              />
+              <div className="flex items-center border border-blue-gray-900 rounded p-[2px] py-0 cursor-pointer hover:bg-green-100">
+                <img
+                  src="/img/clipboard.svg"
+                  className="w-[24px] cursor-pointer"
+                  onClick={async () => {
+                    await copyToClipboard(autoPreset)
+                  }}
+                />
+              </div>
             </Tooltip>
           </div>
         )}
@@ -62,7 +64,7 @@ export function RecommendationDeckCard({ deck }: { deck: RecommendationDeck }) {
           })}
         </div>
         <div
-          className={`overflow-y-scroll w-full whitespace-pre-line break-words p-[8px] border border-gray-300 rounded-[4px] shadow-gray-400/30 shadow-md ${descLink ? 'cursor-pointer hover:bg-blue-300/10' : ''}`}
+          className={`ff-sdn overflow-y-scroll w-full whitespace-pre-line break-words p-[8px] border border-gray-300 rounded-[4px] shadow-gray-400/30 shadow-md ${descLink ? 'cursor-pointer hover:bg-blue-300/10' : ''}`}
           onClick={() => openLink(descLink)}
         >
           {desc}

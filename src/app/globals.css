@@ -6,15 +6,35 @@ html {
     line-height: initial;
 }
 
+@font-face {
+    font-family: 'SUIT-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
     --font-primary: 'Nanum Gothic', sans-serif;
     --font-secondary: 'Do Hyeon', sans-serif;
+    --font-suit: 'SUIT-Regular', sans-serif;
+
 }
 
-.ff-ng{
+
+body {
+    font-family: 'Sandoll Nemony2 Basic LT', 'Nanum Gothic', sans-serif;
+}
+
+.ff-ng {
     font-family: var(--font-primary);
 }
-.ff-dh{
+
+.ff-dh {
     font-family: var(--font-secondary);
+    line-height: 1;
+}
+
+.ff-sdn {
+    font-family: var(--font-suit);
     line-height: 1;
 }

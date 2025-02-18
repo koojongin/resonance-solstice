@@ -2,7 +2,7 @@
 
 import { useParams } from 'next/navigation'
 import { RS_CHARACTERS } from '@/const/character/character.const'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { RSCharacter } from '@/const/character/character.interface'
 import { CharacterProfileCard } from '@/app/characters/[name]/character-profile-card'
 import { RECOMMENDATION_DECKS } from '@/app/rd/rd-decks.const'
@@ -15,6 +15,7 @@ export default function CharacterDetailPage() {
     RS_CHARACTERS.find((c) => c.originName === name)!,
   )
 
+  if (!character) return <div>Loading...</div>
   const linkedRecommendationDecks = RECOMMENDATION_DECKS.filter((deck) =>
     deck.characters.find((c) => c.name === character.name),
   )

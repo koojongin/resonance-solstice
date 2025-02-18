@@ -20,7 +20,7 @@ export function RsCharacterCardSmall({
         />
         <RsCharacterBorderBox grade={character.grade} />
       </div>
-      <div className="font-bold text-gray-700 mt-[4px] text-[15px] text-center">
+      <div className="font-bold text-blue-gray-800 mt-[4px] text-[15px] text-center">
         {character.name}
       </div>
     </div>
