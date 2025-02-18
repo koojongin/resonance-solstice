@@ -50,6 +50,7 @@ export default function RootLayout({
         <meta name="keywords" content="레조넌스, resonance, solstice" />
         <meta property="og:title" content="레조넌스: 솔스티스 정보 공유 사이트" />
         <meta name="robots" content="index, follow" />
+        <meta name="thumbnail" content="https://res.ujoygames.com/krImg/kv.jpg" />
         <meta
           property="og:image"
           content="https://res.cloudinary.com/dqihpypxi/image/upload/v1739699861/resonance/etc/banner_001_bkltao.png"
@@ -60,7 +61,14 @@ export default function RootLayout({
           content="tF9OdRRToB9MDttTVe3pdTXv1M5m2yoYbhHIvySVtgw"
         />
       </head>
-      <body className={`relative ${cls(nanumGothic.className)}`}>
+      <body className={`relative bg-contain ${cls(nanumGothic.className)}`}>
+        <div
+          className="absolute -z-10 w-full h-full opacity-20 bg-contain"
+          style={{
+            backgroundPosition: '-750px 0px',
+            backgroundImage: `url('https://patchwiki.biligame.com/images/resonance/5/5d/d1t23jamr85uos95wl2djx5x2zsh73d.jpg')`,
+          }}
+        />
         <GoogleAnalyticsComponent />
         <Analytics />
         <div
@@ -69,16 +77,16 @@ export default function RootLayout({
         />
         <div className="flex flex-col w-full">
           <div className="w-full bg-[#3d414d]">
-            <div className="w-[960px] m-auto py-[10px]">
+            <div className="w-[980px] m-auto py-[10px]">
               <MainHeaderBar />
             </div>
           </div>
-          <div className="w-full">
-            <div className="w-[960px] m-auto">
+          <div className="w-full flex">
+            <div className="w-[980px] m-auto bg-white px-[10px]">
               <MainSideBar />
             </div>
           </div>
-          <div className="w-[960px] min-h-[700px] m-auto">{children}</div>
+          <div className="w-[980px] min-h-[700px] m-auto bg-white px-[10px]">{children}</div>
         </div>
         <div className="bg-white/50 flex justify-center p-[8px] py-[20px] text-[14px] mt-[100px]">
           2025년 02월 14일, 이 프로젝트가 시작되었습니다.
