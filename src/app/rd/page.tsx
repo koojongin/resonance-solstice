@@ -6,9 +6,12 @@ import { RECOMMENDATION_DECKS } from '@/app/rd/rd-decks.const'
 import _, { debounce } from 'lodash'
 import { Tooltip } from '@material-tailwind/react'
 import { RecommendationDeckCard } from '@/app/components/deck/recommendation-deck-card'
+import { GradientButton } from '@/app/components/button/gradient-button'
+import { useNextDepthNavigator } from '@/services/navigation'
 
 const REVERSED_ALL_DECKS = _.reverse(RECOMMENDATION_DECKS)
 export default function RecommendationDeckPage() {
+  const { router } = useNextDepthNavigator()
   const [rdDecks, setRdDecks] = useState(REVERSED_ALL_DECKS)
   const [searchedKeyword, setSearchedKeyword] = useState('')
   const [checkedAutoPreset, setCheckedAutoPreset] = useState(false)
@@ -38,12 +41,23 @@ export default function RecommendationDeckPage() {
   }, [checkedAutoPreset, searchedKeyword])
 
   return (
-    <div>
-      <div className="mb-[10px] text-gray-600/90 font-bold">
-        * 모든 덱은 설명과, 가이드 링크를 읽어 보시는 것을 추천드립니다. 현재 한섭 상황과 돌파수에
-        따라 가능성 유무가 존재합니다.
+    <div className="flex flex-col gap-[10px]">
+      <div className="flex flex-col gap-[6px]">
+        <div className="text-gray-600/90 font-bold">
+          * 모든 덱은 설명과, 가이드 링크를 읽어 보시는 것을 추천드립니다. 현재 한섭 상황과 돌파수에
+          따라 가능성 유무가 존재합니다.
+        </div>
+        <div>
+          <GradientButton
+            className="p-[4px] rounded inline-flex items-center gap-[4px]"
+            onClick={() => router.push('/wiki/auto-preset')}
+          >
+            오토 프리셋 설정 방법
+            <i className="fa-solid fa-circle-question" />
+          </GradientButton>
+        </div>
       </div>
-      <div className="mb-[10px] flex flex-col gap-[8px]">
+      <div className="flex flex-col gap-[8px]">
         <div className="border rounded p-[8px] flex flex-col gap-[4px]">
           <label className="flex items-center gap-[10px] cursor-pointer">
             <input type="checkbox" checked={checkedAutoPreset} onChange={handleChangeAutoPreset} />

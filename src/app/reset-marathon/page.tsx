@@ -50,6 +50,7 @@ import {
 } from '@/const/character/character.const'
 import { RsCharacterCard } from '@/app/components/character-frame/rs-character-card'
 import { RsCardSize } from '@/app/components/character-frame/rs-card-size.enum'
+import { GradientButton } from '@/app/components/button/gradient-button'
 
 export default function ResetMarathonPage() {
   return (
@@ -59,19 +60,15 @@ export default function ResetMarathonPage() {
         <div>* 누군가 주관적으로 쓴 글을 퍼온거라 개인적으로 잘 판단해서 사용해주세요)</div>
         <div className="font-bold text-red-400">무기한 쿠폰 코드 : CBCRR23, RESONANCE</div>
         <div className="mt-[4px] flex gap-[4px]">
-          <a
-            href="https://arca.live/b/resonance/128851764?mode=best&p=1"
-            target="_blank"
-            className="bg-blue-300 p-[4px] rounded text-white shadow shadow-blue-200"
-          >
-            [티어리스트 원문 링크]
+          <a href="https://arca.live/b/resonance/128851764?mode=best&p=1" target="_blank">
+            <GradientButton className="p-[4px] rounded inline-flex items-center gap-[4px]">
+              [티어리스트 원문 링크]
+            </GradientButton>
           </a>
-          <a
-            href="https://arca.live/b/resonance/128890448"
-            target="_blank"
-            className="bg-blue-300 p-[4px] rounded text-white shadow shadow-blue-200"
-          >
-            [리세마라 가이드 링크]
+          <a href="https://arca.live/b/resonance/128890448" target="_blank">
+            <GradientButton className="p-[4px] rounded inline-flex items-center gap-[4px]">
+              [리세마라 가이드 링크]
+            </GradientButton>
           </a>
         </div>
       </div>
