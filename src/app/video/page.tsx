@@ -32,7 +32,7 @@ export default function VideoPage() {
     <div>
       {loading && (
         <div className="text-[30px] flex gap-[4px] items-center justify-center min-h-[300px] border rounded">
-          <i className="fa-solid fa-spinner" />
+          <i className="bg-fa-solid fa-spinner" />
           로딩중...
         </div>
       )}

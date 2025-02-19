@@ -6,8 +6,8 @@ import React, { useState } from 'react'
 import { RSCharacter } from '@/const/character/character.interface'
 import { CharacterProfileCard } from '@/app/characters/[name]/character-profile-card'
 import { RECOMMENDATION_DECKS } from '@/app/rd/rd-decks.const'
-import createKey from '@/services/key-generator'
-import { RecommendationDeckCard } from '@/app/components/deck/recommendation-deck-card'
+import { LinkedDeckListBox } from '@/app/characters/[name]/linked-deck-list-box'
+import { CharacterDetailBox } from '@/app/characters/[name]/character-detail'
 
 export default function CharacterDetailPage() {
   const { name } = useParams()
@@ -26,16 +26,8 @@ export default function CharacterDetailPage() {
         <div className="flex flex-col gap-[20px] justify-center">
           <CharacterProfileCard character={character} />
           <hr />
-          <div className="flex flex-col gap-[4px]">
-            <div className="bg-gradient-to-r from-gray-900 to-white text-white ff-dh text-[26px] p-[8px] rounded">
-              연결된 추천덱({linkedRecommendationDecks.length})
-            </div>
-            <div className="flex flex-col gap-[10px]">
-              {linkedRecommendationDecks.map((deck) => {
-                return <RecommendationDeckCard deck={deck} key={createKey()} />
-              })}
-            </div>
-          </div>
+          <CharacterDetailBox character={character} />
+          <LinkedDeckListBox decks={linkedRecommendationDecks} />
         </div>
       )}
     </div>
