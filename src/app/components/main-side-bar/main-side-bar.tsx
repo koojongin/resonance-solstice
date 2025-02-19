@@ -23,6 +23,9 @@ export default function MainSideBar() {
       <div className={menuCss} onClick={() => router.push('/shop/all')}>
         상점
       </div>
+      <div className={menuCss} onClick={() => router.push('/video')}>
+        영상
+      </div>
       {/* <div */}
       {/*  className={`ml-auto border-l-[1px] ${menuCss}`} */}
       {/*  onClick={() => router.push('/update-log')} */}

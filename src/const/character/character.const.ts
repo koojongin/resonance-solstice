@@ -92,7 +92,7 @@ export const SUMMERSHIZURU = {
 }
 export const NICOLA = {
   originName: 'NICOLA',
-  name: 'Nicola',
+  name: '니콜라',
   faction: RS_FACTION.GARDENERS,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.BACK,
