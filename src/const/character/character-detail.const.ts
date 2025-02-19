@@ -1,6 +1,7 @@
 export interface CharacterDetail {
   SKILLS: string[]
   RESONANCES: { [key: string]: string }
+  RESONANCE_UPGRADE_MATERIALS: { [key: string]: { name: string; amount: number }[] }
   AWAKENING: { [key: string]: string }
 }
 
@@ -62,6 +63,34 @@ export const CHARACTER_DETAIL: {
       3: '생기',
       4: '감응',
       5: '레비스의 불가사의',
+    },
+    RESONANCE_UPGRADE_MATERIALS: {
+      1: [
+        { name: '디지털화 사고', amount: 20 },
+        { name: '원시적 사고', amount: 16 },
+        { name: '철도연맹 코인', amount: 20000 },
+      ],
+      2: [
+        { name: '디지털화 사고', amount: 40 },
+        { name: '원시적 사고', amount: 16 },
+        { name: '철도연맹 코인', amount: 50000 },
+      ],
+      3: [
+        { name: '디지털화 사고', amount: 80 },
+        { name: '원시적 사고', amount: 32 },
+        { name: '철도연맹 코인', amount: 100000 },
+      ],
+      4: [
+        { name: '디지털화 사고', amount: 160 },
+        { name: '원시적 사고', amount: 64 },
+        { name: '철도연맹 코인', amount: 200000 },
+      ],
+      5: [
+        { name: '모노리스 조각', amount: 42 },
+        { name: '디지털화 사고', amount: 320 },
+        { name: '원시적 사고', amount: 128 },
+        { name: '철도연맹 코인', amount: 500000 },
+      ],
     },
     AWAKENING: {
       1: '강적',

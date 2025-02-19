@@ -14,6 +14,9 @@ export default function MainSideBar() {
       <div className={`${menuCss}`} onClick={() => router.push('/characters')}>
         캐릭터
       </div>
+      <div className={menuCss} onClick={() => router.push('/materials')}>
+        아이템
+      </div>
       <div className={menuCss} onClick={() => router.push('/rd')}>
         추천덱
       </div>

@@ -16,5 +16,13 @@ module.exports = withMT({
       },
     },
   },
-  // plugins: [require('tailwindcss-textshadow')],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.text-shadow-outline': {
+          textShadow: '-1px -1px 4px #000, 1px -1px 4px #000, -2px 2px 4px #000, 2px 2px 4px #000',
+        },
+      });
+    },
+  ],
 })

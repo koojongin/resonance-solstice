@@ -8,14 +8,21 @@ import React from 'react'
 import { CHARACTER_RESONANCES } from '@/const/character/character-resonance.const'
 import { CHARACTER_AWAKENINGS } from '@/const/character/character-awakening.const'
 import { RSHighlightedText } from '@/services/utils/highlight-text'
+import { MATERIALS } from '@/const/material.const'
+import { CharacterResonanceUpgradePriceBox } from '@/app/characters/[name]/character-resonance-upgrade-price-box'
 
 export function CharacterDetailBox({ character }: { character: RSCharacter }) {
   const characterInfo = CHARACTER_DETAIL[character.originName]
-  const { SKILLS, RESONANCES, AWAKENING } = characterInfo
+  const { SKILLS, RESONANCES, AWAKENING, RESONANCE_UPGRADE_MATERIALS } = characterInfo
   return (
     <div className="flex flex-col gap-[10px]">
       <>{SKILLS && <CharacterSkillBox skills={SKILLS} />}</>
       <>{RESONANCES && <CharacterResonanceBox resonances={RESONANCES} />}</>
+      <>
+        {RESONANCE_UPGRADE_MATERIALS && (
+          <CharacterResonanceUpgradePriceBox materials={RESONANCE_UPGRADE_MATERIALS} />
+        )}
+      </>
       <>{AWAKENING && <CharacterAwakeningBox awakenings={AWAKENING} />}</>
     </div>
   )
