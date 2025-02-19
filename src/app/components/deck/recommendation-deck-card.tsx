@@ -5,20 +5,14 @@ import { RsCharacterCard } from '@/app/components/character-frame/rs-character-c
 import { RsCardSize } from '@/app/components/character-frame/rs-card-size.enum'
 import { getColumnUrl } from '@/services/character-url'
 import React from 'react'
+import { copyToClipboard } from '@/services/utils/copy-clipboard'
 
 export function RecommendationDeckCard({ deck }: { deck: RecommendationDeck }) {
   const openLink = (link?: string) => {
     if (!link) return
     window.open(link, '_blank')
   }
-  const copyToClipboard = async (text: string) => {
-    try {
-      await navigator.clipboard.writeText(text)
-      alert('복사되었습니다.')
-    } catch (error) {
-      alert(`Failed to copy text: ${error}`)
-    }
-  }
+
   const { autoPreset, title, desc, characters, leaderName, owner, descLink } = deck
   return (
     <div
@@ -36,6 +30,7 @@ export function RecommendationDeckCard({ deck }: { deck: RecommendationDeck }) {
                   className="w-[24px] cursor-pointer"
                   onClick={async () => {
                     await copyToClipboard(autoPreset)
+                    alert('복사됨')
                   }}
                 />
               </div>

@@ -1,14 +1,42 @@
+'use client'
+
+import React from 'react'
+import { copyToClipboard } from '@/services/utils/copy-clipboard'
+import createKey from '@/services/key-generator'
+import { GradientButton } from '@/app/components/button/gradient-button'
+
 export default function HomePage() {
+  const coupons = [
+    { period: '상시', code: 'RESONANCE' },
+    { period: '상시', code: 'CBCRR23' },
+    { period: '2월 19일 00:00 ~ 3월 4일 00:00', code: 'RSNUM1' },
+  ].reverse()
   return (
     <div className="flex flex-col gap-[10px]">
       <img src="https://res.cloudinary.com/dqihpypxi/image/upload/v1739699861/resonance/etc/banner_001_bkltao.png" />
 
       <div className="border border-gray-400 p-[10px] rounded">
-        <div className="text-[20px]">상시 쿠폰</div>
+        <div className="text-[20px]">쿠폰</div>
         <hr className="my-[8px] border-gray-400" />
-        <div className="flex flex-col gap-[4px] ff-dh text-[18px]">
-          <div>CBCRR23</div>
-          <div>RESONANCE</div>
+        <div className="inline-flex flex-col gap-[4px] text-[18px]">
+          {coupons.map((coupon) => {
+            return (
+              <div key={createKey()} className="flex items-center gap-[4px] group">
+                <div>[{coupon.period}]</div>
+                <GradientButton
+                  key={createKey()}
+                  className="inline-flex items-center px-[4px] rounded"
+                  onClick={async () => {
+                    await copyToClipboard(coupon.code)
+                    alert('복사되었습니다.')
+                  }}
+                >
+                  <div className="group-hover:underline">{coupon.code}</div>
+                  <img src="/img/clipboard.svg" className="w-[24px] cursor-pointer" />
+                </GradientButton>
+              </div>
+            )
+          })}
         </div>
       </div>
 
