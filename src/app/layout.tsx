@@ -30,7 +30,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link href="./globals.css" rel="stylesheet" />
         <meta name="application-name" content="레조넌스: 솔스티스 정보 공유 사이트" />
         <meta name="og:site_name" content="레조넌스: 솔스티스 정보 공유 사이트" />
         <meta name="description" content="레조넌스: 솔스티스 정보 공유 사이트" />
@@ -66,10 +65,10 @@ export default function RootLayout({
         />
         <GoogleAnalyticsComponent />
         <Analytics />
-        <div
-          className="bg-center bg-cover min-w-full h-full absolute -z-10 opacity-10 bg-repeat"
-          style={{ backgroundImage: `url('/img/bg-low.jpg')` }}
-        />
+        {/* <div */}
+        {/*  className="bg-center bg-cover min-w-full h-full absolute -z-10 opacity-10 bg-repeat" */}
+        {/*  style={{ backgroundImage: `url('/img/bg-low.jpg')` }} */}
+        {/* /> */}
         <div className="flex flex-col w-full">
           <div className="w-full bg-[#3d414d]">
             <div className="w-[980px] m-auto py-[10px]">
