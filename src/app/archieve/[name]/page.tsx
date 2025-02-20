@@ -6,6 +6,7 @@ import { CHARACTER_SKILLS } from '@/const/character/character-skill.const'
 import createKey from '@/services/key-generator'
 import React from 'react'
 import { CharacterSkillBox } from '@/app/characters/[name]/character-skill-container'
+import { RSHighlightedText } from '@/services/utils/highlight-text'
 
 export default function ArchieveDetailPage() {
   const { name } = useParams()
@@ -30,10 +31,12 @@ export default function ArchieveDetailPage() {
                 <img className="w-full" src={data.thumbnail} />
               </div>
             )}
-            <div className="flex flex-col gap-[4px] p-[8px]">
+            <div className="flex flex-col gap-[4px] p-[8px] w-full">
               <div className="ff-dh text-[24px] text-shadow-outline text-white">{archieveName}</div>
               <hr />
-              <div className="">{data.desc}</div>
+              <div className="">
+                <RSHighlightedText text={data.desc} />
+              </div>
             </div>
           </div>
         )}
@@ -50,7 +53,7 @@ export default function ArchieveDetailPage() {
           {linkedSkills.map((skill) => {
             return (
               <div key={createKey()} className="w-[calc(50%-4px)] flex flex-col">
-                <CharacterSkillBox skill={skill} />
+                <CharacterSkillBox skill={skill} onShowCharacter />
               </div>
             )
           })}

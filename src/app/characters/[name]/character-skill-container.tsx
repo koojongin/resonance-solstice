@@ -2,6 +2,10 @@ import { CHARACTER_SKILLS, CharacterSkill } from '@/const/character/character-sk
 import createKey from '@/services/key-generator'
 import { RSHighlightedText } from '@/services/utils/highlight-text'
 import React from 'react'
+import { CHARACTER_DETAIL } from '@/const/character/character-detail.const'
+import { RS_CHARACTERS } from '@/const/character/character.const'
+import { convertCharacterThumbnailUrl } from '@/services/character-url'
+import { useNextDepthNavigator } from '@/services/navigation'
 
 export function CharacterSkillContainer({ skills }: { skills: string[] }) {
   return (
@@ -19,7 +23,22 @@ export function CharacterSkillContainer({ skills }: { skills: string[] }) {
   )
 }
 
-export function CharacterSkillBox({ skill }: { skill: CharacterSkill }) {
+export function CharacterSkillBox({
+  skill,
+  onShowCharacter,
+}: {
+  onShowCharacter?: boolean
+  skill: CharacterSkill
+}) {
+  const { router } = useNextDepthNavigator()
+  const [character] = Object.keys(CHARACTER_DETAIL)
+    .filter((characterOriginName) => {
+      const { SKILLS } = CHARACTER_DETAIL[characterOriginName]
+      return (SKILLS || []).includes(skill.name)
+    })
+    .map((characterOriginName) => {
+      return RS_CHARACTERS.find((c) => c.originName === characterOriginName)
+    })
   return (
     <div
       key={createKey()}
@@ -59,6 +78,28 @@ export function CharacterSkillBox({ skill }: { skill: CharacterSkill }) {
         <div className="whitespace-pre-line leading-normal">
           <RSHighlightedText text={skill.desc} />
         </div>
+
+        {onShowCharacter && character && (
+          <>
+            <hr className="mt-auto" />
+            <div
+              className="flex items-center gap-[4px] cursor-pointer"
+              onClick={() => {
+                router.push(`/characters/${character.originName}`)
+              }}
+            >
+              <div className="w-[50px] border overflow-hidden bg-gray-200">
+                <div
+                  className="w-[50px] h-[50px] bg-cover"
+                  style={{
+                    backgroundImage: `url('${convertCharacterThumbnailUrl(character.thumbnail, 50)}')`,
+                  }}
+                />
+              </div>
+              <div className="text-[20px] ff-dh">{character.name}</div>
+            </div>
+          </>
+        )}
       </div>
     </div>
   )
