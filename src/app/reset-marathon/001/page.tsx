@@ -61,7 +61,9 @@ export default function TierListPage1() {
           티어리스트
         </div>
         <div>* 누군가 주관적으로 쓴 글을 퍼온거라 개인적으로 잘 판단해서 사용해주세요)</div>
-        <div>* 카타스가 포함되어 있지 않습니다.(티어 모름 출시당시엔 없어서 티어리스트엔 없는듯)</div>
+        <div>
+          * 카타스가 포함되어 있지 않습니다.(티어 모름 출시당시엔 없어서 티어리스트엔 없는듯)
+        </div>
         <div className="font-bold text-red-400">무기한 쿠폰 코드 : CBCRR23, RESONANCE</div>
         <div className="mt-[4px] flex gap-[4px]">
           <a href="https://arca.live/b/resonance/128851764?mode=best&p=1" target="_blank">
