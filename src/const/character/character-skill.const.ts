@@ -292,7 +292,7 @@ export const CHARACTER_SKILLS: {
     amount: 1,
     cost: 8,
     name: '화력전개',
-    desc: '모든 적에게 발사:\n[일반 공격]이 빠른 속도로 연속사격하며, 덱과 버려진 덱에 있는 [초음속]과 [공습]을 모두 사용합니다.\n동시에 [인뢰]를 발동합니다.',
+    desc: '모든 적에게 발사:\n[일반공격]이 빠른 속도로 연속사격하며, 덱과 버려진 덱에 있는 [초음속]과 [공습]을 모두 사용합니다.\n동시에 [인뢰]를 발동합니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/5/5c/mkmaptfsvg2c97lzany2zzlc4udbzda.png',
   },

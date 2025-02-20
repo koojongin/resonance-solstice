@@ -138,7 +138,7 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
 
   질풍: {
     name: '질풍',
-    desc: '[일반 공격]을 가 할 때마다 [일반 공격]의 공격 속도가 3% 증가합니다. (최대 100%)',
+    desc: '[일반공격]을 가 할 때마다 [일반공격]의 공격 속도가 3% 증가합니다. (최대 100%)',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/4/42/qj2ilbyo82w9kb80zhjcj8z9uzocg19.png',
   },
@@ -156,7 +156,7 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
   },
   축전: {
     name: '축전',
-    desc: '자신의 스킬 카드 사용 후 [일반 공격]이 [인뢰]를 발동합니다. (8초간 지속, 중첩가능)',
+    desc: '자신의 스킬 카드 사용 후 [일반공격]이 [인뢰]를 발동합니다. (8초간 지속, 중첩가능)',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/6/62/he7ev277sds21d1l9rynm9mf3fka9cc.png',
   },
@@ -175,7 +175,7 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
   },
   성원: {
     name: '성원',
-    desc: '[셀카] 사용 후 모든 아군의 [일반 공격]의 공격 속도가 최대로 증가합니다.(6초간 지속, 중첩 가능)',
+    desc: '[셀카] 사용 후 모든 아군의 [일반공격]의 공격 속도가 최대로 증가합니다.(6초간 지속, 중첩 가능)',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/a/a8/hzlszfaedujdjoupfb6prkaxt58s51p.png',
   },

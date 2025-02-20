@@ -23,18 +23,21 @@ export default function ArchieveDetailPage() {
         <div className="bg-gradient-to-r from-blue-gray-900 to-white text-white ff-dh text-[26px] p-[8px] py-[4px] rounded">
           설명
         </div>
-        <div className="flex items-stretch min-h-[40px]">
-          {data?.thumbnail && (
-            <div className="w-[80px] border shadow-lg shadow-gray-300 rounded overflow-hidden">
-              <img className="w-full" src={data.thumbnail} />
+        {data && (
+          <div className="flex items-stretch min-h-[40px]">
+            {data?.thumbnail && (
+              <div className="w-[80px] border shadow-lg shadow-gray-300 rounded overflow-hidden">
+                <img className="w-full" src={data.thumbnail} />
+              </div>
+            )}
+            <div className="flex flex-col gap-[4px] p-[8px]">
+              <div className="ff-dh text-[24px] text-shadow-outline text-white">{archieveName}</div>
+              <hr />
+              <div className="">{data.desc}</div>
             </div>
-          )}
-          <div className="flex flex-col gap-[4px] p-[8px]">
-            <div className="ff-dh text-[24px] text-shadow-outline text-white">{archieveName}</div>
-            <hr />
-            <div className="">{data.desc}</div>
           </div>
-        </div>
+        )}
+        {!data && <div>{keyword}데이터가 없습니다.</div>}
       </div>
 
       <hr />

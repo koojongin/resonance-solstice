@@ -144,13 +144,13 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
   },
   쌍권총: {
     name: '쌍권총',
-    desc: '[일반 공격] 강화: 가우스 권총 2자루를 동시에 들고 사격합니다.',
+    desc: '[일반공격] 강화: 가우스 권총 2자루를 동시에 들고 사격합니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/e/ef/ka8g5wkqgt70vsbajmb4e4baa233lqj.png',
   },
   과부하: {
     name: '과부하',
-    desc: '자신이 [인뢰]를 30회 부여할 때마다 다음 [일반 공격] 명중 시 반드시 [우레]를 발동합니다.\n동시에 자신의 공격력이 100 증가합니다.(6초간 지속)',
+    desc: '자신이 [인뢰]를 30회 부여할 때마다 다음 [일반공격] 명중 시 반드시 [우레]를 발동합니다.\n동시에 자신의 공격력이 100 증가합니다.(6초간 지속)',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/8/83/9frhs5bteeq029t124i6j79dqq57y4w.png',
   },
