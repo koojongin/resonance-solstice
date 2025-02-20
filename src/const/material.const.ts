@@ -31,4 +31,17 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/7/73/e6c182cprplbhwggsmqlicm15ml5a7y.png',
   },
+
+  '베툴라 자사낭': {
+    grade: RS_GRADE.SR,
+    desc: `촉수 베툴라 생명체의 기관으로, 이 기관은 베툴라 생명체가 형태장에서 '부유'할 수 있게 합니다. 이 기관은 열역학 제2법칙을 일정 부분 위반하여 일정 범위내에서 열을 흡수할 수 있습니다. 보고서에는 '차가운 맛을 느낄 수 있으며 빙수에 첨가할 수 있다. 가열하면 석회질 물질로 변해 먹을 수 없다'고 적혀 있습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/4/4a/t8yhd3kxpo1dyt76aiwoqn2tf4y9zte.png/180px-%E6%A1%A6%E6%A0%91%E5%88%BA%E4%B8%9D%E5%9B%8A.png',
+  },
+  '베툴라 분비선': {
+    grade: RS_GRADE.R,
+    desc: `베툴라 생명체는 일반적인 환경에서 죽은 후, 분비선이 용이하게 네거필름 뉴트리노의 형태로 보존됩니다. 그래서 네거필름 뉴트리노 재료를 제조하는 기초 자원으로 사용됩니다.\n[베툴라 분비선]은 열차 전력 엔진을 업그레이드하는데 중요한 재료입니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/a/a2/8aii2fodj2jz8c43gn3useghh4hnxmp.png/180px-%E6%A1%A6%E6%A0%91%E8%85%BA%E4%BD%93.png',
+  },
 }

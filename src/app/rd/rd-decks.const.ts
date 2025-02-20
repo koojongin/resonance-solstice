@@ -17,6 +17,7 @@ import {
   LIVIA,
   MARGIELA,
   NAYUTA,
+  NICOLA,
   PRIMING,
   RACHEL,
   RINA_F,
@@ -271,5 +272,71 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     owner: EXTERNAL_USERS['4'],
     autoPreset:
       'tVbPb5swFP5f3plJfrYJNtedInVtpe025YCGt6JmCQWitYryv8+G4BhKsVtSbg8/v+/z+32Eor5RWa6qr1mV3+0gbaqDiuBRqdL8uT38hZREsG8eOpVWKurvZa//O9vW+sJDawRSJOZLaAR5Uf/SOj9eSqV/R2CEm6JuIP15BPV0KMp1L28iqB+L7XatzQNSpi2wGCI41Oo+qzJN4Qv2KrtcPUPK2kNru8mqP6rpRMOvtUNWhNAk0Xb2/3aqMsZ7dqdogsIUmrmj+SCXoYgsJsGIYww+JjFC6Q+/ZWVnwIVFGDKcpDA0P1KJ9Rvf4Gi97riWDxCZn+0oxpwksJwTupxQsGWcmFzBfKg6PWzz6u38xOD8lBPZgl63rGKPW6iLQmQCs4R8bkFC/aHycsIhp9VSThgUKirnQ0UDQ4XydWEzIUMo6OtXyRZMaDCFmW5GGCOhiEJcCTH4jeJ1RZwRZ7Mvwfc0L0SyMPskn86++SkSmmyMT/UFfwv31iAb1qBYWoMsrF3y+RoMHa4o8cM1yNh1OraMPxQZsxKFd2w67I50PjJHYPrnaeLN3N+2vYVDh4XDrkAMMfbkTVcvQrxnI2rR4tNwLaIjup+wFg0j12+uixzEiY7cplua1/lZ1Y4hk6B2sFvB7LoXIRYtmp21jpp0BPfENHsrGM85ArtYMy+83NEVebEmiKPG0TXtgJocck5cAYkL6ghm9DnPFu4THDqmbzoGDAPt3Gq/VefQ2WK0yd83kchGu2+lm9N/',
+  },
+
+  {
+    title: '캐롤 테니 없찐이 몸 비틀어 쓰는 니콜라덱',
+    leaderName: NICOLA.name,
+    characters: [NICOLA, NAYUTA, STELLA, ARCANA, RINA_F],
+    desc: '캐롤 테니 없찐이 몸 비틀어 쓰는 니콜라덱(니나스아리)',
+    descLink: 'https://arca.live/b/resonance/129403908',
+    owner: EXTERNAL_USERS['5'],
+    autoPreset:
+      'tVfLbtswEPwXnlWAL4mSrj0ZSB9AeytyECq2EeLYriSjLQz/e0nKjpePSGSq+KS1qd3hzuyQPqF+v5V33TCi+hvB+sNoNj2IywOtyumB5GJ6YGV1n6Fu+HJ43/Ttpx2qfzTbQWbouwo37YfmgOoTIrhQ7wiKapJNActBQKviFhAKgwrDXwR8J4e/MBBg6x0OAmEFVoIcYoMJyhIGFVjGK5iAQgQEZiOwKNwchj3gsChWqfFzD2ACCgIqdEPOuv93smllf+Vg7I+KggfznVpxJRO13aB5+fr3IFHNMvQopeHt4/HJ1NuPD1MSE+mlFz2ckPx17A6ba6w4Pw7yc9M3T4biyxdTYgVvbPqfcpxClalTCW/kZGh47Lbbza6VfwyMaypUv1Pv7n/vZL9pIe5pvUlCGSakYOicnZz37EWYYY6syopvuzL1cHqbtLFo1YNt+hBu1TSddku83E5tu5SetNuOzIbyMtcV54k4ITUJ+BzLhlKT3RMyz4YNa2o0FhitDyxAViowUuCATG5F9AA7TSa8oqlUaXeMVIV2Fr8ie9OKJFCRv2lF6lcsyxUqhgT2LCWoHbFkMQmjd5USj9V4YYmczYlc8LnpKzxkxn88m2NhZO6UstyyQ312/E+XIvmBzeEmjWpRHm0DletPC6eFuo74HaLV+v4kaJpxhoDhYn3j1NeiJGCGR08rL2jKB0Zjxa7veDOOTuNw8YChh7sF/aBAs91bOPUDR7G6gKyvKLc/C1IPm0EeQVzCZc0dv4VTOHBZU7e1mPFLwJQ4eWFM0QJ3tKT+DbhiYAwnOaexghTnjO9N5V6uF/gKuRKtRCRfsC3eTUq1xSNm/bbAKafOlL/6yL+Yc5kOga0LQbyiC3xVCITi8/35Hw==',
+  },
+
+  {
+    title: '니콜라 오토 프리셋 (니콜라 나유타 캐롤라인 테니 스텔라)',
+    leaderName: NICOLA.name,
+    characters: [NICOLA, NAYUTA, CAROLINE, TENNIE, STELLA],
+    desc: '니콜라 오토 프리셋 (니콜라 나유타 캐롤라인 테니 스텔라)',
+    descLink: 'https://arca.live/b/resonance/129397795',
+    owner: EXTERNAL_USERS['2'],
+    autoPreset:
+      'rVdNj5swEP0vPlPJMzaf155W2nZXam+rHlBxu2izSQREbYX477UhgB2MgSW3mLHnPY/fPDs1eRPi/Dktsq+Xd5JQj+Tlo0gzUahvT0eSVMVFeORUvXaf2jk/5Y+H7Et6JklNgAaUIqckAa8bsMAY8HEAVIsAhuMAw7BNfY2gPs3XE4CWWk8A1FgTaNN4rEeYnkCLMN9IoOFgrGfDSF+jZ/ONbRsR0FNzPbXaXKPK/u3cl/xXeihlzbO8VIX+/u8sSMK6qj/mZUWSl5pcSvGcFul7ewgvPzxSvuWHw4M8HyK3SAEkvqdmdcslXt7G+lPwSJUWv0XVhak3JCTJJzn59OcoCpVNzqVq0z3AMRN/JZvGq0dEBUj9yDfxzBQYR7cYNwRGfkpMEwDgMboAaIirAZQibAD8bgDywG0A7H4AXYkMGdREas5vvFvYKLofLE5hR/VdxWGimcKkIP3AgaBMYVE7ixTATQGYk4J0EmsHbKKACxRiNwXYRWG0ATZvA8r9NtkAsNhiA1MJ0maLIKSoXKVQFrso2SUeAxhGjnoEFlm46oFhcCO71TwgoPP2jJaCOHmo/jC0t4LHlQabZxGQBV+YsFi7fSlLdMgy2inLNdvvtTcvB3U1b7slQ1ySg61D0VWKcGcp1lCgHMDRFBa73tQU60+Dt4Y0tYrBReZNom0nC5EPmQQNXc0JO5tzhgezqZPrPJipzsDFgy2Kc3oshjI6AoH+csA9bzol8zWIIZiIega235CmiID0fnvkpJEAxekgrg/14eYeDmHo00GkPY5c+dr+9Rov/OY/',
+  },
+
+  {
+    title: '테니없찐의 니콜라덱',
+    leaderName: NICOLA.name,
+    characters: [NICOLA, NAYUTA, CAROLINE, RINA_F, STELLA],
+    desc: '테니없찐의 니콜라덱',
+    descLink: 'https://arca.live/b/resonance/129347319',
+    owner: EXTERNAL_USERS['6'],
+    autoPreset:
+      'xZdLj9MwEMe/i89B8iMPO1dOlXYXJLghDhExbLSlLUkrQFW+O2MnVcdJ1m7Wi7anuH7Mz/OfmUzOpOk+Hd5Xbf1hR8rv1bbTCdkfH3Vr/iMlTciT1nbBw+mnHbf7rb5ruiMpvzAKPyZUYh9owccHMT5wJYcHIdXXhHyDUzb1fXUg5ZkwmsNenpGSJcNAZPQ64ArNMCnRQDHLMSzL0IzgeBnn6LSiwDMpGlDHaI5nON4j8AzDRhVexvDAMZrjPQW+NrZT4IHERysEKlKFD0BGeWqW9QnoeqeretARaWs0GNU7k+6p2W43u1r/IaVIxiGoTuC6lLFckIToX6fmsLnsARVPnf5YtRUEwzsweqzaH/r4+e9BW1Eau/viWLt4mGPXjTYAzEn73zvdGnuXqOmTAJP1tpcp8yCZYPEgnUlq94PSWT+lgwgO04EUEXQQo4hOzOgWuSDpDJdXFHeHScoruOXOZOaQpF7pLAntZxddyWHKhcvBUsUxh4nyN+IQDkcW9kf2Ao6p0dQ1yiZGF7Bf/+ZSuhD8P958SCM2T6PC+BuVEu53hY3oBQRshc+ssJzGlDee3RSbM9KVGkHdmWarEMwhkd4sMXcK+GZeyFieRvmmWFf6R7d49WJMcD8T9SCZ1mC9XNDahOMIylRE0YeO442KPrzeXdHyoIfS5VQPZLMItBHC659wmonn/BPgisv/IlwZ5wE1dhGx+e+SyNtCe3WB5KqIcZBa2f8tdFgLRZsF+r9ATzp9kazvSeeBBJUpiskbSM8yRSY/n1Ts9LXfIeCVGLcMjf4KtyzU6plUzHwUxjA57zV+K1OcVDSXrlQ8BBHXFS4hFG7HwcVaBPjr0X6OXoM4IXXTmc/RUeH+Hw==',
+  },
+
+  {
+    title: '카타스 점화덱',
+    leaderName: KATAS.name,
+    characters: [KATAS, STELLA, VALENTINE, KALEYA, YOIDUKI],
+    desc: '카타스 점화덱',
+    descLink: 'https://arca.live/b/resonance/129295335',
+    owner: EXTERNAL_USERS['7'],
+    autoPreset:
+      'tVfLrpswEP2XWVPJD2we264i3T6kdld1gYrbi25ubgpEbRXx77VNgCGmuK0hO2cGn+Nz7PH4Co+qKFUNOSX2F0fwpajLh6ppIf90hbaov6n246+zgpxE0DxVx+OhhBwo4zqdcYjg5cdJ1ebPaY7KphBphzrl0qj3RV08Q/6KDrOcSvUTcmaDPYAOqe+X6nwY8D93kY8C5QsU4mRGIaM7UegZSH5PgGUpJkCZdAjcoSAKbEp9U5whvwLXqJ2Xh0iFhweLicMjSHxJMkd8SijG5ETs6r8W16Ug+Mz/hWVvSUFkCxTmKjC5TiHUCG2t/yCuG8GDKbgq3FPg67UgVAXKibcWxHxnCtJfjrKdjOgZ0MRjA6WuDWGIqRfR3XshiEQ6iE7JZdsiJtSL6O6sIFUZ8SJu66NIHMR7HxdOT2DRWLhA5tWbpsm+dUt4LxCt+05Fo79FxcL5ofOqta3TiVhweo6YbHZibzInbm129vN6n+ansDC9p+vyVHN7bWOGRpU/9Q7/0bgNMO7t7WgTegoW+pMgbSRJYd7oxbDKaabNXxXA2NfY/VNffU/B2iO6TudUzYN9Br3WT593J8jb+qL6h9ChvOWO/pt5xitmHJgeE0UojnAckdPAKDZFdJlDaTjCZhE0m+mnpghFA9PsIQY4klHMAKWZKjcNJMHfZGiQYA0oHuCVMiwIwcsmdtldBPXLUd18Gi+bce+PndO4XYcdYP36cB68+locG21WWTXGr95q8yBrH3s/7c56Usp+8PbybLB/Aw==',
+  },
+
+  {
+    title: '니콜라 스텔라 케롤라인 나유타 예주',
+    leaderName: NICOLA.name,
+    characters: [NICOLA, STELLA, CAROLINE, NAYUTA, YEJUE],
+    desc: '니콜라 스텔라 케롤라인 나유타 예주',
+    descLink: 'https://arca.live/b/resonance/129343448',
+    owner: EXTERNAL_USERS['8'],
+    autoPreset:
+      'rZbLTuswEIbfxescyZ5J4iTbs0LiJsEOsYhOfCCitFVSBKji3bGT0E4mUKc1XWXqyzfj+WfsrXg0ZWUaUSjpfgiReDJm/bdsqsuXZ1HISNTtTWdfLUXxv1y0JhL/rHlWXZRrUWyFkqldmIDdI+oN0EiNeG9gQkYskkyLiaFA0TWKrhlxdOfhYACdRtdAQtbkKR2h7kBMt072WyNoOo0YCDl1dBRCSqdl1APiDsY5XeNC+HBHft6lhR17s1qY87rdiOJul67uA/Ks/1CY9x9SD0OIyX2fsGHlVqxel6Y5q4acu7WittY+D5F4ac3t+9p0rm3K5sFselN2Q9dlU1pt/LGD7VO9WHR7AUqZZMlHxAHOFQJwSjkVoOIsmwFQAYA8ngE4/YgsAL8B4AjgCmMM2O0huk1UiuLrz2Vl3kSBnDpyyR+SlWFASDDjzPBgSG5GYEhMyK5ODxJVGgcSXbXRGIEfIk8bhqZtQsx8RGBEOJJo+8eoPWhevexU0yz/7TymPxGHNKJHrV/WcF+ho87AJj75yMCjZSXibiZPiXDBwq9EPuk+vH/yyBVP8dGRc6JHVFbHjKhCZRz7ZKwDiZNSPdyOlLv8w4gTBXvyKDVXcDCRN/kj3g5SqxmA098OLqczAFwXRwAUzBHeXsm7RGj5fa85ocjv7mf0GU9nk5NryqML+8Cs6ta9Mft/bENebR7756sb/wQ=',
+  },
+
+  {
+    title: '카타스 순환덱',
+    leaderName: KATAS.name,
+    characters: [KATAS, ARINA, AOBA, NAYUTA, STELLA],
+    desc: '카타스 순환덱',
+    descLink: 'https://arca.live/b/resonance/129240119',
+    owner: EXTERNAL_USERS['9'],
+    autoPreset:
+      'tZhLj5swEMe/y5yp5CcGrj1F2j6k9lbtATVuF22aTSFRW63y3WsDgQGbgBM2J/z+zfjvGTuvsC2q73m5/frvoCHjERTVg863unxvKj/tITuWJx3By/GpqYKM2D5fDpf2H/muMh2e6kGQUVL/RATly04/FNURsm9NpaRR86G6D9Z8sDSJLgMfI3jWup7+4+lXvZzla2d6Bf37VBw2l7Lpfar057zMTdd3NILqudjtNvut/gsZM9x/9rrcbDFXYUpASVwX4TKirmTcwnCoJ208YqY85uVPfWyKpF/vQ36A7BW4qTyfo1CwbgGGiVgae4i4AP+yDtvIXMUsmFMZLWO1I8z6VKRsavkrbuqN4iKFdTi4j0Mu5pBkJQ4x4mhHLEGg6yAkyZ2uYBCoWTqcup+LMurRrCIwlqM95UsPk2ckXlHCpH+a9WlMYPrMua4ZOWKxb9oNITKRXnMX7QYTfmEO3MxUOmu0UnB10+aN9pgQ5AcSj4W5+GxQxjxeCEegbKyrAASxCkK9dbci8KkIgdPE7AEgnN+rhTCvx/z2A0BZ7A9HKFcPkqDfZCMgx+TrCZIITLjA6PmYi3ZJegKjqKPlCEO6oAMzVgeTHjDpRuw5MM/1wgnVaj5Ui9G28TdRqjcNIFLKXadQKl2nqOV3wrHc6BgfKE1s1KQwc74Ui28NKSxZlOynJx/GHu7xk4iV4ydTva6qxwZjQXuuzaIGDRM0D1QTn/RSQjxqSkW4moIVzqe8xKW7c+YyG3uY2Fu8epwE4TzHPGHJXI4CnmMTzsKn/EoaaY+88uju7jSCEa4k7xbBd4laE0HwGQSpfJeoIITH5uG+2baS6TRoN7F7OXQFG6X6AkfdbLpCY+K+YJ8xfYvZWtRtMAEaY5/YqIXiMYN1ME6KWwSa2mq2xzEPXWQPQd04YmOK1+7r/oNAi+ICxSaoFHdTuBsmkAQXsHuFbTmf/wM=',
   },
 ]

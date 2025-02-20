@@ -38,7 +38,7 @@ export default function MapPage() {
   useEffect(() => {
     const img = new Image()
     img.src =
-      'https://res.cloudinary.com/dqihpypxi/image/upload/v1740046420/resonance/etc/auto_preset_003_sfwwgu.png'
+      'https://res.cloudinary.com/dqihpypxi/image/upload/v1740046559/resonance/etc/%EC%A0%84%EC%B2%B4%EC%A7%80%EB%8F%84_oynu9e.png'
 
     img.onload = () => {
       setMapImage(img)
