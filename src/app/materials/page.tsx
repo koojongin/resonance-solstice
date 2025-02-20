@@ -8,9 +8,11 @@ import {
   getMaterialBottomFrameUrl,
 } from '@/services/utils/material-box-converter'
 import createKey from '@/services/key-generator'
+import { useNextDepthNavigator } from '@/services/navigation'
 
 type ExtendedRSMaterial = RSMaterial & { name: string }
 export default function MaterialsPage() {
+  const { router } = useNextDepthNavigator()
   const [materials, setMaterials] = useState<ExtendedRSMaterial[]>(
     _.map(MATERIALS, (value, key) => ({
       name: key,
@@ -23,7 +25,11 @@ export default function MaterialsPage() {
     <div className="flex flex-col gap-[8px]">
       {materials.map((material) => {
         return (
-          <div key={createKey()} className="flex gap-[4px] border items-stretch shadow-md">
+          <div
+            key={createKey()}
+            className="flex gap-[4px] border items-stretch shadow-md cursor-pointer"
+            onClick={() => router.push(`/materials/${material.name}`)}
+          >
             <div className="flex items-center justify-center">
               <MaterialBox material={material} />
             </div>

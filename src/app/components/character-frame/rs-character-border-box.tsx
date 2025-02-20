@@ -10,6 +10,3 @@ export function RsCharacterBorderBox({ grade }: { grade: RS_GRADE }) {
   if (grade === RS_GRADE.SSR)
     return <div className="border-[4px] border-yellow-500 relative w-full h-full" />
 }
-
-const SPECIALTY_FRAME_URL =
-  'https://patchwiki.biligame.com/images/resonance/3/37/hiu8mr7dyjuyvj5j0cjrcz44fvla2ql.png'
