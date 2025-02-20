@@ -211,4 +211,9 @@ export const ARCHIEVE_ABILITIES: { [key: string]: RSArchieve } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/6/6b/8bcjxhnzb8741ngpbaqprfq21xpbxlb.png',
   },
+  일반공격: {
+    desc: '1의 피해를 입힙니다.\n피해량: 200%',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/8d/i32syleugznlpez2z7ux3ial5wkfue9.png',
+  },
 }

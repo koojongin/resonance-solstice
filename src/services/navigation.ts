@@ -10,5 +10,9 @@ export function useNextDepthNavigator() {
     router.push(`${pathname}/${nextPath}`)
   }
 
-  return { goToNextDepth, router }
+  const openNewTab = (url: string) => {
+    window.open(url, '_blank')
+  }
+
+  return { goToNextDepth, router, openNewTab }
 }

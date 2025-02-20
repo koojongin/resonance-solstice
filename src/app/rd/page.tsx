@@ -11,7 +11,7 @@ import { useNextDepthNavigator } from '@/services/navigation'
 
 const REVERSED_ALL_DECKS = _.reverse(RECOMMENDATION_DECKS)
 export default function RecommendationDeckPage() {
-  const { router } = useNextDepthNavigator()
+  const { router, openNewTab } = useNextDepthNavigator()
   const [rdDecks, setRdDecks] = useState(REVERSED_ALL_DECKS)
   const [searchedKeyword, setSearchedKeyword] = useState('')
   const [checkedAutoPreset, setCheckedAutoPreset] = useState(false)
@@ -47,12 +47,19 @@ export default function RecommendationDeckPage() {
           * 모든 덱은 설명과, 가이드 링크를 읽어 보시는 것을 추천드립니다. 현재 한섭 상황과 돌파수에
           따라 가능성 유무가 존재합니다.
         </div>
-        <div>
+        <div className="flex items-center gap-[4px]">
           <GradientButton
             className="p-[4px] rounded inline-flex items-center gap-[4px]"
             onClick={() => router.push('/wiki/auto-preset')}
           >
             오토 프리셋 설정 방법
+            <i className="fa-solid fa-circle-question" />
+          </GradientButton>
+          <GradientButton
+            className="p-[4px] rounded inline-flex items-center gap-[4px]"
+            onClick={() => openNewTab('https://arca.live/b/resonance/129293763')}
+          >
+            자동 덱 만들기 가이드
             <i className="fa-solid fa-circle-question" />
           </GradientButton>
         </div>
