@@ -23,7 +23,7 @@ module.exports = withMT({
           textShadow: '-1px -1px 4px #000, 1px -1px 4px #000, -2px 2px 4px #000, 2px 2px 4px #000',
         },
         '.text-shadow-outline-white': {
-          textShadow: '-1px -1px 4px #fff, 1px -1px 4px #fff, -2px 2px 4px #fff, 2px 2px 4px #fff',
+          textShadow: '-1px -1px 4px #ffffff5c, 1px -1px 4px #ffffff3b, -2px 2px 4px #ffffff45, 2px 2px 4px #ffffff82',
         },
       });
     },

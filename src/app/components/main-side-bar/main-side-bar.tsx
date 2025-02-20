@@ -32,6 +32,9 @@ export default function MainSideBar() {
       <div className={menuCss} onClick={() => router.push('/map')}>
         지도
       </div>
+      <div className={menuCss} onClick={() => router.push('/archieve')}>
+        용어집
+      </div>
       {/* <div */}
       {/*  className={`ml-auto border-l-[1px] ${menuCss}`} */}
       {/*  onClick={() => router.push('/update-log')} */}
