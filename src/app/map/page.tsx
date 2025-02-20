@@ -38,7 +38,7 @@ export default function MapPage() {
   useEffect(() => {
     const img = new Image()
     img.src =
-      'https://cdn.discordapp.com/attachments/747691288890966057/1341748033855164426/f6cf6eed4135df4f.png?ex=67b71fbb&is=67b5ce3b&hm=5fd2dfb0552e932f81675e2ac37b58263226c591522689cf708e5b43b7258c22&'
+      'https://res.cloudinary.com/dqihpypxi/image/upload/v1740046420/resonance/etc/auto_preset_003_sfwwgu.png'
 
     img.onload = () => {
       setMapImage(img)
