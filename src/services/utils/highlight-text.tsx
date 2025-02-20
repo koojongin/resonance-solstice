@@ -5,6 +5,7 @@ export function RSHighlightedText({ text, textSize }: { text: string; textSize?:
     '[수면]': 'text-purple-500/90',
     '[족쇄]': 'text-purple-500/90',
     '[속박]': 'text-purple-500/90',
+    '[혼란]': 'text-purple-500/90',
 
     '[냉동]': 'text-blue-300',
     '[은신]': 'text-blue-300',
@@ -17,6 +18,13 @@ export function RSHighlightedText({ text, textSize }: { text: string; textSize?:
     '[자화]': 'text-yellow-500',
 
     '[점화]': 'text-red-500',
+    '[기절]': 'text-red-500',
+    '[붕괴]': 'text-red-500',
+    '[중상]': 'text-red-500',
+    '[관통]': 'text-red-500',
+    '[광폭]': 'text-red-500',
+    '[열상]': 'text-red-500',
+    '[튕김]': 'text-red-500',
   }
 
   const regex = /\[([^\]]+)\]/g
@@ -26,7 +34,11 @@ export function RSHighlightedText({ text, textSize }: { text: string; textSize?:
     if (classNameOfPart) {
       return (
         <Tooltip key={index} content={`${part} 설명 넣어라 나중에...`}>
-          <span className={`${classNameOfPart} ff-dh text-[${textSize || 20}px]`}>[{part}]</span>
+          <span
+            className={`${classNameOfPart} text-shadow-outline-white cursor-pointer ff-dh text-[${textSize || 20}px]`}
+          >
+            [{part}]
+          </span>
         </Tooltip>
       )
     }

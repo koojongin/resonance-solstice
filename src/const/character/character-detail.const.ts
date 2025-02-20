@@ -5,6 +5,83 @@ export interface CharacterDetail {
   AWAKENING: { [key: string]: string }
 }
 
+const DEFAULT_RESONANCE_UPGRADE_MATERIALS = {
+  1: [
+    {
+      name: '디지털화 사고',
+      amount: 20,
+    },
+    {
+      name: '원시적 사고',
+      amount: 8,
+    },
+    {
+      name: '철도연맹 코인',
+      amount: 20000,
+    },
+  ],
+  2: [
+    {
+      name: '디지털화 사고',
+      amount: 40,
+    },
+    {
+      name: '원시적 사고',
+      amount: 16,
+    },
+    {
+      name: '철도연맹 코인',
+      amount: 50000,
+    },
+  ],
+  3: [
+    {
+      name: '디지털화 사고',
+      amount: 80,
+    },
+    {
+      name: '원시적 사고',
+      amount: 32,
+    },
+    {
+      name: '철도연맹 코인',
+      amount: 100000,
+    },
+  ],
+  4: [
+    {
+      name: '디지털화 사고',
+      amount: 160,
+    },
+    {
+      name: '원시적 사고',
+      amount: 64,
+    },
+    {
+      name: '철도연맹 코인',
+      amount: 200000,
+    },
+  ],
+  5: [
+    {
+      name: '모노리스 조각',
+      amount: 42,
+    },
+    {
+      name: '디지털화 사고',
+      amount: 320,
+    },
+    {
+      name: '원시적 사고',
+      amount: 128,
+    },
+    {
+      name: '철도연맹 코인',
+      amount: 500000,
+    },
+  ],
+}
+
 export const CHARACTER_DETAIL: {
   [key: string]: CharacterDetail | any
 } = {
@@ -16,7 +93,24 @@ export const CHARACTER_DETAIL: {
   SOMMER: {},
   USHANA: {},
   SUMMERSHIZURU: {},
-  NICOLA: {},
+  NICOLA: {
+    SKILLS: ['초음속', '공습', '화력전개'],
+    RESONANCES: {
+      1: '질풍',
+      2: '용량 확장',
+      3: '생기',
+      4: '신속',
+      5: '축전',
+    },
+    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    AWAKENING: {
+      1: '초전도',
+      2: '쌍권총',
+      3: '투지',
+      4: '과부하',
+      5: '고독한 늑대',
+    },
+  },
   DUSTIN: {},
   ANFIYA: {},
   HAYABUSA: {},
@@ -64,34 +158,7 @@ export const CHARACTER_DETAIL: {
       4: '감응',
       5: '레비스의 불가사의',
     },
-    RESONANCE_UPGRADE_MATERIALS: {
-      1: [
-        { name: '디지털화 사고', amount: 20 },
-        { name: '원시적 사고', amount: 16 },
-        { name: '철도연맹 코인', amount: 20000 },
-      ],
-      2: [
-        { name: '디지털화 사고', amount: 40 },
-        { name: '원시적 사고', amount: 16 },
-        { name: '철도연맹 코인', amount: 50000 },
-      ],
-      3: [
-        { name: '디지털화 사고', amount: 80 },
-        { name: '원시적 사고', amount: 32 },
-        { name: '철도연맹 코인', amount: 100000 },
-      ],
-      4: [
-        { name: '디지털화 사고', amount: 160 },
-        { name: '원시적 사고', amount: 64 },
-        { name: '철도연맹 코인', amount: 200000 },
-      ],
-      5: [
-        { name: '모노리스 조각', amount: 42 },
-        { name: '디지털화 사고', amount: 320 },
-        { name: '원시적 사고', amount: 128 },
-        { name: '철도연맹 코인', amount: 500000 },
-      ],
-    },
+    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
     AWAKENING: {
       1: '강적',
       2: '아라야',
@@ -102,10 +169,70 @@ export const CHARACTER_DETAIL: {
   },
   KATAS: {},
   WENSHENG: {},
-  MARGIELA: {},
-  ARINA: {},
+  MARGIELA: {
+    SKILLS: [
+      '섭취',
+      '금단의 열매',
+      '무한 코어',
+      '과일씨',
+      '신성',
+      '기이한 불꽃',
+      '다크 아트',
+      '초신성',
+    ],
+    RESONANCES: {
+      1: '신생',
+      2: '갈망',
+      3: '생기',
+      4: '비밀의 샘',
+      5: '혈맹',
+    },
+    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    AWAKENING: {
+      1: '마녀의 조건',
+      2: '다크 아트',
+      3: '투지',
+      4: '새싹',
+      5: '자물쇠',
+    },
+  },
+  ARINA: {
+    SKILLS: ['피치', '블랙베리', '애플'],
+    RESONANCES: {
+      1: '체리 폭탄',
+      2: '인연',
+      3: '생기',
+      4: '레드주스',
+      5: '정열의 럼주',
+    },
+    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    AWAKENING: {
+      1: '사랑',
+      2: '동반',
+      3: '투지',
+      4: '다크 위스퍼',
+      5: '바텐더',
+    },
+  },
   ILONA: {},
-  STELLA: {},
+  STELLA: {
+    SKILLS: ['TATAKAE', 'TATAKAU!', 'TATAKAU!!', 'TATAKAU!!!', '우아', '셀카', '뭇별', '노래'],
+    RESONANCES: {
+      1: '활력',
+      2: '격앙',
+      3: '생기',
+      4: '성원',
+      5: '수선화',
+    },
+    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    AWAKENING: {
+      1: '계략',
+      2: '별의 꽃',
+      3: '투지',
+      4: '전투 의지',
+      5: '페어',
+    },
+  },
   CAROLINE: {
     SKILLS: ['플라잉 플래시', '자석 폭탄', '번개 소용돌이'],
     RESONANCES: {
@@ -115,6 +242,7 @@ export const CHARACTER_DETAIL: {
       4: '감전',
       5: '전력 회수',
     },
+    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
     AWAKENING: {
       1: '추격',
       2: '격전',
@@ -123,7 +251,24 @@ export const CHARACTER_DETAIL: {
       5: '무선 충전',
     },
   },
-  TENNIE: {},
+  TENNIE: {
+    SKILLS: ['자석 플라이휠', '동결의 자석별', '빙수 눈사태'],
+    RESONANCES: {
+      1: '얼음별',
+      2: '자석 제어',
+      3: '생기',
+      4: '성막',
+      5: '서리별',
+    },
+    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    AWAKENING: {
+      1: '자기 냉각',
+      2: '별자리',
+      3: '투지',
+      4: '소용돌이',
+      5: '얼음 조각',
+    },
+  },
   HEINRICH: {},
   LIVIA: {},
   DESIREE: {},

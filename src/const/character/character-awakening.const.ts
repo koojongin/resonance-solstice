@@ -85,4 +85,129 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/b/b2/prflxry3bbpvua7xqkef9yjma5zhtwi.png',
   },
+
+  '자기 냉각': {
+    name: '자기 냉각',
+    desc: '자신이 [동결]을 부여할 확률이 10% 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/be/8q8w1ybxh4uu1wh28velzqh4bhqpjrl.png',
+  },
+  별자리: {
+    name: '별자리',
+    desc: '비용이 2 이상인 카드가 버려진 덱에서 회수될 때마다 비용을 1 얻습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/fa/to1by9e9gmku79zs3lawc8o82re7sf5.png',
+  },
+  소용돌이: {
+    name: '소용돌이',
+    desc: '카드를 1장 회수할 때마다 자신의 공격력과 방어력이 1% 증가합니다.(최대 50%)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/b7/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  '얼음 조각': {
+    name: '얼음 조각',
+    desc: '[동결]을 부여할 때마다 동시에 [중상]을 발동합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/32/4f1w58vp73z4it4qufsps35n8526fza.png',
+  },
+
+  '마녀의 조건': {
+    name: '마녀의 조건',
+    desc: '전투 시작 시 비용을 1 소모하여 이번 전투 동안 손패 보충 쿨타임을 1초 감소시킵니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/66/puw19mg84kd9vglw2awzxv3hzxyu4z8.png',
+  },
+  '다크 아트': {
+    name: '다크 아트',
+    desc: '자신의 슼리 카드 사용 시 50% 확률로 [다크 아트]를 1장 생성하여 손으로 가져옵니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/25/dp83oo7xs1zofccsdnkotz9oipnp59i.png',
+  },
+  새싹: {
+    name: '새싹',
+    desc: '[신성]이 1장 생성될 때마다 비용을 0.5 얻습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/45/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  자물쇠: {
+    name: '자물쇠',
+    desc: '[기이한 불꽃] 사용 후 [과일씨]를 1장 생성하여 손으로 가져옵니다.\n자신은 [족쇄]와 [속박] 효과에 면역됩니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/bd/asmq9tz3rvubicg5jpw4djd1s11wmda.png',
+  },
+
+  초전도: {
+    name: '초전도',
+    desc: '자신이 [인뢰]를 부여할 확률이 10% 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/b6/oxv7efz5eyaxlzv6tzr4gafqczw06w7.png',
+  },
+  쌍권총: {
+    name: '쌍권총',
+    desc: '[일반 공격] 강화: 가우스 권총 2자루를 동시에 들고 사격합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/ef/ka8g5wkqgt70vsbajmb4e4baa233lqj.png',
+  },
+  과부하: {
+    name: '과부하',
+    desc: '자신이 [인뢰]를 30회 부여할 때마다 다음 [일반 공격] 명중 시 반드시 [우레]를 발동합니다.\n동시에 자신의 공격력이 100 증가합니다.(6초간 지속)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/83/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  '고독한 늑대': {
+    name: '고독한 늑대',
+    desc: '[인뢰] 확률이 높을수록 입히는 최종 피해가 증가합니다.(최대 50%)\n전장에 니콜라만 살아남았을 경우, 공격력과 방어력이 추가로 150 증가합니다.\n동시에 자신의 스킬 카드를 우선으로 손이 가득 찰 때까지 카드를 뽑습니다.\n자신이 리더일 경우, 즉시 [리더 스킬]을 활성화합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/23/8ymj9hxr6ln6rdc5a42onyf48q15z0t.png',
+  },
+
+  계략: {
+    name: '계략',
+    desc: '손패 상한+1',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/fb/edtxpimbacawq566x2qfyzu2a6i4836.png',
+  },
+  '별의 꽃': {
+    name: '별의 꽃',
+    desc: '[뭇별]의 지속 시간이 3초 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/aa/8pqvb90tfntusi9ada7tm933ehz2nra.png',
+  },
+  '전투 의지': {
+    name: '전투 의지',
+    desc: '[TATAKAU]의 초기 상태가 [TATAKAU!!]로 변경됩니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/c7/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  페어: {
+    name: '페어',
+    desc: '같은 카드를 연속으로 2장 내면 카드를 1장 뽑습니다.(7회 한정)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/fa/28sil2ts474gfge2qpv2a9afg7s9306.png',
+  },
+
+  사랑: {
+    name: '사랑',
+    desc: '모든 아군이 초당 0.5%의 체력을 회복합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/93/70zuk3t370qb4fyppaqmw2zegrh88vl.png',
+  },
+  동반: {
+    name: '동반',
+    desc: '퍼플카드와 그린카드를 사용할 때 50% 확률로 [블랙베리]가 나타나 적에게 5자루의 비수를 던지고, 입힌 피해의 50%만큼 체력이 가장 낮은 아군 1명을 치유합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/ac/inieiklsjj12zcpongqifl620vvm4d8.png',
+  },
+  '다크 위스퍼': {
+    name: '다크 위스퍼',
+    desc: '[블랙베리]가 나타날 때마다 자신의 공격력이 0.5% 증가합니다.(최대 50%)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/1/14/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  바텐더: {
+    name: '바텐더',
+    desc: '모든 분신이 주는 치유량, 피해와 디버프의 지속 시간이 20% 증가합니다.\n동시에 레드카드도 [동반]을 발동할 수 있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/5a/o52eciokcbel74b13escmcmnqkqnlvc.png',
+  },
 }
