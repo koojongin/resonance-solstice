@@ -210,4 +210,79 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/d/d2/cka9wctyem1inimgz3fnurjvigfrfl7.png',
   },
+
+  고정: {
+    name: '고정',
+    desc: '[서막] 사용 후 다음 3번 가하는 [일반공격]이 [냉동]을 발동합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2b/fb24wiqrp5j0g3lo1g57japumuza5c4.png',
+  },
+  냉정: {
+    name: '냉정',
+    desc: '자신의 스킬 카드를 사용할 때마다 자신의 방어력이 3% 증가합니다.(중첩 가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e1/65sfbyxny85z3h4vpmdzzfher905fr1.png',
+  },
+  개혁: {
+    name: '개혁',
+    desc: '[파열] 사용 후 [원소핵-얼음]을 1장 생성하여 손으로 가져옵니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/59/tcyezi0ppm3unufsoed1zf26stdzcyl.png',
+  },
+  톱스핀: {
+    name: '톱스핀',
+    desc: '[급습] 강화:\n양손 해머를 휘둘러 적에게 10단 피해를 입힙니다.\n필살기를 우선으로 카드를 1장 뽑습니다.\n동시에 [블루카드]를 우선으로 버려진 덱에서 카드 1장을 회수하여 손으로 가져옵니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/cf/m8zd45ihyj639gjcwond9wgz9tcc4kr.png',
+  },
+
+  탄도학: {
+    name: '탄도학',
+    desc: '이로나가 저격 시 20% 확률로 피해가 2배로 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/5a/k2lyc59y4lcjp0vg27ohi8p8ilv2ocx.png',
+  },
+  '침묵의 사신': {
+    name: '침묵의 사신',
+    desc: '자신이 [은신] 상태일 경우 자신의 공격력이 초당 1% 증가합니다.(중첩 가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/0b/e628l0o5hydjbm91hz6nxd7d083qudf.png',
+  },
+  '연속 조준': {
+    name: '연속 조준',
+    desc: '[조준 저격] 사용 후 덱에서 [조준 저격]을 1장 뽑아 손으로 가져옵니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2d/dhkegx0z8nctxfnz5jjt243engkkq91.png',
+  },
+  '전술 타격': {
+    name: '전술 타격',
+    desc: '[저격 모드]의 [전술 미사일]을 한 개 더 발사합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/1/1b/8wfthh0ykglh3wsrogeb2buaabi1qwe.png',
+  },
+
+  고수: {
+    name: '고수',
+    desc: '[실드]의 내구도가 50% 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/bc/1r3bplslr341uwccjyzmdexa123oia2.png',
+  },
+  저력: {
+    name: '저력',
+    desc: '체력이 50%/40%/30%/20%/10% 미만일 경우 받는 최종 피해가 10%/15%/20%/25%/30% 감소합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/42/o7xe1x7txatr7ju2kc6nw7ddeoapem1.png',
+  },
+  '에너지 회수': {
+    name: '에너지 회수',
+    desc: '아군의 [실드]가 사라지거나 폭발할 때 [실드] 보유자의 체력을 5% 회복합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/62/nfauott69xtdzwomhkmrton72gtr4ps.png',
+  },
+  배수진: {
+    name: '배수진',
+    desc: '[콜로서스 군진II] 사용 후 자신의 공격력이 방어력의 20% 만큼 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/d8/3hkyly2n02zcons2hfz7xxj6mulqggm.png',
+  },
 }

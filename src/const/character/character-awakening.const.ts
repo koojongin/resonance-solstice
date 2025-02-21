@@ -210,4 +210,79 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/5/5a/o52eciokcbel74b13escmcmnqkqnlvc.png',
   },
+
+  '얼음 칼날': {
+    name: '얼음 칼날',
+    desc: '[냉동]/[동결] 상태인 적에게 주는 최종 피해가 20%/35% 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/09/4s45co8xghznv3tkw805me50hbzuws4.png',
+  },
+  서리꽃: {
+    name: '서리꽃',
+    desc: '[원소핵-얼음] 사용 후 50% 확률로 [블루카드]를 우선으로 카드를 1장 뽑습니다.\n아군에게 [원소핵-얼음] 사용 시 대상의 체력을 20% 회복합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/68/h8od4kxl1yesvpa1ldmz0of474cjly8.png',
+  },
+  혹한: {
+    name: '혹한',
+    desc: '[동결]을 부여할 때마다 자신의 공격력이 1% 증가합니다.(최대 50%)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/d5/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  얼음장: {
+    name: '얼음장',
+    desc: '[원소핵-얼음] 사용 후 체력이 가장 낮은 아군 1명에게 10초간 지속되는 [실드]를 부여합니다. [실드]의 내구도는 자신 방어력의 2000%입니다. 동시에 자신은 [냉동]과 [동결] 효과에 면역됩니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/1/12/czxfrjvqzeyjaakg6bpprlidsnn0o2t.png',
+  },
+
+  '저격 강화': {
+    name: '저격 강화',
+    desc: '이로나가 저격 시 [중상]을 발동합니다.\n[중상]은 목표가 받는 최종 피해를 15% 증가시키며 5초간 지속됩니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/31/e2b9xqrvyyhcr56gbhkcfvtmu7607g3.png',
+  },
+  '페이탈 껌': {
+    name: '페이탈 껌',
+    desc: '[광학 위장술] 사용 후 [레드카드]를 우선으로 카드를 2장 뽑습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/29/o3z4pbluem72mo7tgnwrkm4nbskbc5r.png',
+  },
+  '유령 타격': {
+    name: '유령 타격',
+    desc: '임의 아군이 [은신] 상태일 때 즉시 [전술 유도탄]을 1회 시전합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/c2/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  '정신 집중': {
+    name: '정신 집중',
+    desc: '[저격 모드]의 지속 시간이 3초간 연장됩니다.\n[저격 모드] 상태에서 [탄도학]의 확률이 20% 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/85/2efximefj5felpirlg7ocllj907nh6m.png',
+  },
+
+  '전투 타임': {
+    name: '전투 타임',
+    desc: '[콜로서스 군진] 사용 후 이번 전투 동안 [진형 유지II]의 비용이 1 감소합니다.\n[콜로서스 군진II] 사용 후 이번 전투 동안 [사방수호II]의 비용이 1 감소합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/0d/gl2pz6jiebi9yjevka69uq23f74f7xe.png',
+  },
+  '베니싱 필드': {
+    name: '베니싱 필드',
+    desc: '아군의 [실드]가 사라지거나 폭발할 때 [실드] 보유자가 받는 피해가 15% 감소합니다.(5초간 지속)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/b2/axylmjcqpq1u5eqw04nickecuut6u4l.png',
+  },
+  붕성: {
+    name: '붕성',
+    desc: '[붕괴]를 부여할 때마다 자신의 공격력이 1% 증가합니다.(최대 30%)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/20/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  여파: {
+    name: '여파',
+    desc: '[대지 붕괴] 사용 후 [진동파]를 1장 생성하여 손으로 가져옵니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/7e/8vdd8sr7khowfl1rskthfj0pylnmfd4.png',
+  },
 }

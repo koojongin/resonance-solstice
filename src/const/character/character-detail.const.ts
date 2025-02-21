@@ -120,7 +120,34 @@ export const CHARACTER_DETAIL: {
   LISSANDRA: {},
   MUMEI: {},
   PALADI: {},
-  CONNOR: {},
+  CONNOR: {
+    SKILLS: [
+      '진형 유지',
+      '진형 유지II',
+      '사방수호',
+      '사방수호II',
+      '대지 붕괴',
+      '진동파',
+      '콜러서스 군진',
+      '콜로서스 군진II',
+      '신성 돌격',
+    ],
+    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCES: {
+      1: '고수',
+      2: '저력',
+      3: '생기',
+      4: '에너지 회수',
+      5: '배수진',
+    },
+    AWAKENING: {
+      1: '전투 타임',
+      2: '베니싱 필드',
+      3: '투지',
+      4: '붕성',
+      5: '여파',
+    },
+  },
   VERLAINE: {
     SKILLS: [
       '스타 아크',
@@ -132,6 +159,7 @@ export const CHARACTER_DETAIL: {
       '별의 꿈',
       '드림 이터',
     ],
+    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
     RESONANCES: {
       1: '성맥',
       2: '몽유',
@@ -168,7 +196,24 @@ export const CHARACTER_DETAIL: {
     },
   },
   KATAS: {},
-  WENSHENG: {},
+  WENSHENG: {
+    SKILLS: ['서막', '파열', '원소핵-얼음', '서리 신성', '급습', '종결'],
+    RESONANCES: {
+      1: '고정',
+      2: '냉정',
+      3: '생기',
+      4: '개혁',
+      5: '톱스핀',
+    },
+    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    AWAKENING: {
+      1: '얼음 칼날',
+      2: '서리꽃',
+      3: '투지',
+      4: '혹한',
+      5: '얼음장',
+    },
+  },
   MARGIELA: {
     SKILLS: [
       '섭취',
@@ -214,7 +259,24 @@ export const CHARACTER_DETAIL: {
       5: '바텐더',
     },
   },
-  ILONA: {},
+  ILONA: {
+    SKILLS: ['조준 저격', '광학 위장술', '저격 모드'],
+    RESONANCES: {
+      1: '탄도학',
+      2: '침묵의 사신',
+      3: '생기',
+      4: '연속 조준',
+      5: '전술 타격',
+    },
+    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    AWAKENING: {
+      1: '저격 강화',
+      2: '페이탈 껌',
+      3: '투지',
+      4: '유령 타격',
+      5: '정신 집중',
+    },
+  },
   STELLA: {
     SKILLS: ['TATAKAE', 'TATAKAU!', 'TATAKAU!!', 'TATAKAU!!!', '우아', '셀카', '뭇별', '노래'],
     RESONANCES: {

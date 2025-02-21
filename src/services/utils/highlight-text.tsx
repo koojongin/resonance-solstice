@@ -2,6 +2,7 @@
 
 import { Tooltip } from '@material-tailwind/react'
 import { useNextDepthNavigator } from '@/services/navigation'
+import { TOTAL_ARCHIVES } from '@/const/archieve'
 
 export function RSHighlightedText({ text, textSize }: { text: string; textSize?: number }) {
   const { router } = useNextDepthNavigator()
@@ -34,10 +35,18 @@ export function RSHighlightedText({ text, textSize }: { text: string; textSize?:
     '[일반공격]': 'text-gray-800',
   }
 
+  const NOT_SETTED_PART_COLOR = 'text-blue-gray-700'
+
   const regex = /\[([^\]]+)\]/g
 
   const formattedText = text.split(regex).map((part, index, array) => {
-    const classNameOfPart = highlightMap[`[${part}]`]
+    const isExistArchive = TOTAL_ARCHIVES.find((archive) => archive.name === part)
+    let classNameOfPart = highlightMap[`[${part}]`]
+
+    if (isExistArchive && !classNameOfPart) {
+      classNameOfPart = NOT_SETTED_PART_COLOR
+    }
+
     if (classNameOfPart) {
       return (
         <Tooltip key={index} content={`${part} 설명 넣어라 나중에...`}>

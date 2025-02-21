@@ -391,4 +391,160 @@ export const CHARACTER_SKILLS: {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/8/81/q5p5hs7c08r6h5gyruxascpgdw7ia6k.png',
   },
+
+  서막: {
+    amount: 3,
+    cost: 2,
+    name: '서막',
+    desc: '1개의 얼음벽을 생성하여 피해를 막습니다. 얼음벽의 체력은 자신 최대 체력의 30%입니다.\n[서막] 사용 후 [파열]을 1장 생성하여 손으로 가져옵니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/77/q0a3ww1s4ux1ebz44o9iubplb4kyq54.png',
+  },
+  파열: {
+    amount: 0,
+    cost: 0,
+    name: '파열',
+    desc: '얼음벽을 파괴하여 얼음벽의 남은 체력만큼 적에게 3단 피해를 입힙니다. 동시에 [냉동]을 발동합니다. 손에서 내면 [소각]됩니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e2/ointvuus1vt69j85hthhqza4idyl1wm.png',
+    isGeneratedCard: true,
+  },
+  '원소핵-얼음': {
+    amount: 0,
+    cost: 0,
+    name: '원소핵-얼음',
+    desc: '대상에게 [냉동]을 부여합니다.\n아군에게 걸린[점화]를 제거합니다.\n손에서 내면 [소각]됩니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/dd/2unhxm5p4kdregrynewn3iu5lq4qpb7.png',
+    isGeneratedCard: true,
+  },
+  '서리 신성': {
+    amount: 0,
+    cost: 2,
+    name: '서리 신성',
+    desc: '목표 구역을 향해 서리 신성을 1개 발사하여 범위 내의 적에게 1단 피해를 입히고 [붕괴]를 부여합니다. 동시에 [동결]을 발동합니다.\n이 카드의 [광붕괴]:\n손에 [신성]이 3장 있을 때 자동으로 [초신성]으로 융합됩니다.\n[신성]/[원소 신성]/[초신성]은 [파]입니다.\n사용 후 [소각]됩니다.',
+    thumbnail:
+      'https://i.namu.wiki/i/FrUeNGArClAt1L8Khj21ElluoenXk9cZbPYpuzm5B-VjgI2_2CK3OiPC5zz4otAv57T6yFq8Azk0jZ2iiFNMCw.webp',
+    isGeneratedCard: true,
+  },
+  급습: {
+    amount: 0,
+    cost: 0,
+    name: '급습',
+    desc: '양손 해머를 휘둘러 적에게 6단 피해를 입힙니다.\n필살기를 우선으로 카드를 1장 뽑습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/b1/0k3tvx6jn3s5pcwo4i8zig0fcgr02k2.png',
+  },
+  종결: {
+    amount: 0,
+    cost: 0,
+    name: '종결',
+    desc: '지면을 결빙시킨 후 양손 해머를 휘둘러 범위 내의 적에게 12단 피해를 입히고 동시에 [냉동]을 발동합니다. [종결] 사용 후 [원소핵-얼음]을 1장 생성하여 손으로 가져옵니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/8e/pkq1k3icfcrdqelnwtq6s5uxlhvk4t4.png',
+  },
+
+  '조준 저격': {
+    amount: 4,
+    cost: 1,
+    name: '조준 저격',
+    desc: '저격할 대상을 [조준]하여 적에게 1단 피해를 입힙니다.\n[조준]은 공격 대상을 새로 조준한 대상으로 변경하며 해당 효과는 [일반공격]도 포함합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/f6/83wfllilacqcaauubcxw6sjsxvaiyks.png',
+  },
+  '광학 위장술': {
+    amount: 2,
+    cost: 2,
+    name: '광학 위장술',
+    desc: '10초간 자신을 [은신]시킵니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/62/db0vcwbaqqe2s2d2rxn2rcri62exyx9.png',
+  },
+  '저격 모드': {
+    amount: 1,
+    cost: 4,
+    name: '저격 모드',
+    desc: '12초간 저격 모드로 전환합니다.\n지속 시간 동안 자신은 [슈퍼아머]를 얻습니다.\n[레드카드]를 1장 사용할 때마다 1회 저격하여 적에게 1단 피해를 입히고 [관통]을 발동합니다.\n[조준 저격] 사용 시 [조준 저격]의 효과가 변경되어 전술견이 1발의 [전술 미사일]을 발사하여 [조준] 대상에게 1단 피해를 입힙니다.\n[전술 미사일]은 [폭발물]입니다.\n[전술견]은 [기계 유닛]입니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/58/exqrrtxm3m7ala6on470yuoyij2b5mj.png',
+  },
+
+  '진형 유지': {
+    amount: 2,
+    cost: 2,
+    name: '진형 유지',
+    desc: '적에게 1단 피해를 입히고 [기절]시킵니다.\n자신의 방어력이 2% 증가합니다.(중첩 가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/c8/myheszcofxa1svvc1sufwo9b1lqdl1k.png',
+  },
+  '진형 유지II': {
+    amount: 0,
+    cost: 2,
+    name: '진형 유지II',
+    desc: '적에게 1단 피해를 입히고 [기절]시킵니다. 동시에 [냉동] 효과를 발동합니다.\n자신의 방어력이 3% 증가합니다.(중첩 가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/77/ah1iuzl8ce0z3fxk6rhhs58dkkaqm6n.png',
+    isGeneratedCard: true,
+  },
+  사방수호: {
+    amount: 2,
+    cost: 3,
+    name: '사방수호',
+    desc: '모든 아군이 10초간 지속되는 [실드]를 획득합니다.\n[실드]의 내구도는 자신의 방어력의 1000%입니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e2/4brrx44lgk0x8q1fojc7bbztgu9o49w.png',
+  },
+  사방수호II: {
+    amount: 0,
+    cost: 3,
+    name: '사방수호II',
+    desc: '모든 아군이 10초간 지속되는 [실드]를 획득합니다.\n[실드]의 내구도는 자신의 방어력의 1000%입니다.\n동시에 [대지 붕괴]를 1장 생성하여 손으로 가져옵니다.\n[사방수호]의 [실드]가 파괴될 때 [실드] 1개당 모든 적에게 1단 피해를 입힙니다.\n해당 피해는 자신의 방어력의 1000%입니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/d9/a9yq70bftujjlit7mtedi4mjfudas54.png',
+    isGeneratedCard: true,
+  },
+  '대지 붕괴': {
+    amount: 0,
+    cost: 1,
+    name: '대지 붕괴',
+    desc: '전장에 있는 [실드]를 모두 폭발시키고 [실드] 1개당 모든 적에게 1단 피해를 입힙니다.\n해당 피해는 자신의 방어력의 1500%입니다.\n대지 붕괴는 [파]입니다.\n손에서 내면 [소각]됩니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/d0/ef66sp0kk1c0h5gbrs0csd2qsm3ntju.png',
+    isGeneratedCard: true,
+  },
+  진동파: {
+    amount: 0,
+    cost: 0,
+    name: '진동파',
+    desc: '하늘에서 떨어지는 중력 진동파를 시전하여 모든 적을 [기절]시킵니다.\n동시에 다음 내는 [레드카드]의 피해가 50% 증가합니다.(중첩 가능)\n손에서 내면 [소각]됩니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/62/n7cf4qrucie2hpvzi785120xcpz7ajc.png',
+    isGeneratedCard: true,
+  },
+  '콜러서스 군진': {
+    amount: 1,
+    cost: 3,
+    name: '콜러서스 군진',
+    desc: '모든 [진형 유지]가 [진형 유지II]로 전환됩니다.\n동시에 모든 아군의 공격력과 방어력이 5% 증가합니다.\n사용 후 [콜로서스 군진]이 [콜로서스 군진II]로 전환됩니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/1/19/iof58qutcymxzn9mrvb8gvgqseoyy1r.png',
+  },
+  '콜로서스 군진II': {
+    amount: 0,
+    cost: 4,
+    name: '콜로서스 군진II',
+    desc: '[사방수호]가 [사방수호II]로 전환됩니다.\n동시에 모든 아군의 공격력과 방어력이 5% 증가합니다.\n사용 후 [콜로서스 군진II]는 [신성 돌격]으로 전환됩니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/fe/s7ja05kv09gioc3kq8k0pezzy54a6qo.png',
+    isGeneratedCard: true,
+  },
+  '신성 돌격': {
+    amount: 0,
+    cost: 5,
+    name: '신성 돌격',
+    desc: '비술의 신성 1개와 비술의 운석 3개를 발사하여 범위 내의 적에게 4단 피해를 입히고 [붕괴]를 부여합니다.\n비술의 신성은 [파]입니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/09/h6khk6sg7gxcs988m3jza9i5c3142jj.png',
+    isGeneratedCard: true,
+  },
 }

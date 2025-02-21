@@ -47,7 +47,7 @@ export default function ArchieveDetailPage() {
 
       <div className="flex flex-col gap-[4px]">
         <div className="bg-gradient-to-r from-blue-gray-900 to-white text-white ff-dh text-[26px] p-[8px] py-[4px] rounded">
-          연결된 스킬({linkedSkills.length.toLocaleString()})
+          관련된 스킬({linkedSkills.length.toLocaleString()})
         </div>
         <div className="flex flex-wrap gap-[8px]">
           {linkedSkills.map((skill) => {

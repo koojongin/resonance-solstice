@@ -48,7 +48,7 @@ export function CharacterSkillBox({
         <img src={skill.thumbnail} className="w-full border-2 rounded" />
       </div>
       <div className="flex flex-col gap-[4px] text-white w-full pt-[4px]">
-        <div className="flex justify-between">
+        <div className="flex justify-between gap-[10px]">
           <div className="text-[18px] font-bold gap-[4px] flex flex-col">
             <div className="flex items-center gap-[8px]">
               {skill.isGeneratedCard && (
@@ -64,7 +64,7 @@ export function CharacterSkillBox({
           </div>
           <div className="flex items-center gap-[2px]">
             {skill?.amount > 0 && (
-              <div className="bg-yellow-800 text-white py-[2px] px-[14px] rounded ff-dh">
+              <div className="bg-yellow-800 text-white py-[2px] px-[14px] rounded ff-dh min-w-[70px] text-center">
                 수량:{skill.amount}
               </div>
             )}
