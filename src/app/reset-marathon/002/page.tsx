@@ -179,7 +179,9 @@ export default function TierListPage2() {
       <hr />
       <div className="flex flex-col gap-[4px]">
         <div className="font-bold text-[20px]">작성자 코멘트</div>
-        <div className="whitespace-pre-line border p-[10px] shadow-md border-gray-700 rounded">{comment}</div>
+        <div className="whitespace-pre-line border p-[10px] shadow-md border-gray-700 rounded">
+          {comment}
+        </div>
       </div>
     </div>
   )
