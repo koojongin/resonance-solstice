@@ -16,10 +16,12 @@ export interface RSMap {
   recommendationLevel?: number
   투자?: any[]
   thumbnail?: string
+  guideLink?: string
 }
 
 export const ALL_NAMED_MAPS: RSMap[] = [
   {
+    guideLink: 'https://arca.live/b/resonance/129304519',
     name: '청명 데이터 센터',
     type: RSCityType.CORE_CITY,
     거래소: [
@@ -42,6 +44,7 @@ export const ALL_NAMED_MAPS: RSMap[] = [
     ],
   },
   {
+    guideLink: 'https://arca.live/b/resonance/129294257',
     name: '자유 무역항-7',
     type: RSCityType.CORE_CITY,
     투자: [
@@ -219,6 +222,7 @@ export const ALL_NAMED_MAPS: RSMap[] = [
     ],
   },
   {
+    guideLink: 'https://arca.live/b/resonance/129310815',
     name: '슈그리스시',
     type: RSCityType.CORE_CITY,
     거래소: [
@@ -241,6 +245,7 @@ export const ALL_NAMED_MAPS: RSMap[] = [
     ],
   },
   {
+    guideLink: 'https://arca.live/b/resonance/129314531',
     name: '철도연맹 초소',
     type: 'BLUE',
     거래소: [
@@ -259,6 +264,7 @@ export const ALL_NAMED_MAPS: RSMap[] = [
     ],
   },
   {
+    guideLink: 'https://arca.live/b/resonance/129430420',
     desc: '슈그리 시티라는 이름의 오래된 광산은 서부 대륙에서 가장 큰 인공 광산입니다. 채굴과 거친 가공을 통합하고 레일용 특수 강철을 생산하는 것으로 유명합니다.',
     recommendationLevel: 15,
     name: '맨더 광산',
@@ -306,6 +312,7 @@ export const ALL_NAMED_MAPS: RSMap[] = [
     ],
   },
   {
+    guideLink: 'https://arca.live/b/resonance/129285060',
     name: '아니타 에너지 연구소',
     type: 'GREEN',
     거래소: [
@@ -316,6 +323,7 @@ export const ALL_NAMED_MAPS: RSMap[] = [
     ],
   },
   {
+    guideLink: 'https://arca.live/b/resonance/129437934',
     name: '골든 원더랜드',
     type: 'GREEN',
     거래소: [
@@ -333,6 +341,7 @@ export const ALL_NAMED_MAPS: RSMap[] = [
     ],
   },
   {
+    guideLink: 'https://arca.live/b/resonance/129428108',
     name: '황원역',
     type: RSCityType.SMALL_CITY,
     거래소: [

@@ -12,6 +12,7 @@ import {
 } from '@/services/utils/material-box-converter'
 import React from 'react'
 import { useNextDepthNavigator } from '@/services/navigation'
+import { GradientButton } from '@/app/components/button/gradient-button'
 
 export default function MapNamedDetailPage() {
   const { router } = useNextDepthNavigator()
@@ -22,7 +23,17 @@ export default function MapNamedDetailPage() {
   if (!map) return <div>검색된 지도 데이터 없음.</div>
   return (
     <div className="flex flex-col gap-[4px]">
-      <div className="text-[30px]">{map.name}</div>
+      <div className="text-[30px] items-center flex gap-[4px]">
+        {map.name}
+        {map.guideLink && (
+          <a href={map.guideLink} target="_blank" className="flex items-center">
+            <GradientButton className="p-[4px] text-[16px] rounded shadow flex items-center gap-[4px]">
+              관련 상세 가이드
+              <img src="/img/icon_link.svg" className="w-[16px] bg-white rounded p-[2px]" />
+            </GradientButton>
+          </a>
+        )}
+      </div>
       {map['거래소'] && (
         <>
           <GradientHeaderDiv>거래소</GradientHeaderDiv>
