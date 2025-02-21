@@ -56,17 +56,17 @@ export default function MainSideBar() {
     },
     {
       label: '티어표',
-      path: '',
+      path: '/reset-marathon/002',
       subMenu: [
         {
-          label: '니콜라 출시 후(25/02/20) ~ 현재',
+          label: '02. 니콜라 출시 후(25/02/20) ~ 현재',
           path: '/reset-marathon/002',
           className: 'text-[18px] w-[300px]',
         },
         {
-          label: '한섭 오픈 ~ 니콜라 출시 전(25/02/20)',
+          label: '01. 한섭 오픈 ~ 니콜라 출시 전(25/02/20)',
           path: '/reset-marathon/001',
-          className: 'text-[18px] w-[300px]',
+          className: 'text-[18px] w-[300px] text-gray-500',
         },
       ],
     },
