@@ -11,6 +11,7 @@ import {
   getMaterialBottomFrameUrl,
 } from '@/services/utils/material-box-converter'
 import createKey from '@/services/key-generator'
+import { RSHighlightedText } from '@/services/utils/highlight-text'
 
 export default function EquipmentDetailPage() {
   const { name } = useParams()
@@ -52,7 +53,9 @@ export default function EquipmentDetailPage() {
             <div className="text-[24px]">{decodedName}</div>
             <div className="p-[10px] bg-gray-800/40 w-full min-h-[120px] rounded border-2 border-gray-700 shadow-md shadow-gray-600 ff-sdn">
               {equipment.desc && (
-                <div className="whitespace-pre-line break-words">{equipment.desc}</div>
+                <div className="whitespace-pre-line break-words">
+                  <RSHighlightedText text={equipment.desc} />
+                </div>
               )}
               {!equipment.desc && (
                 <div className="whitespace-pre-line break-words">
