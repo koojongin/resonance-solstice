@@ -1,4 +1,5 @@
 import { RS_FACTION, RS_GRADE } from '@/const/character/character.enum'
+import _ from 'lodash'
 
 export enum RSEquipmentType {
   WEAPON = '무기',
@@ -2761,3 +2762,8 @@ export const ALL_EQUIPMENTS: {
     ],
   },
 }
+
+export const CONVERTED_ALL_EQUIPMENTS = _.map(ALL_EQUIPMENTS, (value, key) => ({
+  name: key,
+  ...value,
+}))

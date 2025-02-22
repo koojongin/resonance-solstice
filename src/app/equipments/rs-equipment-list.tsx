@@ -7,14 +7,14 @@ import {
 import React, { useEffect, useState } from 'react'
 import createKey from '@/services/key-generator'
 import { useNextDepthNavigator } from '@/services/navigation'
-import { ALL_EQUIPMENTS, RSEquipment, RSEquipmentType } from '@/const/archieve/equipment.const'
+import {
+  ALL_EQUIPMENTS,
+  CONVERTED_ALL_EQUIPMENTS,
+  RSEquipment,
+  RSEquipmentType,
+} from '@/const/archieve/equipment.const'
 import _ from 'lodash'
 import { RS_FACTION } from '@/const/character/character.enum'
-
-const CONVERTED_ALL_EQUIPMENTS = _.map(ALL_EQUIPMENTS, (value, key) => ({
-  name: key,
-  ...value,
-}))
 
 export function RsEquipmentList({
   checkedGrades,
@@ -90,7 +90,7 @@ export function RsEquipmentList({
 
 type ExtendedRSEquipment = RSEquipment & { name: string }
 
-function EquipmentBox({ equipment }: { equipment: ExtendedRSEquipment }) {
+export function EquipmentBox({ equipment }: { equipment: ExtendedRSEquipment }) {
   return (
     <div className="h-[80px] w-[80px] relative border-2">
       <img className="absolute bottom-0 z-0" src={getMaterialBgFrameUrl(equipment.grade)} />
