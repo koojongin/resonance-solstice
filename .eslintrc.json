@@ -59,6 +59,7 @@
     "@typescript-eslint/naming-convention": "off",
     "no-param-reassign": "off",
     "import/no-extraneous-dependencies": "off",
+    "jsx-a11y/control-has-associated-label": "off",
     "react/jsx-filename-extension": [
       "warn",
       {

@@ -79,8 +79,8 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/6/67/2dktmnn7w48dkp7s1u5viq9vk2i3da7.png',
   },
-  '레비스의 불가사의': {
-    name: '레비스의 불가사의',
+  "레비스의 '불가사의'": {
+    name: `레비스의 '불가사의'`,
     desc: '[미스터리] 강화: [해체의 상자]를 활성화하여 손에 있는 모든 카드를 덱으로 섞어넣은 후 카드를 3장 뽑습니다.\n뽑은 레드카드의 수만큼 [구축의 화염]을 생성하여 손으로 가져옵니다.\n뽑은 옐로카드의 수만큼 [해체의 번개]를 생성하여 손으로 가져옵니다.\n뽑은 블루카드의 수만큼 [재구축의 힘]을 생성하여 손으로 가져옵니다.\n뽑은 그린카드의 수만큼 [음에너지]를 생성하여 손으로 가져옵니다.\n뽑은 퍼플카드의 수만큼 [정화의 빛]을 생성하여 손으로 가져옵니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/3/36/55k33f5ylyhp8ppvvu949uqpwldfkfl.png',
@@ -284,5 +284,55 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     desc: '[콜로서스 군진II] 사용 후 자신의 공격력이 방어력의 20% 만큼 증가합니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/d/d8/3hkyly2n02zcons2hfz7xxj6mulqggm.png',
+  },
+
+  기선: {
+    name: '기선',
+    desc: '전투 시작 시 추가로 1장의 카드를 뽑습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/5c/o2ucdjupzys04ezgzfgkp3gc7rzk1o8.png',
+  },
+  제압: {
+    name: '제압',
+    desc: '[반사] 사용 후 옐로카드를 우선으로 카드를 1장 뽑습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/8c/7u33rzsm82ezxlvtobe8w83a8az9yb4.png',
+  },
+  인내력: {
+    name: '인내력',
+    desc: '체력이 50% 이상일 경우 받는 최종 피해가 10% 감소합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/05/lxet596cxuegys9u1oeck4lhdtpqwch.png',
+  },
+  "레비스의 '초개조'": {
+    name: "레비스의 '초개조'",
+    desc: `[디펜스 트리거] 강화:\n'이리를 피하니 범이 앞을 막는다'\n모든 아군에게 3초간 지속되는 [철벽 실드]를 부여합니다.\n[블랙카드]를 우선으로 카드를 3장 뽑으며 손패 상한을 초과할 수 있습니다. [블랙카드]를 뽑았을 경우 [블랙카드] 1장당 [철벽 실드]의 지속시간이 2초 증가합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/30/ron8pn2vxmaudbcp12gwpcj3js6hzko.png',
+  },
+
+  당분: {
+    name: '당분',
+    desc: `[에너지 풍선껌] 강화:\n비용을 5 얻습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/9d/29cvuhdiyc464xphjs7zo8ny1ias0e2.png',
+  },
+  불굴: {
+    name: '불굴',
+    desc: `빈사 상태 시 [무적]을 얻습니다.(5초간 지속, 1회 한정)\n[무적] 상태 시 모든 피해에 면역되며 제어와 피해형 특수 효과를 제거하는 동시에 면역을 얻습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/ee/qrc1nbqee59wc9uoqw9a6lcx2u1nomr.png',
+  },
+  "레비스의 '생일 선물'": {
+    name: "레비스의 '생일 선물'",
+    desc: `[인터체인] 사용 후 30% 확률로 [다크 엑스칼리버]를 1장 생성하여 손으로 가져옵니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/07/db5kq9u5c97uzbe2qxk3tv6fn9kfkt0.png',
+  },
+  잔열: {
+    name: '잔열',
+    desc: `[인터체인-III]은 사용 후 즉시 [인터체인-II]으로 전환됩니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/7d/p5cydxqwcdq3id636lnz9x5zy3zjm5c.png',
   },
 }

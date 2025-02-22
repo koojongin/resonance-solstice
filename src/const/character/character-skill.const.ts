@@ -547,4 +547,109 @@ export const CHARACTER_SKILLS: {
       'https://patchwiki.biligame.com/images/resonance/0/09/h6khk6sg7gxcs988m3jza9i5c3142jj.png',
     isGeneratedCard: true,
   },
+
+  흡수: {
+    amount: 2,
+    cost: 2,
+    name: '흡수',
+    desc: '[밸런스 키]흡수 모드를 활성화하여 6초간 [블록]상태에 진입합니다. 동시에 [블록]한 피해를 모두 흡수합니다.\n사용 후 [흡수]는 [반전]으로 전환되며 동시에 [반전]을 우선으로 카드를 1장 뽑습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/57/auk2ufurrv9n55oeo0omf896oy80v1g.png',
+  },
+  반전: {
+    amount: 0,
+    cost: 2,
+    name: '반전',
+    desc: '[밸런스 키]로 흡수한 피해를 전환하여 범위 내에 적에게 1단 피해를 입히고 [족쇄]를 부여합니다. 입힌 피해는 [블록]으로 흡수한 피해와 동일합니다.\n동시에 [블랙카드] [음에너지]를 1장 생성하여 덱에 추가합니다.\n사용 후 [반전]은 [방열]로 전환됩니다. 동시에 [방열]을 우선으로 카드를 1장 뽑습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/cb/9k7jsgcej3fowq10t9cbh8xpdet2uqy.png',
+    isGeneratedCard: true,
+  },
+  방열: {
+    amount: 0,
+    cost: 0,
+    name: '방열',
+    desc: '[밸런스 키]를 방열시켜 모든 적에게 [점화] 효과를 부여하며 적군 필드에 [광염] 효과를 발동시킵니다.\n동시에 1장의 [블랙카드] [음에너지]를 생성하여 덱에 추가합니다.\n사용 후 [방열]은 [흡수]로 전환됩니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a0/a8dz340fsdytlr9dda06n8m94a32kcy.png',
+    isGeneratedCard: true,
+  },
+  음에너지: {
+    amount: 0,
+    cost: 0,
+    name: '음에너지',
+    desc: '강력한 무기나 주술을 사용한 후 생성되는 음에너지, 승격자에게 이용될 수 있습니다.\n손에서 내면 [소각]됩니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/7e/50wgshxj0vv0uo8ag1s22mwymgrz6nr.png',
+    isGeneratedCard: true,
+  },
+  반사: {
+    amount: 2,
+    cost: 2,
+    name: '반사',
+    desc: '[밸런스 키] 반사 모드를 활성화하여 다음 한 번 피격 시 피해를 준 적에게 1단 피해를 입히고 [기절]과 [속박]을 부여합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2d/ewsmiy1pfieuey3a5abx3p90iikozcv.png',
+  },
+  '디펜스 트리거': {
+    amount: 1,
+    cost: 5,
+    name: '디펜스 트리거',
+    descSub: `'이리를 피하니 범이 앞을 막는다'`,
+    desc: '모든 아군에게 3초간 지속되는 [철벽 실드]를 부여합니다.\n카드를 3장 뽑으며 손패 상한을 초과할 수 있습니다. [블랙카드]를 뽑았을 경우 [블랙카드] 1장당 [철벽 실드]의 지속시간이 2초 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/6d/7luscsslvl69nxrj9m184mnvm1uo4y0.png',
+  },
+
+  '플레임 슬래시': {
+    amount: 2,
+    cost: 3,
+    name: '플레임 슬래시',
+    desc: '범위 내의 적에게 1단 피해를 입히고 [기절]을 부여하며, 동시에 [작열]과 [참열]을 부여합니다.\n덱 혹은 버려진 덱에서 [인터체인]을 1장 뽑아 손으로 가져옵니다.\n자신이 리더일 경우, 리더 스킬의 쿨타임이 10초 감소합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/f6/mcf5qye366k94gtt6jx4ydh1tjcv6do.png',
+  },
+  '에너지 풍선껌': {
+    amount: 2,
+    cost: 0,
+    name: '에너지 풍선껌',
+    desc: '비용을 3 얻습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/1/1d/2l70jkogdmb8xef76zps7x13vr3a6ie.png',
+  },
+  '인터체인-I': {
+    amount: 1,
+    cost: 3,
+    name: '인터체인-I',
+    desc: '범위 내의 적에게 5단 피해를 입히고 [중단] 및 [열상]을 부여합니다.\n사용 후 [인터체인-1]은 [인터체인-II]로 전환됩니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/22/hibgj18g5gr1ans1fv3fbmt6d9lplh3.png',
+  },
+  '인터체인-II': {
+    amount: 0,
+    cost: 4,
+    name: '인터체인-II',
+    desc: '범위 내의 적에게 5단 피해를 입히고 [기절]과 [열상]을 부여합니다.\n사용 후 [인터체인-II]는 [인터체인-III]으로 전환됩니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/45/nxxv4tmkl4um95dizjckop6f51gp8u8.png',
+    isGeneratedCard: true,
+  },
+  '인터체인-III': {
+    amount: 0,
+    cost: 5,
+    name: '인터체인-III',
+    desc: '범위 내의 적에게 5단 피해를 입히고 [기절]과 [열상]을 부여합니다.\n1개의 [화염휠]을 시전하여 모든 적에게 1단 피해를 입히고 동시에 [점화]를 발동합니다.\n사용 후 [인터체인-III]은 [인터체인-I]로 전환됩니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/f2/qbj2djecela44mlxxf9ancdut8uuyrn.png',
+    isGeneratedCard: true,
+  },
+  '다크 엑스칼리버': {
+    amount: 0,
+    cost: 5,
+    name: '다크 엑스칼리버',
+    desc: '카타스의 궁극기\n[타오르는 마검의 다크엑스칼리버!!!]를 시전해 모든 적에게 1단 피해를 입히고 [참열]을 부여하며 동시에 [광염]을 발동합니다.\n사용 후 [소각]됩니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/08/4axcgr52mt44h81ioni7hshbfiebje1.png',
+    isGeneratedCard: true,
+  },
 }

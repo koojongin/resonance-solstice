@@ -33,6 +33,14 @@ export default function MapNamedDetailPage() {
             </GradientButton>
           </a>
         )}
+        {map.linkOfBili && (
+          <a href={map.linkOfBili} target="_blank" className="flex items-center">
+            <img
+              className="w-[30px] rounded-full border-[2px] bg-white"
+              src="https://i.namu.wiki/i/Htm3agI9gCwVit30zTszHsEBK1ZRxVIeNPG5otPB3ocbEI5yHjWjfnVTNZWwBTRhlG8CUPJZdYEdkyDRlN-ktBrfbW5lRv6wLrGUHQYHxVJOtvoQjHnTRTRiDgPSSi0qd_jRYZQOjq-X-4Gwixb1OA.svg"
+            />
+          </a>
+        )}
       </div>
       {map['거래소'] && (
         <>

@@ -25,12 +25,16 @@ export interface RSMap {
   철도관리국?: any
   '관리 센터'?: any // 작전 계획,교환 계획,재료 회수,물자 운송
   // 에너지 연구 센터: 아니타 열차 테크, 아니타 에너지 테크,
+
+  linkOfBili?: string
 }
 
 export const ALL_NAMED_MAPS: RSMap[] = [
   {
     guideLink: 'https://arca.live/b/resonance/129304519',
     name: '청명 데이터 센터',
+    linkOfBili:
+      'https://wiki.biligame.com/resonance/%E6%BE%84%E6%98%8E%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83',
     type: RSCityType.CORE_CITY,
     '눈동자 의상점': 1,
     휴게소: 1,
@@ -60,6 +64,7 @@ export const ALL_NAMED_MAPS: RSMap[] = [
   {
     guideLink: 'https://arca.live/b/resonance/129294257',
     name: '자유 무역항-7',
+    linkOfBili: 'https://wiki.biligame.com/resonance/7%E5%8F%B7%E8%87%AA%E7%94%B1%E6%B8%AF',
     type: RSCityType.CORE_CITY,
     투자: [
       {
@@ -238,6 +243,7 @@ export const ALL_NAMED_MAPS: RSMap[] = [
   {
     guideLink: 'https://arca.live/b/resonance/129310815',
     name: '슈그리스시',
+    linkOfBili: 'https://wiki.biligame.com/resonance/%E4%BF%AE%E6%A0%BC%E9%87%8C%E5%9F%8E',
     type: RSCityType.CORE_CITY,
     거래소: [
       {
@@ -261,6 +267,7 @@ export const ALL_NAMED_MAPS: RSMap[] = [
   {
     guideLink: 'https://arca.live/b/resonance/129314531',
     name: '철도연맹 초소',
+    linkOfBili: 'https://wiki.biligame.com/resonance/%E9%93%81%E7%9B%9F%E5%93%A8%E7%AB%99',
     type: 'BLUE',
     거래소: [
       {
@@ -282,6 +289,7 @@ export const ALL_NAMED_MAPS: RSMap[] = [
     desc: '슈그리 시티라는 이름의 오래된 광산은 서부 대륙에서 가장 큰 인공 광산입니다. 채굴과 거친 가공을 통합하고 레일용 특수 강철을 생산하는 것으로 유명합니다.',
     recommendationLevel: 15,
     name: '맨더 광산',
+    linkOfBili: 'https://wiki.biligame.com/resonance/%E6%9B%BC%E5%BE%B7%E7%9F%BF%E5%9C%BA',
     '열차 무장 공장': [
       {
         name: '합금 임팩트 플레이트',
@@ -356,6 +364,8 @@ export const ALL_NAMED_MAPS: RSMap[] = [
   },
   {
     name: '아니타 군수공장',
+    linkOfBili:
+      'https://wiki.biligame.com/resonance/%E9%98%BF%E5%A6%AE%E5%A1%94%E6%88%98%E5%A4%87%E5%B7%A5%E5%8E%82',
     type: 'BLUE',
     거래소: [
       {
@@ -377,6 +387,8 @@ export const ALL_NAMED_MAPS: RSMap[] = [
   },
   {
     name: '아니타 발사 센터',
+    linkOfBili:
+      'https://wiki.biligame.com/resonance/%E9%98%BF%E5%A6%AE%E5%A1%94%E5%8F%91%E5%B0%84%E4%B8%AD%E5%BF%83',
     type: RSCityType.CORE_CITY,
     거래소: [
       { name: '고열전도 세라믹' },
@@ -392,6 +404,8 @@ export const ALL_NAMED_MAPS: RSMap[] = [
   {
     guideLink: 'https://arca.live/b/resonance/129285060',
     name: '아니타 에너지 연구소',
+    linkOfBili:
+      'https://wiki.biligame.com/resonance/%E9%98%BF%E5%A6%AE%E5%A1%94%E8%83%BD%E6%BA%90%E7%A0%94%E7%A9%B6%E6%89%80',
     type: 'GREEN',
     거래소: [
       {
@@ -406,6 +420,7 @@ export const ALL_NAMED_MAPS: RSMap[] = [
   {
     guideLink: 'https://arca.live/b/resonance/129437934',
     name: '골든 원더랜드',
+    linkOfBili: 'https://wiki.biligame.com/resonance/%E6%B7%98%E9%87%91%E4%B9%90%E5%9B%AD',
     type: 'GREEN',
     거래소: [
       {
@@ -424,6 +439,7 @@ export const ALL_NAMED_MAPS: RSMap[] = [
   {
     guideLink: 'https://arca.live/b/resonance/129428108',
     name: '황원역',
+    linkOfBili: 'https://wiki.biligame.com/resonance/%E8%8D%92%E5%8E%9F%E7%AB%99',
     type: RSCityType.SMALL_CITY,
     거래소: [
       {
@@ -437,6 +453,7 @@ export const ALL_NAMED_MAPS: RSMap[] = [
   },
   {
     name: '운수교 기지',
+    linkOfBili: 'https://wiki.biligame.com/resonance/%E4%BA%91%E5%B2%AB%E6%A1%A5%E5%9F%BA%E5%9C%B0',
     type: 'BLUE',
     거래소: [
       {
@@ -457,14 +474,17 @@ export const ALL_NAMED_MAPS: RSMap[] = [
   },
   {
     name: '원성대교',
+    linkOfBili: 'https://wiki.biligame.com/resonance/%E8%BF%9C%E6%98%9F%E5%A4%A7%E6%A1%A5',
     type: RSCityType.SMALL_CITY,
   },
   {
     name: '회류 타워',
     type: 'GREEN',
+    linkOfBili: 'https://wiki.biligame.com/resonance/%E6%B1%87%E6%B5%81%E5%A1%94',
   },
   {
     name: '케이프시',
+    linkOfBili: 'https://wiki.biligame.com/resonance/%E6%B5%B7%E8%A7%92%E5%9F%8E',
     type: RSCityType.CORE_CITY,
     거래소: [
       {
@@ -488,6 +508,7 @@ export const ALL_NAMED_MAPS: RSMap[] = [
   },
   {
     name: '서우역',
+    linkOfBili: 'https://wiki.biligame.com/resonance/%E6%A0%96%E7%BE%BD%E7%AB%99',
     type: 'BLUE',
     거래소: [
       {
@@ -511,6 +532,7 @@ export const ALL_NAMED_MAPS: RSMap[] = [
 
   {
     name: '스톰아이시',
+    linkOfBili: 'https://wiki.biligame.com/resonance/%E5%B2%9A%E5%BF%83%E5%9F%8E',
     type: RSCityType.CORE_CITY,
     거래소: [
       {

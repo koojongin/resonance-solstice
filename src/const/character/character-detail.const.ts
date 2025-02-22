@@ -184,7 +184,7 @@ export const CHARACTER_DETAIL: {
       2: '사기 마술',
       3: '생기',
       4: '감응',
-      5: '레비스의 불가사의',
+      5: `레비스의 '불가사의'`,
     },
     RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
     AWAKENING: {
@@ -195,7 +195,31 @@ export const CHARACTER_DETAIL: {
       5: '무량',
     },
   },
-  KATAS: {},
+  KATAS: {
+    SKILLS: [
+      '플레임 슬래시',
+      '에너지 풍선껌',
+      '인터체인-I',
+      '인터체인-II',
+      '인터체인-III',
+      '다크 엑스칼리버',
+    ],
+    RESONANCES: {
+      1: '당분',
+      2: '불굴',
+      3: '생기',
+      4: "레비스의 '생일 선물'",
+      5: '잔열',
+    },
+    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    AWAKENING: {
+      1: '광전',
+      2: '열혈',
+      3: '투지',
+      4: '마검의 주인',
+      5: '격노',
+    },
+  },
   WENSHENG: {
     SKILLS: ['서막', '파열', '원소핵-얼음', '서리 신성', '급습', '종결'],
     RESONANCES: {
@@ -343,7 +367,24 @@ export const CHARACTER_DETAIL: {
   KALEYA: {},
   YER: {},
   FENIA: {},
-  RINA_F: {},
+  RINA_F: {
+    SKILLS: ['흡수', '반전', '방열', '음에너지', '반사', '디펜스 트리거'],
+    RESONANCES: {
+      1: '기선',
+      2: '제압',
+      3: '생기',
+      4: '인내력',
+      5: "레비스의 '초개조'",
+    },
+    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    AWAKENING: {
+      1: '에너지 흡수',
+      2: '속박',
+      3: '투지',
+      4: '열기',
+      5: '순환',
+    },
+  },
   VALENTINE: {},
   YOIDUKI: {},
   AOBA: {},

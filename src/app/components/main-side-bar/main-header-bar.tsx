@@ -3,6 +3,7 @@
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { Tooltip } from '@material-tailwind/react'
+import VisitCounter from '@/app/components/ga/visit-counter'
 
 export default function MainHeaderBar() {
   const router = useRouter()

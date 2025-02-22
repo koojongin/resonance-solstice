@@ -285,4 +285,54 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/7/7e/8vdd8sr7khowfl1rskthfj0pylnmfd4.png',
   },
+
+  '에너지 흡수': {
+    name: '에너지 흡수',
+    desc: '[흡수]의 지속 시간이 2초 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/8a/offub2j2ixtw52wp36uy38ing8r6dfz.png',
+  },
+  속박: {
+    name: '속박',
+    desc: '[반전] 사용 후 다음 퍼플카드 사용 시 모든 적에게 [속박]을 부여합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/4e/n23xj16isrgh7jy645nlfrfmx86o006.png',
+  },
+  열기: {
+    name: '열기',
+    desc: '[광염] 상태의 적이 입히는 최종 피해가 10% 감소합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/01/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  순환: {
+    name: '순환',
+    desc: '[블랙카드]를 1장 얻을 때마다 비용을 1 얻습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/48/5scekfm7740r4w3eiv2jjfkixrbkb19.png',
+  },
+
+  광전: {
+    name: '광전',
+    desc: '자신의 스킬 카드를 사용할 때마다 자신의 공격력이 3% 증가합니다.(중첩 가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/55/89yr44d92ia8tmwtel0885u8av5e9p8.png',
+  },
+  열혈: {
+    name: '열혈',
+    desc: '[에너지 풍선껌] 사용 후 다음 내는 [레드카드]의 피해가 50% 증가합니다.(중첩 가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/3e/hqyduwvqsvs33fzcfl803lzo74d7ckq.png',
+  },
+  '마검의 주인': {
+    name: '마검의 주인',
+    desc: '전투 시작 시 [다크 엑스칼리버]를 1장 생성하여 손으로 가져옵니다.\n[다크 엑스칼리버]가 손에 있는 동안 지속적으로 손에 있는 모든 [블랙카드]와 [다크 아트]를 [소각]합니다. 1장 [소각]할 때마다 이번 전투 동안 [다크 엑스칼리버]의 피해가 10% 증가합니다.(최대 200%',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/eb/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  격노: {
+    name: '격노',
+    desc: '[다크 엑스칼리버] 사용 후, 덱 혹은 버려진 덱에서 [인터체인]을 1장 손으로 가져옵니다.\n자신이 리더일 경우, 즉시 리더 스킬을 활성화횝니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e8/ag10cibh6t7pcg1syi26gvtkdpaq4qt.png',
+  },
 }
