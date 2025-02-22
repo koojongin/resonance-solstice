@@ -70,7 +70,7 @@ export const ALL_EQUIPMENTS: {
   '심해 시험침': {
     type: RSEquipmentType.WEAPON,
     grade: RS_GRADE.SSR,
-    desc: '기본 속성: 공격력+39\n옵션: 비용이 3 이상인 레드카드를 내면 무작위 적이 받는 치유효과가 3% 감소합니다.(최대 75%, 중첩 가능)',
+    desc: '기본 속성: 공격력+39\n옵션: 비용이 3 이상인 [레드카드]를 내면 무작위 적이 받는 치유효과가 3% 감소합니다.(최대 75%, 중첩 가능)',
     thumbnail:
       'https://nng-phinf.pstatic.net/MjAyNTAyMDhfMTQy/MDAxNzM4OTk5ODA2NDU4.MHNf32-hi46yvG08vrKC6YGRTb8NFGzZjb4LYmlmbNwg.eE9nrvXyEMQfUrB1WV2ZYJRF7x7SNHcEp5_9APBaslIg.PNG/%E6%B7%B1%E6%B5%B7%E6%8E%A2%E9%92%88.png',
     faction: RS_FACTION.SOURCE_CITADEL,
@@ -151,7 +151,7 @@ export const ALL_EQUIPMENTS: {
   '고차원 구조체': {
     type: RSEquipmentType.ARMOR,
     grade: RS_GRADE.SSR,
-    desc: '기본 속성: 방어력+38\n옵션: 블랙카드 생성 시 자신의 체력을 5% 회복합니다.(중첩 가능)',
+    desc: '기본 속성: 방어력+38\n옵션: [블랙카드] 생성 시 자신의 체력을 5% 회복합니다.(중첩 가능)',
     thumbnail:
       'https://nng-phinf.pstatic.net/MjAyNTAyMDhfMjc0/MDAxNzM4OTk5MzI2Mjk3.xfwE9u3rqMWmBVkSll154T4i5CNEASl3UBKecC9n4NIg.3fA19vdk9BI9HFEA5XFzFFVz_TQr5mKcPUdOCuRq_J0g.PNG/%E9%AB%98%E7%BB%B4%E6%9E%84%E9%80%A0%E4%BD%93.png',
     faction: RS_FACTION.SOURCE_CITADEL,
@@ -870,7 +870,7 @@ export const ALL_EQUIPMENTS: {
   비뢰파영검: {
     type: RSEquipmentType.WEAPON,
     grade: RS_GRADE.UR,
-    desc: '기본 속성: 공격력+47\n옵션: 전투 시작 시 혹은 덱의 카드가 전부 뽑혀 셔플이 발동될때마다 레드카드를 우선으로 카드를 1장 뽑습니다.',
+    desc: '기본 속성: 공격력+47\n옵션: 전투 시작 시 혹은 덱의 카드가 전부 뽑혀 셔플이 발동될때마다 [레드카드]를 우선으로 카드를 1장 뽑습니다.',
     thumbnail:
       'https://nng-phinf.pstatic.net/MjAyNTAyMTJfMTIx/MDAxNzM5MzQyNDk5NjQ2.JBS8g3BAH9pBv2Dcv1-fEYXwbgMhPJP68NL3VMHMbQQg.eoelw2BaGs0zHQQdF-75efiUkoIAQ5kFW2gJXHkho5Ig.PNG/%E5%A5%94%E9%9B%B7%E7%A0%B4%E5%BD%B1%E5%89%91.png',
     faction: RS_FACTION.NIGHT_CHAINS,
@@ -1074,7 +1074,7 @@ export const ALL_EQUIPMENTS: {
   '메모리 청심': {
     type: RSEquipmentType.ARMOR,
     grade: RS_GRADE.SSR,
-    desc: '기본 속성: 방어력+39\n옵션: 자신의 스킬 덱에 블루카드가 없을 경우 받는 최종 피해가15% 감소합니다.',
+    desc: '기본 속성: 방어력+39\n옵션: 자신의 스킬 덱에 [블루카드]가 없을 경우 받는 최종 피해가15% 감소합니다.',
     thumbnail:
       'https://nng-phinf.pstatic.net/MjAyNTAyMTJfMTkz/MDAxNzM5MzQzMDYwOTU4.ymKykeD0INzw7hzW8XLSyvs8jmAfUyRrrodP5m_ME_Yg.nC6a-rSVBmXS7GSheU7XeQ4P39wJo2tYxtZMlH6vqa0g.PNG/%E5%86%85%E5%AD%98%E6%B8%85%E5%BF%83%E5%92%92.png',
     faction: RS_FACTION.NIGHT_CHAINS,
@@ -1598,7 +1598,7 @@ export const ALL_EQUIPMENTS: {
       },
       {
         desc: '에너지 연구소 작전 계획',
-        tags: [],
+        tags: ['작전 계획'],
       },
       {
         desc: '흑월 상점',
@@ -1617,11 +1617,33 @@ export const ALL_EQUIPMENTS: {
   "'극좌표' 지휘 드론": {
     type: RSEquipmentType.ACCESSORY,
     grade: RS_GRADE.SR,
-    desc: '기본 속성: 체력+3005<br><br>옵션: 자신의 [드론] 키워드를 가진 카드가 입히는 피해가 20%증가합니다.(중첩 가능)<br><br>[획득 경로]<br>자유 무역항-7 철도관리국 임무<br>에너지 연구소 작전 계획<br>흑월 상점<br> 철도 주변의 베툴라 부표-블리자드 기포체<br>철도 주변의 베툴라 부표-빙하 본드래곤',
+    desc: `기본 속성: 체력+3005\n옵션: 자신의 [드론] 키워드를 가진 카드가 입히는 피해가 20%증가합니다.(중첩 가능)`,
     thumbnail:
       'https://nng-phinf.pstatic.net/MjAyNTAyMDhfNTMg/MDAxNzM5MDAxNDI2MDAx.HbL5cUqE8hWVCrRq5sV6rmj8xV-ehhtV6OJfOLfD5vkg.4nPpn-nC5hsf0NE8lLqFmt61_Gm4aC7APsXupbA2ttcg.PNG/%E2%80%9C%E6%9E%81%E5%9D%90%E6%A0%87%E2%80%9D%E6%8C%87%E6%8C%A5%E6%97%A0%E4%BA%BA%E6%9C%BA.png',
     faction: RS_FACTION.GARDENERS,
-    earnsPath: [],
+    earnsPath: [
+      {
+        desc: '자유 무역항-7 철도관리국 임무',
+        map: '자유 무역항-7',
+        tags: [],
+      },
+      {
+        desc: '에너지 연구소 작전 계획',
+        tags: ['작전 계획'],
+      },
+      {
+        desc: '흑월 상점',
+        tags: ['흑월 상점'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-블리자드 기포체',
+        tags: ['부표'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-빙하 본드래곤',
+        tags: ['부표'],
+      },
+    ],
   },
   '번개 소환 권선기MK1': {
     type: RSEquipmentType.WEAPON,
@@ -1638,7 +1660,7 @@ export const ALL_EQUIPMENTS: {
       },
       {
         desc: '에너지 연구소 작전 계획',
-        tags: [],
+        tags: ['작전 계획'],
       },
       {
         desc: '흑월 상점',
@@ -1669,7 +1691,7 @@ export const ALL_EQUIPMENTS: {
       },
       {
         desc: '에너지 연구소 작전 계획',
-        tags: [],
+        tags: ['작전 계획'],
       },
       {
         desc: '흑월 상점',
@@ -1688,7 +1710,7 @@ export const ALL_EQUIPMENTS: {
   'A77 우주 비행 권총': {
     type: RSEquipmentType.WEAPON,
     grade: RS_GRADE.R,
-    desc: '기본 속성: 공격력+24\n옵션: 레드카드를 사용할 때마다 자신의 [일반 공격] 속도가 5% 증가합니다.(최대100%)',
+    desc: '기본 속성: 공격력+24\n옵션: [레드카드]를 사용할 때마다 자신의 [일반 공격] 속도가 5% 증가합니다.(최대100%)',
     thumbnail:
       'https://nng-phinf.pstatic.net/MjAyNTAyMDhfMTA0/MDAxNzM5MDAwOTY5MDQ5.DyVnS23vQEqF28MPkLac7J3519T-aeCLoswbyiO_v-4g.kY9LxmWdpqeMh6vBsvkYLp4SE6MBzWLEhzUvebdWMygg.PNG/A77%E5%BC%8F%E8%88%AA%E5%A4%A9%E6%89%8B%E6%9E%AA.png',
     faction: RS_FACTION.GARDENERS,
@@ -1700,7 +1722,7 @@ export const ALL_EQUIPMENTS: {
       },
       {
         desc: '에너지 연구소 작전 계획',
-        tags: [],
+        tags: ['작전 계획'],
       },
       {
         desc: '흑월 상점',
@@ -1719,7 +1741,7 @@ export const ALL_EQUIPMENTS: {
   '다용도 오프너': {
     type: RSEquipmentType.WEAPON,
     grade: RS_GRADE.R,
-    desc: '기본 속성: 공격력+23\n옵션: 자신의 레드카드를 사용할 때마다 공격력이 0.5% 증가합니다.(중첩 가능)',
+    desc: '기본 속성: 공격력+23\n옵션: 자신의 [레드카드]를 사용할 때마다 공격력이 0.5% 증가합니다.(중첩 가능)',
     thumbnail:
       'https://nng-phinf.pstatic.net/MjAyNTAyMDhfNjYg/MDAxNzM5MDAwODc0OTgy.lE--6T5PEkM52OtrvqRcCRxxfwcp-lilmJqWOrtFYXog.13KnIN5qazqKA44ALODnldYnhEXJQPgjp1uSx-S8168g.PNG/%E4%B8%87%E7%94%A8%E8%B5%B7%E5%AD%90.png',
     faction: RS_FACTION.GARDENERS,
@@ -1731,7 +1753,7 @@ export const ALL_EQUIPMENTS: {
       },
       {
         desc: '에너지 연구소 작전 계획',
-        tags: [],
+        tags: ['작전 계획'],
       },
       {
         desc: '흑월 상점',
@@ -1750,7 +1772,7 @@ export const ALL_EQUIPMENTS: {
   '비금속 도금 재료': {
     type: RSEquipmentType.ARMOR,
     grade: RS_GRADE.R,
-    desc: '기본 속성: 방어력+24\n옵션: 자신의 블루카드를 사용할 때마다 방어력이 0.5% 증가합니다.(중첩 가능)',
+    desc: '기본 속성: 방어력+24\n옵션: 자신의 [블루카드]를 사용할 때마다 방어력이 0.5% 증가합니다.(중첩 가능)',
     thumbnail:
       'https://nng-phinf.pstatic.net/MjAyNTAyMDhfMTM5/MDAxNzM5MDAwNzE3MTUy._JDF41Vk7aNB3i9yTmhpb3MSGntRepefFcpyEvV3yOog.O2oTTLoWVnbqkqMF2H8Lkz8yN2RlCj4T6rWx-Ctssowg.PNG/%E9%9D%9E%E9%87%91%E5%B1%9E%E6%9D%90%E6%96%99%E9%95%80%E5%B1%82.png',
     faction: RS_FACTION.GARDENERS,
@@ -1762,7 +1784,7 @@ export const ALL_EQUIPMENTS: {
       },
       {
         desc: '에너지 연구소 작전 계획',
-        tags: [],
+        tags: ['작전 계획'],
       },
       {
         desc: '흑월 상점',
@@ -1793,7 +1815,7 @@ export const ALL_EQUIPMENTS: {
       },
       {
         desc: '에너지 연구소 작전 계획',
-        tags: [],
+        tags: ['작전 계획'],
       },
       {
         desc: '흑월 상점',
@@ -1826,7 +1848,7 @@ export const ALL_EQUIPMENTS: {
   '자각몽 섬유': {
     type: RSEquipmentType.ARMOR,
     grade: RS_GRADE.UR,
-    desc: '기본 속성: 방어력+49\n옵션: 자신의 레드카드가 입히는 피해의 2%만큼 자신의 체력을 회복합니다.',
+    desc: '기본 속성: 방어력+49\n옵션: 자신의 [레드카드]가 입히는 피해의 2%만큼 자신의 체력을 회복합니다.',
     thumbnail:
       'https://nng-phinf.pstatic.net/MjAyNTAyMDhfMTE0/MDAxNzM4OTk1MDI2Njg1.uoz7O0-efQ1fwqGzPk0pprg2rT2XVjpVvezeteM7jFEg.p6zZdOiOS-5WaoY1mmQYbrF2VHxB1qBt8f8xN5yS04wg.PNG/%E6%B8%85%E9%86%92%E6%A2%A6%E7%BA%A4%E7%BB%B4.png',
     faction: RS_FACTION.RAILWAY,
@@ -2587,7 +2609,7 @@ export const ALL_EQUIPMENTS: {
     earnsPath: [
       {
         desc: '골든 원더랜드 작전 계획',
-        tags: [],
+        tags: ['작전 계획'],
         map: '골든 원더랜드',
       },
       {
@@ -2610,7 +2632,7 @@ export const ALL_EQUIPMENTS: {
     earnsPath: [
       {
         desc: '골든 원더랜드 작전 계획',
-        tags: [],
+        tags: ['작전 계획'],
         map: '골든 원더랜드',
       },
       {
@@ -2633,7 +2655,7 @@ export const ALL_EQUIPMENTS: {
     earnsPath: [
       {
         desc: '골든 원더랜드 - 작전 계획',
-        tags: [],
+        tags: ['작전 계획'],
         map: '골든 원더랜드',
       },
       {
@@ -2656,7 +2678,7 @@ export const ALL_EQUIPMENTS: {
     earnsPath: [
       {
         desc: '골든 원더랜드 작전 계획',
-        tags: [],
+        tags: ['작전 계획'],
         map: '골든 원더랜드',
       },
       {
@@ -2679,7 +2701,7 @@ export const ALL_EQUIPMENTS: {
     earnsPath: [
       {
         desc: '골든 원더랜드 작전 계획',
-        tags: [],
+        tags: ['작전 계획'],
         map: '골든 원더랜드',
       },
       {
@@ -2702,7 +2724,7 @@ export const ALL_EQUIPMENTS: {
     earnsPath: [
       {
         desc: '골든 원더랜드 작전 계획',
-        tags: [],
+        tags: ['작전 계획'],
         map: '골든 원더랜드',
       },
       {
@@ -2725,7 +2747,7 @@ export const ALL_EQUIPMENTS: {
     earnsPath: [
       {
         desc: '골든 원더랜드 작전 계획',
-        tags: [],
+        tags: ['작전 계획'],
         map: '골든 원더랜드',
       },
       {
@@ -2748,7 +2770,7 @@ export const ALL_EQUIPMENTS: {
     earnsPath: [
       {
         desc: '골든 원더랜드 작전 계획',
-        tags: [],
+        tags: ['작전 계획'],
         map: '골든 원더랜드',
       },
       {
