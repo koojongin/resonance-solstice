@@ -27,6 +27,10 @@ export default function MainSideBar() {
           path: '/materials',
         },
         {
+          label: '장비',
+          path: '/equipments',
+        },
+        {
           label: '용어집',
           path: '/archieve',
         },

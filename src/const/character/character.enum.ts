@@ -23,6 +23,7 @@ export enum RS_COLUMN {
 }
 
 export enum RS_GRADE {
+  UR = 'UR',
   SSR = 'SSR',
   SR = 'SR',
   R = 'R',

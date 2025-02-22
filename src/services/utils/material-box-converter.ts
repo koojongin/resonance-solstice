@@ -13,6 +13,9 @@ export function getMaterialBottomFrameUrl(grade: RS_GRADE) {
   if (grade === RS_GRADE.SSR) {
     return 'https://patchwiki.biligame.com/images/resonance/8/86/mq5058ghk5zlm8su2bhl6nbjmn1y8wu.png'
   }
+  if (grade === RS_GRADE.UR) {
+    return 'https://patchwiki.biligame.com/images/resonance/7/70/gssude2g7eu83yeu0o0y6khsyjq40pd.png'
+  }
 
   return 'https://patchwiki.biligame.com/images/resonance/4/4d/1ly0evn7gztzkch72v5t7fnxfhsryhh.png'
 }
@@ -29,6 +32,9 @@ export function getMaterialBgFrameUrl(grade: RS_GRADE) {
   }
   if (grade === RS_GRADE.SSR) {
     return 'https://patchwiki.biligame.com/images/resonance/8/87/b7tbcl0t8sagqwv47ztq1jy4p32px2p.png'
+  }
+  if (grade === RS_GRADE.UR) {
+    return 'https://patchwiki.biligame.com/images/resonance/2/28/aht3i50cc4enuj4bmu0r5jc8llq188n.png'
   }
 
   return 'https://patchwiki.biligame.com/images/resonance/8/87/b7tbcl0t8sagqwv47ztq1jy4p32px2p.png'
