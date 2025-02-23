@@ -662,4 +662,18 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/0/0e/6m88wkoxuvq8im4vwsslwpgottye7ex.png',
   },
+
+  '황원역 건설 진행도': {
+    grade: RS_GRADE.R,
+    desc: '획득 시 황원역 건설 진행도가 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/75/7x2prdvx86x8y1q0r5uezoiim6pt8vl.png',
+  },
+
+  마일리지: {
+    grade: RS_GRADE.R,
+    desc: '콜룸바 상회 주문 완성시 획득하는 포인트입니다. 상회 마일리지 상점에서 아이템을 교환할 수 있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/c4/c5vvvt1hzfd35kf9hbabs2sf5ymvakn.png',
+  },
 }

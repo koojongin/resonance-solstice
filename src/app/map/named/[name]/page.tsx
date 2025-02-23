@@ -13,6 +13,7 @@ import {
 import React from 'react'
 import { useNextDepthNavigator } from '@/services/navigation'
 import { GradientButton } from '@/app/components/button/gradient-button'
+import { RsTransportOrderBox } from '@/app/components/rs-transport-order-box'
 
 export default function MapNamedDetailPage() {
   const { router } = useNextDepthNavigator()
@@ -83,6 +84,8 @@ export default function MapNamedDetailPage() {
           </div>
         </>
       )}
+
+      {map['물자 운송'] && <RsTransportOrderBox transportOrders={map['물자 운송']} />}
     </div>
   )
 }

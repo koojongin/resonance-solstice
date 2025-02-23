@@ -8,6 +8,16 @@ export interface RSMapExchangeItem {
   isSpecialty?: boolean
 }
 
+export interface RSTransportItem {
+  name: string
+  amount: number
+}
+
+export interface RSTransportOrder {
+  rewards: RSTransportItem[]
+  requirements: RSTransportItem[]
+}
+
 export interface RSMap {
   name: string
   type: RSCityType | string
@@ -25,6 +35,7 @@ export interface RSMap {
   철도관리국?: any
   '관리 센터'?: any // 작전 계획,교환 계획,재료 회수,물자 운송
   // 에너지 연구 센터: 아니타 열차 테크, 아니타 에너지 테크,
+  '물자 운송'?: RSTransportOrder[]
 
   linkOfBili?: string
 }
@@ -449,6 +460,110 @@ export const ALL_NAMED_MAPS: RSMap[] = [
       { name: '방연광' },
       { name: '흑연' },
       { name: '감자' },
+    ],
+    '물자 운송': [
+      {
+        rewards: [
+          {
+            name: '황원역 건설 진행도',
+            amount: 60,
+          },
+          {
+            name: '마일리지',
+            amount: 30,
+          },
+        ],
+        requirements: [
+          {
+            name: '석재',
+            amount: 45,
+          },
+          {
+            name: '철광석',
+            amount: 36,
+          },
+        ],
+      },
+      {
+        rewards: [
+          {
+            name: '황원역 건설 진행도',
+            amount: 60,
+          },
+          {
+            name: '마일리지',
+            amount: 30,
+          },
+        ],
+        requirements: [
+          {
+            name: '건축자재',
+            amount: 30,
+          },
+          {
+            name: '석재',
+            amount: 45,
+          },
+        ],
+      },
+      {
+        rewards: [
+          {
+            name: '황원역 건설 진행도',
+            amount: 40,
+          },
+          {
+            name: '마일리지',
+            amount: 20,
+          },
+        ],
+        requirements: [
+          {
+            name: '와드 치킨',
+            amount: 39,
+          },
+        ],
+      },
+      {
+        rewards: [
+          {
+            name: '황원역 건설 진행도',
+            amount: 40,
+          },
+          {
+            name: '마일리지',
+            amount: 20,
+          },
+        ],
+        requirements: [
+          {
+            name: '철도연맹 코인',
+            amount: 1000000,
+          },
+          {
+            name: '통조림',
+            amount: 45,
+          },
+        ],
+      },
+      {
+        rewards: [
+          {
+            name: '황원역 건설 진행도',
+            amount: 70,
+          },
+          {
+            name: '마일리지',
+            amount: 35,
+          },
+        ],
+        requirements: [
+          {
+            name: '녹음 테이프',
+            amount: 50,
+          },
+        ],
+      },
     ],
   },
   {

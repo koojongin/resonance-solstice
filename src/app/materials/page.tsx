@@ -2,15 +2,12 @@
 
 import React, { useState } from 'react'
 import _ from 'lodash'
-import { MATERIALS, RSMaterial } from '@/const/material.const'
-import {
-  getMaterialBgFrameUrl,
-  getMaterialBottomFrameUrl,
-} from '@/services/utils/material-box-converter'
+import { MATERIALS } from '@/const/material.const'
 import createKey from '@/services/key-generator'
 import { useNextDepthNavigator } from '@/services/navigation'
+import { ExtendedRSMaterial } from '@/const/material/material.type'
+import { MaterialBox } from '@/app/components/material/material-box'
 
-type ExtendedRSMaterial = RSMaterial & { name: string }
 export default function MaterialsPage() {
   const { router } = useNextDepthNavigator()
   const [materials, setMaterials] = useState<ExtendedRSMaterial[]>(
@@ -43,15 +40,6 @@ export default function MaterialsPage() {
           </div>
         )
       })}
-    </div>
-  )
-}
-function MaterialBox({ material }: { material: ExtendedRSMaterial }) {
-  return (
-    <div className="h-[80px] w-[80px] relative border-2">
-      <img className="absolute bottom-0 z-0" src={getMaterialBgFrameUrl(material.grade)} />
-      <img className="relative z-20 rounded w-full p-[4px]" src={material.thumbnail} />
-      <img className="absolute z-10 bottom-0" src={getMaterialBottomFrameUrl(material.grade)} />
     </div>
   )
 }
