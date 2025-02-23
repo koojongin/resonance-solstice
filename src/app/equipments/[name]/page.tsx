@@ -12,6 +12,8 @@ import {
 } from '@/services/utils/material-box-converter'
 import createKey from '@/services/key-generator'
 import { RSHighlightedText } from '@/services/utils/highlight-text'
+import { LinkedDeckListBox } from '@/app/characters/[name]/linked-deck-list-box'
+import { RECOMMENDATION_DECKS } from '@/app/rd/rd-decks.const'
 
 export default function EquipmentDetailPage() {
   const { name } = useParams()
@@ -26,6 +28,10 @@ export default function EquipmentDetailPage() {
     const exchangeItems = map['거래소'] || []
     return exchangeItems.filter((item) => item.name === decodedName).length > 0
   })
+
+  const linkedRecommendationDecks = RECOMMENDATION_DECKS.filter((deck) =>
+    deck.characters.find((c) => c.equipments?.includes(decodedName)),
+  )
 
   return (
     <div className="flex flex-col gap-[10px]">
@@ -66,11 +72,30 @@ export default function EquipmentDetailPage() {
           </div>
         </div>
       </div>
-      <div className="whitespace-pre-line break-words">
-        {equipment.earnsPath.map((earnPath) => {
-          return <div key={createKey()}>{earnPath.desc}</div>
-        })}
+
+      <div className="flex flex-col gap-[4px]">
+        <GradientHeaderDiv>획득 정보</GradientHeaderDiv>
+        <div className="inline-flex flex-wrap gap-[4px]">
+          {equipment.earnsPath.map((earnPath) => {
+            return (
+              <div
+                key={createKey()}
+                className="inline-flex border-gray-500 border w-max rounded p-[4px]"
+              >
+                {earnPath.desc}
+              </div>
+            )
+          })}
+        </div>
       </div>
+
+      {/* <div className="flex flex-col gap-[4px]"> */}
+      {/*   <GradientHeaderDiv>연관 추천덱</GradientHeaderDiv> */}
+      {/* </div> */}
+
+      <LinkedDeckListBox decks={linkedRecommendationDecks} />
+
+      {/* // */}
     </div>
   )
 }
