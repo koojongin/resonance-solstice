@@ -221,4 +221,36 @@ export const ARCHIVE_ABILITIES: { [key: string]: RSArchive } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/7/7e/50wgshxj0vv0uo8ag1s22mwymgrz6nr.png',
   },
+  '블랙 8': {
+    desc: "레비스 주머니 속 '당구공',소스 시타델이 베툴라 생명체에 대해 진행한 박스 프로젝트의 결과물입니다. 베툴라 생명체와 심면자에게 매우 효과적입니다.\n[블랙 8]은 카드 효과로 버려진 경우에만 활성화됩니다.\n손에서 내면 [소각]됩니다.",
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/f/fe/h3obcw16gyhwt3huya0axb5ipjnulec.png/128px-%E9%BB%918.png',
+  },
+
+  잿더미: {
+    desc: '연소에 의해 생성된 잿더미입니다.\n손에서 내면 [소각]됩니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/93/lzihx3ecq1k8qoibnvlouoy0qr4qmcl.png',
+  },
+  '원소핵-얼음': {
+    desc: '대상에게 [냉동]을 부여합니다.\n아군에게 걸린 [점화]를 제거합니다.\n손에서 내면 [소각]됩니다.',
+    thumbnail: 'https://i.postimg.cc/xcvNx0fH/Yuan-Su-He-Bing.png',
+  },
+  '원소핵-불': {
+    desc: '대상에게 [점화]를 부여합니다.\n아군에게 걸린 [냉동]을 제거합니다.\n손에서 내면 [소각]됩니다.',
+    thumbnail: 'https://i.postimg.cc/Hr3cmB7k/Yuan-Su-He-Huo.png',
+  },
+  '원소핵-전기': {
+    desc: '대상에게 한 번의 [낙뢰]를 입힙니다.\n손에서 내면 [소각]됩니다.',
+    thumbnail: 'https://i.postimg.cc/FYhdw2z6/Yuan-Su-He-Dian.png',
+  },
+  신성: {
+    desc: '목표 구역을 향해 비술의 신성을 1개 발사하여 범위 내의 적에게 1단 피해를 입히고 [붕괴]를 부여합니다.\n이 카드의 [원소변화]:\n손에 [신성]과 [원소핵-전기]가 있을 때 자동으로 [번개 신성]으로 융합됩니다.\n손에 [신성]과 [원소핵-불]이 있을 때 자동으로 [화염 신성]으로 융합됩니다.\n손에 [신성]과 [원소핵-얼음]이 있을 때 자동으로 [서리 신성]으로 융합됩니다.\n이 카드의 [광붕괴]:\n손에 [신성]이 3장 있을 때 자동으로 [초신성]으로 융합됩니다.\n[신성]/[원소 신성]/[초신성]은 [파]입니다.\n사용 후 [소각]됩니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/c/c7/pajvu76k7mxw5iaxq5rokjzyxz113ij.png/128px-%E6%96%B0%E6%98%9F.png',
+  },
+  진동파: {
+    desc: '하늘에서 떨어지는 중력 진동파를 시전하여 모든 적을 [기절]시킵니다.\n동시에 다음 내는 [레드카드]의 피해가 50% 증가합니다.(중첩 가능)\n손에서 내면 [소각]됩니다.',
+    thumbnail: 'https://i.postimg.cc/nhbkkrTX/Zhen-Bo-red.png',
+  },
 }

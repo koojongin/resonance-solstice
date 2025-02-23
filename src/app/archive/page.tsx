@@ -24,7 +24,7 @@ export default function ArchivePage() {
               <div className="p-[8px] min-w-[140px] w-[140px] ff-dh text-[20px] text-shadow-outline text-white border-r border-gray-500">
                 {archive.name}
               </div>
-              <div className="p-[8px]">{archive.desc}</div>
+              <div className="p-[8px] whitespace-pre-line">{archive.desc}</div>
               {archive?.thumbnail && (
                 <div className="ml-auto flex items-center border border-gray-700 bg-blue-gray-900 m-[2px] w-[40px] min-w-[40px] border shadow-lg shadow-gray-300 rounded overflow-hidden">
                   <img className="w-full" src={archive.thumbnail} />

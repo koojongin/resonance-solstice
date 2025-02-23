@@ -29,15 +29,18 @@ export default function ArchiveDetailPage() {
 
   return (
     <div className="flex flex-col gap-[10px]">
-      <div>
+      <div className="flex flex-col gap-[4px]">
         <div className="bg-gradient-to-r from-blue-gray-900 to-white text-white ff-dh text-[26px] p-[8px] py-[4px] rounded">
           설명
         </div>
         {data && (
           <div className="flex items-stretch min-h-[40px]">
             {data?.thumbnail && (
-              <div className="w-[80px] border shadow-lg shadow-gray-300 rounded overflow-hidden">
-                <img className="w-full" src={data.thumbnail} />
+              <div className="w-[80px]">
+                <img
+                  className="w-full border-2 border-gray-400 shadow-lg shadow-gray-300 rounded overflow-hidden"
+                  src={data.thumbnail}
+                />
               </div>
             )}
             <div className="flex flex-col gap-[4px] p-[8px] w-full">

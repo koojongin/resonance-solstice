@@ -373,7 +373,7 @@ export const CHARACTER_DETAIL: {
       2: '축복',
       3: '생기',
       4: '묘책',
-      5: `'레비스의 '초개조' - 페니아`,
+      5: `레비스의 '초개조' - 페니아`,
     },
     RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
     AWAKENING: {

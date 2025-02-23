@@ -517,8 +517,7 @@ export const CHARACTER_SKILLS: {
     cost: 0,
     name: '진동파',
     desc: '하늘에서 떨어지는 중력 진동파를 시전하여 모든 적을 [기절]시킵니다.\n동시에 다음 내는 [레드카드]의 피해가 50% 증가합니다.(중첩 가능)\n손에서 내면 [소각]됩니다.',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/6/62/n7cf4qrucie2hpvzi785120xcpz7ajc.png',
+    thumbnail: 'https://i.postimg.cc/nhbkkrTX/Zhen-Bo-red.png',
     isGeneratedCard: true,
   },
   '콜러서스 군진': {
