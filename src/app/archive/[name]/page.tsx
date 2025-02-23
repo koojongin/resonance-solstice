@@ -1,24 +1,24 @@
 'use client'
 
 import { useParams } from 'next/navigation'
-import { TOTAL_ARCHIVE_MAP } from '@/const/archieve'
 import { CHARACTER_SKILLS } from '@/const/character/character-skill.const'
 import createKey from '@/services/key-generator'
 import React from 'react'
 import { CharacterSkillBox } from '@/app/characters/[name]/character-skill-container'
 import { RSHighlightedText } from '@/services/utils/highlight-text'
-import { CONVERTED_ALL_EQUIPMENTS } from '@/const/archieve/equipment.const'
+import { CONVERTED_ALL_EQUIPMENTS } from '@/const/archive/equipment.const'
 import { EquipmentBox } from '@/app/equipments/rs-equipment-list'
 import { useNextDepthNavigator } from '@/services/navigation'
 import { Tooltip } from '@material-tailwind/react'
+import { TOTAL_ARCHIVE_MAP } from '@/const/archive'
 
-export default function ArchieveDetailPage() {
+export default function ArchiveDetailPage() {
   const { name } = useParams()
   const { router } = useNextDepthNavigator()
-  const archieveName = decodeURIComponent(name as string)
-  const data = TOTAL_ARCHIVE_MAP[archieveName]
+  const archiveName = decodeURIComponent(name as string)
+  const data = TOTAL_ARCHIVE_MAP[archiveName]
 
-  const keyword = `[${archieveName}]`
+  const keyword = `[${archiveName}]`
   const linkedSkills = Object.values(CHARACTER_SKILLS).filter(
     (skill) => skill.desc.indexOf(keyword) >= 0,
   )
@@ -41,7 +41,7 @@ export default function ArchieveDetailPage() {
               </div>
             )}
             <div className="flex flex-col gap-[4px] p-[8px] w-full">
-              <div className="ff-dh text-[24px] text-shadow-outline text-white">{archieveName}</div>
+              <div className="ff-dh text-[24px] text-shadow-outline text-white">{archiveName}</div>
               <hr />
               <div className="">
                 <RSHighlightedText text={data.desc} />

@@ -14,7 +14,7 @@ import {
   CONVERTED_ALL_EQUIPMENTS,
   RSEquipment,
   RSEquipmentType,
-} from '@/const/archieve/equipment.const'
+} from '@/const/archive/equipment.const'
 import _ from 'lodash'
 import { RS_FACTION } from '@/const/character/character.enum'
 import { ExtendedRSEquipment } from '@/app/equipments/equipment.type'

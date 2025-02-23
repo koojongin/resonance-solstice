@@ -1,7 +1,7 @@
 'use client'
 
 import createKey from '@/services/key-generator'
-import { ALL_EQUIPMENTS } from '@/const/archieve/equipment.const'
+import { ALL_EQUIPMENTS } from '@/const/archive/equipment.const'
 import { EquipmentBox } from '@/app/equipments/rs-equipment-list'
 import React, { useState } from 'react'
 import { Tooltip } from '@material-tailwind/react'

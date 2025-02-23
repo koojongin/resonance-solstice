@@ -9,7 +9,7 @@ import {
   SPECIALTY_FRAME_URL,
 } from '@/services/utils/material-box-converter'
 import { GradientHeaderDiv } from '@/app/components/div/gradient-header-div'
-import { ALL_NAMED_MAPS } from '@/const/archieve/named-map.const'
+import { ALL_NAMED_MAPS } from '@/const/archive/named-map.const'
 import createKey from '@/services/key-generator'
 import { GradientButton } from '@/app/components/button/gradient-button'
 import { useNextDepthNavigator } from '@/services/navigation'

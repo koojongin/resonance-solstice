@@ -32,7 +32,7 @@ export default function MainSideBar() {
         },
         {
           label: '용어집',
-          path: '/archieve',
+          path: '/archive',
         },
         {
           label: '영상',

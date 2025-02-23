@@ -1,4 +1,4 @@
-export interface RSArchieve {
+export interface RSArchive {
   thumbnail?: string
   desc: string
 }

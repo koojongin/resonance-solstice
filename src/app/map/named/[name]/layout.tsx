@@ -1,4 +1,4 @@
-import { ALL_NAMED_MAPS } from '@/const/archieve/named-map.const'
+import { ALL_NAMED_MAPS } from '@/const/archive/named-map.const'
 import MapNamedListBox from '@/app/map/named/named-list-box'
 
 export default function MapNamedLayout({ children }: { children: React.ReactNode }) {

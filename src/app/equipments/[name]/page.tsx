@@ -3,9 +3,9 @@
 import { useParams } from 'next/navigation'
 import React from 'react'
 import { GradientHeaderDiv } from '@/app/components/div/gradient-header-div'
-import { ALL_NAMED_MAPS } from '@/const/archieve/named-map.const'
+import { ALL_NAMED_MAPS } from '@/const/archive/named-map.const'
 import { useNextDepthNavigator } from '@/services/navigation'
-import { ALL_EQUIPMENTS } from '@/const/archieve/equipment.const'
+import { ALL_EQUIPMENTS } from '@/const/archive/equipment.const'
 import {
   getMaterialBgFrameUrl,
   getMaterialBottomFrameUrl,

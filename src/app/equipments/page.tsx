@@ -5,7 +5,7 @@ import createKey from '@/services/key-generator'
 import { CheckBoxGroup } from '@/services/common.enum'
 import { RS_FACTION, RS_GRADE } from '@/const/character/character.enum'
 import { RsEquipmentList } from '@/app/equipments/rs-equipment-list'
-import { RSEquipmentType } from '@/const/archieve/equipment.const'
+import { RSEquipmentType } from '@/const/archive/equipment.const'
 
 export default function EquipmentsPage() {
   const [searchedKeyword, setSearchedKeyword] = useState('')

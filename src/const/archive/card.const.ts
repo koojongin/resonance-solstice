@@ -1,6 +1,6 @@
-import { RSArchieve } from '@/const/archieve/archieve.interface'
+import { RSArchive } from '@/const/archive/archive.interface'
 
-export const ARCHIEVE_CARD_MECHANISM: { [key: string]: RSArchieve } = {
+export const ARCHIVE_CARD_MECHANISM: { [key: string]: RSArchive } = {
   레드카드: { desc: '공격형 카드' },
   블루카드: { desc: '방어형 카드' },
   그린카드: { desc: '치유형 카드' },

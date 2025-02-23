@@ -1,7 +1,7 @@
 'use client'
 
 import { useNextDepthNavigator } from '@/services/navigation'
-import { ALL_NAMED_MAPS } from '@/const/archieve/named-map.const'
+import { ALL_NAMED_MAPS } from '@/const/archive/named-map.const'
 import createKey from '@/services/key-generator'
 import { useParams } from 'next/navigation'
 

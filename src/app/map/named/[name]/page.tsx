@@ -1,7 +1,7 @@
 'use client'
 
 import { useParams } from 'next/navigation'
-import { ALL_NAMED_MAPS } from '@/const/archieve/named-map.const'
+import { ALL_NAMED_MAPS } from '@/const/archive/named-map.const'
 import { GradientHeaderDiv } from '@/app/components/div/gradient-header-div'
 import createKey from '@/services/key-generator'
 import { MATERIALS } from '@/const/material.const'

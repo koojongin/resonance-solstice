@@ -2,7 +2,7 @@
 
 import { Tooltip } from '@material-tailwind/react'
 import { useNextDepthNavigator } from '@/services/navigation'
-import { TOTAL_ARCHIVES } from '@/const/archieve'
+import { TOTAL_ARCHIVES } from '@/const/archive'
 
 export function RSHighlightedText({ text, textSize }: { text: string; textSize?: number }) {
   const { router } = useNextDepthNavigator()
@@ -52,7 +52,7 @@ export function RSHighlightedText({ text, textSize }: { text: string; textSize?:
         <Tooltip key={index} content={`${part} 설명 넣어라 나중에...`}>
           <span
             className={`${classNameOfPart} text-shadow-outline-white cursor-pointer ff-dh text-[${textSize || 20}px]`}
-            onClick={() => router.push(`/archieve/${part}`)}
+            onClick={() => router.push(`/archive/${part}`)}
           >
             [{part}]
           </span>

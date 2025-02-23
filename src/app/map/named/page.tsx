@@ -1,7 +1,7 @@
 'use client'
 
 import createKey from '@/services/key-generator'
-import { ALL_NAMED_MAPS } from '@/const/archieve/named-map.const'
+import { ALL_NAMED_MAPS } from '@/const/archive/named-map.const'
 import { useNextDepthNavigator } from '@/services/navigation'
 
 export default function MapNamedPage() {

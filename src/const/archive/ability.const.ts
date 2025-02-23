@@ -1,6 +1,6 @@
-import { RSArchieve } from '@/const/archieve/archieve.interface'
+import { RSArchive } from '@/const/archive/archive.interface'
 
-export const ARCHIEVE_ABILITIES: { [key: string]: RSArchieve } = {
+export const ARCHIVE_ABILITIES: { [key: string]: RSArchive } = {
   인뢰: {
     desc: '공격을 명중할 때마다 20%의 확률로 1개의 낙뢰를 발동해 1단 피해를 입힙니다.',
     thumbnail:

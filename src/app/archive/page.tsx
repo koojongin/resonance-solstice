@@ -1,11 +1,11 @@
 'use client'
 
-import { TOTAL_ARCHIVES } from '@/const/archieve'
+import { TOTAL_ARCHIVES } from '@/const/archive'
 import React, { useState } from 'react'
 import createKey from '@/services/key-generator'
 import { useNextDepthNavigator } from '@/services/navigation'
 
-export default function ArchievePage() {
+export default function ArchivePage() {
   const { router } = useNextDepthNavigator()
   const [archives, setArchives] = useState(TOTAL_ARCHIVES)
   return (
@@ -18,7 +18,7 @@ export default function ArchievePage() {
               className="border-gray-500 border border-b-0 last:border-b flex cursor-pointer"
               key={createKey()}
               onClick={() => {
-                router.push(`/archieve/${archive.name}`)
+                router.push(`/archive/${archive.name}`)
               }}
             >
               <div className="p-[8px] min-w-[140px] w-[140px] ff-dh text-[20px] text-shadow-outline text-white border-r border-gray-500">

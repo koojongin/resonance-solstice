@@ -1,5 +1,5 @@
 import { RS_GRADE } from '@/const/character/character.enum'
-import { RSEquipmentType } from '@/const/archieve/equipment.const'
+import { RSEquipmentType } from '@/const/archive/equipment.const'
 
 export function getMaterialBottomFrameUrl(grade: RS_GRADE) {
   if (grade === RS_GRADE.N) {
