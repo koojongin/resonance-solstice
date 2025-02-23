@@ -22,4 +22,12 @@ export const EXTERNAL_USERS = {
     name: 'ㅇㅇ',
     link: 'https://arca.live/u/@%E3%85%87%E3%85%87/42941500',
   },
+  10: {
+    name: 'ㅇㅇ',
+    link: 'https://arca.live/u/@%E3%85%87%E3%85%87/85770151',
+  },
+  11: {
+    name: 'Rdk',
+    link: 'https://arca.live/u/@Rdk/15200766',
+  },
 }

@@ -2783,6 +2783,70 @@ export const ALL_EQUIPMENTS: {
       },
     ],
   },
+  북두항마검: {
+    type: RSEquipmentType.WEAPON,
+    grade: RS_GRADE.SSR,
+    desc: '기본 속성: 공격력+37\n옵션: 자신이 주는 물리 피해가 15% 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/b/b7/292hgakxb4hti6y4vzra9mwnu7prkp7.png/180px-%E5%A4%A9%E7%BD%A1%E4%BC%8F%E9%AD%94%E5%89%91.png',
+    faction: RS_FACTION.NIGHT_CHAINS,
+    earnsPath: [
+      {
+        desc: '청명 데이터 센터 철도관리국 현상금 임무',
+        tags: ['현상금 임무', '청명 데이터 센터'],
+      },
+      {
+        desc: '흑월 상점',
+        tags: ['흑월 상점'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-더스트 리자드',
+        tags: ['부표'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-암흑의 매머드',
+        tags: ['부표'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-혼란의 돌산호',
+        tags: ['부표'],
+      },
+      {
+        desc: '흑월 장비함',
+        tags: [''],
+      },
+    ],
+  },
+  '진홍의 예언': {
+    type: RSEquipmentType.ARMOR,
+    grade: RS_GRADE.SSR,
+    desc: '기본 속성: 방어력+39\n옵션: [침식]/[열식]이 입히는 피해의 5%만큼 자신의 체력을 회복합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/f/ff/3oa8flve1va1fwlag1ro9qygjjjlzzb.png/180px-%E6%B7%B1%E7%BA%A2%E8%B0%B6%E8%A8%80.png',
+    faction: RS_FACTION.NIGHT_CHAINS,
+    earnsPath: [
+      {
+        desc: '케이프시 철도관리국 현상금 임무',
+        tags: ['현상금 임무', '케이프시'],
+      },
+      {
+        desc: '흑월 상점',
+        tags: ['흑월 상점'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-빙하 본드래곤',
+        tags: ['부표'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-혼란의 돌산호',
+        tags: ['부표'],
+      },
+      {
+        desc: '시타델 장비함',
+        tags: [''],
+      },
+    ],
+  },
 }
 
 export const CONVERTED_ALL_EQUIPMENTS = _.map(ALL_EQUIPMENTS, (value, key) => ({

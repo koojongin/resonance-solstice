@@ -10,6 +10,7 @@ import {
   ELIOT,
   FENIA,
   FLAN,
+  ILONA,
   JERBOA,
   KALEYA,
   KAREN,
@@ -140,11 +141,14 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     title: '단일 화염 나유타 덱',
     leaderName: NAYUTA.name,
     characters: [
-      { character: NAYUTA },
-      { character: KALEYA },
-      { character: CAROLINE },
-      { character: RINA_F },
-      { character: AOBA },
+      { character: NAYUTA, equipments: ['불꽃 침식자', '시뮬레이트 스타', '해리슨 장치'] },
+      { character: KALEYA, equipments: ['불꽃 침식자', '시뮬레이트 스타', '모노폴 마그네타'] },
+      { character: VALENTINE, equipments: ['불꽃 침식자', '시뮬레이트 스타', '춘추합성인장'] },
+      {
+        character: RINA_F,
+        equipments: ['공간 위치 측정기', '시뮬레이트 스타', '베타 세계선 박스'],
+      },
+      { character: AOBA, equipments: ['불꽃 침식자', '시뮬레이트 스타', '춘추합성인장'] },
     ],
     desc: '클릭 시 상세 가이드 링크로 이동합니다.',
     descLink:
@@ -157,11 +161,11 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     title: '단일 냉기 나유타 덱',
     leaderName: NAYUTA.name,
     characters: [
-      { character: NAYUTA },
-      { character: ELIOT },
-      { character: YER },
-      { character: RINA_F },
-      { character: AOBA },
+      { character: NAYUTA, equipments: ['에비서레이터MK0', '시뮬레이트 스타', '해리슨 장치'] },
+      { character: ELIOT, equipments: ['에비서레이터MK0', '시뮬레이트 스타', '춘추합성인장'] },
+      { character: YER, equipments: ['에비서레이터MK0', '시뮬레이트 스타', '모노폴 마그네타'] },
+      { character: RINA_F, equipments: ['에비서레이터MK0', '시뮬레이트 스타', '베타 세계선 박스'] },
+      { character: AOBA, equipments: ['에비서레이터MK0', '시뮬레이트 스타', '춘추합성인장'] },
     ],
     desc: '클릭 시 상세 가이드 링크로 이동합니다.',
     descLink:
@@ -304,7 +308,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     leaderName: NAYUTA.name,
     characters: [
       { character: NAYUTA },
-      { character: AOBA },
+      { character: AOBA, equipments: ['에비서레이터MK0'] },
       { character: YEJUE },
       { character: ELIOT },
       { character: RINA_F },
@@ -322,7 +326,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     characters: [
       { character: NAYUTA },
       { character: ACHIWA },
-      { character: AOBA },
+      { character: AOBA, equipments: ['에비서레이터MK0'] },
       { character: ELIOT },
       { character: RINA_F },
     ],
@@ -338,7 +342,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     leaderName: NAYUTA.name,
     characters: [
       { character: NAYUTA },
-      { character: AOBA },
+      { character: AOBA, equipments: ['에비서레이터MK0'] },
       { character: YER },
       { character: ELIOT },
       { character: RINA_F },
@@ -454,11 +458,11 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     title: '니콜라 오토 프리셋 (니콜라 나유타 캐롤라인 테니 스텔라)',
     leaderName: NICOLA.name,
     characters: [
-      { character: NICOLA },
-      { character: NAYUTA },
-      { character: CAROLINE },
-      { character: TENNIE },
-      { character: STELLA },
+      { character: NICOLA, equipments: ['이차 상전이', '공명체 섬유', '모노폴 마그네타'] },
+      { character: NAYUTA, equipments: ['에비서레이터MK0', '시뮬레이트 스타', '베타 세계선 박스'] },
+      { character: CAROLINE, equipments: ['에비서레이터MK0', '시뮬레이트 스타', '뫼비우스'] },
+      { character: TENNIE, equipments: ['에비서레이터MK0', '시뮬레이트 스타', '해리슨 장치'] },
+      { character: STELLA, equipments: ['마술봉', '공간이동', '춘추합성인장'] },
     ],
     desc: '니콜라 오토 프리셋 (니콜라 나유타 캐롤라인 테니 스텔라)',
     descLink: 'https://arca.live/b/resonance/129397795',
@@ -548,5 +552,39 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     owner: EXTERNAL_USERS['9'],
     autoPreset:
       'tZhLj5swEMe/y5yp5CcGrj1F2j6k9lbtATVuF22aTSFRW63y3WsDgQGbgBM2J/z+zfjvGTuvsC2q73m5/frvoCHjERTVg863unxvKj/tITuWJx3By/GpqYKM2D5fDpf2H/muMh2e6kGQUVL/RATly04/FNURsm9NpaRR86G6D9Z8sDSJLgMfI3jWup7+4+lXvZzla2d6Bf37VBw2l7Lpfar057zMTdd3NILqudjtNvut/gsZM9x/9rrcbDFXYUpASVwX4TKirmTcwnCoJ208YqY85uVPfWyKpF/vQ36A7BW4qTyfo1CwbgGGiVgae4i4AP+yDtvIXMUsmFMZLWO1I8z6VKRsavkrbuqN4iKFdTi4j0Mu5pBkJQ4x4mhHLEGg6yAkyZ2uYBCoWTqcup+LMurRrCIwlqM95UsPk2ckXlHCpH+a9WlMYPrMua4ZOWKxb9oNITKRXnMX7QYTfmEO3MxUOmu0UnB10+aN9pgQ5AcSj4W5+GxQxjxeCEegbKyrAASxCkK9dbci8KkIgdPE7AEgnN+rhTCvx/z2A0BZ7A9HKFcPkqDfZCMgx+TrCZIITLjA6PmYi3ZJegKjqKPlCEO6oAMzVgeTHjDpRuw5MM/1wgnVaj5Ui9G28TdRqjcNIFLKXadQKl2nqOV3wrHc6BgfKE1s1KQwc74Ui28NKSxZlOynJx/GHu7xk4iV4ydTva6qxwZjQXuuzaIGDRM0D1QTn/RSQjxqSkW4moIVzqe8xKW7c+YyG3uY2Fu8epwE4TzHPGHJXI4CnmMTzsKn/EoaaY+88uju7jSCEa4k7xbBd4laE0HwGQSpfJeoIITH5uG+2baS6TRoN7F7OXQFG6X6AkfdbLpCY+K+YJ8xfYvZWtRtMAEaY5/YqIXiMYN1ME6KWwSa2mq2xzEPXWQPQd04YmOK1+7r/oNAi+ICxSaoFHdTuBsmkAQXsHuFbTmf/wM=',
+  },
+
+  {
+    title: '아리나없찐 무한순환덱(나유타 메인딜)',
+    leaderName: NAYUTA.name,
+    characters: [
+      { character: NAYUTA },
+      { character: AOBA },
+      { character: PRIMING },
+      { character: ARCANA },
+      { character: RINA_F },
+    ],
+    desc: '아리나없찐 무한순환덱(나유타 메인딜)',
+    descLink: 'https://arca.live/b/resonance/129521925',
+    owner: EXTERNAL_USERS['10'],
+    autoPreset:
+      'tZdLj5swEID/y5yp5LF5mWtPkbYPqb1VOaDidtGmSQqJ2irKf+8YCBjjkJjN5mQDM/ON5+HJCcr6y/59XhWftpD9yDe1CuBFqebRx+MvyFgAzyovVAUZMv1LeEBCT80zS7DabdRTWR8g+9Z/2y2wW8RRu8AoaRcilesAirL+Trq+/tsryEQAetNpOsHuz1ZVq6ID0JJwrNXnvMqJ7x02u1aS1vVLudmstoX6C5kmJTFAFpNcEkEAh7z6qQ7t1+Sa+n0s96uLqfVFvBHiguhYCOfARiDmOQTLhoGQShgEP+T71uZ1iJZBoEYY27NsjPnaGPVmRcRgTDhvEUMptEXLxnWHb1hHf6cJIXwgQjg59xMI0ni+g4NP49+oH7NM1FxNAhFxJ0x0diVyz5Gm4ySQbJzr6NIpnR466sksk3BaJk6uS4UImKanSSbuPvobeSS8wEjAv3QtbuNYJC7oHly+DgHHkeH+CCToGR5ncVqRoS5ugDGZekUGb6aMncxLmGJPJrzBxB/AlHgycYtJzCM1lSW8K4vPnpVwVFb4RiU/6UV+QRRsQcnP3NbpwluDrmz28GRq3DAbEvM6G07J51d0C/s0l445qwfjjmx6i26QjFonT6Rf5aFvhvszIfoFEDH27FD3B9ACm7topwFEpKpbtzP7qugs94On9qSfe/oNMtmo7UcO4zMcNjqXBhniGt5QRIc30pDRc76xMYzqe2p4k5obZKY2ZsrE5iYx2WJTmzRdMED17GlQJ6bbWgGFZ3d4bv9K6Wj9Bw==',
+  },
+
+  {
+    title: '이로나향 첨가 무순덱',
+    leaderName: NAYUTA.name,
+    characters: [
+      { character: NAYUTA, equipments: ['에비서레이터MK0', '구급 아머', '동력식 회수 기계'] },
+      { character: STELLA, equipments: ['북두항마검', '북부동맹 방어 섬유', '리프팅 수술 장비'] },
+      { character: ILONA, equipments: ['축퇴 흑석', '진홍의 예언', '동력식 회수 기계'] },
+      { character: ARINA, equipments: ['보랏빛 써스데이', '흑석 아머', '사자 엠블럼'] },
+      { character: ARCANA, equipments: ['비트레이얼', '구급 아머', '최면의 시계'] },
+    ],
+    desc: '이로나향 첨가 무순덱',
+    descLink: 'https://arca.live/b/resonance/129535208',
+    owner: EXTERNAL_USERS['11'],
+    autoPreset:
+      'tVbLrpswEP2XWVPJD2wD264i3T6kdldlgYrbG900oUDUVlH+vTaPZLCBcOEmysJj7DnHc8YzPsOL1vn7tMg+nn5BQgLYlU86zXRh5z4dIKmKkw7guZ6DhBL7UyyA4rjXT7uyguTbdbIesDhqBlSEzYAI2s2obQDH6rlxX+N9N4NN9iHNITkDJdKsUsIABY3BBL0ZXDD8Rd4MqnoGxwZBRiRq0NYBxomRQUIEyiTD3kJkMIa5oT3U7iHXZQLvwa5jiR0gokwpvAefh/UYoGU8jJGDEB+bWZyLFfdL3gn7I92XRtlsV1oJvv7Ldb3BGq2uZzj+Oehik3W6E/P9VOrPaZGaZHlnrPJlt9/XCxg3YWM2gYx1i1wA+vdpl286n0BpZEOvwGRClRY/ddVAk9p1S+MSnJEfq2fgcLHJ5e6/koGajflDN3nI9F9IuMtm655nlIIJtEvBJvodClSGKym4p1b3T20hO5ftvTL5Qy5BL6QChrVsaLJhmiOxoUtiQ5QrD10hj1gmj0th5Nwz5akL48QFoWHMsAr2xg4ATl6LVyPyHqIgj0cM+4j04YhR1Ef0y85rig1ZUmxMtq3M5oHsnaq1RPYObXvRujDfR1S0j8gfjUj7/cS2vuXC2o44WCOmGIhITACM1VmH4sI6LmbVcTlZx0fazUjmhwOZP4Mof7M6zoTfSuzrcUwjaJ8d1GcwIdqAPJiC30pmUBADnWQ5BbmEAnd14Msp2BfwoioYr2yoKArxgBDKD6v7rPDCsCIdlf/qm0VBvOmrbxbk8KtP+tUII0tPLBz/trQ0mNx9cfk5er+ey+mUnFdNt5f/',
   },
 ]
