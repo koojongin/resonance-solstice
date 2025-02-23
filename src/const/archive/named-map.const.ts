@@ -524,6 +524,26 @@ export const ALL_NAMED_MAPS: RSMap[] = [
           },
         ],
       },
+
+      {
+        rewards: [
+          {
+            name: '황원역 건설 진행도',
+            amount: 60,
+          },
+          {
+            name: '마일리지',
+            amount: 30,
+          },
+        ],
+        requirements: [
+          {
+            name: '홍차',
+            amount: 30,
+          },
+        ],
+      },
+
       {
         rewards: [
           {
@@ -538,7 +558,30 @@ export const ALL_NAMED_MAPS: RSMap[] = [
         requirements: [
           {
             name: '철도연맹 코인',
-            amount: 1000000,
+            amount: 5000,
+          },
+          {
+            name: '와드 샘물',
+            amount: 60,
+          },
+        ],
+      },
+
+      {
+        rewards: [
+          {
+            name: '황원역 건설 진행도',
+            amount: 40,
+          },
+          {
+            name: '마일리지',
+            amount: 20,
+          },
+        ],
+        requirements: [
+          {
+            name: '철도연맹 코인',
+            amount: 5000,
           },
           {
             name: '통조림',
@@ -546,6 +589,49 @@ export const ALL_NAMED_MAPS: RSMap[] = [
           },
         ],
       },
+
+      {
+        rewards: [
+          {
+            name: '황원역 건설 진행도',
+            amount: 90,
+          },
+          {
+            name: '마일리지',
+            amount: 45,
+          },
+        ],
+        requirements: [
+          {
+            name: '철도연맹 코인',
+            amount: 5000,
+          },
+          {
+            name: '맥주',
+            amount: 56,
+          },
+        ],
+      },
+
+      {
+        rewards: [
+          {
+            name: '황원역 건설 진행도',
+            amount: 40,
+          },
+          {
+            name: '마일리지',
+            amount: 20,
+          },
+        ],
+        requirements: [
+          {
+            name: '철도연맹 코인',
+            amount: 20000,
+          },
+        ],
+      },
+
       {
         rewards: [
           {
