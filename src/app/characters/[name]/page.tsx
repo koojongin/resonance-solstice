@@ -17,7 +17,7 @@ export default function CharacterDetailPage() {
 
   if (!character) return <div>Loading...</div>
   const linkedRecommendationDecks = RECOMMENDATION_DECKS.filter((deck) =>
-    deck.characters.find((c) => c.name === character.name),
+    deck.characters.find((c) => c.character.name === character.name),
   )
 
   return (

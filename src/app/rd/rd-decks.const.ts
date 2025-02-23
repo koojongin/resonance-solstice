@@ -39,7 +39,7 @@ export interface RecommendationDeck {
   leaderName: string
   desc?: string
   descLink?: string
-  characters: RSCharacter[]
+  characters: { character: RSCharacter; equipments?: string[] }[]
   owner?: ExternalUser
 
   autoPreset?: string
@@ -49,7 +49,13 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   {
     title: '싼마이 페니아 인뢰덱',
     leaderName: FENIA.name,
-    characters: [FENIA, CAROLINE, YEJUE, RINA_F, KALEYA],
+    characters: [
+      { character: FENIA },
+      { character: CAROLINE },
+      { character: YEJUE },
+      { character: RINA_F },
+      { character: KALEYA },
+    ],
     desc: '장점 : 싸고 맞추기 쉬움\n단점 : 싼마이인 만큼 화력이 비교적 딸림',
     descLink: 'https://arca.live/b/resonance/128678257',
     owner: EXTERNAL_USERS['1'],
@@ -58,7 +64,13 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   {
     title: '순환 메인 페니아 인뢰덱1',
     leaderName: FENIA.name,
-    characters: [FENIA, CAROLINE, NAYUTA, RINA_F, KALEYA],
+    characters: [
+      { character: FENIA },
+      { character: CAROLINE },
+      { character: NAYUTA },
+      { character: RINA_F },
+      { character: KALEYA },
+    ],
     desc: '장점 : 덱순환이 빨리 딜이 쎔\n단점 : 안정성을 포기함',
     descLink: 'https://arca.live/b/resonance/128678257',
     owner: EXTERNAL_USERS['1'],
@@ -67,7 +79,13 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   {
     title: '순환 메인 페니아 인뢰덱2',
     leaderName: FENIA.name,
-    characters: [FENIA, CAROLINE, STELLA, RINA_F, KALEYA],
+    characters: [
+      { character: FENIA },
+      { character: CAROLINE },
+      { character: STELLA },
+      { character: RINA_F },
+      { character: KALEYA },
+    ],
     desc: '장점 : [순환 메인 페니아 인뢰덱1]보다 순환력을 조금 줄이고 안정성을 챙김, 스텔라 궁쓰고 코스트 감소 상태로 카드 난사가 재밌음\n단점 : 카드 쓸 때 생각 잘해야함',
     descLink: 'https://arca.live/b/resonance/128678257',
     owner: EXTERNAL_USERS['1'],
@@ -76,7 +94,13 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   {
     title: '안정성 메인 페니아 인뢰덱',
     leaderName: FENIA.name,
-    characters: [FENIA, CAROLINE, TENNIE, RINA_F, KALEYA],
+    characters: [
+      { character: FENIA },
+      { character: CAROLINE },
+      { character: TENNIE },
+      { character: RINA_F },
+      { character: KALEYA },
+    ],
     desc: '장점 : 안정성과 적당한 순환력을 챙김\n단점 : 화력은 [순환 메인 페니아 인뢰덱1]보다 딸림',
     descLink: 'https://arca.live/b/resonance/128678257',
     owner: EXTERNAL_USERS['1'],
@@ -85,7 +109,13 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   {
     title: '카타스 화염덱',
     leaderName: KATAS.name,
-    characters: [KATAS, KALEYA, YOIDUKI, ARCANA, VALENTINE],
+    characters: [
+      { character: KATAS },
+      { character: KALEYA },
+      { character: YOIDUKI },
+      { character: ARCANA },
+      { character: VALENTINE },
+    ],
     desc: '장점 : 카타스만 있으면 됨, 쌈\n단점 : 다른 화염덱으로 파생이 어려움',
     descLink: 'https://arca.live/b/resonance/128678257',
     owner: EXTERNAL_USERS['1'],
@@ -94,7 +124,13 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   {
     title: '마르기엘라덱 / 마키라덱',
     leaderName: MARGIELA.name,
-    characters: [MARGIELA, KALEYA, RINA_F, ARCANA, FENIA],
+    characters: [
+      { character: MARGIELA },
+      { character: KALEYA },
+      { character: RINA_F },
+      { character: ARCANA },
+      { character: FENIA },
+    ],
     desc: '장점 : 화력 하나는 ㅈㄴ 쎔\n단점 : 순환력이나 코스트 회복력이 부족하여 답답함 유발',
     descLink: 'https://arca.live/b/resonance/128678257',
     owner: EXTERNAL_USERS['1'],
@@ -103,7 +139,13 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   {
     title: '단일 화염 나유타 덱',
     leaderName: NAYUTA.name,
-    characters: [NAYUTA, KALEYA, CAROLINE, RINA_F, AOBA],
+    characters: [
+      { character: NAYUTA },
+      { character: KALEYA },
+      { character: CAROLINE },
+      { character: RINA_F },
+      { character: AOBA },
+    ],
     desc: '클릭 시 상세 가이드 링크로 이동합니다.',
     descLink:
       'https://wiki.biligame.com/resonance/%E5%8D%95%E9%87%91%E7%81%AB%E6%A0%B8%EF%BC%9A%E9%82%A3%E7%94%B1%E4%BB%96',
@@ -114,7 +156,13 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   {
     title: '단일 냉기 나유타 덱',
     leaderName: NAYUTA.name,
-    characters: [NAYUTA, ELIOT, YER, RINA_F, AOBA],
+    characters: [
+      { character: NAYUTA },
+      { character: ELIOT },
+      { character: YER },
+      { character: RINA_F },
+      { character: AOBA },
+    ],
     desc: '클릭 시 상세 가이드 링크로 이동합니다.',
     descLink:
       'https://wiki.biligame.com/resonance/%E5%8D%95%E9%87%91%E5%86%B0%E6%A0%B8%EF%BC%9A%E9%82%A3%E7%94%B1%E4%BB%96',
@@ -125,7 +173,13 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   {
     title: '페니아 인뢰덱 찐종결 올인원덱',
     leaderName: FENIA.name,
-    characters: [FENIA, STELLA, CAROLINE, TENNIE, NAYUTA],
+    characters: [
+      { character: FENIA },
+      { character: STELLA },
+      { character: CAROLINE },
+      { character: TENNIE },
+      { character: NAYUTA },
+    ],
     desc: '해당 덱은 모든 캐릭터의 모든 장비와 옵션작이 되어 있는 상태이므로\n현재 실현 가능성이 매우 낮음',
     descLink: 'https://arca.live/b/resonance/129033582',
     owner: EXTERNAL_USERS['1'],
@@ -136,7 +190,13 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   {
     title: '샬롯 덱 1',
     leaderName: CHARLOTTE.name,
-    characters: [CHARLOTTE, NAYUTA, LIVIA, ARCANA, SHIZURU],
+    characters: [
+      { character: CHARLOTTE },
+      { character: NAYUTA },
+      { character: LIVIA },
+      { character: ARCANA },
+      { character: SHIZURU },
+    ],
     desc: '주로 적이 많은 무대에서 활약할 수 있습니다.\n드로우 범용으로서 나유타나 스텔라 를 편성해, 한층 더 레드 카드를 드로우 하기 쉽게 시즈 르나 타라 등을 편성하면 좋을 것입니다.\n공격을 받기 쉬운 샬롯을 지킬 수 있도록 아리나,아르카나 등의 회복역도 편성합시다.',
     descLink: 'https://gamerch.com/resonance/877307',
   },
@@ -144,7 +204,13 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   {
     title: '샬롯 덱 2',
     leaderName: CHARLOTTE.name,
-    characters: [CHARLOTTE, NAYUTA, ARINA, ARCANA, SHIZURU],
+    characters: [
+      { character: CHARLOTTE },
+      { character: NAYUTA },
+      { character: ARINA },
+      { character: ARCANA },
+      { character: SHIZURU },
+    ],
     desc: '주로 적이 많은 무대에서 활약할 수 있습니다.\n드로우 범용으로서 나유타나 스텔라 를 편성해, 한층 더 레드 카드를 드로우 하기 쉽게 시즈 르나 타라 등을 편성하면 좋을 것입니다.\n공격을 받기 쉬운 샬롯을 지킬 수 있도록 아리나,아르카나 등의 회복역도 편성합시다.',
     descLink: 'https://gamerch.com/resonance/877307',
   },
@@ -152,7 +218,13 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   {
     title: '초반 초보자용 무과금 덱 1',
     leaderName: FENIA.name,
-    characters: [FENIA, YEJUE, LIVIA, FLAN, ARCANA],
+    characters: [
+      { character: FENIA },
+      { character: YEJUE },
+      { character: LIVIA },
+      { character: FLAN },
+      { character: ARCANA },
+    ],
     desc: '배포 캐릭터를 중심으로 매우 편성하기 쉬운 SR 페니아 번개 덱입니다.\n프란(R)이 탱커로 녹기 쉽기 때문에, 아르카나(R)로 HP나 코스트의 회복을 돕습니다.',
     descLink: 'https://gamerch.com/resonance/877307',
   },
@@ -160,7 +232,13 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   {
     title: '초반 초보자용 무과금 덱 2',
     leaderName: JERBOA.name,
-    characters: [JERBOA, PRIMING, LIVIA, ARCANA, KAREN],
+    characters: [
+      { character: JERBOA },
+      { character: PRIMING },
+      { character: LIVIA },
+      { character: ARCANA },
+      { character: KAREN },
+    ],
     desc: '네즈미(R)의 레드 카드를 끌어당기는 덱입니다.\n앞열이 버틸수 있도록 카렌(R) 등의 힐러를 편성합시다.\n타라(R)도 궁합이 좋습니다.',
     descLink: 'https://gamerch.com/resonance/877307',
   },
@@ -168,7 +246,13 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   {
     title: '냉기 덱 1',
     leaderName: WENSHENG.name,
-    characters: [WENSHENG, TENNIE, VERLAINE, LIVIA, YER],
+    characters: [
+      { character: WENSHENG },
+      { character: TENNIE },
+      { character: VERLAINE },
+      { character: LIVIA },
+      { character: YER },
+    ],
     desc: '동결을 사용할 수 있는 캐릭터는 많지 않기 때문에 약간 제한이 있습니다만, 동결 상태의 적은 찢어지는 것이 효과가 있기 때문에 샬롯과도 궁합이 좋을 것입니다.',
     descLink: 'https://gamerch.com/resonance/877307',
   },
@@ -176,7 +260,13 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   {
     title: '냉기 덱 2',
     leaderName: WENSHENG.name,
-    characters: [WENSHENG, CONNOR, ELIOT, LIVIA, AKIRA],
+    characters: [
+      { character: WENSHENG },
+      { character: CONNOR },
+      { character: ELIOT },
+      { character: LIVIA },
+      { character: AKIRA },
+    ],
     desc: '동결을 사용할 수 있는 캐릭터는 많지 않기 때문에 약간 제한이 있습니다만, 동결 상태의 적은 찢어지는 것이 효과가 있기 때문에 샬롯과도 궁합이 좋을 것입니다.',
     descLink: 'https://gamerch.com/resonance/877307',
   },
@@ -184,7 +274,13 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   {
     title: '보라 카드 덱 1',
     leaderName: MARGIELA.name,
-    characters: [MARGIELA, ARINA, STELLA, NAYUTA, VERLAINE],
+    characters: [
+      { character: MARGIELA },
+      { character: ARINA },
+      { character: STELLA },
+      { character: NAYUTA },
+      { character: VERLAINE },
+    ],
     desc: '마키라 의 강력한 일격으로 적을 닦을 수 있습니다.\n보라색 카드의 특징으로서 혼수 나 혼돈 등의 상태 이상 부여를 자랑으로 하는 캐릭터를 편성하고 있습니다.',
     descLink: 'https://gamerch.com/resonance/877307',
   },
@@ -192,7 +288,13 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   {
     title: '레드 카드 샬롯 덱',
     leaderName: CHARLOTTE.name,
-    characters: [CHARLOTTE, STELLA, ELIOT, ARCANA, RACHEL],
+    characters: [
+      { character: CHARLOTTE },
+      { character: STELLA },
+      { character: ELIOT },
+      { character: ARCANA },
+      { character: RACHEL },
+    ],
     desc: '드로우 범용으로서 나유타,스텔라를 편성해, 한층 더 레드 카드를 드로우 하기 쉽게 시즈루, 타라 등을 편성하면 좋을 것입니다.\n공격을 받기 쉬운 샬롯을 지킬 수 있도록 아리나, 아르카나 등의 회복역도 편성합시다.',
     descLink: 'https://gamerch.com/resonance/877307',
   },
@@ -200,7 +302,13 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   {
     title: '인뢰 30렙 코어 클리어 덱',
     leaderName: NAYUTA.name,
-    characters: [NAYUTA, AOBA, YEJUE, ELIOT, RINA_F],
+    characters: [
+      { character: NAYUTA },
+      { character: AOBA },
+      { character: YEJUE },
+      { character: ELIOT },
+      { character: RINA_F },
+    ],
     desc: '클릭 시 가이드 링크로 이동합니다.',
     descLink: 'https://arca.live/b/resonance/129123153',
     owner: EXTERNAL_USERS['2'],
@@ -211,7 +319,13 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   {
     title: '점화 30렙 코어 클리어 덱',
     leaderName: NAYUTA.name,
-    characters: [NAYUTA, ACHIWA, AOBA, ELIOT, RINA_F],
+    characters: [
+      { character: NAYUTA },
+      { character: ACHIWA },
+      { character: AOBA },
+      { character: ELIOT },
+      { character: RINA_F },
+    ],
     desc: '클릭 시 가이드 링크로 이동합니다.',
     descLink: 'https://arca.live/b/resonance/129123153',
     owner: EXTERNAL_USERS['2'],
@@ -222,7 +336,13 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   {
     title: '냉동 30렙 코어 클리어 덱',
     leaderName: NAYUTA.name,
-    characters: [NAYUTA, AOBA, YER, ELIOT, RINA_F],
+    characters: [
+      { character: NAYUTA },
+      { character: AOBA },
+      { character: YER },
+      { character: ELIOT },
+      { character: RINA_F },
+    ],
     desc: '클릭 시 가이드 링크로 이동합니다.',
     descLink: 'https://arca.live/b/resonance/129123153',
     owner: EXTERNAL_USERS['2'],
@@ -233,7 +353,13 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   {
     title: '나유타 무한 순환 덱',
     leaderName: NAYUTA.name,
-    characters: [NAYUTA, ARINA, STELLA, AOBA, RINA_F],
+    characters: [
+      { character: NAYUTA },
+      { character: ARINA },
+      { character: STELLA },
+      { character: AOBA },
+      { character: RINA_F },
+    ],
     desc: '클릭 시 가이드 링크로 이동합니다.',
     descLink: 'https://arca.live/b/resonance/129066118',
     owner: EXTERNAL_USERS['3'],
@@ -244,7 +370,13 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   {
     title: '코어 60렙 돌파 덱 - 과부화 - 인뢰',
     leaderName: NAYUTA.name,
-    characters: [NAYUTA, AOBA, RINA_F, PRIMING, YEJUE],
+    characters: [
+      { character: NAYUTA },
+      { character: AOBA },
+      { character: RINA_F },
+      { character: PRIMING },
+      { character: YEJUE },
+    ],
     desc: '나유타(SSR) / 아오바(SR) / 리나 본(SR) / 레이카(R)\n위 4명 승무원을 고정 후 각 코어별 1개의 승무원만 추가하면 됨\n장점: 편성에 한명만 제외하고 나머지가 동일 승무원이라 성장 재화를 아낄수 있음',
     descLink: 'https://arca.live/b/resonance/129243432',
     owner: EXTERNAL_USERS['4'],
@@ -255,7 +387,13 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   {
     title: '코어 60렙 돌파 덱 - 용광로 - 점화',
     leaderName: NAYUTA.name,
-    characters: [NAYUTA, AOBA, RINA_F, PRIMING, KALEYA],
+    characters: [
+      { character: NAYUTA },
+      { character: AOBA },
+      { character: RINA_F },
+      { character: PRIMING },
+      { character: KALEYA },
+    ],
     desc: '나유타(SSR) / 아오바(SR) / 리나 본(SR) / 레이카(R)\n위 4명 승무원을 고정 후 각 코어별 1개의 승무원만 추가하면 됨\n장점: 편성에 한명만 제외하고 나머지가 동일 승무원이라 성장 재화를 아낄수 있음',
     descLink: 'https://arca.live/b/resonance/129243432',
     owner: EXTERNAL_USERS['4'],
@@ -266,7 +404,13 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   {
     title: '코어 60렙 돌파 덱 - 콘덴싱 - 냉동',
     leaderName: NAYUTA.name,
-    characters: [NAYUTA, AOBA, RINA_F, PRIMING, YER],
+    characters: [
+      { character: NAYUTA },
+      { character: AOBA },
+      { character: RINA_F },
+      { character: PRIMING },
+      { character: YER },
+    ],
     desc: '나유타(SSR) / 아오바(SR) / 리나 본(SR) / 레이카(R)\n위 4명 승무원을 고정 후 각 코어별 1개의 승무원만 추가하면 됨\n장점: 편성에 한명만 제외하고 나머지가 동일 승무원이라 성장 재화를 아낄수 있음',
     descLink: 'https://arca.live/b/resonance/129243432',
     owner: EXTERNAL_USERS['4'],
@@ -277,7 +421,28 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   {
     title: '캐롤 테니 없찐이 몸 비틀어 쓰는 니콜라덱',
     leaderName: NICOLA.name,
-    characters: [NICOLA, NAYUTA, STELLA, ARCANA, RINA_F],
+    characters: [
+      {
+        character: NICOLA,
+        equipments: ['번개 소환 권선기MK1', '북부동맹 방어 섬유', '히포크레네'],
+      },
+      {
+        character: NAYUTA,
+        equipments: ['에비서레이터MK0', '구급 아머', '기능성 음료수'],
+      },
+      {
+        character: STELLA,
+        equipments: ['마술봉', '구급 아머', '기능성 음료수'],
+      },
+      {
+        character: ARCANA,
+        equipments: ['구급 아머', '기능성 음료수'],
+      },
+      {
+        character: RINA_F,
+        equipments: ['사냥칼', '구급 아머', '고열량 식량'],
+      },
+    ],
     desc: '캐롤 테니 없찐이 몸 비틀어 쓰는 니콜라덱(니나스아리)',
     descLink: 'https://arca.live/b/resonance/129403908',
     owner: EXTERNAL_USERS['5'],
@@ -288,7 +453,13 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   {
     title: '니콜라 오토 프리셋 (니콜라 나유타 캐롤라인 테니 스텔라)',
     leaderName: NICOLA.name,
-    characters: [NICOLA, NAYUTA, CAROLINE, TENNIE, STELLA],
+    characters: [
+      { character: NICOLA },
+      { character: NAYUTA },
+      { character: CAROLINE },
+      { character: TENNIE },
+      { character: STELLA },
+    ],
     desc: '니콜라 오토 프리셋 (니콜라 나유타 캐롤라인 테니 스텔라)',
     descLink: 'https://arca.live/b/resonance/129397795',
     owner: EXTERNAL_USERS['2'],
@@ -299,7 +470,13 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   {
     title: '테니없찐의 니콜라덱',
     leaderName: NICOLA.name,
-    characters: [NICOLA, NAYUTA, CAROLINE, RINA_F, STELLA],
+    characters: [
+      { character: NICOLA },
+      { character: NAYUTA },
+      { character: CAROLINE },
+      { character: RINA_F },
+      { character: STELLA },
+    ],
     desc: '테니없찐의 니콜라덱',
     descLink: 'https://arca.live/b/resonance/129347319',
     owner: EXTERNAL_USERS['6'],
@@ -310,7 +487,28 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   {
     title: '카타스 점화덱',
     leaderName: KATAS.name,
-    characters: [KATAS, STELLA, VALENTINE, KALEYA, YOIDUKI],
+    characters: [
+      {
+        character: KATAS,
+        equipments: ['토르', '뫼비우스'],
+      },
+      {
+        character: STELLA,
+        equipments: ['에비서레이터MK0', '춘추합성인장'],
+      },
+      {
+        character: VALENTINE,
+        equipments: ['라바 파이어', '뫼비우스'],
+      },
+      {
+        character: KALEYA,
+        equipments: ['에비서레이터MK0', '춘추합성인장'],
+      },
+      {
+        character: YOIDUKI,
+        equipments: ['에비서레이터MK0', '춘추합성인장'],
+      },
+    ],
     desc: '카타스 점화덱',
     descLink: 'https://arca.live/b/resonance/129295335',
     owner: EXTERNAL_USERS['7'],
@@ -321,7 +519,13 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   {
     title: '니콜라 스텔라 케롤라인 나유타 예주',
     leaderName: NICOLA.name,
-    characters: [NICOLA, STELLA, CAROLINE, NAYUTA, YEJUE],
+    characters: [
+      { character: NICOLA },
+      { character: STELLA },
+      { character: CAROLINE },
+      { character: NAYUTA },
+      { character: YEJUE },
+    ],
     desc: '니콜라 스텔라 케롤라인 나유타 예주',
     descLink: 'https://arca.live/b/resonance/129343448',
     owner: EXTERNAL_USERS['8'],
@@ -332,7 +536,13 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   {
     title: '카타스 순환덱',
     leaderName: KATAS.name,
-    characters: [KATAS, ARINA, AOBA, NAYUTA, STELLA],
+    characters: [
+      { character: KATAS },
+      { character: ARINA },
+      { character: AOBA },
+      { character: NAYUTA },
+      { character: STELLA },
+    ],
     desc: '카타스 순환덱',
     descLink: 'https://arca.live/b/resonance/129240119',
     owner: EXTERNAL_USERS['9'],

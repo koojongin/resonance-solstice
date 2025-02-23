@@ -32,7 +32,7 @@ export default function RecommendationDeckPage() {
         return (
           isValidAutoPresetOption &&
           deck.characters
-            .map((c) => c.name)
+            .map((c) => c.character.name)
             .join(',')
             .indexOf(searchedKeyword) >= 0
         )

@@ -9,10 +9,16 @@ import { RsCharacterBorderBox } from '@/app/components/character-frame/rs-charac
 import { RsCardSize } from '@/app/components/character-frame/rs-card-size.enum'
 import { Tooltip } from '@material-tailwind/react'
 
-export function RsCharacterCardMedium({ character }: { character: RSCharacter }) {
+export function RsCharacterCardResponsive({
+  character,
+  height,
+}: {
+  character: RSCharacter
+  height: number
+}) {
   return (
-    <div className="w-[140px] border-2 border-gray-400/80 rounded-[6px] shadow-md shadow-gray-800/70 p-[2px] cursor-pointer">
-      <div className="h-[160px] overflow-hidden relative rounded-[4px]">
+    <div className="border-2 border-gray-400/80 rounded-[6px] shadow-md shadow-gray-800/70 p-[2px] cursor-pointer">
+      <div className="overflow-hidden relative rounded-[4px]" style={{ height: `${height}px` }}>
         <img src={getFrameBgUrl(character.grade)} className="absolute z-0 w-full bottom-[-40px]" />
         <img
           src={convertCharacterThumbnailUrl(character.thumbnail, 140)}

@@ -1,7 +1,10 @@
 import { RecommendationDeck } from '@/app/rd/rd-decks.const'
 import createKey from '@/services/key-generator'
 import { Tooltip } from '@material-tailwind/react'
-import { RsCharacterCard } from '@/app/components/character-frame/rs-character-card'
+import {
+  RsCharacterCard,
+  RsEquipmentCard,
+} from '@/app/components/character-frame/rs-character-card'
 import { RsCardSize } from '@/app/components/character-frame/rs-card-size.enum'
 import { getColumnUrl } from '@/services/character-url'
 import React from 'react'
@@ -40,20 +43,22 @@ export function RecommendationDeckCard({ deck }: { deck: RecommendationDeck }) {
       </div>
 
       <div className="flex gap-[4px] justify-between">
-        <div className="flex flex-wrap min-w-[410px] gap-[4px]">
-          {characters.map((character) => {
+        <div className="flex flex-wrap min-w-[650px] gap-[10px]">
+          {characters.map((characterData) => {
+            const { character, equipments } = characterData
             const isLeader = leaderName === character.name
             return (
-              <div key={createKey()} className="relative">
+              <div key={createKey()} className="relative w-[120px] flex flex-col gap-[6px]">
                 {isLeader && (
-                  <div className="absolute text-[18px] z-20 text-white w-full text-center font-bold mt-[4px]">
+                  <div className="top-[100px] absolute text-[18px] z-20 text-white w-full text-center font-bold mt-[4px]">
                     Leader
                   </div>
                 )}
-                <RsCharacterCard size={RsCardSize.SMALL} character={character} />
-                <div className="h-[30px] py-[4px] flex items-center justify-center">
-                  <img src={getColumnUrl(character.column)} className="h-full" />
-                </div>
+                <RsCharacterCard size={RsCardSize.RESPONSIVE} character={character} height={120} />
+                {/* <div className="h-[30px] py-[4px] flex items-center justify-center"> */}
+                {/*   <img src={getColumnUrl(character.column)} className="h-full" /> */}
+                {/* </div> */}
+                <RsEquipmentCard equipments={equipments || []} />
               </div>
             )
           })}

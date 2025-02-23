@@ -99,3 +99,13 @@ export function EquipmentBox({ equipment }: { equipment: ExtendedRSEquipment }) 
     </div>
   )
 }
+
+export function EquipmentBoxResponsive({ equipment }: { equipment: ExtendedRSEquipment }) {
+  return (
+    <div className="relative">
+      <img className="absolute bottom-0 z-0" src={getMaterialBgFrameUrl(equipment.grade)} />
+      <img className="relative z-20 rounded w-full p-[4px]" src={equipment.thumbnail} />
+      <img className="absolute z-10 bottom-0" src={getMaterialBottomFrameUrl(equipment.grade)} />
+    </div>
+  )
+}
