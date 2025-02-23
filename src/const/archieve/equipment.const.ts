@@ -2847,6 +2847,257 @@ export const ALL_EQUIPMENTS: {
       },
     ],
   },
+  '데몬베인의 갑옷': {
+    type: RSEquipmentType.ARMOR,
+    grade: RS_GRADE.SSR,
+    desc: '기본 속성: 방어력+40\n옵션: [참열]/[열상]이 입히는 피해의 5%만큼 자신의 체력을 회복합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/e/ed/dskko5zj0p62y07ldpzigup7o27s2oi.png/180px-%E6%9C%BA%E7%A5%9E%E7%94%B2%E8%83%84.png',
+    faction: RS_FACTION.NIGHT_CHAINS,
+    earnsPath: [
+      {
+        desc: '청명 데이터 센터 철도관리국 현상금 임무',
+        tags: ['현상금 임무', '청명 데이터 센터'],
+      },
+      {
+        desc: '흑월 상점',
+        tags: ['흑월 상점'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-더스트 리자드',
+        tags: ['부표'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-암흑의 매머드',
+        tags: ['부표'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-혼란의 돌산호',
+        tags: ['부표'],
+      },
+      {
+        desc: '흑월 장비함',
+        tags: [''],
+      },
+    ],
+  },
+  '치유 방탄 조끼': {
+    type: RSEquipmentType.ARMOR,
+    grade: RS_GRADE.SSR,
+    desc: '기본 속성: 방어력+38\n옵션: 그린카드 사용 후 자신의 체력을 5% 회복합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/d/d1/jpkyg9bmz4tdclbxvp7ns49iv4jmw7l.png/180px-%E6%B2%BB%E6%84%88%E9%98%B2%E5%BC%B9%E8%A1%A3.png',
+    faction: RS_FACTION.RAILWAY,
+    earnsPath: [
+      {
+        desc: '슈그리스시 철도관리국 현상금 임무',
+        tags: ['현상금 임무', '슈그리스시'],
+      },
+      {
+        desc: '맨더 광산 철도관리국 현상금 임무',
+        tags: ['현상금 임무', '맨더 광산'],
+      },
+      {
+        desc: '황원역 작전 계획',
+        tags: ['작전 계획'],
+        map: '황원역',
+      },
+      {
+        desc: '흑월 상점',
+        tags: ['흑월 상점'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-베인링 퀸',
+        tags: ['부표'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-블리자드 기포체',
+        tags: ['부표'],
+      },
+      {
+        desc: '철도연맹 장비함',
+        tags: [''],
+      },
+    ],
+  },
+  '본드래곤 아머': {
+    type: RSEquipmentType.ARMOR,
+    grade: RS_GRADE.SSR,
+    desc: '기본 속성: 방어력+40\n옵션: 받는 얼음 피해가 15% 감소하고 동시에 30% 확률로 [냉동] 효과에 면역됩니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/7/7c/pjn1ne2c2zshcaz3re8w8ktxk5n67h0.png/180px-%E9%AA%A8%E9%BE%99%E6%8A%A4%E7%94%B2.png',
+    faction: RS_FACTION.CHAOS,
+    earnsPath: [
+      {
+        desc: '철도 주변의 베툴라 부표-베인링 퀸',
+        tags: ['부표'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-블리자드 기포체',
+        tags: ['부표'],
+      },
+      {
+        desc: '혼돈해 장비함',
+        tags: [''],
+      },
+    ],
+  },
+
+  '구상 번개': {
+    type: RSEquipmentType.WEAPON,
+    grade: RS_GRADE.SSR,
+    desc: '기본 속성: 공격력+39\n옵션: 자신의 스킬 카드 사용 시 적을 [관통]하는 소형 구상 번개를 시전하여 명중할 때마다 1단 피해를 입히고 동시에 [인뢰]를 발동합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/9/9d/aff9bba7yvqjdwnqbv49l5dd41wp5uc.png/180px-%E7%90%83%E7%8A%B6%E9%97%AA%E7%94%B5.png',
+    faction: RS_FACTION.GARDENERS,
+    earnsPath: [
+      {
+        desc: '자유 무역항-7 철도관리국 현상금 임무',
+        tags: ['현상금 임무', '자유 무역항-7'],
+      },
+      {
+        desc: '흑월 상점',
+        tags: ['흑월 상점'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-블리자드 기포체',
+        tags: ['부표'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-빙하 본드래곤',
+        tags: ['부표'],
+      },
+      {
+        desc: '아니타 장비함',
+        tags: [''],
+      },
+    ],
+  },
+  '오니란 스태프': {
+    type: RSEquipmentType.WEAPON,
+    grade: RS_GRADE.SSR,
+    desc: '기본 속성: 공격력+38\n옵션: 자신이 주는 잔향 피해가 15% 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/8/8c/rsld04tq34rt4fvhq8ecwbw01ynru0n.png/180px-%E5%A5%A5%E5%B0%BC%E5%85%B0%E6%B3%95%E6%9D%96.png',
+    faction: RS_FACTION.MUNDUS,
+    earnsPath: [
+      {
+        desc: '흑월 상점',
+        tags: ['흑월 상점'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-암흑의 매머드',
+        tags: ['부표'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-빙하 본드래곤',
+        tags: ['부표'],
+      },
+      {
+        desc: '제국 장비함',
+        tags: [''],
+      },
+    ],
+  },
+  '넥타르의 마지막 해': {
+    type: RSEquipmentType.WEAPON,
+    grade: RS_GRADE.SSR,
+    desc: '기본 속성: 공격력+39\n옵션: 자신의 주는 [음에너지] 피해가 15% 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/0/05/to1z30rsts7thcmqdhji2bqs610cdf9.png/180px-%E5%B0%BC%E5%85%8B%E5%A1%94%E5%B0%94%E6%9C%80%E5%90%8E%E8%A7%A3.png',
+    faction: RS_FACTION.SOURCE_CITADEL,
+    earnsPath: [
+      {
+        desc: '케이프시 철도관리국 현상금 임무',
+        tags: ['현상금 임무', '케이프시'],
+      },
+      {
+        desc: '흑월 상점',
+        tags: ['흑월 상점'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-빙하 본드래곤',
+        tags: ['부표'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-혼란의 돌산호',
+        tags: ['부표'],
+      },
+      {
+        desc: '시타델 장비함',
+        tags: [''],
+      },
+    ],
+  },
+  '액체 질소 분사기': {
+    type: RSEquipmentType.WEAPON,
+    grade: RS_GRADE.SSR,
+    desc: '기본 속성: 공격력+39\n옵션: 자신이 주는 얼음 피해가 15% 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/b/bc/cz4wfdkygpte4pmgdrq7kcc8dcfmpa8.png/180px-%E6%B6%B2%E6%B0%AE%E5%96%B7%E5%B0%84%E5%99%A8.png',
+    faction: RS_FACTION.RAILWAY,
+    earnsPath: [
+      {
+        desc: '슈그리스시 철도관리국 현상금 임무',
+        tags: ['현상금 임무', '슈그리스시'],
+      },
+      {
+        desc: '맨더 광산 철도관리국 현상금 임무',
+        tags: ['현상금 임무', '맨더 광산'],
+      },
+      {
+        desc: '황원역 작전 계획',
+        tags: ['작전 계획'],
+        map: '황원역',
+      },
+      {
+        desc: '흑월 상점',
+        tags: ['흑월 상점'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-베인링 퀸',
+        tags: ['부표'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-블리자드 기포체',
+        tags: ['부표'],
+      },
+      {
+        desc: '철도연맹 장비함',
+        tags: [''],
+      },
+    ],
+  },
+  '클라드니 아크': {
+    type: RSEquipmentType.ACCESSORY,
+    grade: RS_GRADE.SSR,
+    desc: '기본 속성: 체력+3993\n옵션: 자신의 [파]로 입히는 피해가 20% 증가합니다.(중첩 가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/c/c3/fxi71egqvm0mk6u8ew32k9g3dgo2mou.png/180px-%E5%85%8B%E6%8B%89%E5%B0%BC%E5%BC%A7%E5%85%89.png',
+    faction: RS_FACTION.SOURCE_CITADEL,
+    earnsPath: [
+      {
+        desc: '케이프시 철도관리국 현상금 임무',
+        tags: ['현상금 임무', '케이프시'],
+      },
+      {
+        desc: '흑월 상점',
+        tags: ['흑월 상점'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-빙하 본드래곤',
+        tags: ['부표'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-혼란의 돌산호',
+        tags: ['부표'],
+      },
+      {
+        desc: '시타델 장비함',
+        tags: [''],
+      },
+    ],
+  },
 }
 
 export const CONVERTED_ALL_EQUIPMENTS = _.map(ALL_EQUIPMENTS, (value, key) => ({

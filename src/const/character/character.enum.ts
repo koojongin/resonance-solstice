@@ -6,13 +6,13 @@ export enum RS_GENDER {
 }
 
 export enum RS_FACTION {
-  GARDENERS = '가드너',
-  SOURCE_CITADEL = '소스 시타델',
+  GARDENERS = '가드너', // 아니타
+  SOURCE_CITADEL = '소스 시타델', // 배우다
   COLUMBAR = '콜룸바상회',
-  MUNDUS = '문두스',
-  RAILWAY = '철도연맹',
-  NIGHT_CHAINS = '흑월',
-  CHAOS = '혼돈해',
+  MUNDUS = '문두스', // 제국
+  RAILWAY = '철도연맹', // 아이언 얼라이언스
+  NIGHT_CHAINS = '흑월', // 블랙문
+  CHAOS = '혼돈해', // 카오스씨
   CREW_STRANGER = 'CREW STRANGER',
 }
 
