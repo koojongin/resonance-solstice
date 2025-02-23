@@ -35,6 +35,11 @@ export function EquipmentTierList() {
             [원문 링크]
           </GradientButton>
         </a>
+        <a href="https://arca.live/b/resonance/118992601" target="_blank">
+          <GradientButton className="p-[4px] rounded inline-flex items-center gap-[4px]">
+            [장비 티어 관련 가이드]
+          </GradientButton>
+        </a>
       </div>
       <div className="flex flex-col gap-[4px]">
         <div className="border rounded p-[8px] flex flex-col gap-[4px]">
