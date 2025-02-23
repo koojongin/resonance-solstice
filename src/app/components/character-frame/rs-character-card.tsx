@@ -12,6 +12,7 @@ import React from 'react'
 import { RsCharacterCardResponsive } from '@/app/components/character-frame/rs-character-card-responsive'
 import { Tooltip } from '@material-tailwind/react'
 import { useNextDepthNavigator } from '@/services/navigation'
+import { EquipmentTooltipBox } from '@/app/components/deck/equipment-tooltip-box'
 
 export function RsCharacterCard({
   character,
@@ -68,26 +69,7 @@ export function RsEquipmentCard({ equipments }: { equipments: string[] }) {
               <Tooltip
                 interactive
                 className="bg-transparent p-0 m-0"
-                content={
-                  <div
-                    className="text-blue-gray-800 bg-white p-[10px] pb-0 shadow-lg shadow-gray-700 rounded cursor-pointer"
-                    onClick={() => {
-                      router.push(`/equipments/${equipment.name}`)
-                    }}
-                  >
-                    <div className="flex gap-[4px]">
-                      <EquipmentBox equipment={equipment} />
-                      <div className="max-w-[300px] flex flex-col gap-[4px]">
-                        <div className="">{equipment.name}</div>
-                        <hr />
-                        <div className="whitespace-pre-line">{equipment.desc}</div>
-                      </div>
-                    </div>
-                    <div className="w-full text-center pt-[8px] pb-[4px] mb-0">
-                      [클릭시 고정됩니다]
-                    </div>
-                  </div>
-                }
+                content={<EquipmentTooltipBox equipment={equipment} />}
               >
                 <div>
                   <EquipmentBoxResponsive key={createKey()} equipment={equipment} />

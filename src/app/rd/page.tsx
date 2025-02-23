@@ -62,6 +62,13 @@ export default function RecommendationDeckPage() {
             자동 덱 만들기 가이드
             <i className="fa-solid fa-circle-question" />
           </GradientButton>
+          <GradientButton
+            className="p-[4px] rounded inline-flex items-center gap-[4px]"
+            onClick={() => openNewTab('/reset-marathon/equipment')}
+          >
+            장비 티어 리스트
+            <i className="fa-solid fa-circle-question" />
+          </GradientButton>
         </div>
       </div>
       <div className="flex flex-col gap-[8px]">

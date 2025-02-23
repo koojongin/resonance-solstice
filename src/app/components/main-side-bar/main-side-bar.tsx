@@ -63,6 +63,11 @@ export default function MainSideBar() {
       path: '/reset-marathon/002',
       subMenu: [
         {
+          label: '장비 티어',
+          path: '/reset-marathon/equipment',
+          className: 'text-[18px] w-[300px]',
+        },
+        {
           label: '02. 니콜라 출시 후(25/02/20) ~ 현재',
           path: '/reset-marathon/002',
           className: 'text-[18px] w-[300px]',

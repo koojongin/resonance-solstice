@@ -15,6 +15,7 @@ import {
 } from '@/const/archieve/equipment.const'
 import _ from 'lodash'
 import { RS_FACTION } from '@/const/character/character.enum'
+import { ExtendedRSEquipment } from '@/app/equipments/equipment.type'
 
 export function RsEquipmentList({
   checkedGrades,
@@ -87,8 +88,6 @@ export function RsEquipmentList({
     </div>
   )
 }
-
-type ExtendedRSEquipment = RSEquipment & { name: string }
 
 export function EquipmentBox({ equipment }: { equipment: ExtendedRSEquipment }) {
   return (

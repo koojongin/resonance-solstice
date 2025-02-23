@@ -143,6 +143,11 @@ export default function TierListPage2() {
               [티어리스트 원문 링크]
             </GradientButton>
           </a>
+          <a href="/reset-marathon/equipment" target="_blank">
+            <GradientButton className="p-[4px] rounded inline-flex items-center gap-[4px]">
+              [장비 티어리스트]
+            </GradientButton>
+          </a>
           <a href="https://arca.live/b/resonance/128890448" target="_blank">
             <GradientButton className="p-[4px] rounded inline-flex items-center gap-[4px]">
               [리세마라 가이드 링크]
