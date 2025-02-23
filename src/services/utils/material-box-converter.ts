@@ -1,4 +1,5 @@
 import { RS_GRADE } from '@/const/character/character.enum'
+import { RSEquipmentType } from '@/const/archieve/equipment.const'
 
 export function getMaterialBottomFrameUrl(grade: RS_GRADE) {
   if (grade === RS_GRADE.N) {
@@ -38,6 +39,36 @@ export function getMaterialBgFrameUrl(grade: RS_GRADE) {
   }
 
   return 'https://patchwiki.biligame.com/images/resonance/8/87/b7tbcl0t8sagqwv47ztq1jy4p32px2p.png'
+}
+
+export function getEquipmentBgMaskUrl(grade: RS_GRADE) {
+  if (grade === RS_GRADE.N) {
+    return 'https://patchwiki.biligame.com/images/resonance/6/68/opi01nanz30tudv97vgmfmnv04imbbr.png'
+  }
+  if (grade === RS_GRADE.R) {
+    return 'https://patchwiki.biligame.com/images/resonance/6/68/opi01nanz30tudv97vgmfmnv04imbbr.png'
+  }
+  if (grade === RS_GRADE.SR) {
+    return 'https://patchwiki.biligame.com/images/resonance/5/51/lgyfpw6fkwoy497wngbitsd4docw1ko.png'
+  }
+  if (grade === RS_GRADE.SSR) {
+    return 'https://patchwiki.biligame.com/images/resonance/8/88/hqz129emxnhx4lgdkp277vbxdso8sc3.png'
+  }
+  if (grade === RS_GRADE.UR) {
+    return 'https://patchwiki.biligame.com/images/resonance/9/9f/r61gvwlpw4lws2th3if2w9007m7xmez.png'
+  }
+}
+
+export function getEquipmentIconUrl(type: RSEquipmentType) {
+  if (type === RSEquipmentType.WEAPON) {
+    return 'https://patchwiki.biligame.com/images/resonance/9/94/pklfj8wjwrmncothdrhr93vftclmybf.png'
+  }
+  if (type === RSEquipmentType.ARMOR) {
+    return 'https://patchwiki.biligame.com/images/resonance/6/6d/324uys4oni4dhx5r2a5c14yzjzv4mzl.png'
+  }
+  if (type === RSEquipmentType.ACCESSORY) {
+    return 'https://patchwiki.biligame.com/images/resonance/b/b6/67s64813ovyfjqe806zqk1wg8dxfsk8.png'
+  }
 }
 
 export const SPECIALTY_FRAME_URL =

@@ -17,8 +17,9 @@ export function EquipmentTooltipBox({ equipment }: { equipment: ExtendedRSEquipm
       <div className="flex gap-[4px]">
         <EquipmentBox equipment={equipment} />
         <div className="max-w-[300px] flex flex-col gap-[4px]">
-          <div className="">
-            <span className="font-bold">{equipment.type} &gt;</span> {equipment.name}
+          <div className="flex gap-[4px] items-center">
+            <span className="font-bold">{equipment.type} &gt;</span>
+            <div className="text-shadow-outline text-white ff-dh text-[18px]">{equipment.name}</div>
           </div>
           <hr />
           <div className="whitespace-pre-line">{equipment.desc}</div>

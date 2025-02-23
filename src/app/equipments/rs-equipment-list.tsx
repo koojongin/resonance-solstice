@@ -1,6 +1,8 @@
 'use client'
 
 import {
+  getEquipmentBgMaskUrl,
+  getEquipmentIconUrl,
   getMaterialBgFrameUrl,
   getMaterialBottomFrameUrl,
 } from '@/services/utils/material-box-converter'
@@ -93,6 +95,10 @@ export function EquipmentBox({ equipment }: { equipment: ExtendedRSEquipment }) 
   return (
     <div className="h-[80px] w-[80px] relative border-2">
       <img className="absolute bottom-0 z-0" src={getMaterialBgFrameUrl(equipment.grade)} />
+      <div className="absolute bottom-0 z-50">
+        <img className="left-0 top-0" src={getEquipmentBgMaskUrl(equipment.grade)} />
+        <img className="absolute left-0 top-0 w-full" src={getEquipmentIconUrl(equipment.type)} />
+      </div>
       <img className="relative z-20 rounded w-full p-[4px]" src={equipment.thumbnail} />
       <img className="absolute z-10 bottom-0" src={getMaterialBottomFrameUrl(equipment.grade)} />
     </div>
@@ -103,6 +109,10 @@ export function EquipmentBoxResponsive({ equipment }: { equipment: ExtendedRSEqu
   return (
     <div className="relative">
       <img className="absolute bottom-0 z-0" src={getMaterialBgFrameUrl(equipment.grade)} />
+      <div className="absolute bottom-0 z-50">
+        <img className="left-0 top-0" src={getEquipmentBgMaskUrl(equipment.grade)} />
+        <img className="absolute left-0 top-0 w-full" src={getEquipmentIconUrl(equipment.type)} />
+      </div>
       <img className="relative z-20 rounded w-full p-[4px]" src={equipment.thumbnail} />
       <img className="absolute z-10 bottom-0" src={getMaterialBottomFrameUrl(equipment.grade)} />
     </div>
