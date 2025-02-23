@@ -578,7 +578,7 @@ export const CHARACTER_SKILLS: {
     amount: 0,
     cost: 0,
     name: '음에너지',
-    desc: '강력한 무기나 주술을 사용한 후 생성되는 음에너지, 승격자에게 이용될 수 있습니다.\n손에서 내면 [소각]됩니다.',
+    desc: '강력한 무기나 주술을 사용한 후 생성되는 [음에너지], 승격자에게 이용될 수 있습니다.\n손에서 내면 [소각]됩니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/7/7e/50wgshxj0vv0uo8ag1s22mwymgrz6nr.png',
     isGeneratedCard: true,
@@ -650,6 +650,33 @@ export const CHARACTER_SKILLS: {
     desc: '카타스의 궁극기\n[타오르는 마검의 다크엑스칼리버!!!]를 시전해 모든 적에게 1단 피해를 입히고 [참열]을 부여하며 동시에 [광염]을 발동합니다.\n사용 후 [소각]됩니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/0/08/4axcgr52mt44h81ioni7hshbfiebje1.png',
+    isGeneratedCard: true,
+  },
+
+  '런닝 썬더': {
+    amount: 2,
+    cost: 4,
+    name: '런닝 썬더',
+    desc: '[디펜스 썬더]를 활성화 하여 목표 구역에 강력한 번개를 일으켜 범위 내의 적에게 5단 피해를 입히고 동시에 [인뢰]를 발동합니다. 사용 후 자신은 [기절]되며 [블랙카드] [음에너지]를 덱에 추가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/f0/it7uvep7iux92kngq9s7ktfdh02fanj.png',
+  },
+  복주머니: {
+    amount: 2,
+    cost: 0,
+    name: '복주머니',
+    desc: '비용을 2 획득합니다.\n이 카드가 버려질 때 카드를 2장 뽑습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/8f/s8490wcp3hleg0q90syny9wvujks4l0.png',
+  },
+  '승리의 아우라': {
+    amount: 1,
+    cost: 5,
+    name: '승리의 아우라',
+    desc: '무작위 적 3명에게 [우레]를 발동합니다.\n동시에 손에 있는 모든 카드를 버리며, 카드를 1장 버릴 때마다 무작위 적에게 추가로 [우레]를 1회 발동합니다. 버린 카드가 많을수록 피해가 높아집니다.\n[블랙카드]를 버릴 경우 2장 버린 것으로 간주됩니다.',
+    descSub: '대지에 금빛을',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/02/0fik4q462hle6bigreymlujk03kgjv5.png',
     isGeneratedCard: true,
   },
 }

@@ -304,8 +304,8 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/0/01/9frhs5bteeq029t124i6j79dqq57y4w.png',
   },
-  순환: {
-    name: '순환',
+  '순환 - 리나 본': {
+    name: '순환 - 리나 본',
     desc: '[블랙카드]를 1장 얻을 때마다 비용을 1 얻습니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/4/48/5scekfm7740r4w3eiv2jjfkixrbkb19.png',
@@ -334,5 +334,30 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
     desc: '[다크 엑스칼리버] 사용 후, 덱 혹은 버려진 덱에서 [인터체인]을 1장 손으로 가져옵니다.\n자신이 리더일 경우, 즉시 리더 스킬을 활성화횝니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/e/e8/ag10cibh6t7pcg1syi26gvtkdpaq4qt.png',
+  },
+
+  자신감: {
+    name: '자신감',
+    desc: '모든 아군이 살아있을 시 입히는 최종 피해가 10% 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/49/bcdglpo5p5zfmhgmmlw2avyxoxlwond.png',
+  },
+  여명: {
+    name: '여명',
+    desc: '[런닝 썬더]의 공격 범위가 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e1/kyrncuepondxq4mlpyi7p6e9r12s6jn.png',
+  },
+  신기: {
+    name: '신기',
+    desc: '[복주머니]를 손으로 가져올 때 8% 확률로 블랙카드 [블랙 8]을 1장 생성하여 손으로 가져옵니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/58/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  '순환 - 페니아': {
+    name: '순환 - 페니아',
+    desc: '[승리의 아우라]로 [블랙카드]를 버릴 때 비용을 1 얻습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/db/5scekfm7740r4w3eiv2jjfkixrbkb19.png',
   },
 }

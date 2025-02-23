@@ -73,8 +73,8 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/1/1e/8j6h9ej6cqhwwpa1znx3gky8rnzoklw.png',
   },
-  감응: {
-    name: '감응',
+  '감응 - 나유타': {
+    name: '감응 - 나유타',
     desc: '전투 시작 시 손으로 가져오는 처음 5장의 카드 중에 반드시 [셔플]이 포함됩니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/6/67/2dktmnn7w48dkp7s1u5viq9vk2i3da7.png',
@@ -304,8 +304,8 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/0/05/lxet596cxuegys9u1oeck4lhdtpqwch.png',
   },
-  "레비스의 '초개조'": {
-    name: "레비스의 '초개조'",
+  "레비스의 '초개조' - 리나 본": {
+    name: "레비스의 '초개조' - 리나 본",
     desc: `[디펜스 트리거] 강화:\n'이리를 피하니 범이 앞을 막는다'\n모든 아군에게 3초간 지속되는 [철벽 실드]를 부여합니다.\n[블랙카드]를 우선으로 카드를 3장 뽑으며 손패 상한을 초과할 수 있습니다. [블랙카드]를 뽑았을 경우 [블랙카드] 1장당 [철벽 실드]의 지속시간이 2초 증가합니다.`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/3/30/ron8pn2vxmaudbcp12gwpcj3js6hzko.png',
@@ -334,5 +334,30 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     desc: `[인터체인-III]은 사용 후 즉시 [인터체인-II]으로 전환됩니다.`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/7/7d/p5cydxqwcdq3id636lnz9x5zy3zjm5c.png',
+  },
+
+  '감응 - 페니아': {
+    name: '감응 - 페니아',
+    desc: '전투 시작 시 손으로 가져오는 첫 5장의 카드에 반드시 [승리의 아우라]가 포함됩니다.\n자신이 리더일 경우 전투 시작 시 즉시 리더 스킬을 시전합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/9a/2dktmnn7w48dkp7s1u5viq9vk2i3da7.png',
+  },
+  축복: {
+    name: '축복',
+    desc: '[복주머니]를 뽑을 때마다 카드를 1장 뽑습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/97/8azm7410p6n3hu6ie2k4dpkot4gkeh8.png',
+  },
+  묘책: {
+    name: '묘책',
+    desc: '[복주머니]를 손에서 낼 때 8% 확률로 [블랙카드] [블랙 8] 1장을 생성하여 손으로 가져옵니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/f7/5z9kj876zd8temkolm96ozo1546881f.png',
+  },
+  "레비스의 '초개조' - 페니아": {
+    name: `'레비스의 '초개조' - 페니아`,
+    desc: '[런닝 썬더] 강화:\n[디펜스 썬더]를 활성화하여 목표 구역에 강력한 번개를 일으켜 범위 내의 적에게 7단 피해를 입히고, 동시에[인뢰]를 발동합니다.\n사용 후 [블랙카드] [음에너지]를 1장 생성하여 손으로 가져옵니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/41/ron8pn2vxmaudbcp12gwpcj3js6hzko.png',
   },
 }

@@ -183,7 +183,7 @@ export const CHARACTER_DETAIL: {
       1: '독심술',
       2: '사기 마술',
       3: '생기',
-      4: '감응',
+      4: '감응 - 나유타',
       5: `레비스의 '불가사의'`,
     },
     RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
@@ -366,7 +366,24 @@ export const CHARACTER_DETAIL: {
   ACHIWA: {},
   KALEYA: {},
   YER: {},
-  FENIA: {},
+  FENIA: {
+    SKILLS: ['런닝 썬더', '음에너지', '복주머니', '승리의 아우라'],
+    RESONANCES: {
+      1: '감응 - 페니아',
+      2: '축복',
+      3: '생기',
+      4: '묘책',
+      5: `'레비스의 '초개조' - 페니아`,
+    },
+    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    AWAKENING: {
+      1: '자신감',
+      2: '여명',
+      3: '투지',
+      4: '신기',
+      5: '순환 - 페니아',
+    },
+  },
   RINA_F: {
     SKILLS: ['흡수', '반전', '방열', '음에너지', '반사', '디펜스 트리거'],
     RESONANCES: {
@@ -374,7 +391,7 @@ export const CHARACTER_DETAIL: {
       2: '제압',
       3: '생기',
       4: '인내력',
-      5: "레비스의 '초개조'",
+      5: "레비스의 '초개조' - 리나 본",
     },
     RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
     AWAKENING: {
@@ -382,7 +399,7 @@ export const CHARACTER_DETAIL: {
       2: '속박',
       3: '투지',
       4: '열기',
-      5: '순환',
+      5: '순환 - 리나 본',
     },
   },
   VALENTINE: {},

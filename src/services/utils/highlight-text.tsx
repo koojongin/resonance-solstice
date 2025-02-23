@@ -40,16 +40,29 @@ export function RSHighlightedText({ text, textSize }: { text: string; textSize?:
   const regex = /\[([^\]]+)\]/g
 
   const formattedText = text.split(regex).map((part, index, array) => {
-    const isExistArchive = TOTAL_ARCHIVES.find((archive) => archive.name === part)
+    const archive = TOTAL_ARCHIVES.find((a) => a.name === part)
     let classNameOfPart = highlightMap[`[${part}]`]
 
-    if (isExistArchive && !classNameOfPart) {
+    if (archive && !classNameOfPart) {
       classNameOfPart = NOT_SETTED_PART_COLOR
     }
 
     if (classNameOfPart) {
       return (
-        <Tooltip key={index} content={`${part} 설명 넣어라 나중에...`}>
+        <Tooltip
+          key={index}
+          content={
+            <div className="max-w-[300px] whitespace-pre-line">
+              {archive && (
+                <div className="flex flex-col gap-[4px]">
+                  <div>{part}</div>
+                  <hr />
+                  <div>{archive.desc}</div>
+                </div>
+              )}
+            </div>
+          }
+        >
           <span
             className={`${classNameOfPart} text-shadow-outline-white cursor-pointer ff-dh text-[${textSize || 20}px]`}
             onClick={() => router.push(`/archive/${part}`)}

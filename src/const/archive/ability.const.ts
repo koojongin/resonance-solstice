@@ -216,4 +216,9 @@ export const ARCHIVE_ABILITIES: { [key: string]: RSArchive } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/8/8d/i32syleugznlpez2z7ux3ial5wkfue9.png',
   },
+  음에너지: {
+    desc: '강력한 무기나 주문을 사용한 후 생성되는 부정적인 에너지, 업그레이드를 통해 사용 할 수 있다. 패에서 버려지면 [소각] 된다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/7e/50wgshxj0vv0uo8ag1s22mwymgrz6nr.png',
+  },
 }
