@@ -890,7 +890,8 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
   '도금 부품': {
     grade: RS_GRADE.SR,
     desc: '',
-    thumbnail: 'https://patchwiki.biligame.com/images/resonance/thumb/3/30/q8hp7wk7ybnjo6t6tmrboxnzoidgyet.png/180px-%E9%95%80%E9%87%91%E9%9B%B6%E4%BB%B6.png',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/3/30/q8hp7wk7ybnjo6t6tmrboxnzoidgyet.png/180px-%E9%95%80%E9%87%91%E9%9B%B6%E4%BB%B6.png',
   },
   '무기 파이프라인': {
     grade: RS_GRADE.SR,
