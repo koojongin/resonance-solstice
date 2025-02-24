@@ -627,7 +627,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     title: '깡딜)내가 쓰는 간야덱',
     leaderName: GANYA.name,
     characters: [
-      { character: GANYA, equipments: ['불꽃 침식자', '정원 수호', '베타 세계선 박스'] },
+      { character: GANYA },
       { character: KAREN },
       { character: KALEYA },
       { character: FENIA },

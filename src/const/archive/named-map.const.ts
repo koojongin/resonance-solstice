@@ -53,6 +53,7 @@ export interface RSMap {
 export const ALL_NAMED_MAPS: RSMap[] = [
   {
     guideLink: 'https://arca.live/b/resonance/129304519',
+    recommendationLevel: 22,
     name: '청명 데이터 센터',
     linkOfBili:
       'https://wiki.biligame.com/resonance/%E6%BE%84%E6%98%8E%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83',
