@@ -10,14 +10,20 @@ export interface RSMapExchangeItem {
   isSpecialty?: boolean
 }
 
-export interface RSTransportItem {
+export interface RSExchangeItem {
   name: string
   amount: number
 }
-
+export interface RSTransportItem extends RSExchangeItem {}
 export interface RSTransportOrder {
   rewards: RSTransportItem[]
   requirements: RSTransportItem[]
+}
+
+export interface RSTrainArmoryOrder {
+  exchangeAmount?: number
+  rewards: RSExchangeItem[]
+  requirements: RSExchangeItem[]
 }
 
 export interface RSMap {
@@ -28,7 +34,9 @@ export interface RSMap {
   thumbnail?: string
   guideLink?: string
   거래소?: RSMapExchangeItem[]
-  '열차 무장 공장'?: any
+  '열차 무장 교환'?: RSTrainArmoryOrder[]
+  '열차 에너지 교환'?: any
+  '재료 회수'?: any
   투자?: any[] // 관리센터,시청 /<-두개는같은걸까? 도시 투자,버추얼 레코드,레코딩 증표 교환 있음
   '눈동자 의상점'?: any
   휴게소?: any // 한잔하기,흑월 상점
@@ -613,16 +621,16 @@ export const ALL_NAMED_MAPS: RSMap[] = [
     recommendationLevel: 15,
     name: '맨더 광산',
     linkOfBili: 'https://wiki.biligame.com/resonance/%E6%9B%BC%E5%BE%B7%E7%9F%BF%E5%9C%BA',
-    '열차 무장 공장': [
+    '열차 무장 교환': [
       {
-        name: '합금 임팩트 플레이트',
-        materials: [
+        rewards: [{ name: '합금 임팩트 플레이트', amount: 1 }],
+        requirements: [
           {
             name: '정밀 부품',
             amount: 30,
           },
           {
-            name: '낡은부품',
+            name: '낡은 부품',
             amount: 80,
           },
           {
@@ -637,30 +645,489 @@ export const ALL_NAMED_MAPS: RSMap[] = [
             name: '황동',
             amount: 20,
           },
+          {
+            name: '철도연맹 코인',
+            amount: 150000,
+          },
         ],
       },
       {
-        name: '서큘러쏘',
-        materials: [
+        rewards: [{ amount: 1, name: '서큘러 쏘' }],
+        requirements: [
           {
-            name: '대형톱니바퀴',
+            name: '수행 뱃지',
+            amount: 200,
+          },
+          {
+            name: '대형 톱니바퀴',
             amount: 3,
           },
           {
-            name: '동력파이프라인',
+            name: '동력 파이프라인',
             amount: 20,
           },
           {
-            name: '정밀부품',
+            name: '정밀 부품',
             amount: 50,
           },
           {
-            name: '맨더공구함',
+            name: '맨더 공구함',
             amount: 30,
           },
           {
             name: '철강',
             amount: 30,
+          },
+          {
+            name: '철도연맹 코인',
+            amount: 384000,
+          },
+        ],
+      },
+
+      {
+        rewards: [{ name: '블랙아웃 충각', amount: 1 }],
+        requirements: [
+          {
+            name: '수행 뱃지',
+            amount: 300,
+          },
+          {
+            name: '이명 껍질',
+            amount: 3,
+          },
+          {
+            name: '리자드 뼈대',
+            amount: 3,
+          },
+          {
+            name: '트와일라잇 껍질',
+            amount: 30,
+          },
+          {
+            name: '환각 산호초',
+            amount: 30,
+          },
+          {
+            name: '맨더 공구함',
+            amount: 50,
+          },
+          {
+            name: '철도연맹 코인',
+            amount: 1014000,
+          },
+        ],
+      },
+      {
+        rewards: [{ name: '롤러 장치', amount: 1 }],
+        requirements: [
+          {
+            name: '수행 뱃지',
+            amount: 200,
+          },
+          {
+            name: '심면 뿌리',
+            amount: 30,
+          },
+          {
+            name: '베툴라 연골',
+            amount: 80,
+          },
+          {
+            name: '맨더 공구함',
+            amount: 20,
+          },
+          {
+            name: '레일용 특수 강재',
+            amount: 20,
+          },
+          {
+            name: '은광석',
+            amount: 20,
+          },
+          {
+            name: '철도연맹 코인',
+            amount: 180000,
+          },
+        ],
+      },
+      {
+        rewards: [{ name: '분쇄 임팩트 롤러', amount: 1 }],
+        requirements: [
+          {
+            name: '수행 뱃지',
+            amount: 300,
+          },
+          {
+            name: '동력 유닛',
+            amount: 3,
+          },
+          {
+            name: '심면 나뭇가지',
+            amount: 20,
+          },
+          {
+            name: '동력 파이프라인',
+            amount: 20,
+          },
+          {
+            name: '맨더 공구함',
+            amount: 30,
+          },
+          {
+            name: '철강',
+            amount: 30,
+          },
+          {
+            name: '철도연맹 코인',
+            amount: 480000,
+          },
+        ],
+      },
+      {
+        rewards: [{ name: '분해 임팩트 롤러', amount: 1 }],
+        requirements: [
+          {
+            name: '수행 뱃지',
+            amount: 500,
+          },
+          {
+            name: '심면 나무',
+            amount: 3,
+          },
+          {
+            name: '인식 방해 껍질',
+            amount: 3,
+          },
+          {
+            name: '심면 나뭇가지',
+            amount: 30,
+          },
+          {
+            name: '소용돌이 꽃',
+            amount: 30,
+          },
+          {
+            name: '맨더 공구함',
+            amount: 50,
+          },
+          {
+            name: '철도연맹 코인',
+            amount: 1170000,
+          },
+        ],
+      },
+      {
+        rewards: [{ name: '수압 파괴 굴삭기', amount: 1 }],
+        requirements: [
+          {
+            name: '정예 뱃지',
+            amount: 60,
+          },
+          {
+            name: '수행 뱃지',
+            amount: 300,
+          },
+          {
+            name: '동력 유닛',
+            amount: 2,
+          },
+          {
+            name: '동력 파이프라인',
+            amount: 20,
+          },
+          {
+            name: '맨더 공구함',
+            amount: 20,
+          },
+          {
+            name: '철강',
+            amount: 20,
+          },
+          {
+            name: '티타늄 합금',
+            amount: 20,
+          },
+          {
+            name: '철도연맹 코인',
+            amount: 210000,
+          },
+        ],
+      },
+      {
+        rewards: [{ name: '협음 파괴 굴삭기', amount: 1 }],
+        requirements: [
+          {
+            name: '정예 뱃지',
+            amount: 100,
+          },
+          {
+            name: '수행 뱃지',
+            amount: 500,
+          },
+          {
+            name: '리자드 뼈대',
+            amount: 2,
+          },
+          {
+            name: '심면 나무',
+            amount: 2,
+          },
+          {
+            name: '해룡 꼬리 지느러미',
+            amount: 20,
+          },
+          {
+            name: '소음 수액',
+            amount: 20,
+          },
+          {
+            name: '맨더 공구함',
+            amount: 30,
+          },
+          {
+            name: '철도연맹 코인',
+            amount: 528000,
+          },
+        ],
+      },
+      {
+        rewards: [{ name: '스크림 파괴 굴삭기', amount: 1 }],
+        requirements: [
+          {
+            name: '정예 뱃지',
+            amount: 160,
+          },
+          {
+            name: '수행 뱃지',
+            amount: 800,
+          },
+          {
+            name: '본드래곤 척추뼈',
+            amount: 5,
+          },
+          {
+            name: '리자드 뼈대',
+            amount: 5,
+          },
+          {
+            name: '고통의 발톱',
+            amount: 30,
+          },
+          {
+            name: '베툴라 뼈대',
+            amount: 30,
+          },
+          {
+            name: '맨더 공구함',
+            amount: 50,
+          },
+          {
+            name: '철도연맹 코인',
+            amount: 1404000,
+          },
+        ],
+      },
+      {
+        rewards: [{ name: '철강 드릴 비트', amount: 1 }],
+        requirements: [
+          {
+            name: '정예 뱃지',
+            amount: 100,
+          },
+          {
+            name: '수행 뱃지',
+            amount: 500,
+          },
+          {
+            name: '동력 유닛',
+            amount: 2,
+          },
+          {
+            name: '사격 통제 유닛',
+            amount: 2,
+          },
+          {
+            name: '무기 파이프라인',
+            amount: 20,
+          },
+          {
+            name: '철강',
+            amount: 60,
+          },
+          {
+            name: '맨더 공구함',
+            amount: 30,
+          },
+          {
+            name: '철도연맹 코인',
+            amount: 624000,
+          },
+        ],
+      },
+      {
+        rewards: [{ name: '핫멜트 드릴 비트', amount: 1 }],
+        requirements: [
+          {
+            name: '정예 뱃지',
+            amount: 160,
+          },
+          {
+            name: '수행 뱃지',
+            amount: 800,
+          },
+          {
+            name: '베인링 울음낭',
+            amount: 5,
+          },
+          {
+            name: '사격 통제 유닛',
+            amount: 3,
+          },
+          {
+            name: '순금 부품',
+            amount: 2,
+          },
+          {
+            name: '베인링 낭액',
+            amount: 200,
+          },
+          {
+            name: '맨더 공구함',
+            amount: 50,
+          },
+          {
+            name: '철도연맹 코인',
+            amount: 1638000,
+          },
+        ],
+      },
+      {
+        rewards: [{ name: '레이저 드릴 비트', amount: 1 }],
+        requirements: [
+          {
+            name: '정예 뱃지',
+            amount: 260,
+          },
+          {
+            name: '수행 뱃지',
+            amount: 1300,
+          },
+          {
+            name: '베툴라 핵',
+            amount: 3,
+          },
+          {
+            name: '초전도 코일',
+            amount: 5,
+          },
+          {
+            name: '사격 통제 유닛',
+            amount: 5,
+          },
+          {
+            name: '화증석',
+            amount: 50,
+          },
+          {
+            name: '맨더 공구함',
+            amount: 80,
+          },
+          {
+            name: '철도연맹 코인',
+            amount: 4080000,
+          },
+        ],
+      },
+      {
+        rewards: [{ name: '질화티탄 코팅', amount: 1 }],
+        requirements: [
+          {
+            name: '수행 뱃지',
+            amount: 300,
+          },
+          {
+            name: '그래핀',
+            amount: 30,
+          },
+          {
+            name: '티타늄 합금',
+            amount: 60,
+          },
+          {
+            name: '철도연맹 코인',
+            amount: 400000,
+          },
+        ],
+      },
+      {
+        rewards: [{ name: '군사 장갑판', amount: 1 }],
+        requirements: [
+          {
+            name: '수행 뱃지',
+            amount: 500,
+          },
+          {
+            name: '맨더 공구함',
+            amount: 30,
+          },
+          {
+            name: '철강',
+            amount: 60,
+          },
+          {
+            name: '은광석',
+            amount: 60,
+          },
+          {
+            name: '철도연맹 코인',
+            amount: 544000,
+          },
+        ],
+      },
+      {
+        rewards: [{ name: '고회전력 모터', amount: 1 }],
+        requirements: [
+          {
+            name: '맨더 공구함',
+            amount: 20,
+          },
+          {
+            name: '황동',
+            amount: 20,
+          },
+          {
+            name: '철강',
+            amount: 20,
+          },
+          {
+            name: '자동차 부품',
+            amount: 20,
+          },
+          {
+            name: '철도연맹 코인',
+            amount: 150000,
+          },
+        ],
+      },
+      {
+        rewards: [{ name: '화물 거치대', amount: 1 }],
+        requirements: [
+          {
+            name: '맨더 공구함',
+            amount: 20,
+          },
+          {
+            name: '철강',
+            amount: 20,
+          },
+          {
+            name: '자동차 부품',
+            amount: 20,
+          },
+          {
+            name: '철도연맹 코인',
+            amount: 350000,
           },
         ],
       },
@@ -687,10 +1154,177 @@ export const ALL_NAMED_MAPS: RSMap[] = [
   },
   {
     name: '아니타 군수공장',
+    recommendationLevel: 30,
+    guideLink: 'https://arca.live/b/resonance/129614242',
     linkOfBili:
       'https://wiki.biligame.com/resonance/%E9%98%BF%E5%A6%AE%E5%A1%94%E6%88%98%E5%A4%87%E5%B7%A5%E5%8E%82',
     type: RSCityType.SMALL_CITY_SQUARE,
+    '열차 무장 교환': [
+      {
+        rewards: [{ name: '유인용 전조등', amount: 1 }],
+        exchangeAmount: 1,
+        requirements: [
+          {
+            name: '수행 뱃지',
+            amount: 300,
+          },
+          {
+            name: '철도연맹 코인',
+            amount: 240000,
+          },
+          {
+            name: '인식 방해 껍질',
+            amount: 1,
+          },
+          {
+            name: '베툴라 촉수',
+            amount: 2,
+          },
+          {
+            name: '소용돌이 꽃',
+            amount: 20,
+          },
+        ],
+      },
+      {
+        rewards: [{ name: '고출력 오디오 제너레이터(432Hz)', amount: 1 }],
+        exchangeAmount: 1,
+        requirements: [
+          {
+            name: '수행 뱃지',
+            amount: 400,
+          },
+          {
+            name: '철도연맹 코인',
+            amount: 416000,
+          },
+          {
+            name: '스피커',
+            amount: 30,
+          },
+          {
+            name: '자동차 부품',
+            amount: 30,
+          },
+          {
+            name: '전자 부품',
+            amount: 30,
+          },
+        ],
+      },
+      {
+        rewards: [{ name: '초저주파 진동기', amount: 1 }],
+        exchangeAmount: 1,
+        requirements: [
+          {
+            name: '수행 뱃지',
+            amount: 400,
+          },
+          {
+            name: '철도연맹 코인',
+            amount: 320000,
+          },
+          {
+            name: '스피커',
+            amount: 30,
+          },
+          {
+            name: '자동차 부품',
+            amount: 30,
+          },
+          {
+            name: '전자 부품',
+            amount: 30,
+          },
+        ],
+      },
+      {
+        rewards: [{ name: '원더링 전조등', amount: 1 }],
+        exchangeAmount: 1,
+        requirements: [
+          {
+            name: '수행 뱃지',
+            amount: 500,
+          },
+          {
+            name: '철도연맹 코인',
+            amount: 877000,
+          },
+          {
+            name: '유성의 눈',
+            amount: 5,
+          },
+          {
+            name: '트와일라잇 껍질',
+            amount: 25,
+          },
+        ],
+      },
+      {
+        rewards: [{ name: '보조 펜던트', amount: 1 }],
+        exchangeAmount: 1,
+        requirements: [
+          {
+            name: '수행 뱃지',
+            amount: 500,
+          },
+          {
+            name: '철도연맹 코인',
+            amount: 845000,
+          },
+          {
+            name: '동력 유닛',
+            amount: 3,
+          },
+          {
+            name: '동력 파이프라인',
+            amount: 15,
+          },
+          {
+            name: '리튬 배터리',
+            amount: 50,
+          },
+        ],
+      },
+      {
+        rewards: [{ name: '운송 드론 787', amount: 1 }],
+        exchangeAmount: 1,
+        requirements: [
+          {
+            name: '수행 뱃지',
+            amount: 800,
+          },
+          {
+            name: '철도연맹 코인',
+            amount: 1800000,
+          },
+          {
+            name: '동력 유닛',
+            amount: 5,
+          },
+          {
+            name: '동력 파이프라인',
+            amount: 25,
+          },
+          {
+            name: '리튬 배터리',
+            amount: 50,
+          },
+        ],
+      },
+    ],
     거래소: [
+      {
+        name: '화증석',
+        isSpecialty: true,
+      },
+      {
+        name: '부전포탄',
+        isSpecialty: true,
+      },
+      {
+        name: '방호복',
+      },
       {
         name: '아니타 202 군용 드론',
         isSpecialty: true,

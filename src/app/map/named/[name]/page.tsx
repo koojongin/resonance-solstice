@@ -15,6 +15,7 @@ import { useNextDepthNavigator } from '@/services/navigation'
 import { GradientButton } from '@/app/components/button/gradient-button'
 import { RsTransportOrderBox } from '@/app/components/rs-transport-order-box'
 import { Tooltip } from '@material-tailwind/react'
+import { RsTrainArmoryExchangeBox } from '@/app/components/map/rs-train-armory-exchange-box'
 
 export default function MapNamedDetailPage() {
   const { router } = useNextDepthNavigator()
@@ -25,24 +26,27 @@ export default function MapNamedDetailPage() {
   if (!map) return <div>검색된 지도 데이터 없음.</div>
   return (
     <div className="flex flex-col gap-[10px]">
-      <div className="text-[30px] items-center flex gap-[4px]">
-        {map.name}
-        {map.guideLink && (
-          <a href={map.guideLink} target="_blank" className="flex items-center">
-            <GradientButton className="p-[4px] text-[16px] rounded shadow flex items-center gap-[4px]">
-              관련 상세 가이드
-              <img src="/img/icon_link.svg" className="w-[16px] bg-white rounded p-[2px]" />
-            </GradientButton>
-          </a>
-        )}
-        {map.linkOfBili && (
-          <a href={map.linkOfBili} target="_blank" className="flex items-center">
-            <img
-              className="w-[30px] rounded-full border-[2px] bg-white"
-              src="https://i.namu.wiki/i/Htm3agI9gCwVit30zTszHsEBK1ZRxVIeNPG5otPB3ocbEI5yHjWjfnVTNZWwBTRhlG8CUPJZdYEdkyDRlN-ktBrfbW5lRv6wLrGUHQYHxVJOtvoQjHnTRTRiDgPSSi0qd_jRYZQOjq-X-4Gwixb1OA.svg"
-            />
-          </a>
-        )}
+      <div>
+        <div className="text-[30px] items-center flex gap-[4px]">
+          {map.name}
+          {map.guideLink && (
+            <a href={map.guideLink} target="_blank" className="flex items-center">
+              <GradientButton className="p-[4px] text-[16px] rounded shadow flex items-center gap-[4px]">
+                관련 상세 가이드
+                <img src="/img/icon_link.svg" className="w-[16px] bg-white rounded p-[2px]" />
+              </GradientButton>
+            </a>
+          )}
+          {map.linkOfBili && (
+            <a href={map.linkOfBili} target="_blank" className="flex items-center">
+              <img
+                className="w-[30px] rounded-full border-[2px] bg-white"
+                src="https://i.namu.wiki/i/Htm3agI9gCwVit30zTszHsEBK1ZRxVIeNPG5otPB3ocbEI5yHjWjfnVTNZWwBTRhlG8CUPJZdYEdkyDRlN-ktBrfbW5lRv6wLrGUHQYHxVJOtvoQjHnTRTRiDgPSSi0qd_jRYZQOjq-X-4Gwixb1OA.svg"
+              />
+            </a>
+          )}
+        </div>
+        {map.recommendationLevel && <div>추천 레벨:{map.recommendationLevel}</div>}
       </div>
       <div className="flex flex-col gap-[15px]">
         <div>
@@ -92,6 +96,12 @@ export default function MapNamedDetailPage() {
             </>
           )}
         </div>
+
+        {map['열차 무장 교환'] && (
+          <div>
+            <RsTrainArmoryExchangeBox trainArmoryOrders={map['열차 무장 교환']} />
+          </div>
+        )}
 
         {map['물자 운송'] && (
           <div>

@@ -4,6 +4,7 @@ export interface RSMaterial {
   grade: RS_GRADE
   thumbnail: string
   desc: string
+  trainEquipmentType?: any
 }
 
 export const MATERIALS: { [key: string]: RSMaterial } = {
@@ -767,5 +768,387 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
     desc: '',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/c/c6/kmpiehjdo033o0s6oi4s2aymnsx4gtb.png',
+  },
+
+  화증석: {
+    grade: RS_GRADE.N,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/4b/s7slb6gxxeotyqcd7y0x9pkmdbeujpj.png',
+  },
+
+  부전포탄: {
+    grade: RS_GRADE.N,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/56/0zfh0mgzfb8jt826hrm4q2raixwnd0x.png',
+  },
+  방호복: {
+    grade: RS_GRADE.N,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/9a/n511l1uu7yun93xwbfebb7gb6grpu0h.png',
+  },
+
+  '인식 방해 껍질': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/de/14zcrup38w1psqe4v8n4a2hb8ytnnhf.png',
+  },
+  '이명 껍질': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a0/pv1r1bjr48msb4hqvqco5bbxll9gdzd.png',
+  },
+  '베툴라 촉수': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/67/fevshzn8lno2fy51tf32wm2fvgcre4k.png',
+  },
+  '베툴라 연골': {
+    grade: RS_GRADE.N,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/dc/aiogqqby7s74b7p4orvuad0hyw0e1c2.png',
+  },
+  '소용돌이 꽃': {
+    grade: RS_GRADE.SR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/33/9aeuvwfk7wvzgnh40imq4t0u0vknzgn.png',
+  },
+  '심면 뿌리': {
+    grade: RS_GRADE.R,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/28/hgxj3gpl4oadunkr9mso067k9o882r6.png',
+  },
+  '유성의 눈': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/80/q5pvcnnuefm5vkmpm092rns9jr5b7n0.png',
+  },
+  '트와일라잇 껍질': {
+    grade: RS_GRADE.SR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/d7/h0e3boeviehk5utjgeomftzs72foaeh.png',
+  },
+  '환각 산호초': {
+    grade: RS_GRADE.SR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/da/qv2dlw9d3ql7p09taltfn3kvqthd2xv.png',
+  },
+  '동력 유닛': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/1/1a/rc1wavstt8331tgpp3873bwmp0oa2hd.png',
+  },
+  '동력 파이프라인': {
+    grade: RS_GRADE.SR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/cd/tmq7lyxcwflmt2fqljncc7k4nji2s6r.png',
+  },
+
+  '수행 뱃지': {
+    grade: RS_GRADE.SR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/b8/b7epj7iq4552u8gmtlrzo3i2uay95pg.png',
+  },
+  '정예 뱃지': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/4f/r1f56qmnmou5yyf6nv1q5wh47lr7m0f.png',
+  },
+  '정밀 부품': {
+    grade: RS_GRADE.R,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/7e/1yv0wyv3th5v4b1md5qq1iqothbo04r.png',
+  },
+  '낡은 부품': {
+    grade: RS_GRADE.N,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/d4/hub3o6yylpnkf0rsq6ywvhzhdph662x.png',
+  },
+  '대형 톱니바퀴': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/c2/9b0u3u4bp4c4qtccltk8xf5edl3whzh.png',
+  },
+  '도금 부품': {
+    grade: RS_GRADE.SR,
+    desc: '',
+    thumbnail: 'https://patchwiki.biligame.com/images/resonance/thumb/3/30/q8hp7wk7ybnjo6t6tmrboxnzoidgyet.png/180px-%E9%95%80%E9%87%91%E9%9B%B6%E4%BB%B6.png',
+  },
+  '무기 파이프라인': {
+    grade: RS_GRADE.SR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/80/nhx6vdy32qplfsye2nfoa7rryn05wrj.png',
+  },
+  '사격 통제 유닛': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/1/1e/g1ydkii6u409e67uycpit9856n91a3v.png',
+  },
+  '순금 부품': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/c8/lepiqfkosl3kevbs1hjvgzofxljfr65.png',
+  },
+  '베툴라 핵': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/9a/aj3mmrftg6bediyqgxzbxgy5260zosy.png',
+  },
+  '베인링 낭액': {
+    grade: RS_GRADE.R,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/fa/hkc39b101p1767qaxouimce7gf5e42a.png',
+  },
+  '본드래곤 척추뼈': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/6b/cp8t56hdjefjbghh2dlk1p7qf66e6kb.png',
+  },
+  '본드래곤 두개골': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/3/3d/aa68aa2kvfoqp8mfqkx574zjps3qkft.png/180px-%E9%AA%A8%E9%BE%99%E5%A4%B4%E9%AA%A8.png',
+  },
+  '본드래곤 꼬리뼈': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/c/cc/n9ejhj18pq44745yyv1zpwnbna4m21o.png/180px-%E9%AA%A8%E9%BE%99%E5%B0%BE%E9%AA%A8.png',
+  },
+  '심면 나무': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a4/qms85fhfp1obhq7jyamj89r3xz3oblg.png',
+  },
+  '심면 나뭇가지': {
+    grade: RS_GRADE.SR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/05/pp6zjvdqmvktnv8qzbpy893gyqtshyq.png',
+  },
+  '리자드 뼈대': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/8c/nt02qccor7inwhhsloapoemwvitydur.png',
+  },
+  '베툴라 뼈대': {
+    grade: RS_GRADE.SR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/fb/bqofi9sepveub4505h6g01mjby0fgkv.png',
+  },
+  '해룡 꼬리 지느러미': {
+    grade: RS_GRADE.SR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/26/4ul65gqcryelf3havaenx3lt9b0efro.png',
+  },
+  '고통의 발톱': {
+    grade: RS_GRADE.SR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/b9/k8ebkheosfihbkf7e7ps2oypfdlw06x.png',
+  },
+  '소음 수액': {
+    grade: RS_GRADE.SR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/20/byt8wvopwjbao0xtiy9z7uv0exgl4if.png',
+  },
+  '베인링 울음낭': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/8f/lr1lmsjlkywjhh2nvs6op0erj12p8lb.png',
+  },
+  '초전도 코일': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/3c/pxvxau1o91wldhwj1daglgmqbfa3sda.png',
+  },
+
+  /// ///열차 장비
+  '유인용 전조등': {
+    trainEquipmentType: '헤드 라이트',
+    grade: RS_GRADE.SR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/36/g3k23j2zzuxk5lacryf7gpzb711bhma.png',
+  },
+  '고출력 오디오 제너레이터(432Hz)': {
+    trainEquipmentType: '소나',
+    grade: RS_GRADE.SR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/56/6l71ga77zxjn7ph1ab1hjc8vmz9zqol.png',
+  },
+  '초저주파 진동기': {
+    trainEquipmentType: '소나',
+    grade: RS_GRADE.SR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/73/b1ivk40oyx5gfy4364icjkyqll12lqz.png',
+  },
+  '원더링 전조등': {
+    trainEquipmentType: '헤드 라이트',
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/f2/p8bj89tughc53lbgma3ny62h0r27guv.png',
+  },
+  '보조 펜던트': {
+    trainEquipmentType: '보조 펜던트',
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/c4/3vvbe8sh5y1kzbj5gpn1uirlfsvkrzd.png',
+  },
+  '운송 드론 787': {
+    trainEquipmentType: '보조 펜던트',
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/70/0gozrlaaftuonopo0lwrusv50cda80j.png',
+  },
+  /// //////////////////
+  '합금 임팩트 플레이트': {
+    trainEquipmentType: '충돌 무기',
+    grade: RS_GRADE.R,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2b/mxxnayscq53s4m9sotb9tcea9meqdz8.png',
+  },
+  '서큘러 쏘': {
+    trainEquipmentType: '충돌 무기',
+    grade: RS_GRADE.SR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e8/7oe6y595aktgf1sod6llxnj9m77zwj5.png',
+  },
+  '블랙아웃 충각': {
+    trainEquipmentType: '충돌 무기',
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/c5/2s97vpygg0qvexqaodparytct0zzvcj.png',
+  },
+  '롤러 장치': {
+    trainEquipmentType: '충돌 무기',
+    grade: RS_GRADE.R,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/f2/hyxuetpygwjwl7jrcgydp0zedvdw8fw.png',
+  },
+  '분쇄 임팩트 롤러': {
+    trainEquipmentType: '충돌 무기',
+    grade: RS_GRADE.SR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/bb/d3bcgfnu809277av47qukfepiicvn1n.png',
+  },
+  '분해 임팩트 롤러': {
+    trainEquipmentType: '충돌 무기',
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/9c/79nh1wi7cm7uumgrbmjc2s55d4xqk5g.png',
+  },
+  '수압 파괴 굴삭기': {
+    trainEquipmentType: '충돌 무기',
+    grade: RS_GRADE.R,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/92/poxgtccuci8nf8bjftboi51tvp1tc0i.png',
+  },
+  '협음 파괴 굴삭기': {
+    trainEquipmentType: '충돌 무기',
+    grade: RS_GRADE.SR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/34/ldll0rg3m7sheo7ygzqvh5y520mcq9c.png',
+  },
+  '스크림 파괴 굴삭기': {
+    trainEquipmentType: '충돌 무기',
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/3f/q9g2wm9jn0o700yt2jn2gfepqp1bi3e.png',
+  },
+  '철강 드릴 비트': {
+    trainEquipmentType: '충돌 무기',
+    grade: RS_GRADE.SR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/6c/jh46rrrm1eg8cy77ixd9oc8v5xin9yo.png',
+  },
+  '핫멜트 드릴 비트': {
+    trainEquipmentType: '충돌 무기',
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/bc/800c05y4qt479dkrvhww5cpadig5r7b.png',
+  },
+  '레이저 드릴 비트': {
+    trainEquipmentType: '충돌 무기',
+    grade: RS_GRADE.UR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/67/fma1owhq56taq0xdwsti39nd0g2lele.png',
+  },
+  '질화티탄 코팅': {
+    trainEquipmentType: '코팅',
+    grade: RS_GRADE.SR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/39/68ow12pev0tkex2rh0581f8ox16vrh7.png',
+  },
+  '군사 장갑판': {
+    trainEquipmentType: '장갑판',
+    grade: RS_GRADE.SR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/65/31hvmweg9mbamng21cjo7ap8oue6835.png',
+  },
+  '고회전력 모터': {
+    trainEquipmentType: '보조 펜던트',
+    grade: RS_GRADE.R,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/7b/e7ykeorzb34xqfmfvgjkpeu8x5vutta.png',
+  },
+  '화물 거치대': {
+    trainEquipmentType: '보조 펜던트',
+    grade: RS_GRADE.R,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/1/1a/l48s04xydtv6r61k42nyo2nyqq5eps9.png',
   },
 }
