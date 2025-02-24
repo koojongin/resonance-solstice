@@ -15,11 +15,21 @@ export function MaterialBox({ material }: { material: ExtendedRSMaterial }) {
   )
 }
 
-export function MaterialBoxResponsive({ material }: { material: ExtendedRSMaterial }) {
+export function MaterialBoxResponsive({
+  material,
+  withoutIconPadding,
+}: {
+  withoutIconPadding?: boolean
+  material: ExtendedRSMaterial
+}) {
   return (
     <div className="relative">
       <img className="absolute bottom-0 z-0" src={getMaterialBgFrameUrl(material.grade)} />
-      <img className="relative z-20 rounded w-full p-[4px]" src={material.thumbnail} />
+      <img
+        className="relative z-20 rounded w-full"
+        src={material.thumbnail}
+        style={{ padding: `${withoutIconPadding ? '0' : '4px'}` }}
+      />
       <img className="absolute z-10 bottom-0" src={getMaterialBottomFrameUrl(material.grade)} />
     </div>
   )

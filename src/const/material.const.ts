@@ -348,6 +348,49 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/6/64/2agx0tt8vxjj39h4c7rrhpdokgkq1jf.png',
   },
+
+  /// //
+  '전자 부품': {
+    grade: RS_GRADE.N,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/c4/bhx3xjilkp3q1guxmbkwam0iptb40vu.png',
+  },
+  '순면 티셔츠': {
+    grade: RS_GRADE.N,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a9/sczr15wfgcacsd0q56xmyhrkpq7eyc0.png',
+  },
+
+  그래핀: {
+    grade: RS_GRADE.N,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/84/toyko2cc7nzw1tu8u84nv5b0wo0v2xy.png',
+  },
+
+  '그래핀 배터리': {
+    grade: RS_GRADE.N,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/d7/ogpld1svugk05j69huydxelpux7rllc.png',
+  },
+  '아니타 101 민간 드론': {
+    grade: RS_GRADE.N,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/79/97nhqki39i7mkxbsqo7xwra9e45gpmh.png',
+  },
+  '아니타 소형 베툴라 발전기': {
+    grade: RS_GRADE.N,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/cd/04rxw8afwjqrc7rxe0cm7p1iyaixpt9.png',
+  },
+
+  /// ///
+
   '항공 기념품': {
     grade: RS_GRADE.N,
     desc: '',
@@ -669,11 +712,54 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/7/75/7x2prdvx86x8y1q0r5uezoiim6pt8vl.png',
   },
+  '아니타 에너지 연구소 건설 진행도': {
+    grade: RS_GRADE.R,
+    desc: '획득 시 아니타 에너지 연구소 건설 진행도가 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/75/7x2prdvx86x8y1q0r5uezoiim6pt8vl.png',
+  },
 
   마일리지: {
     grade: RS_GRADE.R,
     desc: '콜룸바 상회 주문 완성시 획득하는 포인트입니다. 상회 마일리지 상점에서 아이템을 교환할 수 있습니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/c/c4/c5vvvt1hzfd35kf9hbabs2sf5ymvakn.png',
+  },
+  은광석: {
+    grade: RS_GRADE.N,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/1/1e/qycdd6pihd1wkkbo1zdbbydpy9qdcau.png',
+  },
+  호박석: {
+    grade: RS_GRADE.N,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/ea/706wybfkw46q7l52faqcr86bf5284ff.png',
+  },
+
+  목화: {
+    grade: RS_GRADE.N,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/55/cp2qttsit21dnmzxijp3y122l1nfkid.png',
+  },
+  공작석: {
+    grade: RS_GRADE.N,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/c3/lweuy7a9wv7n21kqjc9vb8dezxmqe79.png',
+  },
+  엔진: {
+    grade: RS_GRADE.N,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/23/iilbhdxoykq14557ffqt0zsa91izfh6.png',
+  },
+  가전제품: {
+    grade: RS_GRADE.N,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/c6/kmpiehjdo033o0s6oi4s2aymnsx4gtb.png',
   },
 }

@@ -1,6 +1,8 @@
 export enum RSCityType {
   CORE_CITY = '핵심 도시',
-  SMALL_CITY = '소도시',
+  SMALL_CITY_RHOMBUS = '소도시1',
+  SMALL_CITY_SQUARE = '소도시2',
+  SMALL_CITY_RECYCLE = '쓰레기 처리 도시',
 }
 
 export interface RSMapExchangeItem {
@@ -20,7 +22,7 @@ export interface RSTransportOrder {
 
 export interface RSMap {
   name: string
-  type: RSCityType | string
+  type: RSCityType
   desc?: string
   recommendationLevel?: number
   thumbnail?: string
@@ -54,6 +56,10 @@ export const ALL_NAMED_MAPS: RSMap[] = [
     철도관리국: 1,
     '관리 센터': 1,
     거래소: [
+      {
+        name: '은광석',
+        isSpecialty: true,
+      },
       {
         name: '게임기',
         isSpecialty: true,
@@ -234,6 +240,16 @@ export const ALL_NAMED_MAPS: RSMap[] = [
     ],
     거래소: [
       {
+        name: '전자 부품',
+      },
+      {
+        name: '순면 티셔츠',
+      },
+      {
+        name: '그래핀',
+        isSpecialty: true,
+      },
+      {
         name: '크리스탈 화분',
         isSpecialty: true,
       },
@@ -258,6 +274,13 @@ export const ALL_NAMED_MAPS: RSMap[] = [
     type: RSCityType.CORE_CITY,
     거래소: [
       {
+        name: '엔진',
+        isSpecialty: true,
+      },
+      {
+        name: '가전제품',
+      },
+      {
         name: '탄약 가속 장치',
         isSpecialty: true,
       },
@@ -279,7 +302,7 @@ export const ALL_NAMED_MAPS: RSMap[] = [
     guideLink: 'https://arca.live/b/resonance/129314531',
     name: '철도연맹 초소',
     linkOfBili: 'https://wiki.biligame.com/resonance/%E9%93%81%E7%9B%9F%E5%93%A8%E7%AB%99',
-    type: 'BLUE',
+    type: RSCityType.SMALL_CITY_SQUARE,
     거래소: [
       {
         name: '탄약 가속 장치',
@@ -377,7 +400,7 @@ export const ALL_NAMED_MAPS: RSMap[] = [
     name: '아니타 군수공장',
     linkOfBili:
       'https://wiki.biligame.com/resonance/%E9%98%BF%E5%A6%AE%E5%A1%94%E6%88%98%E5%A4%87%E5%B7%A5%E5%8E%82',
-    type: 'BLUE',
+    type: RSCityType.SMALL_CITY_SQUARE,
     거래소: [
       {
         name: '아니타 202 군용 드론',
@@ -417,7 +440,7 @@ export const ALL_NAMED_MAPS: RSMap[] = [
     name: '아니타 에너지 연구소',
     linkOfBili:
       'https://wiki.biligame.com/resonance/%E9%98%BF%E5%A6%AE%E5%A1%94%E8%83%BD%E6%BA%90%E7%A0%94%E7%A9%B6%E6%89%80',
-    type: 'GREEN',
+    type: RSCityType.SMALL_CITY_RHOMBUS,
     거래소: [
       {
         name: '가정용 태양전지',
@@ -426,13 +449,317 @@ export const ALL_NAMED_MAPS: RSMap[] = [
       { name: '리튬 배터리' },
       { name: '부직포' },
       { name: '충전 배터리' },
+      {
+        name: '아니타 101 민간 드론',
+        isSpecialty: true,
+      },
+      {
+        name: '그래핀 배터리',
+        isSpecialty: true,
+      },
+      {
+        name: '아니타 소형 베툴라 발전기',
+        isSpecialty: true,
+      },
+    ],
+    '물자 운송': [
+      {
+        rewards: [
+          {
+            name: '아니타 에너지 연구소 건설 진행도',
+            amount: 60,
+          },
+          {
+            name: '마일리지',
+            amount: 30,
+          },
+        ],
+        requirements: [
+          {
+            name: '철도연맹 코인',
+            amount: 30000,
+          },
+        ],
+      },
+      {
+        rewards: [
+          {
+            name: '아니타 에너지 연구소 건설 진행도',
+            amount: 100,
+          },
+          {
+            name: '마일리지',
+            amount: 50,
+          },
+        ],
+        requirements: [
+          {
+            name: '철도연맹 코인',
+            amount: 50000,
+          },
+        ],
+      },
+      {
+        rewards: [
+          {
+            name: '아니타 에너지 연구소 건설 진행도',
+            amount: 160,
+          },
+          {
+            name: '마일리지',
+            amount: 80,
+          },
+        ],
+        requirements: [
+          {
+            name: '철도연맹 코인',
+            amount: 80000,
+          },
+        ],
+      },
+      {
+        rewards: [
+          {
+            name: '아니타 에너지 연구소 건설 진행도',
+            amount: 60,
+          },
+          {
+            name: '마일리지',
+            amount: 30,
+          },
+        ],
+        requirements: [
+          {
+            name: '그래핀',
+            amount: 7,
+          },
+        ],
+      },
+      {
+        rewards: [
+          {
+            name: '아니타 에너지 연구소 건설 진행도',
+            amount: 70,
+          },
+          {
+            name: '마일리지',
+            amount: 35,
+          },
+        ],
+        requirements: [
+          {
+            name: '전자 부품',
+            amount: 21,
+          },
+        ],
+      },
+      {
+        rewards: [
+          {
+            name: '아니타 에너지 연구소 건설 진행도',
+            amount: 140,
+          },
+          {
+            name: '마일리지',
+            amount: 70,
+          },
+        ],
+        requirements: [
+          {
+            name: '자동차 부품',
+            amount: 27,
+          },
+          {
+            name: '가전제품',
+            amount: 21,
+          },
+        ],
+      },
+      {
+        rewards: [
+          {
+            name: '아니타 에너지 연구소 건설 진행도',
+            amount: 150,
+          },
+          {
+            name: '마일리지',
+            amount: 75,
+          },
+        ],
+        requirements: [
+          {
+            name: '탄약 가속 장치',
+            amount: 18,
+          },
+        ],
+      },
+
+      {
+        rewards: [
+          {
+            name: '아니타 에너지 연구소 건설 진행도',
+            amount: 170,
+          },
+          {
+            name: '마일리지',
+            amount: 85,
+          },
+        ],
+        requirements: [
+          {
+            name: '엔진',
+            amount: 9,
+          },
+          {
+            name: '자동차 부품',
+            amount: 24,
+          },
+        ],
+      },
+
+      {
+        rewards: [
+          {
+            name: '아니타 에너지 연구소 건설 진행도',
+            amount: 240,
+          },
+          {
+            name: '마일리지',
+            amount: 120,
+          },
+        ],
+        requirements: [
+          {
+            name: '철도연맹 코인',
+            amount: 20000,
+          },
+          {
+            name: '호박석',
+            amount: 20000,
+          },
+          {
+            name: '터키석',
+            amount: 20000,
+          },
+        ],
+      },
+      {
+        rewards: [
+          {
+            name: '아니타 에너지 연구소 건설 진행도',
+            amount: 170,
+          },
+          {
+            name: '마일리지',
+            amount: 85,
+          },
+        ],
+        requirements: [
+          {
+            name: '흑연',
+            amount: 37,
+          },
+          {
+            name: '방연광',
+            amount: 29,
+          },
+        ],
+      },
+      {
+        rewards: [
+          {
+            name: '아니타 에너지 연구소 건설 진행도',
+            amount: 160,
+          },
+          {
+            name: '마일리지',
+            amount: 80,
+          },
+        ],
+        requirements: [
+          {
+            name: '철도연맹 코인',
+            amount: 20000,
+          },
+          {
+            name: '은광석',
+            amount: 10,
+          },
+        ],
+      },
+      {
+        rewards: [
+          {
+            name: '아니타 에너지 연구소 건설 진행도',
+            amount: 160,
+          },
+          {
+            name: '마일리지',
+            amount: 80,
+          },
+        ],
+        requirements: [
+          {
+            name: '황동',
+            amount: 30,
+          },
+          {
+            name: '철광석',
+            amount: 36,
+          },
+        ],
+      },
+      {
+        rewards: [
+          {
+            name: '아니타 에너지 연구소 건설 진행도',
+            amount: 200,
+          },
+          {
+            name: '마일리지',
+            amount: 100,
+          },
+        ],
+        requirements: [
+          {
+            name: '맨더 공구함',
+            amount: 27,
+          },
+          {
+            name: '레일용 특수 강재',
+            amount: 24,
+          },
+        ],
+      },
+      {
+        rewards: [
+          {
+            name: '아니타 에너지 연구소 건설 진행도',
+            amount: 220,
+          },
+          {
+            name: '마일리지',
+            amount: 110,
+          },
+        ],
+        requirements: [
+          {
+            name: '사금',
+            amount: 11,
+          },
+          {
+            name: '블랙 슬래그',
+            amount: 37,
+          },
+        ],
+      },
     ],
   },
   {
     guideLink: 'https://arca.live/b/resonance/129437934',
     name: '골든 원더랜드',
     linkOfBili: 'https://wiki.biligame.com/resonance/%E6%B7%98%E9%87%91%E4%B9%90%E5%9B%AD',
-    type: 'GREEN',
+    type: RSCityType.SMALL_CITY_RHOMBUS,
     거래소: [
       {
         name: '사금',
@@ -451,8 +778,20 @@ export const ALL_NAMED_MAPS: RSMap[] = [
     guideLink: 'https://arca.live/b/resonance/129428108',
     name: '황원역',
     linkOfBili: 'https://wiki.biligame.com/resonance/%E8%8D%92%E5%8E%9F%E7%AB%99',
-    type: RSCityType.SMALL_CITY,
+    type: RSCityType.SMALL_CITY_RECYCLE,
     거래소: [
+      {
+        name: '호박석',
+        isSpecialty: true,
+      },
+      {
+        name: '공작석',
+        isSpecialty: true,
+      },
+      {
+        name: '목화',
+        isSpecialty: true,
+      },
       {
         name: '터키석',
         isSpecialty: true,
@@ -617,6 +956,43 @@ export const ALL_NAMED_MAPS: RSMap[] = [
         rewards: [
           {
             name: '황원역 건설 진행도',
+            amount: 110,
+          },
+          {
+            name: '마일리지',
+            amount: 55,
+          },
+        ],
+        requirements: [
+          {
+            name: '블랙 타이거 새우',
+            amount: 35,
+          },
+        ],
+      },
+
+      {
+        rewards: [
+          {
+            name: '황원역 건설 진행도',
+            amount: 20,
+          },
+          {
+            name: '마일리지',
+            amount: 10,
+          },
+        ],
+        requirements: [
+          {
+            name: '철도연맹 코인',
+            amount: 10000,
+          },
+        ],
+      },
+      {
+        rewards: [
+          {
+            name: '황원역 건설 진행도',
             amount: 40,
           },
           {
@@ -631,7 +1007,24 @@ export const ALL_NAMED_MAPS: RSMap[] = [
           },
         ],
       },
-
+      {
+        rewards: [
+          {
+            name: '황원역 건설 진행도',
+            amount: 60,
+          },
+          {
+            name: '마일리지',
+            amount: 30,
+          },
+        ],
+        requirements: [
+          {
+            name: '철도연맹 코인',
+            amount: 30000,
+          },
+        ],
+      },
       {
         rewards: [
           {
@@ -650,12 +1043,31 @@ export const ALL_NAMED_MAPS: RSMap[] = [
           },
         ],
       },
+
+      {
+        rewards: [
+          {
+            name: '황원역 건설 진행도',
+            amount: 70,
+          },
+          {
+            name: '마일리지',
+            amount: 35,
+          },
+        ],
+        requirements: [
+          {
+            name: '녹화 테이프',
+            amount: 30,
+          },
+        ],
+      },
     ],
   },
   {
     name: '운수교 기지',
     linkOfBili: 'https://wiki.biligame.com/resonance/%E4%BA%91%E5%B2%AB%E6%A1%A5%E5%9F%BA%E5%9C%B0',
-    type: 'BLUE',
+    type: RSCityType.SMALL_CITY_SQUARE,
     거래소: [
       {
         name: '재봉 도구 가방',
@@ -676,11 +1088,11 @@ export const ALL_NAMED_MAPS: RSMap[] = [
   {
     name: '원성대교',
     linkOfBili: 'https://wiki.biligame.com/resonance/%E8%BF%9C%E6%98%9F%E5%A4%A7%E6%A1%A5',
-    type: RSCityType.SMALL_CITY,
+    type: RSCityType.SMALL_CITY_RECYCLE,
   },
   {
     name: '회류 타워',
-    type: 'GREEN',
+    type: RSCityType.SMALL_CITY_RHOMBUS,
     linkOfBili: 'https://wiki.biligame.com/resonance/%E6%B1%87%E6%B5%81%E5%A1%94',
   },
   {
@@ -710,7 +1122,7 @@ export const ALL_NAMED_MAPS: RSMap[] = [
   {
     name: '서우역',
     linkOfBili: 'https://wiki.biligame.com/resonance/%E6%A0%96%E7%BE%BD%E7%AB%99',
-    type: 'BLUE',
+    type: RSCityType.SMALL_CITY_SQUARE,
     거래소: [
       {
         name: '다운 침낭',
