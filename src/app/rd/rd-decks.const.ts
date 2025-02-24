@@ -10,6 +10,7 @@ import {
   ELIOT,
   FENIA,
   FLAN,
+  GANYA,
   ILONA,
   JERBOA,
   KALEYA,
@@ -586,5 +587,56 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     owner: EXTERNAL_USERS['11'],
     autoPreset:
       'tVbLrpswEP2XWVPJD2wD264i3T6kdldlgYrbG900oUDUVlH+vTaPZLCBcOEmysJj7DnHc8YzPsOL1vn7tMg+nn5BQgLYlU86zXRh5z4dIKmKkw7guZ6DhBL7UyyA4rjXT7uyguTbdbIesDhqBlSEzYAI2s2obQDH6rlxX+N9N4NN9iHNITkDJdKsUsIABY3BBL0ZXDD8Rd4MqnoGxwZBRiRq0NYBxomRQUIEyiTD3kJkMIa5oT3U7iHXZQLvwa5jiR0gokwpvAefh/UYoGU8jJGDEB+bWZyLFfdL3gn7I92XRtlsV1oJvv7Ldb3BGq2uZzj+Oehik3W6E/P9VOrPaZGaZHlnrPJlt9/XCxg3YWM2gYx1i1wA+vdpl286n0BpZEOvwGRClRY/ddVAk9p1S+MSnJEfq2fgcLHJ5e6/koGajflDN3nI9F9IuMtm655nlIIJtEvBJvodClSGKym4p1b3T20hO5ftvTL5Qy5BL6QChrVsaLJhmiOxoUtiQ5QrD10hj1gmj0th5Nwz5akL48QFoWHMsAr2xg4ATl6LVyPyHqIgj0cM+4j04YhR1Ef0y85rig1ZUmxMtq3M5oHsnaq1RPYObXvRujDfR1S0j8gfjUj7/cS2vuXC2o44WCOmGIhITACM1VmH4sI6LmbVcTlZx0fazUjmhwOZP4Mof7M6zoTfSuzrcUwjaJ8d1GcwIdqAPJiC30pmUBADnWQ5BbmEAnd14Msp2BfwoioYr2yoKArxgBDKD6v7rPDCsCIdlf/qm0VBvOmrbxbk8KtP+tUII0tPLBz/trQ0mNx9cfk5er+ey+mUnFdNt5f/',
+  },
+
+  {
+    title: '리비아 쓰는 나유타 순환덱',
+    leaderName: NAYUTA.name,
+    characters: [
+      { character: NAYUTA },
+      { character: STELLA },
+      { character: FENIA },
+      { character: LIVIA },
+      { character: ARCANA },
+    ],
+    desc: '리비아 쓰는 나유타 순환덱',
+    descLink: 'https://arca.live/b/resonance/129616233',
+    owner: EXTERNAL_USERS['12'],
+    autoPreset:
+      'vZhLj9sgEMe/C2dXwuZl+9pTpO1Dam+rHKyGdq1Nk9RO1FZRvnsBb5LBEDB51Cdj7OHHMPxn8B5166V8avstqp9zrC/GMnNDMB5uciaGm6IqhxssinmG2v7L5n3TLT6tUP29WfYyQ99Uc7b40GxQvUc55upVjlGdZ8cGOzfyQoCG4OdGIUAPYQXooRj2QNOMw0YJvqmsngpaA68RCnsIgaDQAIHUBYUNAg1Yk2Owx7JWQu/kkNpyVQ4bBTRNoUOgAWE5HrJRawp6nEOGXqU0q/lx9xPVOEPr7Yvs9APTepHNQnbqzbfl16v/ZJ6NImDR9joIvv7dSFSTISLewmuPtk33Q26HPmW0f22Xy9lqIf+YV3e9/Nx0jRr+naJr1cDnQDn3muB6VuEnf+3azexofH40Zz4rVPDmnKrP1r9XstMPTxGsLQ0IatpBpiLExMZMe6R8jA9TwPCNYHkILL8aDIu7glXMAhPUC1axCWQEE4dMy1KYzB1MeN1wMkLAwINHaAlnJPAYQqslmKTez5NAeCoIqSAIj4OIaSBe75+9OuLIaWk5hDkYRhpOGFq8H4JROXoR4cATOVLXhVsiwaLrojQ+BuIVt5AvaKIv7o2gRAeHEYyKQJGi90bAwhHFCAKZFhHhgHA4WMmSOHRFE09D0wCOWgmF1odglBMqM4shBLKzLtauTjiEObJuovUemVBXUNeDufkmDuaORdOCJ+eWo2k0hvkjYlgpilP5hBVFlc4PUHk9v3CyGWkr82JcjGNibwLujRYyqTpxw9iuTkhKpWn5Vh8XfFzFBC7KS4dLn+qmc5EAl3/bT+OqbuQqLq6jPu1du44qkCO7PsYVkCN9QL1ajphwwRhLkaPUdMrLsAQ4UhQv9BIReBmr8fAoEUUzKUnLpFpQIghjBfKW/ymSR/xjXIwq7s3dtxVzVdqkubeSmpqlTaZNPtxT7u4IW0JuONxjc0BP/+FQ/O9dykik7h4tlf7h9ZCiNzFk9B+ow/zwDw==',
+  },
+
+  {
+    title: '대충 정리한 카타스 덱',
+    leaderName: KATAS.name,
+    characters: [
+      { character: KATAS, equipments: ['불꽃 침식자', '정원 수호', '베타 세계선 박스'] },
+      { character: KALEYA },
+      { character: YOIDUKI },
+      { character: VALENTINE },
+      { character: VERLAINE },
+    ],
+    desc: '대충 정리한 카타스 덱',
+    descLink: 'https://arca.live/b/resonance/129574796',
+    owner: EXTERNAL_USERS['13'],
+    autoPreset:
+      'tVfLjtMwFP0Xr4PkZ15bVpWGhwQ7xCIihomm0wlJKkBV/x3bbeLr2LR2gK7qxPE5vufec+0T6sYH2bRyeN0M7bsDqqfhKDP0RY0eunFC9acTmprhm5w+/uolqnGGjqO8/Cfm//tmaJ5R/UqNuhbViOAcqx9HGRqfuv1+Zx5Spp5Rph7K78eu382rf87Qy4+DHPQsgs2P22XfND2qT4gp3PO83KGVP1FNz9kJ4DHGIJ6GI4RV2S3uLm6hZ7vbWTFdI3IfkeP/iIi5h4hzUSYgYuxJdmePNBDVFMT0qJIAYvHPEVfLeTm5ylxi0gtIUWmaq+Dy4lZteMmbSAFT7lLAwqdwrZ0ICsyNu0pdL7cISYm7U7cRShMiAohp2ZyIyD2PwKJIqdg4xGRhqSusMZbNwpIAhfCXeusWlubYd2xR0fuOTaCrWMcu1pa9lRnmAWaYxDATLIrZlnrMceXIxgL1OEcm1hKAGgGvF0n1uMkHY1o75SKQKCS/L4dDychh4wpcKVEIYYwECCH8+pmRN3pzVFiqwg8LYRFhmRvHnRPPltgoVk5saBlI0muRxDaN5DopV3Xiy5NQJyEKUQdS1/xnefAWedZZG29s65QpA8ZmfCXZ2IKcwPYLv9sWIq33pZ0dVUNB3vKrdk+DR31xvsXD2Xqyr9E/q0FEQA1hzkV/7WvkrD+aHi/XLEPp0dy6YH/Xd65de43DkiA6AsuFYxnos4wdKAe00zAY6DYC3jCDvJwyljf6tmYHBVxNncfBAs43YBqGdLTylltZAFBIR/cR+01F4H7gTsvcLqA1AqAYrFY6rCl4k8NpyqXtNAHpsAoQrcBA3y11PaHhZS+vObCotvjXkpyLacy5oaRvu1Gre8lBlb9PUvY6E94enw1ON37o5wv412Y/yvNv',
+  },
+
+  {
+    title: '깡딜)내가 쓰는 간야덱',
+    leaderName: GANYA.name,
+    characters: [
+      { character: GANYA, equipments: ['불꽃 침식자', '정원 수호', '베타 세계선 박스'] },
+      { character: KAREN },
+      { character: KALEYA },
+      { character: FENIA },
+      { character: NAYUTA },
+    ],
+    desc: '간야를 리더로 부메랑 도끼를 메인딜로 넣는 덱임\n\n장점\n1. 패수급 운만 좋으면 연속으로 리더스킬 사용해서 폭딜 가능함\n2. 모든 범위의 적 공격 가능\n3. 수동 조작 시 코스트가 남아돔\n4. 간야 페니아 나유타 3명만 있으면 굴릴 수 있음\n\n단점\n1. 패수급 ㅈ박으면 딜도 ㅈ박음\n2. 자동전투로 스테이지가 나뉜 적을 상대할 경우 맵 이동전에 패를 버리는 경우가 있음\n3. 특정 장비+간야5공명 없으면 덱 내구도가 많이 낮음',
+    descLink: 'https://arca.live/b/resonance/129504461',
+    owner: EXTERNAL_USERS['14'],
+    autoPreset:
+      'vZdNj9sgEIb/C2dXGhhsYl97irTbVmpvVQ5WQ7vWZpPUTtRWUf57wXZixuCPTVZ7Y8DMPLwzMMmJ/cjL9XL9mO9ZdmIcEgCByDIeNQYkojMw5p0h0qQzOIJjSGcFQTp7lGIZXFzHyllJwN0Tu3EcA2Xq4jigyB0HAhP3CMRQrgNwV6S7Ilxvds85YuuisnJ9+7fX9eru8KTLj2amtp50vtalGRpfwLmIWFE91HP2k89blv3MN5W201/3valyt9EPRXVg2ffr9magoB0AbwYI7QwosYrYs9a1s0/Hl1paC9h6OrFDXv7Sh4bXrFXPxWaztLQCTZZSjNix0l/yMn9pC8AIGpuD7v5sdVl/2AaKmP59LPbLi+tVvfMqxMULyz4YqzAbO4HP0cnffCVhFsV8mrKoT0sh7PlJzMbFdq3/skyMIJhamoMAKp5EMLm4BcEW4DhCS7AIRuwxzdHd1rKNOJF/Eco/vGX+zXW1HK5QwaLDcFA3hltVyPz8oc1fB4KecL0TzCkKkcJkUXAxXBQ4LI19MfvS8OB99BNC7wK6bu076h0jTgXRJvarKiDOdNL8p4JeEaQ1qQJZUwnNWjyHbKysjUsVhA3IqHz3lN4BA3oWMS95YiDqgERxUCJJJBKzkjf+1nC58N6a+sLd8NbYVjmlhQWg0WwX69wLUsIYuN6yrh7K8AYlLL30UDB6tzCQHpmkBEzey+VrRa+7oN1N+kgJLO7UamZjGE1iEtLqXrDgJRvoWANgaRxqHvg+io2CBRQzHfQGsIm2LycrbqLjj/3cMn8RXv8a0CZKK5z7DY1DeossN+RrBMz+y/HABLwabHX+Dw==',
   },
 ]

@@ -718,6 +718,12 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/7/75/7x2prdvx86x8y1q0r5uezoiim6pt8vl.png',
   },
+  '철도연맹 초소 건설 진행도': {
+    grade: RS_GRADE.R,
+    desc: '획득 시 철도연맹 초소 건설 진행도 건설 진행도가 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/75/7x2prdvx86x8y1q0r5uezoiim6pt8vl.png',
+  },
 
   마일리지: {
     grade: RS_GRADE.R,

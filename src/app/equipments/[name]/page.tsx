@@ -93,7 +93,7 @@ export default function EquipmentDetailPage() {
       {/*   <GradientHeaderDiv>연관 추천덱</GradientHeaderDiv> */}
       {/* </div> */}
 
-      <LinkedDeckListBox decks={linkedRecommendationDecks} />
+      <LinkedDeckListBox title="아이템이 사용된 추천덱" decks={linkedRecommendationDecks} />
 
       {/* // */}
     </div>

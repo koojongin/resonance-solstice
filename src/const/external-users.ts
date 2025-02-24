@@ -30,4 +30,16 @@ export const EXTERNAL_USERS = {
     name: 'Rdk',
     link: 'https://arca.live/u/@Rdk/15200766',
   },
+  12: {
+    name: '로즈테디',
+    link: 'https://arca.live/u/@%EB%A1%9C%EC%A6%88%ED%85%8C%EB%94%94',
+  },
+  13: {
+    name: '이브향',
+    link: 'https://arca.live/u/@%EC%9D%B4%EB%B8%8C%ED%96%A5',
+  },
+  14: {
+    name: '플린의조수',
+    link: 'https://arca.live/u/@%ED%94%8C%EB%A6%B0%EC%9D%98%EC%A1%B0%EC%88%98',
+  },
 }

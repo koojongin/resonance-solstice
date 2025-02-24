@@ -64,7 +64,7 @@ export function RecommendationDeckCard({ deck }: { deck: RecommendationDeck }) {
           })}
         </div>
         <div
-          className={`ff-sdn overflow-y-scroll w-full whitespace-pre-line break-words p-[8px] border border-gray-300 rounded-[4px] shadow-gray-400/30 shadow-md ${descLink ? 'cursor-pointer hover:bg-blue-300/10' : ''}`}
+          className={`max-h-[200px] ff-sdn overflow-y-scroll w-full whitespace-pre-line break-words p-[8px] border border-gray-300 rounded-[4px] shadow-gray-400/30 shadow-md ${descLink ? 'cursor-pointer hover:bg-blue-300/10' : ''}`}
           onClick={() => openLink(descLink)}
         >
           {desc}
