@@ -27,7 +27,7 @@ export default function CharacterDetailPage() {
           <CharacterProfileCard character={character} />
           <hr />
           <CharacterDetailBox character={character} />
-          <LinkedDeckListBox title={'관련된 추천덱'} decks={linkedRecommendationDecks} />
+          <LinkedDeckListBox title="관련된 추천덱" decks={linkedRecommendationDecks} />
         </div>
       )}
     </div>
