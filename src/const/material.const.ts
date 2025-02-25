@@ -44,6 +44,12 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/thumb/4/4a/t8yhd3kxpo1dyt76aiwoqn2tf4y9zte.png/180px-%E6%A1%A6%E6%A0%91%E5%88%BA%E4%B8%9D%E5%9B%8A.png',
   },
+  열화석: {
+    grade: RS_GRADE.R,
+    desc: ``,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/db/afxupxl6731dwzj7g68direzrth0mkn.png',
+  },
   '베툴라 분비선': {
     grade: RS_GRADE.R,
     desc: `베툴라 생명체는 일반적인 환경에서 죽은 후, 분비선이 용이하게 네거필름 뉴트리노의 형태로 보존됩니다. 그래서 네거필름 뉴트리노 재료를 제조하는 기초 자원으로 사용됩니다.\n[베툴라 분비선]은 열차 전력 엔진을 업그레이드하는데 중요한 재료입니다.`,
@@ -148,6 +154,12 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
     desc: '',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/0/0d/082xcjkd8ifroajgj9st6fhqh7nneys.png',
+  },
+  '소음 효소': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a2/69xvwe7h9sh4ekdk1k19filbi4hpe2q.png',
   },
   일거양득: {
     grade: RS_GRADE.SR,
@@ -945,6 +957,54 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
     desc: '',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/thumb/c/cc/n9ejhj18pq44745yyv1zpwnbna4m21o.png/180px-%E9%AA%A8%E9%BE%99%E5%B0%BE%E9%AA%A8.png',
+  },
+  '앰피 본드래곤 두개골': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/1/1e/9vkndgpj0x1akya5y18wnkxod066cen.png',
+  },
+  '사슬 덩굴': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/f5/c0yjlvh6c7pratk5zt0lvddn96e4h74.png',
+  },
+  '항공 원자재': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/1/18/8ianlerjueo9b7qmfqw67xd1a9lfmfz.png',
+  },
+  '시타델 랜턴 코어': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/07/rj1o1w1bbra57c5ewsv51v3s4cbd39h.png',
+  },
+  '원조의 뿌리': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e9/mafbszngx2eloi62gyid31ivjwbkz2w.png',
+  },
+  중화석: {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/f4/60yvggts3dcdl1mgrc4ok3ngkqboszg.png',
+  },
+  '형이상 입자': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/67/q32cjrlhlpb8wgjvi6wtlktq5tkmk88.png',
+  },
+  '뇌정의 유물': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/eb/t8cae05p6ows8pi4sril8uesn2is6cg.png',
   },
   '심면 나무': {
     grade: RS_GRADE.SSR,

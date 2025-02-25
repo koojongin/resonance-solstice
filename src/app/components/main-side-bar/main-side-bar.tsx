@@ -8,7 +8,7 @@ export default function MainSideBar() {
   const router = useRouter()
   const [hoveredMenu, setHoveredMenu] = useState<string | null>(null)
 
-  const dropdownCss = `absolute left-0 top-full bg-white border border-gray-300 shadow-lg z-10 min-w-[150px]`
+  const dropdownCss = `absolute left-0 top-full bg-white border border-gray-300 shadow-lg z-10 min-w-[200px]`
 
   const menuItems = [
     {
@@ -37,6 +37,10 @@ export default function MainSideBar() {
         {
           label: '상점',
           path: '/shop/all',
+        },
+        {
+          label: '열차 동력 시스템',
+          path: '/train/train-power',
         },
         {
           label: '영상',

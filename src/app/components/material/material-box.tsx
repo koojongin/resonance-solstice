@@ -27,7 +27,7 @@ export function MaterialBoxResponsive({
       <img className="absolute bottom-0 z-0" src={getMaterialBgFrameUrl(material.grade)} />
       <img
         className="relative z-20 rounded w-full"
-        src={material.thumbnail}
+        src={material.thumbnail || 'https://static.hdslb.com/images/member/noface.gif'}
         style={{ padding: `${withoutIconPadding ? '0' : '4px'}` }}
       />
       <img className="absolute z-10 bottom-0" src={getMaterialBottomFrameUrl(material.grade)} />
