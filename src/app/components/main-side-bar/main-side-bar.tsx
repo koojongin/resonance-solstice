@@ -83,6 +83,10 @@ export default function MainSideBar() {
       label: '상점',
       path: '/shop/all',
     },
+    {
+      label: '티어메이커',
+      path: '/tiermaker',
+    },
   ]
 
   return (
