@@ -35,6 +35,7 @@ export default function RootLayout({
         <meta name="description" content="레조넌스: 솔스티스 정보 공유 사이트" />
         <meta name="keywords" content="레조넌스, resonance, solstice" />
         <meta property="og:title" content="레조넌스: 솔스티스 정보 공유 사이트" />
+        <meta property="title" content="레조넌스: 솔스티스 정보 공유 사이트" />
         <meta name="robots" content="index, follow" />
         <meta name="thumbnail" content="https://res.ujoygames.com/krImg/kv.jpg" />
         <meta
