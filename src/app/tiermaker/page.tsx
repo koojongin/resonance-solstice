@@ -2,19 +2,23 @@
 
 import { useState } from 'react'
 import { DndContext, useDraggable, useDroppable } from '@dnd-kit/core'
-import html2canvas from 'html2canvas'
 import { CONVERTED_ALL_EQUIPMENTS } from '@/const/archive/equipment.const'
 import { ExtendedRSEquipment } from '@/app/equipments/equipment.type'
 import { EquipmentBoxResponsive } from '@/app/equipments/rs-equipment-list'
 import { Tooltip } from '@material-tailwind/react'
+import _ from 'lodash'
+import { RS_GRADE } from '@/const/character/character.enum'
 
 interface DraggableTier {
   id: string
   title: string
   items: Array<ExtendedRSEquipment & { id: string }>
 }
-
-const initialItems = CONVERTED_ALL_EQUIPMENTS.map((a, index) => ({
+const grades = Object.keys(RS_GRADE)
+const SORTED_ALL_EQUIPMENTS = _.sortBy(CONVERTED_ALL_EQUIPMENTS, (item) =>
+  grades.indexOf(item.grade),
+)
+const initialItems = SORTED_ALL_EQUIPMENTS.map((a, index) => ({
   id: `${index + 1}`,
   ...a,
 }))
@@ -52,7 +56,6 @@ const FULL_BOX_ID = 'full-list-box'
 export default function TierMaker() {
   const [items, setItems] = useState(initialItems)
   const [tiers, setTiers] = useState<DraggableTier[]>(initialTiers)
-  const { setNodeRef } = useDroppable({ id: 'list' })
   const [onShowItemName, setOnShowItemName] = useState<boolean>(true)
 
   const handleDragEnd = (event: any) => {
