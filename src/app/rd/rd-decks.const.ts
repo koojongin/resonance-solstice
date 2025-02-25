@@ -13,6 +13,7 @@ import {
   GANYA,
   ILONA,
   JERBOA,
+  JOSHUA,
   KALEYA,
   KAREN,
   KATAS,
@@ -22,6 +23,7 @@ import {
   NICOLA,
   PRIMING,
   RACHEL,
+  RAZIEL_THE_REMINISCE,
   RINA_F,
   SHIZURU,
   STELLA,
@@ -638,5 +640,22 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     owner: EXTERNAL_USERS['14'],
     autoPreset:
       'vZdNj9sgEIb/C2dXGhhsYl97irTbVmpvVQ5WQ7vWZpPUTtRWUf57wXZixuCPTVZ7Y8DMPLwzMMmJ/cjL9XL9mO9ZdmIcEgCByDIeNQYkojMw5p0h0qQzOIJjSGcFQTp7lGIZXFzHyllJwN0Tu3EcA2Xq4jigyB0HAhP3CMRQrgNwV6S7Ilxvds85YuuisnJ9+7fX9eru8KTLj2amtp50vtalGRpfwLmIWFE91HP2k89blv3MN5W201/3valyt9EPRXVg2ffr9magoB0AbwYI7QwosYrYs9a1s0/Hl1paC9h6OrFDXv7Sh4bXrFXPxWaztLQCTZZSjNix0l/yMn9pC8AIGpuD7v5sdVl/2AaKmP59LPbLi+tVvfMqxMULyz4YqzAbO4HP0cnffCVhFsV8mrKoT0sh7PlJzMbFdq3/skyMIJhamoMAKp5EMLm4BcEW4DhCS7AIRuwxzdHd1rKNOJF/Eco/vGX+zXW1HK5QwaLDcFA3hltVyPz8oc1fB4KecL0TzCkKkcJkUXAxXBQ4LI19MfvS8OB99BNC7wK6bu076h0jTgXRJvarKiDOdNL8p4JeEaQ1qQJZUwnNWjyHbKysjUsVhA3IqHz3lN4BA3oWMS95YiDqgERxUCJJJBKzkjf+1nC58N6a+sLd8NbYVjmlhQWg0WwX69wLUsIYuN6yrh7K8AYlLL30UDB6tzCQHpmkBEzey+VrRa+7oN1N+kgJLO7UamZjGE1iEtLqXrDgJRvoWANgaRxqHvg+io2CBRQzHfQGsIm2LycrbqLjj/3cMn8RXv8a0CZKK5z7DY1DeossN+RrBMz+y/HABLwabHX+Dw==',
+  },
+
+  {
+    title: '셔플 더 다크 아트 (2025.01.21)',
+    leaderName: NAYUTA.name,
+    characters: [
+      { character: NAYUTA, equipments: ['비트레이얼', '시뮬레이트 스타', '초인과의 주사위'] },
+      { character: AOBA, equipments: ['비트레이얼', '시뮬레이트 스타', '초인과의 주사위'] },
+      { character: JOSHUA, equipments: ['회한의 갈고리', '시뮬레이트 스타', '고대의 편법 8면체'] },
+      { character: RINA_F, equipments: ['비트레이얼', '시뮬레이트 스타', '초인과의 주사위'] },
+      { character: TENNIE, equipments: ['비트레이얼', '시뮬레이트 스타', '춘추합성인장'] },
+    ],
+    desc: '완전한 생존 전문화를 갖춘 팀은 주로 고압 환경과 장기 전투에 사용됩니다.\n일반적인 사업 운영에는 권장되지 않습니다.\n교활함과 배신은 필수는 아니지만, 악마가 많을수록 더 빨리 나타납니다.\n\n다크아츠 셔플 초반에는 아리나가 쓰이겠지만, 압박이 커질수록 보스의 데미지가 너무 높아서 체력이 가득 찬 상태에서도 즉사할 수 있고, 아리나의 회복도 잘 안 되기 때문에 여기서는 가장 안정적인 포지션을 가진 팀으로 전환합니다.',
+    descLink:
+      'https://wiki.biligame.com/resonance/%E7%88%AC%E5%A1%94-%E6%B4%97%E7%89%8C%E6%9A%97%E8%89%BA',
+    autoPreset:
+      'pVdRj5swDP4veWZSnBACvO6p0u02aXub7gGNbIeua3vQapsq/vscQg9TKCWXPuHE8Wf7s530zKrm6+FjUZefdyz/WWwbE7F6vzUPVXNk+Xfg9qdF5D4kuA+hE/ch06zf0vAUsRdjOmOPp98s5xHbH59NbRc6qWoeTFG6BQL33C2y/A2L/UCFTfmpOLD8z IAniKMAFSInAMhBkAkfBJFyuqPJmTQjOzERhCYCaEF2MoIDmaDWUqoWUzXqjhqpKeooOSMV9VpRDxIUxJuBhHqtaaTUWmK9bl0WexrPbP9nZ+pNeckyEslOjflS1AUy9cFJ3/4dTGeneam2205ZSM5jYblDafApYsei/mWO7gRum9dTddhc4BhAaqPX7K mNQrAhATXBGlyxDM8A6HUArIsOMJETCKezK83f7ggJHotlDlGsDynO4qWQsNCnALbNVvMlbYJvAthGeH8ELmfo5XLO5Dhn8yzdRhSTnKXpOEkzJXix1Y8NbALVBlMlF6nic3H5tFYCeokqHDnvB+ipUneoGpc3Trzg6uOL1ZcGALiQRHanY8U4iSEs9Un UM/V2u97xPgieSmjDAzGdi9Evq2jHo1DsPTlFtM+C9YgxgAeP9o4Lbmex1M7x7GD07LbEIyT7CAh노킬B232bRBMm8g8StM+z8KvG58Y7TsrtBkgvjNixu2n3FC70l/o/+GO4u343iMtBjbqsctXpXTtNag1fgg/P+yz088PbCXW4r+BsmrsG7RPcvsf',
   },
 ]

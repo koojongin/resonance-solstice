@@ -3114,6 +3114,34 @@ export const ALL_EQUIPMENTS: {
       },
     ],
   },
+
+  '회한의 갈고리': {
+    type: RSEquipmentType.WEAPON,
+    grade: RS_GRADE.UR,
+    desc: '기본 속성: 공격력+45\n옵션: [암흑 예술]을 사용할 때마다 전투에서 [암흑 예술]과 [다키스트 아워]의 데미지가 13%씩 증가하며, 중첩 가능합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/d8/rlujekmb872ruu7xyjjpuaowtem7jfz.png',
+    faction: RS_FACTION.SOURCE_CITADEL,
+    earnsPath: [],
+  },
+  '초인과의 주사위': {
+    type: RSEquipmentType.ACCESSORY,
+    grade: RS_GRADE.UR,
+    desc: '기본 속성: 체력+4585\n옵션: 모든 팀원이 모든 확률 메커니즘을 발동할 확률 +3%, 중첩가능',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/dd/a8jqvtha6mao3msc4nj1pqm2khvdzzw.png',
+    faction: RS_FACTION.SOURCE_CITADEL,
+    earnsPath: [],
+  },
+  '고대의 편법 8면체': {
+    type: RSEquipmentType.ACCESSORY,
+    grade: RS_GRADE.UR,
+    desc: '기본 속성: 체력+4865\n옵션: [암흑 예술] 비용이 소모되지 않을 확률이 30%입니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/c8/ca4mgfb3y4i88a8imc2wozt58xp8c9g.png',
+    faction: RS_FACTION.SOURCE_CITADEL,
+    earnsPath: [],
+  },
 }
 
 export const CONVERTED_ALL_EQUIPMENTS = _.map(ALL_EQUIPMENTS, (value, key) => ({
