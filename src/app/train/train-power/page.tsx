@@ -95,6 +95,21 @@ export default function TrainPowerPage() {
           })}
         </div>
       </div>
+
+      <hr />
+      <div className="flex flex-col gap-[4px]">
+        <div className="ff-dh text-[20px]">승무원</div>
+        <div className="flex flex-col gap-[2px]">
+          <div>캐롤라인 - 공명1 : 전력한도 +5%</div>
+          <div>BO-X - 공명4 : 전력한도 +5%</div>
+        </div>
+      </div>
+      <div className="flex flex-col gap-[4px]">
+        <div className="ff-dh text-[20px]">가구</div>
+        <div className="flex flex-col gap-[2px]">
+          <div>아니타 걸이식 배터리팩 : 레벨 당 500파워 (최대 3레벨)</div>
+        </div>
+      </div>
     </div>
   )
 }
