@@ -1,10 +1,15 @@
 import { RS_GRADE } from '@/const/character/character.enum'
 
+export enum RSMaterialType {
+  TRAIN_EQUIPMENT = '철도 장비',
+}
+
 export interface RSMaterial {
   grade: RS_GRADE
   thumbnail: string
   desc: string
   trainEquipmentType?: any
+  type?: RSMaterialType
 }
 
 export const MATERIALS: { [key: string]: RSMaterial } = {
@@ -999,6 +1004,7 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
   /// ///열차 장비
   '유인용 전조등': {
     trainEquipmentType: '헤드 라이트',
+    type: RSMaterialType.TRAIN_EQUIPMENT,
     grade: RS_GRADE.SR,
     desc: '',
     thumbnail:
@@ -1006,6 +1012,7 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
   },
   '고출력 오디오 제너레이터(432Hz)': {
     trainEquipmentType: '소나',
+    type: RSMaterialType.TRAIN_EQUIPMENT,
     grade: RS_GRADE.SR,
     desc: '',
     thumbnail:
@@ -1013,6 +1020,7 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
   },
   '초저주파 진동기': {
     trainEquipmentType: '소나',
+    type: RSMaterialType.TRAIN_EQUIPMENT,
     grade: RS_GRADE.SR,
     desc: '',
     thumbnail:
@@ -1020,6 +1028,7 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
   },
   '원더링 전조등': {
     trainEquipmentType: '헤드 라이트',
+    type: RSMaterialType.TRAIN_EQUIPMENT,
     grade: RS_GRADE.SSR,
     desc: '',
     thumbnail:
@@ -1027,6 +1036,7 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
   },
   '보조 펜던트': {
     trainEquipmentType: '보조 펜던트',
+    type: RSMaterialType.TRAIN_EQUIPMENT,
     grade: RS_GRADE.SSR,
     desc: '',
     thumbnail:
@@ -1034,6 +1044,7 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
   },
   '운송 드론 787': {
     trainEquipmentType: '보조 펜던트',
+    type: RSMaterialType.TRAIN_EQUIPMENT,
     grade: RS_GRADE.SSR,
     desc: '',
     thumbnail:
@@ -1042,6 +1053,7 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
   /// //////////////////
   '합금 임팩트 플레이트': {
     trainEquipmentType: '충돌 무기',
+    type: RSMaterialType.TRAIN_EQUIPMENT,
     grade: RS_GRADE.R,
     desc: '',
     thumbnail:
@@ -1049,6 +1061,7 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
   },
   '서큘러 쏘': {
     trainEquipmentType: '충돌 무기',
+    type: RSMaterialType.TRAIN_EQUIPMENT,
     grade: RS_GRADE.SR,
     desc: '',
     thumbnail:
@@ -1056,6 +1069,7 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
   },
   '블랙아웃 충각': {
     trainEquipmentType: '충돌 무기',
+    type: RSMaterialType.TRAIN_EQUIPMENT,
     grade: RS_GRADE.SSR,
     desc: '',
     thumbnail:
@@ -1063,6 +1077,7 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
   },
   '롤러 장치': {
     trainEquipmentType: '충돌 무기',
+    type: RSMaterialType.TRAIN_EQUIPMENT,
     grade: RS_GRADE.R,
     desc: '',
     thumbnail:
@@ -1070,6 +1085,7 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
   },
   '분쇄 임팩트 롤러': {
     trainEquipmentType: '충돌 무기',
+    type: RSMaterialType.TRAIN_EQUIPMENT,
     grade: RS_GRADE.SR,
     desc: '',
     thumbnail:
@@ -1077,6 +1093,7 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
   },
   '분해 임팩트 롤러': {
     trainEquipmentType: '충돌 무기',
+    type: RSMaterialType.TRAIN_EQUIPMENT,
     grade: RS_GRADE.SSR,
     desc: '',
     thumbnail:
@@ -1084,6 +1101,7 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
   },
   '수압 파괴 굴삭기': {
     trainEquipmentType: '충돌 무기',
+    type: RSMaterialType.TRAIN_EQUIPMENT,
     grade: RS_GRADE.R,
     desc: '',
     thumbnail:
@@ -1091,6 +1109,7 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
   },
   '협음 파괴 굴삭기': {
     trainEquipmentType: '충돌 무기',
+    type: RSMaterialType.TRAIN_EQUIPMENT,
     grade: RS_GRADE.SR,
     desc: '',
     thumbnail:
@@ -1098,6 +1117,7 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
   },
   '스크림 파괴 굴삭기': {
     trainEquipmentType: '충돌 무기',
+    type: RSMaterialType.TRAIN_EQUIPMENT,
     grade: RS_GRADE.SSR,
     desc: '',
     thumbnail:
@@ -1105,6 +1125,7 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
   },
   '철강 드릴 비트': {
     trainEquipmentType: '충돌 무기',
+    type: RSMaterialType.TRAIN_EQUIPMENT,
     grade: RS_GRADE.SR,
     desc: '',
     thumbnail:
@@ -1112,6 +1133,7 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
   },
   '핫멜트 드릴 비트': {
     trainEquipmentType: '충돌 무기',
+    type: RSMaterialType.TRAIN_EQUIPMENT,
     grade: RS_GRADE.SSR,
     desc: '',
     thumbnail:
@@ -1119,6 +1141,7 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
   },
   '레이저 드릴 비트': {
     trainEquipmentType: '충돌 무기',
+    type: RSMaterialType.TRAIN_EQUIPMENT,
     grade: RS_GRADE.UR,
     desc: '',
     thumbnail:
@@ -1126,6 +1149,7 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
   },
   '질화티탄 코팅': {
     trainEquipmentType: '코팅',
+    type: RSMaterialType.TRAIN_EQUIPMENT,
     grade: RS_GRADE.SR,
     desc: '',
     thumbnail:
@@ -1133,6 +1157,7 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
   },
   '군사 장갑판': {
     trainEquipmentType: '장갑판',
+    type: RSMaterialType.TRAIN_EQUIPMENT,
     grade: RS_GRADE.SR,
     desc: '',
     thumbnail:
@@ -1140,6 +1165,7 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
   },
   '고회전력 모터': {
     trainEquipmentType: '보조 펜던트',
+    type: RSMaterialType.TRAIN_EQUIPMENT,
     grade: RS_GRADE.R,
     desc: '',
     thumbnail:
@@ -1147,6 +1173,7 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
   },
   '화물 거치대': {
     trainEquipmentType: '보조 펜던트',
+    type: RSMaterialType.TRAIN_EQUIPMENT,
     grade: RS_GRADE.R,
     desc: '',
     thumbnail:

@@ -19,11 +19,8 @@ import _ from 'lodash'
 import { RS_FACTION, RS_GRADE } from '@/const/character/character.enum'
 import { ExtendedRSEquipment } from '@/app/equipments/equipment.type'
 import { Tooltip } from '@material-tailwind/react'
+import { ItemBoxViewMode } from '@/const/item/item.enum'
 
-enum EquipBoxViewMode {
-  'MAXIMIZED' = 'MAXIMIZED',
-  'MINIMIZED' = 'MINIMIZED',
-}
 export function RsEquipmentList({
   checkedGrades,
   checkedFactions,
@@ -38,7 +35,7 @@ export function RsEquipmentList({
   )
 
   const [equipments, setEquipments] = useState<ExtendedRSEquipment[]>(SORTED_ALL_EQUIPMENTS)
-  const [viewMode, setViewMode] = useState<EquipBoxViewMode>(EquipBoxViewMode.MINIMIZED)
+  const [viewMode, setViewMode] = useState<ItemBoxViewMode>(ItemBoxViewMode.MINIMIZED)
 
   useEffect(() => {
     setEquipments(
@@ -71,7 +68,7 @@ export function RsEquipmentList({
     <div className="flex flex-col gap-[4px]">
       <div className="flex items-stretch gap-[10px]">
         <div className="flex gap-[4px] border">
-          {Object.values(EquipBoxViewMode).map((viewName, index) => {
+          {Object.values(ItemBoxViewMode).map((viewName, index) => {
             return (
               <div
                 className={`cursor-pointer flex items-center justify-center w-[40px] ${viewMode === viewName && 'bg-blue-gray-900 text-white'}`}
@@ -91,7 +88,7 @@ export function RsEquipmentList({
         )}
       </div>
       <div
-        className={`flex ${viewMode === EquipBoxViewMode.MINIMIZED ? 'flex-wrap' : 'flex-col gap-[8px]'}`}
+        className={`flex ${viewMode === ItemBoxViewMode.MINIMIZED ? 'flex-wrap' : 'flex-col gap-[8px]'}`}
       >
         {equipments.map((equipment) => {
           return (
@@ -102,13 +99,13 @@ export function RsEquipmentList({
               >
                 <div className="flex items-center justify-center relative">
                   <EquipmentBox equipment={equipment} />
-                  {viewMode === EquipBoxViewMode.MINIMIZED && (
+                  {viewMode === ItemBoxViewMode.MINIMIZED && (
                     <div className="absolute left-0 bottom-0 z-20 ff-dh text-[16px] text-white text-shadow-outline truncate w-full px-[4px] text-center">
                       {equipment.name}
                     </div>
                   )}
                 </div>
-                {viewMode === EquipBoxViewMode.MAXIMIZED && (
+                {viewMode === ItemBoxViewMode.MAXIMIZED && (
                   <div className="flex flex-col p-[8px] px-[4px] gap-[4px]">
                     <div className="ff-dh text-[16px] text-white text-shadow-outline">
                       {equipment.name}
