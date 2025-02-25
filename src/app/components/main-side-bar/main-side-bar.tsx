@@ -35,6 +35,10 @@ export default function MainSideBar() {
           path: '/archive',
         },
         {
+          label: '상점',
+          path: '/shop/all',
+        },
+        {
           label: '영상',
           path: '/video',
         },
@@ -78,10 +82,6 @@ export default function MainSideBar() {
           className: 'text-[18px] w-[300px] text-gray-500',
         },
       ],
-    },
-    {
-      label: '상점',
-      path: '/shop/all',
     },
     {
       label: '티어메이커',
