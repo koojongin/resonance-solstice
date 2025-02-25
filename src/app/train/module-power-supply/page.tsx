@@ -81,7 +81,6 @@ export default function TrainModulePowerSupplyPage() {
           })}
         </div>
       </div>
-
     </div>
   )
 }
