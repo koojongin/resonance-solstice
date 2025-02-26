@@ -648,7 +648,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     characters: [
       { character: NAYUTA, equipments: ['비트레이얼', '시뮬레이트 스타', '초인과의 주사위'] },
       { character: AOBA, equipments: ['비트레이얼', '시뮬레이트 스타', '초인과의 주사위'] },
-      { character: JOSHUA, equipments: ['회한의 갈고리', '시뮬레이트 스타', '고대의 편법 8면체'] },
+      { character: JOSHUA, equipments: ['후회의 갈고리', '시뮬레이트 스타', '트라페조헤드론'] },
       { character: RINA_F, equipments: ['비트레이얼', '시뮬레이트 스타', '초인과의 주사위'] },
       { character: TENNIE, equipments: ['비트레이얼', '시뮬레이트 스타', '춘추합성인장'] },
     ],

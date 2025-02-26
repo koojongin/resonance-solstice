@@ -49,14 +49,16 @@ export function RsCharacterCardResponsiveShorten({
   height: number
 }) {
   return (
-    <div className="cursor-pointer">
+    <div className="cursor-pointer relative">
       <div className="overflow-hidden relative rounded-[4px]" style={{ height: `${height}px` }}>
         <img src={getFrameBgUrl(character.grade)} className="absolute z-0 w-full bottom-[-40px]" />
         <img
           src={convertCharacterThumbnailUrl(character.thumbnail, 140)}
           className="w-full z-10 absolute"
         />
-        <RsCharacterBorderBox grade={character.grade} />
+        <div className="relative w-full h-full z-10">
+          <RsCharacterBorderBox grade={character.grade} borderSize={2} />
+        </div>
       </div>
     </div>
   )

@@ -3115,14 +3115,20 @@ export const ALL_EQUIPMENTS: {
     ],
   },
 
-  '회한의 갈고리': {
+  '후회의 갈고리': {
     type: RSEquipmentType.WEAPON,
     grade: RS_GRADE.UR,
     desc: '기본 속성: 공격력+45\n옵션: [다크 아트]을 사용할 때마다 전투에서 [다크 아트]과 [다키스트 아워]의 데미지가 13%씩 증가하며, 중첩 가능합니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/d/d8/rlujekmb872ruu7xyjjpuaowtem7jfz.png',
     faction: RS_FACTION.SOURCE_CITADEL,
-    earnsPath: [],
+    earnsPath: [
+      {
+        desc: '골든 원더랜드-조슈아-교환',
+        tags: [],
+        map: '골든 원더랜드',
+      },
+    ],
   },
   '초인과의 주사위': {
     type: RSEquipmentType.ACCESSORY,
@@ -3133,14 +3139,35 @@ export const ALL_EQUIPMENTS: {
     faction: RS_FACTION.SOURCE_CITADEL,
     earnsPath: [],
   },
-  '고대의 편법 8면체': {
+  트라페조헤드론: {
     type: RSEquipmentType.ACCESSORY,
     grade: RS_GRADE.UR,
-    desc: '기본 속성: 체력+4865\n옵션: [다크 아트] 비용이 소모되지 않을 확률이 30%입니다.',
+    desc: '기본 속성: 체력+4865\n옵션: [다크 아트]가 30%의 확률로 비용을 소모하지 않습니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/c/c8/ca4mgfb3y4i88a8imc2wozt58xp8c9g.png',
     faction: RS_FACTION.SOURCE_CITADEL,
-    earnsPath: [],
+    earnsPath: [
+      {
+        desc: '골든 원더랜드-조슈아-교환',
+        tags: [],
+        map: '골든 원더랜드',
+      },
+    ],
+  },
+  '거짓신의 속삭임': {
+    type: RSEquipmentType.ACCESSORY,
+    grade: RS_GRADE.UR,
+    desc: '기본 속성: 체력+4790\n옵션: 아군의 모든 드론의 지속 시간이 1초 증가합니다.(중첩가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/e/ee/fq0fep0m7gviwrodzkw2e9ob2vagiyx.png/180px-%E4%BC%AA%E7%A5%9E%E4%BD%8E%E8%AF%AD.png',
+    faction: RS_FACTION.GARDENERS,
+    earnsPath: [
+      {
+        desc: '아니타 발사 센터-카리야-교환',
+        tags: [],
+        map: '아니타 발사 센터',
+      },
+    ],
   },
 }
 
