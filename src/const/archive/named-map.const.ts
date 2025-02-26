@@ -1146,7 +1146,7 @@ export const ALL_NAMED_MAPS: RSMap[] = [
       },
       { name: '레일용 특수 강재' },
       { name: '황동' },
-      { name: '철근 콘크리트 침묵' },
+      { name: '철근 콘크리트 침목' },
       { name: '건축자재' },
       { name: '철광석' },
       { name: '석재' },
@@ -1324,7 +1324,7 @@ export const ALL_NAMED_MAPS: RSMap[] = [
         isSpecialty: true,
       },
       {
-        name: '방호복',
+        name: '오염방지 보호복',
       },
       {
         name: '아니타 202 군용 드론',

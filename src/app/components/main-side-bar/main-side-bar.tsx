@@ -91,6 +91,16 @@ export default function MainSideBar() {
       label: '티어메이커',
       path: '/tiermaker/character',
     },
+    {
+      label: '이벤트',
+      subMenu: [
+        {
+          label: '마이레일',
+          path: '/event/my-rail',
+          className: 'text-[18px]',
+        },
+      ],
+    },
   ]
 
   return (

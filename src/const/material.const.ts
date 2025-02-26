@@ -77,7 +77,7 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/b/b6/ate9jil117a1ls3zkmxkvk3yx9pq4vj.png',
   },
-  '철근 콘크리트 침묵': {
+  '철근 콘크리트 침목': {
     grade: RS_GRADE.N,
     desc: ``,
     thumbnail:
@@ -801,7 +801,7 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/5/56/0zfh0mgzfb8jt826hrm4q2raixwnd0x.png',
   },
-  방호복: {
+  '오염방지 보호복': {
     grade: RS_GRADE.N,
     desc: '',
     thumbnail:
@@ -1239,6 +1239,18 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
     desc: '',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/1/1a/l48s04xydtv6r61k42nyo2nyqq5eps9.png',
+  },
+  "'마이레일' 건설 포인트": {
+    grade: RS_GRADE.SR,
+    desc: "콜룸바 상회의 '마이레일' 건설 임무 완성 시 획득하는 포인트입니다. 상회 마일리지 상점에서 아이템을 교환할 수 있습니다.",
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/c/c5/8wpgp3eaua7vskcgmmq0tee6fy60lwn.png/180px-%E2%80%9C%E6%88%91%E9%80%A0%E6%88%91%E8%B7%AF%E2%80%9D%E5%BB%BA%E8%AE%BE%E7%82%B9%E6%95%B0.png',
+  },
+  '마이레일 건설 진행도': {
+    grade: RS_GRADE.R,
+    desc: '획득 시 마이레일 건설 단계가 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/6/66/tkfhdunsn1yn6w3v905llneaqp6ekpe.png/180px-%E6%88%91%E9%80%A0%E6%88%91%E8%B7%AF%E5%B7%A5%E7%A8%8B%E5%BB%BA%E8%AE%BE%E8%BF%9B%E5%BA%A6.png',
   },
 }
 
