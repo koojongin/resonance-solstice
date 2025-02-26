@@ -423,8 +423,7 @@ export const CHARACTER_SKILLS: {
     cost: 2,
     name: '서리 신성',
     desc: '목표 구역을 향해 서리 신성을 1개 발사하여 범위 내의 적에게 1단 피해를 입히고 [붕괴]를 부여합니다. 동시에 [동결]을 발동합니다.\n이 카드의 [광붕괴]:\n손에 [신성]이 3장 있을 때 자동으로 [초신성]으로 융합됩니다.\n[신성]/[원소 신성]/[초신성]은 [파]입니다.\n사용 후 [소각]됩니다.',
-    thumbnail:
-      'https://i.namu.wiki/i/FrUeNGArClAt1L8Khj21ElluoenXk9cZbPYpuzm5B-VjgI2_2CK3OiPC5zz4otAv57T6yFq8Azk0jZ2iiFNMCw.webp',
+    thumbnail: 'https://i.postimg.cc/jjTY3z9L/Shuang-Dong-Xin-Xing.png',
     isGeneratedCard: true,
   },
   급습: {
