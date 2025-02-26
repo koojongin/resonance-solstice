@@ -100,18 +100,23 @@ export function TierDropTableBox({
           ))}
         </div>
 
-        <div className="flex flex-wrap gap-[2px] w-full border">
-          <DroppableRowBottom id={FULL_BOX_ID}>
-            {items.map((item) => (
-              <DraggableItem
-                key={item.id}
-                onShowItemName={onShowItemName || false}
-                item={item}
-                id={item.id}
-                type={type}
-              />
-            ))}
-          </DroppableRowBottom>
+        <div className="flex flex-col gap-[2px]">
+          <div className="text-red-400 font-bold">
+            *리스트 안의 아이템을 선택시 좌상단으로 이동됩니다.
+          </div>
+          <div className="flex flex-wrap gap-[2px] w-full border">
+            <DroppableRowBottom id={FULL_BOX_ID}>
+              {items.map((item) => (
+                <DraggableItem
+                  key={item.id}
+                  onShowItemName={onShowItemName || false}
+                  item={item}
+                  id={item.id}
+                  type={type}
+                />
+              ))}
+            </DroppableRowBottom>
+          </div>
         </div>
       </div>
     </DndContext>
