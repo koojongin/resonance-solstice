@@ -47,6 +47,7 @@ export default function RootLayout({
           name="google-site-verification"
           content="tF9OdRRToB9MDttTVe3pdTXv1M5m2yoYbhHIvySVtgw"
         />
+        <meta name="naver-site-verification" content="0263a755188fb915d3befafe6d6e3b9ccaa56736" />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
