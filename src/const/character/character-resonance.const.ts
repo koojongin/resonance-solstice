@@ -360,4 +360,29 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/4/41/ron8pn2vxmaudbcp12gwpcj3js6hzko.png',
   },
+
+  부채바람: {
+    name: '부채바람',
+    desc: '[부채술] 강화:\n부채를 흔들어 자신과 앞열 아군의 공격력을 2% 증가시킵니다.(중첩 가능)\n동시에 앞열 아군에게 걸린 [점화]를 제거합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/0a/f9ecyf7aylutepcdbrhu4dh2ld3subb.png',
+  },
+  경운: {
+    name: '경운',
+    desc: '[유세술]이 손에 있을때 [부채술]이 소모하는 비용이 1 감소합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/0b/69wns4sos2slu288ad3y0hv64h98g39.png',
+  },
+  회전: {
+    name: '회전',
+    desc: '[부채술] 사용 후 30% 확률로 카드를 다시 손으로 가져옵니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2e/1nn5r6oqcic7dsq6d72vy3vzuvaeou4.png',
+  },
+  풍설: {
+    name: '풍설',
+    desc: '[오의-유풍] 강화:\n[오의-유풍]을 시전하여 모든 적에게 6단 피해를 입히고, 동시에 [냉동]을 발동합니다. 버려진 덱에 있는 [부채술] 1장당 자신의 공격력이 2% 증가합니다.(중첩 가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e9/9wnl8l3xmag1er33mcqy3u8hq9iwpgk.png',
+  },
 }

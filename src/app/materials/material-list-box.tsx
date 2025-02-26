@@ -85,8 +85,13 @@ export function MaterialListBox({ checkedTypes, searchedKeyword, checkedGrades }
                 className="flex gap-[4px] border items-stretch shadow-md cursor-pointer"
                 onClick={() => router.push(`/materials/${material.name}`)}
               >
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-center relative">
                   <MaterialBox material={material} />
+                  {viewMode === ItemBoxViewMode.MINIMIZED && (
+                    <div className="absolute left-0 bottom-0 z-20 ff-dh text-[16px] text-white text-shadow-outline truncate w-full px-[4px] text-center">
+                      {material.name}
+                    </div>
+                  )}
                 </div>
                 {viewMode === ItemBoxViewMode.MAXIMIZED && (
                   <div className="flex flex-col p-[8px] px-[4px] gap-[4px]">

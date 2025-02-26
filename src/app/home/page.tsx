@@ -4,6 +4,7 @@ import React from 'react'
 import { copyToClipboard } from '@/services/utils/copy-clipboard'
 import createKey from '@/services/key-generator'
 import { GradientButton } from '@/app/components/button/gradient-button'
+import { OfficialUpdatePostBox } from '@/app/home/official-update-post-box'
 
 export default function HomePage() {
   const coupons = [
@@ -79,6 +80,10 @@ export default function HomePage() {
           </a>
         </div>
       </div>
+
+      {/* <div className="border border-gray-400 p-[10px] rounded"> */}
+      {/*   <OfficialUpdatePostBox /> */}
+      {/* </div> */}
     </div>
   )
 }

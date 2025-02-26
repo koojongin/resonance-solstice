@@ -360,4 +360,29 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/d/db/5scekfm7740r4w3eiv2jjfkixrbkb19.png',
   },
+
+  종횡: {
+    name: '종횡',
+    desc: '[유세술]이 버려질 때 비용을 5 얻습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/85/lm0kfugk17o3mykw2s8b13ivb9ew933.png',
+  },
+  운명: {
+    name: '운명',
+    desc: '전투 시작 시 덱에서 [유세술]을 1장 뽑아 손으로 가져옵니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/f0/8bcu0bqa1gnyv6d60o7a74wm4suvq3u.png',
+  },
+  임기응변: {
+    name: '임기응변',
+    desc: '[부채술] 사용 시 자신이 무작위로 [무적]/[슈퍼아머]/[은신]을 2초간 발동합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/85/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  깡쯔: {
+    name: '깡쯔',
+    desc: '손에 같은 카드를 4장 가지고 있을 시 비용을 4 얻습니다.(2회 한정)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/c9/ekenyyx3oy8cqhlj0g63neoaa68x35a.png',
+  },
 }

@@ -678,4 +678,29 @@ export const CHARACTER_SKILLS: {
       'https://patchwiki.biligame.com/images/resonance/0/02/0fik4q462hle6bigreymlujk03kgjv5.png',
     isGeneratedCard: true,
   },
+
+  부채술: {
+    amount: 4,
+    cost: 1,
+    name: '부채술',
+    desc: '부채를 흔들어 앞열 아군의 공격력을 2% 증가시킵니다.(중첩 가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/25/5wezl2aml202vh725yiuzfgflp5cibw.png',
+  },
+  유세술: {
+    amount: 1,
+    cost: 10,
+    name: '유세술',
+    desc: '5장의 카드를 뽑습니다.\n이 카드가 손에 있는 동안 [레드카드]를 1장 낼 때마다 이 카드의 비용이 1 감소합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e3/t680z5bguufb7qn74g39v2lw11rhtlf.png',
+  },
+  '오의-유풍': {
+    amount: 1,
+    cost: 5,
+    name: '오의-유풍',
+    desc: '[오의-유풍]을 시전하여 모든 적에게 6단 피해를 입힙니다.\n버려진 덱에 있는 [부채술] 1장당 공격력이 1% 증가합니다.(중첩 가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/25/d91ch3vwdipmnanvgn7h6nwxzjzr7n1.png',
+  },
 }
