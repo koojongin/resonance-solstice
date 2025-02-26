@@ -10,6 +10,7 @@ import { Tooltip } from '@material-tailwind/react'
 import { useNextDepthNavigator } from '@/services/navigation'
 import { MaterialBoxResponsive } from '@/app/components/material/material-box'
 import { RSTrainArmoryOrder } from '@/const/map/map.interface'
+import { TRAIN_EQUIPMENTS } from '@/const/item/train-equipment.const'
 
 export function RsTrainArmoryExchangeBox({
   trainArmoryOrders,
@@ -116,7 +117,7 @@ export function RsTrainArmoryExchangeBox({
                 <div className="flex gap-[2px] p-[2px]">
                   {order.rewards.map((reward) => {
                     const material = {
-                      ...MATERIALS[reward.name],
+                      ...(MATERIALS[reward.name] || TRAIN_EQUIPMENTS[reward.name]),
                       name: reward.name,
                     }
                     return (

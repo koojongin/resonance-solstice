@@ -13,6 +13,7 @@ import { ALL_NAMED_MAPS } from '@/const/archive/named-map.const'
 import createKey from '@/services/key-generator'
 import { GradientButton } from '@/app/components/button/gradient-button'
 import { useNextDepthNavigator } from '@/services/navigation'
+import { TRAIN_EQUIPMENTS } from '@/const/item/train-equipment.const'
 
 export default function MaterialDetailPage() {
   const { name } = useParams()
@@ -20,7 +21,7 @@ export default function MaterialDetailPage() {
 
   const decodedName = decodeURIComponent(name as string)
 
-  const material = MATERIALS[decodedName]
+  const material = MATERIALS[decodedName] || TRAIN_EQUIPMENTS[decodedName]
   if (!material) return <div>검색된 재료 데이터 없음.</div>
 
   const relatedMaps = ALL_NAMED_MAPS.filter((map) => {
