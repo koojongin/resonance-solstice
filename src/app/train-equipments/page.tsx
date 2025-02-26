@@ -7,16 +7,16 @@ import createKey from '@/services/key-generator'
 import { CheckBoxGroup } from '@/services/common.enum'
 import { ExtendedRSMaterial } from '@/const/material/material.type'
 import _ from 'lodash'
-import { MATERIALS } from '@/const/material.const'
+import { TRAIN_EQUIPMENTS } from '@/const/item/train-equipment.const'
 
 const grades = Object.keys(RS_GRADE)
-const CONVERTED_MATERIALS: ExtendedRSMaterial[] = _.map(MATERIALS, (value, key) => ({
+const CONVERTED_MATERIALS: ExtendedRSMaterial[] = _.map(TRAIN_EQUIPMENTS, (value, key) => ({
   name: key,
   ...value,
 }))
 
 const SORTED_MATERIALS = _.sortBy(CONVERTED_MATERIALS, (item) => grades.indexOf(item.grade))
-export default function MaterialsPage() {
+export default function TrainEquipmentsPage() {
   const [searchedKeyword, setSearchedKeyword] = useState('')
   const handleSearchedKeywordChange = (event: any) => {
     const { value } = event.target

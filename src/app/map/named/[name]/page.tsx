@@ -16,6 +16,7 @@ import { GradientButton } from '@/app/components/button/gradient-button'
 import { RsTransportOrderBox } from '@/app/components/rs-transport-order-box'
 import { Tooltip } from '@material-tailwind/react'
 import { RsTrainArmoryExchangeBox } from '@/app/components/map/rs-train-armory-exchange-box'
+import { RsTradeShopBox } from '@/app/components/map/rs-trade-shop-box'
 
 export default function MapNamedDetailPage() {
   const { router } = useNextDepthNavigator()
@@ -96,6 +97,12 @@ export default function MapNamedDetailPage() {
             </>
           )}
         </div>
+
+        {map['교환소'] && (
+          <div>
+            <RsTradeShopBox tradeOrders={map['교환소']} />
+          </div>
+        )}
 
         {map['열차 무장 교환'] && (
           <div>

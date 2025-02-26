@@ -85,6 +85,9 @@ export function DraggableItem({
             {type === ItemBoxKind.MATERIAL && (
               <div className="max-w-[300px] whitespace-pre-line">{item.name}</div>
             )}
+            {type === ItemBoxKind.TRAIN_EQUIPMENT && (
+              <div className="max-w-[300px] whitespace-pre-line">{item.name}</div>
+            )}
             {type === ItemBoxKind.CHARACTER && (
               <div className="max-w-[300px] whitespace-pre-line">{item.name}</div>
             )}
@@ -94,7 +97,7 @@ export function DraggableItem({
         <div>
           {type === ItemBoxKind.EQUIPMENT && <EquipmentBoxResponsive equipment={item} />}
           {type === ItemBoxKind.MATERIAL && <MaterialBoxResponsive material={item as any} />}
-
+          {type === ItemBoxKind.TRAIN_EQUIPMENT && <MaterialBoxResponsive material={item as any} />}
           {type === ItemBoxKind.CHARACTER && (
             <div style={{ width: `${width}px` }}>
               <RsCharacterCardShorten character={item as any} height={width} />

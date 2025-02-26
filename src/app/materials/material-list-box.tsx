@@ -4,40 +4,25 @@ import { MaterialBox } from '@/app/components/material/material-box'
 import React, { useEffect, useState } from 'react'
 import { useNextDepthNavigator } from '@/services/navigation'
 import _ from 'lodash'
-import { MATERIALS, RSMaterialType } from '@/const/material.const'
-import { RS_GRADE } from '@/const/character/character.enum'
 import { ItemBoxViewMode } from '@/const/item/item.enum'
 import { Tooltip } from '@material-tailwind/react'
 
-const grades = Object.keys(RS_GRADE)
-const CONVERTED_MATERIALS: ExtendedRSMaterial[] = _.map(MATERIALS, (value, key) => ({
-  name: key,
-  ...value,
-}))
-
-const SORTED_MATERIALS = _.sortBy(CONVERTED_MATERIALS, (item) => grades.indexOf(item.grade))
-
-export function MaterialListBox({ checkedTypes, searchedKeyword, checkedGrades }: any) {
+export function MaterialListBox({ items, searchedKeyword, checkedGrades }: any) {
   const { router } = useNextDepthNavigator()
-  const [materials, setMaterials] = useState<ExtendedRSMaterial[]>(SORTED_MATERIALS)
+  const [materials, setMaterials] = useState<ExtendedRSMaterial[]>([...items])
   const [viewMode, setViewMode] = useState<ItemBoxViewMode>(ItemBoxViewMode.MINIMIZED)
   // trainEquipmentType
   useEffect(() => {
     setMaterials(
-      [...SORTED_MATERIALS].filter((material) => {
+      [...items].filter((material) => {
         const validGrades: string[] = _.keys(_.pickBy(checkedGrades, Boolean))
         const isValidGrade = validGrades.includes(material.grade)
 
-        const validTypes: string[] = _.keys(_.pickBy(checkedTypes, Boolean)).map(
-          (key) => RSMaterialType[key as keyof typeof RSMaterialType],
-        )
-        const isValidType = validTypes.length === 0 ? true : validTypes.includes(material.type!)
-
         const isValidKeyword = material.name.indexOf(searchedKeyword) >= 0
-        return isValidType && isValidGrade && (searchedKeyword ? isValidKeyword : true)
+        return isValidGrade && (searchedKeyword ? isValidKeyword : true)
       }),
     )
-  }, [checkedTypes, checkedGrades, searchedKeyword])
+  }, [checkedGrades, searchedKeyword])
   return (
     <div className="flex flex-col gap-[4px]">
       <div className="flex items-stretch gap-[10px]">
@@ -55,7 +40,7 @@ export function MaterialListBox({ checkedTypes, searchedKeyword, checkedGrades }
           })}
         </div>
         <div className="rounded-[4px] inline-flex p-[4px] text-white bg-gray-700 border-white/50 border-dotted border">
-          재료 - {materials.length} / {CONVERTED_MATERIALS.length}
+          재료 - {materials.length} / {items.length}
         </div>
         {searchedKeyword && (
           <div className="rounded-[4px] flex items-center">"{searchedKeyword}" 검색됨</div>

@@ -1,10 +1,11 @@
 'use client'
 
 import { useNextDepthNavigator } from '@/services/navigation'
-import { ALL_NAMED_MAPS, RSCityType } from '@/const/archive/named-map.const'
+import { ALL_NAMED_MAPS } from '@/const/archive/named-map.const'
 import createKey from '@/services/key-generator'
 import { useParams } from 'next/navigation'
 import React from 'react'
+import { RSCityType } from '@/const/map/map.interface'
 
 export default function MapNamedListBox() {
   const { name } = useParams()

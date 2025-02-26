@@ -1,10 +1,6 @@
 'use client'
 
-import {
-  ALL_NAMED_MAPS,
-  RSTrainArmoryOrder,
-  RSTransportOrder,
-} from '@/const/archive/named-map.const'
+import { ALL_NAMED_MAPS } from '@/const/archive/named-map.const'
 import { GradientHeaderDiv } from '@/app/components/div/gradient-header-div'
 import createKey from '@/services/key-generator'
 import React from 'react'
@@ -13,6 +9,7 @@ import { formatNumber } from '@/services/utils/number.formatter'
 import { Tooltip } from '@material-tailwind/react'
 import { useNextDepthNavigator } from '@/services/navigation'
 import { MaterialBoxResponsive } from '@/app/components/material/material-box'
+import { RSTrainArmoryOrder } from '@/const/map/map.interface'
 
 export function RsTrainArmoryExchangeBox({
   trainArmoryOrders,

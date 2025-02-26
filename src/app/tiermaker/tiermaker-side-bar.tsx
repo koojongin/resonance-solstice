@@ -12,7 +12,11 @@ const SIDEBAR_MENU = [
   },
   {
     path: '/tiermaker/equipment',
-    name: '장비',
+    name: '장비 - 승무원',
+  },
+  {
+    path: '/tiermaker/train-equipment',
+    name: '장비 - 열차',
   },
   {
     path: '/tiermaker/material',

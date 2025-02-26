@@ -27,8 +27,12 @@ export default function MainSideBar() {
           path: '/materials',
         },
         {
-          label: '장비',
+          label: '장비 - 승무원',
           path: '/equipments',
+        },
+        {
+          label: '장비 - 열차',
+          path: '/train-equipments',
         },
         {
           label: '용어집',

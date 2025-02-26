@@ -1,16 +1,10 @@
 import { RS_GRADE } from '@/const/character/character.enum'
 import _ from 'lodash'
 
-export enum RSMaterialType {
-  TRAIN_EQUIPMENT = '철도 장비',
-}
-
 export interface RSMaterial {
   grade: RS_GRADE
   thumbnail: string
   desc: string
-  trainEquipmentType?: any
-  type?: RSMaterialType
 }
 
 export const MATERIALS: { [key: string]: RSMaterial } = {
@@ -1062,184 +1056,6 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
       'https://patchwiki.biligame.com/images/resonance/3/3c/pxvxau1o91wldhwj1daglgmqbfa3sda.png',
   },
 
-  /// ///열차 장비
-  '유인용 전조등': {
-    trainEquipmentType: '헤드 라이트',
-    type: RSMaterialType.TRAIN_EQUIPMENT,
-    grade: RS_GRADE.SR,
-    desc: '',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/3/36/g3k23j2zzuxk5lacryf7gpzb711bhma.png',
-  },
-  '고출력 오디오 제너레이터(432Hz)': {
-    trainEquipmentType: '소나',
-    type: RSMaterialType.TRAIN_EQUIPMENT,
-    grade: RS_GRADE.SR,
-    desc: '',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/5/56/6l71ga77zxjn7ph1ab1hjc8vmz9zqol.png',
-  },
-  '초저주파 진동기': {
-    trainEquipmentType: '소나',
-    type: RSMaterialType.TRAIN_EQUIPMENT,
-    grade: RS_GRADE.SR,
-    desc: '',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/7/73/b1ivk40oyx5gfy4364icjkyqll12lqz.png',
-  },
-  '원더링 전조등': {
-    trainEquipmentType: '헤드 라이트',
-    type: RSMaterialType.TRAIN_EQUIPMENT,
-    grade: RS_GRADE.SSR,
-    desc: '',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/f/f2/p8bj89tughc53lbgma3ny62h0r27guv.png',
-  },
-  '보조 펜던트': {
-    trainEquipmentType: '보조 펜던트',
-    type: RSMaterialType.TRAIN_EQUIPMENT,
-    grade: RS_GRADE.SSR,
-    desc: '',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/c/c4/3vvbe8sh5y1kzbj5gpn1uirlfsvkrzd.png',
-  },
-  '운송 드론 787': {
-    trainEquipmentType: '보조 펜던트',
-    type: RSMaterialType.TRAIN_EQUIPMENT,
-    grade: RS_GRADE.SSR,
-    desc: '',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/7/70/0gozrlaaftuonopo0lwrusv50cda80j.png',
-  },
-  /// //////////////////
-  '합금 임팩트 플레이트': {
-    trainEquipmentType: '충돌 무기',
-    type: RSMaterialType.TRAIN_EQUIPMENT,
-    grade: RS_GRADE.R,
-    desc: '',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/2/2b/mxxnayscq53s4m9sotb9tcea9meqdz8.png',
-  },
-  '서큘러 쏘': {
-    trainEquipmentType: '충돌 무기',
-    type: RSMaterialType.TRAIN_EQUIPMENT,
-    grade: RS_GRADE.SR,
-    desc: '',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/e/e8/7oe6y595aktgf1sod6llxnj9m77zwj5.png',
-  },
-  '블랙아웃 충각': {
-    trainEquipmentType: '충돌 무기',
-    type: RSMaterialType.TRAIN_EQUIPMENT,
-    grade: RS_GRADE.SSR,
-    desc: '',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/c/c5/2s97vpygg0qvexqaodparytct0zzvcj.png',
-  },
-  '롤러 장치': {
-    trainEquipmentType: '충돌 무기',
-    type: RSMaterialType.TRAIN_EQUIPMENT,
-    grade: RS_GRADE.R,
-    desc: '',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/f/f2/hyxuetpygwjwl7jrcgydp0zedvdw8fw.png',
-  },
-  '분쇄 임팩트 롤러': {
-    trainEquipmentType: '충돌 무기',
-    type: RSMaterialType.TRAIN_EQUIPMENT,
-    grade: RS_GRADE.SR,
-    desc: '',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/b/bb/d3bcgfnu809277av47qukfepiicvn1n.png',
-  },
-  '분해 임팩트 롤러': {
-    trainEquipmentType: '충돌 무기',
-    type: RSMaterialType.TRAIN_EQUIPMENT,
-    grade: RS_GRADE.SSR,
-    desc: '',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/9/9c/79nh1wi7cm7uumgrbmjc2s55d4xqk5g.png',
-  },
-  '수압 파괴 굴삭기': {
-    trainEquipmentType: '충돌 무기',
-    type: RSMaterialType.TRAIN_EQUIPMENT,
-    grade: RS_GRADE.R,
-    desc: '',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/9/92/poxgtccuci8nf8bjftboi51tvp1tc0i.png',
-  },
-  '협음 파괴 굴삭기': {
-    trainEquipmentType: '충돌 무기',
-    type: RSMaterialType.TRAIN_EQUIPMENT,
-    grade: RS_GRADE.SR,
-    desc: '',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/3/34/ldll0rg3m7sheo7ygzqvh5y520mcq9c.png',
-  },
-  '스크림 파괴 굴삭기': {
-    trainEquipmentType: '충돌 무기',
-    type: RSMaterialType.TRAIN_EQUIPMENT,
-    grade: RS_GRADE.SSR,
-    desc: '',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/3/3f/q9g2wm9jn0o700yt2jn2gfepqp1bi3e.png',
-  },
-  '철강 드릴 비트': {
-    trainEquipmentType: '충돌 무기',
-    type: RSMaterialType.TRAIN_EQUIPMENT,
-    grade: RS_GRADE.SR,
-    desc: '',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/6/6c/jh46rrrm1eg8cy77ixd9oc8v5xin9yo.png',
-  },
-  '핫멜트 드릴 비트': {
-    trainEquipmentType: '충돌 무기',
-    type: RSMaterialType.TRAIN_EQUIPMENT,
-    grade: RS_GRADE.SSR,
-    desc: '',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/b/bc/800c05y4qt479dkrvhww5cpadig5r7b.png',
-  },
-  '레이저 드릴 비트': {
-    trainEquipmentType: '충돌 무기',
-    type: RSMaterialType.TRAIN_EQUIPMENT,
-    grade: RS_GRADE.UR,
-    desc: '',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/6/67/fma1owhq56taq0xdwsti39nd0g2lele.png',
-  },
-  '질화티탄 코팅': {
-    trainEquipmentType: '코팅',
-    type: RSMaterialType.TRAIN_EQUIPMENT,
-    grade: RS_GRADE.SR,
-    desc: '',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/3/39/68ow12pev0tkex2rh0581f8ox16vrh7.png',
-  },
-  '군사 장갑판': {
-    trainEquipmentType: '장갑판',
-    type: RSMaterialType.TRAIN_EQUIPMENT,
-    grade: RS_GRADE.SR,
-    desc: '',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/6/65/31hvmweg9mbamng21cjo7ap8oue6835.png',
-  },
-  '고회전력 모터': {
-    trainEquipmentType: '보조 펜던트',
-    type: RSMaterialType.TRAIN_EQUIPMENT,
-    grade: RS_GRADE.R,
-    desc: '',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/7/7b/e7ykeorzb34xqfmfvgjkpeu8x5vutta.png',
-  },
-  '화물 거치대': {
-    trainEquipmentType: '보조 펜던트',
-    type: RSMaterialType.TRAIN_EQUIPMENT,
-    grade: RS_GRADE.R,
-    desc: '',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/1/1a/l48s04xydtv6r61k42nyo2nyqq5eps9.png',
-  },
   "'마이레일' 건설 포인트": {
     grade: RS_GRADE.SR,
     desc: "콜룸바 상회의 '마이레일' 건설 임무 완성 시 획득하는 포인트입니다. 상회 마일리지 상점에서 아이템을 교환할 수 있습니다.",
@@ -1251,6 +1067,99 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
     desc: '획득 시 마이레일 건설 단계가 증가합니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/thumb/6/66/tkfhdunsn1yn6w3v905llneaqp6ekpe.png/180px-%E6%88%91%E9%80%A0%E6%88%91%E8%B7%AF%E5%B7%A5%E7%A8%8B%E5%BB%BA%E8%AE%BE%E8%BF%9B%E5%BA%A6.png',
+  },
+
+  '고전도 콘덴서 공예 가이드': {
+    grade: RS_GRADE.SR,
+    desc: '[고전도 콘덴서] 제작법을 기록한 파일입니다. 사용 시 [차량용 가공선반]에서 [황동 코일],[흑연] 및 [석영사]를 가공하여 [고전도 콘덴서]를 획득할 수 있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/34/hla4jc9l3q6pcn9mzankab77wt1i2kr.png',
+  },
+
+  '초전도 코일 공예 가이드': {
+    grade: RS_GRADE.SSR,
+    desc: '[초전도 코일] 제작법을 기록한 파일입니다. 사용 시 [차량용 가공선반]에서 [고전도 콘덴서],[베툴라 원액] 및 [순금 코일]를 가공하여 [초전도 코일]를 획득할 수 있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/03/hla4jc9l3q6pcn9mzankab77wt1i2kr.png',
+  },
+
+  '고전도 콘덴서': {
+    grade: RS_GRADE.SR,
+    desc: '형태장 제어 기술을 사용해 제작된 고전도 콘덴서입니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/f3/6p4dvd1qs0ooeqf5uyzij3vlkve84pn.png',
+  },
+  '베인링 가시': {
+    grade: RS_GRADE.SR,
+    desc: `대형 베인링 베툴라 생명체의 기관으로, 내부의 액체가 외부 형태장과 접촉하면 격렬하게 폭발합니다. 보고서에는 '폭발 후 남은 잔해는 화자오 맛의 팝핑 캔디와 비슷해 칵테일을 만드는 데 사용할 수 있다'고 적혀 있습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/44/2zueb798vp72jphrtm9mlywa0ecrzfx.png',
+  },
+  '피로 회복 풍선껌': {
+    grade: RS_GRADE.SR,
+    desc: `사용 시 즉시 열차장의 [피로도]를 100포인트 제거합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/94/237cx48gwjmul8fgd5npbnlcjd2dapn.png',
+  },
+  '어지럼 등껍질': {
+    grade: RS_GRADE.R,
+    desc: `일부 베툴라 생명체의 등껍질`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/7a/7t7v9x6c8uoln85q6dhjhwuxt9qkl27.png',
+  },
+  '해룡 지느러미줄': {
+    grade: RS_GRADE.R,
+    desc: `베툴라 생명체의 편모와 유사한 기능을 가진 기관`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e4/nee7iewk0j4agy3jia5bstddebp9xvm.png',
+  },
+  '미끼 풍선': {
+    grade: RS_GRADE.N,
+    desc: `일정 확률로 길막이 베툴라 생명체를 유인할 수 있습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/3d/s3igy425vhp13x2mnadbmjtzs3orlqu.png',
+  },
+  '비명의 부리': {
+    grade: RS_GRADE.SR,
+    desc: `일부 베툴라 생명체의 머리에 있는 새 부리와 유사한 기관`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/86/4mf43c9tm390nhcvt2x521nebfinqko.png',
+  },
+  '전투 메모리(4Ti)': {
+    grade: RS_GRADE.SR,
+    desc: `사용 후 파티원 경험치 2000포인트를 추가할 수 있습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/20/llb1j0ro46ebf4kn7zq1cn1y4xhbfy5.png',
+  },
+  '뇌안개 포자': {
+    grade: RS_GRADE.N,
+    desc: `일부 베툴라 생명체가 생성하는 포자`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a2/9ioy7w2jeu49vtzx2qiu7vl3rdkmb2u.png',
+  },
+  '성운상 물질(4Ti)': {
+    grade: RS_GRADE.SR,
+    desc: `사용 후 장비 경험치 2000포인트를 추가할 수 있습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/8c/05zncpdbz8083prkuvle7o33xvgnzup.png',
+  },
+  '베툴라 편모': {
+    grade: RS_GRADE.N,
+    desc: `사용 후 장비 경험치 2000포인트를 추가할 수 있습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/02/l92hy3jr7k1znn39ezx8loeiadqeefj.png',
+  },
+  '기억 상실 가지': {
+    grade: RS_GRADE.R,
+    desc: '일부 베툴라 생명체의 몸에 있는 가시줄기와 유사한 기관',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/0c/dfkuu8d4p5avdgwe2d5wllafka98hau.png',
+  },
+  '자동 관측 필름': {
+    grade: RS_GRADE.R,
+    desc: '특수한 기술적 수단으로 처리된 필름은 물체의 형태장이 처음에 붕괴되지 않았을 때의 이미지를 보여주고 특정 가이드를 따라 이를 사용하면 형태장을 재구성하여 장비에 새로운 특성을 부여할 수 있습니다. 생산 기술의 불완정성으로 인해 사용 후 장비가 획득할 수 있는 특성을 결정할 수 없습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e9/ctso7467rr30l75s0sfrk5u0myqvgbd.png',
   },
 }
 
