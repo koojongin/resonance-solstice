@@ -3,6 +3,7 @@
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import clsx from 'clsx'
+import createKey from '@/services/key-generator'
 
 export default function MainSideBar() {
   const router = useRouter()
@@ -19,21 +20,26 @@ export default function MainSideBar() {
       label: 'DB',
       subMenu: [
         {
-          label: '캐릭터',
+          label: '승무원 명부',
           path: '/characters',
         },
         {
-          label: '재료',
+          label: '재료 도감',
           path: '/materials',
         },
         {
-          label: '장비 - 승무원',
+          label: '장비 도감',
           path: '/equipments',
         },
         {
-          label: '장비 - 열차',
+          label: '몬스터 도감',
+          path: '/monsters',
+        },
+        {
+          label: '열차 무장 도감',
           path: '/train-equipments',
         },
+        { isHtml: true },
         {
           label: '용어집',
           path: '/archive',
@@ -46,6 +52,7 @@ export default function MainSideBar() {
           label: '열차 동력 시스템',
           path: '/train/train-power',
         },
+        { isHtml: true },
         {
           label: '영상',
           path: '/video',
@@ -120,21 +127,31 @@ export default function MainSideBar() {
           {menu.label}
           {menu.subMenu && hoveredMenu === menu.label && (
             <div className={clsx(dropdownCss)}>
-              {menu.subMenu.map((sub: any) => (
-                <div
-                  key={sub.label}
-                  className={clsx(
-                    'px-4 py-2 hover:bg-gray-100 cursor-pointer',
-                    sub?.className || '',
-                  )}
-                  onClick={(e) => {
-                    e.stopPropagation()
-                    router.push(sub.path)
-                  }}
-                >
-                  {sub.label}
-                </div>
-              ))}
+              {menu.subMenu.map((sub: any) => {
+                const { isHtml } = sub
+                if (isHtml)
+                  return (
+                    <hr
+                      key={createKey()}
+                      className="border border-b-0 border-blue-gray-900 border-dashed"
+                    />
+                  )
+                return (
+                  <div
+                    key={sub.label}
+                    className={clsx(
+                      'px-[8px] py-[8px] hover:bg-gray-100 cursor-pointer',
+                      sub?.className || '',
+                    )}
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      router.push(sub.path)
+                    }}
+                  >
+                    {sub.label}
+                  </div>
+                )
+              })}
             </div>
           )}
         </div>

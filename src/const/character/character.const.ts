@@ -14,7 +14,7 @@ export const RAZIEL_THE_REMINISCE = {
 }
 export const SHIRE = {
   originName: 'SHIRE',
-  name: 'Shire',
+  name: '샤이어',
   faction: RS_FACTION.CHAOS,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.BACK,

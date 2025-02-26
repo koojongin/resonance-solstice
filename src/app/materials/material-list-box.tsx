@@ -11,7 +11,6 @@ export function MaterialListBox({ items, searchedKeyword, checkedGrades }: any) 
   const { router } = useNextDepthNavigator()
   const [materials, setMaterials] = useState<ExtendedRSMaterial[]>([...items])
   const [viewMode, setViewMode] = useState<ItemBoxViewMode>(ItemBoxViewMode.MINIMIZED)
-  // trainEquipmentType
   useEffect(() => {
     setMaterials(
       [...items].filter((material) => {
