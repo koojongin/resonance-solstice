@@ -28,7 +28,7 @@ export default function EventMyRailPage() {
             <br />
             횟수
           </div>
-          <div className="min-w-[100px] flex flex-wrap gap-[2px] flex items-center justify-center bg-green-50">
+          <div className="min-w-[250px] flex flex-wrap gap-[2px] flex items-center justify-center bg-green-50">
             필요 재료
           </div>
           <div className="pl-[4px] flex flex-wrap gap-[2px] flex items-center justify-start">
@@ -59,7 +59,7 @@ export default function EventMyRailPage() {
                     {exchangeAmount.toLocaleString()}
                   </div>
                 </div>
-                <div className="min-w-[100px] flex items-center justify-center bg-green-50 gap-[2px]">
+                <div className="min-w-[250px] flex items-center justify-start bg-green-50 gap-[2px]">
                   <Tooltip
                     key={`${index}_q_${requirement.name}`}
                     content={
@@ -75,17 +75,26 @@ export default function EventMyRailPage() {
                       </div>
                     }
                   >
-                    <div
-                      className="w-[52px] cursor-pointer relative border-2 border-blue-gray-900"
-                      onClick={() => {
-                        router.push(`/materials/${material.name}`)
-                      }}
-                    >
-                      <MaterialBoxResponsive material={material} withoutIconPadding />
-                      <div className="absolute right-0 bottom-0 p-[1px] text-center z-20 text-shadow-outline text-white ff-dh">
-                        {formatNumber(requirement.amount)}
+                    <>
+                      <div
+                        className="w-[52px] cursor-pointer relative border-2 border-blue-gray-900"
+                        onClick={() => {
+                          router.push(`/materials/${material.name}`)
+                        }}
+                      >
+                        <MaterialBoxResponsive material={material} withoutIconPadding />
+                        <div className="absolute right-0 bottom-0 p-[1px] text-center z-20 text-shadow-outline text-white ff-dh">
+                          {formatNumber(requirement.amount)}
+                        </div>
                       </div>
-                    </div>
+                      {relatedMaps.length > 0 && (
+                        <div>
+                          {relatedMaps.map((map) => {
+                            return <div key={createKey()}>- {map.name}</div>
+                          })}
+                        </div>
+                      )}
+                    </>
                   </Tooltip>
                 </div>
                 <div className="pl-[4px] flex flex-wrap justify-start gap-[2px]">

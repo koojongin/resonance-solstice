@@ -17,7 +17,7 @@ export function RsTransportOrderBox({ transportOrders }: { transportOrders: RSTr
     <>
       <GradientHeaderDiv className="flex items-center gap-[4px]">
         물자 운송
-        <Tooltip content="해당 목록은 [물자 주문]을 운송해야 열리는 항목이 포함되어 있습니다.">
+        <Tooltip content="해당 목록은 특정 [물자 주문]을 수행 후 개방되는 항목이 포함되어 있습니다.">
           <i className="fa-solid fa-circle-question text-[20px] cursor-pointer" />
         </Tooltip>
       </GradientHeaderDiv>
