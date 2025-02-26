@@ -1149,17 +1149,53 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/0/02/l92hy3jr7k1znn39ezx8loeiadqeefj.png',
   },
+  '베툴라 더듬이': {
+    grade: RS_GRADE.R,
+    desc: '베툴라 생명체에서 흔히 발견되는 기관',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/9/94/f0nhem4c80ky5vpdfthq3klmq021vne.png/270px-%E6%A1%A6%E6%A0%91%E8%A7%A6%E9%A1%BB.png',
+  },
   '기억 상실 가지': {
     grade: RS_GRADE.R,
     desc: '일부 베툴라 생명체의 몸에 있는 가시줄기와 유사한 기관',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/0/0c/dfkuu8d4p5avdgwe2d5wllafka98hau.png',
   },
+  '베툴라 꼬리 수염': {
+    grade: RS_GRADE.R,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/8/8c/glt2k4563o1olmlqbs82ciywkebf4kd.png/180px-%E6%A1%A6%E6%A0%91%E5%B0%BE%E9%A1%BB.png',
+  },
+  '베인링 낭': {
+    grade: RS_GRADE.R,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/4/4a/j8eo0hhqnhr6tu183kebslaph1qjf7o.png/180px-%E7%88%86%E8%99%AB%E5%9B%8A%E8%A2%8B.png',
+  },
   '자동 관측 필름': {
     grade: RS_GRADE.R,
     desc: '특수한 기술적 수단으로 처리된 필름은 물체의 형태장이 처음에 붕괴되지 않았을 때의 이미지를 보여주고 특정 가이드를 따라 이를 사용하면 형태장을 재구성하여 장비에 새로운 특성을 부여할 수 있습니다. 생산 기술의 불완정성으로 인해 사용 후 장비가 획득할 수 있는 특성을 결정할 수 없습니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/e/e9/ctso7467rr30l75s0sfrk5u0myqvgbd.png',
+  },
+  선인장: {
+    grade: RS_GRADE.R,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/d/d6/k41iwncg7dkcgxgkobhq5uiwr9rbqxj.png/180px-%E4%BB%99%E4%BA%BA%E7%90%83.png',
+  },
+  '약탈의 원형톱': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/f/f9/rx6o0vin95knjk306x9xnvoozusnc2f.png/180px-%E5%8A%AB%E6%8E%A0%E9%94%AF%E8%BD%AE.png',
+  },
+  '앰피 본드래곤 흉골': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/f/f8/262x7haqdcaxtf49vfpt6ggjwoeh8kj.png/180px-%E8%A3%82%E9%A6%96%E9%AA%A8%E9%BE%99%E8%83%B8%E9%AA%A8.png',
   },
 }
 

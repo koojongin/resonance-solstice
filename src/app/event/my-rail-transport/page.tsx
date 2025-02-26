@@ -11,12 +11,17 @@ import React from 'react'
 import { MYRAIL_TRANSPORT_ORDERS } from '@/const/item/my-rail-bridge-transport-orders.const'
 import { useNextDepthNavigator } from '@/services/navigation'
 
-export default function EventMyRailPage() {
+export default function EventMyRailTransportPage() {
   const { router } = useNextDepthNavigator()
   return (
     <div className="flex flex-col gap-[10px] w-full">
       <div className="w-full">
-        <GradientHeaderDiv className="w-full">발사 센터 브릿지 운송 주문</GradientHeaderDiv>
+        <GradientHeaderDiv className="w-full flex gap-[2px] items-center">
+          발사 센터 브릿지 운송 주문
+          <Tooltip content="[자유 무역항-7]의 [공사 지원 센터]에 납품할 수 있습니다.">
+            <i className="fa-solid fa-circle-question text-[20px] cursor-pointer" />
+          </Tooltip>
+        </GradientHeaderDiv>
       </div>
       <div className="flex flex-col ff-dh">
         <div className="flex border-b">

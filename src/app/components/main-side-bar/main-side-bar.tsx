@@ -100,7 +100,7 @@ export default function MainSideBar() {
       subMenu: [
         {
           label: '마이레일',
-          path: '/event/my-rail',
+          path: '/event/my-rail-transport',
           className: 'text-[18px]',
         },
       ],

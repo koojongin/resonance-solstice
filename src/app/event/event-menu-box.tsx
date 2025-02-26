@@ -7,8 +7,16 @@ import React from 'react'
 
 const SIDE_MENU = [
   {
-    path: '/event/my-rail',
-    name: '마이레일',
+    path: '/event/my-rail-transport',
+    name: '마이레일 운송',
+  },
+  {
+    path: '/event/my-rail-purge',
+    name: '마이레일 소탕',
+  },
+  {
+    path: '/event/my-rail-reward',
+    name: '마이레일 건설 보상',
   },
 ]
 
