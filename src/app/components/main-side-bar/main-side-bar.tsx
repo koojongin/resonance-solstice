@@ -89,7 +89,7 @@ export default function MainSideBar() {
     },
     {
       label: '티어메이커',
-      path: '/tiermaker',
+      path: '/tiermaker/character',
     },
   ]
 

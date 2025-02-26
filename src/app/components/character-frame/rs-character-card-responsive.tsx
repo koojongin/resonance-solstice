@@ -40,3 +40,24 @@ export function RsCharacterCardResponsive({
     </div>
   )
 }
+
+export function RsCharacterCardResponsiveShorten({
+  character,
+  height,
+}: {
+  character: RSCharacter
+  height: number
+}) {
+  return (
+    <div className="cursor-pointer">
+      <div className="overflow-hidden relative rounded-[4px]" style={{ height: `${height}px` }}>
+        <img src={getFrameBgUrl(character.grade)} className="absolute z-0 w-full bottom-[-40px]" />
+        <img
+          src={convertCharacterThumbnailUrl(character.thumbnail, 140)}
+          className="w-full z-10 absolute"
+        />
+        <RsCharacterBorderBox grade={character.grade} />
+      </div>
+    </div>
+  )
+}

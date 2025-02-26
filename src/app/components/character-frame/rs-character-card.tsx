@@ -9,7 +9,10 @@ import { ALL_EQUIPMENTS, RSEquipmentType } from '@/const/archive/equipment.const
 import { EquipmentBox, EquipmentBoxResponsive } from '@/app/equipments/rs-equipment-list'
 import createKey from '@/services/key-generator'
 import React from 'react'
-import { RsCharacterCardResponsive } from '@/app/components/character-frame/rs-character-card-responsive'
+import {
+  RsCharacterCardResponsive,
+  RsCharacterCardResponsiveShorten,
+} from '@/app/components/character-frame/rs-character-card-responsive'
 import { Tooltip } from '@material-tailwind/react'
 import { useNextDepthNavigator } from '@/services/navigation'
 import { EquipmentTooltipBox } from '@/app/components/deck/equipment-tooltip-box'
@@ -36,6 +39,26 @@ export function RsCharacterCard({
       {size === RsCardSize.RESPONSIVE && (
         <RsCharacterCardResponsive character={character} height={height || 100} />
       )}
+    </div>
+  )
+}
+
+export function RsCharacterCardShorten({
+  character,
+  height,
+}: {
+  character: RSCharacter
+  height?: number
+}) {
+  const router = useRouter()
+  const routeToDetail = (selectedCharacter: RSCharacter) => {
+    if (!selectedCharacter) return
+    router.push(`/characters/${character.originName}`)
+  }
+
+  return (
+    <div onClick={() => routeToDetail(character)}>
+      <RsCharacterCardResponsiveShorten character={character} height={height || 100} />
     </div>
   )
 }

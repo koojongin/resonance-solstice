@@ -1,4 +1,5 @@
 import { RS_GRADE } from '@/const/character/character.enum'
+import _ from 'lodash'
 
 export enum RSMaterialType {
   TRAIN_EQUIPMENT = '철도 장비',
@@ -1240,3 +1241,8 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
       'https://patchwiki.biligame.com/images/resonance/1/1a/l48s04xydtv6r61k42nyo2nyqq5eps9.png',
   },
 }
+
+export const CONVERTED_MATERIALS = _.map(MATERIALS, (value, key) => ({
+  name: key,
+  ...value,
+}))
