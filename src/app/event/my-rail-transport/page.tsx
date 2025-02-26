@@ -80,7 +80,7 @@ export default function EventMyRailTransportPage() {
                       </div>
                     }
                   >
-                    <>
+                    <div className="flex gap-[2px]">
                       <div
                         className="w-[52px] cursor-pointer relative border-2 border-blue-gray-900"
                         onClick={() => {
@@ -92,14 +92,13 @@ export default function EventMyRailTransportPage() {
                           {formatNumber(requirement.amount)}
                         </div>
                       </div>
-                      {relatedMaps.length > 0 && (
-                        <div>
-                          {relatedMaps.map((map) => {
-                            return <div key={createKey()}>- {map.name}</div>
-                          })}
-                        </div>
-                      )}
-                    </>
+                      <div>
+                        <div className="p-[2px]">[{material.name}]</div>
+                        {relatedMaps.map((map) => {
+                          return <div key={createKey()}>- {map.name}</div>
+                        })}
+                      </div>
+                    </div>
                   </Tooltip>
                 </div>
                 <div className="pl-[4px] flex flex-wrap justify-start gap-[2px]">
