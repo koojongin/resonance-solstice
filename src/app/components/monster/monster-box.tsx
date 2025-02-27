@@ -4,11 +4,18 @@ import {
   getMonsterFrameUrl,
   getMonsterTypeIconUrl,
 } from '@/services/utils/monster-box-converter'
-import { ExtendedRSMonster } from '@/const/monster/monster.interface'
+import { ExtendedRSMonster, MonsterGrade } from '@/const/monster/monster.interface'
 
 export function MonsterBoxSquare({ monster }: { monster: ExtendedRSMonster }) {
+  let gradientCss = ''
+  if (monster.grade === MonsterGrade.ARCHNEMESIS)
+    gradientCss = 'from-pink-500/80 via-green-500/70 to-purple-900'
+  if (monster.grade === MonsterGrade.ELITE)
+    gradientCss = 'from-pink-800 via-indigo-300/90 to-pink-700/70'
+  if (monster.grade === MonsterGrade.NORMAL)
+    gradientCss = 'from-blue-800/50 via-blue-300/50 to-light-blue-800'
   return (
-    <div className="relative bg-gradient-to-b from-blue-gray-800 via-indigo-500/70 to-blue-gray-900">
+    <div className={`relative bg-gradient-to-b ${gradientCss}`}>
       <div
         className="absolute border-[4px] w-full h-full"
         style={{ borderImage: getMonsterFrameCss(monster.grade) }}

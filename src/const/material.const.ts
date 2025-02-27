@@ -990,6 +990,12 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/thumb/3/37/c5dle0nib77scoezy124yyu1lqqtqry.png/270px-%E9%BC%B9%E9%BC%A0%E7%9A%84%E5%A2%A8%E9%95%9C.png',
   },
+  '기억 상실 가시': {
+    grade: RS_GRADE.R,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/0/0c/dfkuu8d4p5avdgwe2d5wllafka98hau.png/180px-%E5%A4%B1%E5%BF%86%E8%8C%8E%E5%88%BA.png',
+  },
   '본드래곤 꼬리뼈': {
     grade: RS_GRADE.SSR,
     desc: '',
