@@ -22,6 +22,9 @@ export enum MonsterType {
   ETC = '기타',
 }
 
+export interface RSMonsterAbilityData {
+  name: MonsterAbility
+}
 export interface RSMonster {
   detail: string
   thumbnail: string
@@ -32,9 +35,9 @@ export interface RSMonster {
   hp: MonsterStatGrade
   type: MonsterType
 
-  traits?: { skills: { name: MonsterAbility }[] }
-  resistance?: { skills: { name: MonsterAbility }[] }
-  weakness?: { skills: { name: MonsterAbility }[] }
+  traits?: { skills: RSMonsterAbilityData[] }
+  resistance?: { skills: RSMonsterAbilityData[] }
+  weakness?: { skills: RSMonsterAbilityData[] }
   thumbnailFull?: string
   camp?: string
 }

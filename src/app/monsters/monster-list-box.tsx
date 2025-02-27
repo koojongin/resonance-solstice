@@ -87,7 +87,7 @@ export function MonsterListBox({
                 //   opacity: monster?.traits ? 0.5 : 1,
                 //   width: monster?.traits ? '30px' : 'auto',
                 // }}
-                onClick={() => router.push(`/materials/${monster.name}`)}
+                onClick={() => router.push(`/monsters/${monster.name}`)}
                 // onClick={() => openNewTab(monster.detail)}
               >
                 <div className="flex items-center justify-center relative">

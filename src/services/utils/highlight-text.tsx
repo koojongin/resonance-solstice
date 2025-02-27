@@ -3,6 +3,8 @@
 import { Tooltip } from '@material-tailwind/react'
 import { useNextDepthNavigator } from '@/services/navigation'
 import { TOTAL_ARCHIVES } from '@/const/archive'
+import React from 'react'
+import clsx from 'clsx'
 
 export function RSHighlightedText({ text, textSize }: { text: string; textSize?: number }) {
   const { router } = useNextDepthNavigator()
@@ -78,4 +80,34 @@ export function RSHighlightedText({ text, textSize }: { text: string; textSize?:
   })
 
   return <p className="whitespace-pre-line">{formattedText}</p>
+}
+
+export function ArchiveTooltipBox({
+  name,
+  className,
+  children,
+}: {
+  name: string
+  className?: string
+  children: any
+}) {
+  const archive = TOTAL_ARCHIVES.find((a) => a.name === name)
+  return (
+    <Tooltip
+      className={clsx(className || '')}
+      content={
+        <div className="max-w-[300px] whitespace-pre-line">
+          {archive && (
+            <div className="flex flex-col gap-[4px]">
+              <div>{name}</div>
+              <hr />
+              <div>{archive.desc}</div>
+            </div>
+          )}
+        </div>
+      }
+    >
+      {children}
+    </Tooltip>
+  )
 }
