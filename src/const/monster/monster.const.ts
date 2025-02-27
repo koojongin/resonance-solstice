@@ -262,7 +262,13 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/4/46/kxsvnvj2bq6cx1iotkuymskxllvj954.png',
   },
   '빙하 본드래곤': {
-    drops: ['본드래곤 척추뼈'],
+    drops: [
+      '본드래곤 두개골',
+      '본드래곤 척추뼈',
+      '본드래곤 꼬리뼈',
+      '해룡 지느러미줄',
+      '해룡 꼬리 지느러미',
+    ],
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E5%87%9B%E5%B7%9D%E9%AA%A8%E9%BE%99',
     thumbnail:
