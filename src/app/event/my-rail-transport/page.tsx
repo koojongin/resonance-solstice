@@ -24,7 +24,9 @@ export default function EventMyRailTransportPage() {
         </GradientHeaderDiv>
       </div>
       <div className="flex flex-col ff-dh">
-        <div className="mb-[8px] ff-sdn">* 역 재진입 시 운송 주문 갱신</div>
+        <div className="mb-[8px] ff-sdn text-red-400 font-bold">
+          * 역 재진입 시 운송 주문(전달 가능 횟수) 초기화
+        </div>
         <div className="flex border-b">
           <div className="ff-dh text-center min-w-[50px] flex items-center justify-center">
             번호
@@ -83,7 +85,7 @@ export default function EventMyRailTransportPage() {
                   >
                     <div className="flex gap-[2px]">
                       <div
-                        className="w-[52px] cursor-pointer relative border-2 border-blue-gray-900"
+                        className="w-[70px] cursor-pointer relative border-2 border-blue-gray-900"
                         onClick={() => {
                           router.push(`/materials/${material.name}`)
                         }}
@@ -93,7 +95,7 @@ export default function EventMyRailTransportPage() {
                           {formatNumber(requirement.amount)}
                         </div>
                       </div>
-                      <div>
+                      <div className="text-[20px]">
                         <div className="p-[2px]">[{material.name}]</div>
                         {relatedMaps.map((map) => {
                           return <div key={createKey()}>- {map.name}</div>
@@ -129,7 +131,7 @@ export default function EventMyRailTransportPage() {
                         }
                       >
                         <div
-                          className="w-[52px] h-[52px] cursor-pointer relative border-2 border-blue-gray-900"
+                          className="w-[70px] h-[70px] cursor-pointer relative border-2 border-blue-gray-900"
                           onClick={() => {
                             router.push(`/materials/${reward.name}`)
                           }}
