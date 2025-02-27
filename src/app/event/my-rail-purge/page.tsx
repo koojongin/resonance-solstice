@@ -148,11 +148,6 @@ export default function EventMyRailPurgePage() {
             번호
           </div>
           <div className="text-center min-w-[125px] flex items-center justify-center">이름</div>
-          <div className="text-center min-w-[80px] flex items-center justify-center">
-            도시 진입 당
-            <br />
-            도전 횟수
-          </div>
           <div className="text-center min-w-[80px] flex items-center justify-center">레벨</div>
           <div className="pl-[4px] flex flex-wrap gap-[2px] flex items-center justify-start">
             보상
@@ -168,33 +163,35 @@ export default function EventMyRailPurgePage() {
                 <div className="ff-dh text-center min-w-[50px] flex items-center justify-center">
                   {index + 1}
                 </div>
-                <Tooltip
-                  key={createKey()}
-                  className="bg-white max-w-[400px] text-blue-gray-900 shadow-md border rounded"
-                  content={
-                    <div>
-                      <div>{monster.name}</div>
-                      {monster.desc && (
-                        <>
-                          <hr />
-                          <div className="whitespace-pre-line">{monster.desc || ''}</div>
-                        </>
-                      )}
-                    </div>
-                  }
+                <div
+                  className="cursor-pointer text-center min-w-[125px] flex flex-col items-center justify-center"
+                  onClick={() => router.push(`/monsters/${monster.name}`)}
                 >
-                  <div
-                    className="cursor-pointer text-center min-w-[125px] flex items-center justify-center"
-                    onClick={() => router.push(`/monsters/${monster.name}`)}
+                  <Tooltip
+                    key={createKey()}
+                    className="bg-white max-w-[400px] text-blue-gray-900 shadow-md border rounded"
+                    content={
+                      <div>
+                        <div>{monster.name}</div>
+                        {monster.desc && (
+                          <>
+                            <hr />
+                            <div className="whitespace-pre-line">{monster.desc || ''}</div>
+                          </>
+                        )}
+                      </div>
+                    }
                   >
-                    <MonsterBox monster={monster} />
-                  </div>
-                </Tooltip>
-                <div className="text-center min-w-[80px] flex items-center justify-center">10</div>
+                    <div>
+                      <MonsterBox monster={monster} />
+                    </div>
+                  </Tooltip>
+                  <div>일일 도전 10회</div>
+                </div>
                 <div className="text-center min-w-[80px] flex items-center justify-center">
                   {purge.level}
                 </div>
-                <div className="pl-[4px] flex flex-wrap justify-start gap-[2px]">
+                <div className="pl-[4px] flex flex-wrap justify-start gap-[2px] gap-y-[10px]">
                   {rewards.map((item) => {
                     const reward = {
                       ...MATERIALS[item.name],
@@ -210,12 +207,15 @@ export default function EventMyRailPurgePage() {
                         }
                       >
                         <div
-                          className="w-[50px] h-[50px] cursor-pointer relative border rounded-[2px] shadow-md border-blue-gray-900"
+                          className="cursor-pointer relative w-[70px] text-center flex flex-col items-center gap-[4px] hover:bg-green-50"
                           onClick={() => {
                             router.push(`/materials/${reward.name}`)
                           }}
                         >
-                          <MaterialBoxResponsive material={reward} withoutIconPadding />
+                          <div className="w-[50px] h-[50px] border rounded-[2px] shadow-md border-blue-gray-900">
+                            <MaterialBoxResponsive material={reward} withoutIconPadding />
+                          </div>
+                          <div className="ff-sdn text-[13px] font-bold">{reward.name}</div>
                         </div>
                       </Tooltip>
                     )
