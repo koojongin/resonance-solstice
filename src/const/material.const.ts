@@ -1197,6 +1197,54 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/thumb/f/f8/262x7haqdcaxtf49vfpt6ggjwoeh8kj.png/180px-%E8%A3%82%E9%A6%96%E9%AA%A8%E9%BE%99%E8%83%B8%E9%AA%A8.png',
   },
+  '일반 무기 개조 증표': {
+    grade: RS_GRADE.SR,
+    desc: '표준 형식의 열차 무장 개조 증표는 종합 관제 센터에서 날인하고 승인을 완료했습니다. 열차장은 이 허가증으로 열차 무장 개조 공사를 할 수 있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/f/f4/h8nfrsu9ae1cd1yrr43qgjd3z38rv5z.png/270px-%E4%B8%80%E8%88%AC%E6%AD%A6%E8%A3%85%E6%94%B9%E9%80%A0%E5%87%AD%E8%AF%81.png',
+  },
+  '사과나무 가지': {
+    grade: RS_GRADE.SR,
+    desc: '사과 에이드의 원재료입니다. 사용 시 아리나가 한잔 더 만들어줄 수 있습니다.\n해당 아이템은 냉장고에 보관해야 합니다.\n상회 열차 가구 상점에서 [냉장고]를 구매하면 냉장고의 용량을 증가할 수 있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/d8/35fnnv2gzvss3ujrdzji4n84kpnpsng.png',
+  },
+  '흑월 구매권': {
+    grade: RS_GRADE.SSR,
+    desc: '흑월 상점의 상품 리스트를 갱신할 수 있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/3/36/gf5qazklcg6h1ob5ki831ay4p1v9ho2.png/180px-%E9%BB%91%E6%9C%88%E9%87%87%E8%B4%AD%E5%88%B8.png',
+  },
+  '기념 카드팩-마이레일 I기': {
+    grade: RS_GRADE.UR,
+    desc: '[마이레일 I기] 일상 임무 오픈기간 출시되는 카드팩입니다. 사용 시 기존에 획득하지 못한 카드 1장을 획득하게 됩니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/1/1b/f57m0nd8zgwhbz31acsecejzjq1dya4.png',
+  },
+  '특수 무기 개조 특허': {
+    grade: RS_GRADE.SSR,
+    desc: '철도연맹에서 일괄적으로 발행한 특수열차 무장개조 특허문서는 전체 배치,외부 구조, 내부 배치, 필요한 장비, 건설요건, 운영단계 등을 포함합니다. 문서의 지도하에 열차의 무장 개조를 완료하십시오.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/0/06/4mhxm2jnronqvgxz24e9lhbldddyg5b.png/180px-%E7%89%B9%E6%AE%8A%E6%AD%A6%E8%A3%85%E6%94%B9%E9%80%A0%E7%89%B9%E8%AE%B8.png',
+  },
+  '발사 센터 브릿지 통행증': {
+    grade: RS_GRADE.SSR,
+    desc: '해당 통행증을 받은 열차장은 발사 센터 브릿지를 왕복할 수 있는 자격이 주어집니다. 이 통행증은 발사 센터 브릿지 건설에 탁월한 공헌을 한 열차장들에게 수여됩니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/9/96/bd4vl4yemiu1arab7mm7agg07wpbk4t.png/180px-%E5%8F%91%E5%B0%84%E4%B8%AD%E5%BF%83%E5%A4%A7%E6%A1%A5%E9%80%9A%E8%A1%8C%E8%AF%81.png',
+  },
+  '성운상 물질(8Ti)': {
+    grade: RS_GRADE.SSR,
+    desc: '사용 후 장비 경험치 4000포인트를 추가할 수 있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/d/df/0iq84bp3xqyoua6tkcj3ysh9sanfwxn.png/180px-%E6%98%9F%E4%BA%91%E7%89%A9%E8%B4%A8%EF%BC%888%E9%92%9B%EF%BC%89.png',
+  },
+  '추가 투자 신청서': {
+    grade: RS_GRADE.SSR,
+    desc: '도시 투자 제한이 발생시 사용할 수있습니다. 추가 투자가 가능합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/1/10/qe5kc3tdv4njzt2c5w9oc1aq64101p9.png/180px-%E8%BF%BD%E5%8A%A0%E6%B3%A8%E8%B5%84%E7%94%B3%E8%AF%B7%E4%B9%A6.png',
+  },
 }
 
 export const CONVERTED_MATERIALS = _.map(MATERIALS, (value, key) => ({

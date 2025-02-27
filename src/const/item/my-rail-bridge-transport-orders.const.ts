@@ -46,7 +46,7 @@ export const MYRAIL_TRANSPORT_ORDERS: MyRailTransportOrder[] = [
   },
   {
     exchangeAmount: 10,
-    requirement: { name: '철근 콘크리트 침목', amount: 24 },
+    requirement: { name: '철근 콘크리트 침목', amount: 36 },
     rewards: [
       {
         name: '마이레일 건설 진행도',

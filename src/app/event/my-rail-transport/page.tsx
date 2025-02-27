@@ -24,6 +24,7 @@ export default function EventMyRailTransportPage() {
         </GradientHeaderDiv>
       </div>
       <div className="flex flex-col ff-dh">
+        <div className="mb-[8px] ff-sdn">* 역 재진입 시 운송 주문 갱신</div>
         <div className="flex border-b">
           <div className="ff-dh text-center min-w-[50px] flex items-center justify-center">
             번호

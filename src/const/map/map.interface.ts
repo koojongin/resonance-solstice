@@ -43,7 +43,7 @@ export interface RSMap {
   교환소?: RSTradeOrder[]
   '열차 무장 교환'?: RSTrainArmoryOrder[]
   '열차 에너지 교환'?: any
-  '재료 회수'?: any
+  '재료 회수'?: any[]
   투자?: any[] // 관리센터,시청 /<-두개는같은걸까? 도시 투자,버추얼 레코드,레코딩 증표 교환 있음
   '눈동자 의상점'?: any
   휴게소?: any // 한잔하기,흑월 상점

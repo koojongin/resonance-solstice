@@ -1,10 +1,28 @@
-import { RSCityType } from '@/const/map/map.interface'
+import { RSCityType, RSMap } from '@/const/map/map.interface'
 
-export const MAP_SHUGURIS = {
+export const MAP_SHUGURIS: RSMap = {
   guideLink: 'https://arca.live/b/resonance/129310815',
   name: '슈그리스시',
   linkOfBili: 'https://wiki.biligame.com/resonance/%E4%BF%AE%E6%A0%BC%E9%87%8C%E5%9F%8E',
   type: RSCityType.CORE_CITY,
+  '재료 회수': [
+    {
+      name: '소음 효소',
+      amount: 15000,
+    },
+    {
+      name: '베툴라 원액',
+      amount: 5000,
+    },
+    {
+      name: '소음 수액',
+      amount: 3600,
+    },
+    {
+      name: '소음 호르몬',
+      amount: 600,
+    },
+  ],
   거래소: [
     {
       name: '엔진',

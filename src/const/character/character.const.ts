@@ -25,7 +25,7 @@ export const SHIRE = {
 }
 export const PELOTA = {
   originName: 'PELOTA',
-  name: 'Pelota',
+  name: '페로타',
   faction: RS_FACTION.GARDENERS,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.BACK,
@@ -37,7 +37,7 @@ export const PELOTA = {
 
 export const DOROTHY = {
   originName: 'DOROTHY',
-  name: 'Dorothy',
+  name: '도로시',
   faction: RS_FACTION.RAILWAY,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.BACK,
@@ -48,7 +48,7 @@ export const DOROTHY = {
 }
 export const JOSHUA = {
   originName: 'JOSHUA',
-  name: 'Joshua',
+  name: '조슈아',
   faction: RS_FACTION.SOURCE_CITADEL,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.MIDDLE,
@@ -103,7 +103,7 @@ export const NICOLA = {
 }
 export const DUSTIN = {
   originName: 'DUSTIN',
-  name: 'Dustin',
+  name: '더스틴',
   faction: RS_FACTION.SOURCE_CITADEL,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
@@ -114,7 +114,7 @@ export const DUSTIN = {
 }
 export const ANFIYA = {
   originName: 'ANFIYA',
-  name: 'Anfiya',
+  name: '안피아',
   faction: RS_FACTION.GARDENERS,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.MIDDLE,
@@ -125,7 +125,7 @@ export const ANFIYA = {
 }
 export const HAYABUSA = {
   originName: 'HAYABUSA',
-  name: 'Hayabusa',
+  name: '하야부사',
   faction: RS_FACTION.NIGHT_CHAINS,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.MIDDLE,
@@ -147,7 +147,7 @@ export const JALHAY = {
 }
 export const ITHOS = {
   originName: 'ITHOS',
-  name: 'Ithos',
+  name: '이소스',
   faction: RS_FACTION.SOURCE_CITADEL,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.BACK,
@@ -158,7 +158,7 @@ export const ITHOS = {
 }
 export const IKUMA = {
   originName: 'IKUMA',
-  name: 'Ikuma',
+  name: '이쿠마',
   faction: RS_FACTION.CREW_STRANGER,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
@@ -169,7 +169,7 @@ export const IKUMA = {
 }
 export const LISSANDRA = {
   originName: 'LISSANDRA',
-  name: 'Lissandra',
+  name: '리산드라',
   faction: RS_FACTION.SOURCE_CITADEL,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
@@ -180,7 +180,7 @@ export const LISSANDRA = {
 }
 export const MUMEI = {
   originName: 'MUMEI',
-  name: 'Mumei',
+  name: '무메이',
   faction: RS_FACTION.CREW_STRANGER,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
@@ -191,7 +191,7 @@ export const MUMEI = {
 }
 export const PALADI = {
   originName: 'PALADI',
-  name: 'Paladi',
+  name: '파라디',
   faction: RS_FACTION.RAILWAY,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.MIDDLE,
