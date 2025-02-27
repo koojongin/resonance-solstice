@@ -9,6 +9,8 @@ import { ALL_NAMED_MAPS } from '@/const/archive/named-map.const'
 import { MaterialBoxResponsive } from '@/app/components/material/material-box'
 import { formatNumber } from '@/services/utils/number.formatter'
 import { useNextDepthNavigator } from '@/services/navigation'
+import { MONSTERS } from '@/const/monster/monster.const'
+import { MonsterBox } from '@/app/components/monster/monster-box'
 
 const MYRAIL_PURGES = [
   {
@@ -135,9 +137,9 @@ export default function EventMyRailPurgePage() {
       <div className="w-full">
         <GradientHeaderDiv className="w-full flex gap-[2px] items-center">
           마이레일-소탕 임무
-          {/* <Tooltip content="[자유 무역항-7]의 [공사 지원 센터]에 납품할 수 있습니다."> */}
-          {/*   <i className="fa-solid fa-circle-question text-[20px] cursor-pointer" /> */}
-          {/* </Tooltip> */}
+          <Tooltip content="[자유 무역항-7]의 [공사 지원 센터]에서 임무를 진행할 수 있습니다.">
+            <i className="fa-solid fa-circle-question text-[20px] cursor-pointer" />
+          </Tooltip>
         </GradientHeaderDiv>
       </div>
       <div className="flex flex-col ff-dh gap-[4px]">
@@ -145,9 +147,9 @@ export default function EventMyRailPurgePage() {
           <div className="ff-dh text-center min-w-[50px] flex items-center justify-center">
             번호
           </div>
-          <div className="text-center min-w-[80px] flex items-center justify-center">이름</div>
+          <div className="text-center min-w-[125px] flex items-center justify-center">이름</div>
           <div className="text-center min-w-[80px] flex items-center justify-center">
-            일일
+            도시 진입 당
             <br />
             도전 횟수
           </div>
@@ -160,14 +162,34 @@ export default function EventMyRailPurgePage() {
         <div className="flex flex-col ff-dh gap-[2px]">
           {MYRAIL_PURGES.map((purge, index) => {
             const { rewards } = purge
+            const monster = { ...MONSTERS[purge.monster], name: purge.monster }
             return (
               <div key={createKey()} className="flex border-b">
                 <div className="ff-dh text-center min-w-[50px] flex items-center justify-center">
                   {index + 1}
                 </div>
-                <div className="text-center min-w-[80px] flex items-center justify-center">
-                  {purge.monster}
-                </div>
+                <Tooltip
+                  key={createKey()}
+                  className="bg-white max-w-[400px] text-blue-gray-900 shadow-md border rounded"
+                  content={
+                    <div>
+                      <div>{monster.name}</div>
+                      {monster.desc && (
+                        <>
+                          <hr />
+                          <div className="whitespace-pre-line">{monster.desc || ''}</div>
+                        </>
+                      )}
+                    </div>
+                  }
+                >
+                  <div
+                    className="cursor-pointer text-center min-w-[125px] flex items-center justify-center"
+                    onClick={() => router.push(`/monsters/${monster.name}`)}
+                  >
+                    <MonsterBox monster={monster} />
+                  </div>
+                </Tooltip>
                 <div className="text-center min-w-[80px] flex items-center justify-center">10</div>
                 <div className="text-center min-w-[80px] flex items-center justify-center">
                   {purge.level}
