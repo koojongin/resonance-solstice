@@ -525,7 +525,7 @@ export const MONSTERS: {
       'https://patchwiki.biligame.com/images/resonance/6/69/k8milwq8au3xpthsipc6z5zb2u2xjfe.png',
     camp: 'https://patchwiki.biligame.com/images/resonance/a/a0/fbdc315jmg3h5b8w2mq80rci6dtyvxd.png',
   },
-  '마로더 톱': {
+  '약탈자-쏘우': {
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E5%8A%AB%E6%8E%A0%E8%80%85%C2%B7%E6%89%A7%E9%94%AF',
     thumbnail:
