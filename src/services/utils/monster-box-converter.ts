@@ -28,3 +28,11 @@ export function getMonsterTypeIconUrl(type: MonsterType) {
   if (type === MonsterType.ETC)
     return 'https://patchwiki.biligame.com/images/resonance/thumb/1/17/hl76tlrm6urs7mzgmhbec11ctmuh0v0.png/15px-%E5%88%86%E7%B1%BB-%E5%8F%8D%E7%9B%B8-%E5%85%B6%E4%BB%96.png'
 }
+
+export function getMonsterFrameCss(grade: MonsterGrade) {
+  if (grade === MonsterGrade.ARCHNEMESIS) {
+    return 'linear-gradient(to right, violet, orange, yellow, green, blue, indigo, skyblue) 1'
+  }
+  if (grade === MonsterGrade.ELITE) return 'linear-gradient(to right,violet,fuchsia) 1'
+  if (grade === MonsterGrade.NORMAL) return 'linear-gradient(to right, skyblue, skyblue) 1'
+}

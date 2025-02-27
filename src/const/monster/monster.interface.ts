@@ -40,6 +40,7 @@ export interface RSMonster {
   weakness?: { skills: RSMonsterAbilityData[] }
   thumbnailFull?: string
   camp?: string
+  drops?: string[]
 }
 
 export interface ExtendedRSMonster extends RSMonster {

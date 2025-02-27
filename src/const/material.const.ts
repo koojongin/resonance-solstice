@@ -1,10 +1,12 @@
 import { RS_GRADE } from '@/const/character/character.enum'
 import _ from 'lodash'
+import { RSEquipmentEarnPath } from '@/const/archive/equipment.const'
 
 export interface RSMaterial {
   grade: RS_GRADE
   thumbnail: string
   desc: string
+  earnsPath?: RSEquipmentEarnPath[]
 }
 
 export const MATERIALS: { [key: string]: RSMaterial } = {
@@ -940,12 +942,53 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
     desc: '',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/6/6b/cp8t56hdjefjbghh2dlk1p7qf66e6kb.png',
+    earnsPath: [
+      { desc: '빙하 본드래곤 드랍', tags: [] },
+      { desc: '아니타 에너지 연구소 작전 계획-10', tags: ['아니타 에너지 연구소', '작전 계획'] },
+      { desc: '야외 베툴라 부표-빙하 본드래곤', tags: [] },
+    ],
+  },
+  '박명의 가시': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/c/cc/qsy7o0q0m730wenbbo045y334fyaxp5.png/180px-%E8%96%84%E6%9A%AE%E5%9D%9A%E6%A3%98%E5%88%BA.png',
+  },
+  '야행 삿갓': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/1/19/an2yt6ty2j557b6n90sbhhsbo17caur.png/180px-%E5%A4%9C%E8%A1%8C%E7%AC%A0.png',
+  },
+  '소음 호르몬': {
+    grade: RS_GRADE.R,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/e/eb/agpswoovexmrzh9tg2ux0eavyyks7o2.png/180px-%E5%99%AA%E9%9F%B3%E8%85%BA%E7%B4%A0.png',
+  },
+  '밤을 밝히는 양날검': {
+    grade: RS_GRADE.SSR,
+    desc: '내열성 재료로 단조된 양날검.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/7/73/l9x195wx33xmenacfg5xfae3c2l5yoe.png/180px-%E7%85%A7%E5%A4%9C%E5%8F%8C%E5%88%83.png',
+  },
+  '심면 고엽': {
+    grade: RS_GRADE.N,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/1/18/m86a48d0frtp39vr4k3r52d22qfnzsi.png/180px-%E6%B7%B1%E7%9C%A0%E6%9E%AF%E5%8F%B6.png',
   },
   '본드래곤 두개골': {
     grade: RS_GRADE.SSR,
     desc: '',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/thumb/3/3d/aa68aa2kvfoqp8mfqkx574zjps3qkft.png/180px-%E9%AA%A8%E9%BE%99%E5%A4%B4%E9%AA%A8.png',
+  },
+  '두더지 선글라스': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/3/37/c5dle0nib77scoezy124yyu1lqqtqry.png/270px-%E9%BC%B9%E9%BC%A0%E7%9A%84%E5%A2%A8%E9%95%9C.png',
   },
   '본드래곤 꼬리뼈': {
     grade: RS_GRADE.SSR,
@@ -1054,6 +1097,9 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
     desc: '',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/3/3c/pxvxau1o91wldhwj1daglgmqbfa3sda.png',
+    earnsPath: [
+      { desc: '차량용 가공선반-초전도 코일 공예 가이드', tags: ['제조 가공', '가공선반'] },
+    ],
   },
 
   "'마이레일' 건설 포인트": {
@@ -1081,6 +1127,322 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
     desc: '[초전도 코일] 제작법을 기록한 파일입니다. 사용 시 [차량용 가공선반]에서 [고전도 콘덴서],[베툴라 원액] 및 [순금 코일]를 가공하여 [초전도 코일]를 획득할 수 있습니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/0/03/hla4jc9l3q6pcn9mzankab77wt1i2kr.png',
+    earnsPath: [
+      {
+        desc: '아니타 에너지 연구소-니콜라-교환',
+        tags: ['아니타 에너지 연구소'],
+        map: '아니타 에너지 연구소',
+      },
+    ],
+  },
+
+  '그래핀 박리 가이드': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/03/hla4jc9l3q6pcn9mzankab77wt1i2kr.png',
+    earnsPath: [
+      {
+        desc: '아니타 에너지 연구소-캐롤라인-교환',
+        tags: ['아니타 에너지 연구소'],
+        map: '아니타 에너지 연구소',
+      },
+    ],
+  },
+
+  '소음 효소 추출법': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/a/a3/6ujvy212ohinv4zw2spuosanb24bsb5.png/180px-%E5%99%AA%E9%9F%B3%E6%BF%80%E9%85%B6%E6%8F%90%E5%8F%96%E6%B3%95.png',
+  },
+
+  '선인장즙 추출법': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/a/a3/6ujvy212ohinv4zw2spuosanb24bsb5.png/180px-%E5%99%AA%E9%9F%B3%E6%BF%80%E9%85%B6%E6%8F%90%E5%8F%96%E6%B3%95.png',
+    earnsPath: [
+      {
+        desc: '황원역-건설 진행도 보상',
+        tags: ['황원역'],
+        map: '황원역',
+      },
+    ],
+  },
+
+  '심면 에센스 추출법': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/a/a3/6ujvy212ohinv4zw2spuosanb24bsb5.png/180px-%E5%99%AA%E9%9F%B3%E6%BF%80%E9%85%B6%E6%8F%90%E5%8F%96%E6%B3%95.png',
+    earnsPath: [
+      {
+        desc: '슈그리스시-세실-교환',
+        tags: ['슈그리스시', '교환'],
+        map: '슈그리스시',
+      },
+    ],
+  },
+  '미끼 풍선 제조법': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/8/86/oslrlasdf29bwk068xrlugpeqvvcm7p.png/180px-%E6%B0%B4%E4%BA%A7%E7%94%84%E9%80%89%E7%A4%BC%E7%9B%92%E5%8C%85%E8%A3%85%E6%8C%87%E5%8D%97.png',
+  },
+  '도금 부품 제조법': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/8/86/oslrlasdf29bwk068xrlugpeqvvcm7p.png/180px-%E6%B0%B4%E4%BA%A7%E7%94%84%E9%80%89%E7%A4%BC%E7%9B%92%E5%8C%85%E8%A3%85%E6%8C%87%E5%8D%97.png',
+  },
+  '정밀 부품 연마법': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/8/86/oslrlasdf29bwk068xrlugpeqvvcm7p.png/180px-%E6%B0%B4%E4%BA%A7%E7%94%84%E9%80%89%E7%A4%BC%E7%9B%92%E5%8C%85%E8%A3%85%E6%8C%87%E5%8D%97.png',
+  },
+  '미끼 폭탄 풍선 제조법': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/8/86/oslrlasdf29bwk068xrlugpeqvvcm7p.png/180px-%E6%B0%B4%E4%BA%A7%E7%94%84%E9%80%89%E7%A4%BC%E7%9B%92%E5%8C%85%E8%A3%85%E6%8C%87%E5%8D%97.png',
+  },
+
+  '슈그리스 선물세트 포장 가이드': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/8/86/oslrlasdf29bwk068xrlugpeqvvcm7p.png/180px-%E6%B0%B4%E4%BA%A7%E7%94%84%E9%80%89%E7%A4%BC%E7%9B%92%E5%8C%85%E8%A3%85%E6%8C%87%E5%8D%97.png',
+  },
+
+  '순금 부품 제조법': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/8/86/oslrlasdf29bwk068xrlugpeqvvcm7p.png/180px-%E6%B0%B4%E4%BA%A7%E7%94%84%E9%80%89%E7%A4%BC%E7%9B%92%E5%8C%85%E8%A3%85%E6%8C%87%E5%8D%97.png',
+    earnsPath: [
+      {
+        desc: '골든 원더랜드-미스 골드-교환',
+        tags: ['골든 원더랜드', '교환'],
+        map: '골든 원더랜드',
+      },
+    ],
+  },
+
+  '케이프시 선물세트 포장 가이드': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/8/86/oslrlasdf29bwk068xrlugpeqvvcm7p.png/180px-%E6%B0%B4%E4%BA%A7%E7%94%84%E9%80%89%E7%A4%BC%E7%9B%92%E5%8C%85%E8%A3%85%E6%8C%87%E5%8D%97.png',
+    earnsPath: [
+      {
+        desc: '케이프시-도시 명성 5레벨 보상',
+        tags: ['케이프시'],
+        map: '케이프시',
+      },
+    ],
+  },
+
+  '수산물 선물세트 포장 가이드': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/8/86/oslrlasdf29bwk068xrlugpeqvvcm7p.png/180px-%E6%B0%B4%E4%BA%A7%E7%94%84%E9%80%89%E7%A4%BC%E7%9B%92%E5%8C%85%E8%A3%85%E6%8C%87%E5%8D%97.png',
+    earnsPath: [
+      {
+        desc: '회류 타워-건설 진행도 보상',
+        tags: ['회류 타워'],
+        map: '회류 타워',
+      },
+    ],
+  },
+
+  '서대륙 선물세트 포장 가이드': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/8/86/oslrlasdf29bwk068xrlugpeqvvcm7p.png/180px-%E6%B0%B4%E4%BA%A7%E7%94%84%E9%80%89%E7%A4%BC%E7%9B%92%E5%8C%85%E8%A3%85%E6%8C%87%E5%8D%97.png',
+    earnsPath: [
+      {
+        desc: '그로누시-도시 명성 5레벨 보사',
+        tags: ['그로누시'],
+        map: '그로누시',
+      },
+    ],
+  },
+
+  '골드 열차 공예품 제작 가이드': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/8/86/oslrlasdf29bwk068xrlugpeqvvcm7p.png/180px-%E6%B0%B4%E4%BA%A7%E7%94%84%E9%80%89%E7%A4%BC%E7%9B%92%E5%8C%85%E8%A3%85%E6%8C%87%E5%8D%97.png',
+    earnsPath: [
+      {
+        desc: '버추얼 레코드-교환 상점',
+        tags: [],
+      },
+    ],
+  },
+
+  '그래핀 배터리 공예 가이드': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/03/hla4jc9l3q6pcn9mzankab77wt1i2kr.png',
+    earnsPath: [
+      {
+        desc: '아니타 에너지 연구소-캐롤라인-교환',
+        tags: ['아니타 에너지 연구소'],
+        map: '아니타 에너지 연구소',
+      },
+    ],
+  },
+
+  '황동 코일 공예 가이드': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/03/hla4jc9l3q6pcn9mzankab77wt1i2kr.png',
+    earnsPath: [
+      {
+        desc: '아니타 군수공장-건설 진행도 보상',
+        tags: ['아니타 군수공장'],
+        map: '아니타 군수공장',
+      },
+    ],
+  },
+
+  '항공 원자재 제조 설명 가이드': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/03/hla4jc9l3q6pcn9mzankab77wt1i2kr.png',
+    earnsPath: [
+      {
+        desc: '아니타 발사 센터-카리야-교환',
+        tags: ['아니타 발사 센터', '교환'],
+        map: '아니타 발사 센터',
+      },
+    ],
+  },
+
+  '탄소 섬유 로프 공예 가이드': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/03/hla4jc9l3q6pcn9mzankab77wt1i2kr.png',
+    earnsPath: [
+      {
+        desc: '원성대교-건설 진행도 보상',
+        tags: ['원성대교'],
+        map: '원성대교',
+      },
+    ],
+  },
+
+  '열화석 제련법': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/f/f8/9zu5ypdjq2x9xvh0rcmz17uxfihvt10.png/180px-%E9%92%9B%E5%90%88%E9%87%91%E7%B2%BE%E7%82%BC%E6%B3%95.png',
+  },
+  '중화석 제련법': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/f/f8/9zu5ypdjq2x9xvh0rcmz17uxfihvt10.png/180px-%E9%92%9B%E5%90%88%E9%87%91%E7%B2%BE%E7%82%BC%E6%B3%95.png',
+  },
+  '다크 블랙 코딩제 제련법': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/f/f8/9zu5ypdjq2x9xvh0rcmz17uxfihvt10.png/180px-%E9%92%9B%E5%90%88%E9%87%91%E7%B2%BE%E7%82%BC%E6%B3%95.png',
+  },
+  '철강 제련법': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/f/f8/9zu5ypdjq2x9xvh0rcmz17uxfihvt10.png/180px-%E9%92%9B%E5%90%88%E9%87%91%E7%B2%BE%E7%82%BC%E6%B3%95.png',
+  },
+  '레일용 특수 강재 단조법': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/f/f8/9zu5ypdjq2x9xvh0rcmz17uxfihvt10.png/180px-%E9%92%9B%E5%90%88%E9%87%91%E7%B2%BE%E7%82%BC%E6%B3%95.png',
+  },
+  '에메랄드 코팅제 제련법': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/f/f8/9zu5ypdjq2x9xvh0rcmz17uxfihvt10.png/180px-%E9%92%9B%E5%90%88%E9%87%91%E7%B2%BE%E7%82%BC%E6%B3%95.png',
+  },
+
+  '고열전도 세라믹 제조법': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/f/f8/9zu5ypdjq2x9xvh0rcmz17uxfihvt10.png/180px-%E9%92%9B%E5%90%88%E9%87%91%E7%B2%BE%E7%82%BC%E6%B3%95.png',
+    earnsPath: [
+      {
+        desc: '아니타 발사 센터-건설 진행도 보상',
+        tags: ['아니타 발사 센터'],
+        map: '아니타 발사 센터',
+      },
+    ],
+  },
+
+  '티타늄 합금 정련법': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/f/f8/9zu5ypdjq2x9xvh0rcmz17uxfihvt10.png/180px-%E9%92%9B%E5%90%88%E9%87%91%E7%B2%BE%E7%82%BC%E6%B3%95.png',
+    earnsPath: [
+      {
+        desc: '아니타 군수공장-이엘-교환',
+        tags: ['아니타 군수공장', '교환'],
+        map: '아니타 군수공장',
+      },
+    ],
+  },
+  '다크 퍼플 코팅제 제련법': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/f/f8/9zu5ypdjq2x9xvh0rcmz17uxfihvt10.png/180px-%E9%92%9B%E5%90%88%E9%87%91%E7%B2%BE%E7%82%BC%E6%B3%95.png',
+    earnsPath: [
+      {
+        desc: '아니타 군수공장-이엘-교환',
+        tags: ['아니타 군수공장', '교환'],
+        map: '아니타 군수공장',
+      },
+    ],
+  },
+  '선셋 레드 코팅제 제련법': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/f/f8/9zu5ypdjq2x9xvh0rcmz17uxfihvt10.png/180px-%E9%92%9B%E5%90%88%E9%87%91%E7%B2%BE%E7%82%BC%E6%B3%95.png',
+    earnsPath: [
+      {
+        desc: '아니타 군수공장-이엘-교환',
+        tags: ['아니타 군수공장', '교환'],
+        map: '아니타 군수공장',
+      },
+    ],
+  },
+  '현무암 섬유 용제법': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/f/f8/9zu5ypdjq2x9xvh0rcmz17uxfihvt10.png/180px-%E9%92%9B%E5%90%88%E9%87%91%E7%B2%BE%E7%82%BC%E6%B3%95.png',
+    earnsPath: [
+      {
+        desc: '원성대교-건설 진행도 보상',
+        tags: ['원성대교'],
+        map: '원성대교',
+      },
+    ],
   },
 
   '고전도 콘덴서': {

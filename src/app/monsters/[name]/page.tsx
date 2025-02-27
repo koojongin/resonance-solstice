@@ -11,6 +11,10 @@ import { MONSTERS } from '@/const/monster/monster.const'
 import { MonsterGrade, MonsterType, RSMonsterAbilityData } from '@/const/monster/monster.interface'
 import { ARCHIVE_ABILITIES } from '@/const/archive/ability.const'
 import { ArchiveTooltipBox } from '@/services/utils/highlight-text'
+import { MaterialBoxResponsive } from '@/app/components/material/material-box'
+import { MATERIALS } from '@/const/material.const'
+import { Tooltip } from '@material-tailwind/react'
+import { getMonsterFrameCss } from '@/services/utils/monster-box-converter'
 
 export default function MonsterDetailPage() {
   const { name } = useParams()
@@ -26,13 +30,6 @@ export default function MonsterDetailPage() {
     return exchangeItems.filter((item) => item.name === decodedName).length > 0
   })
 
-  let frameCss = ''
-  if (monster.grade === MonsterGrade.ARCHNEMESIS) {
-    frameCss = 'linear-gradient(to right, violet, orange, yellow, green, blue, indigo, skyblue) 1'
-  }
-  if (monster.grade === MonsterGrade.ELITE) frameCss = 'linear-gradient(to right,violet,fuchsia) 1'
-  if (monster.grade === MonsterGrade.NORMAL)
-    frameCss = 'linear-gradient(to right, skyblue, skyblue) 1'
   return (
     <div className="flex flex-col gap-[10px]">
       <div className="flex flex-col gap-[4px]">
@@ -41,7 +38,7 @@ export default function MonsterDetailPage() {
           className="flex gap-[4px] items-stretch bg-gray-800/80 border-[3px] p-[10px] rounded shadow-md shadow-gray-600 min-h-[200px] bg-cover"
           style={{
             backgroundImage: `url(https://patchwiki.biligame.com/images/resonance/1/15/rnk1ixlziks176gslros7c3tfon5xz7.png)`,
-            borderImage: frameCss,
+            borderImage: getMonsterFrameCss(monster.grade),
           }}
         >
           <div className="relative flex flex-col justify-between">
@@ -126,7 +123,41 @@ export default function MonsterDetailPage() {
       <hr />
 
       <div>
-        <GradientHeaderDiv>관련된 지역</GradientHeaderDiv>
+        <GradientHeaderDiv>드랍 물품({monster?.drops?.length.toLocaleString()})</GradientHeaderDiv>
+        <div className="flex flex-wrap gap-[5px]">
+          {monster?.drops?.map((itemName) => {
+            const material = { name: itemName, ...MATERIALS[itemName] }
+            return (
+              <Tooltip
+                key={createKey()}
+                content={
+                  <div>
+                    <div>{material.name}</div>
+                  </div>
+                }
+              >
+                <div
+                  key={createKey()}
+                  className="max-w-[70px] cursor-pointer relative text-center flex flex-col items-center gap-[4px] hover:scale-110 duration-300"
+                  onClick={() => {
+                    router.push(`/materials/${itemName}`)
+                  }}
+                >
+                  <div className="w-[70px] h-[70px] border rounded-[2px] shadow-md border-blue-gray-900">
+                    <MaterialBoxResponsive material={material} />
+                  </div>
+                  <div className="text-[12px] font-bold whitespace-pre-line break-all">
+                    {itemName}
+                  </div>
+                </div>
+              </Tooltip>
+            )
+          })}
+        </div>
+      </div>
+
+      <div>
+        <GradientHeaderDiv>관련된 지역({relatedMaps.length.toLocaleString()})</GradientHeaderDiv>
         <div className="flex flex-wrap gap-[4px]">
           {relatedMaps.map((map) => {
             return (

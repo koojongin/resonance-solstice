@@ -14,6 +14,9 @@ import createKey from '@/services/key-generator'
 import { GradientButton } from '@/app/components/button/gradient-button'
 import { useNextDepthNavigator } from '@/services/navigation'
 import { TRAIN_EQUIPMENTS } from '@/const/item/train-equipment.const'
+import { CONVERTED_MONSTERS, MONSTERS } from '@/const/monster/monster.const'
+import { MonsterBoxSquare } from '@/app/components/monster/monster-box'
+import { Tooltip } from '@material-tailwind/react'
 
 export default function MaterialDetailPage() {
   const { name } = useParams()
@@ -24,10 +27,12 @@ export default function MaterialDetailPage() {
   const material = MATERIALS[decodedName] || TRAIN_EQUIPMENTS[decodedName]
   if (!material) return <div>검색된 재료 데이터 없음.</div>
 
-  const relatedMaps = ALL_NAMED_MAPS.filter((map) => {
+  const exchangeMaps = ALL_NAMED_MAPS.filter((map) => {
     const exchangeItems = map['거래소'] || []
     return exchangeItems.filter((item) => item.name === decodedName).length > 0
   })
+
+  const dropMonsters = CONVERTED_MONSTERS.filter((monster) => monster.drops?.includes(decodedName))
 
   return (
     <div className="flex flex-col gap-[10px]">
@@ -68,11 +73,48 @@ export default function MaterialDetailPage() {
       </div>
 
       <hr />
-
+      <div className="flex flex-col gap-[4px]">
+        <GradientHeaderDiv>
+          획득 정보({material?.earnsPath?.length.toLocaleString() || 0})
+        </GradientHeaderDiv>
+        <div className="inline-flex flex-wrap gap-[4px]">
+          {material?.earnsPath?.map((earnPath) => {
+            return (
+              <div
+                key={createKey()}
+                className="inline-flex border-gray-500 border w-max rounded p-[4px]"
+              >
+                {earnPath.desc}
+              </div>
+            )
+          })}
+        </div>
+      </div>
+      <div className="flex flex-col gap-[4px]">
+        <GradientHeaderDiv>
+          드랍 몬스터({dropMonsters.length.toLocaleString() || 0})
+        </GradientHeaderDiv>
+        <div className="inline-flex flex-wrap gap-[4px]">
+          {dropMonsters.map((monster) => {
+            return (
+              <Tooltip key={createKey()} content={monster.name}>
+                <div
+                  className="inline-flex border-gray-500 border w-[100px] rounded cursor-pointer"
+                  onClick={() => {
+                    router.push(`/monsters/${monster.name}`)
+                  }}
+                >
+                  <MonsterBoxSquare monster={monster} />
+                </div>
+              </Tooltip>
+            )
+          })}
+        </div>
+      </div>
       <div>
-        <GradientHeaderDiv>관련된 지역</GradientHeaderDiv>
+        <GradientHeaderDiv>거래소 구매({exchangeMaps.length.toLocaleString()})</GradientHeaderDiv>
         <div className="flex flex-wrap gap-[4px]">
-          {relatedMaps.map((map) => {
+          {exchangeMaps.map((map) => {
             return (
               <div key={createKey()}>
                 <GradientButton

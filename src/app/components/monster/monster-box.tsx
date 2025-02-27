@@ -1,6 +1,23 @@
 import React from 'react'
-import { getMonsterFrameUrl, getMonsterTypeIconUrl } from '@/services/utils/monster-box-converter'
+import {
+  getMonsterFrameCss,
+  getMonsterFrameUrl,
+  getMonsterTypeIconUrl,
+} from '@/services/utils/monster-box-converter'
 import { ExtendedRSMonster } from '@/const/monster/monster.interface'
+
+export function MonsterBoxSquare({ monster }: { monster: ExtendedRSMonster }) {
+  return (
+    <div className="relative bg-gradient-to-b from-blue-gray-800 via-indigo-500/70 to-blue-gray-900">
+      <div
+        className="absolute border-[4px] w-full h-full"
+        style={{ borderImage: getMonsterFrameCss(monster.grade) }}
+      />
+      <div className="absolute inset-0 bg-[linear-gradient(45deg,#ffffff33_25%,transparent_25%,transparent_75%,var(--grid-color)_75%,var(--grid-color)),linear-gradient(-45deg,var(--grid-color)_25%,transparent_25%,transparent_75%,var(--grid-color)_75%,var(--grid-color))] bg-[size:10px_10px]" />
+      <img className="w-full relative z-20" src={monster.thumbnailFull || monster.thumbnail} />
+    </div>
+  )
+}
 
 export function MonsterBox({ monster }: { monster: ExtendedRSMonster }) {
   return (

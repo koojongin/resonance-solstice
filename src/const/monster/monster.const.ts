@@ -1,15 +1,17 @@
 import {
-  MonsterType,
+  MonsterAbility,
   MonsterGrade,
   MonsterStatGrade,
+  MonsterType,
   RSMonster,
-  MonsterAbility,
 } from '@/const/monster/monster.interface'
+import _ from 'lodash'
 
 export const MONSTERS: {
   [key: string]: RSMonster
 } = {
   '베인링 퀸': {
+    drops: ['베인링 낭액', '베인링 낭', '베인링 가시', '베인링 울음낭'],
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E9%B8%A3%E7%88%86%E8%99%AB%E6%AF%8D',
     thumbnail:
@@ -63,6 +65,14 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/2/2f/no501iad0px5870m35pi7gir9dkar5o.png',
   },
   '스콜피언 머신': {
+    drops: [
+      '낡은 부품',
+      '정밀 부품',
+      '동력 파이프라인',
+      '무기 파이프라인',
+      '동력 유닛',
+      '사격 통제 유닛',
+    ],
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E8%9D%8E%E5%9E%8B%E6%9C%BA%E6%A2%B0%E4%BD%93',
     thumbnail:
@@ -110,6 +120,14 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/d/da/jief5dxw2exbksqhozaqb0srxud6cr1.png',
   },
   '벌목용 중장비': {
+    drops: [
+      '낡은 부품',
+      '정밀 부품',
+      '동력 파이프라인',
+      '무기 파이프라인',
+      '동력 유닛',
+      '사격 통제 유닛',
+    ],
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E4%BC%90%E6%9C%A8%E9%87%8D%E6%9C%BA',
     thumbnail:
@@ -154,6 +172,7 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/d/da/jief5dxw2exbksqhozaqb0srxud6cr1.png',
   },
   '블리자드 기포체': {
+    drops: ['베툴라 편모', '베툴라 더듬이', '베툴라 자사낭', '베툴라 촉수'],
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E5%AF%92%E6%BD%AE%E6%B5%AE%E5%9B%8A%E4%BD%93',
     thumbnail:
@@ -189,6 +208,7 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/7/79/r9gwbxmp4mfxucpaea4sq36aee329pi.png',
   },
   '더스트 리자드': {
+    drops: ['베툴라 연골', '베툴라 꼬리 수염', '베툴라 뼈대', '리자드 뼈대'],
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E5%B0%98%E9%B8%A3%E6%B8%B8%E7%A3%B7',
     thumbnail:
@@ -242,6 +262,7 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/4/46/kxsvnvj2bq6cx1iotkuymskxllvj954.png',
   },
   '빙하 본드래곤': {
+    drops: ['본드래곤 척추뼈'],
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E5%87%9B%E5%B7%9D%E9%AA%A8%E9%BE%99',
     thumbnail:
@@ -310,6 +331,7 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/a/a3/8dqqd5k3eudc4iks8icdt7jksjfv61f.png',
   },
   '앰피 본드래곤': {
+    drops: ['앰피 본드래곤 두개골', '앰피 본드래곤 흉골'],
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E8%A3%82%E9%A6%96%E9%AA%A8%E9%BE%99',
     thumbnail:
@@ -378,6 +400,7 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/a/a3/8dqqd5k3eudc4iks8icdt7jksjfv61f.png',
   },
   시라누이: {
+    drops: ['소음 호르몬', '소음 수액', '소음 효소', '밤을 밝히는 양날검', '야행 삿갓'],
     detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E6%97%A0%E6%98%8E%E7%81%AB',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/8/82/c6erv259v3aktv4t8tmocgt4rob80ks.png',
@@ -589,8 +612,10 @@ export const MONSTERS: {
     thumbnailFull:
       'https://patchwiki.biligame.com/images/resonance/b/be/hwb1pl01z629x504kv9mb06nbdj17uo.png',
     camp: 'https://patchwiki.biligame.com/images/resonance/9/90/jroz2h6d737fki59s4i558tr3ofiwau.png',
+    drops: ['약탈의 원형톱'],
   },
   '미스 골드': {
+    drops: ['낡은 부품', '정밀 부품', '도금 부품', '순금 부품'],
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E9%87%91%E5%AD%90%E5%B0%8F%E5%A7%90',
     thumbnail:
@@ -647,6 +672,7 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/5/58/tp942kij34ugn8wz5k7sgv2ud2xc2js.png',
   },
   쥬드: {
+    drops: [],
     detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E6%9C%B1%E8%BF%AA',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/f/f2/1jhlrry48u3ltvc2i88sotzpsqcz19f.png',
@@ -724,6 +750,7 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/6/61/lsmb7fgc7o8dj8nuo3jqzt9zhew099w.png',
   },
   '암흑의 매머드': {
+    drops: ['뇌안개 포자', '트와일라잇 껍질', '인식 방해 껍질', '이명 껍질'],
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E6%98%8F%E6%81%B6%E5%B7%A8%E8%B1%A1',
     thumbnail:
@@ -792,6 +819,7 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/8/8b/88cs95z6hi13s7cpzwshg2670jomxmq.png',
   },
   '혼란의 돌산호': {
+    drops: ['뇌안개 포자', '트와일라잇 껍질', '박명의 가시', '유성의 눈'],
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E6%B7%B7%E5%8E%84%E7%9F%B3%E8%8A%9D',
     thumbnail:
@@ -863,6 +891,7 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/8/8b/88cs95z6hi13s7cpzwshg2670jomxmq.png',
   },
   '때리바 1000': {
+    drops: [],
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E6%8C%A8%E6%8F%8D%E5%AE%9D1000',
     thumbnail:
@@ -880,6 +909,7 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/d/d6/fqk1fqk41vtbvbjjn4oubj3gb2q8die.png',
   },
   '때리바 2000': {
+    drops: [],
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E6%8C%A8%E6%8F%8D%E5%AE%9D2000',
     thumbnail:
@@ -897,6 +927,7 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/d/d6/fqk1fqk41vtbvbjjn4oubj3gb2q8die.png',
   },
   '썬더스톰 BO-X 1000': {
+    drops: [],
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E9%9B%B7%E6%9A%B4%E6%B3%A2%E5%85%8B%E5%A3%AB1000',
     thumbnail:
@@ -929,6 +960,7 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/d/d6/fqk1fqk41vtbvbjjn4oubj3gb2q8die.png',
   },
   '플레이밍 BO-X 1000': {
+    drops: [],
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E7%87%83%E7%84%B0%E6%B3%A2%E5%85%8B%E5%A3%AB1000',
     thumbnail:
@@ -961,6 +993,7 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/d/d6/fqk1fqk41vtbvbjjn4oubj3gb2q8die.png',
   },
   '콘덴싱 BO-X 1000': {
+    drops: [],
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E5%86%B7%E5%87%9D%E6%B3%A2%E5%85%8B%E5%A3%AB1000',
     thumbnail:
@@ -993,6 +1026,7 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/d/d6/fqk1fqk41vtbvbjjn4oubj3gb2q8die.png',
   },
   MOM: {
+    drops: ['심면 고엽', '심면 뿌리', '심면 나뭇가지', '심면 나무'],
     detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-MOM',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/b/b5/l4ny3rtz8to3zuabzaeghtv80dfv88r.png',
@@ -1033,6 +1067,7 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/e/ef/jx24anrrg2438ypj6wqb5wrbcrm8j2a.png',
   },
   '심면자-환술사': {
+    drops: ['심면 고엽', '심면 뿌리', '심면 나뭇가지', '심면 나무'],
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E6%B7%B1%E7%9C%A0%E8%80%85%C2%B7%E8%BF%B7%E6%A2%A6',
     thumbnail:
@@ -1074,6 +1109,7 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/e/ef/jx24anrrg2438ypj6wqb5wrbcrm8j2a.png',
   },
   '심면자-나이트메어': {
+    drops: ['심면 고엽', '심면 뿌리', '심면 나뭇가지', '심면 나무'],
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E6%B7%B1%E7%9C%A0%E8%80%85%C2%B7%E6%B2%89%E6%BA%BA',
     thumbnail:
@@ -1324,7 +1360,8 @@ export const MONSTERS: {
       'https://patchwiki.biligame.com/images/resonance/0/01/mtu12qkw20odds7t7k7w6jqlvovxh0q.png',
     camp: 'https://patchwiki.biligame.com/images/resonance/e/ef/jx24anrrg2438ypj6wqb5wrbcrm8j2a.png',
   },
-  '황무지의 왕 - 피어싱 파워 아머': {
+  '황원의 제왕-드릴 파워아머': {
+    drops: ['낡은 부품', '정밀 부품'],
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E8%8D%92%E5%8E%9F%E7%8E%8B%C2%B7%E7%A9%BF%E5%87%BB%E5%8A%A8%E5%8A%9B%E7%94%B2',
     thumbnail:
@@ -1538,7 +1575,8 @@ export const MONSTERS: {
       'https://patchwiki.biligame.com/images/resonance/3/3b/euuh9rp2ps3b349mscr1fvxix4ee7dd.png',
     camp: 'https://patchwiki.biligame.com/images/resonance/9/9f/ewannjsdfylbscs56ql2xsl6ebwh0k4.png',
   },
-  '두더지 기계': {
+  '두더지파 중장비': {
+    drops: ['낡은 부품', '정밀 부품', '대형 톱니바퀴'],
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E9%BC%B9%E9%BC%A0%E9%87%8D%E6%9C%BA',
     thumbnail:
@@ -1589,6 +1627,7 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/c/c5/h0od7spwstsarfp47okis1jl3h4m4n6.png',
   },
   두더지: {
+    drops: ['낡은 부품', '정밀 부품', '두더지 선글라스'],
     detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E9%BC%B9%E9%BC%A0',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/4/4d/f63qto4cdbdwifs9fw6dgei8qyx0jv8.png',
@@ -1858,6 +1897,7 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/3/37/rksexwx0jz8jregf65ewxei7bouempn.png',
   },
   '가시 베인링': {
+    drops: ['베인링 낭액', '베인링 낭', '베인링 가시'],
     detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E9%B8%A3%E7%88%86%E8%99%AB',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/4/48/82jtt2wt6qixy4xabzapm16yb73ubg2.png',
@@ -2065,6 +2105,7 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/d/da/jief5dxw2exbksqhozaqb0srxud6cr1.png',
   },
   '클로 베툴라 생명체': {
+    drops: ['베툴라 편모', '베툴라 더듬이', '베툴라 자사낭'],
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E9%92%B5%E7%88%AA%E4%BD%93%E6%A1%A6%E6%A0%91%E7%94%9F%E7%89%A9',
     thumbnail:
@@ -2088,6 +2129,7 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/7/79/r9gwbxmp4mfxucpaea4sq36aee329pi.png',
   },
   '가시방벽 베툴라 생명체': {
+    drops: ['베툴라 편모', '베툴라 더듬이'],
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E5%88%BA%E5%A3%81%E4%BD%93%E6%A1%A6%E6%A0%91%E7%94%9F%E7%89%A9',
     thumbnail:
@@ -2117,6 +2159,7 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/7/79/r9gwbxmp4mfxucpaea4sq36aee329pi.png',
   },
   '가시수염 베툴라 생명체': {
+    drops: ['베툴라 편모', '베툴라 더듬이'],
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E5%88%BA%E9%A1%BB%E4%BD%93%E6%A1%A6%E6%A0%91%E7%94%9F%E7%89%A9',
     thumbnail:
@@ -2140,6 +2183,7 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/7/79/r9gwbxmp4mfxucpaea4sq36aee329pi.png',
   },
   '배수체 베툴라 생명체': {
+    drops: ['베툴라 편모', '베툴라 더듬이'],
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E5%A4%9A%E5%80%8D%E4%BD%93%E6%A1%A6%E6%A0%91%E7%94%9F%E7%89%A9',
     thumbnail:
@@ -2163,6 +2207,7 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/7/79/r9gwbxmp4mfxucpaea4sq36aee329pi.png',
   },
   '가도관 생명체': {
+    drops: ['베툴라 편모', '베툴라 더듬이', '베툴라 자사낭'],
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E7%AE%A1%E8%83%9E%E4%BD%93%E6%A1%A6%E6%A0%91%E7%94%9F%E7%89%A9',
     thumbnail:
@@ -2192,6 +2237,7 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/7/79/r9gwbxmp4mfxucpaea4sq36aee329pi.png',
   },
   '에너지 베툴라 생명체': {
+    drops: ['베툴라 편모', '베툴라 더듬이'],
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E6%91%84%E8%83%BD%E4%BD%93%E6%A1%A6%E6%A0%91%E7%94%9F%E7%89%A9',
     thumbnail:
@@ -2215,6 +2261,7 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/7/79/r9gwbxmp4mfxucpaea4sq36aee329pi.png',
   },
   '반딧불 리자드': {
+    drops: ['베툴라 연골', '베툴라 꼬리 수염', '베툴라 뼈대'],
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E6%B5%AE%E8%90%A4%E6%B8%B8%E7%A3%B7',
     thumbnail:
@@ -2256,6 +2303,7 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/4/46/kxsvnvj2bq6cx1iotkuymskxllvj954.png',
   },
   '왕관해마 베툴라 생명체': {
+    drops: ['해룡 지느러미줄', '해룡 꼬리 지느러미'],
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E5%86%A0%E6%B5%B7%E9%A9%AC%E6%A1%A6%E6%A0%91%E7%94%9F%E7%89%A9',
     thumbnail:
@@ -2306,6 +2354,7 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/a/a3/8dqqd5k3eudc4iks8icdt7jksjfv61f.png',
   },
   '해룡 베툴라 생명체': {
+    drops: ['해룡 지느러미줄', '해룡 꼬리 지느러미'],
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E6%B5%B7%E9%BE%99%E6%A1%A6%E6%A0%91%E7%94%9F%E7%89%A9',
     thumbnail:
@@ -2362,6 +2411,7 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/a/a3/8dqqd5k3eudc4iks8icdt7jksjfv61f.png',
   },
   '흑월 닌자': {
+    drops: ['소음 호르몬', '소음 수액'],
     detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E9%BB%91%E6%9C%88%E5%BF%8D',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/2/28/30revwzkjf8pw34swqznb6ow5kcpghb.png',
@@ -2402,6 +2452,7 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/f/f2/72fwsi6q426gygxui8q4u6n5e42jd60.png',
   },
   '흑월 검사': {
+    drops: ['소음 호르몬', '소음 수액'],
     detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E9%BB%91%E6%9C%88%E5%89%91',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/a/a3/3xe1om90y9hq6adksjig5cv724y326w.png',
@@ -2442,6 +2493,7 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/f/f2/72fwsi6q426gygxui8q4u6n5e42jd60.png',
   },
   '약탈자-해머': {
+    drops: [],
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E5%8A%AB%E6%8E%A0%E8%80%85%C2%B7%E6%89%A7%E9%94%A4',
     thumbnail:
@@ -2480,6 +2532,7 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/9/90/jroz2h6d737fki59s4i558tr3ofiwau.png',
   },
   '약탈자-썬더': {
+    drops: [],
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E5%8A%AB%E6%8E%A0%E8%80%85%C2%B7%E6%89%A7%E7%94%B5',
     thumbnail:
@@ -2518,6 +2571,7 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/9/90/jroz2h6d737fki59s4i558tr3ofiwau.png',
   },
   '약탈자-파이어건': {
+    drops: [],
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E5%8A%AB%E6%8E%A0%E8%80%85%C2%B7%E6%89%A7%E7%81%AB',
     thumbnail:
@@ -2556,6 +2610,7 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/9/90/jroz2h6d737fki59s4i558tr3ofiwau.png',
   },
   '약탈자-소드': {
+    drops: [],
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E5%8A%AB%E6%8E%A0%E8%80%85%C2%B7%E6%89%A7%E5%89%91',
     thumbnail:
@@ -2591,6 +2646,7 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/9/90/jroz2h6d737fki59s4i558tr3ofiwau.png',
   },
   '골드 마이너 1호': {
+    drops: ['낡은 부품', '정밀 부품', '도금 부품'],
     detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E6%8E%98%E9%87%911%E5%8F%B7',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/9/93/phezwfac0bev6u7vg16sh0qae07epdt.png',
@@ -2637,6 +2693,7 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/5/58/tp942kij34ugn8wz5k7sgv2ud2xc2js.png',
   },
   '골드 마이너 2호': {
+    drops: ['낡은 부품', '정밀 부품'],
     detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E6%8E%98%E9%87%912%E5%8F%B7',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/5/55/k9murcatu370s51idq8qb8tiyrxnfi6.png',
@@ -2852,6 +2909,7 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/e/e1/elndxhhn7xswvjzsdmy4qf1uspkmv9w.png',
   },
   '혼란의 산호초': {
+    drops: ['뇌안개 포자', '환각 산호초'],
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E6%B7%B7%E5%8E%84%E6%9C%A8%E7%A4%81',
     thumbnail:
@@ -2893,6 +2951,7 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/8/8b/88cs95z6hi13s7cpzwshg2670jomxmq.png',
   },
   '혼돈의 시클펀': {
+    drops: ['뇌안개 포자', '고통의 발톱'],
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E6%B5%91%E5%99%A9%E9%95%B0%E8%95%A8',
     thumbnail:
@@ -4593,3 +4652,8 @@ export const MONSTERS: {
     type: MonsterType.BETULA,
   },
 }
+
+export const CONVERTED_MONSTERS = _.map(MONSTERS, (value, key) => ({
+  name: key,
+  ...value,
+}))
