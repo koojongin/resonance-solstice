@@ -1,4 +1,4 @@
-import { MonsterGrade, MonsterType } from '@/const/monster/monster.const'
+import { MonsterGrade, MonsterType } from '@/const/monster/monster.interface'
 
 export function getMonsterFrameUrl(grade: MonsterGrade) {
   if (grade === MonsterGrade.ARCHNEMESIS) {

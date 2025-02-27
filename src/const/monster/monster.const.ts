@@ -1,41 +1,10 @@
-// 강적,정예,일반
-export enum MonsterGrade {
-  ARCHNEMESIS = '강적',
-  ELITE = '정예',
-  NORMAL = '일반',
-}
-
-export enum MonsterStatGrade {
-  SSS = 'SSS',
-  SS = 'SS',
-  S = 'S',
-  A = 'A',
-  B = 'B',
-  C = 'C',
-  D = 'D',
-}
-export enum MonsterType {
-  BETULA = '베툴라 생명체',
-  DORMANT = '심면자',
-  HUMAN = '인간형 유닛',
-  MACHINE = '기계 유닛',
-  ETC = '기타',
-}
-
-export interface RSMonster {
-  detail: string
-  thumbnail: string
-  desc?: string
-  grade: MonsterGrade
-  attack: MonsterStatGrade
-  defence: MonsterStatGrade
-  hp: MonsterStatGrade
-  type: MonsterType
-}
-
-export interface ExtendedRSMonster extends RSMonster {
-  name: string
-}
+import {
+  MonsterType,
+  MonsterGrade,
+  MonsterStatGrade,
+  RSMonster,
+  MonsterAbility,
+} from '@/const/monster/monster.interface'
 
 export const MONSTERS: {
   [key: string]: RSMonster
@@ -50,6 +19,48 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.S,
     type: MonsterType.BETULA,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.SUMMON,
+        },
+        {
+          name: MonsterAbility.BURN,
+        },
+        {
+          name: MonsterAbility.CRASH,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.SLEEP,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.FREEZING,
+        },
+        {
+          name: MonsterAbility.IGNITE,
+        },
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/4/47/anp6xbj0eskt8wbmpf27lu00zdw9gi5.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/2/2f/no501iad0px5870m35pi7gir9dkar5o.png',
   },
   '스콜피언 머신': {
     detail:
@@ -61,6 +72,42 @@ export const MONSTERS: {
     defence: MonsterStatGrade.S,
     hp: MonsterStatGrade.S,
     type: MonsterType.MACHINE,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.INTERRUPTION,
+        },
+        {
+          name: MonsterAbility.STUN,
+        },
+        {
+          name: MonsterAbility.IGNITE,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.FREEZING,
+        },
+        {
+          name: MonsterAbility.SLEEP,
+        },
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/2/20/gqcm31zwl3uy43fdsvjtuibn0dp2xp0.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/d/da/jief5dxw2exbksqhozaqb0srxud6cr1.png',
   },
   '벌목용 중장비': {
     detail:
@@ -72,6 +119,39 @@ export const MONSTERS: {
     defence: MonsterStatGrade.S,
     hp: MonsterStatGrade.SS,
     type: MonsterType.MACHINE,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.SERIOUS_INJURY,
+        },
+        {
+          name: MonsterAbility.FREEZING,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.FREEZING,
+        },
+        {
+          name: MonsterAbility.SLEEP,
+        },
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/3/3c/dulpxwgluwp6llpokb3mvqauj8re6xk.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/d/da/jief5dxw2exbksqhozaqb0srxud6cr1.png',
   },
   '블리자드 기포체': {
     detail:
@@ -83,6 +163,30 @@ export const MONSTERS: {
     defence: MonsterStatGrade.A,
     hp: MonsterStatGrade.S,
     type: MonsterType.BETULA,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.FREEZING,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.FREEZING,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/f/f2/qkzegelrelsv1pz9bjntizjzae52tg4.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/7/79/r9gwbxmp4mfxucpaea4sq36aee329pi.png',
   },
   '더스트 리자드': {
     detail:
@@ -94,6 +198,48 @@ export const MONSTERS: {
     defence: MonsterStatGrade.A,
     hp: MonsterStatGrade.S,
     type: MonsterType.BETULA,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.SUMMON,
+        },
+        {
+          name: MonsterAbility.COST_ABSORPTION,
+        },
+        {
+          name: MonsterAbility.SMASH,
+        },
+        {
+          name: MonsterAbility.STUN,
+        },
+        {
+          name: MonsterAbility.IGNITE,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+        {
+          name: MonsterAbility.SLEEP,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/1/18/nsvzxn3hevqzzvc2oj6xvvt646wtbhg.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/4/46/kxsvnvj2bq6cx1iotkuymskxllvj954.png',
   },
   '빙하 본드래곤': {
     detail:
@@ -105,6 +251,63 @@ export const MONSTERS: {
     defence: MonsterStatGrade.A,
     hp: MonsterStatGrade.SS,
     type: MonsterType.BETULA,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.SHACKLES,
+        },
+        {
+          name: MonsterAbility.RESTRAINT,
+        },
+        {
+          name: MonsterAbility.BERSERK,
+        },
+        {
+          name: MonsterAbility.FREEZING,
+        },
+        {
+          name: MonsterAbility.SMASH,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.FREEZING,
+        },
+        {
+          name: MonsterAbility.SLEEP,
+        },
+        {
+          name: MonsterAbility.RESTRAINT,
+        },
+        {
+          name: MonsterAbility.SHACKLES,
+        },
+        {
+          name: MonsterAbility.CURSE,
+        },
+        {
+          name: MonsterAbility.CHAOS,
+        },
+        {
+          name: MonsterAbility.IGNITE,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/a/a7/7mju2h1crystlhxonnx15oucz8m4f0o.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/a/a3/8dqqd5k3eudc4iks8icdt7jksjfv61f.png',
   },
   '머리가 갈라진 해골': {
     detail:
@@ -116,6 +319,63 @@ export const MONSTERS: {
     defence: MonsterStatGrade.A,
     hp: MonsterStatGrade.SS,
     type: MonsterType.BETULA,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.SHACKLES,
+        },
+        {
+          name: MonsterAbility.RESTRAINT,
+        },
+        {
+          name: MonsterAbility.BERSERK,
+        },
+        {
+          name: MonsterAbility.FREEZING,
+        },
+        {
+          name: MonsterAbility.SMASH,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.FREEZING,
+        },
+        {
+          name: MonsterAbility.SLEEP,
+        },
+        {
+          name: MonsterAbility.RESTRAINT,
+        },
+        {
+          name: MonsterAbility.SHACKLES,
+        },
+        {
+          name: MonsterAbility.CURSE,
+        },
+        {
+          name: MonsterAbility.CHAOS,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+        {
+          name: MonsterAbility.IGNITE,
+        },
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/c/c2/rsky5zsoh41gqvzx9j6r09d9c0susz4.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/a/a3/8dqqd5k3eudc4iks8icdt7jksjfv61f.png',
   },
   시라누이: {
     detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E6%97%A0%E6%98%8E%E7%81%AB',
@@ -126,6 +386,51 @@ export const MONSTERS: {
     defence: MonsterStatGrade.A,
     hp: MonsterStatGrade.S,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.SERIOUS_INJURY,
+        },
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+        {
+          name: MonsterAbility.IGNITE,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.STUN,
+        },
+        {
+          name: MonsterAbility.SLEEP,
+        },
+        {
+          name: MonsterAbility.BURN,
+        },
+        {
+          name: MonsterAbility.FREEZING,
+        },
+        {
+          name: MonsterAbility.IGNITE,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/8/86/77hi6iz8jf3cl10g0li9t3squ6w5m3m.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/f/f2/72fwsi6q426gygxui8q4u6n5e42jd60.png',
   },
   우뢰: {
     detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E9%95%87%E9%9B%B7%E9%B8%A3',
@@ -136,6 +441,48 @@ export const MONSTERS: {
     defence: MonsterStatGrade.SS,
     hp: MonsterStatGrade.S,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+        {
+          name: MonsterAbility.INTERRUPTION,
+        },
+        {
+          name: MonsterAbility.STUN,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.STUN,
+        },
+        {
+          name: MonsterAbility.SLEEP,
+        },
+        {
+          name: MonsterAbility.BURN,
+        },
+        {
+          name: MonsterAbility.FREEZING,
+        },
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/0/0e/888buzqrr96ckuv9282vz2uxugwjdnt.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/f/f2/72fwsi6q426gygxui8q4u6n5e42jd60.png',
   },
   '다크 썬더 리추얼리스트': {
     detail:
@@ -147,6 +494,36 @@ export const MONSTERS: {
     defence: MonsterStatGrade.S,
     hp: MonsterStatGrade.SS,
     type: MonsterType.BETULA,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+        {
+          name: MonsterAbility.CHAOS,
+        },
+        {
+          name: MonsterAbility.AIRBORNE,
+        },
+        {
+          name: MonsterAbility.CURSE,
+        },
+        {
+          name: MonsterAbility.BURN,
+        },
+      ],
+    },
+    resistance: { skills: [] },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/6/69/k8milwq8au3xpthsipc6z5zb2u2xjfe.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/a/a0/fbdc315jmg3h5b8w2mq80rci6dtyvxd.png',
   },
   '마로더 톱': {
     detail:
@@ -158,6 +535,60 @@ export const MONSTERS: {
     defence: MonsterStatGrade.B,
     hp: MonsterStatGrade.S,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+        {
+          name: MonsterAbility.BLAZE,
+        },
+        {
+          name: MonsterAbility.FIRESTORM,
+        },
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+        {
+          name: MonsterAbility.SUPER_ARMOR,
+        },
+        {
+          name: MonsterAbility.AIRBORNE,
+        },
+        {
+          name: MonsterAbility.IMMORTAL,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+        {
+          name: MonsterAbility.IGNITE,
+        },
+        {
+          name: MonsterAbility.STUN,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+        {
+          name: MonsterAbility.SLEEP,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/b/be/hwb1pl01z629x504kv9mb06nbdj17uo.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/9/90/jroz2h6d737fki59s4i558tr3ofiwau.png',
   },
   '미스 골드': {
     detail:
@@ -169,6 +600,51 @@ export const MONSTERS: {
     defence: MonsterStatGrade.B,
     hp: MonsterStatGrade.S,
     type: MonsterType.MACHINE,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.COST_ABSORPTION,
+        },
+        {
+          name: MonsterAbility.SUMMON,
+        },
+        {
+          name: MonsterAbility.BERSERK,
+        },
+        {
+          name: MonsterAbility.KNOCK_BACK,
+        },
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+        {
+          name: MonsterAbility.SMASH,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+        {
+          name: MonsterAbility.SLEEP,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+        {
+          name: MonsterAbility.FREEZING,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/5/5c/g6ssh3m00aqwiikvq8clb8kny19jipq.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/5/58/tp942kij34ugn8wz5k7sgv2ud2xc2js.png',
   },
   쥬드: {
     detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E6%9C%B1%E8%BF%AA',
@@ -179,6 +655,30 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.C,
     type: MonsterType.ETC,
+    traits: { skills: [] },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.FREEZING,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+        {
+          name: MonsterAbility.IGNITE,
+        },
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/2/2a/scmoquxu9ursvkzbn2c2dzb3jmgr59e.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/6/61/lsmb7fgc7o8dj8nuo3jqzt9zhew099w.png',
   },
   샤이어: {
     detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E5%A4%8F%E5%B0%94',
@@ -189,6 +689,39 @@ export const MONSTERS: {
     defence: MonsterStatGrade.A,
     hp: MonsterStatGrade.S,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.COST_ABSORPTION,
+        },
+        {
+          name: MonsterAbility.CRASH,
+        },
+        {
+          name: MonsterAbility.BERSERK,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.FREEZING,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+        {
+          name: MonsterAbility.SLEEP,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/b/b8/qlq7ix17yu8d491jdt65fap41dy0ejn.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/6/61/lsmb7fgc7o8dj8nuo3jqzt9zhew099w.png',
   },
   '암흑의 매머드': {
     detail:
@@ -200,6 +733,63 @@ export const MONSTERS: {
     defence: MonsterStatGrade.S,
     hp: MonsterStatGrade.S,
     type: MonsterType.BETULA,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.STUN,
+        },
+        {
+          name: MonsterAbility.CURSE,
+        },
+        {
+          name: MonsterAbility.SLEEP,
+        },
+        {
+          name: MonsterAbility.SMASH,
+        },
+        {
+          name: MonsterAbility.INTERRUPTION,
+        },
+        {
+          name: MonsterAbility.SUPER_ARMOR,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.FREEZING,
+        },
+        {
+          name: MonsterAbility.SLEEP,
+        },
+        {
+          name: MonsterAbility.CURSE,
+        },
+        {
+          name: MonsterAbility.RESTRAINT,
+        },
+        {
+          name: MonsterAbility.SHACKLES,
+        },
+        {
+          name: MonsterAbility.STUN,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/e/ec/n6cklekeyae6zqa6hvuz8r4clliuwtn.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/8/8b/88cs95z6hi13s7cpzwshg2670jomxmq.png',
   },
   '혼란의 돌산호': {
     detail:
@@ -211,6 +801,66 @@ export const MONSTERS: {
     defence: MonsterStatGrade.S,
     hp: MonsterStatGrade.S,
     type: MonsterType.BETULA,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+        {
+          name: MonsterAbility.BERSERK,
+        },
+        {
+          name: MonsterAbility.BURN,
+        },
+        {
+          name: MonsterAbility.CHAOS,
+        },
+        {
+          name: MonsterAbility.SERIOUS_INJURY,
+        },
+        {
+          name: MonsterAbility.INTERRUPTION,
+        },
+        {
+          name: MonsterAbility.SUPER_ARMOR,
+        },
+        {
+          name: MonsterAbility.COST_ABSORPTION,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.TRANSFORMATION,
+        },
+        {
+          name: MonsterAbility.CURSE,
+        },
+        {
+          name: MonsterAbility.SLEEP,
+        },
+        {
+          name: MonsterAbility.SHACKLES,
+        },
+        {
+          name: MonsterAbility.RESTRAINT,
+        },
+        {
+          name: MonsterAbility.FREEZING,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/9/95/05n3mdimiv8z581wjf8o8x5gxyidb31.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/8/8b/88cs95z6hi13s7cpzwshg2670jomxmq.png',
   },
   '때리바 1000': {
     detail:
@@ -222,6 +872,12 @@ export const MONSTERS: {
     defence: MonsterStatGrade.S,
     hp: MonsterStatGrade.C,
     type: MonsterType.MACHINE,
+    traits: { skills: [] },
+    resistance: { skills: [] },
+    weakness: { skills: [] },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/0/08/j31y1wfvs7i4yi7jtdad3rksv0gs3xe.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/d/d6/fqk1fqk41vtbvbjjn4oubj3gb2q8die.png',
   },
   '때리바 2000': {
     detail:
@@ -233,6 +889,12 @@ export const MONSTERS: {
     defence: MonsterStatGrade.S,
     hp: MonsterStatGrade.C,
     type: MonsterType.MACHINE,
+    traits: { skills: [] },
+    resistance: { skills: [] },
+    weakness: { skills: [] },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/a/a0/d8hse39tdx21rh8eex7mirysn2sbu77.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/d/d6/fqk1fqk41vtbvbjjn4oubj3gb2q8die.png',
   },
   '썬더스톰 BO-X 1000': {
     detail:
@@ -244,6 +906,27 @@ export const MONSTERS: {
     defence: MonsterStatGrade.SS,
     hp: MonsterStatGrade.SSS,
     type: MonsterType.MACHINE,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.STUN,
+        },
+        {
+          name: MonsterAbility.SLEEP,
+        },
+      ],
+    },
+    weakness: { skills: [] },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/f/f1/l5okvbdscysv44mnaehfxv8p2590a29.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/d/d6/fqk1fqk41vtbvbjjn4oubj3gb2q8die.png',
   },
   '플레이밍 BO-X 1000': {
     detail:
@@ -255,6 +938,27 @@ export const MONSTERS: {
     defence: MonsterStatGrade.SS,
     hp: MonsterStatGrade.SSS,
     type: MonsterType.MACHINE,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.STUN,
+        },
+        {
+          name: MonsterAbility.SLEEP,
+        },
+      ],
+    },
+    weakness: { skills: [] },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/5/5b/mvf26d2m1ju4v9i5qpcry69oawzglul.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/d/d6/fqk1fqk41vtbvbjjn4oubj3gb2q8die.png',
   },
   '콘덴싱 BO-X 1000': {
     detail:
@@ -266,6 +970,27 @@ export const MONSTERS: {
     defence: MonsterStatGrade.SS,
     hp: MonsterStatGrade.SSS,
     type: MonsterType.MACHINE,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.FREEZING,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.STUN,
+        },
+        {
+          name: MonsterAbility.SLEEP,
+        },
+      ],
+    },
+    weakness: { skills: [] },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/b/be/22u455lg2z4sbkitjcizz0tbh9qdjng.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/d/d6/fqk1fqk41vtbvbjjn4oubj3gb2q8die.png',
   },
   MOM: {
     detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-MOM',
@@ -276,6 +1001,36 @@ export const MONSTERS: {
     defence: MonsterStatGrade.A,
     hp: MonsterStatGrade.S,
     type: MonsterType.DORMANT,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.CARD_PRINT,
+        },
+        {
+          name: MonsterAbility.SUMMON,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.SLEEP,
+        },
+        {
+          name: MonsterAbility.FREEZING,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/e/ec/llptml6hmezaf7a2g2kjdilekf6jukr.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/e/ef/jx24anrrg2438ypj6wqb5wrbcrm8j2a.png',
   },
   '심면자-환술사': {
     detail:
@@ -287,6 +1042,36 @@ export const MONSTERS: {
     defence: MonsterStatGrade.A,
     hp: MonsterStatGrade.S,
     type: MonsterType.DORMANT,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.CARD_PRINT,
+        },
+        {
+          name: MonsterAbility.SUMMON,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.SLEEP,
+        },
+        {
+          name: MonsterAbility.FREEZING,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/c/c9/3p0cq3g921m36bq04xbhw5t68smu54p.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/e/ef/jx24anrrg2438ypj6wqb5wrbcrm8j2a.png',
   },
   '심면자-나이트메어': {
     detail:
@@ -298,6 +1083,51 @@ export const MONSTERS: {
     defence: MonsterStatGrade.S,
     hp: MonsterStatGrade.S,
     type: MonsterType.DORMANT,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.CURSE,
+        },
+        {
+          name: MonsterAbility.RESTRAINT,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.SLEEP,
+        },
+        {
+          name: MonsterAbility.FREEZING,
+        },
+        {
+          name: MonsterAbility.RESTRAINT,
+        },
+        {
+          name: MonsterAbility.SHACKLES,
+        },
+        {
+          name: MonsterAbility.CURSE,
+        },
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+        {
+          name: MonsterAbility.CRASH,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/8/84/8kqjfcdlc25ebh1m3fo968enxzmrhhb.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/e/ef/jx24anrrg2438ypj6wqb5wrbcrm8j2a.png',
   },
   '사슬의 죄수': {
     detail:
@@ -309,6 +1139,60 @@ export const MONSTERS: {
     defence: MonsterStatGrade.S,
     hp: MonsterStatGrade.SS,
     type: MonsterType.DORMANT,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.COST_ABSORPTION,
+        },
+        {
+          name: MonsterAbility.INTERRUPTION,
+        },
+        {
+          name: MonsterAbility.STUN,
+        },
+        {
+          name: MonsterAbility.RESTRAINT,
+        },
+        {
+          name: MonsterAbility.CURSE,
+        },
+        {
+          name: MonsterAbility.SMASH,
+        },
+        {
+          name: MonsterAbility.BURN,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.SLEEP,
+        },
+        {
+          name: MonsterAbility.STUN,
+        },
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+        {
+          name: MonsterAbility.FREEZING,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/b/b8/9ntfqieo2jolewdzepw7uzrgp06apsq.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/e/ef/jx24anrrg2438ypj6wqb5wrbcrm8j2a.png',
   },
   '멸망의 맹세': {
     detail:
@@ -320,6 +1204,57 @@ export const MONSTERS: {
     defence: MonsterStatGrade.S,
     hp: MonsterStatGrade.SS,
     type: MonsterType.DORMANT,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.CHAOS,
+        },
+        {
+          name: MonsterAbility.CRASH,
+        },
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+        {
+          name: MonsterAbility.IGNITE,
+        },
+        {
+          name: MonsterAbility.FREEZING,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.SLEEP,
+        },
+        {
+          name: MonsterAbility.CURSE,
+        },
+        {
+          name: MonsterAbility.SHACKLES,
+        },
+        {
+          name: MonsterAbility.RESTRAINT,
+        },
+        {
+          name: MonsterAbility.FREEZING,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+        {
+          name: MonsterAbility.CRASH,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/d/d5/6bz4znisiaqlc8m4f1tqpyvt53jm10k.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/e/ef/jx24anrrg2438ypj6wqb5wrbcrm8j2a.png',
   },
   '조상들의 보복': {
     detail:
@@ -331,6 +1266,63 @@ export const MONSTERS: {
     defence: MonsterStatGrade.B,
     hp: MonsterStatGrade.SS,
     type: MonsterType.DORMANT,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+        {
+          name: MonsterAbility.BURN,
+        },
+        {
+          name: MonsterAbility.SMASH,
+        },
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.SLEEP,
+        },
+        {
+          name: MonsterAbility.TRANSFORMATION,
+        },
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+        {
+          name: MonsterAbility.STUN,
+        },
+        {
+          name: MonsterAbility.RESTRAINT,
+        },
+        {
+          name: MonsterAbility.SHACKLES,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+        {
+          name: MonsterAbility.FREEZING,
+        },
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/0/01/mtu12qkw20odds7t7k7w6jqlvovxh0q.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/e/ef/jx24anrrg2438ypj6wqb5wrbcrm8j2a.png',
   },
   '황무지의 왕 - 피어싱 파워 아머': {
     detail:
@@ -342,8 +1334,41 @@ export const MONSTERS: {
     defence: MonsterStatGrade.B,
     hp: MonsterStatGrade.S,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.STUN,
+        },
+        {
+          name: MonsterAbility.SMASH,
+        },
+        {
+          name: MonsterAbility.CRASH,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.FREEZING,
+        },
+        {
+          name: MonsterAbility.SLEEP,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/b/bc/jnqullmw3gqmytnc1uof0clplko9f4o.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/0/00/qdastc7p24sf8r44ketmdkl4b1370j0.png',
   },
-  '위험방지장비 · ENI': {
+  '위험방지장비-ENI': {
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E5%BE%A1%E9%99%A9%E5%AF%B9%E7%AD%96%E6%9C%BA%E6%A2%B0%C2%B7%E8%89%BE%E5%B0%BC',
     thumbnail:
@@ -353,6 +1378,54 @@ export const MONSTERS: {
     defence: MonsterStatGrade.S,
     hp: MonsterStatGrade.SS,
     type: MonsterType.MACHINE,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.KNOCK_BACK,
+        },
+        {
+          name: MonsterAbility.AIRBORNE,
+        },
+        {
+          name: MonsterAbility.RESTRAINT,
+        },
+        {
+          name: MonsterAbility.CHAOS,
+        },
+        {
+          name: MonsterAbility.SHACKLES,
+        },
+        {
+          name: MonsterAbility.FIRESTORM,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.FREEZING,
+        },
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+        {
+          name: MonsterAbility.IGNITE,
+        },
+        {
+          name: MonsterAbility.SLEEP,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/d/d5/7rg9rjhalp1r7lrxeqts676172b8x3z.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/6/63/dc60cj3zxglq3um638rpqk1hkxtptjz.png',
   },
   '슬레이어 전기톱': {
     detail:
@@ -364,6 +1437,48 @@ export const MONSTERS: {
     defence: MonsterStatGrade.S,
     hp: MonsterStatGrade.SS,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+        {
+          name: MonsterAbility.CRASH,
+        },
+        {
+          name: MonsterAbility.STUN,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.FREEZING,
+        },
+        {
+          name: MonsterAbility.IGNITE,
+        },
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+        {
+          name: MonsterAbility.INTERRUPTION,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/2/2c/1ep1m5toqgr5n1zak5nz6n3se24wddp.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/c/c9/gylzv59aumb0nn4fit07ezjqvh38z7m.png',
   },
   '죽지 않는': {
     detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E6%B0%B8%E7%94%9F%E8%80%85',
@@ -374,6 +1489,54 @@ export const MONSTERS: {
     defence: MonsterStatGrade.A,
     hp: MonsterStatGrade.SS,
     type: MonsterType.ETC,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.SERIOUS_INJURY,
+        },
+        {
+          name: MonsterAbility.SUPER_ARMOR,
+        },
+        {
+          name: MonsterAbility.SCORCH,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+        {
+          name: MonsterAbility.BURN,
+        },
+        {
+          name: MonsterAbility.CHAOS,
+        },
+        {
+          name: MonsterAbility.RESTRAINT,
+        },
+        {
+          name: MonsterAbility.SHACKLES,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.FREEZING,
+        },
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+        {
+          name: MonsterAbility.CRASH,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/3/3b/euuh9rp2ps3b349mscr1fvxix4ee7dd.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/9/9f/ewannjsdfylbscs56ql2xsl6ebwh0k4.png',
   },
   '두더지 기계': {
     detail:
@@ -385,6 +1548,45 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.S,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.SUMMON,
+        },
+        {
+          name: MonsterAbility.IGNITE,
+        },
+        {
+          name: MonsterAbility.STUN,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.SLEEP,
+        },
+        {
+          name: MonsterAbility.STUN,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.FREEZING,
+        },
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/b/b2/scj7xwwbuaog03bfkqjk38a7v307fgk.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/c/c5/h0od7spwstsarfp47okis1jl3h4m4n6.png',
   },
   두더지: {
     detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E9%BC%B9%E9%BC%A0',
@@ -395,6 +1597,36 @@ export const MONSTERS: {
     defence: MonsterStatGrade.A,
     hp: MonsterStatGrade.S,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.SUMMON,
+        },
+        {
+          name: MonsterAbility.IGNITE,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.FREEZING,
+        },
+        {
+          name: MonsterAbility.SLEEP,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/0/06/paf1llni8b53gprr3nrrpf6e3syesmu.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/c/c5/h0od7spwstsarfp47okis1jl3h4m4n6.png',
   },
   '아니타 무장 초병': {
     detail:
@@ -406,6 +1638,33 @@ export const MONSTERS: {
     defence: MonsterStatGrade.SS,
     hp: MonsterStatGrade.S,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.SMASH,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.RESTRAINT,
+        },
+        {
+          name: MonsterAbility.SHACKLES,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.BURN,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/e/e4/pa1a806psqg6psuy2rttapg2otzn7tk.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/a/ad/9926buo6j73a0k5nphis0yupsgcfn9j.png',
   },
   '아니타 무장 위병': {
     detail:
@@ -417,6 +1676,33 @@ export const MONSTERS: {
     defence: MonsterStatGrade.SS,
     hp: MonsterStatGrade.S,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.STUN,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.RESTRAINT,
+        },
+        {
+          name: MonsterAbility.SHACKLES,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.BURN,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/0/0d/nd12w920sv9rxa48oagb1zap5l7omxw.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/a/ad/9926buo6j73a0k5nphis0yupsgcfn9j.png',
   },
   '방패배트 폭력배': {
     detail:
@@ -428,6 +1714,24 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.D,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.INTERRUPTION,
+        },
+      ],
+    },
+    resistance: { skills: [] },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/5/5b/ehh6a5g537153evmmpk99kgu9lc6hk2.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/3/37/rksexwx0jz8jregf65ewxei7bouempn.png',
   },
   '산탄총방패 폭력배': {
     detail:
@@ -439,6 +1743,18 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.D,
     type: MonsterType.HUMAN,
+    traits: { skills: [] },
+    resistance: { skills: [] },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/2/20/37wplcddaj4njljujrcb42vzybmpusa.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/3/37/rksexwx0jz8jregf65ewxei7bouempn.png',
   },
   '방패소총 폭력배': {
     detail:
@@ -450,6 +1766,18 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.D,
     type: MonsterType.HUMAN,
+    traits: { skills: [] },
+    resistance: { skills: [] },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/d/db/9d2te33sfkayuo2tw99vdgkpd5frwjm.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/3/37/rksexwx0jz8jregf65ewxei7bouempn.png',
   },
   '배트도끼 폭력배': {
     detail:
@@ -461,6 +1789,27 @@ export const MONSTERS: {
     defence: MonsterStatGrade.D,
     hp: MonsterStatGrade.D,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.INTERRUPTION,
+        },
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    resistance: { skills: [] },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/a/a7/ro4mx6yrwpirt304jjx6h7y2g29dncu.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/3/37/rksexwx0jz8jregf65ewxei7bouempn.png',
   },
   '쌍도끼 폭력배': {
     detail:
@@ -472,6 +1821,18 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.D,
     type: MonsterType.HUMAN,
+    traits: { skills: [] },
+    resistance: { skills: [] },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/1/13/lflwji9wv4r2qx3nni1ylcs86o2lprf.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/3/37/rksexwx0jz8jregf65ewxei7bouempn.png',
   },
   '양손총 폭력배': {
     detail:
@@ -483,6 +1844,18 @@ export const MONSTERS: {
     defence: MonsterStatGrade.D,
     hp: MonsterStatGrade.D,
     type: MonsterType.HUMAN,
+    traits: { skills: [] },
+    resistance: { skills: [] },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/4/4e/gzpvml140vtpitgqtjot88xm4a4zipn.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/3/37/rksexwx0jz8jregf65ewxei7bouempn.png',
   },
   '가시 베인링': {
     detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E9%B8%A3%E7%88%86%E8%99%AB',
@@ -493,6 +1866,39 @@ export const MONSTERS: {
     defence: MonsterStatGrade.D,
     hp: MonsterStatGrade.D,
     type: MonsterType.BETULA,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.SUICIDE_ATTACK,
+        },
+        {
+          name: MonsterAbility.BURN,
+        },
+      ],
+    },
+    resistance: { skills: [] },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.FREEZING,
+        },
+        {
+          name: MonsterAbility.IGNITE,
+        },
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/9/98/jlmclk2ke79amempkyhbjvtorjeuww2.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/2/2f/no501iad0px5870m35pi7gir9dkar5o.png',
   },
   '북부동맹 잔당-파워아머 선봉': {
     detail:
@@ -504,6 +1910,36 @@ export const MONSTERS: {
     defence: MonsterStatGrade.B,
     hp: MonsterStatGrade.C,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.INTERRUPTION,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+        {
+          name: MonsterAbility.STUN,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+        {
+          name: MonsterAbility.FREEZING,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/3/32/52f1h3pe7pgju7l3cnk4sow1kircasm.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/d/da/jief5dxw2exbksqhozaqb0srxud6cr1.png',
   },
   '북부동맹 잔당-파워아머 중포': {
     detail:
@@ -515,6 +1951,36 @@ export const MONSTERS: {
     defence: MonsterStatGrade.B,
     hp: MonsterStatGrade.C,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+        {
+          name: MonsterAbility.FREEZING,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/6/6c/48thp1rgj0plibxjigcud2l7847c5gn.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/d/da/jief5dxw2exbksqhozaqb0srxud6cr1.png',
   },
   '북부동맹 잔당-파워아머 지원': {
     detail:
@@ -526,6 +1992,36 @@ export const MONSTERS: {
     defence: MonsterStatGrade.B,
     hp: MonsterStatGrade.C,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+        {
+          name: MonsterAbility.FREEZING,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/c/cf/hdhdmn2y3hswbefehmrnfevb7po4p9w.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/d/da/jief5dxw2exbksqhozaqb0srxud6cr1.png',
   },
   자주포: {
     detail:
@@ -537,6 +2033,36 @@ export const MONSTERS: {
     defence: MonsterStatGrade.B,
     hp: MonsterStatGrade.C,
     type: MonsterType.MACHINE,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.FREEZING,
+        },
+        {
+          name: MonsterAbility.SLEEP,
+        },
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/7/75/4jcxmxpaq7ouht0oxj9j7q3mmqjwsyr.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/d/da/jief5dxw2exbksqhozaqb0srxud6cr1.png',
   },
   '클로 베툴라 생명체': {
     detail:
@@ -548,6 +2074,18 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.S,
     type: MonsterType.BETULA,
+    traits: { skills: [] },
+    resistance: { skills: [] },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/8/80/443x17zht8bb7h9p74u8utypy9rtbyh.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/7/79/r9gwbxmp4mfxucpaea4sq36aee329pi.png',
   },
   '가시방벽 베툴라 생명체': {
     detail:
@@ -559,6 +2097,24 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.S,
     type: MonsterType.BETULA,
+    traits: { skills: [] },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.FREEZING,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/d/da/e49gk89wbwxvcwc605wbmylex3uanqh.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/7/79/r9gwbxmp4mfxucpaea4sq36aee329pi.png',
   },
   '가시수염 베툴라 생명체': {
     detail:
@@ -570,6 +2126,18 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.B,
     type: MonsterType.BETULA,
+    traits: { skills: [] },
+    resistance: { skills: [] },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/7/7e/gjcsaxj0fn7nawl7rgejayuon5swazu.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/7/79/r9gwbxmp4mfxucpaea4sq36aee329pi.png',
   },
   '배수체 베툴라 생명체': {
     detail:
@@ -581,6 +2149,18 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.B,
     type: MonsterType.BETULA,
+    traits: { skills: [] },
+    resistance: { skills: [] },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/1/11/jax28q7cz4w10i1znys7l6rvfschnfy.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/7/79/r9gwbxmp4mfxucpaea4sq36aee329pi.png',
   },
   '가도관 생명체': {
     detail:
@@ -592,6 +2172,24 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.B,
     type: MonsterType.BETULA,
+    traits: { skills: [] },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.FREEZING,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/f/fb/cfadupbszu0pif41fajnaj2iujof8qx.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/7/79/r9gwbxmp4mfxucpaea4sq36aee329pi.png',
   },
   '에너지 베툴라 생명체': {
     detail:
@@ -603,6 +2201,18 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.B,
     type: MonsterType.BETULA,
+    traits: { skills: [] },
+    resistance: { skills: [] },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/3/37/97i0543l398vi1kbola45ywevfaeuy7.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/7/79/r9gwbxmp4mfxucpaea4sq36aee329pi.png',
   },
   '반딧불 리자드': {
     detail:
@@ -614,6 +2224,36 @@ export const MONSTERS: {
     defence: MonsterStatGrade.A,
     hp: MonsterStatGrade.D,
     type: MonsterType.BETULA,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.BERSERK,
+        },
+        {
+          name: MonsterAbility.IGNITE,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/4/4e/pahdqkaoefcskecujnp31d6k2s4wbm8.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/4/46/kxsvnvj2bq6cx1iotkuymskxllvj954.png',
   },
   '왕관해마 베툴라 생명체': {
     detail:
@@ -625,6 +2265,45 @@ export const MONSTERS: {
     defence: MonsterStatGrade.B,
     hp: MonsterStatGrade.B,
     type: MonsterType.BETULA,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.CHAOS,
+        },
+        {
+          name: MonsterAbility.FREEZING,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.FREEZING,
+        },
+        {
+          name: MonsterAbility.CHAOS,
+        },
+        {
+          name: MonsterAbility.SLEEP,
+        },
+        {
+          name: MonsterAbility.IGNITE,
+        },
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/2/27/sad0g392gz44142tqtgz672daxesl4r.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/a/a3/8dqqd5k3eudc4iks8icdt7jksjfv61f.png',
   },
   '해룡 베툴라 생명체': {
     detail:
@@ -636,6 +2315,51 @@ export const MONSTERS: {
     defence: MonsterStatGrade.B,
     hp: MonsterStatGrade.B,
     type: MonsterType.BETULA,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.STUN,
+        },
+        {
+          name: MonsterAbility.SHACKLES,
+        },
+        {
+          name: MonsterAbility.FREEZING,
+        },
+        {
+          name: MonsterAbility.CHAOS,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.FREEZING,
+        },
+        {
+          name: MonsterAbility.CHAOS,
+        },
+        {
+          name: MonsterAbility.SLEEP,
+        },
+        {
+          name: MonsterAbility.IGNITE,
+        },
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/0/07/dfxw6xl5bilos5f25ooii421ianqspn.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/a/a3/8dqqd5k3eudc4iks8icdt7jksjfv61f.png',
   },
   '흑월 닌자': {
     detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E9%BB%91%E6%9C%88%E5%BF%8D',
@@ -646,6 +2370,36 @@ export const MONSTERS: {
     defence: MonsterStatGrade.A,
     hp: MonsterStatGrade.B,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.CHAOS,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.STUN,
+        },
+        {
+          name: MonsterAbility.SLEEP,
+        },
+        {
+          name: MonsterAbility.BURN,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/e/e6/qku3qlyf3ux86zko6wyimb66tfl507r.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/f/f2/72fwsi6q426gygxui8q4u6n5e42jd60.png',
   },
   '흑월 검사': {
     detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E9%BB%91%E6%9C%88%E5%89%91',
@@ -656,16 +2410,36 @@ export const MONSTERS: {
     defence: MonsterStatGrade.A,
     hp: MonsterStatGrade.B,
     type: MonsterType.HUMAN,
-  },
-  '천둥 두개골': {
-    detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E8%8D%92%E9%9B%B7%E9%A2%85',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/6/6c/dn648mzstqe5n7t16eun21fqnrm9zao.png',
-    grade: MonsterGrade.ELITE,
-    attack: MonsterStatGrade.S,
-    defence: MonsterStatGrade.A,
-    hp: MonsterStatGrade.B,
-    type: MonsterType.BETULA,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.STUN,
+        },
+        {
+          name: MonsterAbility.SLEEP,
+        },
+        {
+          name: MonsterAbility.BURN,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/2/27/2d4h5gi1xprj6gab3orez0d4q3m6fn0.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/f/f2/72fwsi6q426gygxui8q4u6n5e42jd60.png',
   },
   '약탈자-해머': {
     detail:
@@ -677,6 +2451,33 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.B,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.STUN,
+        },
+        {
+          name: MonsterAbility.INTERRUPTION,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/a/a1/fx5nw2f79s468ktkv24vwgq8wno5qda.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/9/90/jroz2h6d737fki59s4i558tr3ofiwau.png',
   },
   '약탈자-썬더': {
     detail:
@@ -688,6 +2489,33 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.C,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/3/35/4kaz0obq0rozlhjcy8xwm702qdo5nhz.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/9/90/jroz2h6d737fki59s4i558tr3ofiwau.png',
   },
   '약탈자-파이어건': {
     detail:
@@ -699,6 +2527,33 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.B,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/6/6a/kzraamb6sw980kvbolxg5zdr13f7rus.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/9/90/jroz2h6d737fki59s4i558tr3ofiwau.png',
   },
   '약탈자-소드': {
     detail:
@@ -710,6 +2565,30 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.B,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.INTERRUPTION,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/9/91/6vq0gsys7zrdxd24s9gcjavvilce3d1.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/9/90/jroz2h6d737fki59s4i558tr3ofiwau.png',
   },
   '골드 마이너 1호': {
     detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E6%8E%98%E9%87%911%E5%8F%B7',
@@ -720,6 +2599,42 @@ export const MONSTERS: {
     defence: MonsterStatGrade.B,
     hp: MonsterStatGrade.B,
     type: MonsterType.MACHINE,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.SUICIDE_ATTACK,
+        },
+        {
+          name: MonsterAbility.AIRBORNE,
+        },
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+        {
+          name: MonsterAbility.SLEEP,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.FREEZING,
+        },
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/f/f4/6697haa7hxzwig5v0b0hfphvtbt1ico.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/5/58/tp942kij34ugn8wz5k7sgv2ud2xc2js.png',
   },
   '골드 마이너 2호': {
     detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E6%8E%98%E9%87%912%E5%8F%B7',
@@ -730,6 +2645,39 @@ export const MONSTERS: {
     defence: MonsterStatGrade.B,
     hp: MonsterStatGrade.B,
     type: MonsterType.MACHINE,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.COST_ABSORPTION,
+        },
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+        {
+          name: MonsterAbility.SLEEP,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.FREEZING,
+        },
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/7/7c/akqc8bydtjwct7mv6p7c7ge43wfbc7b.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/5/58/tp942kij34ugn8wz5k7sgv2ud2xc2js.png',
   },
   '미친 곰': {
     detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E7%96%AF%E7%86%8A',
@@ -740,6 +2688,36 @@ export const MONSTERS: {
     defence: MonsterStatGrade.S,
     hp: MonsterStatGrade.SS,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.BERSERK,
+        },
+        {
+          name: MonsterAbility.SCORCH,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.CHAOS,
+        },
+        {
+          name: MonsterAbility.SLEEP,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.BURN,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/e/e6/b7ylf4z70koq28klxu8g7ww6jdm2hxq.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/e/e1/elndxhhn7xswvjzsdmy4qf1uspkmv9w.png',
   },
   '팬텀 베어': {
     detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E5%B9%BB%E7%86%8A',
@@ -750,6 +2728,39 @@ export const MONSTERS: {
     defence: MonsterStatGrade.S,
     hp: MonsterStatGrade.SS,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.BERSERK,
+        },
+        {
+          name: MonsterAbility.CURSE,
+        },
+        {
+          name: MonsterAbility.RESTRAINT,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.CHAOS,
+        },
+        {
+          name: MonsterAbility.SLEEP,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.BURN,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/d/df/fzl6bpan9ecs8jfi54ndj08pf6ysh0i.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/e/e1/elndxhhn7xswvjzsdmy4qf1uspkmv9w.png',
   },
   토끼: {
     detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E6%81%90%E5%85%94',
@@ -760,6 +2771,42 @@ export const MONSTERS: {
     defence: MonsterStatGrade.S,
     hp: MonsterStatGrade.SS,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.BERSERK,
+        },
+        {
+          name: MonsterAbility.CRASH,
+        },
+        {
+          name: MonsterAbility.CHAOS,
+        },
+        {
+          name: MonsterAbility.SUPER_ARMOR,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.CHAOS,
+        },
+        {
+          name: MonsterAbility.SLEEP,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.BURN,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/9/91/2s8pljk62gxm6i27u5v3hwe9ctto0bg.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/e/e1/elndxhhn7xswvjzsdmy4qf1uspkmv9w.png',
   },
   '미친 코끼리': {
     detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E7%8B%82%E8%B1%A1',
@@ -770,6 +2817,39 @@ export const MONSTERS: {
     defence: MonsterStatGrade.S,
     hp: MonsterStatGrade.SS,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.BERSERK,
+        },
+        {
+          name: MonsterAbility.STUN,
+        },
+        {
+          name: MonsterAbility.AIRBORNE,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.CHAOS,
+        },
+        {
+          name: MonsterAbility.SLEEP,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.BURN,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/3/36/197d7t6l2nfnphmngcqpnwi2tcr8279.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/e/e1/elndxhhn7xswvjzsdmy4qf1uspkmv9w.png',
   },
   '혼란의 산호초': {
     detail:
@@ -781,6 +2861,36 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.C,
     type: MonsterType.BETULA,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.SHACKLES,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.CURSE,
+        },
+        {
+          name: MonsterAbility.SHACKLES,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/8/8a/c1xlx0m8pqsw6gapqfy33aev1ckc1nj.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/8/8b/88cs95z6hi13s7cpzwshg2670jomxmq.png',
   },
   '혼돈의 시클펀': {
     detail:
@@ -792,6 +2902,42 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.C,
     type: MonsterType.BETULA,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+        {
+          name: MonsterAbility.BURN,
+        },
+        {
+          name: MonsterAbility.CURSE,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.CURSE,
+        },
+        {
+          name: MonsterAbility.SHACKLES,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/3/3e/kgnkf0bpi6zn623o3ijvsqv2jo7m9kb.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/8/8b/88cs95z6hi13s7cpzwshg2670jomxmq.png',
   },
   '혼돈의 펑거스충': {
     detail:
@@ -803,6 +2949,45 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.C,
     type: MonsterType.BETULA,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.BERSERK,
+        },
+        {
+          name: MonsterAbility.CHAOS,
+        },
+        {
+          name: MonsterAbility.CURSE,
+        },
+        {
+          name: MonsterAbility.BURN,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.CURSE,
+        },
+        {
+          name: MonsterAbility.RESTRAINT,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/a/aa/8f5hzint9os2111j97pr9w58aixe9uu.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/8/8b/88cs95z6hi13s7cpzwshg2670jomxmq.png',
   },
   '혼란의 구골': {
     detail:
@@ -814,6 +2999,39 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.C,
     type: MonsterType.BETULA,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.RESTRAINT,
+        },
+        {
+          name: MonsterAbility.BURN,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.CURSE,
+        },
+        {
+          name: MonsterAbility.RESTRAINT,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/8/88/m3ie4e95hnrv54swe2h6etmf169slca.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/8/8b/88cs95z6hi13s7cpzwshg2670jomxmq.png',
   },
   '심면자-수호자': {
     detail:
@@ -825,6 +3043,33 @@ export const MONSTERS: {
     defence: MonsterStatGrade.SS,
     hp: MonsterStatGrade.S,
     type: MonsterType.DORMANT,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.CHAOS,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.SLEEP,
+        },
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/4/40/3lwqjdrxyu6rftn37u8cfu72083fdae.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/e/ef/jx24anrrg2438ypj6wqb5wrbcrm8j2a.png',
   },
   '심면자-전사': {
     detail:
@@ -836,6 +3081,36 @@ export const MONSTERS: {
     defence: MonsterStatGrade.SS,
     hp: MonsterStatGrade.S,
     type: MonsterType.DORMANT,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+        {
+          name: MonsterAbility.CRASH,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.SLEEP,
+        },
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/3/35/jo7nvro9occqc2osgu0zlku2opkomkn.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/e/ef/jx24anrrg2438ypj6wqb5wrbcrm8j2a.png',
   },
   '심면자-암살자': {
     detail:
@@ -847,6 +3122,36 @@ export const MONSTERS: {
     defence: MonsterStatGrade.SS,
     hp: MonsterStatGrade.S,
     type: MonsterType.DORMANT,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.COST_ABSORPTION,
+        },
+        {
+          name: MonsterAbility.IGNITE,
+        },
+        {
+          name: MonsterAbility.RESTRAINT,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.SLEEP,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/a/aa/fwe88ijviwpc4jipten8eae465qq15t.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/e/ef/jx24anrrg2438ypj6wqb5wrbcrm8j2a.png',
   },
   '심면자-검사': {
     detail:
@@ -858,6 +3163,36 @@ export const MONSTERS: {
     defence: MonsterStatGrade.SS,
     hp: MonsterStatGrade.S,
     type: MonsterType.DORMANT,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+        {
+          name: MonsterAbility.BLOCK,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.SLEEP,
+        },
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/8/8b/bjgezrbduwo4r8kktt8twoliwv000sf.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/e/ef/jx24anrrg2438ypj6wqb5wrbcrm8j2a.png',
   },
   '심면자-마법사': {
     detail:
@@ -869,6 +3204,36 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.B,
     type: MonsterType.DORMANT,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.CURSE,
+        },
+        {
+          name: MonsterAbility.SHACKLES,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.SLEEP,
+        },
+        {
+          name: MonsterAbility.CURSE,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/a/ac/h43yp4hfzlhas4glptyx1sc9aj6l7bg.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/e/ef/jx24anrrg2438ypj6wqb5wrbcrm8j2a.png',
   },
   '심면자-냉기술사': {
     detail:
@@ -880,6 +3245,33 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.C,
     type: MonsterType.DORMANT,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.BARRIER,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.SLEEP,
+        },
+        {
+          name: MonsterAbility.FREEZING,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/4/4b/t8lnjfqolopfrpt9dzenpvovwnhcs27.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/e/ef/jx24anrrg2438ypj6wqb5wrbcrm8j2a.png',
   },
   '방랑자-유탄발사병': {
     detail:
@@ -891,6 +3283,24 @@ export const MONSTERS: {
     defence: MonsterStatGrade.D,
     hp: MonsterStatGrade.D,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+      ],
+    },
+    resistance: { skills: [] },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/c/c7/30ti7riwjtffgg8eedrnhn3qajxfnyn.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/0/00/qdastc7p24sf8r44ketmdkl4b1370j0.png',
   },
   '방랑자-철관강습병': {
     detail:
@@ -902,6 +3312,33 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.C,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.INTERRUPTION,
+        },
+        {
+          name: MonsterAbility.STUN,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/2/21/am9hhqmius86bvf436lkfjpbrtkk1jc.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/0/00/qdastc7p24sf8r44ketmdkl4b1370j0.png',
   },
   '방랑자-화염방사병': {
     detail:
@@ -913,6 +3350,33 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.C,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.STUN,
+        },
+        {
+          name: MonsterAbility.IGNITE,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/3/31/0za4eafke49fihgmjx1wcmtrob0939u.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/0/00/qdastc7p24sf8r44ketmdkl4b1370j0.png',
   },
   플레이아데스: {
     detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E6%98%B4%E5%AE%BF%E4%B8%80',
@@ -923,17 +3387,35 @@ export const MONSTERS: {
     defence: MonsterStatGrade.S,
     hp: MonsterStatGrade.SS,
     type: MonsterType.MACHINE,
+    traits: { skills: [] },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.FREEZING,
+        },
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+        {
+          name: MonsterAbility.IGNITE,
+        },
+        {
+          name: MonsterAbility.SLEEP,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/6/6a/5o94m206o8dw3syloor3hkxw51h73ar.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/6/63/dc60cj3zxglq3um638rpqk1hkxtptjz.png',
   },
-  알키오네: {
-    detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E6%98%B4%E5%AE%BF%E5%85%AD',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/d/d1/b393c44bf5tdnkimr86colcgtg4n11u.png',
-    grade: MonsterGrade.ELITE,
-    attack: MonsterStatGrade.SS,
-    defence: MonsterStatGrade.S,
-    hp: MonsterStatGrade.SS,
-    type: MonsterType.MACHINE,
-  },
+
   '두더지파-파워아머 철권': {
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E9%BC%B9%E9%BC%A0%E5%B8%AE%C2%B7%E5%8A%A8%E5%8A%9B%E7%94%B2%E9%92%A2%E6%8B%B3',
@@ -944,6 +3426,33 @@ export const MONSTERS: {
     defence: MonsterStatGrade.B,
     hp: MonsterStatGrade.S,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.INTERRUPTION,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.FREEZING,
+        },
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/2/2e/7v22qj7di8e0c2amcyeeku67woit2mi.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/c/c5/h0od7spwstsarfp47okis1jl3h4m4n6.png',
   },
   '두더지파-파워아머 화포': {
     detail:
@@ -955,6 +3464,36 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.B,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+        {
+          name: MonsterAbility.IGNITE,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.FREEZING,
+        },
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/8/83/51c3cnzp42vyrxc5thon9o87aokj6fh.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/c/c5/h0od7spwstsarfp47okis1jl3h4m4n6.png',
   },
   '두더지파-파워아머 전자포': {
     detail:
@@ -966,6 +3505,36 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.B,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.FREEZING,
+        },
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/b/b5/gxgpemb1o0g159cqt9ld85cb26sfn8p.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/c/c5/h0od7spwstsarfp47okis1jl3h4m4n6.png',
   },
   '두더지파-파워아머 전기톱': {
     detail:
@@ -977,6 +3546,33 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.B,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.FREEZING,
+        },
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/b/b0/tmpu26w23nzbgbzy26vsyt3zle04wfs.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/c/c5/h0od7spwstsarfp47okis1jl3h4m4n6.png',
   },
   '두더지파-돌격차': {
     detail:
@@ -988,6 +3584,36 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.B,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.FREEZING,
+        },
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/5/5c/ehz0bvg31ifopq06olcwlini8c9fcm9.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/c/c5/h0od7spwstsarfp47okis1jl3h4m4n6.png',
   },
   장애물: {
     detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E8%B7%AF%E9%9A%9C',
@@ -998,6 +3624,12 @@ export const MONSTERS: {
     defence: MonsterStatGrade.D,
     hp: MonsterStatGrade.D,
     type: MonsterType.MACHINE,
+    traits: { skills: [] },
+    resistance: { skills: [] },
+    weakness: { skills: [] },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/1/19/1j5yp5fpcix9frzsrpezvdokqrwyy8v.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/3/37/rksexwx0jz8jregf65ewxei7bouempn.png',
   },
   '방폭방패 폭력배': {
     detail:
@@ -1009,6 +3641,18 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.D,
     type: MonsterType.HUMAN,
+    traits: { skills: [] },
+    resistance: { skills: [] },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/d/d5/qo1zx13axikryzxxevnwps33ot1gghi.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/3/37/rksexwx0jz8jregf65ewxei7bouempn.png',
   },
   '야구배트 폭력배': {
     detail:
@@ -1020,6 +3664,24 @@ export const MONSTERS: {
     defence: MonsterStatGrade.D,
     hp: MonsterStatGrade.D,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.INTERRUPTION,
+        },
+      ],
+    },
+    resistance: { skills: [] },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/8/81/ozw5kgv930zp0u4tj3awrcbaqspsfpc.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/3/37/rksexwx0jz8jregf65ewxei7bouempn.png',
   },
   '소방도끼 폭력배': {
     detail:
@@ -1031,6 +3693,24 @@ export const MONSTERS: {
     defence: MonsterStatGrade.D,
     hp: MonsterStatGrade.D,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    resistance: { skills: [] },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/7/77/7xxjvn5tsk03oc2u0jvlflax88kjuzh.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/3/37/rksexwx0jz8jregf65ewxei7bouempn.png',
   },
   '산탄총 폭력배': {
     detail:
@@ -1042,6 +3722,18 @@ export const MONSTERS: {
     defence: MonsterStatGrade.D,
     hp: MonsterStatGrade.D,
     type: MonsterType.HUMAN,
+    traits: { skills: [] },
+    resistance: { skills: [] },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/e/e3/rdomgl25c1wzpejs51pjjpo0zvaddal.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/3/37/rksexwx0jz8jregf65ewxei7bouempn.png',
   },
   '소총 폭력배': {
     detail:
@@ -1053,6 +3745,18 @@ export const MONSTERS: {
     defence: MonsterStatGrade.D,
     hp: MonsterStatGrade.D,
     type: MonsterType.HUMAN,
+    traits: { skills: [] },
+    resistance: { skills: [] },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/8/8f/j7x0xjv5x32bsukx59ihetexnrlofe1.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/3/37/rksexwx0jz8jregf65ewxei7bouempn.png',
   },
   '전자총 폭력배': {
     detail:
@@ -1064,6 +3768,24 @@ export const MONSTERS: {
     defence: MonsterStatGrade.D,
     hp: MonsterStatGrade.D,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+      ],
+    },
+    resistance: { skills: [] },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/6/64/9rcj2k688ogdee7ysnqyd58oibt6mt2.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/3/37/rksexwx0jz8jregf65ewxei7bouempn.png',
   },
   베인링: {
     detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E7%88%86%E8%99%AB',
@@ -1074,6 +3796,39 @@ export const MONSTERS: {
     defence: MonsterStatGrade.D,
     hp: MonsterStatGrade.D,
     type: MonsterType.BETULA,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.SUICIDE_ATTACK,
+        },
+        {
+          name: MonsterAbility.BURN,
+        },
+      ],
+    },
+    resistance: { skills: [] },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.FREEZING,
+        },
+        {
+          name: MonsterAbility.IGNITE,
+        },
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/e/ea/qwi85s045xft3fkoo9nncayte8sjakf.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/2/2f/no501iad0px5870m35pi7gir9dkar5o.png',
   },
   '북부동맹 잔당-첨병': {
     detail:
@@ -1085,6 +3840,24 @@ export const MONSTERS: {
     defence: MonsterStatGrade.B,
     hp: MonsterStatGrade.C,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    resistance: { skills: [] },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/1/14/lf00iaieh8zs4m47nnhghz8ghnv3zvb.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/d/da/jief5dxw2exbksqhozaqb0srxud6cr1.png',
   },
   '북부동맹 잔당-중기관총병': {
     detail:
@@ -1096,6 +3869,18 @@ export const MONSTERS: {
     defence: MonsterStatGrade.B,
     hp: MonsterStatGrade.C,
     type: MonsterType.HUMAN,
+    traits: { skills: [] },
+    resistance: { skills: [] },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/9/94/c58svcfnhcq4kn46nduq9dossn7ylfx.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/d/da/jief5dxw2exbksqhozaqb0srxud6cr1.png',
   },
   '북부동맹 잔당-유탄소총병': {
     detail:
@@ -1107,6 +3892,24 @@ export const MONSTERS: {
     defence: MonsterStatGrade.B,
     hp: MonsterStatGrade.C,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+      ],
+    },
+    resistance: { skills: [] },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/8/82/h59jm4aa768zhzm7s6mioddk0s1mamd.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/d/da/jief5dxw2exbksqhozaqb0srxud6cr1.png',
   },
   '봉오리 베툴라 생명체': {
     detail:
@@ -1118,6 +3921,18 @@ export const MONSTERS: {
     defence: MonsterStatGrade.D,
     hp: MonsterStatGrade.D,
     type: MonsterType.BETULA,
+    traits: { skills: [] },
+    resistance: { skills: [] },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/2/27/1lo3hziyxu54dmvedxycv5th4zsjqkm.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/8/85/n7q2fcxrzbm137o0fkg06winmnve2iy.png',
   },
   '자성 베툴라 생명체': {
     detail:
@@ -1129,6 +3944,18 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.D,
     type: MonsterType.BETULA,
+    traits: { skills: [] },
+    resistance: { skills: [] },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/5/57/q80l2djb02r87oy8cd75cd54xwpm4dg.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/8/85/n7q2fcxrzbm137o0fkg06winmnve2iy.png',
   },
   '웅성 베툴라 생명체': {
     detail:
@@ -1140,6 +3967,18 @@ export const MONSTERS: {
     defence: MonsterStatGrade.D,
     hp: MonsterStatGrade.D,
     type: MonsterType.BETULA,
+    traits: { skills: [] },
+    resistance: { skills: [] },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/4/40/0tcmhmjxdrm7j16qp216q70ldk9v1cn.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/8/85/n7q2fcxrzbm137o0fkg06winmnve2iy.png',
   },
   샌드비틀: {
     detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E6%BD%9C%E6%B2%99%E7%94%B2',
@@ -1150,6 +3989,36 @@ export const MONSTERS: {
     defence: MonsterStatGrade.A,
     hp: MonsterStatGrade.C,
     type: MonsterType.BETULA,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.SUPER_ARMOR,
+        },
+        {
+          name: MonsterAbility.IGNITE,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/2/21/36jfabvyn5aj3cxxivr0uzani0ycct1.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/4/46/kxsvnvj2bq6cx1iotkuymskxllvj954.png',
   },
   샌드웜: {
     detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E9%92%BB%E6%B2%99%E8%99%AB',
@@ -1160,6 +4029,33 @@ export const MONSTERS: {
     defence: MonsterStatGrade.A,
     hp: MonsterStatGrade.D,
     type: MonsterType.BETULA,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/9/9f/1flth8oh8wvombqp43vldqarsk6vxk5.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/4/46/kxsvnvj2bq6cx1iotkuymskxllvj954.png',
   },
   '악룡어 베툴라 생명체': {
     detail:
@@ -1171,6 +4067,39 @@ export const MONSTERS: {
     defence: MonsterStatGrade.B,
     hp: MonsterStatGrade.B,
     type: MonsterType.BETULA,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.FREEZING,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.FREEZING,
+        },
+        {
+          name: MonsterAbility.CHAOS,
+        },
+        {
+          name: MonsterAbility.IGNITE,
+        },
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/3/36/mt95d32ykjqlfg0f6728bxd2p4sytgq.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/a/a3/8dqqd5k3eudc4iks8icdt7jksjfv61f.png',
   },
   '해마 베툴라 생명체': {
     detail:
@@ -1182,6 +4111,45 @@ export const MONSTERS: {
     defence: MonsterStatGrade.B,
     hp: MonsterStatGrade.B,
     type: MonsterType.BETULA,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.STEALTH,
+        },
+        {
+          name: MonsterAbility.FREEZING,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.FREEZING,
+        },
+        {
+          name: MonsterAbility.CHAOS,
+        },
+        {
+          name: MonsterAbility.SLEEP,
+        },
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+        {
+          name: MonsterAbility.IGNITE,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/2/2c/e0vtj77ue82m1ti2rxq3vkgr0yrqelh.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/a/a3/8dqqd5k3eudc4iks8icdt7jksjfv61f.png',
   },
   '흑월 사수': {
     detail:
@@ -1193,6 +4161,36 @@ export const MONSTERS: {
     defence: MonsterStatGrade.B,
     hp: MonsterStatGrade.C,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.STUN,
+        },
+        {
+          name: MonsterAbility.SLEEP,
+        },
+        {
+          name: MonsterAbility.BURN,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/6/66/aahkou1zpqamicpvi7xtaz1gsdqlygj.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/f/f2/72fwsi6q426gygxui8q4u6n5e42jd60.png',
   },
   '뇌우 버그': {
     detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E9%9B%B7%E6%9A%B4%E8%99%AB',
@@ -1203,16 +4201,36 @@ export const MONSTERS: {
     defence: MonsterStatGrade.A,
     hp: MonsterStatGrade.B,
     type: MonsterType.BETULA,
-  },
-  '야생 번개막대': {
-    detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E8%8D%92%E9%9B%B7%E9%92%88',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/0/02/2qn65c4ibl5wavq9ezyfzblxncx2bow.png',
-    grade: MonsterGrade.NORMAL,
-    attack: MonsterStatGrade.S,
-    defence: MonsterStatGrade.A,
-    hp: MonsterStatGrade.B,
-    type: MonsterType.BETULA,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.LIGHTNING_STRIKE,
+        },
+        {
+          name: MonsterAbility.BURN,
+        },
+        {
+          name: MonsterAbility.RESTRAINT,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/8/8c/7q1m9oftcuh7ccp7jj4cnwbcaiyxjif.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/a/a0/fbdc315jmg3h5b8w2mq80rci6dtyvxd.png',
   },
   '사막 도적단 도끼잡이': {
     detail:
@@ -1224,6 +4242,27 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.C,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    resistance: { skills: [] },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/e/e3/cjzsrrfrjtsn7xjommefkavg2gl205o.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/6/61/lsmb7fgc7o8dj8nuo3jqzt9zhew099w.png',
   },
   '사막 도적단 기사': {
     detail:
@@ -1235,6 +4274,27 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.C,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+        {
+          name: MonsterAbility.SMASH,
+        },
+      ],
+    },
+    resistance: { skills: [] },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/0/01/mgdwmzs7zva4en1db662dypdh45vbyk.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/6/61/lsmb7fgc7o8dj8nuo3jqzt9zhew099w.png',
   },
   '혼란의 틸란시아': {
     detail:
@@ -1246,6 +4306,30 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.B,
     type: MonsterType.BETULA,
+    traits: { skills: [] },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.CURSE,
+        },
+        {
+          name: MonsterAbility.RESTRAINT,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/d/d6/of4771ggmyw6kym3yz11tognwza9wcu.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/8/8b/88cs95z6hi13s7cpzwshg2670jomxmq.png',
   },
   '혼돈의 웜도브': {
     detail:
@@ -1257,6 +4341,33 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.C,
     type: MonsterType.BETULA,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.CHAOS,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.CURSE,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/a/ad/oqt4w04n0f0wklww4qc45hpxagvuid0.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/8/8b/88cs95z6hi13s7cpzwshg2670jomxmq.png',
   },
   '암흑의 코르부스': {
     detail:
@@ -1268,6 +4379,39 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.C,
     type: MonsterType.BETULA,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.CHAOS,
+        },
+        {
+          name: MonsterAbility.STUN,
+        },
+      ],
+    },
+    resistance: {
+      skills: [
+        {
+          name: MonsterAbility.CURSE,
+        },
+        {
+          name: MonsterAbility.SLEEP,
+        },
+      ],
+    },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+        {
+          name: MonsterAbility.BURN_INJURY,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/8/8a/l1tk20wd7qrr53oovf4af2gh7bk6x4l.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/8/8b/88cs95z6hi13s7cpzwshg2670jomxmq.png',
   },
   '방랑자-소총병': {
     detail:
@@ -1279,6 +4423,24 @@ export const MONSTERS: {
     defence: MonsterStatGrade.D,
     hp: MonsterStatGrade.D,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.IGNITE,
+        },
+      ],
+    },
+    resistance: { skills: [] },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/0/04/jmknsvfeyltvleli26jd2c5e0dd6cv5.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/0/00/qdastc7p24sf8r44ketmdkl4b1370j0.png',
   },
   '방랑자-의료팀': {
     detail:
@@ -1290,6 +4452,24 @@ export const MONSTERS: {
     defence: MonsterStatGrade.D,
     hp: MonsterStatGrade.D,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.STUN,
+        },
+      ],
+    },
+    resistance: { skills: [] },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/7/73/h0ddn3t4wydu8707hanyq0nzh8kucr7.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/0/00/qdastc7p24sf8r44ketmdkl4b1370j0.png',
   },
   '방랑자-지원팀': {
     detail:
@@ -1301,6 +4481,24 @@ export const MONSTERS: {
     defence: MonsterStatGrade.D,
     hp: MonsterStatGrade.D,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.SUMMON,
+        },
+      ],
+    },
+    resistance: { skills: [] },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/4/4d/15m78cfs0vmxgj1yw9w52uzt8551sq7.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/0/00/qdastc7p24sf8r44ketmdkl4b1370j0.png',
   },
   '방랑자-머스킷 선봉': {
     detail:
@@ -1312,6 +4510,27 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.D,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.INTERRUPTION,
+        },
+        {
+          name: MonsterAbility.IGNITE,
+        },
+      ],
+    },
+    resistance: { skills: [] },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/1/10/0nokdhdh5tapksde4p1o28isi82q5ft.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/0/00/qdastc7p24sf8r44ketmdkl4b1370j0.png',
   },
   '방랑자-스피어 선봉': {
     detail:
@@ -1323,5 +4542,54 @@ export const MONSTERS: {
     defence: MonsterStatGrade.C,
     hp: MonsterStatGrade.D,
     type: MonsterType.HUMAN,
+    traits: {
+      skills: [
+        {
+          name: MonsterAbility.INTERRUPTION,
+        },
+      ],
+    },
+    resistance: { skills: [] },
+    weakness: {
+      skills: [
+        {
+          name: MonsterAbility.SCORCHING_HEAT,
+        },
+      ],
+    },
+    thumbnailFull:
+      'https://patchwiki.biligame.com/images/resonance/4/4b/cczr916iouynwjdd0qcwu14twjvle4m.png',
+    camp: 'https://patchwiki.biligame.com/images/resonance/0/00/qdastc7p24sf8r44ketmdkl4b1370j0.png',
+  },
+
+  '천둥 두개골': {
+    detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E8%8D%92%E9%9B%B7%E9%A2%85',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/6c/dn648mzstqe5n7t16eun21fqnrm9zao.png',
+    grade: MonsterGrade.ELITE,
+    attack: MonsterStatGrade.S,
+    defence: MonsterStatGrade.A,
+    hp: MonsterStatGrade.B,
+    type: MonsterType.BETULA,
+  },
+  알키오네: {
+    detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E6%98%B4%E5%AE%BF%E5%85%AD',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/d1/b393c44bf5tdnkimr86colcgtg4n11u.png',
+    grade: MonsterGrade.ELITE,
+    attack: MonsterStatGrade.SS,
+    defence: MonsterStatGrade.S,
+    hp: MonsterStatGrade.SS,
+    type: MonsterType.MACHINE,
+  },
+  '야생 번개막대': {
+    detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E8%8D%92%E9%9B%B7%E9%92%88',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/02/2qn65c4ibl5wavq9ezyfzblxncx2bow.png',
+    grade: MonsterGrade.NORMAL,
+    attack: MonsterStatGrade.S,
+    defence: MonsterStatGrade.A,
+    hp: MonsterStatGrade.B,
+    type: MonsterType.BETULA,
   },
 }

@@ -12,6 +12,7 @@ export default function HomePage() {
     { period: '상시', code: 'CBCRR23' },
     { period: '2월 19일 00:00 ~ 3월 4일 00:00', code: 'RSNUM1' },
     { period: '2월 26일 00:00 ~ 3월 1일 00:00', code: 'MYRAIL' },
+    { period: '2월 27일 00:00 ~ 3월 2일 00:00', code: 'GOTOMYRAIL' },
   ].reverse()
   return (
     <div className="flex flex-col gap-[10px]">

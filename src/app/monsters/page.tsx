@@ -4,8 +4,9 @@ import React, { useState } from 'react'
 import createKey from '@/services/key-generator'
 import { CheckBoxGroup } from '@/services/common.enum'
 import _ from 'lodash'
-import { MonsterGrade, MONSTERS, MonsterStatGrade } from '@/const/monster/monster.const'
+import { MONSTERS } from '@/const/monster/monster.const'
 import { MonsterListBox } from '@/app/monsters/monster-list-box'
+import { MonsterGrade, MonsterStatGrade } from '@/const/monster/monster.interface'
 
 const grades = Object.keys(MonsterGrade)
 const CONVERTED_MONSTERS = _.map(MONSTERS, (value, key) => ({

@@ -1,6 +1,6 @@
 import React from 'react'
-import { ExtendedRSMonster } from '@/const/monster/monster.const'
 import { getMonsterFrameUrl, getMonsterTypeIconUrl } from '@/services/utils/monster-box-converter'
+import { ExtendedRSMonster } from '@/const/monster/monster.interface'
 
 export function MonsterBox({ monster }: { monster: ExtendedRSMonster }) {
   return (
@@ -19,10 +19,10 @@ export function MonsterBox({ monster }: { monster: ExtendedRSMonster }) {
       <div className="absolute z-20 top-[98px] text-center text-white ff-dh truncate mx-auto w-full px-[18px]">
         {monster.name}
       </div>
-      <div className="absolute z-20 top-[126px] pl-[10px] ff-dh text-[14px] text-white w-full">
-        <div className="absolute">ATK:{monster.attack}</div>
-        <div className="absolute right-[20px]">DEF:{monster.defence}</div>
-        <div className="absolute top-[16px]">HP:{monster.hp}</div>
+      <div className="absolute z-20 top-[125px] px-[7px] ff-dh text-[14px] text-white w-full flex-wrap flex justify-between">
+        <div className="flex items-center h-[16px] w-[52px] pl-[4px]">공 {monster.attack}</div>
+        <div className="flex items-center h-[16px] w-[52px] pl-[4px]">체 {monster.hp}</div>
+        <div className="flex items-center h-[16px] w-[52px] pl-[4px]">방 {monster.defence}</div>
       </div>
     </div>
   )

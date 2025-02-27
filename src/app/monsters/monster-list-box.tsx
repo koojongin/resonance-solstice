@@ -1,10 +1,10 @@
 import { useNextDepthNavigator } from '@/services/navigation'
 import React, { useEffect, useState } from 'react'
-import { ExtendedRSMonster, MonsterGrade } from '@/const/monster/monster.const'
 import _ from 'lodash'
 import createKey from '@/services/key-generator'
 import { Tooltip } from '@material-tailwind/react'
 import { MonsterBox } from '@/app/components/monster/monster-box'
+import { ExtendedRSMonster, MonsterGrade } from '@/const/monster/monster.interface'
 
 export function MonsterListBox({
   items,
@@ -14,7 +14,7 @@ export function MonsterListBox({
   checkedGradeOfDefences,
   checkedGradeOfHps,
 }: any) {
-  const { router } = useNextDepthNavigator()
+  const { openNewTab, router } = useNextDepthNavigator()
   const [monsters, setMonsters] = useState<ExtendedRSMonster[]>([...items])
 
   useEffect(() => {
@@ -83,7 +83,12 @@ export function MonsterListBox({
             >
               <div
                 className="flex gap-[4px] border items-stretch shadow-md cursor-pointer"
+                // style={{
+                //   opacity: monster?.traits ? 0.5 : 1,
+                //   width: monster?.traits ? '30px' : 'auto',
+                // }}
                 onClick={() => router.push(`/materials/${monster.name}`)}
+                // onClick={() => openNewTab(monster.detail)}
               >
                 <div className="flex items-center justify-center relative">
                   <MonsterBox monster={monster} />

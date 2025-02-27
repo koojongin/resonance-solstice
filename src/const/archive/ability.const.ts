@@ -101,6 +101,11 @@ export const ARCHIVE_ABILITIES: { [key: string]: RSArchive } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/6/61/atlmnf54xbllnuybf8plw7fkx82ujr3.png',
   },
+  '비용 흡수': {
+    desc: '인게임 설명 데이터 없음',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/9/9e/4tt7vylbk14km5coamvxkv2aqpyxfk0.png/50px-%E5%9B%BE%E6%A0%87-%E8%B4%B9%E7%94%A8%E5%90%B8%E5%8F%96.png',
+  },
   발사: {
     desc: '공격이 적 사이에서 2번 튕깁니다.',
     thumbnail:
@@ -210,6 +215,21 @@ export const ARCHIVE_ABILITIES: { [key: string]: RSArchive } = {
     desc: '무적 상태 시 모든 피해에 면역되며 제어 및 피해형 특수 효과를 제거하는 동시에 면역을 얻습니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/6/6b/8bcjxhnzb8741ngpbaqprfq21xpbxlb.png',
+  },
+  소환: {
+    desc: '인게임 데이터 설명 찾지 못함.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/f/f2/rqvvm20naxkluhxlijhrhpjagmkfjf7.png/50px-%E5%9B%BE%E6%A0%87-%E5%8F%AC%E5%94%A4.png',
+  },
+  자폭: {
+    desc: '인게임 데이터 설명 찾지 못함.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/90/9eg06ja8k1uue3fedlb8pcodwiwyyq2.png',
+  },
+  '카드 프린트': {
+    desc: '인게임 데이터 설명 찾지 못함.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/9a/8ft27kjevk95e66wpecoro2x0saii7v.png',
   },
   일반공격: {
     desc: '1의 피해를 입힙니다.\n피해량: 200%',
