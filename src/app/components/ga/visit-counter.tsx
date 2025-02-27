@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 const GA_VIEW_ID = '346033762' // Google Analytics View ID
-const API_KEY = 'AIzaSyB6L3G7eTNedEIFd48uWf4qGdDWJuP0Wpw' // 'FOR_PUBLIC_API_KEY'
+const API_KEY = '자꾸 알람와서 없앰' // 'FOR_PUBLIC_API_KEY'
 
 function VisitCounter() {
   const [visitorCount, setVisitorCount] = useState(0)
