@@ -309,7 +309,7 @@ export const MONSTERS: {
       'https://patchwiki.biligame.com/images/resonance/a/a7/7mju2h1crystlhxonnx15oucz8m4f0o.png',
     camp: 'https://patchwiki.biligame.com/images/resonance/a/a3/8dqqd5k3eudc4iks8icdt7jksjfv61f.png',
   },
-  '머리가 갈라진 해골': {
+  '앰피 본드래곤': {
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E8%A3%82%E9%A6%96%E9%AA%A8%E9%BE%99',
     thumbnail:
