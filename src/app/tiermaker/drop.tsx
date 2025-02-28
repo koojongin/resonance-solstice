@@ -16,7 +16,9 @@ export interface DraggableTier {
   title: string
   items: Array<ExtendedRSEquipment & { id: string }>
 }
+
 export const FULL_BOX_ID = 'full-list-box'
+
 export function DroppableRowBottom({ id, children }: any) {
   const { setNodeRef } = useDroppable({ id })
   return (
@@ -25,6 +27,7 @@ export function DroppableRowBottom({ id, children }: any) {
     </div>
   )
 }
+
 export function DroppableRow({ onHideTitle, tier, onTitleChange, children, onClose }: any) {
   const { setNodeRef } = useDroppable({ id: tier.id })
 
@@ -51,6 +54,7 @@ export function DroppableRow({ onHideTitle, tier, onTitleChange, children, onClo
     </div>
   )
 }
+
 export function DraggableItem({
   item,
   id,
@@ -103,7 +107,9 @@ export function DraggableItem({
               <RsCharacterCardShorten character={item as any} height={width} />
             </div>
           )}
-          {onShowItemName && <div className="text-center break-words">{item.name}</div>}
+          {onShowItemName && (
+            <div className="text-center break-words text-[13px] font-bold">{item.name}</div>
+          )}
         </div>
       </Tooltip>
     </div>

@@ -16,7 +16,7 @@ const SIDEBAR_MENU = [
   },
   {
     path: '/tiermaker/train-equipment',
-    name: '장비 - 열차',
+    name: '열차 무장',
   },
   {
     path: '/tiermaker/material',
