@@ -461,7 +461,7 @@ export const MONSTERS: {
       'https://patchwiki.biligame.com/images/resonance/8/86/77hi6iz8jf3cl10g0li9t3squ6w5m3m.png',
     camp: 'https://patchwiki.biligame.com/images/resonance/f/f2/72fwsi6q426gygxui8q4u6n5e42jd60.png',
   },
-  우뢰: {
+  카미나리: {
     detail: 'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E9%95%87%E9%9B%B7%E9%B8%A3',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/8/8b/dsoi2um06y7syghazcdkr33za45vs6v.png',

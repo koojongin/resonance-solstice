@@ -944,6 +944,12 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/b/ba/57w4ys0jumbedjd7pe2ia28llqkw2vz.png',
   },
+  '레코드 과정': {
+    grade: RS_GRADE.SR,
+    desc: '당신이 가상 공간에서 참여한 모의 전투 진행 상황을 기록했습니다. 협조해 주셔서 감사합니다. 데이터 수집이 원활하게 이루어지길 바랍니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/3/34/ck44p8opko42h6ecua22d1i4yuqe03c.png/180px-%E5%88%BB%E5%BD%95%E8%BF%9B%E7%A8%8B.png',
+  },
   '베툴라 핵': {
     grade: RS_GRADE.SSR,
     desc: '',

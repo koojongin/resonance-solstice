@@ -10,27 +10,54 @@ import { formatNumber } from '@/services/utils/number.formatter'
 import { useNextDepthNavigator } from '@/services/navigation'
 import { ALL_EQUIPMENTS } from '@/const/archive/equipment.const'
 import { VIRTUAL_RECORD_EXCHANGE_ORDERS } from '@/app/event/virtual-record/exchange/virtual-record-exchange.const'
+import { LinkMaterialOrEquipment } from '@/app/components/material/link-material-or-equipment'
 
 const COMMON_REWARDS = [
   {
     title: '첫회 완료 보상',
     rewards: [
-      { name: '크리스탈', amount: 20 },
-      { name: '레코딩 증표', amount: 20 },
+      {
+        name: '크리스탈',
+        amount: 20,
+      },
+      {
+        name: '레코딩 증표',
+        amount: 20,
+      },
+      {
+        name: '레코드 과정',
+        amount: 20,
+      },
     ],
   },
   {
     title: '첫회 S레벨 보상',
     rewards: [
-      { name: '크리스탈', amount: 30 },
-      { name: '레코딩 증표', amount: 30 },
+      {
+        name: '크리스탈',
+        amount: 30,
+      },
+      {
+        name: '레코딩 증표',
+        amount: 30,
+      },
+      {
+        name: '레코드 과정',
+        amount: 30,
+      },
     ],
   },
   {
     title: '심층 연산 완료 보상',
     rewards: [
-      { name: '크리스탈', amount: 50 },
-      { name: '레코딩 증표', amount: 50 },
+      {
+        name: '크리스탈',
+        amount: 0,
+      },
+      {
+        name: '레코딩 증표',
+        amount: 0,
+      },
     ],
   },
 ]
@@ -54,12 +81,26 @@ export default function EventVirtualRecordExchangePage() {
                   {rewards.map((item) => {
                     const material = { ...item, ...MATERIALS[item.name] }
                     return (
-                      <div key={createKey()} className="w-[45px] relative">
-                        <MaterialBoxResponsive material={material} withoutIconPadding />
-                        <div className="absolute right-0 bottom-0 p-[1px] text-center z-20 text-shadow-outline text-white ff-dh">
-                          {formatNumber(item.amount)}
+                      <Tooltip
+                        key={`eve_top_${material.name}`}
+                        content={
+                          <div>
+                            <div>{material.name}</div>
+                          </div>
+                        }
+                      >
+                        <div>
+                          <LinkMaterialOrEquipment material={material}>
+                            <div key={createKey()} className="w-[45px] relative cursor-pointer">
+                              <MaterialBoxResponsive material={material} withoutIconPadding />
+                              <div className="absolute right-0 bottom-0 p-[1px] text-center z-20 text-shadow-outline text-white ff-dh">
+                                {item.amount !== 0 && <>{formatNumber(item.amount)}</>}
+                                {item.amount === 0 && <>?</>}
+                              </div>
+                            </div>
+                          </LinkMaterialOrEquipment>
                         </div>
-                      </div>
+                      </Tooltip>
                     )
                   })}
                 </div>
@@ -89,7 +130,10 @@ export default function EventVirtualRecordExchangePage() {
           <div className="flex flex-col ff-dh gap-[2px]">
             {VIRTUAL_RECORD_EXCHANGE_ORDERS.map((order, index) => {
               const { reward, requirements, exchangeAmount } = order
-              const exReward = { ...MATERIALS[reward.name], name: reward.name }
+              const exReward = {
+                ...MATERIALS[reward.name],
+                name: reward.name,
+              }
               return (
                 <div key={createKey()} className="flex border-b py-[4px]">
                   <div className="ff-dh text-center min-w-[50px] flex items-center justify-center">
