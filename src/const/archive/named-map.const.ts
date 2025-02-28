@@ -36,3 +36,5 @@ export const ALL_NAMED_MAPS: RSMap[] = [
   MAP_SEOWOO_STATION,
   MAP_STORM_EYE_CITY,
 ]
+
+export const ALL_MAP_NAMES: string[] = ALL_NAMED_MAPS.map((data) => data.name)

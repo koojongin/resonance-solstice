@@ -14,6 +14,8 @@ import createKey from '@/services/key-generator'
 import { RSHighlightedText } from '@/services/utils/highlight-text'
 import { LinkedDeckListBox } from '@/app/characters/[name]/linked-deck-list-box'
 import { RECOMMENDATION_DECKS } from '@/app/rd/rd-decks.const'
+import { LinkMaterialOrEquipment } from '@/app/components/material/link-material-or-equipment'
+import { MaterialStringLink } from '@/app/components/material/material-link'
 
 export default function EquipmentDetailPage() {
   const { name } = useParams()
@@ -21,7 +23,7 @@ export default function EquipmentDetailPage() {
 
   const decodedName = decodeURIComponent(name as string)
 
-  const equipment = ALL_EQUIPMENTS[decodedName]
+  const equipment = { ...ALL_EQUIPMENTS[decodedName], name: decodedName }
   if (!equipment) return <div>검색된 재료 데이터 없음.</div>
 
   const relatedMaps = ALL_NAMED_MAPS.filter((map) => {
@@ -78,12 +80,11 @@ export default function EquipmentDetailPage() {
         <div className="inline-flex flex-wrap gap-[4px]">
           {equipment.earnsPath.map((earnPath) => {
             return (
-              <div
-                key={createKey()}
-                className="inline-flex border-gray-500 border w-max rounded p-[4px]"
-              >
-                {earnPath.desc}
-              </div>
+              <MaterialStringLink key={createKey()} text={earnPath.desc}>
+                <div className="inline-flex border-gray-500 border w-max rounded p-[4px]">
+                  {earnPath.desc}
+                </div>
+              </MaterialStringLink>
             )
           })}
         </div>

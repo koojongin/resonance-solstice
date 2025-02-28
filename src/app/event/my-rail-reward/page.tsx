@@ -14,6 +14,7 @@ import {
   CONSTRUCTOR_DATA_PERSONAL,
   CONSTRUCTOR_DATA_SERVER,
 } from '@/const/my-rail/my-rail-constructor.const'
+import { LinkMaterialOrEquipment } from '@/app/components/material/link-material-or-equipment'
 
 export default function EventMyRailRewardPage() {
   const { router } = useNextDepthNavigator()
@@ -67,20 +68,17 @@ export default function EventMyRailRewardPage() {
                           }
                         >
                           <div className="w-[70px]">
-                            <div
-                              className="w-[70px] h-[70px] cursor-pointer relative border rounded-[2px] shadow-md border-blue-gray-900 relative"
-                              onClick={() => {
-                                router.push(`/materials/${reward.name}`)
-                              }}
-                            >
-                              <MaterialBoxResponsive material={reward} withoutIconPadding />
-                              <div className="absolute right-0 bottom-0 p-[1px] text-center z-20 text-shadow-outline text-white ff-dh">
-                                {formatNumber(item.amount)}
+                            <LinkMaterialOrEquipment material={reward}>
+                              <div className="w-[70px] h-[70px] cursor-pointer relative border rounded-[2px] shadow-md border-blue-gray-900 relative">
+                                <MaterialBoxResponsive material={reward} withoutIconPadding />
+                                <div className="absolute right-0 bottom-0 p-[1px] text-center z-20 text-shadow-outline text-white ff-dh">
+                                  {formatNumber(item.amount)}
+                                </div>
                               </div>
-                            </div>
-                            <div className="ff-sdn text-[13px] font-bold p-[4px] text-center">
-                              {item.name}
-                            </div>
+                              <div className="ff-sdn text-[13px] font-bold p-[4px] text-center">
+                                {item.name}
+                              </div>
+                            </LinkMaterialOrEquipment>
                           </div>
                         </Tooltip>
                       )
@@ -139,21 +137,20 @@ export default function EventMyRailRewardPage() {
                             </div>
                           }
                         >
-                          <div className="w-[70px] flex flex-col gap-[4px]">
-                            <div
-                              className="w-[70px] h-[70px] cursor-pointer relative border rounded-[2px] shadow-md border-blue-gray-900 relative"
-                              onClick={() => {
-                                router.push(`/materials/${reward.name}`)
-                              }}
-                            >
-                              <MaterialBoxResponsive material={reward} withoutIconPadding />
-                              <div className="absolute right-0 bottom-0 p-[1px] text-center z-20 text-shadow-outline text-white ff-dh">
-                                {formatNumber(item.amount)}
+                          <div>
+                            <LinkMaterialOrEquipment material={reward}>
+                              <div className="w-[70px] flex flex-col gap-[4px]">
+                                <div className="w-[70px] h-[70px] cursor-pointer relative border rounded-[2px] shadow-md border-blue-gray-900 relative">
+                                  <MaterialBoxResponsive material={reward} withoutIconPadding />
+                                  <div className="absolute right-0 bottom-0 p-[1px] text-center z-20 text-shadow-outline text-white ff-dh">
+                                    {formatNumber(item.amount)}
+                                  </div>
+                                </div>
+                                <div className="ff-sdn text-center font-bold text-[13px]">
+                                  {item.name}
+                                </div>
                               </div>
-                            </div>
-                            <div className="ff-sdn text-center font-bold text-[13px]">
-                              {item.name}
-                            </div>
+                            </LinkMaterialOrEquipment>
                           </div>
                         </Tooltip>
                       )

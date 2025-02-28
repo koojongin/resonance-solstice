@@ -18,6 +18,11 @@ const SIDE_MENU = [
     path: '/event/my-rail-reward',
     name: '마이레일 건설 보상',
   },
+
+  {
+    path: '/event/virtual-record/exchange',
+    name: '버추얼 레코드 교환소',
+  },
 ]
 
 export function EventMenuBox() {

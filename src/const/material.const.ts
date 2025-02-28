@@ -2,10 +2,23 @@ import { RS_GRADE } from '@/const/character/character.enum'
 import _ from 'lodash'
 import { RSEquipmentEarnPath } from '@/const/archive/equipment.const'
 
+export enum RSMaterialType {
+  AVATAR = 'AVATAR',
+  DRESS = 'DRESS',
+}
+
+export enum RSDressType {
+  SET = '세트',
+  SHOES = '신발',
+  EYE = '눈 장식',
+}
+
 export interface RSMaterial {
   grade: RS_GRADE
   thumbnail: string
   desc: string
+  type?: RSMaterialType
+  dressType?: RSDressType
   earnsPath?: RSEquipmentEarnPath[]
 }
 
@@ -925,6 +938,12 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/c/c8/lepiqfkosl3kevbs1hjvgzofxljfr65.png',
   },
+  '레코딩 증표': {
+    grade: RS_GRADE.SR,
+    desc: '데이터 수집과 레코딩 완성 증표입니다. [교환 상점]에서 보상을 교환할 수 있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/ba/57w4ys0jumbedjd7pe2ia28llqkw2vz.png',
+  },
   '베툴라 핵': {
     grade: RS_GRADE.SSR,
     desc: '',
@@ -1278,7 +1297,7 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
     ],
   },
 
-  '골드 열차 공예품 제작 가이드': {
+  '실버 열차 공예품 제작 가이드': {
     grade: RS_GRADE.SSR,
     desc: '',
     thumbnail:
@@ -1542,7 +1561,8 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
       'https://patchwiki.biligame.com/images/resonance/thumb/4/4a/j8eo0hhqnhr6tu183kebslaph1qjf7o.png/180px-%E7%88%86%E8%99%AB%E5%9B%8A%E8%A2%8B.png',
   },
   '자동 관측 필름': {
-    grade: RS_GRADE.R,
+    grade: RS_GRADE.SR,
+    earnsPath: [{ desc: '버추얼 레코드-교환 상점', tags: ['교환 상점'] }],
     desc: '특수한 기술적 수단으로 처리된 필름은 물체의 형태장이 처음에 붕괴되지 않았을 때의 이미지를 보여주고 특정 가이드를 따라 이를 사용하면 형태장을 재구성하여 장비에 새로운 특성을 부여할 수 있습니다. 생산 기술의 불완정성으로 인해 사용 후 장비가 획득할 수 있는 특성을 결정할 수 없습니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/e/e9/ctso7467rr30l75s0sfrk5u0myqvgbd.png',
@@ -1553,6 +1573,190 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/thumb/d/d6/k41iwncg7dkcgxgkobhq5uiwr9rbqxj.png/180px-%E4%BB%99%E4%BA%BA%E7%90%83.png',
   },
+
+  '응? 쥬드': {
+    grade: RS_GRADE.N,
+    type: RSMaterialType.AVATAR,
+    desc: '',
+    earnsPath: [{ desc: '버추얼 레코드-교환 상점', tags: ['교환 상점'] }],
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/c6/5bdwt9v3q4omh19al0v5s5j4z8cdy13.png',
+  },
+  '선인장 도적': {
+    grade: RS_GRADE.N,
+    earnsPath: [{ desc: '버추얼 레코드-교환 상점', tags: ['교환 상점'] }],
+    type: RSMaterialType.AVATAR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/bd/kzjlqkopxrk7qkiawrvrxabuu9k77f5.png',
+  },
+  '움직이지 않는 미스 골드': {
+    grade: RS_GRADE.N,
+    earnsPath: [{ desc: '버추얼 레코드-교환 상점', tags: ['교환 상점'] }],
+    type: RSMaterialType.AVATAR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/ce/7sbkfj4ag6us2qu04wivsn9p52ocfd2.png',
+  },
+  '가상 환경 생성 장치': {
+    grade: RS_GRADE.N,
+    earnsPath: [{ desc: '버추얼 레코드-교환 상점', tags: ['교환 상점'] }],
+    type: RSMaterialType.DRESS,
+    dressType: RSDressType.EYE,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/5f/d8a23b2xk1x4vkxutm9fjzfg7zolcg3.png',
+  },
+  '가상 환경 모니터링 슈트': {
+    grade: RS_GRADE.N,
+    earnsPath: [{ desc: '버추얼 레코드-교환 상점', tags: ['교환 상점'] }],
+    type: RSMaterialType.AVATAR,
+    dressType: RSDressType.SET,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2c/231s071ykhwn8nvyij0eusll9gl9pav.png',
+  },
+  '가상 환경 전용 부츠': {
+    grade: RS_GRADE.N,
+    earnsPath: [{ desc: '버추얼 레코드-교환 상점', tags: ['교환 상점'] }],
+    type: RSMaterialType.AVATAR,
+    dressType: RSDressType.SHOES,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a8/ogxuuvojva4nk31fulmvkm3746kwzao.png',
+  },
+  '자동 붕괴 필름-슈퍼아머 지속 시간 연장': {
+    grade: RS_GRADE.SSR,
+    earnsPath: [{ desc: '버추얼 레코드-교환 상점', tags: ['교환 상점'] }],
+    desc: '사용 후 획득하는 장비 옵션:자신의 [슈퍼아머] 지속 시간이 x초 증가합니다.(중첩 가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2e/3h4nnmr67ff6wxtzwgmx3dqjgxdrmd2.png',
+  },
+
+  '자동 붕괴 필름-자신의 확률 증가': {
+    grade: RS_GRADE.SSR,
+    earnsPath: [{ desc: '버추얼 레코드-교환 상점', tags: ['교환 상점'] }],
+    desc: '사용 후 획득하는 장비 옵션:자신의 모든 확률 발동 메커니즘의 확률이 x% 증가합니다.(중첩 가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2e/3h4nnmr67ff6wxtzwgmx3dqjgxdrmd2.png',
+  },
+  '자동 붕괴 필름-리더 스킬 방어력 증가': {
+    grade: RS_GRADE.SSR,
+    earnsPath: [{ desc: '버추얼 레코드-교환 상점', tags: ['교환 상점'] }],
+    desc: '사용 후 획득하는 장비 옵션:[리더 스킬] 사용 시 자신의 방어력이 x% 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2e/3h4nnmr67ff6wxtzwgmx3dqjgxdrmd2.png',
+  },
+  '자동 붕괴 필름-방어력 증가': {
+    grade: RS_GRADE.SSR,
+    earnsPath: [{ desc: '버추얼 레코드-교환 상점', tags: ['교환 상점'] }],
+    desc: '사용 후 획득하는 장비 옵션:자신의 방어력이 x% 증가합니다.(중첩 가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2e/3h4nnmr67ff6wxtzwgmx3dqjgxdrmd2.png',
+  },
+  '자동 붕괴 필름-버리기 시 방어력 증가': {
+    grade: RS_GRADE.SSR,
+    earnsPath: [{ desc: '버추얼 레코드-교환 상점', tags: ['교환 상점'] }],
+    desc: '사용 후 획득하는 장비 옵션:카드를 1장 버릴 때마다 자신의 방어력이 x% 증가합니다.(중첩 가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2e/3h4nnmr67ff6wxtzwgmx3dqjgxdrmd2.png',
+  },
+  '자동 붕괴 필름-받는 최종 피해 감소': {
+    grade: RS_GRADE.SSR,
+    earnsPath: [{ desc: '버추얼 레코드-교환 상점', tags: ['교환 상점'] }],
+    desc: '사용 후 획득하는 장비 옵션:받는 최종 피해가 x% 감소합니다.(중첩 가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2e/3h4nnmr67ff6wxtzwgmx3dqjgxdrmd2.png',
+  },
+
+  '자동 붕괴 필름-자신의 카드 사용 시 슈퍼아머': {
+    grade: RS_GRADE.SSR,
+    earnsPath: [{ desc: '버추얼 레코드-교환 상점', tags: ['교환 상점'] }],
+    desc: '사용 후 획득하는 장비 옵션:자신의 스킬 카드 사용시 x초간 [슈퍼아머]를 얻습니다.(중첩 가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2e/3h4nnmr67ff6wxtzwgmx3dqjgxdrmd2.png',
+  },
+  '자동 붕괴 필름-리더 스킬 비용 회복': {
+    grade: RS_GRADE.SSR,
+    earnsPath: [{ desc: '버추얼 레코드-교환 상점', tags: ['교환 상점'] }],
+    desc: '사용 후 획득하는 장비 옵션:[리더 스킬] 사용 시 비용을 x 얻습니다.(중첩 가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2e/3h4nnmr67ff6wxtzwgmx3dqjgxdrmd2.png',
+  },
+  '자동 붕괴 필름-리더 스킬 공격력 증가': {
+    grade: RS_GRADE.SSR,
+    earnsPath: [{ desc: '버추얼 레코드-교환 상점', tags: ['교환 상점'] }],
+    desc: '사용 후 획득하는 장비 옵션:[리더 스킬] 사용 시 자신의 공격력이 x% 증가합니다.(중첩 가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2e/3h4nnmr67ff6wxtzwgmx3dqjgxdrmd2.png',
+  },
+
+  '자동 붕괴 필름-공격력 증가': {
+    grade: RS_GRADE.SSR,
+    earnsPath: [{ desc: '버추얼 레코드-교환 상점', tags: ['교환 상점'] }],
+    desc: '사용 후 획득하는 장비 옵션:자신의 공격력이 x% 증가합니다.(중첩 가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2e/3h4nnmr67ff6wxtzwgmx3dqjgxdrmd2.png',
+  },
+  '자동 붕괴 필름-버리기 시 공격력 증가': {
+    grade: RS_GRADE.SSR,
+    earnsPath: [{ desc: '버추얼 레코드-교환 상점', tags: ['교환 상점'] }],
+    desc: '사용 후 획득하는 장비 옵션:카드를 1장 버릴 때마다 자신의 공격력이 x% 증가합니다.(중첩 가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2e/3h4nnmr67ff6wxtzwgmx3dqjgxdrmd2.png',
+  },
+
+  '자동 붕괴 필름-주는 최종 피해 증가': {
+    grade: RS_GRADE.SSR,
+    earnsPath: [{ desc: '버추얼 레코드-교환 상점', tags: ['교환 상점'] }],
+    desc: '사용 후 획득하는 장비 옵션:입히는 최종 피해가 x% 증가합니다.(중첩 가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2e/3h4nnmr67ff6wxtzwgmx3dqjgxdrmd2.png',
+  },
+  '자동 붕괴 필름-폭발 피해 증가': {
+    grade: RS_GRADE.SSR,
+    earnsPath: [{ desc: '버추얼 레코드-교환 상점', tags: ['교환 상점'] }],
+    desc: '사용 후 획득하는 장비 옵션:자신이 입히는 [폭발물]의 피해가 x% 증가합니다.(중첩 가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2e/3h4nnmr67ff6wxtzwgmx3dqjgxdrmd2.png',
+  },
+  '자동 붕괴 필름-매초 비용 회복': {
+    grade: RS_GRADE.SSR,
+    earnsPath: [{ desc: '버추얼 레코드-교환 상점', tags: ['교환 상점'] }],
+    desc: '사용 후 획득하는 장비 옵션:매초 비용을 x 얻습니다.(중첩 가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2e/3h4nnmr67ff6wxtzwgmx3dqjgxdrmd2.png',
+  },
+  '자동 붕괴 필름-버리기 시 체력 회복': {
+    grade: RS_GRADE.SSR,
+    earnsPath: [{ desc: '버추얼 레코드-교환 상점', tags: ['교환 상점'] }],
+    desc: '사용 후 획득하는 장비 옵션:카드를 1장 버릴 때마다 자신의 체력을 x% 회복합니다.(중첩 가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2e/3h4nnmr67ff6wxtzwgmx3dqjgxdrmd2.png',
+  },
+  '자동 붕괴 필름-버리기 명령 비용 회복': {
+    grade: RS_GRADE.SSR,
+    earnsPath: [{ desc: '버추얼 레코드-교환 상점', tags: ['교환 상점'] }],
+    desc: '사용 후 획득하는 장비 옵션:[버리기] 명령 사용 시 비용을 x 얻습니다.(중첩 가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2e/3h4nnmr67ff6wxtzwgmx3dqjgxdrmd2.png',
+  },
+
+  '자동 붕괴 필름-버리기 명령 쿨타임 감소': {
+    grade: RS_GRADE.SSR,
+    earnsPath: [{ desc: '버추얼 레코드-교환 상점', tags: ['교환 상점'] }],
+    desc: '사용 후 획득하는 장비 옵션:[버리기] 명령의 쿨타임이 x% 감소합니다.(중첩 가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2e/3h4nnmr67ff6wxtzwgmx3dqjgxdrmd2.png',
+  },
+  '자동 붕괴 필름-자신의 레드카드 공격력 증가': {
+    grade: RS_GRADE.SSR,
+    earnsPath: [{ desc: '버추얼 레코드-교환 상점', tags: ['교환 상점'] }],
+    desc: '사용 후 획득하는 장비 옵션:자신의 [레드카드] 사용 후 자신의 공격력이 x% 증가합니다.(중첩 가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2e/3h4nnmr67ff6wxtzwgmx3dqjgxdrmd2.png',
+  },
+
   '약탈의 원형톱': {
     grade: RS_GRADE.SSR,
     desc: '',
@@ -1603,6 +1807,7 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
   },
   '성운상 물질(8Ti)': {
     grade: RS_GRADE.SSR,
+    earnsPath: [{ desc: '버추얼 레코드-교환 상점', tags: ['교환 상점'] }],
     desc: '사용 후 장비 경험치 4000포인트를 추가할 수 있습니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/thumb/d/df/0iq84bp3xqyoua6tkcj3ysh9sanfwxn.png/180px-%E6%98%9F%E4%BA%91%E7%89%A9%E8%B4%A8%EF%BC%888%E9%92%9B%EF%BC%89.png',

@@ -6,7 +6,6 @@ import React from 'react'
 import {
   getMaterialBgFrameUrl,
   getMaterialBottomFrameUrl,
-  SPECIALTY_FRAME_URL,
 } from '@/services/utils/material-box-converter'
 import { GradientHeaderDiv } from '@/app/components/div/gradient-header-div'
 import { ALL_NAMED_MAPS } from '@/const/archive/named-map.const'
@@ -14,9 +13,11 @@ import createKey from '@/services/key-generator'
 import { GradientButton } from '@/app/components/button/gradient-button'
 import { useNextDepthNavigator } from '@/services/navigation'
 import { TRAIN_EQUIPMENTS } from '@/const/item/train-equipment.const'
-import { CONVERTED_MONSTERS, MONSTERS } from '@/const/monster/monster.const'
+import { CONVERTED_MONSTERS } from '@/const/monster/monster.const'
 import { MonsterBoxSquare } from '@/app/components/monster/monster-box'
 import { Tooltip } from '@material-tailwind/react'
+import { RSHighlightedText } from '@/services/utils/highlight-text'
+import { MaterialStringLink } from '@/app/components/material/material-link'
 
 export default function MaterialDetailPage() {
   const { name } = useParams()
@@ -60,7 +61,9 @@ export default function MaterialDetailPage() {
             <div className="text-[24px]">{decodedName}</div>
             <div className="p-[10px] bg-gray-800/40 w-full min-h-[120px] rounded border-2 border-gray-700 shadow-md shadow-gray-600 ff-sdn">
               {material.desc && (
-                <div className="whitespace-pre-line break-words">{material.desc}</div>
+                <div className="whitespace-pre-line break-words">
+                  <RSHighlightedText text={material.desc} />
+                </div>
               )}
               {!material.desc && (
                 <div className="whitespace-pre-line break-words">
@@ -80,12 +83,11 @@ export default function MaterialDetailPage() {
         <div className="inline-flex flex-wrap gap-[4px]">
           {material?.earnsPath?.map((earnPath) => {
             return (
-              <div
-                key={createKey()}
-                className="inline-flex border-gray-500 border w-max rounded p-[4px]"
-              >
-                {earnPath.desc}
-              </div>
+              <MaterialStringLink key={createKey()} text={earnPath.desc}>
+                <div className="inline-flex border-gray-500 border w-max rounded p-[4px]">
+                  {earnPath.desc}
+                </div>
+              </MaterialStringLink>
             )
           })}
         </div>

@@ -110,6 +110,11 @@ export default function MainSideBar() {
           path: '/event/my-rail-transport',
           className: 'text-[18px]',
         },
+        {
+          label: '버추얼 레코드',
+          path: '/event/virtual-record/exchange',
+          className: 'text-[18px]',
+        },
       ],
     },
   ]
