@@ -2836,7 +2836,7 @@ export const ALL_EQUIPMENTS: {
   '진홍의 예언': {
     type: RSEquipmentType.ARMOR,
     grade: RS_GRADE.SSR,
-    desc: '기본 속성: 방어력+39\n옵션: [침식]/[열식]이 입히는 피해의 5%만큼 자신의 체력을 회복합니다.',
+    desc: '기본 속성: 방어력+39\n옵션: [부식]/[잠식]이 입히는 피해의 5%만큼 자신의 체력을 회복합니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/thumb/f/ff/3oa8flve1va1fwlag1ro9qygjjjlzzb.png/180px-%E6%B7%B1%E7%BA%A2%E8%B0%B6%E8%A8%80.png',
     faction: RS_FACTION.NIGHT_CHAINS,
