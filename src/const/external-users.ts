@@ -42,4 +42,8 @@ export const EXTERNAL_USERS = {
     name: '플린의조수',
     link: 'https://arca.live/u/@%ED%94%8C%EB%A6%B0%EC%9D%98%EC%A1%B0%EC%88%98',
   },
+  15: {
+    name: '언러끼',
+    link: 'https://arca.live/u/@%EC%96%B8%EB%9F%AC%EB%81%BC',
+  },
 }

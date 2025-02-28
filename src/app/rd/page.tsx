@@ -43,9 +43,14 @@ export default function RecommendationDeckPage() {
   return (
     <div className="flex flex-col gap-[10px]">
       <div className="flex flex-col gap-[6px]">
-        <div className="text-gray-600/90 font-bold">
-          * 모든 덱은 설명과, 가이드 링크를 읽어 보시는 것을 추천드립니다. 현재 한섭 상황과 돌파수에
-          따라 가능성 유무가 존재합니다.
+        <div className="flex flex-col gap-[4px]">
+          <div className="text-gray-600/90 font-bold">
+            * 모든 덱은 설명과, 가이드 링크를 읽어 보시는 것을 추천드립니다. 현재 한섭 상황과
+            돌파수에 따라 가능성 유무가 존재합니다.
+          </div>
+          <div className="text-gray-600/90 font-bold">
+            * 리더 표기가 없는 덱도 있습니다. 오토프리셋 불러오기 시 자동으로 설정됩니다.
+          </div>
         </div>
         <div className="flex items-center gap-[4px]">
           <GradientButton

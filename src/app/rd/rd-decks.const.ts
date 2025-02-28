@@ -27,6 +27,7 @@ import {
   RINA_F,
   SHIZURU,
   STELLA,
+  SUEN,
   TENNIE,
   VALENTINE,
   VERLAINE,
@@ -40,7 +41,7 @@ import { RSCharacter } from '@/const/character/character.interface'
 
 export interface RecommendationDeck {
   title: string
-  leaderName: string
+  leaderName?: string
   desc?: string
   descLink?: string
   characters: { character: RSCharacter; equipments?: string[] }[]
@@ -144,14 +145,26 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     title: '단일 화염 나유타 덱',
     leaderName: NAYUTA.name,
     characters: [
-      { character: NAYUTA, equipments: ['불꽃 침식자', '시뮬레이트 스타', '해리슨 장치'] },
-      { character: KALEYA, equipments: ['불꽃 침식자', '시뮬레이트 스타', '모노폴 마그네타'] },
-      { character: VALENTINE, equipments: ['불꽃 침식자', '시뮬레이트 스타', '춘추합성인장'] },
+      {
+        character: NAYUTA,
+        equipments: ['불꽃 침식자', '시뮬레이트 스타', '해리슨 장치'],
+      },
+      {
+        character: KALEYA,
+        equipments: ['불꽃 침식자', '시뮬레이트 스타', '모노폴 마그네타'],
+      },
+      {
+        character: VALENTINE,
+        equipments: ['불꽃 침식자', '시뮬레이트 스타', '춘추합성인장'],
+      },
       {
         character: RINA_F,
         equipments: ['공간 위치 측정기', '시뮬레이트 스타', '베타 세계선 박스'],
       },
-      { character: AOBA, equipments: ['불꽃 침식자', '시뮬레이트 스타', '춘추합성인장'] },
+      {
+        character: AOBA,
+        equipments: ['불꽃 침식자', '시뮬레이트 스타', '춘추합성인장'],
+      },
     ],
     desc: '클릭 시 상세 가이드 링크로 이동합니다.',
     descLink:
@@ -164,11 +177,26 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     title: '단일 냉기 나유타 덱',
     leaderName: NAYUTA.name,
     characters: [
-      { character: NAYUTA, equipments: ['에비서레이터MK0', '시뮬레이트 스타', '해리슨 장치'] },
-      { character: ELIOT, equipments: ['에비서레이터MK0', '시뮬레이트 스타', '춘추합성인장'] },
-      { character: YER, equipments: ['에비서레이터MK0', '시뮬레이트 스타', '모노폴 마그네타'] },
-      { character: RINA_F, equipments: ['에비서레이터MK0', '시뮬레이트 스타', '베타 세계선 박스'] },
-      { character: AOBA, equipments: ['에비서레이터MK0', '시뮬레이트 스타', '춘추합성인장'] },
+      {
+        character: NAYUTA,
+        equipments: ['에비서레이터MK0', '시뮬레이트 스타', '해리슨 장치'],
+      },
+      {
+        character: ELIOT,
+        equipments: ['에비서레이터MK0', '시뮬레이트 스타', '춘추합성인장'],
+      },
+      {
+        character: YER,
+        equipments: ['에비서레이터MK0', '시뮬레이트 스타', '모노폴 마그네타'],
+      },
+      {
+        character: RINA_F,
+        equipments: ['에비서레이터MK0', '시뮬레이트 스타', '베타 세계선 박스'],
+      },
+      {
+        character: AOBA,
+        equipments: ['에비서레이터MK0', '시뮬레이트 스타', '춘추합성인장'],
+      },
     ],
     desc: '클릭 시 상세 가이드 링크로 이동합니다.',
     descLink:
@@ -311,7 +339,10 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     leaderName: NAYUTA.name,
     characters: [
       { character: NAYUTA },
-      { character: AOBA, equipments: ['에비서레이터MK0'] },
+      {
+        character: AOBA,
+        equipments: ['에비서레이터MK0'],
+      },
       { character: YEJUE },
       { character: ELIOT },
       { character: RINA_F },
@@ -329,7 +360,10 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     characters: [
       { character: NAYUTA },
       { character: ACHIWA },
-      { character: AOBA, equipments: ['에비서레이터MK0'] },
+      {
+        character: AOBA,
+        equipments: ['에비서레이터MK0'],
+      },
       { character: ELIOT },
       { character: RINA_F },
     ],
@@ -345,7 +379,10 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     leaderName: NAYUTA.name,
     characters: [
       { character: NAYUTA },
-      { character: AOBA, equipments: ['에비서레이터MK0'] },
+      {
+        character: AOBA,
+        equipments: ['에비서레이터MK0'],
+      },
       { character: YER },
       { character: ELIOT },
       { character: RINA_F },
@@ -461,11 +498,26 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     title: '니콜라 오토 프리셋 (니콜라 나유타 캐롤라인 테니 스텔라)',
     leaderName: NICOLA.name,
     characters: [
-      { character: NICOLA, equipments: ['이차 상전이', '공명체 섬유', '모노폴 마그네타'] },
-      { character: NAYUTA, equipments: ['에비서레이터MK0', '시뮬레이트 스타', '베타 세계선 박스'] },
-      { character: CAROLINE, equipments: ['에비서레이터MK0', '시뮬레이트 스타', '뫼비우스'] },
-      { character: TENNIE, equipments: ['에비서레이터MK0', '시뮬레이트 스타', '해리슨 장치'] },
-      { character: STELLA, equipments: ['마술봉', '공간이동', '춘추합성인장'] },
+      {
+        character: NICOLA,
+        equipments: ['이차 상전이', '공명체 섬유', '모노폴 마그네타'],
+      },
+      {
+        character: NAYUTA,
+        equipments: ['에비서레이터MK0', '시뮬레이트 스타', '베타 세계선 박스'],
+      },
+      {
+        character: CAROLINE,
+        equipments: ['에비서레이터MK0', '시뮬레이트 스타', '뫼비우스'],
+      },
+      {
+        character: TENNIE,
+        equipments: ['에비서레이터MK0', '시뮬레이트 스타', '해리슨 장치'],
+      },
+      {
+        character: STELLA,
+        equipments: ['마술봉', '공간이동', '춘추합성인장'],
+      },
     ],
     desc: '니콜라 오토 프리셋 (니콜라 나유타 캐롤라인 테니 스텔라)',
     descLink: 'https://arca.live/b/resonance/129397795',
@@ -578,11 +630,26 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     title: '이로나향 첨가 무순덱',
     leaderName: NAYUTA.name,
     characters: [
-      { character: NAYUTA, equipments: ['에비서레이터MK0', '구급 아머', '동력식 회수 기계'] },
-      { character: STELLA, equipments: ['북두항마검', '북부동맹 방어 섬유', '리프팅 수술 장비'] },
-      { character: ILONA, equipments: ['축퇴 흑석', '진홍의 예언', '동력식 회수 기계'] },
-      { character: ARINA, equipments: ['보랏빛 써스데이', '흑석 아머', '사자 엠블럼'] },
-      { character: ARCANA, equipments: ['비트레이얼', '구급 아머', '최면의 시계'] },
+      {
+        character: NAYUTA,
+        equipments: ['에비서레이터MK0', '구급 아머', '동력식 회수 기계'],
+      },
+      {
+        character: STELLA,
+        equipments: ['북두항마검', '북부동맹 방어 섬유', '리프팅 수술 장비'],
+      },
+      {
+        character: ILONA,
+        equipments: ['축퇴 흑석', '진홍의 예언', '동력식 회수 기계'],
+      },
+      {
+        character: ARINA,
+        equipments: ['보랏빛 써스데이', '흑석 아머', '사자 엠블럼'],
+      },
+      {
+        character: ARCANA,
+        equipments: ['비트레이얼', '구급 아머', '최면의 시계'],
+      },
     ],
     desc: '이로나향 첨가 무순덱',
     descLink: 'https://arca.live/b/resonance/129535208',
@@ -612,7 +679,10 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     title: '대충 정리한 카타스 덱',
     leaderName: KATAS.name,
     characters: [
-      { character: KATAS, equipments: ['불꽃 침식자', '정원 수호', '베타 세계선 박스'] },
+      {
+        character: KATAS,
+        equipments: ['불꽃 침식자', '정원 수호', '베타 세계선 박스'],
+      },
       { character: KALEYA },
       { character: YOIDUKI },
       { character: VALENTINE },
@@ -646,16 +716,109 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     title: '셔플 더 다크 아트 (2025.01.21)',
     leaderName: NAYUTA.name,
     characters: [
-      { character: NAYUTA, equipments: ['비트레이얼', '시뮬레이트 스타', '초인과의 주사위'] },
-      { character: AOBA, equipments: ['비트레이얼', '시뮬레이트 스타', '초인과의 주사위'] },
-      { character: JOSHUA, equipments: ['후회의 갈고리', '시뮬레이트 스타', '트라페조헤드론'] },
-      { character: RINA_F, equipments: ['비트레이얼', '시뮬레이트 스타', '초인과의 주사위'] },
-      { character: TENNIE, equipments: ['비트레이얼', '시뮬레이트 스타', '춘추합성인장'] },
+      {
+        character: NAYUTA,
+        equipments: ['비트레이얼', '시뮬레이트 스타', '초인과의 주사위'],
+      },
+      {
+        character: AOBA,
+        equipments: ['비트레이얼', '시뮬레이트 스타', '초인과의 주사위'],
+      },
+      {
+        character: JOSHUA,
+        equipments: ['후회의 갈고리', '시뮬레이트 스타', '트라페조헤드론'],
+      },
+      {
+        character: RINA_F,
+        equipments: ['비트레이얼', '시뮬레이트 스타', '초인과의 주사위'],
+      },
+      {
+        character: TENNIE,
+        equipments: ['비트레이얼', '시뮬레이트 스타', '춘추합성인장'],
+      },
     ],
     desc: '완전한 생존 전문화를 갖춘 팀은 주로 고압 환경과 장기 전투에 사용됩니다.\n일반적인 사업 운영에는 권장되지 않습니다.\n교활함과 배신은 필수는 아니지만, 악마가 많을수록 더 빨리 나타납니다.\n\n다크아츠 셔플 초반에는 아리나가 쓰이겠지만, 압박이 커질수록 보스의 데미지가 너무 높아서 체력이 가득 찬 상태에서도 즉사할 수 있고, 아리나의 회복도 잘 안 되기 때문에 여기서는 가장 안정적인 포지션을 가진 팀으로 전환합니다.',
     descLink:
       'https://wiki.biligame.com/resonance/%E7%88%AC%E5%A1%94-%E6%B4%97%E7%89%8C%E6%9A%97%E8%89%BA',
     autoPreset:
       'pVdRj5swDP4veWZSnBACvO6p0u02aXub7gGNbIeua3vQapsq/vscQg9TKCWXPuHE8Wf7s530zKrm6+FjUZefdyz/WWwbE7F6vzUPVXNk+Xfg9qdF5D4kuA+hE/ch06zf0vAUsRdjOmOPp98s5xHbH59NbRc6qWoeTFG6BQL33C2y/A2L/UCFTfmpOLD8z IAniKMAFSInAMhBkAkfBJFyuqPJmTQjOzERhCYCaEF2MoIDmaDWUqoWUzXqjhqpKeooOSMV9VpRDxIUxJuBhHqtaaTUWmK9bl0WexrPbP9nZ+pNeckyEslOjflS1AUy9cFJ3/4dTGeneam2205ZSM5jYblDafApYsei/mWO7gRum9dTddhc4BhAaqPX7K mNQrAhATXBGlyxDM8A6HUArIsOMJETCKezK83f7ggJHotlDlGsDynO4qWQsNCnALbNVvMlbYJvAthGeH8ELmfo5XLO5Dhn8yzdRhSTnKXpOEkzJXix1Y8NbALVBlMlF6nic3H5tFYCeokqHDnvB+ipUneoGpc3Trzg6uOL1ZcGALiQRHanY8U4iSEs9Un UM/V2u97xPgieSmjDAzGdi9Evq2jHo1DsPTlFtM+C9YgxgAeP9o4Lbmex1M7x7GD07LbEIyT7CAh노킬B232bRBMm8g8StM+z8KvG58Y7TsrtBkgvjNixu2n3FC70l/o/+GO4u343iMtBjbqsctXpXTtNag1fgg/P+yz088PbCXW4r+BsmrsG7RPcvsf',
+  },
+
+  {
+    title: '조나아리+아리나',
+    leaderName: NAYUTA.name,
+    characters: [
+      { character: NAYUTA },
+      { character: AOBA },
+      {
+        character: JOSHUA,
+        equipments: ['후회의 갈고리', '시뮬레이트 스타', '트라페조헤드론'],
+      },
+      { character: RINA_F },
+      { character: ARINA },
+    ],
+    desc: '조나아리+아리나\n\n조슈아+아리나 암예덱',
+    descLink: 'https://arca.live/b/resonance/130152631',
+    owner: EXTERNAL_USERS[15],
+    autoPreset:
+      'tVdNb9swDP0vOnuAPmxL8nWnAG03YLsVPRizthrNksxOsA1B/vsopVEoS4lTu8uNkkw+Pj5Syp6st8+m+1h3DaloRl6M2VjjYffT2c+mbkxHKkbtT/KMNG3/DQ58/bsxsJwRayya+3pDqj1htKSUMeF2nMGlRoZGO6JgaKcozwaTHBmaYgcF/iYwGHYdfINda453cmQoZIgcoRalxMew6xK8cY9AoThKY0NhbBwbAVUQhx6OlN61/ZZUj3uy683nuquhHB/gYP/SLpcLqBXjgtKcQ4nWv1emc0uuRgJOtWCdEWbWh6/Xtu5+mO3RhK/Nr127WZzCEcaUzUSSp0O2D6OxkhWZh/NacHFEfBWD5e8qBpziOeyqMX/caY+CuKSZtO4GEWWYNYhuQsRTornO4wA8SAnUNj0AFZaggMnHp2FEoTSOaAU1mUQRYhckIhVWE6TyS/WeTq1SKZ9FrKEh4YGO+ZsrKkYD0DkVLZmc1Bt2Hs3pDaR5nSprkShrJL7ZZQVBR4Mo0q+aniiPEuM6HgLDiHpSRRMdY++JmFrJb6DW9vV0CMPJ53Bcn3xqRtLxrAWXozTLGQrm4XaQSUq6RQwxH2vc8IZL3Gu55mPDIZ8xfHlYn5SU4PHzP7vUV/cy1+w2rvnItXeRay/pyxASHKQgCDELQkLjzuPV+ttn53v2cT46vOxj8n0UZ1/jMQKWuu7HFXfrvZtSvi5Tz47URBt/dozggKHbrZfmVQPeq28sry5P/YkB+LLtv7i/QJ9WpPpeL3tjl+7c/6Bg+fAP',
+  },
+
+  {
+    title: '조나아리+수엔',
+    leaderName: NAYUTA.name,
+    characters: [
+      { character: NAYUTA },
+      { character: AOBA },
+      {
+        character: JOSHUA,
+        equipments: ['후회의 갈고리', '시뮬레이트 스타', '트라페조헤드론'],
+      },
+      { character: RINA_F },
+      { character: SUEN },
+    ],
+    owner: EXTERNAL_USERS[4],
+    desc: '조나아리+수엔',
+    descLink: 'https://arca.live/b/resonance/130145554',
+    autoPreset:
+      'rVdNb9swDP0vOnuAvj983SlAuxbYbkMPxqytRtPUsxNsQ5D/PklpHMYSYtlNbrQkPvKRelT26NlWte1QSbD/KVqgH1VXr+r7qkXlHhEsMWbcuA3F0SCGAoOws0GFBobGYJsGDigFZ5gA26iR0AGHK8BgUoEVBQ3pYuPDGQEdwEAp9CYoXJFwhcC0YaAKEqJB2kR5b4cji3dNv0Xl9z1qalSeYy9Q/9Ks1yv3kVCGiSSiQNuq+2W33/61FpW4QG9/NrYLO0JdmPO/6+1j1VWvqPx0tI6bHRgE8BSMADCnOAKwv3dNuzqFiAjRvoAKPX0E29ECsFEAJ8pnfD09RU7HNrX9G9jMQ/QlGtPJDZ/Eo7kAvnPHdDLPyFUApk0+ZyrmzOU1zRm95Izlc4YTnLHbcebvWpySmE6JLW0DfwXjKsVNv7xKTjEuY6MTNyq6R05nIlJkUIPMHA2OWaVm8nKFLEeR59aRJ+qo6Ow6ZremHxqxgIQw5glIPqIT/KjpPl5YTvIL6+dhFP0tQjD5vaVootISz+6tfOHmka46EYov1XIR0qnmFXJ28+aPChNPXknUDUe7EalRwWaPinxEoRP3kc/XnBnDKSKRcK0X9UWw3t+x7vUnDgCWjmpHEiOLkMTIOntIilAMiw/j0C66a1ximSpxQgCvxUGXxOFFZftsu8/u4RoQmv4u/DfwHx42qPxZrXtboBdrW//py+41bOve1vZdlwb4QZSGbhgYOjX9kwf42o6c103vH86n1vgP',
+  },
+
+  {
+    title: '조리수베마',
+    characters: [
+      { character: MARGIELA },
+      { character: VERLAINE },
+      {
+        character: JOSHUA,
+        equipments: ['후회의 갈고리', '시뮬레이트 스타', '트라페조헤드론'],
+      },
+      { character: RINA_F },
+      { character: SUEN },
+    ],
+    owner: EXTERNAL_USERS[4],
+    desc: '조리수베마',
+    descLink: 'https://arca.live/b/resonance/130145554',
+    autoPreset:
+      'xVdLj5swEP4vPlPJbwPXniJtH1J7q3pAxe2izSYpJGqrKP+9NpuYGRPhELRabiM8M59nvnn4SH5Ubf3QdHtSfjuS7qlZr1eb2v4lpcjI9s/GtqualIz6T7CMHDr7uWqrZ1K+c9K+an/Z/dd/O0tKmp3V3XnCuHAKhpOMNL1MNaW8kKS38KLg9O3vQ7NbXfx/P2XH2CSGIPJipBRjCiB6DMKDHiCwvIggXJQ/VLsLhLuv7T0yzRT0KLRJXxp7NKKY5ZH588CjEK/uUVLs8YbELr2jwR7ZXI8z80g1Qx5ZwdMeYf3w5fWjNK6ffH79RCYlO/N/4PyRCFJqdcqmq18oDtFrRHLOEeXEXcjMVWQxMJYAFuHSSyNmuLyKq6ApYFRJCKxAJUOlSkdskk4zKqi/CVNUIjoJ9epVK3PUfbmZn44opnSsND0AJEdx5zou4/QAoPMah+EaV+0NjWOZR50LHGY6r1WNqTu/Valo1N8wgyYhzKU3VQzTm6n8DbYNireNGMK4j9BTstKjDpcOhe53DtgGFw8OZ+ZqG0x2wT6IGDwIkFk8VHGTTcfGcMxUKhePCMGvD1XjjkpSyuRoxSGSKHWYxTIZoZH1OwopWjvwqEonafxymJskqgROkroBwrRJXoz2C1/N04U3yd3ihi67dOnN8dKbqhZ3oaZ7sFVt2/fuXfdpQ8p9e7AZqZvOP/SC4mN/Bnb7J2t3Xufj4blH4o+v6jOZw/T2uoEUQfDbeBB8roZjbtx60oZ2OPxxy+wgcGCaQtN+eg6CG2zAKTDACtajDu0OWIOo3VgadNxbECAQ8Bg0rSBqKPh8AAGaNhxiQwK8ggJ+/EOxZK5XtNu1PWc0pCeUUeBRIOhlRLjcb/ePL4nvY9F0X3YXFvys1p09/Qc=',
+  },
+
+  {
+    title: '조카스카시',
+    characters: [
+      { character: KATAS },
+      { character: STELLA },
+      {
+        character: JOSHUA,
+        equipments: ['후회의 갈고리', '시뮬레이트 스타', '트라페조헤드론'],
+      },
+      { character: KALEYA },
+      { character: SHIZURU },
+    ],
+    owner: EXTERNAL_USERS[4],
+    desc: '조카스카시',
+    descLink: 'https://arca.live/b/resonance/130145554',
+    autoPreset:
+      'rVfLjtsgFP0X1q7EBQO2t11Fmj6kdld1YdW0E02auHaitory7wUysa8Ng8s4WYWH7zmc++ByJo+6bnRHKqDul2dk2z+4ubd113zYk+rYnXRGnrRu7cz7009S0Ywcjo/XLW70zfx52PZHUn05k8Pvve42Dbapf5227ea25asBMcsEqLTrgmSkf9rudhs3ybiZY7mZPNbdD338/LfVDuS6Z9/oP6TiGTn1+roE7v/HuqsNtTdwyc4xPIAc4zk4AJWFaGOIGZkkRBFALNYiBr6efRFVfVThqihD4DzgEE5GCu/qllRnwkklLpiY8HmxsogSYTn1xBGFmJLxcfklog8PyMMhSgNK5tGQNipCUTbSoDEaNF0NYMpPBpDrkmFKAagfWjH/SDoLFJiizcgKJ6SvVEknkVLSpaRhgTRldJ40TtB1SRPLEp6HahOLuwNS3OECM8EdJU9yBxUi6I6pN4JxImRSQRFzYvGCwqkKElMTYmq9YEVioRPydbyWU1v6AS35UqFTsQrzEo3/lweYSJIHXDnwacqJPHIxubmnBVVw3+ROLHScpikhafm6QHGJFRMnL7yiY1oIccei46SJahGoe5IWd7yGltPFv5CpLMIQTn37fVKALFOAQPVXdJUjoletf+Tcv/IohaSsiIaan4dCBRBXdaapN9y8YM/iynOI13BYg3e93EAVSZy4S5VETkstKpdq7iyQgDtlltyiGh4Wo//U3l573+tdb5573WGnn0kMITAkzUB3KCY3UY2xZtvb1+BQNu1g0zzzGfLKijY8RIaBPeIwsME5Dkw5GAfmQYVW8ACQNXv1jwPzzhhxKPrGdi7ImsTc0DbbCCMDyLTtEhHrAlvD52EYp0TnYUo5vwwd3rhS4iNIrAHDoMqCXi7/AA==',
   },
 ]
