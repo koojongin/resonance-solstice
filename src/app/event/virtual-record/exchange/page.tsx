@@ -103,10 +103,10 @@ export default function EventVirtualRecordExchangePage() {
                       }
                       return (
                         <Tooltip
-                          key={`${index}_${item.name}`}
+                          key={`${index}_${requirement.name}`}
                           content={
                             <div>
-                              <div>{reward.name}</div>
+                              <div>{requirement.name}</div>
                             </div>
                           }
                         >
