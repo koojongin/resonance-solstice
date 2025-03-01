@@ -167,6 +167,11 @@ export default function TierListPage2() {
               [리세마라 가이드 링크]
             </GradientButton>
           </a>
+          <a href="https://arca.live/b/resonance/128987905" target="_blank">
+            <GradientButton className="p-[4px] rounded inline-flex items-center gap-[4px]">
+              [3일차 로그인 보상: SSR 보상 선택 가이드]
+            </GradientButton>
+          </a>
         </div>
       </div>
 
