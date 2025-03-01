@@ -57,6 +57,7 @@ import { RsCardSize } from '@/app/components/character-frame/rs-card-size.enum'
 import { GradientButton } from '@/app/components/button/gradient-button'
 import { RSCharacter } from '@/const/character/character.interface'
 import { EXTERNAL_USERS } from '@/const/external-users'
+import Link from 'next/link'
 
 export default function TierListPage2() {
   const tierList: { [key: string]: RSCharacter[] } = {
@@ -133,7 +134,8 @@ export default function TierListPage2() {
     <div className="flex flex-col gap-[10px]">
       <div className="flex flex-col gap-[4px]">
         <div className="ff-dh text-[30px]">
-          니콜라 출시 시점 티어 리스트 (작성일:25/02/21) + 조슈아 추가(25/03/01)
+          니콜라 출시 시점 티어 리스트 (작성일:25/02/21) +{' '}
+          <Link href="https://arca.live/b/resonance/130152046">조슈아 추가(25/03/01)</Link>
         </div>
         <div className="mt-[4px] flex gap-[4px] items-center cursor-pointer">
           <a href={EXTERNAL_USERS['1'].link} target="_blank">
