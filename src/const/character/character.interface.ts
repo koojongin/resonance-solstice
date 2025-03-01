@@ -11,4 +11,11 @@ export interface RSCharacter {
   thumbnailLarge?: string
 
   gender: RS_GENDER
+  cores: EngineCore[]
+}
+
+export enum EngineCore {
+  IGNITE = '점화',
+  FREEZING = '냉동',
+  LIGHTNING_STRIKE = '인뢰',
 }

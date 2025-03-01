@@ -5,7 +5,7 @@ export interface CharacterDetail {
   AWAKENING: { [key: string]: string }
 }
 
-const DEFAULT_RESONANCE_UPGRADE_MATERIALS = {
+const RARE_RESONANCE_UPGRADE_MATERIALS = {
   1: [
     {
       name: '디지털화 사고',
@@ -62,11 +62,10 @@ const DEFAULT_RESONANCE_UPGRADE_MATERIALS = {
       amount: 200000,
     },
   ],
+}
+const DEFAULT_RESONANCE_UPGRADE_MATERIALS = {
+  ...RARE_RESONANCE_UPGRADE_MATERIALS,
   5: [
-    {
-      name: '모노리스 조각',
-      amount: 42,
-    },
     {
       name: '디지털화 사고',
       amount: 320,
@@ -79,6 +78,10 @@ const DEFAULT_RESONANCE_UPGRADE_MATERIALS = {
       name: '철도연맹 코인',
       amount: 500000,
     },
+    {
+      name: '모노리스 조각',
+      amount: 42,
+    },
   ],
 }
 
@@ -86,10 +89,28 @@ export const CHARACTER_DETAIL: {
   [key: string]: CharacterDetail | any
 } = {
   RAZIEL_THE_REMINISCE: {},
+  RAZIEL: {},
   SHIRE: {},
   PELOTA: {},
   DOROTHY: {},
-  JOSHUA: {},
+  JOSHUA: {
+    SKILLS: ['우매', '음에너지', '지식', '검은 물결', '예고', '계시', '다크 아트'],
+    RESONANCES: {
+      1: '서지',
+      2: '추구',
+      3: '생기',
+      4: '징수',
+      5: '치열',
+    },
+    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    AWAKENING: {
+      1: '영감',
+      2: '역류',
+      3: '투지',
+      4: '신생',
+      5: '유혹',
+    },
+  },
   SOMMER: {},
   USHANA: {},
   SUMMERSHIZURU: {},
@@ -169,7 +190,7 @@ export const CHARACTER_DETAIL: {
     },
     AWAKENING: {
       1: '예지몽',
-      2: '샘물',
+      2: '샘물-베를린',
       3: '투지',
       4: '잠꼬대',
       5: '단꿈',
@@ -430,7 +451,23 @@ export const CHARACTER_DETAIL: {
   FLAN: {},
   ELIOT: {},
   HARUKA: {},
-  ARCANA: {},
+  ARCANA: {
+    SKILLS: ['나비의 춤', '자연의 메아리', '태초의 꿈'],
+    RESONANCES: {
+      1: '보급',
+      2: '나비 서식',
+      3: '생기',
+      4: '세례',
+    },
+    RESONANCE_UPGRADE_MATERIALS: RARE_RESONANCE_UPGRADE_MATERIALS,
+    AWAKENING: {
+      1: '천년의 노래',
+      2: '샘물-아르카나',
+      3: '투지',
+      4: '자연의 선물',
+      5: '나비의 꿈',
+    },
+  },
   GALORE: {},
   RACHEL: {},
   TARA: {},

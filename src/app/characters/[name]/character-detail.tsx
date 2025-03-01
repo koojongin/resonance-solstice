@@ -9,6 +9,7 @@ import { CHARACTER_AWAKENINGS } from '@/const/character/character-awakening.cons
 import { RSHighlightedText } from '@/services/utils/highlight-text'
 import { CharacterResonanceUpgradePriceBox } from '@/app/characters/[name]/character-resonance-upgrade-price-box'
 import { CharacterSkillContainer } from '@/app/characters/[name]/character-skill-container'
+import { GradientHeaderDiv } from '@/app/components/div/gradient-header-div'
 
 export function CharacterDetailBox({ character }: { character: RSCharacter }) {
   const characterInfo = CHARACTER_DETAIL[character.originName]
@@ -16,10 +17,16 @@ export function CharacterDetailBox({ character }: { character: RSCharacter }) {
   return (
     <div className="flex flex-col gap-[10px]">
       <>{SKILLS && <CharacterSkillContainer skills={SKILLS} />}</>
-      <>{RESONANCES && <CharacterResonanceBox resonances={RESONANCES} />}</>
       <>
-        {RESONANCE_UPGRADE_MATERIALS && (
-          <CharacterResonanceUpgradePriceBox materials={RESONANCE_UPGRADE_MATERIALS} />
+        {RESONANCES && RESONANCE_UPGRADE_MATERIALS && (
+          <div className="flex flex-wrap gap-[6px]">
+            <div className="w-[calc(50%-3px)]">
+              <CharacterResonanceBox resonances={RESONANCES} />
+            </div>
+            <div className="w-[calc(50%-3px)]">
+              <CharacterResonanceUpgradePriceBox materials={RESONANCE_UPGRADE_MATERIALS} />
+            </div>
+          </div>
         )}
       </>
       <>{AWAKENING && <CharacterAwakeningBox awakenings={AWAKENING} />}</>
@@ -30,9 +37,7 @@ export function CharacterDetailBox({ character }: { character: RSCharacter }) {
 export function CharacterAwakeningBox({ awakenings }: { awakenings: { [key: string]: string } }) {
   return (
     <div className="flex flex-col gap-[4px]">
-      <div className="bg-gradient-to-r from-blue-gray-900 to-white text-white ff-dh text-[26px] p-[8px] py-[4px] rounded">
-        각성 특성
-      </div>
+      <GradientHeaderDiv>각성 특성</GradientHeaderDiv>
       <div className="flex flex-col gap-[4px]">
         {Object.keys(awakenings).map((awakeningNumber: string, index) => {
           const awakeningName = awakenings[awakeningNumber]
@@ -71,9 +76,7 @@ export function CharacterAwakeningBox({ awakenings }: { awakenings: { [key: stri
 export function CharacterResonanceBox({ resonances }: { resonances: { [key: string]: string } }) {
   return (
     <div className="flex flex-col gap-[4px]">
-      <div className="bg-gradient-to-r from-blue-gray-900 to-white text-white ff-dh text-[26px] p-[8px] py-[4px] rounded">
-        공명 특성
-      </div>
+      <GradientHeaderDiv>공명 특성</GradientHeaderDiv>
       <div className="flex flex-col gap-[4px]">
         {Object.keys(resonances).map((resonanceNumber: string, index) => {
           const resonanceName = resonances[resonanceNumber]

@@ -6,13 +6,12 @@ import { CHARACTER_DETAIL } from '@/const/character/character-detail.const'
 import { RS_CHARACTERS } from '@/const/character/character.const'
 import { convertCharacterThumbnailUrl } from '@/services/character-url'
 import { useNextDepthNavigator } from '@/services/navigation'
+import { GradientHeaderDiv } from '@/app/components/div/gradient-header-div'
 
 export function CharacterSkillContainer({ skills }: { skills: string[] }) {
   return (
     <div className="flex flex-col gap-[4px]">
-      <div className="bg-gradient-to-r from-blue-gray-900 to-white text-white ff-dh text-[26px] p-[8px] py-[4px] rounded border border-white">
-        스킬
-      </div>
+      <GradientHeaderDiv>스킬</GradientHeaderDiv>
       <div className="flex flex-col gap-[4px]">
         {skills.map((skillName: string) => {
           const skill = CHARACTER_SKILLS[skillName]

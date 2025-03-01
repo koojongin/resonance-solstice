@@ -1,6 +1,10 @@
 import { RS_COLUMN, RS_FACTION, RS_GRADE } from '@/const/character/character.enum'
 
 export const convertCharacterThumbnailUrl = (filename: string, width?: number) => {
+  if (filename.indexOf('patchwiki.biligame.com') >= 0) {
+    return filename
+  }
+
   const widthKey = width ? `/w_${width}` : ''
   return `https://res.cloudinary.com/dqihpypxi/image/upload${widthKey}/v1739511122/resonance/characters/${filename}`
 }

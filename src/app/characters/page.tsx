@@ -7,6 +7,7 @@ import { CheckBoxGroup } from '@/services/common.enum'
 import { RsCharacterList } from '@/app/characters/rs-character-list'
 import { debounce } from 'lodash'
 import { RS_CHARACTERS } from '@/const/character/character.const'
+import { EngineCore } from '@/const/character/character.interface'
 
 export default function CharactersPage() {
   const [searchedKeyword, setSearchedKeyword] = useState('')
@@ -15,19 +16,53 @@ export default function CharactersPage() {
 
   const [checkedGrades, setCheckedGrades] = useState<CheckBoxGroup>(
     // Object.keys(RS_GRADE).reduce((acc, key) => ({ ...acc, [key]: key === RS_GRADE.SSR }), {}),
-    Object.keys(RS_GRADE).reduce((acc, key) => ({ ...acc, [key]: true }), {}),
+    Object.keys(RS_GRADE).reduce(
+      (acc, key) => ({
+        ...acc,
+        [key]: true,
+      }),
+      {},
+    ),
   )
 
   const [checkedFactions, setCheckedFactions] = useState<CheckBoxGroup>(
-    Object.keys(RS_FACTION).reduce((acc, key) => ({ ...acc, [key]: true }), {}),
+    Object.keys(RS_FACTION).reduce(
+      (acc, key) => ({
+        ...acc,
+        [key]: true,
+      }),
+      {},
+    ),
   )
 
   const [checkedGenders, setCheckedGenders] = useState<CheckBoxGroup>(
-    Object.keys(RS_GENDER).reduce((acc, key) => ({ ...acc, [key]: true }), {}),
+    Object.keys(RS_GENDER).reduce(
+      (acc, key) => ({
+        ...acc,
+        [key]: true,
+      }),
+      {},
+    ),
+  )
+
+  const [checkedEngineCores, setCheckedEngineCores] = useState<CheckBoxGroup>(
+    Object.keys(EngineCore).reduce(
+      (acc, key) => ({
+        ...acc,
+        [key]: true,
+      }),
+      {},
+    ),
   )
 
   const [checkedColumns, setCheckedColumns] = useState<CheckBoxGroup>(
-    Object.keys(RS_COLUMN).reduce((acc, key) => ({ ...acc, [key]: true }), {}),
+    Object.keys(RS_COLUMN).reduce(
+      (acc, key) => ({
+        ...acc,
+        [key]: true,
+      }),
+      {},
+    ),
   )
 
   const characterNames = RS_CHARACTERS.map((c) => c.name)
@@ -63,6 +98,15 @@ export default function CharactersPage() {
       [name]: checked,
     }))
   }
+
+  const handleChangeEngineCore = (event: any) => {
+    const { name, checked } = event.target
+    setCheckedEngineCores((prev) => ({
+      ...prev,
+      [name]: checked,
+    }))
+  }
+
   const handleSearchedKeywordChange = (event: any) => {
     const { value } = event.target
     setSearchedKeyword(value)
@@ -137,6 +181,31 @@ export default function CharactersPage() {
                     onChange={handleChangeGender}
                   />
                   <div className="ml-[2px]">{RS_GENDER[gender as keyof typeof RS_GENDER]}</div>
+                </label>
+              )
+            })}
+          </div>
+        </div>
+
+        <div className="flex justify-start">
+          <div className="w-[100px] flex justify-start">엔진코어</div>
+          <div className="flex items-center gap-[4px]">
+            {Object.keys(EngineCore).map((engineCore) => {
+              return (
+                <label
+                  className="flex items-center cursor-pointer select-none px-[4px]"
+                  key={createKey()}
+                >
+                  <input
+                    type="checkbox"
+                    className="flex border-2 rounded-md border-blue-200"
+                    name={engineCore}
+                    checked={checkedEngineCores[engineCore]}
+                    onChange={handleChangeEngineCore}
+                  />
+                  <div className="ml-[2px]">
+                    {EngineCore[engineCore as keyof typeof EngineCore]}
+                  </div>
                 </label>
               )
             })}
@@ -224,6 +293,7 @@ export default function CharactersPage() {
       <hr />
       <div>
         <RsCharacterList
+          checkedEngineCores={checkedEngineCores}
           checkedGrades={checkedGrades}
           checkedFactions={checkedFactions}
           checkedColumns={checkedColumns}

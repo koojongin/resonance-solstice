@@ -32,6 +32,7 @@ export function RSHighlightedText({ text, textSize }: { text: string; textSize?:
     '[광폭]': 'text-red-500',
     '[열상]': 'text-red-500',
     '[튕김]': 'text-red-500',
+    '[발사]': 'text-red-500',
 
     '[소각]': 'text-gray-800',
     '[일반공격]': 'text-gray-800',

@@ -42,8 +42,8 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/1/13/4q64boom93qf3k3687p7mzp7fev2u4z.png',
   },
-  샘물: {
-    name: '샘물',
+  '샘물-베를린': {
+    name: '샘물-베를린',
     desc: '비술탄 한 발마다 30% 확률로 3발 공격을 발동합니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/6/6c/118kcf4cr86gj2jt4jn5azyvvfi40ks.png',
@@ -384,5 +384,55 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
     desc: '손에 같은 카드를 4장 가지고 있을 시 비용을 4 얻습니다.(2회 한정)',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/c/c9/ekenyyx3oy8cqhlj0g63neoaa68x35a.png',
+  },
+
+  영감: {
+    name: '영감',
+    desc: '1장의 [블랙카드]가 생성될 때마다 자신의 공격력이 3% 증가합니다.(최대 39%)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/fd/72vjp3tqdv2yaqgh4wefk3bq9yid77q.png',
+  },
+  역류: {
+    name: '역류',
+    desc: '[예고] 사용 후 버려진 덱에서 [우매]를 1장 회수하여 손으로 가져옵니다.\n[계시] 사용 후 소모된 비용의 20%를 돌려받습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a2/9vmu50kp3z8flrsmszscyqmvwxilfg1.png',
+  },
+  신생: {
+    name: '신생',
+    desc: '[다크 아트]를 사용할 때마다 자신과 체력이 가장 낮은 아군에게 체력을 3% 회복합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/98/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  유혹: {
+    name: '유혹',
+    desc: '모든 아군이 [다크 아트]를 생성할 확률이 13% 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/60/435io6uvb1zw6eeowmazbz5z4t6v6tu.png',
+  },
+
+  '천년의 노래': {
+    name: '천년의 노래',
+    desc: '체력이 30% 미만일 때 버려진 덱에서 비용이 2 이상인 카드를 우선으로 카드를 1장 회수합니다.(1회 한정)\n동시에 이번 전투 동안 해당 카드의 비용이 1 감소합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/1/10/bo9uylkyqmwdgc55y3xftly40lzabtg.png',
+  },
+  '샘물-아르카나': {
+    name: '샘물-아르카나',
+    desc: '[자연의 메아리]와 [나비의 춤] 지속 시간이 2초 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/c1/118kcf4cr86gj2jt4jn5azyvvfi40ks.png',
+  },
+  '자연의 선물': {
+    name: '자연의 선물',
+    desc: '[자연의 메아리] 지속시간 동안 매초 무작위 아군의 체력을 1% 회복합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/88/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  '나비의 꿈': {
+    name: '나비의 꿈',
+    desc: '[태초의 꿈]의 유효 횟수가 1회 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/f1/n8occh0uh0wt74z7f5bqmifhadporm6.png',
   },
 }

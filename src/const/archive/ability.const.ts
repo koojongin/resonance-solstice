@@ -107,7 +107,12 @@ export const ARCHIVE_ABILITIES: { [key: string]: RSArchive } = {
       'https://patchwiki.biligame.com/images/resonance/thumb/9/9e/4tt7vylbk14km5coamvxkv2aqpyxfk0.png/50px-%E5%9B%BE%E6%A0%87-%E8%B4%B9%E7%94%A8%E5%90%B8%E5%8F%96.png',
   },
   발사: {
-    desc: '공격이 적 사이에서 2번 튕깁니다.',
+    desc: '공격이 적 사이에서 2번 튕깁니다.\n* 개발사에서 [튕김],[발사] 혼용하고 있어서 [튕김]도 동일 설명',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/0d/dp3eb1gy2g21125hzyd4iwtip73j0lu.png',
+  },
+  튕김: {
+    desc: '공격이 적 사이에서 2번 튕깁니다.\n* 개발사에서 [튕김],[발사] 혼용하고 있어서 [발사]도 동일 설명',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/0/0d/dp3eb1gy2g21125hzyd4iwtip73j0lu.png',
   },

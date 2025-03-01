@@ -702,4 +702,72 @@ export const CHARACTER_SKILLS: {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/2/25/d91ch3vwdipmnanvgn7h6nwxzjzr7n1.png',
   },
+
+  우매: {
+    amount: 3,
+    cost: 2,
+    name: '우매',
+    desc: '적에게 1단 피해를 입히고 무작위로 [족쇄] 혹은 [속박]을 부여합니다.\n사용 후 1장의 블랙카드 [음에너지]를 덱에 추가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/b6/r3q8agu5135ph199yhjq5okg2dslav5.png',
+  },
+  지식: {
+    amount: 2,
+    cost: 2,
+    name: '지식',
+    desc: '사용 시 [검은 물결]을 1장 생성하여 손으로 가져옵니다.\n[블랙카드]를 우선으로 2장의 카드를 뽑습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/be/gl7we5bw123dsh428nni5o72zhz0gzx.png',
+  },
+  '검은 물결': {
+    amount: 0,
+    cost: 0,
+    name: '검은 물결',
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/d5/r8z6nut14zi52fnj6qve1iitlp5f5bz.png',
+    isGeneratedCard: true,
+  },
+  예고: {
+    amount: 1,
+    cost: 5,
+    name: '예고',
+    desc: '적에게 13단 피해를 입히고 [튕김]을 발동합니다.\n[다크 아트] 사용 후 이번 전투 동안 단수가 2 증가합니다.\n[다크 아트]를 사용하여 특수 효과 [다키스트 아워] 발동 시 비용을 13 얻습니다. 비용 상한을 초과할 수 있으며 동시에 [계시]를 1장 생성하여 손으로 가져옵니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/85/ofz8y0dpdkko17o74sa3xunnimehsdh.png',
+  },
+  계시: {
+    amount: 0,
+    cost: 0,
+    name: '계시',
+    desc: '모든 비용을 소모하고,소모한 비용만큼 무작위 적에게 2단 피해를 입힙니다.\n1단 피해를 입힐 때마다 10% 확률로 [다크 아트]를 1장 생성하여 손으로 가져옵니다.\n소모한 비용이 많을수록 피해가 높습니다.\n손에거 내면 [소각]됩니다.\n이 카드가 버려지면 [다크 아트]를 1장 생성하여 손으로 가져옵니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/89/k3fcnmv8xm3p19r3l1ry1xy7h9f6gpr.png',
+    isGeneratedCard: true,
+  },
+
+  '나비의 춤': {
+    amount: 2,
+    cost: 2,
+    name: '나비의 춤',
+    desc: '초당 아군 대상의 체력을 2.5% 회복시킵니다.(10초간 지속)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/65/o9pbzcjqbtzdh5n51hkuunny1qj72e8.png',
+  },
+  '자연의 메아리': {
+    amount: 2,
+    cost: 0,
+    name: '자연의 메아리',
+    desc: '자연의 에너지를 흡수하여 매초 0.3의 비용을 얻습니다.(10초간 지속)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/26/afv6o4dndvy36vb8ec4wn2aoz08kaku.png',
+  },
+  '태초의 꿈': {
+    amount: 1,
+    cost: 4,
+    name: '태초의 꿈',
+    desc: '3초마다 버려진 덱에서 [태초의 꿈]을 제외한 1장의 카드를 손으로 가져옵니다.(2회 유효)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/3c/d5isj07w1lrf8q2hito38p8lxc90dog.png',
+  },
 }

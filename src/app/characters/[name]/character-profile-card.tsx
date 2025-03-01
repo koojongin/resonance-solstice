@@ -1,11 +1,13 @@
 import { RSCharacter } from '@/const/character/character.interface'
 import { convertCharacterThumbnailUrl, getColumnUrl, getFactionUrl } from '@/services/character-url'
+import { useNextDepthNavigator } from '@/services/navigation'
+import Link from 'next/link'
 
 export function CharacterProfileCard({ character }: { character: RSCharacter }) {
   return (
     <div className="relative w-full rounded-[4px] border overflow-hidden shadow-md shadow-gray-800">
       <img
-        className="w-full z-0"
+        className="w-full z-0 top-[30px]"
         // src="https://res.cloudinary.com/dqihpypxi/image/upload/w_600/v1739699861/resonance/etc/profile-bg_pxdpv5.png"
         src="https://patchwiki.biligame.com/images/resonance/1/15/rnk1ixlziks176gslros7c3tfon5xz7.png"
       />
@@ -16,7 +18,16 @@ export function CharacterProfileCard({ character }: { character: RSCharacter }) 
         />
       )}
       {character.thumbnailLarge && (
-        <img src={character.thumbnailLarge} className="absolute top-0 z-10 w-1/2" />
+        <Link href={character.thumbnailLarge} target="_blank">
+          <div
+            className="absolute top-0 z-10 w-1/2 h-full bg-cover bg-no-repeat"
+            style={{
+              backgroundImage: `url(${character.thumbnailLarge})`,
+              backgroundSize: character.originName === 'CHARLOTTE' ? '90%' : '',
+              backgroundPosition: character.originName === 'CHARLOTTE' ? 'center -120px' : '',
+            }}
+          />
+        </Link>
       )}
 
       <div className="w-[450px] absolute right-0 z-20 top-0 text-white">

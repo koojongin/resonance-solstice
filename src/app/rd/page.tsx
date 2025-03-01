@@ -1,18 +1,17 @@
 'use client'
 
 import createKey from '@/services/key-generator'
-import React, { useEffect, useState } from 'react'
-import { RECOMMENDATION_DECKS } from '@/app/rd/rd-decks.const'
-import _, { debounce } from 'lodash'
+import React, { useState } from 'react'
+import { debounce } from 'lodash'
 import { Tooltip } from '@material-tailwind/react'
-import { RecommendationDeckCard } from '@/app/components/deck/recommendation-deck-card'
 import { GradientButton } from '@/app/components/button/gradient-button'
 import { useNextDepthNavigator } from '@/services/navigation'
+import { EngineCore } from '@/const/character/character.interface'
+import { CheckBoxGroup } from '@/services/common.enum'
+import RdDeckList from '@/app/rd/rd-deck-list'
 
-const REVERSED_ALL_DECKS = _.reverse(RECOMMENDATION_DECKS)
 export default function RecommendationDeckPage() {
   const { router, openNewTab } = useNextDepthNavigator()
-  const [rdDecks, setRdDecks] = useState(REVERSED_ALL_DECKS)
   const [searchedKeyword, setSearchedKeyword] = useState('')
   const [checkedAutoPreset, setCheckedAutoPreset] = useState(false)
 
@@ -24,21 +23,23 @@ export default function RecommendationDeckPage() {
     setCheckedAutoPreset(event.target.checked)
   }
 
-  useEffect(() => {
-    if (!searchedKeyword) setRdDecks(REVERSED_ALL_DECKS)
-    setRdDecks(
-      REVERSED_ALL_DECKS.filter((deck) => {
-        const isValidAutoPresetOption = checkedAutoPreset ? !!deck.autoPreset : true
-        return (
-          isValidAutoPresetOption &&
-          deck.characters
-            .map((c) => c.character.name)
-            .join(',')
-            .indexOf(searchedKeyword) >= 0
-        )
+  const [checkedEngineCores, setCheckedEngineCores] = useState<CheckBoxGroup>(
+    Object.keys(EngineCore).reduce(
+      (acc, key) => ({
+        ...acc,
+        [key]: true,
       }),
-    )
-  }, [checkedAutoPreset, searchedKeyword])
+      {},
+    ),
+  )
+
+  const handleChangeEngineCore = (event: any) => {
+    const { name, checked } = event.target
+    setCheckedEngineCores((prev) => ({
+      ...prev,
+      [name]: checked,
+    }))
+  }
 
   return (
     <div className="flex flex-col gap-[10px]">
@@ -77,11 +78,56 @@ export default function RecommendationDeckPage() {
         </div>
       </div>
       <div className="flex flex-col gap-[8px]">
-        <div className="border rounded p-[8px] flex flex-col gap-[4px]">
+        <div className="border rounded p-[8px] flex flex-col gap-[8px]">
           <label className="flex items-center gap-[10px] cursor-pointer">
             <input type="checkbox" checked={checkedAutoPreset} onChange={handleChangeAutoPreset} />
             <Tooltip content="체크시 오토프리셋 정보가 있는 덱만 필터합니다.">오토프리셋</Tooltip>
           </label>
+
+          <div className="flex justify-start">
+            <Tooltip
+              className="bg-transparent p-0 m-0"
+              content={
+                <div className="max-w-[200px] ff-dh border-2 text-blue-gray-900 bg-white p-[4px] rounded shadow-md flex flex-col gap-[4px]">
+                  <div className="text-[14px]">
+                    * 엔진코어 클리어에 필요한 속성이 포함된 덱을 필터합니다.
+                  </div>
+                  <div className="flex flex-col gap-[4px] text-[20px] text-shadow-outline">
+                    <div className="text-yellow-500">인뢰 : 과부하 코어</div>
+                    <div className="text-blue-800">냉동 : 콘덴싱 코어</div>
+                    <div className="text-red-500">점화 : 용광로 코어</div>
+                  </div>
+                </div>
+              }
+            >
+              <div className="w-[100px] flex justify-start items-center cursor-pointer">
+                엔진코어
+                <i className="text-[14px] fa-solid fa-circle-question" />
+              </div>
+            </Tooltip>
+            <div className="flex items-center gap-[4px]">
+              {Object.keys(EngineCore).map((engineCore) => {
+                return (
+                  <label
+                    className="flex items-center cursor-pointer select-none px-[4px]"
+                    key={createKey()}
+                  >
+                    <input
+                      type="checkbox"
+                      className="flex border-2 rounded-md border-blue-200"
+                      name={engineCore}
+                      checked={checkedEngineCores[engineCore]}
+                      onChange={handleChangeEngineCore}
+                    />
+                    <div className="ml-[2px]">
+                      {EngineCore[engineCore as keyof typeof EngineCore]}
+                    </div>
+                  </label>
+                )
+              })}
+            </div>
+          </div>
+
           <div className="flex items-center gap-[10px]">
             <div>검색:</div>
             <input
@@ -92,20 +138,13 @@ export default function RecommendationDeckPage() {
             />
           </div>
         </div>
-
-        <div className="flex items-stretch gap-[10px] mb-[4px]">
-          <div className="rounded-[4px] inline-flex p-[4px] text-white bg-gray-700 border-white/50 border-dotted border">
-            덱 - {rdDecks.length} / {REVERSED_ALL_DECKS.length}
-          </div>
-          {searchedKeyword && (
-            <div className="rounded-[4px] flex items-center">"{searchedKeyword}" 검색됨</div>
-          )}
-        </div>
       </div>
       <div className="flex flex-col gap-[8px]">
-        {rdDecks.map((deck) => (
-          <RecommendationDeckCard deck={deck} key={createKey()} />
-        ))}
+        <RdDeckList
+          checkedEngineCores={checkedEngineCores}
+          searchedKeyword={searchedKeyword}
+          checkedAutoPreset={checkedAutoPreset}
+        />
       </div>
     </div>
   )

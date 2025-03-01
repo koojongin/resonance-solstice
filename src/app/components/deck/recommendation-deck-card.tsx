@@ -7,7 +7,7 @@ import {
 } from '@/app/components/character-frame/rs-character-card'
 import { RsCardSize } from '@/app/components/character-frame/rs-card-size.enum'
 import { getColumnUrl } from '@/services/character-url'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { copyToClipboard } from '@/services/utils/copy-clipboard'
 
 export function RecommendationDeckCard({ deck }: { deck: RecommendationDeck }) {
@@ -17,6 +17,7 @@ export function RecommendationDeckCard({ deck }: { deck: RecommendationDeck }) {
   }
 
   const { autoPreset, title, desc, characters, leaderName, owner, descLink } = deck
+
   return (
     <div
       key={createKey()}

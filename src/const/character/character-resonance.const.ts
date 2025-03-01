@@ -385,4 +385,48 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/e/e9/9wnl8l3xmag1er33mcqy3u8hq9iwpgk.png',
   },
+
+  서지: {
+    name: '서지',
+    desc: '비용 상한+1',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e8/mzcs2kps54mp56qaa54hil98cqqit10.png',
+  },
+  추구: {
+    name: '추구',
+    desc: '[블랙카드]가 [소각]될 때마다 50% 확률로 [다크 아트]를 생성하여 손으로 가져옵니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/1/1c/s3nnflrgxq2ns7iubagsxgr74rxgp7m.png',
+  },
+  징수: {
+    name: '징수',
+    desc: '[다크 아트]가 1장 생성될 때마다 자신의 공격력이 3% 증가합니다. (최대 39%)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/28/9suiyo2y9srq28oaf8p4mlz87sap2fj.png',
+  },
+  치열: {
+    name: '치열',
+    desc: '명중할 때마다 10% 확률로 [작열]을 발동합니다.\n자신이 연소 상태일 경우 발동 확률이 10% 증가합니다.\n필드에 [작열]이 발동되면 비용을 0.5 얻습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/28/nm3ryfs2arhz3gqzru7s5obrspvtuly.png',
+  },
+
+  보급: {
+    name: '보급',
+    desc: '1웨이브의 적을 처치한 후 비용을 2 얻습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/9c/rt04fk9f4lsbzel8wpz2uba5guhl5pk.png',
+  },
+  '나비 서식': {
+    name: '나비 서식',
+    desc: '동일 대상에게 [나비의 춤]을 연속으로 사용 시 초당 회복 효과가 3% 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/0c/mtg9u6mkma44rtzfydx6yhwiwlnyve1.png',
+  },
+  세례: {
+    name: '세례',
+    desc: '[태초의 꿈]을 사용해 회수한 카드는 다음 한번 낼 때 비용이 1 감소합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/81/2bnuy6xeefooh97fm7ufo684a3yubp2.png',
+  },
 }

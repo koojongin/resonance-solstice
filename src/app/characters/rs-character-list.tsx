@@ -1,4 +1,4 @@
-import { RSCharacter } from '@/const/character/character.interface'
+import { EngineCore, RSCharacter } from '@/const/character/character.interface'
 import createKey from '@/services/key-generator'
 import { RS_COLUMN, RS_FACTION, RS_GENDER } from '@/const/character/character.enum'
 import { useEffect, useState } from 'react'
@@ -12,6 +12,7 @@ export function RsCharacterList({
   checkedColumns,
   searchedKeyword,
   checkedGenders,
+  checkedEngineCores,
 }: any) {
   const [characters, setCharacters] = useState<RSCharacter[]>(RS_CHARACTERS)
 
@@ -31,6 +32,11 @@ export function RsCharacterList({
         )
         const isValidGender = validGenders.includes(character.gender)
 
+        const validEngineCores: string[] = _.keys(_.pickBy(checkedEngineCores, Boolean)).map(
+          (key) => EngineCore[key as keyof typeof EngineCore],
+        )
+        const isValidEngineCore = _.intersection(validEngineCores, character.cores).length > 0
+
         const validColumns: string[] = _.keys(_.pickBy(checkedColumns, Boolean)).map(
           (key) => RS_COLUMN[key as keyof typeof RS_COLUMN],
         )
@@ -38,6 +44,7 @@ export function RsCharacterList({
 
         const isValidKeyword = character.name.indexOf(searchedKeyword) >= 0
         return (
+          isValidEngineCore &&
           isValidGender &&
           isValidGrade &&
           isValidFaction &&
@@ -46,7 +53,14 @@ export function RsCharacterList({
         )
       }),
     )
-  }, [checkedColumns, checkedFactions, checkedGenders, checkedGrades, searchedKeyword])
+  }, [
+    checkedEngineCores,
+    checkedColumns,
+    checkedFactions,
+    checkedGenders,
+    checkedGrades,
+    searchedKeyword,
+  ])
 
   return (
     <div>

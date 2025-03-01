@@ -1,7 +1,21 @@
-import { RS_COLUMN, RS_GRADE, RS_FACTION, RS_GENDER } from '@/const/character/character.enum'
-import { RSCharacter } from '@/const/character/character.interface'
+import { RS_COLUMN, RS_FACTION, RS_GENDER, RS_GRADE } from '@/const/character/character.enum'
+import { EngineCore, RSCharacter } from '@/const/character/character.interface'
 
-export const RAZIEL_THE_REMINISCE = {
+export const RAZIEL: RSCharacter = {
+  cores: [],
+  originName: 'RAZIEL',
+  name: 'Raziel',
+  faction: RS_FACTION.SOURCE_CITADEL,
+  grade: RS_GRADE.SSR,
+  column: RS_COLUMN.FRONT,
+  thumbnail:
+    'https://patchwiki.biligame.com/images/resonance/0/00/e3vvqlx9150fyg7ydza0q9ugvybfkev.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/3/35/qwoiqembujmf6lcrokv70rfz9zj49vp.png',
+  gender: RS_GENDER.FEMALE,
+}
+export const RAZIEL_THE_REMINISCE: RSCharacter = {
+  cores: [EngineCore.IGNITE],
   originName: 'RAZIEL_THE_REMINISCE',
   name: 'Raziel_The_Reminisce',
   faction: RS_FACTION.SOURCE_CITADEL,
@@ -12,7 +26,8 @@ export const RAZIEL_THE_REMINISCE = {
     'https://patchwiki.biligame.com/images/resonance/7/70/7gs2pbi5d6ik1aoupvevwx06ginu2pz.png',
   gender: RS_GENDER.FEMALE,
 }
-export const SHIRE = {
+export const SHIRE: RSCharacter = {
+  cores: [],
   originName: 'SHIRE',
   name: '샤이어',
   faction: RS_FACTION.CHAOS,
@@ -23,7 +38,8 @@ export const SHIRE = {
     'https://patchwiki.biligame.com/images/resonance/6/68/9mmcj7lmk4g2zltt3hs9n1c7p6fhf8t.png',
   gender: RS_GENDER.FEMALE,
 }
-export const PELOTA = {
+export const PELOTA: RSCharacter = {
+  cores: [EngineCore.LIGHTNING_STRIKE],
   originName: 'PELOTA',
   name: '페로타',
   faction: RS_FACTION.GARDENERS,
@@ -35,7 +51,8 @@ export const PELOTA = {
   gender: RS_GENDER.FEMALE,
 }
 
-export const DOROTHY = {
+export const DOROTHY: RSCharacter = {
+  cores: [EngineCore.IGNITE, EngineCore.FREEZING],
   originName: 'DOROTHY',
   name: '도로시',
   faction: RS_FACTION.RAILWAY,
@@ -46,7 +63,8 @@ export const DOROTHY = {
     'https://patchwiki.biligame.com/images/resonance/0/05/f8qhtxzx5f58jq7mbfetsxib42t8nic.png',
   gender: RS_GENDER.FEMALE,
 }
-export const JOSHUA = {
+export const JOSHUA: RSCharacter = {
+  cores: [],
   originName: 'JOSHUA',
   name: '조슈아',
   faction: RS_FACTION.SOURCE_CITADEL,
@@ -57,7 +75,8 @@ export const JOSHUA = {
     'https://patchwiki.biligame.com/images/resonance/5/57/3kup3cenwdozp42f8vdc325slyohgr0.png',
   gender: RS_GENDER.UNKNOWN,
 }
-export const SOMMER = {
+export const SOMMER: RSCharacter = {
+  cores: [],
   originName: 'SOMMER',
   name: 'Sommer',
   faction: RS_FACTION.SOURCE_CITADEL,
@@ -68,7 +87,8 @@ export const SOMMER = {
     'https://patchwiki.biligame.com/images/resonance/b/b6/07qf581995pkz0uaiyke42d912jkyu6.png',
   gender: RS_GENDER.FEMALE,
 }
-export const USHANA = {
+export const USHANA: RSCharacter = {
+  cores: [],
   originName: 'USHANA',
   name: 'Ushana',
   faction: RS_FACTION.SOURCE_CITADEL,
@@ -79,7 +99,8 @@ export const USHANA = {
     'https://patchwiki.biligame.com/images/resonance/a/a8/7y2podgu54y2130do72ivzfkpghdvfc.png',
   gender: RS_GENDER.FEMALE,
 }
-export const SUMMERSHIZURU = {
+export const SUMMERSHIZURU: RSCharacter = {
+  cores: [EngineCore.IGNITE, EngineCore.FREEZING],
   originName: 'SUMMERSHIZURU',
   name: 'SummerShizuru',
   faction: RS_FACTION.RAILWAY,
@@ -90,7 +111,8 @@ export const SUMMERSHIZURU = {
     'https://patchwiki.biligame.com/images/resonance/d/df/kp7ts66zs784d7875s28l5p52130skq.png',
   gender: RS_GENDER.FEMALE,
 }
-export const NICOLA = {
+export const NICOLA: RSCharacter = {
+  cores: [EngineCore.LIGHTNING_STRIKE],
   originName: 'NICOLA',
   name: '니콜라',
   faction: RS_FACTION.GARDENERS,
@@ -101,7 +123,8 @@ export const NICOLA = {
     'https://patchwiki.biligame.com/images/resonance/0/05/hfa2364b0y8776o60zavvmaana3aksg.png',
   gender: RS_GENDER.FEMALE,
 }
-export const DUSTIN = {
+export const DUSTIN: RSCharacter = {
+  cores: [],
   originName: 'DUSTIN',
   name: '더스틴',
   faction: RS_FACTION.SOURCE_CITADEL,
@@ -112,7 +135,8 @@ export const DUSTIN = {
     'https://patchwiki.biligame.com/images/resonance/c/c6/9waw3wiw3pthlqvgmahgk2inkgyhgem.png',
   gender: RS_GENDER.MALE,
 }
-export const ANFIYA = {
+export const ANFIYA: RSCharacter = {
+  cores: [EngineCore.FREEZING],
   originName: 'ANFIYA',
   name: '안피아',
   faction: RS_FACTION.GARDENERS,
@@ -123,7 +147,8 @@ export const ANFIYA = {
     'https://patchwiki.biligame.com/images/resonance/b/ba/nnvs3gmn6u4sl9hbrr7ry19eplvvtqf.png',
   gender: RS_GENDER.FEMALE,
 }
-export const HAYABUSA = {
+export const HAYABUSA: RSCharacter = {
+  cores: [EngineCore.IGNITE],
   originName: 'HAYABUSA',
   name: '하야부사',
   faction: RS_FACTION.NIGHT_CHAINS,
@@ -134,7 +159,8 @@ export const HAYABUSA = {
     'https://patchwiki.biligame.com/images/resonance/f/f8/t64gzdu51up59c7rgmjfznj2gq4hf0r.png',
   gender: RS_GENDER.MALE,
 }
-export const JALHAY = {
+export const JALHAY: RSCharacter = {
+  cores: [],
   originName: 'JALHAY',
   name: 'Jalhay',
   faction: RS_FACTION.SOURCE_CITADEL,
@@ -145,7 +171,8 @@ export const JALHAY = {
     'https://patchwiki.biligame.com/images/resonance/3/32/5plh6grqi7bop057usmeg2llvpjn72x.png',
   gender: RS_GENDER.FEMALE,
 }
-export const ITHOS = {
+export const ITHOS: RSCharacter = {
+  cores: [],
   originName: 'ITHOS',
   name: '이소스',
   faction: RS_FACTION.SOURCE_CITADEL,
@@ -156,9 +183,10 @@ export const ITHOS = {
     'https://patchwiki.biligame.com/images/resonance/c/ce/82nthbmin655kajh2nx9ytaxxdxg9hw.png',
   gender: RS_GENDER.MALE,
 }
-export const IKUMA = {
+export const IKUMA: RSCharacter = {
+  cores: [EngineCore.IGNITE],
   originName: 'IKUMA',
-  name: '이쿠마',
+  name: '이코마',
   faction: RS_FACTION.CREW_STRANGER,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
@@ -167,7 +195,8 @@ export const IKUMA = {
     'https://patchwiki.biligame.com/images/resonance/c/cb/7fgnp0pxb86bbwq4rit2xxg9uk4uc7k.png',
   gender: RS_GENDER.MALE,
 }
-export const LISSANDRA = {
+export const LISSANDRA: RSCharacter = {
+  cores: [],
   originName: 'LISSANDRA',
   name: '리산드라',
   faction: RS_FACTION.SOURCE_CITADEL,
@@ -178,7 +207,8 @@ export const LISSANDRA = {
     'https://patchwiki.biligame.com/images/resonance/b/b3/r6y79wdsj5qbifib04lcj6ve1prv4iy.png',
   gender: RS_GENDER.FEMALE,
 }
-export const MUMEI = {
+export const MUMEI: RSCharacter = {
+  cores: [EngineCore.IGNITE],
   originName: 'MUMEI',
   name: '무메이',
   faction: RS_FACTION.CREW_STRANGER,
@@ -189,7 +219,8 @@ export const MUMEI = {
     'https://patchwiki.biligame.com/images/resonance/f/fc/5jdzkm0t3u9s6dribvpi9da9drkar55.png',
   gender: RS_GENDER.FEMALE,
 }
-export const PALADI = {
+export const PALADI: RSCharacter = {
+  cores: [EngineCore.LIGHTNING_STRIKE],
   originName: 'PALADI',
   name: '파라디',
   faction: RS_FACTION.RAILWAY,
@@ -201,7 +232,8 @@ export const PALADI = {
   gender: RS_GENDER.FEMALE,
 }
 
-export const CONNOR = {
+export const CONNOR: RSCharacter = {
+  cores: [EngineCore.FREEZING],
   originName: 'CONNOR',
   name: '코나',
   faction: RS_FACTION.MUNDUS,
@@ -213,7 +245,8 @@ export const CONNOR = {
   gender: RS_GENDER.FEMALE,
 }
 
-export const VERLAINE = {
+export const VERLAINE: RSCharacter = {
+  cores: [EngineCore.FREEZING],
   originName: 'VERLAINE',
   name: '베를렌',
   faction: RS_FACTION.MUNDUS,
@@ -225,7 +258,8 @@ export const VERLAINE = {
   gender: RS_GENDER.FEMALE,
 }
 
-export const CHARLOTTE = {
+export const CHARLOTTE: RSCharacter = {
+  cores: [],
   originName: 'CHARLOTTE',
   name: '샬롯',
   faction: RS_FACTION.MUNDUS,
@@ -237,7 +271,8 @@ export const CHARLOTTE = {
   gender: RS_GENDER.FEMALE,
 }
 
-export const SUEN = {
+export const SUEN: RSCharacter = {
+  cores: [],
   originName: 'SUEN',
   name: '수엔',
   faction: RS_FACTION.SOURCE_CITADEL,
@@ -248,7 +283,8 @@ export const SUEN = {
     'https://patchwiki.biligame.com/images/resonance/c/cf/0tqy7eq6ssf7ig3awcbz5ryhj99enuo.png',
   gender: RS_GENDER.FEMALE,
 }
-export const NAYUTA = {
+export const NAYUTA: RSCharacter = {
+  cores: [EngineCore.IGNITE],
   originName: 'NAYUTA',
   name: '나유타',
   faction: RS_FACTION.SOURCE_CITADEL,
@@ -260,7 +296,8 @@ export const NAYUTA = {
   gender: RS_GENDER.MALE,
 }
 
-export const KATAS = {
+export const KATAS: RSCharacter = {
+  cores: [EngineCore.IGNITE],
   originName: 'KATAS',
   name: '카타스',
   faction: RS_FACTION.SOURCE_CITADEL,
@@ -271,7 +308,8 @@ export const KATAS = {
     'https://patchwiki.biligame.com/images/resonance/2/26/d0zmjdgbaavvz65rt1x75wmz98mzhlf.png',
   gender: RS_GENDER.FEMALE,
 }
-export const WENSHENG = {
+export const WENSHENG: RSCharacter = {
+  cores: [EngineCore.FREEZING],
   originName: 'WENSHENG',
   name: '문생',
   faction: RS_FACTION.NIGHT_CHAINS,
@@ -283,7 +321,8 @@ export const WENSHENG = {
   gender: RS_GENDER.MALE,
 }
 
-export const MARGIELA = {
+export const MARGIELA: RSCharacter = {
+  cores: [],
   originName: 'MARGIELA',
   name: '마키라',
   faction: RS_FACTION.NIGHT_CHAINS,
@@ -294,7 +333,8 @@ export const MARGIELA = {
     'https://patchwiki.biligame.com/images/resonance/c/c8/j6u0kb1tkny7frnqpb31dh5lqtjeuhm.png',
   gender: RS_GENDER.FEMALE,
 }
-export const ARINA = {
+export const ARINA: RSCharacter = {
+  cores: [EngineCore.IGNITE],
   originName: 'ARINA',
   name: '아리나',
   faction: RS_FACTION.NIGHT_CHAINS,
@@ -306,7 +346,8 @@ export const ARINA = {
   gender: RS_GENDER.FEMALE,
 }
 
-export const ILONA = {
+export const ILONA: RSCharacter = {
+  cores: [],
   originName: 'ILONA',
   name: '이로나',
   faction: RS_FACTION.RAILWAY,
@@ -317,7 +358,8 @@ export const ILONA = {
     'https://patchwiki.biligame.com/images/resonance/3/36/6sxqoudj4yquts61juhjndbjjkizkg8.png',
   gender: RS_GENDER.FEMALE,
 }
-export const STELLA = {
+export const STELLA: RSCharacter = {
+  cores: [EngineCore.IGNITE],
   originName: 'STELLA',
   name: '스텔라',
   faction: RS_FACTION.GARDENERS,
@@ -328,7 +370,8 @@ export const STELLA = {
     'https://patchwiki.biligame.com/images/resonance/f/f0/p4cfdxs2i4o1en2a0frfazvdrrgco7b.png',
   gender: RS_GENDER.FEMALE,
 }
-export const CAROLINE = {
+export const CAROLINE: RSCharacter = {
+  cores: [EngineCore.LIGHTNING_STRIKE],
   originName: 'CAROLINE',
   name: '캐롤라인',
   faction: RS_FACTION.GARDENERS,
@@ -340,7 +383,8 @@ export const CAROLINE = {
   gender: RS_GENDER.FEMALE,
 }
 
-export const TENNIE = {
+export const TENNIE: RSCharacter = {
+  cores: [EngineCore.LIGHTNING_STRIKE, EngineCore.FREEZING],
   originName: 'TENNIE',
   name: '테니',
   faction: RS_FACTION.GARDENERS,
@@ -353,7 +397,8 @@ export const TENNIE = {
 }
 
 // SSR =================================================================================
-export const HEINRICH = {
+export const HEINRICH: RSCharacter = {
+  cores: [EngineCore.FREEZING],
   originName: 'HEINRICH',
   name: '하인리히',
   faction: RS_FACTION.RAILWAY,
@@ -364,7 +409,8 @@ export const HEINRICH = {
     'https://patchwiki.biligame.com/images/resonance/7/79/chvn2j4j6ccfx4hh38uvr27fugqdhdo.png',
   gender: RS_GENDER.MALE,
 }
-export const LIVIA = {
+export const LIVIA: RSCharacter = {
+  cores: [EngineCore.LIGHTNING_STRIKE, EngineCore.FREEZING],
   originName: 'LIVIA',
   name: '리비아',
   faction: RS_FACTION.COLUMBAR,
@@ -376,7 +422,8 @@ export const LIVIA = {
   gender: RS_GENDER.FEMALE,
 }
 
-export const DESIREE = {
+export const DESIREE: RSCharacter = {
+  cores: [EngineCore.LIGHTNING_STRIKE],
   originName: 'DESIREE',
   name: '데시레',
   faction: RS_FACTION.COLUMBAR,
@@ -387,7 +434,8 @@ export const DESIREE = {
     'https://patchwiki.biligame.com/images/resonance/e/e3/f5y6bkv6plh4ys6t511q6dhh3wqc8yf.png',
   gender: RS_GENDER.FEMALE,
 }
-export const LIN = {
+export const LIN: RSCharacter = {
+  cores: [EngineCore.LIGHTNING_STRIKE],
   originName: 'LIN',
   name: '린',
   faction: RS_FACTION.NIGHT_CHAINS,
@@ -398,7 +446,8 @@ export const LIN = {
     'https://patchwiki.biligame.com/images/resonance/a/aa/6hgt3kpwto7r7nsw74qp25ul1ivum4m.png',
   gender: RS_GENDER.FEMALE,
 }
-export const NABI = {
+export const NABI: RSCharacter = {
+  cores: [EngineCore.LIGHTNING_STRIKE],
   originName: 'NABI',
   name: '나비',
   faction: RS_FACTION.NIGHT_CHAINS,
@@ -409,7 +458,8 @@ export const NABI = {
     'https://patchwiki.biligame.com/images/resonance/a/a4/0xgfv0hmtqp6xp4ipeg07ww4t1kb3if.png',
   gender: RS_GENDER.FEMALE,
 }
-export const GANYA = {
+export const GANYA: RSCharacter = {
+  cores: [],
   originName: 'GANYA',
   name: '간야',
   faction: RS_FACTION.RAILWAY,
@@ -421,7 +471,8 @@ export const GANYA = {
   gender: RS_GENDER.FEMALE,
 }
 
-export const YEJUE = {
+export const YEJUE: RSCharacter = {
+  cores: [EngineCore.LIGHTNING_STRIKE],
   originName: 'YEJUE',
   name: '예주',
   faction: RS_FACTION.GARDENERS,
@@ -433,7 +484,8 @@ export const YEJUE = {
   gender: RS_GENDER.FEMALE,
 }
 
-export const AKIRA = {
+export const AKIRA: RSCharacter = {
+  cores: [EngineCore.FREEZING],
   originName: 'AKIRA',
   name: '아키라',
   faction: RS_FACTION.GARDENERS,
@@ -445,7 +497,8 @@ export const AKIRA = {
   gender: RS_GENDER.MALE,
 }
 
-export const ACHIWA = {
+export const ACHIWA: RSCharacter = {
+  cores: [EngineCore.IGNITE],
   originName: 'ACHIWA',
   name: '아치와',
   faction: RS_FACTION.GARDENERS,
@@ -456,7 +509,8 @@ export const ACHIWA = {
     'https://patchwiki.biligame.com/images/resonance/8/88/7qwv1i6zw6khr70y8n2s0jkp1ek1vwv.png',
   gender: RS_GENDER.FEMALE,
 }
-export const KALEYA = {
+export const KALEYA: RSCharacter = {
+  cores: [EngineCore.IGNITE],
   originName: 'KALEYA',
   name: '카리야',
   faction: RS_FACTION.GARDENERS,
@@ -468,7 +522,8 @@ export const KALEYA = {
   gender: RS_GENDER.FEMALE,
 }
 
-export const YER = {
+export const YER: RSCharacter = {
+  cores: [EngineCore.FREEZING],
   originName: 'YER',
   name: '이엘',
   faction: RS_FACTION.GARDENERS,
@@ -480,7 +535,8 @@ export const YER = {
   gender: RS_GENDER.FEMALE,
 }
 
-export const FENIA = {
+export const FENIA: RSCharacter = {
+  cores: [EngineCore.LIGHTNING_STRIKE],
   originName: 'FENIA',
   name: '페니아',
   faction: RS_FACTION.SOURCE_CITADEL,
@@ -492,7 +548,8 @@ export const FENIA = {
   gender: RS_GENDER.FEMALE,
 }
 
-export const RINA_F = {
+export const RINA_F: RSCharacter = {
+  cores: [EngineCore.IGNITE],
   originName: 'RINA_F',
   name: '리나 본',
   faction: RS_FACTION.SOURCE_CITADEL,
@@ -503,7 +560,8 @@ export const RINA_F = {
     'https://patchwiki.biligame.com/images/resonance/2/21/5ifvgdu1em67ce3tg9fb2wy4rytf7cp.png',
   gender: RS_GENDER.FEMALE,
 }
-export const VALENTINE = {
+export const VALENTINE: RSCharacter = {
+  cores: [EngineCore.IGNITE],
   originName: 'VALENTINE',
   name: '발렌타인',
   faction: RS_FACTION.SOURCE_CITADEL,
@@ -515,7 +573,8 @@ export const VALENTINE = {
   gender: RS_GENDER.FEMALE,
 }
 
-export const YOIDUKI = {
+export const YOIDUKI: RSCharacter = {
+  cores: [EngineCore.IGNITE],
   originName: 'YOIDUKI',
   name: '요이즈키',
   faction: RS_FACTION.NIGHT_CHAINS,
@@ -526,7 +585,8 @@ export const YOIDUKI = {
     'https://patchwiki.biligame.com/images/resonance/8/81/lib7qd47f8d372gyzo9oxcfsgrtq80b.png',
   gender: RS_GENDER.FEMALE,
 }
-export const AOBA = {
+export const AOBA: RSCharacter = {
+  cores: [EngineCore.IGNITE, EngineCore.FREEZING],
   originName: 'AOBA',
   name: '아오바',
   faction: RS_FACTION.NIGHT_CHAINS,
@@ -537,7 +597,8 @@ export const AOBA = {
     'https://patchwiki.biligame.com/images/resonance/5/52/5sh1ae1n6madncxvo5w3kuak8jodax3.png',
   gender: RS_GENDER.FEMALE,
 }
-export const CECIL = {
+export const CECIL: RSCharacter = {
+  cores: [EngineCore.IGNITE, EngineCore.FREEZING],
   originName: 'CECIL',
   name: '세실',
   faction: RS_FACTION.NIGHT_CHAINS,
@@ -548,7 +609,8 @@ export const CECIL = {
     'https://patchwiki.biligame.com/images/resonance/c/c6/6zz7xcvfbotjyp4dmfwg09f167tt6en.png',
   gender: RS_GENDER.FEMALE,
 }
-export const MHAR = {
+export const MHAR: RSCharacter = {
+  cores: [],
   originName: 'MHAR',
   name: '마루하',
   faction: RS_FACTION.NIGHT_CHAINS,
@@ -561,7 +623,8 @@ export const MHAR = {
 }
 
 // R=============================================================================
-export const MSGOLD = {
+export const MSGOLD: RSCharacter = {
+  cores: [EngineCore.LIGHTNING_STRIKE],
   originName: 'MSGOLD',
   name: 'MsGold',
   faction: RS_FACTION.MUNDUS,
@@ -572,7 +635,8 @@ export const MSGOLD = {
     'https://patchwiki.biligame.com/images/resonance/4/41/p2gtna8jyu34fp0wc3i6po0bo790dcu.png',
   gender: RS_GENDER.BOT,
 }
-export const YAMAARASHI = {
+export const YAMAARASHI: RSCharacter = {
+  cores: [EngineCore.IGNITE, EngineCore.FREEZING],
   originName: 'YAMAARASHI',
   name: '야마아라시',
   faction: RS_FACTION.NIGHT_CHAINS,
@@ -583,7 +647,8 @@ export const YAMAARASHI = {
     'https://patchwiki.biligame.com/images/resonance/d/d0/8gmzp72szrtejhb609zejwaxc761agn.png',
   gender: RS_GENDER.FEMALE,
 }
-export const EXCALIBUR_BOX = {
+export const EXCALIBUR_BOX: RSCharacter = {
+  cores: [EngineCore.IGNITE],
   originName: 'EXCALIBUR_BOX',
   name: '성검 BO-X',
   faction: RS_FACTION.COLUMBAR,
@@ -594,7 +659,8 @@ export const EXCALIBUR_BOX = {
     'https://patchwiki.biligame.com/images/resonance/d/df/5lndyg3jd75ur83nfu7hqoo0jalmox3.png',
   gender: RS_GENDER.BOT,
 }
-export const FLAN = {
+export const FLAN: RSCharacter = {
+  cores: [],
   originName: 'FLAN',
   name: '프란',
   faction: RS_FACTION.COLUMBAR,
@@ -605,7 +671,8 @@ export const FLAN = {
     'https://patchwiki.biligame.com/images/resonance/d/d8/4umt38z7ssnzv3ng1f80vxopnykk8k8.png',
   gender: RS_GENDER.FEMALE,
 }
-export const ELIOT = {
+export const ELIOT: RSCharacter = {
+  cores: [EngineCore.IGNITE, EngineCore.LIGHTNING_STRIKE],
   originName: 'ELIOT',
   name: '엘리엇',
   faction: RS_FACTION.COLUMBAR,
@@ -616,7 +683,8 @@ export const ELIOT = {
     'https://patchwiki.biligame.com/images/resonance/4/45/gxhue5iozrskitwt438t8qxdqeyerro.png',
   gender: RS_GENDER.FEMALE,
 }
-export const HARUKA = {
+export const HARUKA: RSCharacter = {
+  cores: [EngineCore.IGNITE],
   originName: 'HARUKA',
   name: '하루카',
   faction: RS_FACTION.COLUMBAR,
@@ -628,7 +696,8 @@ export const HARUKA = {
   gender: RS_GENDER.FEMALE,
 }
 
-export const ARCANA = {
+export const ARCANA: RSCharacter = {
+  cores: [],
   originName: 'ARCANA',
   name: '아르카나',
   faction: RS_FACTION.MUNDUS,
@@ -639,7 +708,8 @@ export const ARCANA = {
     'https://patchwiki.biligame.com/images/resonance/0/06/haejh1ofar1493iqzhug2omvdbgca58.png',
   gender: RS_GENDER.FEMALE,
 }
-export const GALORE = {
+export const GALORE: RSCharacter = {
+  cores: [EngineCore.LIGHTNING_STRIKE],
   originName: 'GALORE',
   name: '게롤',
   faction: RS_FACTION.MUNDUS,
@@ -650,7 +720,8 @@ export const GALORE = {
     'https://patchwiki.biligame.com/images/resonance/e/e1/c381dey854jyytr9ddm6ozqsd5wfcb8.png',
   gender: RS_GENDER.MALE,
 }
-export const RACHEL = {
+export const RACHEL: RSCharacter = {
+  cores: [],
   originName: 'RACHEL',
   name: '레이첼',
   faction: RS_FACTION.RAILWAY,
@@ -661,7 +732,8 @@ export const RACHEL = {
     'https://patchwiki.biligame.com/images/resonance/0/06/gpx0k50kqbrja07qzv28908hjdx6lx8.png',
   gender: RS_GENDER.FEMALE,
 }
-export const TARA = {
+export const TARA: RSCharacter = {
+  cores: [EngineCore.IGNITE],
   originName: 'TARA',
   name: '타라',
   faction: RS_FACTION.MUNDUS,
@@ -672,7 +744,8 @@ export const TARA = {
     'https://patchwiki.biligame.com/images/resonance/f/f6/n5qm4f12tqviyxo8dzipn18akz5eanl.png',
   gender: RS_GENDER.FEMALE,
 }
-export const SHIZURU = {
+export const SHIZURU: RSCharacter = {
+  cores: [],
   originName: 'SHIZURU',
   name: '시즈루',
   faction: RS_FACTION.RAILWAY,
@@ -683,7 +756,8 @@ export const SHIZURU = {
     'https://patchwiki.biligame.com/images/resonance/0/0f/9lq2jonjzrlm1dato70haldspkawlro.png',
   gender: RS_GENDER.FEMALE,
 }
-export const PRIMING = {
+export const PRIMING: RSCharacter = {
+  cores: [],
   originName: 'PRIMING',
   name: '레이카',
   faction: RS_FACTION.RAILWAY,
@@ -695,7 +769,8 @@ export const PRIMING = {
   gender: RS_GENDER.FEMALE,
 }
 
-export const JULIAN = {
+export const JULIAN: RSCharacter = {
+  cores: [],
   originName: 'JULIAN',
   name: '줄리안',
   faction: RS_FACTION.RAILWAY,
@@ -707,7 +782,8 @@ export const JULIAN = {
   gender: RS_GENDER.FEMALE,
 }
 
-export const KAREN = {
+export const KAREN: RSCharacter = {
+  cores: [],
   originName: 'KAREN',
   name: '카렌',
   faction: RS_FACTION.RAILWAY,
@@ -718,7 +794,8 @@ export const KAREN = {
     'https://patchwiki.biligame.com/images/resonance/9/97/aqznvlhzyyynldsm4rzl0jyjttgliqw.png',
   gender: RS_GENDER.FEMALE,
 }
-export const JERBOA = {
+export const JERBOA: RSCharacter = {
+  cores: [],
   originName: 'JERBOA',
   name: '네즈미',
   faction: RS_FACTION.NIGHT_CHAINS,
@@ -729,7 +806,8 @@ export const JERBOA = {
     'https://patchwiki.biligame.com/images/resonance/d/d7/8ax6f0mj5856na4ewm6bv65hqroofox.png',
   gender: RS_GENDER.FEMALE,
 }
-export const SOLUM = {
+export const SOLUM: RSCharacter = {
+  cores: [EngineCore.LIGHTNING_STRIKE],
   originName: 'SOLUM',
   name: '솔럼',
   faction: RS_FACTION.NIGHT_CHAINS,
@@ -741,7 +819,8 @@ export const SOLUM = {
   gender: RS_GENDER.UNKNOWN,
 }
 // N ====================================================
-export const BOX = {
+export const BOX: RSCharacter = {
+  cores: [EngineCore.IGNITE],
   originName: 'BOX',
   name: 'BO-X',
   faction: RS_FACTION.COLUMBAR,
@@ -754,6 +833,7 @@ export const BOX = {
 }
 
 export const RS_CHARACTERS: RSCharacter[] = [
+  RAZIEL,
   RAZIEL_THE_REMINISCE,
   SHIRE,
   PELOTA,
