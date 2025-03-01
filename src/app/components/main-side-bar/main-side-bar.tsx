@@ -86,6 +86,12 @@ export default function MainSideBar() {
           path: '/reset-marathon/equipment',
           className: 'text-[18px] w-[300px]',
         },
+        { isHtml: true },
+        {
+          label: '해외섭 미래시 티어리스트',
+          path: '/reset-marathon/003',
+          className: 'text-[18px] w-[300px]',
+        },
         {
           label: '02. 니콜라 출시 후(25/02/20) ~ 현재',
           path: '/reset-marathon/002',
@@ -99,10 +105,6 @@ export default function MainSideBar() {
       ],
     },
     {
-      label: '티어메이커',
-      path: '/tiermaker/character',
-    },
-    {
       label: '이벤트',
       subMenu: [
         {
@@ -114,6 +116,15 @@ export default function MainSideBar() {
           label: '버추얼 레코드',
           path: '/event/virtual-record/exchange',
           className: 'text-[18px]',
+        },
+      ],
+    },
+    {
+      label: '도구',
+      subMenu: [
+        {
+          label: '티어표 생성기',
+          path: '/tiermaker/character',
         },
       ],
     },
@@ -134,13 +145,14 @@ export default function MainSideBar() {
             <div className={clsx(dropdownCss)}>
               {menu.subMenu.map((sub: any) => {
                 const { isHtml } = sub
-                if (isHtml)
+                if (isHtml) {
                   return (
                     <hr
                       key={createKey()}
                       className="border border-b-0 border-blue-gray-900 border-dashed"
                     />
                   )
+                }
                 return (
                   <div
                     key={sub.label}

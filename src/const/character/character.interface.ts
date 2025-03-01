@@ -15,6 +15,7 @@ export interface RSCharacter {
 }
 
 export enum EngineCore {
+  EMPTY = '엔진코어 태그 없음',
   IGNITE = '점화',
   FREEZING = '냉동',
   LIGHTNING_STRIKE = '인뢰',

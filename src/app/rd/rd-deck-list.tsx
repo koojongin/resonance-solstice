@@ -27,7 +27,9 @@ export default function RdDeckList({
         const validEngineCores: string[] = _.keys(_.pickBy(checkedEngineCores, Boolean)).map(
           (key) => EngineCore[key as keyof typeof EngineCore],
         )
-        const isValidEngineCore = _.intersection(validEngineCores, deck.totalCores).length > 0
+        const isValidEngineCore =
+          _.intersection(validEngineCores, deck.totalCores).length > 0 ||
+          (validEngineCores.includes(EngineCore.EMPTY) && deck.totalCores.length === 0)
 
         return (
           isValidEngineCore &&

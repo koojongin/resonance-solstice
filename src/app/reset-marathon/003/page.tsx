@@ -4,6 +4,7 @@ import createKey from '@/services/key-generator'
 import {
   ACHIWA,
   AKIRA,
+  ANFIYA,
   AOBA,
   ARCANA,
   ARINA,
@@ -13,6 +14,8 @@ import {
   CHARLOTTE,
   CONNOR,
   DESIREE,
+  DOROTHY,
+  DUSTIN,
   ELIOT,
   EXCALIBUR_BOX,
   FENIA,
@@ -22,6 +25,8 @@ import {
   HARUKA,
   HEINRICH,
   ILONA,
+  ITHOS,
+  JALHAY,
   JERBOA,
   JOSHUA,
   JULIAN,
@@ -29,6 +34,7 @@ import {
   KAREN,
   KATAS,
   LIN,
+  LISSANDRA,
   LIVIA,
   MARGIELA,
   MHAR,
@@ -38,10 +44,12 @@ import {
   PRIMING,
   RACHEL,
   RINA_F,
-  SHIZURU,
+  SHIRE,
   SOLUM,
+  SOMMER,
   STELLA,
   SUEN,
+  SUMMERSHIZURU,
   TARA,
   TENNIE,
   VALENTINE,
@@ -57,37 +65,35 @@ import { RsCardSize } from '@/app/components/character-frame/rs-card-size.enum'
 import { GradientButton } from '@/app/components/button/gradient-button'
 import { RSCharacter } from '@/const/character/character.interface'
 import { EXTERNAL_USERS } from '@/const/external-users'
-import Link from 'next/link'
-import { Tooltip } from '@material-tailwind/react'
+import { RSHighlightedText } from '@/services/utils/highlight-text'
 
 export default function TierListPage2() {
   const tierList: { [key: string]: RSCharacter[] } = {
-    '0 Tier': [NAYUTA, STELLA, RINA_F],
-    '1 Tier': [JOSHUA, CAROLINE, NICOLA, FENIA, TENNIE],
-    '1.5 Tier': [KATAS, ARINA, AOBA, KALEYA, ARCANA, VERLAINE, KAREN],
-    '2 Tier': [MARGIELA, LIVIA, SUEN, ILONA, YER, CONNOR, YEJUE, VALENTINE, WENSHENG],
-    '3 Tier': [
-      FLAN,
-      ELIOT,
-      AKIRA,
-      YOIDUKI,
-      HEINRICH,
-      LIN,
-      RACHEL,
-      NABI,
-      DESIREE,
-      HARUKA,
-      CECIL,
-      ACHIWA,
-      GANYA,
+    '0 Tier': [NAYUTA, STELLA, JOSHUA, ARCANA],
+    '0.5 Tier': [
+      LISSANDRA,
+      NICOLA,
+      JALHAY,
+      SOMMER,
+      CAROLINE,
+      KATAS,
+      MARGIELA,
+      DUSTIN,
+      TENNIE,
+      SUMMERSHIZURU,
+      SHIRE,
     ],
-    '4 Tier': [
-      CHARLOTTE,
-      GALORE,
+    '1 Tier': [RINA_F, SUEN, DOROTHY, KALEYA, ANFIYA, YOIDUKI, HEINRICH, ITHOS, KAREN],
+    '1.5 Tier': [ARINA, FENIA, LIVIA, AOBA, YER, VALENTINE],
+    '2 Tier': [VERLAINE, ILONA, CONNOR, WENSHENG, AKIRA, PRIMING, RACHEL, DESIREE],
+    '2.5 Tier': [CHARLOTTE, GANYA, YEJUE, NABI, ACHIWA, CECIL, FLAN, LIN],
+    '3 Tier': [
       MHAR,
-      PRIMING,
+      GALORE,
+      HARUKA,
       SOLUM,
       JERBOA,
+      ELIOT,
       TARA,
       JULIAN,
       YAMAARASHI,
@@ -96,55 +102,51 @@ export default function TierListPage2() {
     ],
   }
 
-  const comment = `대충 선정 기준
-
-0 Tier : 이새기들 없으면 덱만들어도 덱이 덱이 아님
-
-          - 덱에 뭔가 문제가 있을 때, 대충 얘네 넣으면 해결 됨
+  const comment = `레조넌스 오픈 이후 6개월 뒤 미래시 캐릭터가 나온 이후의 티어표
 
 
 
-1 Tier : 현 한섭 기준 최정상급 파워랑 안정성, 덱 순환력을 뽑아내는 캐릭터
+0 : 인권
 
-        - 현 기준으로는 페니아 그정도 급이 맞음, 니콜라 출시로 인한 테니 체급 상승
+0.5 : 사기캐, 인권에 준하는 캐릭터
 
+1 : 인권과 사기캐를 넣는 덱에 넣거나 어떻게든 쓸 수 있는 성능캐
 
+1.5 : 대체 캐릭터
 
-1.5 Tier : 현 한섭 기준 정상급 파워랑 서포팅 능력을 뽑아내는 캐릭터
+2 : 높은 티어의 캐릭터가 없다면 쓸만함.
 
-          - 무한순환덱 파츠인 아리나 아오바, 근데 무순덱 아니여도 다른 덱에서 활약함
+2.5 : 시너지를 맞추기 어렵거나 범용성이 떨어지는 캐릭터
 
-          - 베를린, 시즈루 그정도 급 맞음
-
-
-
-2 Tier : 범용성은 좋으나 확실하게 특출나지 않거나 현재 사용하기 애매한 키워드를 가진 캐릭터 및 정상급은 아닌 애매한 캐릭터
-
-          - 성능 자체는 매우 준수하기에 1군에 들어갈 정도는 됨
+3 : 쓰지마셈
 
 
 
-3 Tier : 성능 자체는 준수하나, 완벽한 상위호환이 존재하는 캐릭터 및 현재 한섭 캐릭풀로는 사용하기 애매한 키워드를 가진 캐릭터
+6개월 뒤의 레조넌스는 [다크 아트]이 압도적으로 우세임
+
+[다크 아트]덱의 코스트 수급력, 순환력, 화력, 유지력 전부 다 따라갈 수가 없음
 
 
 
-4 Tier : 이거 쓸바에 다른거 쓰는게 훨씬 나음, 샬롯
+그냥 [다크 아트]덱을 쓰는게 좋음
 
-          - 샬롯 쓰지마라`
+
+
+그나마 [다크 아트]덱과 또이또이하게 살아있는게 니콜라 [인뢰]덱, 소마 [레드카드]덱 정도고
+
+그보다 살짝 아래에는 카타스 화염덱이 있음`
   return (
     <div className="flex flex-col gap-[10px]">
       <div className="flex flex-col gap-[4px]">
-        <div className="ff-dh text-[30px]">
-          니콜라 출시 시점 티어 리스트 (작성일:25/02/21) +{' '}
-          <Tooltip content="해당 링크의 투표 결과와 댓글에 티어 토론을 참고하세요">
-            <Link
-              href="https://arca.live/b/resonance/130152046"
-              className="underline text-blue-400"
-              target="_blank"
-            >
-              조슈아 추가(25/03/01)
-            </Link>
-          </Tooltip>
+        <div className="ff-dh text-[30px]">미래시 티어 리스트</div>
+        <div className="flex flex-col gap-[4px]">
+          <div>
+            2024년 10월에 작성된 글이며, 중국서버에서 미리 경험한 데이터를 기반으로 작성된 글입니다.
+          </div>
+          <div>
+            주관적 해석이 포함되어있으니, 반드시 원문 링크와 작성자 코멘트를 읽어보는 것을
+            추천드립니다.
+          </div>
         </div>
         <div className="mt-[4px] flex gap-[4px] items-center cursor-pointer">
           <a href={EXTERNAL_USERS['1'].link} target="_blank">
@@ -152,19 +154,9 @@ export default function TierListPage2() {
               출처: @{EXTERNAL_USERS['1'].name}
             </div>
           </a>
-          <a href="https://arca.live/b/resonance/129471346" target="_blank">
+          <a href="https://arca.live/b/resonance/118192596" target="_blank">
             <GradientButton className="p-[4px] rounded inline-flex items-center gap-[4px]">
               [티어리스트 원문 링크]
-            </GradientButton>
-          </a>
-          <a href="/reset-marathon/equipment" target="_blank">
-            <GradientButton className="p-[4px] rounded inline-flex items-center gap-[4px]">
-              [장비 티어리스트]
-            </GradientButton>
-          </a>
-          <a href="https://arca.live/b/resonance/128890448" target="_blank">
-            <GradientButton className="p-[4px] rounded inline-flex items-center gap-[4px]">
-              [리세마라 가이드 링크]
             </GradientButton>
           </a>
         </div>
@@ -199,7 +191,7 @@ export default function TierListPage2() {
       <div className="flex flex-col gap-[4px]">
         <div className="font-bold text-[20px]">작성자 코멘트</div>
         <div className="whitespace-pre-line border p-[10px] shadow-md border-gray-700 rounded">
-          {comment}
+          <RSHighlightedText text={comment} />
         </div>
       </div>
     </div>

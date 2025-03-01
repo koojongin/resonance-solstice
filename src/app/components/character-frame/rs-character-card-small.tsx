@@ -5,7 +5,7 @@ import { RsCardSize } from '@/app/components/character-frame/rs-card-size.enum'
 
 export function RsCharacterCardSmall({ character }: { character: RSCharacter }) {
   return (
-    <div className="border-2 border-gray-400/80 rounded-[6px] shadow-md shadow-gray-800/70 p-[2px] cursor-pointer">
+    <div className="max-w-[78px] border-2 border-gray-400/80 rounded-[6px] shadow-md shadow-gray-800/70 p-[2px] cursor-pointer">
       <div className="w-[70px] h-[70px] overflow-hidden relative rounded-[4px]">
         <img src={getFrameBgUrl(character.grade)} className="absolute z-0 w-full bottom-[-40px]" />
         <img
@@ -14,7 +14,7 @@ export function RsCharacterCardSmall({ character }: { character: RSCharacter }) 
         />
         <RsCharacterBorderBox grade={character.grade} />
       </div>
-      <div className="font-bold text-blue-gray-800 mt-[4px] text-[15px] text-center">
+      <div className="font-bold text-blue-gray-800 mt-[4px] text-[15px] text-center break-all">
         {character.name}
       </div>
     </div>

@@ -35,7 +35,9 @@ export function RsCharacterList({
         const validEngineCores: string[] = _.keys(_.pickBy(checkedEngineCores, Boolean)).map(
           (key) => EngineCore[key as keyof typeof EngineCore],
         )
-        const isValidEngineCore = _.intersection(validEngineCores, character.cores).length > 0
+        const isValidEngineCore =
+          _.intersection(validEngineCores, character.cores).length > 0 ||
+          (validEngineCores.includes(EngineCore.EMPTY) && character.cores.length === 0)
 
         const validColumns: string[] = _.keys(_.pickBy(checkedColumns, Boolean)).map(
           (key) => RS_COLUMN[key as keyof typeof RS_COLUMN],
