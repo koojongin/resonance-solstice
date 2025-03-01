@@ -42,7 +42,7 @@ export default function MapNamedDetailPage() {
             <a href={map.linkOfBili} target="_blank" className="flex items-center">
               <img
                 className="w-[30px] rounded-full border-[2px] bg-white"
-                src="https://i.namu.wiki/i/Htm3agI9gCwVit30zTszHsEBK1ZRxVIeNPG5otPB3ocbEI5yHjWjfnVTNZWwBTRhlG8CUPJZdYEdkyDRlN-ktBrfbW5lRv6wLrGUHQYHxVJOtvoQjHnTRTRiDgPSSi0qd_jRYZQOjq-X-4Gwixb1OA.svg"
+                src="https://img.icons8.com/?size=512&id=5E24fZ9ORelo&format=png"
               />
             </a>
           )}

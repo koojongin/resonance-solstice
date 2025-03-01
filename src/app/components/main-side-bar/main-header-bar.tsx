@@ -11,8 +11,11 @@ export default function MainHeaderBar() {
     <div className="flex flex-wrap gap-[10px] ff-dh text-[22px]">
       <Tooltip content="아카라이브 채널">
         <Link href="https://arca.live/b/resonance" target="_blank">
-          <div className="flex items-center text-white gap-[10px] cursor-pointer">
-            <img className="w-[30px] rounded-full border-[2px]" src="/img/arca.svg" />
+          <div className="flex items-center gap-[10px] cursor-pointer">
+            <img
+              className="w-[30px] rounded-full border-[2px]"
+              src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c7/70/a9/c770a97a-bb6e-306b-3194-5f5cdea0eb16/AppIcon-0-0-1x_U007epad-0-1-85-220.png/434x0w.webp"
+            />
           </div>
         </Link>
       </Tooltip>
@@ -41,7 +44,7 @@ export default function MainHeaderBar() {
           <div className="flex items-center text-white gap-[10px] cursor-pointer">
             <img
               className="w-[30px] rounded-full border-[2px] bg-white"
-              src="https://i.namu.wiki/i/V2mYST9t0Sb52SO7OPYF-SI_hLf_CRamXIo47K3Pw1NXU0uMdzP93d0COsHskgoOqfBBemNHNpgPW5Uw-xZjT8YJMYcZ3SQ1SXeMUl9OF1QAT890FpQdIB76mAw_-iTJNYkrGU41joxWVhnkzvFKpw.webp"
+              src="https://cdn.gamerch.com/s3-assets/images/favicon/64.png"
             />
           </div>
         </Link>
@@ -52,7 +55,7 @@ export default function MainHeaderBar() {
           <div className="flex items-center text-white gap-[10px] cursor-pointer">
             <img
               className="w-[30px] rounded-full border-[2px] bg-white"
-              src="https://i.namu.wiki/i/Htm3agI9gCwVit30zTszHsEBK1ZRxVIeNPG5otPB3ocbEI5yHjWjfnVTNZWwBTRhlG8CUPJZdYEdkyDRlN-ktBrfbW5lRv6wLrGUHQYHxVJOtvoQjHnTRTRiDgPSSi0qd_jRYZQOjq-X-4Gwixb1OA.svg"
+              src="https://img.icons8.com/?size=512&id=5E24fZ9ORelo&format=png"
             />
           </div>
         </Link>
@@ -74,7 +77,7 @@ export default function MainHeaderBar() {
           <div className="flex items-center text-white gap-[10px] cursor-pointer">
             <img
               className="w-[30px] rounded-full border-[2px] bg-white"
-              src="https://i.namu.wiki/i/rZ-_509rvXhSN24KJfCJLNwrKO9gJDAVJuP-08exwIJeg-_G7-Qdbt1evIagUPpr06239o_FrTWBfrjDZG8kZSGvAaLlgcJUfWecVHPWXm3oFNtQz_jdLtNuyedcVyI10haPSuCPGlgLiXEsFciwxA.svg"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxBMhrJjoiD24rW6u6Xb9X5fBzGCCUWd_rE6rNdQzyQr7U8Cw7T98MABtG35QC6lE2L3Q&usqp=CAU"
             />
           </div>
         </Link>
