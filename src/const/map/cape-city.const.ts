@@ -34,11 +34,11 @@ export const MAP_CAPE_CITY: RSMap = {
           amount: [40],
         },
         {
-          name: '잃어버린 학습 및 사고 장비 상자',
+          name: '분실된 시타델 탐색 장비함',
           amount: [0, 1],
         },
         {
-          name: '로스트 소사이어티 우수 장비 상자',
+          name: '분실된 시타델 우수 장비함',
           amount: [0, 1],
         },
         {
@@ -96,11 +96,11 @@ export const MAP_CAPE_CITY: RSMap = {
           amount: [40],
         },
         {
-          name: '잃어버린 학습 및 사고 장비 상자',
+          name: '분실된 시타델 탐색 장비함',
           amount: [0, 1],
         },
         {
-          name: '로스트 소사이어티 우수 장비 상자',
+          name: '분실된 시타델 우수 장비함',
           amount: [0, 1],
         },
         {
@@ -166,11 +166,11 @@ export const MAP_CAPE_CITY: RSMap = {
           amount: [40],
         },
         {
-          name: '잃어버린 학습 및 사고 장비 상자',
+          name: '분실된 시타델 탐색 장비함',
           amount: [0, 1],
         },
         {
-          name: '로스트 소사이어티 우수 장비 상자',
+          name: '분실된 시타델 우수 장비함',
           amount: [0, 1],
         },
         {
@@ -244,11 +244,11 @@ export const MAP_CAPE_CITY: RSMap = {
           amount: [0, 1],
         },
         {
-          name: '잃어버린 학습 및 사고 장비 상자',
+          name: '분실된 시타델 탐색 장비함',
           amount: [0, 1],
         },
         {
-          name: '로스트 소사이어티 우수 장비 상자',
+          name: '분실된 시타델 우수 장비함',
           amount: [0, 1],
         },
         {
@@ -318,11 +318,11 @@ export const MAP_CAPE_CITY: RSMap = {
           amount: [0, 1],
         },
         {
-          name: '잃어버린 학습 및 사고 장비 상자',
+          name: '분실된 시타델 탐색 장비함',
           amount: [0, 1],
         },
         {
-          name: '로스트 소사이어티 우수 장비 상자',
+          name: '분실된 시타델 우수 장비함',
           amount: [0, 1],
         },
         {
@@ -392,11 +392,11 @@ export const MAP_CAPE_CITY: RSMap = {
           amount: [0, 1],
         },
         {
-          name: '잃어버린 학습 및 사고 장비 상자',
+          name: '분실된 시타델 탐색 장비함',
           amount: [0, 1],
         },
         {
-          name: '로스트 소사이어티 우수 장비 상자',
+          name: '분실된 시타델 우수 장비함',
           amount: [0, 1],
         },
         {
@@ -482,11 +482,11 @@ export const MAP_CAPE_CITY: RSMap = {
           amount: [0, 1],
         },
         {
-          name: '잃어버린 학습 및 사고 장비 상자',
+          name: '분실된 시타델 탐색 장비함',
           amount: [0, 1],
         },
         {
-          name: '로스트 소사이어티 우수 장비 상자',
+          name: '분실된 시타델 우수 장비함',
           amount: [0, 1],
         },
         {

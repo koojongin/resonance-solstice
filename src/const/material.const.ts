@@ -2259,6 +2259,49 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
       'https://patchwiki.biligame.com/images/resonance/5/5a/1vdcf84mw54r7bjyj46l2m6r0rjreh8.png',
   },
 
+  '분실된 시타델 탐색 장비함': {
+    grade: RS_GRADE.SSR,
+    desc: '전장에서 주울 수 있는 박스로 안에 아니타 진귀 장비가 들어 있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/bd/hp3k73ikaa04eijjewqe4jsywlfw9l4.png',
+    includedItems: [
+      '스타 웨이브',
+      '심해 시험침',
+      '무한 비확률 아머',
+      '변화의 눈동자',
+      '고차원 구조체',
+      '인비져블 터치',
+      '비트레이얼',
+      '메모리 매트릭스',
+      '넥타르의 마지막 해',
+      '클라드니 아크',
+      '진홍의 예언',
+    ],
+  },
+  '분실된 시타델 우수 장비함': {
+    grade: RS_GRADE.SR,
+    desc: '전장에서 주울 수 있는 박스로 안에 아니타 우수 장비가 들어 있습니다.',
+    includedItems: [
+      '블락 플래셔',
+      '해부 도구C',
+      '무의식 학습 장치',
+      '임계질량',
+      '질량 투사기',
+      '2호 장난감',
+      '기본 방어 섬유',
+      '원기 회복 기기',
+    ],
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/bd/hp3k73ikaa04eijjewqe4jsywlfw9l4.png',
+  },
+  '분실된 시타델 일반 장비함': {
+    grade: RS_GRADE.R,
+    desc: '전장에서 주울 수 있는 박스로 안에 아니타 일반 장비가 들어 있습니다.',
+    includedItems: ['질량 투사기', '2호 장난감', '기본 방어 섬유', '원기 회복 기기'],
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/bd/hp3k73ikaa04eijjewqe4jsywlfw9l4.png',
+  },
+
   '분실된 아니타 탐색 장비함': {
     grade: RS_GRADE.SSR,
     desc: '전장에서 주울 수 있는 박스로 안에 아니타 진귀 장비가 들어 있습니다.',
@@ -2296,6 +2339,7 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/a/a6/082xcjkd8ifroajgj9st6fhqh7nneys.png',
   },
+
   '분실된 철도연맹 정예 장비함': {
     grade: RS_GRADE.SSR,
     desc: '전장에서 주울 수 있는 박스로 안에 철도연맹 진귀 장비가 들어 있습니다.',
