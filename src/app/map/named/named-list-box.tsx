@@ -17,7 +17,7 @@ export default function MapNamedListBox() {
   const activeCss = `hover:bg-blue-gray-900 hover:text-white`
 
   return (
-    <div className="inline-flex flex-col gap-[4px]">
+    <div className="min-w-[140px] w-[140px] inline-flex flex-col gap-[4px]">
       {list.map((map) => {
         const isActiveMap = map.name === decodedName
         return (

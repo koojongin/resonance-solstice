@@ -1,21 +1,17 @@
 'use client'
 
-import { ALL_NAMED_MAPS } from '@/const/archive/named-map.const'
 import { GradientHeaderDiv } from '@/app/components/div/gradient-header-div'
 import createKey from '@/services/key-generator'
 import React from 'react'
 import { MATERIALS } from '@/const/material.const'
 import { formatNumber } from '@/services/utils/number.formatter'
 import { Tooltip } from '@material-tailwind/react'
-import { useNextDepthNavigator } from '@/services/navigation'
-import { MaterialBoxResponsive } from '@/app/components/material/material-box'
-import { RSBountyMissionOrder, RSTradeOrder } from '@/const/map/map.interface'
+import { RSBountyMissionOrder } from '@/const/map/map.interface'
 import { ALL_EQUIPMENTS } from '@/const/archive/equipment.const'
 import { LinkItem } from '@/app/components/material/link-material-or-equipment'
 import { ItemBoxResponsive } from '@/app/components/item/item-box'
 
 export function RsBountyMissionBox({ orders }: { orders: RSBountyMissionOrder[] }) {
-  const { router } = useNextDepthNavigator()
   return (
     <>
       <GradientHeaderDiv className="flex items-center gap-[4px]">현상금 임무</GradientHeaderDiv>

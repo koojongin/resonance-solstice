@@ -991,7 +991,7 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
       'https://patchwiki.biligame.com/images/resonance/9/9a/aj3mmrftg6bediyqgxzbxgy5260zosy.png',
   },
   '베인링 낭액': {
-    grade: RS_GRADE.R,
+    grade: RS_GRADE.N,
     desc: '',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/f/fa/hkc39b101p1767qaxouimce7gf5e42a.png',
@@ -2104,6 +2104,23 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
       'https://patchwiki.biligame.com/images/resonance/a/a6/082xcjkd8ifroajgj9st6fhqh7nneys.png',
   },
 
+  '슈그리스시의 잃어버린 화물': {
+    grade: RS_GRADE.R,
+    desc: '',
+    includedItems: [
+      '엔진',
+      '가전제품',
+      '탄약 가속 장치',
+      '자동차 부품',
+      '홍차',
+      '고급 식기',
+      '와드 치킨',
+      '통조림',
+      '와드 샘물',
+    ],
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/5a/1vdcf84mw54r7bjyj46l2m6r0rjreh8.png',
+  },
   '청명 데이터 센터의 잃어버린 화물': {
     grade: RS_GRADE.R,
     desc: '',
@@ -2173,6 +2190,52 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
     grade: RS_GRADE.R,
     desc: '전장에서 주울 수 있는 박스로 안에 아니타 일반 장비가 들어 있습니다.',
     includedItems: ['A77 우주 비행 권총', '다용도 오프너', '비금속 도금 재료', '제세동기'],
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a6/082xcjkd8ifroajgj9st6fhqh7nneys.png',
+  },
+  '분실된 철도연맹 정예 장비함': {
+    grade: RS_GRADE.SSR,
+    desc: '전장에서 주울 수 있는 박스로 안에 철도연맹 진귀 장비가 들어 있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a6/082xcjkd8ifroajgj9st6fhqh7nneys.png',
+    includedItems: [
+      '리프팅 수술 장비',
+      '흑석 아머',
+      '타임라인 익스텐더',
+      '축퇴 흑석',
+      '치유 방탄 조끼',
+      '액체 질소 분사기',
+    ],
+  },
+  '분실된 철도연맹 우수 장비함': {
+    grade: RS_GRADE.SR,
+    desc: '전장에서 주울 수 있는 박스로 안에 철도연맹 우수 장비가 들어 있습니다.',
+    includedItems: [
+      '동력식 회수 기계',
+      '북부동맹 방어 섬유',
+      '동력식 도끼',
+      '라이플총',
+      '파편 커버',
+      '기능성 음료수',
+      '고열량 식량',
+      '구급 아머',
+      '사냥칼',
+      '사냥용 리볼버',
+    ],
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a6/082xcjkd8ifroajgj9st6fhqh7nneys.png',
+  },
+  '분실된 철도연맹 일반 장비함': {
+    grade: RS_GRADE.R,
+    desc: '전장에서 주울 수 있는 박스로 안에 철도연맹 일반 장비가 들어 있습니다.',
+    includedItems: [
+      '파편 커버',
+      '기능성 음료수',
+      '고열량 식량',
+      '구급 아머',
+      '사냥칼',
+      '사냥용 리볼버',
+    ],
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/a/a6/082xcjkd8ifroajgj9st6fhqh7nneys.png',
   },
