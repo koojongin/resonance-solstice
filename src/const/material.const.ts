@@ -226,42 +226,84 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
   },
 
   게임기: {
+    earnsPath: [
+      {
+        desc: '청명 데이터 센터 거래소',
+        tags: ['청명 데이터 센터'],
+      },
+    ],
     grade: RS_GRADE.N,
     desc: '',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/b/b1/pd9p317r8y7tjc3ccx10mdycgo3xt5l.png',
   },
   스피커: {
+    earnsPath: [
+      {
+        desc: '청명 데이터 센터 거래소',
+        tags: ['청명 데이터 센터'],
+      },
+    ],
     grade: RS_GRADE.N,
     desc: '',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/3/36/q1lf59impymouoda0lq6sa9mjjkdu4h.png',
   },
   '게임 카트리지': {
+    earnsPath: [
+      {
+        desc: '청명 데이터 센터 거래소',
+        tags: ['청명 데이터 센터'],
+      },
+    ],
     grade: RS_GRADE.N,
     desc: '',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/a/ad/81g1kxafrcq0lbhjtl4b7mbmsw20u36.png',
   },
   '녹화 테이프': {
+    earnsPath: [
+      {
+        desc: '청명 데이터 센터 거래소',
+        tags: ['청명 데이터 센터'],
+      },
+    ],
     grade: RS_GRADE.N,
     desc: '',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/e/e8/t4wq1moc8ajzqh0b0xuzamc2xeatarv.png',
   },
   형광봉: {
+    earnsPath: [
+      {
+        desc: '청명 데이터 센터 거래소',
+        tags: ['청명 데이터 센터'],
+      },
+    ],
     grade: RS_GRADE.N,
     desc: '',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/c/c3/27oy0yqwl3o5fl0rmeaglnwf7aeurqy.png',
   },
   '열차 장난감': {
+    earnsPath: [
+      {
+        desc: '청명 데이터 센터 거래소',
+        tags: ['청명 데이터 센터'],
+      },
+    ],
     grade: RS_GRADE.N,
     desc: '',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/7/70/8hp1058uib7k4pzq8zq7t4ef3z4g1xl.png',
   },
   '녹음 테이프': {
+    earnsPath: [
+      {
+        desc: '청명 데이터 센터 거래소',
+        tags: ['청명 데이터 센터'],
+      },
+    ],
     grade: RS_GRADE.N,
     desc: '',
     thumbnail:
@@ -746,6 +788,12 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
       'https://patchwiki.biligame.com/images/resonance/c/c4/c5vvvt1hzfd35kf9hbabs2sf5ymvakn.png',
   },
   은광석: {
+    earnsPath: [
+      {
+        desc: '청명 데이터 센터 거래소',
+        tags: ['청명 데이터 센터'],
+      },
+    ],
     grade: RS_GRADE.N,
     desc: '',
     thumbnail:
@@ -2018,6 +2066,79 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/thumb/1/10/qe5kc3tdv4njzt2c5w9oc1aq64101p9.png/180px-%E8%BF%BD%E5%8A%A0%E6%B3%A8%E8%B5%84%E7%94%B3%E8%AF%B7%E4%B9%A6.png',
   },
+  '분실된 흑월 예봉 장비함': {
+    grade: RS_GRADE.SSR,
+    desc: '전장에서 주울 수 있는 박스로 안에 아니타 진귀 장비가 들어 있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a6/082xcjkd8ifroajgj9st6fhqh7nneys.png',
+    includedItems: [
+      '전술 풍수 드론',
+      '번개 에너지 부적',
+      '춘추합성인장',
+      '헤븐 아머',
+      '흑월 메테오',
+      '스피릿 보우',
+      '데몬베인의 갑옷',
+    ],
+  },
+  '분실된 흑월 우수 장비함': {
+    grade: RS_GRADE.SR,
+    desc: '전장에서 주울 수 있는 박스로 안에 아니타 우수 장비가 들어 있습니다.',
+    includedItems: [
+      '창위의 약탈자',
+      '청산',
+      '범죄의 증거',
+      '흑월 연막탄',
+      '케블라 수트',
+      '어장 단검',
+      '흑월 독화살',
+    ],
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a6/082xcjkd8ifroajgj9st6fhqh7nneys.png',
+  },
+  '분실된 흑월 일반 장비함': {
+    grade: RS_GRADE.R,
+    desc: '전장에서 주울 수 있는 박스로 안에 아니타 일반 장비가 들어 있습니다.',
+    includedItems: ['흑월 연막탄', '케블라 수트', '어장 단검', '흑월 독화살'],
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a6/082xcjkd8ifroajgj9st6fhqh7nneys.png',
+  },
+
+  '청명 데이터 센터의 잃어버린 화물': {
+    grade: RS_GRADE.R,
+    desc: '',
+    includedItems: [
+      '은광석',
+      '게임기',
+      '스피커',
+      '게임 카트리지',
+      '녹화 테이프',
+      '형광봉',
+      '열차 장난감',
+      '녹음 테이프',
+    ],
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/5a/1vdcf84mw54r7bjyj46l2m6r0rjreh8.png',
+  },
+  '자유 무역항-7의 잃어버린 화물': {
+    grade: RS_GRADE.R,
+    desc: '',
+    includedItems: [
+      '전자 부품',
+      '순면 티셔츠',
+      '그래핀',
+      '크리스탈 화분',
+      '인조 수정꽃',
+      '항공 기념품',
+      '블랙 타이거 새우',
+      '견과',
+      '맥주',
+      '천일염',
+    ],
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/5a/1vdcf84mw54r7bjyj46l2m6r0rjreh8.png',
+  },
+
   '분실된 아니타 탐색 장비함': {
     grade: RS_GRADE.SSR,
     desc: '전장에서 주울 수 있는 박스로 안에 아니타 진귀 장비가 들어 있습니다.',

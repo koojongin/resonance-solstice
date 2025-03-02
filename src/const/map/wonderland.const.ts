@@ -18,7 +18,7 @@ export const MAP_WONDERLAND: RSMap = {
     { name: '철광석' },
     { name: '석영사' },
   ],
-  교환소: [
+  '교환 계획': [
     {
       rewards: [
         {

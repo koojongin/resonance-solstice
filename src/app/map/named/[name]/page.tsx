@@ -100,9 +100,9 @@ export default function MapNamedDetailPage() {
           )}
         </div>
 
-        {map['교환소'] && (
+        {map['교환 계획'] && (
           <div>
-            <RsTradeShopBox tradeOrders={map['교환소']} />
+            <RsTradeShopBox tradeOrders={map['교환 계획']} />
           </div>
         )}
 

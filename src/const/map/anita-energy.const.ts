@@ -6,7 +6,7 @@ export const MAP_ANITA_ENERGY: RSMap = {
   linkOfBili:
     'https://wiki.biligame.com/resonance/%E9%98%BF%E5%A6%AE%E5%A1%94%E8%83%BD%E6%BA%90%E7%A0%94%E7%A9%B6%E6%89%80',
   type: RSCityType.SMALL_CITY_RHOMBUS,
-  교환소: [
+  '교환 계획': [
     {
       rewards: [
         {

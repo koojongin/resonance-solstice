@@ -19,10 +19,7 @@ export function RsBountyMissionBox({ orders }: { orders: RSBountyMissionOrder[] 
   return (
     <>
       <GradientHeaderDiv className="flex items-center gap-[4px]">
-        교환소
-        {/* <Tooltip content="해당 목록은 [물자 주문]을 운송해야 열리는 항목이 포함되어 있습니다."> */}
-        {/*   <i className="fa-solid fa-circle-question text-[20px] cursor-pointer" /> */}
-        {/* </Tooltip> */}
+        현상금 임무
       </GradientHeaderDiv>
       <div className="flex flex-col">
         <div className="flex overflow-hidden bg-blue-800 border-2 border-blue-800 shadow-md text-white">

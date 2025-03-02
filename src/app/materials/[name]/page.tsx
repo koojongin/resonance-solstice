@@ -90,7 +90,7 @@ export default function MaterialDetailPage() {
               return (
                 <ItemTooltipBox key={createKey()} item={item}>
                   <div className="w-[70px]">
-                    <ItemBoxResponsive item={item} />
+                    <ItemBoxResponsive item={item} withoutIconPadding />
                   </div>
                 </ItemTooltipBox>
               )

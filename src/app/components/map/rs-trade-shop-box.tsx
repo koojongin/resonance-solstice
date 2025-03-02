@@ -19,7 +19,7 @@ export function RsTradeShopBox({ tradeOrders }: { tradeOrders: RSTradeOrder[] })
   return (
     <>
       <GradientHeaderDiv className="flex items-center gap-[4px]">
-        교환소
+        교환 계획
         {/* <Tooltip content="해당 목록은 [물자 주문]을 운송해야 열리는 항목이 포함되어 있습니다."> */}
         {/*   <i className="fa-solid fa-circle-question text-[20px] cursor-pointer" /> */}
         {/* </Tooltip> */}

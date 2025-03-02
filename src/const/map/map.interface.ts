@@ -53,7 +53,7 @@ export interface RSMap {
   guideLink?: string
   '현상금 임무'?: RSBountyMissionOrder[]
   거래소?: RSMapExchangeItem[]
-  교환소?: RSTradeOrder[]
+  '교환 계획'?: RSTradeOrder[]
   '열차 무장 교환'?: RSTrainArmoryOrder[]
   '열차 에너지 교환'?: any
   '재료 회수'?: any[]

@@ -234,7 +234,7 @@ export const MAP_FREE_TRANSPORT_7: RSMap = {
           amount: [1, 3],
         },
         {
-          name: '프리포트 7에서 분실된 화물',
+          name: '자유 무역항-7의 잃어버린 화물',
           amount: [4, 6],
         },
         {
@@ -674,7 +674,7 @@ export const MAP_FREE_TRANSPORT_7: RSMap = {
           amount: [1],
         },
         {
-          name: '프리포트 7에서 분실된 화물',
+          name: '자유 무역항-7의 잃어버린 화물',
           amount: [4, 6],
         },
         {
@@ -806,7 +806,7 @@ export const MAP_FREE_TRANSPORT_7: RSMap = {
           amount: [1],
         },
         {
-          name: '프리포트 7에서 분실된 화물',
+          name: '자유 무역항-7의 잃어버린 화물',
           amount: [4, 6],
         },
         {
