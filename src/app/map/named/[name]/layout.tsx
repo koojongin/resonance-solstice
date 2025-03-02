@@ -6,7 +6,7 @@ export default function MapNamedLayout({ children }: { children: React.ReactNode
   return (
     <div className="flex gap-[10px]">
       <MapNamedListBox />
-      <div>{children}</div>
+      <>{children}</>
     </div>
   )
 }

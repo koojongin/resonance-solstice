@@ -2,7 +2,7 @@ import { RSCityType, RSMap } from '@/const/map/map.interface'
 
 export const MAP_SHUGURIS: RSMap = {
   guideLink: 'https://arca.live/b/resonance/129310815',
-  recommendationLevel: 10,
+  recommendationLevel: 5,
   name: '슈그리스시',
   linkOfBili: 'https://wiki.biligame.com/resonance/%E4%BF%AE%E6%A0%BC%E9%87%8C%E5%9F%8E',
   type: RSCityType.CORE_CITY,

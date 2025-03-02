@@ -2,14 +2,19 @@ import { RSCityType } from '@/const/map/map.interface'
 
 export const MAP_ANITA_ARMORY = {
   name: '아니타 군수공장',
-  recommendationLevel: 30,
+  recommendationLevel: 40,
   guideLink: 'https://arca.live/b/resonance/129614242',
   linkOfBili:
     'https://wiki.biligame.com/resonance/%E9%98%BF%E5%A6%AE%E5%A1%94%E6%88%98%E5%A4%87%E5%B7%A5%E5%8E%82',
   type: RSCityType.SMALL_CITY_SQUARE,
   '열차 무장 교환': [
     {
-      rewards: [{ name: '유인용 전조등', amount: 1 }],
+      rewards: [
+        {
+          name: '유인용 전조등',
+          amount: 1,
+        },
+      ],
       exchangeAmount: 1,
       requirements: [
         {
@@ -35,7 +40,12 @@ export const MAP_ANITA_ARMORY = {
       ],
     },
     {
-      rewards: [{ name: '고출력 오디오 제너레이터(432Hz)', amount: 1 }],
+      rewards: [
+        {
+          name: '고출력 오디오 제너레이터(432Hz)',
+          amount: 1,
+        },
+      ],
       exchangeAmount: 1,
       requirements: [
         {
@@ -61,7 +71,12 @@ export const MAP_ANITA_ARMORY = {
       ],
     },
     {
-      rewards: [{ name: '초저주파 진동기', amount: 1 }],
+      rewards: [
+        {
+          name: '초저주파 진동기',
+          amount: 1,
+        },
+      ],
       exchangeAmount: 1,
       requirements: [
         {
@@ -87,7 +102,12 @@ export const MAP_ANITA_ARMORY = {
       ],
     },
     {
-      rewards: [{ name: '원더링 전조등', amount: 1 }],
+      rewards: [
+        {
+          name: '원더링 전조등',
+          amount: 1,
+        },
+      ],
       exchangeAmount: 1,
       requirements: [
         {
@@ -109,7 +129,12 @@ export const MAP_ANITA_ARMORY = {
       ],
     },
     {
-      rewards: [{ name: '보조 펜던트', amount: 1 }],
+      rewards: [
+        {
+          name: '보조 펜던트',
+          amount: 1,
+        },
+      ],
       exchangeAmount: 1,
       requirements: [
         {
@@ -135,7 +160,12 @@ export const MAP_ANITA_ARMORY = {
       ],
     },
     {
-      rewards: [{ name: '운송 드론 787', amount: 1 }],
+      rewards: [
+        {
+          name: '운송 드론 787',
+          amount: 1,
+        },
+      ],
       exchangeAmount: 1,
       requirements: [
         {
@@ -163,7 +193,7 @@ export const MAP_ANITA_ARMORY = {
   ],
   거래소: [
     {
-      name: '화증석',
+      name: '플레임 스톤',
       isSpecialty: true,
     },
     {

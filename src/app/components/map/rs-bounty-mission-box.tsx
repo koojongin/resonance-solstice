@@ -20,9 +20,10 @@ export function RsBountyMissionBox({ orders }: { orders: RSBountyMissionOrder[] 
           <div className="flex min-w-[30px] w-[30px] items-center justify-center p-[4px] relative">
             -
           </div>
-          <div className="flex min-w-[80px] w-[80px] items-center justify-center p-[4px] relative">
+          <div className="flex min-w-[50px] w-[50px] items-center justify-center p-[4px] relative text-center">
             추천 레벨
-            <br />및 난이도
+            <br />및<br />
+            난이도
           </div>
           <div className="flex min-w-[80px] w-[80px] items-center justify-center p-[4px] relative">
             임무 정보
@@ -37,12 +38,21 @@ export function RsBountyMissionBox({ orders }: { orders: RSBountyMissionOrder[] 
               <div className="flex flex-col gap-[4px] min-w-[30px] w-[30px] bg-blue-800 text-white items-center justify-center p-[4px]">
                 <div className="ff-dh text-[20px]">{index + 1}</div>
               </div>
-              <div className="flex min-w-[80px] w-[80px] items-center justify-center bg-blue-gray-200 p-[4px] relative">
+              <div className="flex min-w-[50px] w-[50px] items-center justify-center bg-blue-gray-200 p-[4px] relative">
                 <div className="ff-dh text-[20px] text-blue-gray-900 flex items-center justify-center flex-col">
                   <div>{order.recommendationLevel.toLocaleString()}</div>
                   <div className="flex flex-wrap justify-center items-center text-[16px] ff-sdn font-bold text-yellow-500">
                     {new Array(order.difficulty).fill(1).map(() => {
-                      return <i key={createKey()} className="text-[12px] fa-solid fa-star" />
+                      let textColor = 'text-white'
+                      if (order.difficulty >= 3) textColor = 'text-blue-500'
+                      if (order.difficulty >= 4) textColor = 'text-purple-500'
+                      if (order.difficulty >= 5) textColor = 'text-yellow-500'
+                      return (
+                        <i
+                          key={createKey()}
+                          className={`text-[12px] fa-solid fa-star ${textColor}`}
+                        />
+                      )
                     })}
                   </div>
                 </div>

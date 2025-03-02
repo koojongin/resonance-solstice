@@ -1,6 +1,7 @@
 import { RSCityType, RSMap } from '@/const/map/map.interface'
 
 export const MAP_FREE_TRANSPORT_7: RSMap = {
+  recommendationLevel: 20,
   guideLink: 'https://arca.live/b/resonance/129294257',
   name: '자유 무역항-7',
   linkOfBili: 'https://wiki.biligame.com/resonance/7%E5%8F%B7%E8%87%AA%E7%94%B1%E6%B8%AF',

@@ -1,6 +1,7 @@
-import { RSCityType } from '@/const/map/map.interface'
+import { RSCityType, RSMap } from '@/const/map/map.interface'
 
-export const MAP_STORM_EYE_CITY = {
+export const MAP_STORM_EYE_CITY: RSMap = {
+  recommendationLevel: 40,
   name: '스톰아이시',
   linkOfBili: 'https://wiki.biligame.com/resonance/%E5%B2%9A%E5%BF%83%E5%9F%8E',
   type: RSCityType.CORE_CITY,

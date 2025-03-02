@@ -1,13 +1,14 @@
-import { RSCityType } from '@/const/map/map.interface'
+import { RSCityType, RSMap } from '@/const/map/map.interface'
 
-export const MAP_HWANGONE = {
+export const MAP_HWANGONE: RSMap = {
+  recommendationLevel: 15,
   guideLink: 'https://arca.live/b/resonance/129428108',
   name: '황원역',
   linkOfBili: 'https://wiki.biligame.com/resonance/%E8%8D%92%E5%8E%9F%E7%AB%99',
   type: RSCityType.SMALL_CITY_RECYCLE,
   거래소: [
     {
-      name: '호박석',
+      name: '호박',
       isSpecialty: true,
     },
     {

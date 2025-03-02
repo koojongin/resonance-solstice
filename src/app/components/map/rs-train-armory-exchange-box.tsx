@@ -20,12 +20,7 @@ export function RsTrainArmoryExchangeBox({
   const { router } = useNextDepthNavigator()
   return (
     <>
-      <GradientHeaderDiv className="flex items-center gap-[4px]">
-        열차 무장 교환
-        {/* <Tooltip content="해당 목록은 [물자 주문]을 운송해야 열리는 항목이 포함되어 있습니다."> */}
-        {/*   <i className="fa-solid fa-circle-question text-[20px] cursor-pointer" /> */}
-        {/* </Tooltip> */}
-      </GradientHeaderDiv>
+      <GradientHeaderDiv className="flex items-center gap-[4px]">열차 무장 교환</GradientHeaderDiv>
       <div className="flex flex-col">
         <div className="flex overflow-hidden bg-blue-800 border-2 border-blue-800 shadow-md text-white">
           <div className="flex min-w-[40px] w-[40px] items-center justify-center p-[4px] relative">
@@ -98,7 +93,7 @@ export function RsTrainArmoryExchangeBox({
                             router.push(`/materials/${material.name}`)
                           }}
                         >
-                          <div className="w-[40px] relative">
+                          <div className="w-[50px] relative">
                             <MaterialBoxResponsive material={material} withoutIconPadding />
                             <div className="absolute right-0 bottom-0 p-[1px] text-center z-20 text-shadow-outline text-white ff-dh">
                               {formatNumber(requirement.amount)}
@@ -128,8 +123,8 @@ export function RsTrainArmoryExchangeBox({
                             router.push(`/materials/${material.name}`)
                           }}
                         >
-                          <div className="w-[40px] relative">
-                            <MaterialBoxResponsive material={material} />
+                          <div className="w-[50px] relative">
+                            <MaterialBoxResponsive material={material} withoutIconPadding />
                             <div className="absolute right-0 bottom-0 p-[1px] text-center z-20 text-shadow-outline text-white ff-dh">
                               {formatNumber(reward.amount)}
                             </div>

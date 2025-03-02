@@ -1,6 +1,7 @@
-import { RSCityType } from '@/const/map/map.interface'
+import { RSCityType, RSMap } from '@/const/map/map.interface'
 
-export const MAP_WOONSOO_BRIDGE = {
+export const MAP_WOONSOO_BRIDGE: RSMap = {
+  recommendationLevel: 35,
   name: '운수교 기지',
   linkOfBili: 'https://wiki.biligame.com/resonance/%E4%BA%91%E5%B2%AB%E6%A1%A5%E5%9F%BA%E5%9C%B0',
   type: RSCityType.SMALL_CITY_SQUARE,

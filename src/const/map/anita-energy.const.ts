@@ -1,6 +1,7 @@
 import { RSCityType, RSMap } from '@/const/map/map.interface'
 
 export const MAP_ANITA_ENERGY: RSMap = {
+  recommendationLevel: 30,
   guideLink: 'https://arca.live/b/resonance/129285060',
   name: '아니타 에너지 연구소',
   linkOfBili:
@@ -490,7 +491,7 @@ export const MAP_ANITA_ENERGY: RSMap = {
           amount: 20000,
         },
         {
-          name: '호박석',
+          name: '호박',
           amount: 20000,
         },
         {

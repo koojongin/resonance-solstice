@@ -675,6 +675,24 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/b/b7/d9pnnzs68umolh4ggutwd22n1ofnw8t.png',
   },
+  '벌집형 열방열재': {
+    grade: RS_GRADE.N,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/c3/p23o5nan9y513odsdrzic4ued6gw1pt.png',
+  },
+  '태양전지 어레이': {
+    grade: RS_GRADE.N,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/22/2pftmvrwd00lscx0l6f13o7kvhrsgni.png',
+  },
+  '항공 반도체': {
+    grade: RS_GRADE.N,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/79/5mpsxkr9s50qqu4996gc96xnv5z6rtz.png',
+  },
   '초내열 합금': {
     grade: RS_GRADE.N,
     desc: '',
@@ -736,6 +754,12 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
     desc: '',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/b/b3/ll9injo21piqemc5sbn0gus4179nuqi.png',
+  },
+  '티타늄 광석': {
+    grade: RS_GRADE.N,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/04/t5khp7ftuxmvz2zob2bi7apj6oegkw4.png',
   },
   '탄소 섬유': {
     grade: RS_GRADE.N,
@@ -799,7 +823,7 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/1/1e/qycdd6pihd1wkkbo1zdbbydpy9qdcau.png',
   },
-  호박석: {
+  호박: {
     grade: RS_GRADE.N,
     desc: '',
     thumbnail:
@@ -831,7 +855,7 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
       'https://patchwiki.biligame.com/images/resonance/c/c6/kmpiehjdo033o0s6oi4s2aymnsx4gtb.png',
   },
 
-  화증석: {
+  '플레임 스톤': {
     grade: RS_GRADE.N,
     desc: '',
     thumbnail:
@@ -990,31 +1014,29 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/9/9a/aj3mmrftg6bediyqgxzbxgy5260zosy.png',
   },
+  '약탈의 원형톱': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/f/f9/rx6o0vin95knjk306x9xnvoozusnc2f.png/180px-%E5%8A%AB%E6%8E%A0%E9%94%AF%E8%BD%AE.png',
+  },
+  '일반 무기 개조 증표': {
+    grade: RS_GRADE.SR,
+    desc: '표준 형식의 열차 무장 개조 증표는 종합 관제 센터에서 날인하고 승인을 완료했습니다. 열차장은 이 허가증으로 열차 무장 개조 공사를 할 수 있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/f/f4/h8nfrsu9ae1cd1yrr43qgjd3z38rv5z.png/270px-%E4%B8%80%E8%88%AC%E6%AD%A6%E8%A3%85%E6%94%B9%E9%80%A0%E5%87%AD%E8%AF%81.png',
+  },
+  '흑월 구매권': {
+    grade: RS_GRADE.SSR,
+    desc: '흑월 상점의 상품 리스트를 갱신할 수 있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/3/36/gf5qazklcg6h1ob5ki831ay4p1v9ho2.png/180px-%E9%BB%91%E6%9C%88%E9%87%87%E8%B4%AD%E5%88%B8.png',
+  },
   '베인링 낭액': {
     grade: RS_GRADE.N,
     desc: '',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/f/fa/hkc39b101p1767qaxouimce7gf5e42a.png',
-  },
-  '본드래곤 척추뼈': {
-    grade: RS_GRADE.SSR,
-    desc: '',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/6/6b/cp8t56hdjefjbghh2dlk1p7qf66e6kb.png',
-    earnsPath: [
-      {
-        desc: '빙하 본드래곤 드랍',
-        tags: [],
-      },
-      {
-        desc: '아니타 에너지 연구소 작전 계획-10',
-        tags: ['아니타 에너지 연구소', '작전 계획'],
-      },
-      {
-        desc: '야외 베툴라 부표-빙하 본드래곤',
-        tags: ['잔향 부표'],
-      },
-    ],
   },
   '박명의 가시': {
     grade: RS_GRADE.SSR,
@@ -1046,6 +1068,26 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/thumb/1/18/m86a48d0frtp39vr4k3r52d22qfnzsi.png/180px-%E6%B7%B1%E7%9C%A0%E6%9E%AF%E5%8F%B6.png',
   },
+  '본드래곤 척추뼈': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/6b/cp8t56hdjefjbghh2dlk1p7qf66e6kb.png',
+    earnsPath: [
+      {
+        desc: '빙하 본드래곤 드랍',
+        tags: [],
+      },
+      {
+        desc: '아니타 에너지 연구소 작전 계획-10',
+        tags: ['아니타 에너지 연구소', '작전 계획'],
+      },
+      {
+        desc: '야외 베툴라 부표-빙하 본드래곤',
+        tags: ['잔향 부표'],
+      },
+    ],
+  },
   '본드래곤 두개골': {
     grade: RS_GRADE.SSR,
     desc: '',
@@ -1069,6 +1111,12 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
     desc: '',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/thumb/c/cc/n9ejhj18pq44745yyv1zpwnbna4m21o.png/180px-%E9%AA%A8%E9%BE%99%E5%B0%BE%E9%AA%A8.png',
+  },
+  '앰피 본드래곤 흉골': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/f/f8/262x7haqdcaxtf49vfpt6ggjwoeh8kj.png/180px-%E8%A3%82%E9%A6%96%E9%AA%A8%E9%BE%99%E8%83%B8%E9%AA%A8.png',
   },
   '앰피 본드래곤 두개골': {
     grade: RS_GRADE.SSR,
@@ -1136,11 +1184,47 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/e/e9/mafbszngx2eloi62gyid31ivjwbkz2w.png',
   },
-  중화석: {
+  '원조의 참회': {
     grade: RS_GRADE.SSR,
     desc: '',
     thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/ed/2h1eoob3wuyr4rx4uz5mngzb6rebn91.png',
+  },
+  중화석: {
+    grade: RS_GRADE.SR,
+    desc: '',
+    thumbnail:
       'https://patchwiki.biligame.com/images/resonance/f/f4/60yvggts3dcdl1mgrc4ok3ngkqboszg.png',
+  },
+  '전기 내장 덩어리': {
+    grade: RS_GRADE.SR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/bf/c7wihca8pwt8bhheqs3l8t4ppoe7841.png',
+  },
+  '전기 낭': {
+    grade: RS_GRADE.SR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/0f/m28uqlj8h2zsq4dvcbi3vmiqqhbj919.png',
+  },
+  '전기 촉수': {
+    grade: RS_GRADE.R,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/c6/gpbzs0f0kc2nqt3eij0yvk1c83uk0jy.png',
+  },
+  '플레이아데스 케이블': {
+    grade: RS_GRADE.SR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/fa/cykc6uvq4i799hxrtl2wbtw317a37ev.png',
+  },
+  '플레이아데스 부품': {
+    grade: RS_GRADE.R,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a5/dmhpojegzeafwavt3drxvb0bspq32on.png',
   },
   '형이상 입자': {
     grade: RS_GRADE.SSR,
@@ -1154,11 +1238,39 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/e/eb/t8cae05p6ows8pi4sril8uesn2is6cg.png',
   },
+  '뇌정의 파편': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/66/0u9x5q4t9tj61td2rdw0d73aoyhe2ry.png',
+  },
   '심면 나무': {
     grade: RS_GRADE.SSR,
     desc: '',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/a/a4/qms85fhfp1obhq7jyamj89r3xz3oblg.png',
+  },
+  '심면 덩굴': {
+    earnsPath: [
+      {
+        desc: '사슬의 죄수 드랍',
+        tags: [],
+      },
+      {
+        desc: '아니타 발사 센터 철도관리국 속박된 망령 시리즈 임무',
+        tags: ['아니타 발사 센터'],
+        map: '아니타 발사 센터',
+      },
+      {
+        desc: '아니타 발사 센터-사슬의 죄수-관련 현상금',
+        tags: ['아니타 발사 센터'],
+        map: '아니타 발사 센터',
+      },
+    ],
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/cf/cvebamqd9viuv3fhsxisk4n4yjuie77.png',
   },
   '심면 나뭇가지': {
     grade: RS_GRADE.SR,
@@ -2011,36 +2123,11 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/2/2e/3h4nnmr67ff6wxtzwgmx3dqjgxdrmd2.png',
   },
-
-  '약탈의 원형톱': {
-    grade: RS_GRADE.SSR,
-    desc: '',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/thumb/f/f9/rx6o0vin95knjk306x9xnvoozusnc2f.png/180px-%E5%8A%AB%E6%8E%A0%E9%94%AF%E8%BD%AE.png',
-  },
-  '앰피 본드래곤 흉골': {
-    grade: RS_GRADE.SSR,
-    desc: '',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/thumb/f/f8/262x7haqdcaxtf49vfpt6ggjwoeh8kj.png/180px-%E8%A3%82%E9%A6%96%E9%AA%A8%E9%BE%99%E8%83%B8%E9%AA%A8.png',
-  },
-  '일반 무기 개조 증표': {
-    grade: RS_GRADE.SR,
-    desc: '표준 형식의 열차 무장 개조 증표는 종합 관제 센터에서 날인하고 승인을 완료했습니다. 열차장은 이 허가증으로 열차 무장 개조 공사를 할 수 있습니다.',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/thumb/f/f4/h8nfrsu9ae1cd1yrr43qgjd3z38rv5z.png/270px-%E4%B8%80%E8%88%AC%E6%AD%A6%E8%A3%85%E6%94%B9%E9%80%A0%E5%87%AD%E8%AF%81.png',
-  },
   '사과나무 가지': {
     grade: RS_GRADE.SR,
     desc: '사과 에이드의 원재료입니다. 사용 시 아리나가 한잔 더 만들어줄 수 있습니다.\n해당 아이템은 냉장고에 보관해야 합니다.\n상회 열차 가구 상점에서 [냉장고]를 구매하면 냉장고의 용량을 증가할 수 있습니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/d/d8/35fnnv2gzvss3ujrdzji4n84kpnpsng.png',
-  },
-  '흑월 구매권': {
-    grade: RS_GRADE.SSR,
-    desc: '흑월 상점의 상품 리스트를 갱신할 수 있습니다.',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/thumb/3/36/gf5qazklcg6h1ob5ki831ay4p1v9ho2.png/180px-%E9%BB%91%E6%9C%88%E9%87%87%E8%B4%AD%E5%88%B8.png',
   },
   '기념 카드팩-마이레일 I기': {
     grade: RS_GRADE.UR,
@@ -2104,6 +2191,22 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
       'https://patchwiki.biligame.com/images/resonance/a/a6/082xcjkd8ifroajgj9st6fhqh7nneys.png',
   },
 
+  '맨더 광산의 잃어버린 화물': {
+    grade: RS_GRADE.R,
+    desc: '',
+    includedItems: [
+      '맨더 공구함',
+      '레일용 특수 강재',
+      '황동',
+      '철근 콘크리트 침목',
+      '건축자재',
+      '철광석',
+      '석재',
+      '모래와 자갈',
+    ],
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/33/5koat68gvvmaei9qeecoz44wud8lq72.png',
+  },
   '슈그리스시의 잃어버린 화물': {
     grade: RS_GRADE.R,
     desc: '',

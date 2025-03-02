@@ -1,7 +1,8 @@
-import { RSCityType } from '@/const/map/map.interface'
+import { RSCityType, RSMap } from '@/const/map/map.interface'
 
-export const MAP_RAILWAY = {
+export const MAP_RAILWAY: RSMap = {
   guideLink: 'https://arca.live/b/resonance/129314531',
+  recommendationLevel: 20,
   name: '철도연맹 초소',
   linkOfBili: 'https://wiki.biligame.com/resonance/%E9%93%81%E7%9B%9F%E5%93%A8%E7%AB%99',
   type: RSCityType.SMALL_CITY_SQUARE,
