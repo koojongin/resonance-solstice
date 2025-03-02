@@ -1,26 +1,6 @@
 import { RS_GRADE } from '@/const/character/character.enum'
 import _ from 'lodash'
-import { RSEquipmentEarnPath } from '@/const/archive/equipment.const'
-
-export enum RSMaterialType {
-  AVATAR = 'AVATAR',
-  DRESS = 'DRESS',
-}
-
-export enum RSDressType {
-  SET = '세트',
-  SHOES = '신발',
-  EYE = '눈 장식',
-}
-
-export interface RSMaterial {
-  grade: RS_GRADE
-  thumbnail: string
-  desc: string
-  type?: RSMaterialType
-  dressType?: RSDressType
-  earnsPath?: RSEquipmentEarnPath[]
-}
+import { RSDressType, RSMaterial, RSMaterialType } from '@/const/material/material.type'
 
 export const MATERIALS: { [key: string]: RSMaterial } = {
   '디지털화 사고': {
@@ -1083,6 +1063,12 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
     desc: '',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/1/18/8ianlerjueo9b7qmfqw67xd1a9lfmfz.png',
+  },
+  '안티키테라 프로토콜S1': {
+    grade: RS_GRADE.UR,
+    desc: '아래의 SSR 캐릭터 중 하나를 선택하여 획득할 수 있습니다.\n테니, 카타스, 수엔, 나유타, 샬롯, 베를렌, 코나, 스텔라, 캐롤라인, 카미라, 문생, 이로나',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/1/11/59twle44st5t83l4lg4qdrhcdveb7u6.png/180px-%E5%AE%89%E6%8F%90%E5%9F%BA%E7%89%B9%E6%8B%89%E5%8D%8F%E8%AE%AES1.png',
   },
   '시타델 랜턴 코어': {
     grade: RS_GRADE.SSR,

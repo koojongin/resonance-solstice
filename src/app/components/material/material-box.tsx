@@ -4,6 +4,9 @@ import {
   getMaterialBottomFrameUrl,
 } from '@/services/utils/material-box-converter'
 import React from 'react'
+import createKey from '@/services/key-generator'
+import { Tooltip } from '@material-tailwind/react'
+import clsx from 'clsx'
 
 export function MaterialBox({ material }: { material: ExtendedRSMaterial }) {
   return (
@@ -32,5 +35,39 @@ export function MaterialBoxResponsive({
       />
       <img className="absolute z-10 bottom-0" src={getMaterialBottomFrameUrl(material.grade)} />
     </div>
+  )
+}
+
+export function MaterialTooltipBox({
+  children,
+  material,
+  className,
+}: {
+  children: any
+  material: ExtendedRSMaterial
+  className?: string
+}) {
+  return (
+    <Tooltip
+      interactive
+      className={clsx(
+        'text-[16px] max-w-[300px] bg-white text-blue-gray-800 p-[8px] shadow-lg shadow-gray-700 ff-dh border rounded',
+        className,
+      )}
+      key={createKey()}
+      content={
+        <div className="flex flex-col gap-[4px]">
+          <div className="text-[20px]">{material.name}</div>
+          {material.desc && (
+            <>
+              <hr className="border-gray-700 border-dashed" />
+              <div className="ff-sdn text-[14px] whitespace-pre-line">{material.desc}</div>
+            </>
+          )}
+        </div>
+      }
+    >
+      {children}
+    </Tooltip>
   )
 }

@@ -59,6 +59,8 @@ import { RSCharacter } from '@/const/character/character.interface'
 import { EXTERNAL_USERS } from '@/const/external-users'
 import Link from 'next/link'
 import { Tooltip } from '@material-tailwind/react'
+import { MATERIALS } from '@/const/material.const'
+import { MaterialBoxResponsive, MaterialTooltipBox } from '@/app/components/material/material-box'
 
 export default function TierListPage2() {
   const tierList: { [key: string]: RSCharacter[] } = {
@@ -131,6 +133,9 @@ export default function TierListPage2() {
 4 Tier : 이거 쓸바에 다른거 쓰는게 훨씬 나음, 샬롯
 
           - 샬롯 쓰지마라`
+
+  const item = { name: '안티키테라 프로토콜S1', ...MATERIALS['안티키테라 프로토콜S1'] }
+
   return (
     <div className="flex flex-col gap-[10px]">
       <div className="flex flex-col gap-[4px]">
@@ -169,7 +174,13 @@ export default function TierListPage2() {
           </a>
           <a href="https://arca.live/b/resonance/128987905" target="_blank">
             <GradientButton className="p-[4px] rounded inline-flex items-center gap-[4px]">
-              [3일차 로그인 보상: SSR 보상 선택 가이드]
+              [3일차 로그인 보상:{' '}
+              <MaterialTooltipBox material={item} className="">
+                <div className="w-[40px]">
+                  <MaterialBoxResponsive material={item} withoutIconPadding />
+                </div>
+              </MaterialTooltipBox>{' '}
+              선택 가이드]
             </GradientButton>
           </a>
         </div>

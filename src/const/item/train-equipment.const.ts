@@ -1,10 +1,11 @@
 import { RS_GRADE } from '@/const/character/character.enum'
-import { MATERIALS, RSMaterial } from '@/const/material.const'
 import _ from 'lodash'
+import { RSMaterial } from '@/const/material/material.type'
 
 export interface RSTrainEquipment extends RSMaterial {
   trainEquipmentType?: any
 }
+
 export const TRAIN_EQUIPMENTS: { [key: string]: RSTrainEquipment } = {
   '합금 임팩트 플레이트': {
     trainEquipmentType: '충돌 무기',

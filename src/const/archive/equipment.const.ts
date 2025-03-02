@@ -7,7 +7,7 @@ export enum RSEquipmentType {
   ACCESSORY = '장신구',
 }
 
-export interface RSEquipmentEarnPath {
+export interface RSItemEarnPath {
   desc: string
   tags: string[]
   map?: string
@@ -19,7 +19,7 @@ export interface RSEquipment {
   desc?: string
   thumbnail?: string
   faction: RS_FACTION
-  earnsPath: RSEquipmentEarnPath[]
+  earnsPath: RSItemEarnPath[]
 }
 
 export const ALL_EQUIPMENTS: {
