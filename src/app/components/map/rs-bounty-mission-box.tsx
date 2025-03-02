@@ -18,9 +18,7 @@ export function RsBountyMissionBox({ orders }: { orders: RSBountyMissionOrder[] 
   const { router } = useNextDepthNavigator()
   return (
     <>
-      <GradientHeaderDiv className="flex items-center gap-[4px]">
-        현상금 임무
-      </GradientHeaderDiv>
+      <GradientHeaderDiv className="flex items-center gap-[4px]">현상금 임무</GradientHeaderDiv>
       <div className="flex flex-col">
         <div className="flex overflow-hidden bg-blue-800 border-2 border-blue-800 shadow-md text-white">
           <div className="flex min-w-[30px] w-[30px] items-center justify-center p-[4px] relative">
