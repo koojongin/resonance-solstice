@@ -9,6 +9,7 @@ import { RsCardSize } from '@/app/components/character-frame/rs-card-size.enum'
 import { getColumnUrl } from '@/services/character-url'
 import React, { useEffect } from 'react'
 import { copyToClipboard } from '@/services/utils/copy-clipboard'
+import Link from 'next/link'
 
 export function RecommendationDeckCard({ deck }: { deck: RecommendationDeck }) {
   const openLink = (link?: string) => {
@@ -24,23 +25,37 @@ export function RecommendationDeckCard({ deck }: { deck: RecommendationDeck }) {
       className="flex flex-col p-[8px] border w-full border-gray-300 rounded shadow-md shadow-gray-400/30"
     >
       <div className="flex items-center gap-[4px] mb-[4px]">
-        <div className="text-[17px]">{title}</div>
+        <Link href={`/rd/detail/${deck.id}`}>
+          <div className="text-[17px] underline cursor-pointer">{title}</div>
+        </Link>
         {autoPreset && (
           <div>
-            <Tooltip content="클릭시 오토 프리셋이 복사됩니다.">
-              <div className="flex items-center border border-blue-gray-900 rounded p-[2px] py-0 cursor-pointer hover:bg-green-100">
-                <img
-                  src="/img/clipboard.svg"
-                  className="w-[24px] cursor-pointer"
-                  onClick={async () => {
-                    await copyToClipboard(autoPreset)
-                    alert('복사됨')
-                  }}
-                />
+            <Tooltip content="클릭 시 오토 프리셋이 복사됩니다.">
+              <div
+                className="flex items-center justify-center border border-blue-gray-900 rounded w-[24px] h-[24px] cursor-pointer hover:bg-green-100"
+                onClick={async () => {
+                  await copyToClipboard(autoPreset)
+                  alert('복사됨')
+                }}
+              >
+                <i className="fa-solid fa-clipboard text-[16px]" />
               </div>
             </Tooltip>
           </div>
         )}
+        <div>
+          <Tooltip content="클릭 시 추천덱 링크가 복사됩니다.">
+            <div
+              className="flex items-center justify-center border border-blue-gray-900 rounded w-[24px] h-[24px] cursor-pointer hover:bg-green-100"
+              onClick={async () => {
+                await copyToClipboard(`${window.location.origin}/rd/detail/${deck.id}`)
+                alert('복사됨')
+              }}
+            >
+              <i className="fa-solid fa-square-share-nodes text-[16px]" />
+            </div>
+          </Tooltip>
+        </div>
       </div>
 
       <div className="flex gap-[4px] justify-between">

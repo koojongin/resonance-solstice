@@ -6,7 +6,7 @@ import { RsCharacterCardSmall } from '@/app/components/character-frame/rs-charac
 import { RsCharacterCardMedium } from '@/app/components/character-frame/rs-character-card-medium'
 import { useRouter } from 'next/navigation'
 import { ALL_EQUIPMENTS, RSEquipmentType } from '@/const/archive/equipment.const'
-import { EquipmentBox, EquipmentBoxResponsive } from '@/app/equipments/rs-equipment-list'
+import { EquipmentBoxResponsive } from '@/app/equipments/rs-equipment-list'
 import createKey from '@/services/key-generator'
 import React from 'react'
 import {
@@ -14,7 +14,6 @@ import {
   RsCharacterCardResponsiveShorten,
 } from '@/app/components/character-frame/rs-character-card-responsive'
 import { Tooltip } from '@material-tailwind/react'
-import { useNextDepthNavigator } from '@/services/navigation'
 import { EquipmentTooltipBox } from '@/app/components/deck/equipment-tooltip-box'
 
 export function RsCharacterCard({
@@ -63,8 +62,7 @@ export function RsCharacterCardShorten({
   )
 }
 
-export function RsEquipmentCard({ equipments }: { equipments: string[] }) {
-  const { router } = useNextDepthNavigator()
+export function RsEquipmentCard({ equipments, width }: { width?: number; equipments: string[] }) {
   if (equipments.length === 0) {
     return <div />
   }
@@ -78,11 +76,15 @@ export function RsEquipmentCard({ equipments }: { equipments: string[] }) {
   const [armor] = extendedEquipments.filter((e) => e.type === RSEquipmentType.ARMOR)
   const [accesorry] = extendedEquipments.filter((e) => e.type === RSEquipmentType.ACCESSORY)
 
+  const equipmentWidth = width || 40
   return (
     <div className="flex gap-[2px]">
       {[weapon, armor, accesorry].map((equipment) => {
         return (
-          <div key={createKey()} className="relative w-[40px] h-[40px] rounded flex items-stretch">
+          <div
+            key={createKey()}
+            className={`relative w-[${equipmentWidth}px] h-[${equipmentWidth}px] rounded flex items-stretch`}
+          >
             {!equipment && (
               <div className="border border-gray-700 flex w-full items-center justify-center">
                 -

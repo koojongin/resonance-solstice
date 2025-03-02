@@ -21,7 +21,7 @@ export function RsCharacterCardResponsive({
       <div className="overflow-hidden relative rounded-[4px]" style={{ height: `${height}px` }}>
         <img src={getFrameBgUrl(character.grade)} className="absolute z-0 w-full bottom-[-40px]" />
         <img
-          src={convertCharacterThumbnailUrl(character.thumbnail, 140)}
+          src={convertCharacterThumbnailUrl(character.thumbnail, 200)}
           className="w-full z-10 absolute"
         />
         <div className="z-20 absolute w-[40px] flex justify-center items-center m-[4px] right-0">
