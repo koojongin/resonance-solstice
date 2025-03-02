@@ -1,24 +1,15 @@
 'use client'
 
 import { useState } from 'react'
-import { DndContext } from '@dnd-kit/core'
 import { RS_GRADE } from '@/const/character/character.enum'
 import _ from 'lodash'
-import { CONVERTED_ALL_EQUIPMENTS } from '@/const/archive/equipment.const'
-import {
-  DraggableItem,
-  DraggableTier,
-  DroppableRow,
-  DroppableRowBottom,
-  FULL_BOX_ID,
-} from '@/app/tiermaker/drop'
+import { MAPPED_ALL_EQUIPMENTS } from '@/const/archive/equipment.const'
+import { DraggableTier } from '@/app/tiermaker/drop'
 import { TierDropTableBox } from '@/app/components/tiermaker/tier-drop-table-box'
 import { ItemBoxKind } from '@/const/item/item.enum'
 
 const grades = Object.keys(RS_GRADE)
-const SORTED_ALL_EQUIPMENTS = _.sortBy(CONVERTED_ALL_EQUIPMENTS, (item) =>
-  grades.indexOf(item.grade),
-)
+const SORTED_ALL_EQUIPMENTS = _.sortBy(MAPPED_ALL_EQUIPMENTS, (item) => grades.indexOf(item.grade))
 const initialItems = SORTED_ALL_EQUIPMENTS.map((a, index) => ({
   id: `${index + 1}`,
   ...a,

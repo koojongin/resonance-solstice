@@ -1,12 +1,17 @@
 import { RS_GRADE } from '@/const/character/character.enum'
 import _ from 'lodash'
-import { RSMaterial } from '@/const/material/material.type'
+import { DefaultRSItem } from '@/const/material/material.type'
+import { RSItemType } from '@/const/item/item.enum'
 
-export interface RSTrainEquipment extends RSMaterial {
-  trainEquipmentType?: any
+export interface OriginRSTrainEquipment extends DefaultRSItem {
+  trainEquipmentType: string
 }
 
-export const TRAIN_EQUIPMENTS: { [key: string]: RSTrainEquipment } = {
+export interface RSTrainEquipment extends OriginRSTrainEquipment {
+  iType: RSItemType
+}
+
+const DEFAULT_TRAIN_EQUIPMENTS: { [key: string]: OriginRSTrainEquipment } = {
   '합금 임팩트 플레이트': {
     trainEquipmentType: '충돌 무기',
     grade: RS_GRADE.R,
@@ -162,8 +167,17 @@ export const TRAIN_EQUIPMENTS: { [key: string]: RSTrainEquipment } = {
       'https://patchwiki.biligame.com/images/resonance/7/70/0gozrlaaftuonopo0lwrusv50cda80j.png',
   },
 }
+export const TRAIN_EQUIPMENTS: { [key: string]: RSTrainEquipment } = _.mapValues(
+  DEFAULT_TRAIN_EQUIPMENTS,
+  (value) => {
+    return {
+      ...value,
+      iType: RSItemType.TRAIN_EQUIPMENT,
+    }
+  },
+)
 
-export const CONVERTED_TRAIN_EQUIPMENTS = _.map(TRAIN_EQUIPMENTS, (value, key) => ({
+export const MAPPED_TRAIN_EQUIPMENTS = _.map(TRAIN_EQUIPMENTS, (value, key) => ({
   name: key,
   ...value,
 }))

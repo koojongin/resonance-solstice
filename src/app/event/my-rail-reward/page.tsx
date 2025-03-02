@@ -5,7 +5,6 @@ import { Tooltip } from '@material-tailwind/react'
 import React from 'react'
 import createKey from '@/services/key-generator'
 import { MATERIALS } from '@/const/material.const'
-import { ALL_NAMED_MAPS } from '@/const/archive/named-map.const'
 import { MaterialBoxResponsive } from '@/app/components/material/material-box'
 import { formatNumber } from '@/services/utils/number.formatter'
 import { useNextDepthNavigator } from '@/services/navigation'
@@ -14,7 +13,7 @@ import {
   CONSTRUCTOR_DATA_PERSONAL,
   CONSTRUCTOR_DATA_SERVER,
 } from '@/const/my-rail/my-rail-constructor.const'
-import { LinkMaterialOrEquipment } from '@/app/components/material/link-material-or-equipment'
+import { LinkItem } from '@/app/components/material/link-material-or-equipment'
 
 export default function EventMyRailRewardPage() {
   const { router } = useNextDepthNavigator()
@@ -68,7 +67,7 @@ export default function EventMyRailRewardPage() {
                           }
                         >
                           <div className="w-[70px]">
-                            <LinkMaterialOrEquipment material={reward}>
+                            <LinkItem item={reward}>
                               <div className="w-[70px] h-[70px] cursor-pointer relative border rounded-[2px] shadow-md border-blue-gray-900 relative">
                                 <MaterialBoxResponsive material={reward} withoutIconPadding />
                                 <div className="absolute right-0 bottom-0 p-[1px] text-center z-20 text-shadow-outline text-white ff-dh">
@@ -78,7 +77,7 @@ export default function EventMyRailRewardPage() {
                               <div className="ff-sdn text-[13px] font-bold p-[4px] text-center">
                                 {item.name}
                               </div>
-                            </LinkMaterialOrEquipment>
+                            </LinkItem>
                           </div>
                         </Tooltip>
                       )
@@ -138,7 +137,7 @@ export default function EventMyRailRewardPage() {
                           }
                         >
                           <div>
-                            <LinkMaterialOrEquipment material={reward}>
+                            <LinkItem item={reward}>
                               <div className="w-[70px] flex flex-col gap-[4px]">
                                 <div className="w-[70px] h-[70px] cursor-pointer relative border rounded-[2px] shadow-md border-blue-gray-900 relative">
                                   <MaterialBoxResponsive material={reward} withoutIconPadding />
@@ -150,7 +149,7 @@ export default function EventMyRailRewardPage() {
                                   {item.name}
                                 </div>
                               </div>
-                            </LinkMaterialOrEquipment>
+                            </LinkItem>
                           </div>
                         </Tooltip>
                       )

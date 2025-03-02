@@ -6,10 +6,10 @@ import { RS_GRADE } from '@/const/character/character.enum'
 import _ from 'lodash'
 import { DraggableTier } from '@/app/tiermaker/drop'
 import { ItemBoxKind } from '@/const/item/item.enum'
-import { CONVERTED_TRAIN_EQUIPMENTS } from '@/const/item/train-equipment.const'
+import { MAPPED_TRAIN_EQUIPMENTS } from '@/const/item/train-equipment.const'
 
 const grades = Object.keys(RS_GRADE)
-const SORTED_ALL_ITEMS = _.sortBy(CONVERTED_TRAIN_EQUIPMENTS, (item) => grades.indexOf(item.grade))
+const SORTED_ALL_ITEMS = _.sortBy(MAPPED_TRAIN_EQUIPMENTS, (item) => grades.indexOf(item.grade))
 const initialItems = SORTED_ALL_ITEMS.map((a, index) => ({
   id: `${index + 1}`,
   ...a,

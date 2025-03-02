@@ -2,9 +2,8 @@ import { MATERIAL_LINKS } from '@/const/material/material.link.const'
 import clsx from 'clsx'
 import Link from 'next/link'
 import { ALL_MAP_NAMES } from '@/const/archive/named-map.const'
-import _ from 'lodash'
 
-export function MaterialStringLink({
+export function ItemStringLinkWithMap({
   text,
   className,
   children,
@@ -15,8 +14,7 @@ export function MaterialStringLink({
 }) {
   const materialLink = MATERIAL_LINKS[text]
 
-  const splitedText = text.split('-').map((a) => a.trim())
-  const [matchedMapName] = _.intersection(splitedText, ALL_MAP_NAMES)
+  const [matchedMapName] = ALL_MAP_NAMES.filter((name) => text.includes(name))
   if (!materialLink && !matchedMapName) return children
 
   const matchedMapLink = `/map/named/${matchedMapName}`

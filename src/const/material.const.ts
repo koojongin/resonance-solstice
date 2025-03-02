@@ -1,8 +1,14 @@
 import { RS_GRADE } from '@/const/character/character.enum'
 import _ from 'lodash'
-import { RSDressType, RSMaterial, RSMaterialType } from '@/const/material/material.type'
+import {
+  OriginRSMaterial,
+  RSDressType,
+  RSMaterial,
+  RSMaterialType,
+} from '@/const/material/material.type'
+import { RSItemType } from '@/const/item/item.enum'
 
-export const MATERIALS: { [key: string]: RSMaterial } = {
+const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
   '디지털화 사고': {
     grade: RS_GRADE.R,
     desc: `캐릭터 공명에 필요한 필수 재료.\n공명 환경을 통해 실현된 생물의 사고를 디지털화한 기술의 산물. 자체로도 사용자의 능력을 어느정도 향상시킬 수 있지만, 주로 회수된 원시적 사고 조각을 안정화하고 희석하는 '용매'로 사용됩니다.`,
@@ -1180,6 +1186,12 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/3/34/hla4jc9l3q6pcn9mzankab77wt1i2kr.png',
   },
+  '순금 코일 제조 가이드': {
+    grade: RS_GRADE.SR,
+    desc: '[순금 코일] 제작법을 기록한 파일입니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/34/hla4jc9l3q6pcn9mzankab77wt1i2kr.png',
+  },
 
   '초전도 코일 공예 가이드': {
     grade: RS_GRADE.SSR,
@@ -1546,6 +1558,18 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/8/86/4mf43c9tm390nhcvt2x521nebfinqko.png',
   },
+  '전투 메모리(1Ti)': {
+    grade: RS_GRADE.N,
+    desc: `사용 후 파티원 경험치 500포인트를 추가할 수 있습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a1/08a4a1u4nbo38utfs71xnptqccoldy7.png',
+  },
+  '전투 메모리(2Ti)': {
+    grade: RS_GRADE.R,
+    desc: `사용 후 파티원 경험치 1000포인트를 추가할 수 있습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a1/08a4a1u4nbo38utfs71xnptqccoldy7.png',
+  },
   '전투 메모리(4Ti)': {
     grade: RS_GRADE.SR,
     desc: `사용 후 파티원 경험치 2000포인트를 추가할 수 있습니다.`,
@@ -1558,11 +1582,35 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/a/a2/9ioy7w2jeu49vtzx2qiu7vl3rdkmb2u.png',
   },
+  '성운상 물질(1Ti)': {
+    grade: RS_GRADE.N,
+    desc: `사용 후 장비 경험치 500포인트를 추가할 수 있습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/34/9mu1xv3a2n2s80ujiz470r1olskrizd.png',
+  },
+  '성운상 물질(2Ti)': {
+    grade: RS_GRADE.R,
+    desc: `사용 후 장비 경험치 1000포인트를 추가할 수 있습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/5a/9mu1xv3a2n2s80ujiz470r1olskrizd.png',
+  },
   '성운상 물질(4Ti)': {
     grade: RS_GRADE.SR,
     desc: `사용 후 장비 경험치 2000포인트를 추가할 수 있습니다.`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/8/8c/05zncpdbz8083prkuvle7o33xvgnzup.png',
+  },
+  '성운상 물질(8Ti)': {
+    grade: RS_GRADE.SSR,
+    earnsPath: [
+      {
+        desc: '버추얼 레코드-교환 상점',
+        tags: ['교환 상점'],
+      },
+    ],
+    desc: '사용 후 장비 경험치 4000포인트를 추가할 수 있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/d/df/0iq84bp3xqyoua6tkcj3ysh9sanfwxn.png/180px-%E6%98%9F%E4%BA%91%E7%89%A9%E8%B4%A8%EF%BC%888%E9%92%9B%EF%BC%89.png',
   },
   '베툴라 편모': {
     grade: RS_GRADE.N,
@@ -1964,27 +2012,61 @@ export const MATERIALS: { [key: string]: RSMaterial } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/thumb/9/96/bd4vl4yemiu1arab7mm7agg07wpbk4t.png/180px-%E5%8F%91%E5%B0%84%E4%B8%AD%E5%BF%83%E5%A4%A7%E6%A1%A5%E9%80%9A%E8%A1%8C%E8%AF%81.png',
   },
-  '성운상 물질(8Ti)': {
-    grade: RS_GRADE.SSR,
-    earnsPath: [
-      {
-        desc: '버추얼 레코드-교환 상점',
-        tags: ['교환 상점'],
-      },
-    ],
-    desc: '사용 후 장비 경험치 4000포인트를 추가할 수 있습니다.',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/thumb/d/df/0iq84bp3xqyoua6tkcj3ysh9sanfwxn.png/180px-%E6%98%9F%E4%BA%91%E7%89%A9%E8%B4%A8%EF%BC%888%E9%92%9B%EF%BC%89.png',
-  },
   '추가 투자 신청서': {
     grade: RS_GRADE.SSR,
     desc: '도시 투자 제한이 발생시 사용할 수있습니다. 추가 투자가 가능합니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/thumb/1/10/qe5kc3tdv4njzt2c5w9oc1aq64101p9.png/180px-%E8%BF%BD%E5%8A%A0%E6%B3%A8%E8%B5%84%E7%94%B3%E8%AF%B7%E4%B9%A6.png',
   },
+  '분실된 아니타 탐색 장비함': {
+    grade: RS_GRADE.SSR,
+    desc: '전장에서 주울 수 있는 박스로 안에 아니타 진귀 장비가 들어 있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a6/082xcjkd8ifroajgj9st6fhqh7nneys.png',
+    includedItems: [
+      '반엔트로피',
+      '라바 파이어',
+      '뫼비우스',
+      '모노폴 마그네타',
+      '시뮬레이트 스타',
+      '구상 번개',
+    ],
+  },
+  '분실된 아니타 우수 장비함': {
+    grade: RS_GRADE.SR,
+    desc: '전장에서 주울 수 있는 박스로 안에 아니타 우수 장비가 들어 있습니다.',
+    includedItems: [
+      '공명체 섬유',
+      "'극좌표' 지휘 드론",
+      '번개 소환 권선기MK1',
+      '에비서레이터MK0',
+      'A77 우주 비행 권총',
+      '다용도 오프너',
+      '비금속 도금 재료',
+      '제세동기',
+    ],
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a6/082xcjkd8ifroajgj9st6fhqh7nneys.png',
+  },
+  '분실된 아니타 일반 장비함': {
+    grade: RS_GRADE.R,
+    desc: '전장에서 주울 수 있는 박스로 안에 아니타 일반 장비가 들어 있습니다.',
+    includedItems: ['A77 우주 비행 권총', '다용도 오프너', '비금속 도금 재료', '제세동기'],
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a6/082xcjkd8ifroajgj9st6fhqh7nneys.png',
+  },
 }
+export const MATERIALS: { [key: string]: RSMaterial & { iType: string } } = _.mapValues(
+  DEFAULT_MATERIALS,
+  (value): RSMaterial & { iType: RSItemType } => {
+    return {
+      ...value,
+      iType: RSItemType.MATERIAL,
+    }
+  },
+)
 
-export const CONVERTED_MATERIALS = _.map(MATERIALS, (value, key) => ({
+export const MAPPED_MATERIALS = _.map(MATERIALS, (value, key) => ({
   name: key,
   ...value,
 }))

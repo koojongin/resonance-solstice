@@ -11,7 +11,8 @@ import { useNextDepthNavigator } from '@/services/navigation'
 import { MaterialBoxResponsive } from '@/app/components/material/material-box'
 import { RSTradeOrder } from '@/const/map/map.interface'
 import { ALL_EQUIPMENTS } from '@/const/archive/equipment.const'
-import { LinkMaterialOrEquipment } from '@/app/components/material/link-material-or-equipment'
+import { LinkItem } from '@/app/components/material/link-material-or-equipment'
+import { ItemBoxResponsive } from '@/app/components/item/item-box'
 
 export function RsTradeShopBox({ tradeOrders }: { tradeOrders: RSTradeOrder[] }) {
   const { router } = useNextDepthNavigator()
@@ -120,16 +121,16 @@ export function RsTradeShopBox({ tradeOrders }: { tradeOrders: RSTradeOrder[] })
 
                     return (
                       <Tooltip key={createKey()} content={material.name}>
-                        <LinkMaterialOrEquipment material={material}>
-                          <div className="border m-[1px] cursor-pointer">
+                        <div className="border m-[1px] cursor-pointer">
+                          <LinkItem item={material}>
                             <div className="w-[40px] relative">
-                              <MaterialBoxResponsive material={material} withoutIconPadding />
+                              <ItemBoxResponsive item={material} withoutIconPadding />
                               <div className="absolute right-0 bottom-0 p-[1px] text-center z-20 text-shadow-outline text-white ff-dh">
                                 {formatNumber(reward.amount)}
                               </div>
                             </div>
-                          </div>
-                        </LinkMaterialOrEquipment>
+                          </LinkItem>
+                        </div>
                       </Tooltip>
                     )
                   })}

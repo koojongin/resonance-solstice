@@ -11,7 +11,7 @@ import createKey from '@/services/key-generator'
 import { useNextDepthNavigator } from '@/services/navigation'
 import {
   ALL_EQUIPMENTS,
-  CONVERTED_ALL_EQUIPMENTS,
+  MAPPED_ALL_EQUIPMENTS,
   RSEquipment,
   RSEquipmentType,
 } from '@/const/archive/equipment.const'
@@ -30,7 +30,7 @@ export function RsEquipmentList({
   const { router } = useNextDepthNavigator()
 
   const grades = Object.keys(RS_GRADE)
-  const SORTED_ALL_EQUIPMENTS = _.sortBy(CONVERTED_ALL_EQUIPMENTS, (item) =>
+  const SORTED_ALL_EQUIPMENTS = _.sortBy(MAPPED_ALL_EQUIPMENTS, (item) =>
     grades.indexOf(item.grade),
   )
 

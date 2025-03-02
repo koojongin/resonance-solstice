@@ -10,12 +10,12 @@ import _ from 'lodash'
 import { MATERIALS } from '@/const/material.const'
 
 const grades = Object.keys(RS_GRADE)
-const CONVERTED_MATERIALS: ExtendedRSMaterial[] = _.map(MATERIALS, (value, key) => ({
+const MAPPED_MATERIALS: ExtendedRSMaterial[] = _.map(MATERIALS, (value, key) => ({
   name: key,
   ...value,
 }))
 
-const SORTED_MATERIALS = _.sortBy(CONVERTED_MATERIALS, (item) => grades.indexOf(item.grade))
+const SORTED_MATERIALS = _.sortBy(MAPPED_MATERIALS, (item) => grades.indexOf(item.grade))
 export default function MaterialsPage() {
   const [searchedKeyword, setSearchedKeyword] = useState('')
   const handleSearchedKeywordChange = (event: any) => {

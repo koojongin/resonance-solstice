@@ -10,12 +10,12 @@ import _ from 'lodash'
 import { TRAIN_EQUIPMENTS } from '@/const/item/train-equipment.const'
 
 const grades = Object.keys(RS_GRADE)
-const CONVERTED_MATERIALS: ExtendedRSMaterial[] = _.map(TRAIN_EQUIPMENTS, (value, key) => ({
+const MAPPED_MATERIALS: ExtendedRSMaterial[] = _.map(TRAIN_EQUIPMENTS, (value, key) => ({
   name: key,
   ...value,
 }))
 
-const SORTED_MATERIALS = _.sortBy(CONVERTED_MATERIALS, (item) => grades.indexOf(item.grade))
+const SORTED_MATERIALS = _.sortBy(MAPPED_MATERIALS, (item) => grades.indexOf(item.grade))
 export default function TrainEquipmentsPage() {
   const [searchedKeyword, setSearchedKeyword] = useState('')
   const handleSearchedKeywordChange = (event: any) => {

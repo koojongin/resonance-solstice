@@ -1,5 +1,7 @@
 import { RS_FACTION, RS_GRADE } from '@/const/character/character.enum'
 import _ from 'lodash'
+import { RSItemEarnPath, RSItemType } from '@/const/item/item.enum'
+import { DefaultRSItem } from '@/const/material/material.type'
 
 export enum RSEquipmentType {
   WEAPON = '무기',
@@ -7,23 +9,18 @@ export enum RSEquipmentType {
   ACCESSORY = '장신구',
 }
 
-export interface RSItemEarnPath {
-  desc: string
-  tags: string[]
-  map?: string
-}
-
-export interface RSEquipment {
+export interface OriginRSEquipment extends DefaultRSItem {
   type: RSEquipmentType
-  grade: RS_GRADE
-  desc?: string
-  thumbnail?: string
   faction: RS_FACTION
   earnsPath: RSItemEarnPath[]
 }
 
-export const ALL_EQUIPMENTS: {
-  [key: string]: RSEquipment
+export interface RSEquipment extends OriginRSEquipment {
+  iType: RSItemType
+}
+
+const DEFAULT_ALL_EQUIPMENTS: {
+  [key: string]: OriginRSEquipment
 } = {
   '부러진 검의 불': {
     type: RSEquipmentType.WEAPON,
@@ -3170,8 +3167,16 @@ export const ALL_EQUIPMENTS: {
     ],
   },
 }
+export const ALL_EQUIPMENTS: {
+  [key: string]: RSEquipment
+} = _.mapValues(DEFAULT_ALL_EQUIPMENTS, (value): RSEquipment & { iType: RSItemType } => {
+  return {
+    ...value,
+    iType: RSItemType.EQUIPMENT,
+  }
+})
 
-export const CONVERTED_ALL_EQUIPMENTS = _.map(ALL_EQUIPMENTS, (value, key) => ({
+export const MAPPED_ALL_EQUIPMENTS = _.map(ALL_EQUIPMENTS, (value, key) => ({
   name: key,
   ...value,
 }))

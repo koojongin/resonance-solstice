@@ -6,21 +6,19 @@ import { ExtendedRSMaterial } from '@/const/material/material.type'
 import { ALL_EQUIPMENTS } from '@/const/archive/equipment.const'
 import { MATERIALS } from '@/const/material.const'
 import { ExtendedRSEquipment } from '@/app/equipments/equipment.type'
+import { RSItemType } from '@/const/item/item.enum'
+import { ExtendedUnionRSItem } from '@/const/material/index.type'
 
-enum RSItemType {
-  EQUIPMENT = 'EQUIPMENT',
-  MATERIAL = 'MATERIAL',
-}
-export function LinkMaterialOrEquipment({
-  material,
+export function LinkItem({
+  item,
   className,
   children,
 }: {
-  material: ExtendedRSMaterial | ExtendedRSEquipment
+  item: ExtendedUnionRSItem
   className?: string
   children: any
 }) {
-  const href = getLinkPath(material)
+  const href = getLinkPath(item)
   if (!href) return children
   return (
     <Link className={clsx(className)} href={href}>

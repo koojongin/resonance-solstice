@@ -17,6 +17,8 @@ import { RsTransportOrderBox } from '@/app/components/rs-transport-order-box'
 import { Tooltip } from '@material-tailwind/react'
 import { RsTrainArmoryExchangeBox } from '@/app/components/map/rs-train-armory-exchange-box'
 import { RsTradeShopBox } from '@/app/components/map/rs-trade-shop-box'
+import { RSBountyMissionOrder } from '@/const/map/map.interface'
+import { RsBountyMissionBox } from '@/app/components/map/rs-bounty-mission-box'
 
 export default function MapNamedDetailPage() {
   const { router } = useNextDepthNavigator()
@@ -101,6 +103,12 @@ export default function MapNamedDetailPage() {
         {map['교환소'] && (
           <div>
             <RsTradeShopBox tradeOrders={map['교환소']} />
+          </div>
+        )}
+
+        {map['현상금 임무'] && (
+          <div>
+            <RsBountyMissionBox orders={map['현상금 임무']} />
           </div>
         )}
 

@@ -14,7 +14,9 @@ export interface RSExchangeItem {
   name: string
   amount: number
 }
+
 export interface RSTransportItem extends RSExchangeItem {}
+
 export interface RSTransportOrder {
   rewards: RSTransportItem[]
   requirements: RSTransportItem[]
@@ -24,6 +26,16 @@ export interface RSTrainArmoryOrder {
   exchangeAmount?: number
   rewards: RSExchangeItem[]
   requirements: RSExchangeItem[]
+}
+
+export interface RSBountyMissionOrder {
+  difficulty: number
+  recommendationLevel: number
+  boss: {
+    title: string
+    name: string
+  }
+  rewards: { name: string; amount: number[] }[]
 }
 
 export interface RSTradeOrder {
@@ -39,6 +51,7 @@ export interface RSMap {
   recommendationLevel?: number
   thumbnail?: string
   guideLink?: string
+  '현상금 임무'?: RSBountyMissionOrder[]
   거래소?: RSMapExchangeItem[]
   교환소?: RSTradeOrder[]
   '열차 무장 교환'?: RSTrainArmoryOrder[]

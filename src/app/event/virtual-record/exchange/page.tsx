@@ -10,7 +10,7 @@ import { formatNumber } from '@/services/utils/number.formatter'
 import { useNextDepthNavigator } from '@/services/navigation'
 import { ALL_EQUIPMENTS } from '@/const/archive/equipment.const'
 import { VIRTUAL_RECORD_EXCHANGE_ORDERS } from '@/app/event/virtual-record/exchange/virtual-record-exchange.const'
-import { LinkMaterialOrEquipment } from '@/app/components/material/link-material-or-equipment'
+import { LinkItem } from '@/app/components/material/link-material-or-equipment'
 
 const COMMON_REWARDS = [
   {
@@ -90,7 +90,7 @@ export default function EventVirtualRecordExchangePage() {
                         }
                       >
                         <div>
-                          <LinkMaterialOrEquipment material={material}>
+                          <LinkItem item={material}>
                             <div key={createKey()} className="w-[45px] relative cursor-pointer">
                               <MaterialBoxResponsive material={material} withoutIconPadding />
                               <div className="absolute right-0 bottom-0 p-[1px] text-center z-20 text-shadow-outline text-white ff-dh">
@@ -98,7 +98,7 @@ export default function EventVirtualRecordExchangePage() {
                                 {item.amount === 0 && <>?</>}
                               </div>
                             </div>
-                          </LinkMaterialOrEquipment>
+                          </LinkItem>
                         </div>
                       </Tooltip>
                     )

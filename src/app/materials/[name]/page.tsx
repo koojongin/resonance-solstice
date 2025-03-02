@@ -17,7 +17,11 @@ import { CONVERTED_MONSTERS } from '@/const/monster/monster.const'
 import { MonsterBoxSquare } from '@/app/components/monster/monster-box'
 import { Tooltip } from '@material-tailwind/react'
 import { RSHighlightedText } from '@/services/utils/highlight-text'
-import { MaterialStringLink } from '@/app/components/material/material-link'
+import { ItemStringLinkWithMap } from '@/app/components/material/material-link'
+import { MaterialBoxResponsive } from '@/app/components/material/material-box'
+import { ItemBoxResponsive } from '@/app/components/item/item-box'
+import { ALL_EQUIPMENTS } from '@/const/archive/equipment.const'
+import { ItemTooltipBox } from '@/app/components/item/item-tooltip-box'
 
 export default function MaterialDetailPage() {
   const { name } = useParams()
@@ -74,7 +78,26 @@ export default function MaterialDetailPage() {
           </div>
         </div>
       </div>
-
+      {(material?.includedItems || []).length > 0 && (
+        <div className="flex flex-col gap-[4px]">
+          <div className="ff-dh text-[20px] text-gray-800">다음 아이템이 포함되어 있습니다.</div>
+          <div className="flex flex-wrap gap-[4px]">
+            {material.includedItems!.map((itemName) => {
+              const item = {
+                ...(MATERIALS[itemName] || ALL_EQUIPMENTS[itemName]),
+                name: itemName,
+              }
+              return (
+                <ItemTooltipBox key={createKey()} item={item}>
+                  <div className="w-[70px]">
+                    <ItemBoxResponsive item={item} />
+                  </div>
+                </ItemTooltipBox>
+              )
+            })}
+          </div>
+        </div>
+      )}
       <hr />
       <div className="flex flex-col gap-[4px]">
         <GradientHeaderDiv>
@@ -83,11 +106,11 @@ export default function MaterialDetailPage() {
         <div className="inline-flex flex-wrap gap-[4px]">
           {material?.earnsPath?.map((earnPath) => {
             return (
-              <MaterialStringLink key={createKey()} text={earnPath.desc}>
+              <ItemStringLinkWithMap key={createKey()} text={earnPath.desc}>
                 <div className="inline-flex border-gray-500 border w-max rounded p-[4px]">
                   {earnPath.desc}
                 </div>
-              </MaterialStringLink>
+              </ItemStringLinkWithMap>
             )
           })}
         </div>

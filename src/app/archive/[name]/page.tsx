@@ -6,7 +6,7 @@ import createKey from '@/services/key-generator'
 import React from 'react'
 import { CharacterSkillBox } from '@/app/characters/[name]/character-skill-container'
 import { RSHighlightedText } from '@/services/utils/highlight-text'
-import { CONVERTED_ALL_EQUIPMENTS } from '@/const/archive/equipment.const'
+import { MAPPED_ALL_EQUIPMENTS } from '@/const/archive/equipment.const'
 import { EquipmentBox } from '@/app/equipments/rs-equipment-list'
 import { useNextDepthNavigator } from '@/services/navigation'
 import { Tooltip } from '@material-tailwind/react'
@@ -23,7 +23,7 @@ export default function ArchiveDetailPage() {
     (skill) => skill.desc.indexOf(keyword) >= 0,
   )
 
-  const linkedEquipments = Object.values(CONVERTED_ALL_EQUIPMENTS).filter(
+  const linkedEquipments = Object.values(MAPPED_ALL_EQUIPMENTS).filter(
     (equipment) => (equipment.desc || '').indexOf(keyword) >= 0,
   )
 

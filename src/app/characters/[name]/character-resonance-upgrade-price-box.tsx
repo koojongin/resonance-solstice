@@ -7,7 +7,7 @@ import {
 } from '@/services/utils/material-box-converter'
 import { formatNumber } from '@/services/utils/number.formatter'
 import { Tooltip } from '@material-tailwind/react'
-import { LinkMaterialOrEquipment } from '@/app/components/material/link-material-or-equipment'
+import { LinkItem } from '@/app/components/material/link-material-or-equipment'
 import { GradientHeaderDiv } from '@/app/components/div/gradient-header-div'
 
 export function CharacterResonanceUpgradePriceBox({
@@ -68,7 +68,7 @@ export function UpgradeMaterialBox({ materialShell }: { materialShell: any }) {
       }
     >
       <div>
-        <LinkMaterialOrEquipment material={material}>
+        <LinkItem item={material}>
           <div className="relative border-2 cursor-pointer">
             <img className="absolute bottom-0 z-0" src={getMaterialBgFrameUrl(material.grade)} />
             <img className="relative z-20 rounded w-full p-[4px]" src={material.thumbnail} />
@@ -80,7 +80,7 @@ export function UpgradeMaterialBox({ materialShell }: { materialShell: any }) {
               {formatNumber(materialShell.amount)}
             </div>
           </div>
-        </LinkMaterialOrEquipment>
+        </LinkItem>
       </div>
     </Tooltip>
   )
