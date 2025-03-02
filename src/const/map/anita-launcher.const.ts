@@ -43,11 +43,11 @@ export const MAP_ANITA_LAUNCHER: RSMap = {
           amount: [40],
         },
         {
-          name: '로스트 아니타 탐험 장비 상자',
+          name: '분실된 아니타 탐색 장비함',
           amount: [0, 1],
         },
         {
-          name: '아니타 프리미엄 장비 상자 분실',
+          name: '분실된 아니타 우수 장비함',
           amount: [0, 1],
         },
         {
@@ -75,7 +75,7 @@ export const MAP_ANITA_LAUNCHER: RSMap = {
           amount: [1, 2],
         },
         {
-          name: '프리포트 7에서 분실된 화물',
+          name: '자유 무역항-7의 잃어버린 화물',
           amount: [4, 6],
         },
         {
@@ -97,11 +97,11 @@ export const MAP_ANITA_LAUNCHER: RSMap = {
           amount: [40],
         },
         {
-          name: '로스트 아니타 탐험 장비 상자',
+          name: '분실된 아니타 탐색 장비함',
           amount: [0, 1],
         },
         {
-          name: '아니타 프리미엄 장비 상자 분실',
+          name: '분실된 아니타 우수 장비함',
           amount: [0, 1],
         },
         {
@@ -155,11 +155,11 @@ export const MAP_ANITA_LAUNCHER: RSMap = {
           amount: [40],
         },
         {
-          name: '로스트 아니타 탐험 장비 상자',
+          name: '분실된 아니타 탐색 장비함',
           amount: [0, 1],
         },
         {
-          name: '아니타 프리미엄 장비 상자 분실',
+          name: '분실된 아니타 우수 장비함',
           amount: [0, 1],
         },
         {
@@ -221,11 +221,11 @@ export const MAP_ANITA_LAUNCHER: RSMap = {
           amount: [0, 1],
         },
         {
-          name: '로스트 아니타 탐험 장비 상자',
+          name: '분실된 아니타 탐색 장비함',
           amount: [0, 1],
         },
         {
-          name: '아니타 프리미엄 장비 상자 분실',
+          name: '분실된 아니타 우수 장비함',
           amount: [0, 1],
         },
         {
@@ -253,7 +253,7 @@ export const MAP_ANITA_LAUNCHER: RSMap = {
           amount: [1],
         },
         {
-          name: '프리포트 7에서 분실된 화물',
+          name: '자유 무역항-7의 잃어버린 화물',
           amount: [4, 6],
         },
         {
@@ -291,11 +291,11 @@ export const MAP_ANITA_LAUNCHER: RSMap = {
           amount: [0, 1],
         },
         {
-          name: '로스트 아니타 탐험 장비 상자',
+          name: '분실된 아니타 탐색 장비함',
           amount: [0, 1],
         },
         {
-          name: '아니타 프리미엄 장비 상자 분실',
+          name: '분실된 아니타 우수 장비함',
           amount: [0, 1],
         },
         {
@@ -357,11 +357,11 @@ export const MAP_ANITA_LAUNCHER: RSMap = {
           amount: [0, 1],
         },
         {
-          name: '로스트 아니타 탐험 장비 상자',
+          name: '분실된 아니타 탐색 장비함',
           amount: [0, 1],
         },
         {
-          name: '아니타 프리미엄 장비 상자 분실',
+          name: '분실된 아니타 우수 장비함',
           amount: [0, 1],
         },
         {
@@ -447,11 +447,11 @@ export const MAP_ANITA_LAUNCHER: RSMap = {
           amount: [0, 1],
         },
         {
-          name: '로스트 아니타 탐험 장비 상자',
+          name: '분실된 아니타 탐색 장비함',
           amount: [0, 1],
         },
         {
-          name: '아니타 프리미엄 장비 상자 분실',
+          name: '분실된 아니타 우수 장비함',
           amount: [0, 1],
         },
         {
