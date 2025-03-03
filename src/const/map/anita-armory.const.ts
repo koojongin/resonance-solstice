@@ -73,7 +73,7 @@ export const MAP_ANITA_ARMORY = {
     {
       rewards: [
         {
-          name: '초저주파 진동기',
+          name: '초음파 진동기',
           amount: 1,
         },
       ],

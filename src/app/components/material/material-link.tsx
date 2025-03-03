@@ -20,7 +20,13 @@ export function ItemStringLinkWithMap({
   const matchedMapLink = `/map/named/${matchedMapName}`
 
   return (
-    <Link className={clsx(className, 'shadow-md')} href={materialLink || matchedMapLink}>
+    <Link
+      className={clsx(
+        'shadow-md bg-blue-500 text-white rounded shadow-blue-100 border-blue-300 border-dashed hover:scale-105',
+        className,
+      )}
+      href={materialLink || matchedMapLink}
+    >
       {children}
     </Link>
   )

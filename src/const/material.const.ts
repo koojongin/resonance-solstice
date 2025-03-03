@@ -41,6 +41,28 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
       'https://patchwiki.biligame.com/images/resonance/thumb/4/4a/t8yhd3kxpo1dyt76aiwoqn2tf4y9zte.png/180px-%E6%A1%A6%E6%A0%91%E5%88%BA%E4%B8%9D%E5%9B%8A.png',
   },
   열화석: {
+    earnsPath: [
+      {
+        desc: '베툴라 생명체 드랍',
+        tags: [],
+      },
+      {
+        desc: '철도관리국 임무',
+        tags: [],
+      },
+      {
+        desc: '흑월 상점',
+        tags: [],
+      },
+      {
+        desc: '차량용 제련기-열화석 제련법',
+        tags: [],
+      },
+      {
+        desc: '상점-전력 레벨업 패키지',
+        tags: [],
+      },
+    ],
     grade: RS_GRADE.R,
     desc: ``,
     thumbnail:
@@ -152,6 +174,13 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
       'https://patchwiki.biligame.com/images/resonance/0/0d/082xcjkd8ifroajgj9st6fhqh7nneys.png',
   },
   '소음 효소': {
+    earnsPath: [
+      { desc: '흑월 강적 세력 드랍', tags: [] },
+      { desc: '슈그리스시 철도관리국 소음 차단 시리즈 임무', tags: ['슈그리스시'] },
+      { desc: '청명 데이터 센터 철도관리국 검의 그림자 시리즈 임무', tags: ['청명 데이터 센터'] },
+      { desc: '철도관리국 흑월 관련 현상금 임무', tags: [] },
+      { desc: '아니타 추출장치-소음 효소 추출법', tags: ['아니타 추출장치'] },
+    ],
     grade: RS_GRADE.SSR,
     desc: '',
     thumbnail:
@@ -876,6 +905,16 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
   },
 
   '인식 방해 껍질': {
+    earnsPath: [
+      { desc: '암흑의 매머드 드랍', tags: [] },
+      {
+        desc: '청명 데이터 센터 철도관리국-2시리즈-암흑의 매머드-관련 임무',
+        tags: ['청명 데이터 센터'],
+      },
+      { desc: '청명 데이터 센터 철도관리국-암흑의 매머드-관련 현상금', tags: ['청명 데이터 센터'] },
+      { desc: '아니타 군수공장 작전 계획-3-10', tags: ['아니타 군수공장'] },
+      { desc: '야외 베툴라 부표-암흑의 매머드', tags: ['부표'] },
+    ],
     grade: RS_GRADE.SSR,
     desc: '',
     thumbnail:
@@ -888,6 +927,16 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
       'https://patchwiki.biligame.com/images/resonance/a/a0/pv1r1bjr48msb4hqvqco5bbxll9gdzd.png',
   },
   '베툴라 촉수': {
+    earnsPath: [
+      { desc: '블리자드 기포체 드랍', tags: [] },
+      {
+        desc: '자유 무역항-7 철도관리국-2시리즈-블리자드 기포체 관련임무',
+        tags: ['자유 무역항-7'],
+      },
+      { desc: '슈그리드시 철도관리국-블리자드 기포체 관련임무', tags: ['슈그리드시'] },
+      { desc: '철도연맹 초소 작전계획-9-10', tags: ['철도연맹 초소'] },
+      { desc: '야외 베툴라 부표-블리자드 기포체', tags: ['부표'] },
+    ],
     grade: RS_GRADE.SSR,
     desc: '',
     thumbnail:
@@ -930,6 +979,14 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
       'https://patchwiki.biligame.com/images/resonance/d/da/qv2dlw9d3ql7p09taltfn3kvqthd2xv.png',
   },
   '동력 유닛': {
+    earnsPath: [
+      { desc: '대형 기계 유닛 드랍', tags: [] },
+      { desc: '스콜피언 머신,벌목용 중장비 드랍', tags: [] },
+      { desc: '아니타 에너지 연구소 작전 계획-3', tags: ['아니타 에너지 연구소'] },
+      { desc: '아니타 군수공장 작전 계획-6', tags: ['아니타 군수공장'] },
+      { desc: '청명 데이터 센터 철도관리국 보수적 사상 시리즈 임무', tags: ['청명 데이터 센터'] },
+      { desc: '청명 데이터 센터 철도관리국 관련 현상금 임무', tags: ['청명 데이터 센터'] },
+    ],
     grade: RS_GRADE.SSR,
     desc: '',
     thumbnail:
@@ -991,6 +1048,12 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
       'https://patchwiki.biligame.com/images/resonance/1/1e/g1ydkii6u409e67uycpit9856n91a3v.png',
   },
   '순금 부품': {
+    earnsPath: [
+      { desc: '미스 골드 드랍', tags: [] },
+      { desc: '골든 원더랜드 작전 계획-3', tags: ['골든 원더랜드'] },
+      { desc: '제조 작업대-순금부품 연마법', tags: ['제조 작업대'] },
+      { desc: '상점-전력 레벨업 패키지', tags: ['상점'] },
+    ],
     grade: RS_GRADE.SSR,
     desc: '',
     thumbnail:
@@ -1009,6 +1072,26 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
       'https://patchwiki.biligame.com/images/resonance/thumb/3/34/ck44p8opko42h6ecua22d1i4yuqe03c.png/180px-%E5%88%BB%E5%BD%95%E8%BF%9B%E7%A8%8B.png',
   },
   '베툴라 핵': {
+    earnsPath: [
+      {
+        desc: '베인링 퀸 드랍',
+        tags: [],
+      },
+      { desc: '블리자드 기포체 드랍', tags: [] },
+      { desc: '더스트 리자드 드랍', tags: [] },
+      { desc: '암흑의 매머드 드랍', tags: [] },
+      { desc: '혼란의 돌산호 드랍', tags: [] },
+      { desc: '빙하 본드래곤 드랍', tags: [] },
+      { desc: '앰피 본드래곤 드랍', tags: [] },
+      { desc: '야외 베툴라 부표 상기 베툴라 생명체 드랍', tags: ['부표'] },
+      { desc: '철도관리국 상기 베툴라 생명체 관련 임무', tags: [] },
+      { desc: '황원역 작전 계획-10', tags: ['황원역'] },
+      { desc: '철도연맹 초소 작전계획-9-10', tags: ['철도연맹 초소'] },
+      { desc: '골든 원더랜드 작전계획-10', tags: ['골든 원더랜드'] },
+      { desc: '아니타 에너지 연구소 작전계획-10', tags: ['아니타 에너지 연구소'] },
+      { desc: '아니타 군수공장 작전계획-3-9-10', tags: ['아니타 군수공장'] },
+      { desc: '상점-전력 레벨업 패키지', tags: ['상점'] },
+    ],
     grade: RS_GRADE.SSR,
     desc: '',
     thumbnail:
@@ -1155,12 +1238,18 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
     ],
   },
   '사슬 덩굴': {
+    earnsPath: [
+      { desc: '사슬의 죄수 드랍', tags: [] },
+      { desc: '아니타 발사 센터 철도관리국 속박된 망령 시리즈 임무', tags: ['아니타 발사 센터'] },
+      { desc: '아니타 발사 센터-사슬의 죄수-관련 현상금', tags: ['아니타 발사 센터'] },
+    ],
     grade: RS_GRADE.SSR,
     desc: '',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/f/f5/c0yjlvh6c7pratk5zt0lvddn96e4h74.png',
   },
   '항공 원자재': {
+    earnsPath: [{ desc: '차량용 가공선반-항공 원자재 제조설명', tags: ['차량용 가공선반'] }],
     grade: RS_GRADE.SSR,
     desc: '',
     thumbnail:
@@ -1173,12 +1262,22 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
       'https://patchwiki.biligame.com/images/resonance/thumb/1/11/59twle44st5t83l4lg4qdrhcdveb7u6.png/180px-%E5%AE%89%E6%8F%90%E5%9F%BA%E7%89%B9%E6%8B%89%E5%8D%8F%E8%AE%AES1.png',
   },
   '시타델 랜턴 코어': {
+    earnsPath: [
+      { desc: '시타델 세력 드랍', tags: [] },
+      { desc: '케이프시 철도관리국 임무', tags: ['케이프시'] },
+      { desc: '케이프시 철도관리국 현상금 임무', tags: ['케이프시'] },
+      { desc: '회류 타워 작전 계획-7-8-9-10-13', tags: ['회류 타워'] },
+    ],
     grade: RS_GRADE.SSR,
     desc: '',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/0/07/rj1o1w1bbra57c5ewsv51v3s4cbd39h.png',
   },
   '원조의 뿌리': {
+    earnsPath: [
+      { desc: '심면자-원조의 과보 드랍', tags: [] },
+      { desc: '철도관리국 상기 심면자 관련 임무', tags: [] },
+    ],
     grade: RS_GRADE.SSR,
     desc: '',
     thumbnail:
@@ -1245,6 +1344,36 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
       'https://patchwiki.biligame.com/images/resonance/6/66/0u9x5q4t9tj61td2rdw0d73aoyhe2ry.png',
   },
   '심면 나무': {
+    earnsPath: [
+      {
+        desc: 'MOM 드랍',
+        tags: [],
+      },
+      {
+        desc: '심면자-환술사 드랍',
+        tags: [],
+      },
+      {
+        desc: '심면자-나이트메어 드랍',
+        tags: [],
+      },
+      {
+        desc: '심면자-사슬의 죄수 드랍',
+        tags: [],
+      },
+      {
+        desc: '야외 재앙의 가지 심면자 드랍',
+        tags: [],
+      },
+      {
+        desc: '철도관리국 상기 심면자 관련 임무',
+        tags: [],
+      },
+      {
+        desc: '황원역 작전 계획-5',
+        tags: ['황원역'],
+      },
+    ],
     grade: RS_GRADE.SSR,
     desc: '',
     thumbnail:
@@ -1279,6 +1408,13 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
       'https://patchwiki.biligame.com/images/resonance/0/05/pp6zjvdqmvktnv8qzbpy893gyqtshyq.png',
   },
   '리자드 뼈대': {
+    earnsPath: [
+      { desc: '더스트 리자드 드랍', tags: [] },
+      { desc: '골든 원더랜드 작전 계획-10', tags: ['골든 원더랜드'] },
+      { desc: '맨더 광산 철도관리국-2시리즈-더스트 리자드-관련 임무', tags: ['맨더 광산'] },
+      { desc: '맨더 광산 철도관리국-더스트 리자드-관련 현상금', tags: ['맨더 광산'] },
+      { desc: '야외 베툴라 부표-더스트 리자드', tags: ['부표'] },
+    ],
     grade: RS_GRADE.SSR,
     desc: '',
     thumbnail:
@@ -1309,6 +1445,24 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
       'https://patchwiki.biligame.com/images/resonance/2/20/byt8wvopwjbao0xtiy9z7uv0exgl4if.png',
   },
   '베인링 울음낭': {
+    earnsPath: [
+      {
+        desc: '베인링 퀸 드랍',
+        tags: [],
+      },
+      {
+        desc: '맨더 광산 철도관리국 베인링 퀸 관련 임무',
+        tags: ['맨더 광산'],
+      },
+      {
+        desc: '황원역 작전 계획-10',
+        tags: [],
+      },
+      {
+        desc: '야외 베툴라 부표-베인링 퀸',
+        tags: ['부표'],
+      },
+    ],
     grade: RS_GRADE.SSR,
     desc: '',
     thumbnail:
