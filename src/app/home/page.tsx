@@ -19,7 +19,6 @@ export default function HomePage() {
     {
       period: '2월 19일 00:00 ~ 3월 4일 00:00',
       code: 'RSNUM1',
-      isExpired: 1,
     },
     {
       period: '2월 26일 00:00 ~ 3월 1일 00:00',
@@ -46,8 +45,11 @@ export default function HomePage() {
         <div className="inline-flex flex-col gap-[4px] text-[18px]">
           {coupons.map((coupon) => {
             return (
-              <div key={createKey()} className="flex items-center gap-[4px] group">
-                <div className={`${coupon.isExpired && 'line-through'}`}>[{coupon.period}]</div>
+              <div
+                key={createKey()}
+                className={`${coupon.isExpired && 'line-through'} flex items-center gap-[4px] group`}
+              >
+                <div>[{coupon.period}]</div>
                 <GradientButton
                   key={createKey()}
                   className="inline-flex items-center px-[4px] rounded"
