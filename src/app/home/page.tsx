@@ -8,11 +8,33 @@ import { OfficialUpdatePostBox } from '@/app/home/official-update-post-box'
 
 export default function HomePage() {
   const coupons = [
-    { period: '상시', code: 'RESONANCE' },
-    { period: '상시', code: 'CBCRR23' },
-    { period: '2월 19일 00:00 ~ 3월 4일 00:00', code: 'RSNUM1' },
-    { period: '2월 26일 00:00 ~ 3월 1일 00:00', code: 'MYRAIL' },
-    { period: '2월 27일 00:00 ~ 3월 2일 00:00', code: 'GOTOMYRAIL' },
+    {
+      period: '상시',
+      code: 'RESONANCE',
+    },
+    {
+      period: '상시',
+      code: 'CBCRR23',
+    },
+    {
+      period: '2월 19일 00:00 ~ 3월 4일 00:00',
+      code: 'RSNUM1',
+      isExpired: 1,
+    },
+    {
+      period: '2월 26일 00:00 ~ 3월 1일 00:00',
+      code: 'MYRAIL',
+      isExpired: 1,
+    },
+    {
+      period: '2월 27일 00:00 ~ 3월 2일 00:00',
+      code: 'GOTOMYRAIL',
+      isExpired: 1,
+    },
+    {
+      period: '3월 3일 00:00 ~ 3월 5일 23:59',
+      code: 'RSCONTENT',
+    },
   ].reverse()
   return (
     <div className="flex flex-col gap-[10px]">
@@ -25,7 +47,7 @@ export default function HomePage() {
           {coupons.map((coupon) => {
             return (
               <div key={createKey()} className="flex items-center gap-[4px] group">
-                <div>[{coupon.period}]</div>
+                <div className={`${coupon.isExpired && 'line-through'}`}>[{coupon.period}]</div>
                 <GradientButton
                   key={createKey()}
                   className="inline-flex items-center px-[4px] rounded"
