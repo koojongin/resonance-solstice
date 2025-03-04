@@ -1,6 +1,6 @@
 import { RecommendationDeck } from '@/app/rd/rd-decks.const'
 import createKey from '@/services/key-generator'
-import { Tooltip } from '@material-tailwind/react'
+import { Button, Tooltip } from '@material-tailwind/react'
 import {
   RsCharacterCard,
   RsEquipmentCard,
@@ -80,11 +80,47 @@ export function RecommendationDeckCard({ deck }: { deck: RecommendationDeck }) {
             )
           })}
         </div>
-        <div
-          className={`max-h-[200px] ff-sdn overflow-y-scroll w-full whitespace-pre-line break-words p-[8px] border border-gray-300 rounded-[4px] shadow-gray-400/30 shadow-md ${descLink ? 'cursor-pointer hover:bg-blue-300/10' : ''}`}
-          onClick={() => openLink(descLink)}
-        >
-          {desc}
+        {/* <div */}
+        {/*   className={`max-h-[200px] ff-sdn overflow-y-scroll w-full whitespace-pre-line break-words p-[8px] border border-gray-300 rounded-[4px] shadow-gray-400/30 shadow-md ${descLink ? 'cursor-pointer hover:bg-blue-300/10' : ''}`} */}
+        {/*   onClick={() => openLink(descLink)} */}
+        {/* > */}
+        {/*   {desc} */}
+        {/* </div> */}
+        <div className="ff-dh text-[18px] flex-1 flex-col flex gap-[4px] items-start justify-start">
+          <Link
+            className="w-full p-[4px] py-[8px] pb-[6px] items-center justify-center rounded flex bg-blue-gray-600 text-white"
+            href={`${window.location.origin}/rd/detail/${deck.id}`}
+          >
+            상세 보기
+          </Link>
+          {autoPreset && (
+            <div
+              className="cursor-pointer w-full p-[4px] py-[8px] pb-[6px] items-center justify-center rounded flex bg-blue-gray-600 text-white"
+              onClick={async () => {
+                await copyToClipboard(autoPreset)
+                toast(`오토프리셋이 복사되었습니다.`)
+              }}
+            >
+              오토 프리셋 복사
+            </div>
+          )}
+          <div
+            className="cursor-pointer  w-full p-[4px] py-[8px] pb-[6px] items-center justify-center rounded flex bg-blue-gray-600 text-white"
+            onClick={async () => {
+              await copyToClipboard(`${window.location.origin}/rd/detail/${deck.id}`)
+              toast(`[${deck.title.substring(0, 10)}...] 덱 링크가 복사되었습니다.`)
+            }}
+          >
+            링크 공유
+          </div>
+          {descLink && (
+            <Link
+              className="w-full p-[4px] py-[8px] pb-[6px] items-center justify-center rounded flex bg-blue-gray-600 text-white"
+              href={descLink}
+            >
+              원문 링크
+            </Link>
+          )}
         </div>
       </div>
       {owner && (
