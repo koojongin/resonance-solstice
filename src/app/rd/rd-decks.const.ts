@@ -894,7 +894,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     desc: `더스틴의 [천화] 메커니즘으로 인해 [레드카드], [옐로카드] 사용 시, 그리고 [옐로카드] 폐기 시 더스틴은 [천화]를 생성합니다.
     [천화]는 최대 18개의 [폭발물]입니다. 최대 한계를 초과하면 자동으로 방출됩니다.
     따라서 나유타+더스틴의 순환 팀은 [옐로카드]를 반복해서 섞어서 [천화]를 생성하고, 핵폭탄을 터뜨려 대규모 데미지를 입힐 수 있습니다.
-    사이클 동안 하늘불의 생성은 [혈액 회복]을 유발하고, 하늘불의 방출은 [비용 회복]을 유발합니다.
+    사이클 동안 [천화]의 생성은 [혈액 회복]을 유발하고, [천화]의 방출은 [비용 회복]을 유발합니다.
     이 기간 동안 나유타의 [재구축의 힘]를 사용하여 피해를 피하고 더스틴, 여름-시즈루, 테니를 제어하여 팀은 극도로 강력한 생존력을 갖게 되었습니다.
     나유타+소머의 조합과 비교했을 때, 여름-시즈루 자체는 일정한 장기적 출력 능력을 제공할 수 있습니다.
     동시에, 여름-시즈루의 궁극기로 인한 동결은 테니와 조합하여 코스트 회수를 상당히 증가시킬 수 있으므로 소머를 대체할 수 있습니다.
@@ -939,5 +939,59 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       'https://wiki.biligame.com/resonance/%E7%88%AC%E5%A1%94-%E6%B4%97%E7%89%8C%E6%A0%B8%E7%88%86',
     autoPreset:
       'rZbLbuowEIbfZdau5FucONuukHqOzqK7qouosVpUCihQnVaId6+dQphxAg4K2Vmx55vLP2Pv4M1VtWugFDx8uWTwUjX1rP5TraHcgeCGc2WU38AOi4yfFkJY/EegP9KcFlKjM0pk+IzE1hBH5hZby/AiRwaMxqbRQlpyBoegiWlyxmDTOFJJ gpPYUeSOLMKZPYN359b3PpN/Pz+g5L9ZfZhvtlA+7eBz4x6/1649tnmfLxazZe2+oFQMVv+XrpnVuCB+97+qqbydu26/3wA+Jh4yCAzm7froDYNt1by67S+DnywciupTwfd7Rv2gYGkLhGpJWZERkK/pWVBw9TKgjYwAhLYKA4LQbg3QFCBu DSgKCpBTAAM1EIakKDRZEoAFJgcZkYFIYcJwoNCgOCrKUxAxsSfpUUQdEfMpRF+HBFF4DCGGGXWZeEULi2S8VvdoqNEKDlELPz2npBl51Z8bop0TeG7Yng/E6zjNfWg6zYZbWljRh55Pc7I72rCxbNSN24+bggJu3t+SU4C+rr+HGZfVx/O4 v8UV3dafKLlJEbUQtNtMX//nicODOBGjUlTt9pr+HnGxSBKPtlPLlk6iLFSURDVpLI8om7QRkU8RyqixnEVjOSWUbiVZgj7iZaUjzVy4bM++rNJ+pK+HgcsIz1AVXw9HP54Z1PNNeHl2Um5WC3d4hnbzofOjS0xXn6M0vKXV9s014UUbTP8A',
+  },
+
+  {
+    id: '43',
+    title: '카타스 천둥불검(2025.02.05)',
+    leaderName: KATAS.name,
+    characters: [
+      {
+        character: KATAS,
+        equipments: ['부러진 검의 불', '자각몽 섬유', '트라페조헤드론'],
+      },
+      {
+        character: DUSTIN,
+        equipments: ['축퇴 폭탄 3호', '시뮬레이트 스타', '뫼비우스'],
+      },
+      {
+        character: STELLA,
+        equipments: ['에비서레이터MK0', '시뮬레이트 스타', '여명의 옥새'],
+      },
+      {
+        character: JOSHUA,
+        equipments: ['공간 위치 측정기', '시뮬레이트 스타', '베타 세계선 박스'],
+      },
+      {
+        character: CAROLINE,
+        equipments: ['에비서레이터MK0', '시뮬레이트 스타', '모노폴 마그네타'],
+      },
+    ],
+    desc: `소방대 소개: 새로운 자기 훈련
+
+천둥과 불의 검은 불 팀의 하이엔드 유닛으로, 단기적으로 매우 강력한 버스트 능력을 가지고 있습니다.
+조슈아의 특수 기술은 카타스의 특수 기술을 직접 끌어낼 수 있습니다(특히 적이 여러 유닛으로 구성된 경우).
+불 팀의 느린 시작 문제를 해결합니다. 스텔라 [노래]의 시작 비용에 의존하여 2분 동안 카드를 지속적으로 출력하고 뽑을 수 있지만 3분 후에는 [다크 아트]와 [블랙카드]가 핸드 위치를 차지하기 때문에 사이클이 영향을 받습니다.
+이 팀은 주로 캐롤라인의 각성 효과에 의지해 카드를 뽑지만, 리더의 스킬이 발동되는 특수한 방식(즉, [점화] 효과), 카타스의 5코스트 [레드카드] [다크 엑스칼리버]의 무작위성, 그리고 코스트가 회복되는 방식(조슈아의 [검은 물결]는 [블랙카드]를 소모하고, 카타스의 [에너지 풍선껌]과 더스틴의 [천화])으로 인해, 팀의 카드 뽑기와 코스트 회복은 종종 폭발적이다.
+더스틴이 [플로잉 파이어]를 낼 때, 카타스는 리더의 스킬을 여러 개 연속으로 사용해, 폭발적인 카드 뽑기와 코스트 폭발을 초래한다.
+
+하지만 꼭 언급해야 할 점은 조슈아의 [블랙 카드]가 바닥으로 가라앉을 수 있고, 카타스가 큰 움직임이 충분하지 않을 때 카드가 부족할 수 있다는 것입니다. [퍼플카드]의 낮은 우선순위는 불필요한 스텔라 카드와 [다크 아트]를 가능한 한 적게 플레이하는 것이고, 스텔라 [퍼플카드]는 [블랙카드]가 막혔을 때 핵심 카드 뽑기 효과를 낼 수도 있지만, 이는 이후 사이클에도 영향을 미칩니다.
+
+
+역할 세부 정보:
+
+카타스: 카타스의 리더 스킬은 재사용 대기시간을 갱신하기 위해 점화/불타는 땅/초원의 불꽃에 의존하므로, 팀원은 주로 이 세 가지 효과를 발동할 수 있는 캐릭터에게 접근해야 합니다. 카타스의 두 장의 [옐로카드][에너지 풍선껌]도 출력 외에도 비용을 회수하는 중요한 수단입니다.
+
+더스틴: 더스틴은 많은 양의 점화와 비용 회복을 제공할 수 있습니다. 2스트라이크 효과는 더스틴이 일정량의 치유를 제공할 수 있게 합니다. 4스트라이크 효과는 더스틴이 많은 비용을 제공할 수 있게 합니다. 5스트라이크 효과는 모든 팀의 [레드카드]가 더스틴에게 점화 효과를 제공할 수 있게 하며, 점화는 자연스럽게 카타스의 주장 기술을 새로 고칠 수 있습니다. 특히 [천화]이 대량으로 저장되어 있을 경우 [유화]을 사용하면 카타스의 궁극기를 빠르게 새로고침하고 대량의 마나를 제공할 수 있습니다. 동시에 [천화]이 폭발물인 만큼 화력팀은 UR [퇴각폭탄 3호]의 보조공격력도 함께 활용해 큰 데미지를 입힐 수 있다.
+
+스텔라: 스텔라는 이상적인 조건에서 팀에서 [뭇별]의 비용 감소 효과만 제공하면 됩니다. 다른 [퍼플카드]에 저장된 [옐로카드], [레드카드]도 사이클이 막혔을 때 역할을 할 수 있습니다.
+
+조슈아: 조슈아는 많은 불타는 땅 효과를 제공할 수 있습니다. UR [공간 위치 측정기]는 조슈아가 게임 시작 시 그의 시그니처 스킬을 사용할 수 있게 해줍니다. 상대가 여러 유닛을 보유하고 있다면, 그는 카타스의 리더 스킬을 직접 새로 고칠 수 있어, 불 팀을 시작하는 데 어려움이 있는 문제를 해결할 수 있습니다. [옐로카드] 자체도 자신이 생산한 [블랙카드]를 소모하여 많은 수수료를 제공할 수 있습니다.
+
+캐롤라인: 파이어팀에서 캐롤라인의 주요 역할은 자신의 리더 스킬 드로우 효과를 통해 높은 빈도로 파이어팀에 많은 수의 카드 드로우를 제공하는 것입니다.`,
+    descLink:
+      'https://wiki.biligame.com/resonance/%E5%8D%A1%E5%A1%94%E6%96%AF%E9%9B%B7%E7%81%AB%E5%89%91',
+    autoPreset:
+      'rVZNb9swDP0vPHuAKNnyx3WnAt0HsN2KHIxZW41mSWCn2IYg/32SnCxUm5LOkpzEiPLjIx8p7aAfv2zet0P3aQXN93Y5ugy6fvzm//n6Z+OgMZl3uXdt54YXbo/xT2hQxV+ewXr7OHlBozIY1kt3349baB7+ucSFrqtpgaaeFsrgcVEsMnhyLsb08fln/ FKI5q770G6g2QEqG/wLD5wdDF2dDNQlNZAY9Iy2mhi1oWeogTkx8sTNkgiom87VyVCqoGc0jbomhi3pTkKBRl3RcHROcahhqFutKZ+a0g5u+ym/h0rtoPfVO53MYNsOP9x2EoOvxfjUL5d33sfnSSmLZQbPo5u2/YfXv1ZuiNvHuobtz+3Q+lK+82AUIG RKACiqggMIUnoFMH1h1bnf0OiM4IUkvY0HEVD58rOUgtA5RJMiFjMQ88sRSZWQIxURUKiSBMBxOABUV+UsqZJhCcWcIca8csIrLqhSaASxSqUWEFmphwbnk4gWWamfBXiTUhiDEiW0vPDONheByI3YvaW6XS8ZVodHXdjrdIFJ95o580LQhcQxQQzzWeJ oVX1DjuHuEzkWUrcJ0nyxnQoV4bR7uOP9Pav2Z1pQyXpNmLBzJlymMnNJT2zXoxZvUGXZ0Sn1oJaHv2Z7UAQQm1yVeAVAeIgJADnPQKyBFVNkze0eGeHBJk/eGUqef2H69684GA0/psJT/H9b2MS7Jmnhh8XrCNJBqc9GwHav4UKo54RgzKUhLPZ/AQ==',
   },
 ]

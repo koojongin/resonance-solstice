@@ -23,9 +23,14 @@ module.exports = withMT({
           textShadow: '-1px -1px 4px #000, 1px -1px 4px #000, -2px 2px 4px #000, 2px 2px 4px #000',
         },
         '.text-shadow-outline-white': {
-          textShadow: '-1px -1px 4px #ffffff5c, 1px -1px 4px #ffffff3b, -2px 2px 4px #ffffff45, 2px 2px 4px #ffffff82',
+          textShadow:
+            '-1px -1px 4px #ffffff5c, 1px -1px 4px #ffffff3b, -2px 2px 4px #ffffff45, 2px 2px 4px #ffffff82',
         },
-      });
+        '.text-shadow-outline-white-gray': {
+          textShadow:
+            '-1px -1px 4px #043d0500, 1px -1px 4px #7a7a7a, -2px 2px 4px #00000000, 2px 2px 4px #00000029;',
+        },
+      })
     },
   ],
 })

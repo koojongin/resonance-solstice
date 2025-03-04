@@ -6,13 +6,25 @@ import { TOTAL_ARCHIVES } from '@/const/archive'
 import React from 'react'
 import clsx from 'clsx'
 
-export function RSHighlightedText({ text, textSize }: { text: string; textSize?: number }) {
+export function RSHighlightedText({
+  text,
+  textSize,
+  highlightStyle,
+}: {
+  highlightStyle?: string
+  text: string
+  textSize?: number
+}) {
+  if (!highlightStyle) {
+    highlightStyle = 'text-shadow-outline-white'
+  }
   const { router } = useNextDepthNavigator()
   const highlightMap: Record<string, string> = {
     '[수면]': 'text-purple-500/90',
     '[족쇄]': 'text-purple-500/90',
     '[속박]': 'text-purple-500/90',
     '[혼란]': 'text-purple-500/90',
+    '[퍼플카드]': 'text-purple-500/90',
 
     '[냉동]': 'text-blue-800',
     '[은신]': 'text-blue-800',
@@ -23,6 +35,7 @@ export function RSHighlightedText({ text, textSize }: { text: string; textSize?:
     '[천둥]': 'text-yellow-500',
     '[우레]': 'text-yellow-500',
     '[자화]': 'text-yellow-500',
+    '[옐로카드]': 'text-yellow-500',
 
     '[점화]': 'text-red-500',
     '[기절]': 'text-red-500',
@@ -33,12 +46,19 @@ export function RSHighlightedText({ text, textSize }: { text: string; textSize?:
     '[열상]': 'text-red-500',
     '[튕김]': 'text-red-500',
     '[발사]': 'text-red-500',
+    '[레드카드]': 'text-red-500',
+    '[작열]': 'text-red-500',
+    '[광염]': 'text-red-500',
+    '[폭발]': 'text-red-500',
+    '[중단]': 'text-red-500',
+    '[넉백]': 'text-red-500',
+    '[에어본]': 'text-red-500',
 
     '[소각]': 'text-gray-800',
     '[일반공격]': 'text-gray-800',
   }
 
-  const NOT_SETTED_PART_COLOR = 'text-blue-gray-700'
+  const NOT_SETTED_PART_COLOR = 'text-blue-gray-800'
 
   const regex = /\[([^\]]+)\]/g
 
@@ -67,7 +87,7 @@ export function RSHighlightedText({ text, textSize }: { text: string; textSize?:
           }
         >
           <span
-            className={`${classNameOfPart} text-shadow-outline-white cursor-pointer ff-dh text-[${textSize || 20}px]`}
+            className={`${classNameOfPart} ${highlightStyle} cursor-pointer ff-dh text-[${textSize || 20}px]`}
             onClick={() => router.push(`/archive/${part}`)}
           >
             [{part}]

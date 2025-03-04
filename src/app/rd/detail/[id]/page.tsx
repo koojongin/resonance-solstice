@@ -197,7 +197,7 @@ export default function RecommendationDeckDetailPage() {
               설명
             </div>
             <div className="bg-gray-100/50 p-[10px] rounded border whitespace-pre-line leading-normal w-full">
-              <RSHighlightedText text={deck.desc} />
+              <RSHighlightedText text={deck.desc} highlightStyle="text-shadow-outline-white-gray" />
             </div>
           </div>
           <hr />

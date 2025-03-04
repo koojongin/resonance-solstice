@@ -723,7 +723,7 @@ export const CHARACTER_SKILLS: {
     amount: 0,
     cost: 0,
     name: '검은 물결',
-    desc: '',
+    desc: '사용 시 손에 있는 모든 [블랙카드]를 [소각]하여 에너지를 추출합니다. [블랙카드]를 1장 [소각]할 때마다 비용을 3 얻으며, 비용 상한을 초과할 수 있습니다.\n이 카드는 버려질 때 비용을 2얻습니다.\n사용 후 [소각]됩니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/d/d5/r8z6nut14zi52fnj6qve1iitlp5f5bz.png',
     isGeneratedCard: true,
