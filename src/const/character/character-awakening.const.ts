@@ -435,4 +435,29 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/f/f1/n8occh0uh0wt74z7f5bqmifhadporm6.png',
   },
+
+  일목요연: {
+    name: '일목요연',
+    desc: '모든 아군이 연소 상태의 적에게 입히는 최종 피해가 10% 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/9f/bfsixe7zgvmm0josua2xs07ht3frq8d.png',
+  },
+  법집: {
+    name: '법집',
+    desc: '[옐로카드]를 내거나 버린 후 [천화]를 1개 생성합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/97/m080fgwcstdiim2fg9vvqzkhlgd50i6.png',
+  },
+  망종: {
+    name: '망종',
+    desc: '[천화]가 1개 생성될 때 마다 자신이 받는 피해가 3% 감소합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/3b/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  유전: {
+    name: '유전',
+    desc: '[블랙카드] 또는 [다크 아트]가 1장 생성될 때 마다 [천화] 1개를 생성.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/85/tlcmzxu1cah0yip4zs8i7jdowzjd874.png',
+  },
 }

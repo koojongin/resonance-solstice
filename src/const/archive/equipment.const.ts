@@ -3166,6 +3166,36 @@ const DEFAULT_ALL_EQUIPMENTS: {
       },
     ],
   },
+  '블루 일루전': {
+    type: RSEquipmentType.WEAPON,
+    grade: RS_GRADE.UR,
+    desc: '기본 속성: 공격력+49\n옵션: [보호막]이 생성될 때마다 공격력이 0.5%씩 증가합니다. (중첩가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/c2/7d3r94iruwid406wsevid46naxo05ou.png',
+    faction: RS_FACTION.GARDENERS,
+    earnsPath: [
+      {
+        desc: '아니타 군수공장-교환',
+        tags: [],
+        map: '아니타 군수공장',
+      },
+    ],
+  },
+  '축퇴 폭탄 3호': {
+    type: RSEquipmentType.WEAPON,
+    grade: RS_GRADE.UR,
+    desc: '기본 속성: 공격력+50\n옵션: [폭발물]이 33개 폭발 할 때 마다 적의 진영에 [축퇴 폭탄 3호]가 투하되고 [광염]을 부여합니다.\n폭탄의 폭발력은 누적된 [폭발물]의 개수에 따라 증가하며, [축퇴 폭탄 3호]는 [폭발물]입니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/1/19/n5i1ju6wx0403o5vcfksrr4u2xw04hh.png',
+    faction: RS_FACTION.RAILWAY,
+    earnsPath: [
+      {
+        desc: '철도연맹 초소-도로시-교환',
+        tags: [],
+        map: '철도연맹 초소',
+      },
+    ],
+  },
 }
 export const ALL_EQUIPMENTS: {
   [key: string]: RSEquipment

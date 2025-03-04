@@ -113,7 +113,7 @@ export function RsEquipmentCard({
                 <div className="flex flex-col gap-[4px]">
                   <EquipmentBoxResponsive key={createKey()} equipment={equipment} />
                   {onShowName && (
-                    <div className="text-center text-[15px] leading-tight">{equipment.name}</div>
+                    <div className="text-center text-[13px] leading-tight">{equipment.name}</div>
                   )}
                 </div>
               </Tooltip>

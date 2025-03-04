@@ -18,6 +18,7 @@ import { RsCharacterBorderBox } from '@/app/components/character-frame/rs-charac
 import { RECOMMENDATION_CHARACTER_EQUIPMENT } from '@/const/character/character-recommendation-equipment.const'
 import { toast, ToastContainer } from 'react-toastify'
 import { ALL_EQUIPMENTS } from '@/const/archive/equipment.const'
+import { RSHighlightedText } from '@/services/utils/highlight-text'
 
 export default function RecommendationDeckDetailPage() {
   const { id } = useParams()
@@ -195,8 +196,8 @@ export default function RecommendationDeckDetailPage() {
             <div className="min-w-[100px] flex items-center justify-center ff-dh text-[20px]">
               설명
             </div>
-            <div className="bg-gray-100/50 p-[10px] rounded border whitespace-pre-line leading-tight w-full">
-              {deck.desc}
+            <div className="bg-gray-100/50 p-[10px] rounded border whitespace-pre-line leading-normal w-full">
+              <RSHighlightedText text={deck.desc} />
             </div>
           </div>
           <hr />
@@ -233,12 +234,12 @@ export default function RecommendationDeckDetailPage() {
             relatedDecks.map((relatedDeck) => {
               return (
                 <Link key={createKey()} href={`/rd/detail/${relatedDeck.id}`}>
-                  <div className="w-[262px] bg-gray-500 rounded overflow-hidden p-[2px] pb-0 shadow-md hover:drop-shadow-2xl hover:bg-blue-gray-500 hover:shadow-xl hover:shadow-blue-500/20">
+                  <div className="w-[312px] bg-gray-500 rounded overflow-hidden p-[2px] pb-0 shadow-md hover:drop-shadow-2xl hover:bg-blue-gray-500 hover:shadow-xl hover:shadow-blue-500/20">
                     <div className="flex flex-wrap gap-[2px]">
                       {relatedDeck.characters.map((characterData) => {
                         const { character } = characterData
                         return (
-                          <div key={createKey()} className="w-[50px] h-[50px] relative">
+                          <div key={createKey()} className="w-[60px] h-[60px] relative">
                             <div className="absolute w-full h-full z-40 opacity-90">
                               <RsCharacterBorderBox grade={character.grade} borderSize={3} />
                             </div>

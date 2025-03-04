@@ -2,6 +2,8 @@ export interface CharacterResonance {
   name: string
   desc: string
   thumbnail: string
+  clearMind?: string
+  machiningTechnology?: string
 }
 
 export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
@@ -428,5 +430,33 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     desc: '[태초의 꿈]을 사용해 회수한 카드는 다음 한번 낼 때 비용이 1 감소합니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/8/81/2bnuy6xeefooh97fm7ufo684a3yubp2.png',
+  },
+
+  진뢰: {
+    name: '진뢰',
+    desc: '[경칩]이 강화:\n번개와 같은 일격으로 적 대상에게 1회 피해를 입혀 [기절]시키고, 동시에 [우레]와 [작열]을 발동시킨다.\n사용 후 [천화]를 1개 생성한다.',
+    clearMind: '청명도 상한 +4',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/b6/bc3mdss2gbehwwclnabnqwi4gczkh5a.png',
+  },
+  청명: {
+    name: '청명',
+    desc: '[천화]가 생성될 때 마다 자신과 HP가 가장 낮은 아군의 체력을 2% 회복한다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/51/felodpops746n4nn50g5ov152ttzz7y.png',
+  },
+  청정: {
+    name: '청정',
+    desc: '[천화]를 1개 생성할 때 마다 비용을 0.2 획득한다.\n자신에 대한 [중단]과 [기절] 효과를 무효화한다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/ed/1wizj38jfi79249vigvc815gzwgrmp1.png',
+    machiningTechnology: '제조공정 추가 생산 확률 +2.0%',
+  },
+  업화분심: {
+    name: '업화분심',
+    desc: '[레드카드]를 낼 때 마다 [천화]를 1개 생성한다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/fc/aargpykre5y82gepqeiyngvdqi0q5q6.png',
+    clearMind: '청명도 상한 +8',
   },
 }
