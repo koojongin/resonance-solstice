@@ -51,7 +51,7 @@ export default function RecommendationDeckDetailPage() {
           <div
             className="flex items-center justify-center cursor-pointer"
             onClick={async () => {
-              await copyToClipboard(window.location.href)
+              await copyToClipboard(window?.location?.href)
               toast('페이지 링크가 복사되었습니다.')
             }}
           >

@@ -1,3 +1,5 @@
+'use client'
+
 import { RecommendationDeckCard } from '@/app/components/deck/recommendation-deck-card'
 import createKey from '@/services/key-generator'
 import React, { useEffect, useState } from 'react'

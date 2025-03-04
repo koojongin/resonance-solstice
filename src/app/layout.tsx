@@ -68,7 +68,8 @@ export default function RootLayout({
             backgroundImage: `url('https://patchwiki.biligame.com/images/resonance/5/5d/d1t23jamr85uos95wl2djx5x2zsh73d.jpg')`,
           }}
         />
-        {typeof window !== 'undefined' && window?.location?.host.indexOf('localhost') < 0 && (
+
+        {['development', 'preview', 'production'].includes(process.env.VERCEL_ENV || '') && (
           <GoogleAnalyticsComponent />
         )}
         <Analytics />

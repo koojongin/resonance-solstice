@@ -1,24 +1,30 @@
+'use client'
+
 import { RecommendationDeck } from '@/app/rd/rd-decks.const'
 import createKey from '@/services/key-generator'
-import { Button, Tooltip } from '@material-tailwind/react'
+import { Tooltip } from '@material-tailwind/react'
 import {
   RsCharacterCard,
   RsEquipmentCard,
 } from '@/app/components/character-frame/rs-character-card'
 import { RsCardSize } from '@/app/components/character-frame/rs-card-size.enum'
-import { getColumnUrl } from '@/services/character-url'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { copyToClipboard } from '@/services/utils/copy-clipboard'
 import Link from 'next/link'
 import { toast } from 'react-toastify'
 
 export function RecommendationDeckCard({ deck }: { deck: RecommendationDeck }) {
+  const [locationOrigin, setLocationOrigin] = useState<string>()
   const openLink = (link?: string) => {
     if (!link) return
     window.open(link, '_blank')
   }
 
   const { autoPreset, title, desc, characters, leaderName, owner, descLink } = deck
+
+  useEffect(() => {
+    setLocationOrigin(window.location.origin) // ✅ 브라우저에서 실행됨
+  }, [])
 
   return (
     <div
@@ -49,7 +55,7 @@ export function RecommendationDeckCard({ deck }: { deck: RecommendationDeck }) {
             <div
               className="flex items-center justify-center border border-blue-gray-900 rounded w-[24px] h-[24px] cursor-pointer hover:bg-green-100"
               onClick={async () => {
-                await copyToClipboard(`${window.location.origin}/rd/detail/${deck.id}`)
+                await copyToClipboard(`${locationOrigin}/rd/detail/${deck.id}`)
                 toast('덱 링크가 복사되었습니다.')
               }}
             >
@@ -89,7 +95,7 @@ export function RecommendationDeckCard({ deck }: { deck: RecommendationDeck }) {
         <div className="ff-dh text-[18px] flex-1 flex-col flex gap-[4px] items-start justify-start">
           <Link
             className="w-full p-[4px] py-[8px] pb-[6px] items-center justify-center rounded flex bg-blue-gray-600 text-white"
-            href={`${window.location.origin}/rd/detail/${deck.id}`}
+            href={`${locationOrigin}/rd/detail/${deck.id}`}
           >
             상세 보기
           </Link>
@@ -107,7 +113,7 @@ export function RecommendationDeckCard({ deck }: { deck: RecommendationDeck }) {
           <div
             className="cursor-pointer  w-full p-[4px] py-[8px] pb-[6px] items-center justify-center rounded flex bg-blue-gray-600 text-white"
             onClick={async () => {
-              await copyToClipboard(`${window.location.origin}/rd/detail/${deck.id}`)
+              await copyToClipboard(`${locationOrigin}/rd/detail/${deck.id}`)
               toast(`[${deck.title.substring(0, 10)}...] 덱 링크가 복사되었습니다.`)
             }}
           >
