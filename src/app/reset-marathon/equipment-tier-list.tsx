@@ -5,7 +5,7 @@ import { ALL_EQUIPMENTS } from '@/const/archive/equipment.const'
 import { EquipmentBox } from '@/app/equipments/rs-equipment-list'
 import React, { useState } from 'react'
 import { Tooltip } from '@material-tailwind/react'
-import { EquipmentTooltipBox } from '@/app/components/deck/equipment-tooltip-box'
+import { EquipmentTooltipContent } from '@/app/components/deck/equipment-tooltip-box'
 import { EXTERNAL_USERS } from '@/const/external-users'
 import { GradientButton } from '@/app/components/button/gradient-button'
 import { debounce } from 'lodash'
@@ -80,7 +80,7 @@ export function EquipmentTierList() {
                           <Tooltip
                             interactive
                             className="bg-transparent p-0 m-0"
-                            content={<EquipmentTooltipBox equipment={equipment} />}
+                            content={<EquipmentTooltipContent equipment={equipment} />}
                           >
                             <div className="flex flex-col gap-[2px] w-[80px] relative z-0">
                               <EquipmentBox equipment={equipment} />

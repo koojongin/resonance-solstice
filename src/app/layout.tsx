@@ -6,6 +6,8 @@ import React, { ReactNode } from 'react'
 import MainSideBar from '@/app/components/main-side-bar/main-side-bar'
 import MainHeaderBar from '@/app/components/main-side-bar/main-header-bar'
 import GoogleAnalyticsComponent from '@/services/google-analytics'
+import 'react-toastify/dist/ReactToastify.css'
+import { ToastContainer } from 'react-toastify'
 
 const nanumGothic = Nanum_Gothic({
   subsets: ['latin'],
@@ -58,6 +60,7 @@ export default function RootLayout({
       </head>
       {/* <body className={`relative bg-contain ${cls(nanumGothic.className)}`}> */}
       <body className="relative bg-contain ff-sdn">
+        <ToastContainer className="custom-toast-container" />
         <div
           className="absolute -z-10 w-full h-full opacity-20 bg-contain"
           style={{

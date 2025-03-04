@@ -5,7 +5,7 @@ import React from 'react'
 import { useNextDepthNavigator } from '@/services/navigation'
 import { ExtendedRSEquipment } from '@/app/equipments/equipment.type'
 
-export function EquipmentTooltipBox({ equipment }: { equipment: ExtendedRSEquipment }) {
+export function EquipmentTooltipContent({ equipment }: { equipment: ExtendedRSEquipment }) {
   const { router } = useNextDepthNavigator()
   return (
     <div

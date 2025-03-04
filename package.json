@@ -27,6 +27,8 @@
     "react": "^19.0.0-rc-66855b96-20241106",
     "react-dom": "^19.0.0-rc-66855b96-20241106",
     "react-ga4": "^2.1.0",
+    "react-tippy": "^1.4.0",
+    "react-toastify": "^11.0.5",
     "uuid": "^11.0.5"
   },
   "devDependencies": {

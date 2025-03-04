@@ -10,6 +10,7 @@ import { getColumnUrl } from '@/services/character-url'
 import React, { useEffect } from 'react'
 import { copyToClipboard } from '@/services/utils/copy-clipboard'
 import Link from 'next/link'
+import { toast } from 'react-toastify'
 
 export function RecommendationDeckCard({ deck }: { deck: RecommendationDeck }) {
   const openLink = (link?: string) => {
@@ -35,7 +36,7 @@ export function RecommendationDeckCard({ deck }: { deck: RecommendationDeck }) {
                 className="flex items-center justify-center border border-blue-gray-900 rounded w-[24px] h-[24px] cursor-pointer hover:bg-green-100"
                 onClick={async () => {
                   await copyToClipboard(autoPreset)
-                  alert('복사됨')
+                  toast(`오토프리셋이 복사되었습니다.`)
                 }}
               >
                 <i className="fa-solid fa-clipboard text-[16px]" />
@@ -49,7 +50,7 @@ export function RecommendationDeckCard({ deck }: { deck: RecommendationDeck }) {
               className="flex items-center justify-center border border-blue-gray-900 rounded w-[24px] h-[24px] cursor-pointer hover:bg-green-100"
               onClick={async () => {
                 await copyToClipboard(`${window.location.origin}/rd/detail/${deck.id}`)
-                alert('복사됨')
+                toast('덱 링크가 복사되었습니다.')
               }}
             >
               <i className="fa-solid fa-square-share-nodes text-[16px]" />

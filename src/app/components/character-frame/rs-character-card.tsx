@@ -14,7 +14,8 @@ import {
   RsCharacterCardResponsiveShorten,
 } from '@/app/components/character-frame/rs-character-card-responsive'
 import { Tooltip } from '@material-tailwind/react'
-import { EquipmentTooltipBox } from '@/app/components/deck/equipment-tooltip-box'
+import { EquipmentTooltipContent } from '@/app/components/deck/equipment-tooltip-box'
+import { ExtendedRSEquipment } from '@/app/equipments/equipment.type'
 
 export function RsCharacterCard({
   character,
@@ -62,7 +63,17 @@ export function RsCharacterCardShorten({
   )
 }
 
-export function RsEquipmentCard({ equipments, width }: { width?: number; equipments: string[] }) {
+export function RsEquipmentCard({
+  equipments,
+  width,
+  onShowName,
+  gap,
+}: {
+  onShowName?: boolean
+  width?: number
+  gap?: number
+  equipments: string[]
+}) {
   if (equipments.length === 0) {
     return <div />
   }
@@ -78,12 +89,15 @@ export function RsEquipmentCard({ equipments, width }: { width?: number; equipme
 
   const equipmentWidth = width || 40
   return (
-    <div className="flex gap-[2px]">
+    <div className={`flex gap-[${gap ?? 2}px]`}>
       {[weapon, armor, accesorry].map((equipment) => {
         return (
           <div
             key={createKey()}
-            className={`relative w-[${equipmentWidth}px] h-[${equipmentWidth}px] rounded flex items-stretch`}
+            className="relative rounded flex items-stretch"
+            style={{
+              width: `${equipmentWidth}px`,
+            }}
           >
             {!equipment && (
               <div className="border border-gray-700 flex w-full items-center justify-center">
@@ -94,10 +108,13 @@ export function RsEquipmentCard({ equipments, width }: { width?: number; equipme
               <Tooltip
                 interactive
                 className="bg-transparent p-0 m-0"
-                content={<EquipmentTooltipBox equipment={equipment} />}
+                content={<EquipmentTooltipContent equipment={equipment} />}
               >
-                <div>
+                <div className="flex flex-col gap-[4px]">
                   <EquipmentBoxResponsive key={createKey()} equipment={equipment} />
+                  {onShowName && (
+                    <div className="text-center text-[15px] leading-tight">{equipment.name}</div>
+                  )}
                 </div>
               </Tooltip>
             )}
@@ -105,5 +122,30 @@ export function RsEquipmentCard({ equipments, width }: { width?: number; equipme
         )
       })}
     </div>
+  )
+}
+
+export function EquipmentTooltipBox({
+  onShowName,
+  width,
+  equipment,
+}: {
+  onShowName?: boolean
+  width?: number
+  equipment: ExtendedRSEquipment
+}) {
+  return (
+    <Tooltip
+      interactive
+      className="bg-transparent p-0 m-0"
+      content={<EquipmentTooltipContent equipment={equipment} />}
+    >
+      <div className="flex flex-col gap-[4px]">
+        <EquipmentBoxResponsive key={createKey()} equipment={equipment} />
+        {onShowName && (
+          <div className="text-center text-[15px] leading-tight">{equipment.name}</div>
+        )}
+      </div>
+    </Tooltip>
   )
 }

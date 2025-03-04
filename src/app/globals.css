@@ -39,3 +39,8 @@ body {
     font-family: var(--font-suit);
     line-height: 1;
 }
+
+/* custom-toast-container 클래스 */
+.custom-toast-container * {
+    font-family: var(--font-secondary);
+}

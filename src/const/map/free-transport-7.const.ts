@@ -540,8 +540,8 @@ export const MAP_FREE_TRANSPORT_7: RSMap = {
       difficulty: 4,
       recommendationLevel: 36,
       boss: {
-        title: '블리자드 경고',
-        name: '한파 플로트',
+        title: '폭설 주의보',
+        name: '블리자드 기포체',
       },
       rewards: [
         {
@@ -693,7 +693,7 @@ export const MAP_FREE_TRANSPORT_7: RSMap = {
       recommendationLevel: 43,
       boss: {
         title: '공황과 망상',
-        name: '바다 용 자작나무 생물',
+        name: '해룡 베툴라 생명체',
       },
       rewards: [
         {
