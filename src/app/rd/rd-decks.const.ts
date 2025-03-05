@@ -1008,7 +1008,10 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
 [조슈아]: [조슈아]는 많은 불타는 땅 효과를 제공할 수 있습니다. UR [공간 위치 측정기]는 [조슈아]가 게임 시작 시 그의 시그니처 스킬을 사용할 수 있게 해줍니다. 상대가 여러 유닛을 보유하고 있다면, 그는 [카타스]의 리더 스킬을 직접 새로 고칠 수 있어, 불 팀을 시작하는 데 어려움이 있는 문제를 해결할 수 있습니다. [옐로카드] 자체도 자신이 생산한 [블랙카드]를 소모하여 많은 수수료를 제공할 수 있습니다.
 
-[캐롤라인]: 파이어팀에서 [캐롤라인]의 주요 역할은 자신의 리더 스킬 드로우 효과를 통해 높은 빈도로 파이어팀에 많은 수의 카드 드로우를 제공하는 것입니다.`,
+[캐롤라인]: 파이어팀에서 [캐롤라인]의 주요 역할은 자신의 리더 스킬 드로우 효과를 통해 높은 빈도로 파이어팀에 많은 수의 카드 드로우를 제공하는 것입니다.
+
+<iframe className='aspect-[10/4] w-full' src="//player.bilibili.com/player.html?autoplay=0&isOutside=true&aid=112818120558886&bvid=BV19q8gepES8&cid=500001621454510&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+`,
     descLink:
       'https://wiki.biligame.com/resonance/%E5%8D%A1%E5%A1%94%E6%96%AF%E9%9B%B7%E7%81%AB%E5%89%91',
     autoPreset:
@@ -1050,10 +1053,14 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     왜냐하면 [코나] 자신이 피해를 보충하고 체력을 회복하기 위해 [보호막]를 끊임없이 폭발시키기 때문에 [보호막] 내구성 및 지속 시간에 관련된 항목은 그다지 유용하지 않기 때문입니다.
     [블루카드]는 방어 속성을 추가한다는 점을 언급할 가치가 있는데, 생존력이 부족하다면 분명 유용합니다.
     하지만 [코나]의 방어에서 공격으로의 전환은 두 번째 리더 스킬에서 발생하기 때문에 그 전에는 최대 4장의 [블루카드]만 플레이되므로 출력에 큰 이득이 없습니다.
-    <hr className='border-blue-gray-800 border-dashed'/>
+    
+    <hr/>
     <교체 가능 포지션>
     [이로나]: [예주]와 교체 가능. 예주도 [블루카드]를 가지고 있으며, [레드카드]로 범위 피해로 몹을 클리어 하는 효율이 최고이고, 여러 웨이브에서 몹을 처치할수 있지만, 순환이 느리고 고압 환경에서 저항력이 낮아 고압 환경에서는 사용을 추천하지 않습니다., 
-    [캐롤라인]: [캐롤라인]과 교체 가능 
+    [캐롤라인]: [캐롤라인]과 교체 가능
+    
+    <hr/>
+    <iframe className='aspect-[10/4] w-full' src='//player.bilibili.com/player.html?isOutside=true&autoplay=0&aid=112778660547059&bvid=BV1srbTeFEd1&cid=500001614140178&p=1' scrolling='no' border='0' frameborder='no' framespacing='0' allowfullscreen='true'></iframe>
     `,
     descLink: 'https://wiki.biligame.com/resonance/%E6%9F%AF%E7%8B%99%E5%8D%A1%E8%8B%94%E9%98%9F',
     autoPreset:
