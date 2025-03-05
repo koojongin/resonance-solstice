@@ -2,9 +2,26 @@
 
 import { Tooltip } from '@material-tailwind/react'
 import { useNextDepthNavigator } from '@/services/navigation'
-import { TOTAL_ARCHIVES } from '@/const/archive'
+import { TOTAL_ARCHIVE_MAP, TOTAL_ARCHIVES } from '@/const/archive'
 import React from 'react'
 import clsx from 'clsx'
+import { CHARACTER_RESONANCES } from '@/const/character/character-resonance.const'
+import { RS_CHARACTERS } from '@/const/character/character.const'
+import { RSCharacter } from '@/const/character/character.interface'
+import { RsCharacterBorderBox } from '@/app/components/character-frame/rs-character-border-box'
+import { CharacterThumbnailBox } from '@/app/components/character-frame/character-thumbnail-box'
+
+const TOTAL_ARCHIVE_WITH_RESONANCE = {
+  ...TOTAL_ARCHIVE_MAP,
+  ...CHARACTER_RESONANCES,
+}
+
+const CHARACTER_KR_DICT: { [key: string]: RSCharacter } = RS_CHARACTERS.reduce((prev, next) => {
+  return {
+    ...prev,
+    [next.name]: next,
+  }
+}, {})
 
 export function RSHighlightedText({
   text,
@@ -63,7 +80,7 @@ export function RSHighlightedText({
   const regex = /\[([^\]]+)\]/g
 
   const formattedText = text.split(regex).map((part, index, array) => {
-    const archive = TOTAL_ARCHIVES.find((a) => a.name === part)
+    const archive = TOTAL_ARCHIVE_WITH_RESONANCE[part]
     let classNameOfPart = highlightMap[`[${part}]`]
 
     if (archive && !classNameOfPart) {
@@ -95,6 +112,31 @@ export function RSHighlightedText({
         </Tooltip>
       )
     }
+
+    const character = CHARACTER_KR_DICT[part]
+    if (character) {
+      return (
+        <Tooltip
+          key={index}
+          className="bg-transparent p-0 m-0 rounded-none"
+          content={
+            <div className="">
+              <CharacterThumbnailBox character={character} />
+            </div>
+          }
+        >
+          <span className="inline-flex bg-yellow-700">
+            <span
+              className={`cursor-pointer ff-dh text-[${textSize || 20}px] bg-cyan-800/70 text-white px-[5px] py-0 pt-[1px] rounded`}
+              onClick={() => router.push(`/characters/${character.originName}`)}
+            >
+              {part}
+            </span>
+          </span>
+        </Tooltip>
+      )
+    }
+
     const isSpecificText = text.indexOf(`[${part}]`) >= 0
     if (isSpecificText) return `[${part}]`
     return part

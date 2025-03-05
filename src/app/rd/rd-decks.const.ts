@@ -97,7 +97,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: RINA_F },
       { character: KALEYA },
     ],
-    desc: '장점 : [순환 메인 페니아 인뢰덱1]보다 순환력을 조금 줄이고 안정성을 챙김, 스텔라 궁쓰고 코스트 감소 상태로 카드 난사가 재밌음\n단점 : 카드 쓸 때 생각 잘해야함',
+    desc: '장점 : [순환 메인 페니아 인뢰덱1]보다 순환력을 조금 줄이고 안정성을 챙김, [스텔라] 궁쓰고 코스트 감소 상태로 카드 난사가 재밌음\n단점 : 카드 쓸 때 생각 잘해야함',
     descLink: 'https://arca.live/b/resonance/128678257',
     owner: EXTERNAL_USERS['1'],
   },
@@ -120,7 +120,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '5',
-    title: '카타스 화염덱',
+    title: '[카타스] 화염덱',
     leaderName: KATAS.name,
     characters: [
       { character: KATAS },
@@ -129,7 +129,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: ARCANA },
       { character: VALENTINE },
     ],
-    desc: '장점 : 카타스만 있으면 됨, 쌈\n단점 : 다른 화염덱으로 파생이 어려움',
+    desc: '장점 : [카타스]만 있으면 됨, 쌈\n단점 : 다른 화염덱으로 파생이 어려움',
     descLink: 'https://arca.live/b/resonance/128678257',
     owner: EXTERNAL_USERS['1'],
   },
@@ -152,7 +152,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '7',
-    title: '단일 화염 나유타 덱',
+    title: '단일 화염 [나유타] 덱',
     leaderName: NAYUTA.name,
     characters: [
       {
@@ -176,7 +176,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
         equipments: ['불꽃 침식자', '시뮬레이트 스타', '춘추합성인장'],
       },
     ],
-    desc: '클릭 시 상세 가이드 링크로 이동합니다.',
+    desc: '-',
     descLink:
       'https://wiki.biligame.com/resonance/%E5%8D%95%E9%87%91%E7%81%AB%E6%A0%B8%EF%BC%9A%E9%82%A3%E7%94%B1%E4%BB%96',
     autoPreset:
@@ -185,7 +185,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '8',
-    title: '단일 냉기 나유타 덱',
+    title: '단일 냉기 [나유타] 덱',
     leaderName: NAYUTA.name,
     characters: [
       {
@@ -209,7 +209,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
         equipments: ['에비서레이터MK0', '시뮬레이트 스타', '춘추합성인장'],
       },
     ],
-    desc: '클릭 시 상세 가이드 링크로 이동합니다.',
+    desc: '-',
     descLink:
       'https://wiki.biligame.com/resonance/%E5%8D%95%E9%87%91%E5%86%B0%E6%A0%B8%EF%BC%9A%E9%82%A3%E7%94%B1%E4%BB%96',
     autoPreset:
@@ -245,7 +245,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: ARCANA },
       { character: SHIZURU },
     ],
-    desc: '주로 적이 많은 무대에서 활약할 수 있습니다.\n드로우 범용으로서 나유타나 스텔라 를 편성해, 한층 더 레드 카드를 드로우 하기 쉽게 시즈 르나 타라 등을 편성하면 좋을 것입니다.\n공격을 받기 쉬운 샬롯을 지킬 수 있도록 아리나,아르카나 등의 회복역도 편성합시다.',
+    desc: '주로 적이 많은 무대에서 활약할 수 있습니다.\n드로우 범용으로서 [나유타]나 [스텔라] 를 편성해, 한층 더 [레드카드]를 드로우 하기 쉽게 [시즈루]나 [타라] 등을 편성하면 좋을 것입니다.\n공격을 받기 쉬운 샬롯을 지킬 수 있도록 [아리나],[아르카나] 등의 회복역도 편성합시다.',
     descLink: 'https://gamerch.com/resonance/877307',
   },
 
@@ -260,7 +260,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: ARCANA },
       { character: SHIZURU },
     ],
-    desc: '주로 적이 많은 무대에서 활약할 수 있습니다.\n드로우 범용으로서 나유타나 스텔라 를 편성해, 한층 더 레드 카드를 드로우 하기 쉽게 시즈 르나 타라 등을 편성하면 좋을 것입니다.\n공격을 받기 쉬운 샬롯을 지킬 수 있도록 아리나,아르카나 등의 회복역도 편성합시다.',
+    desc: '주로 적이 많은 무대에서 활약할 수 있습니다.\n드로우 범용으로서 [나유타]나 [스텔라] 를 편성해, 한층 더 [레드카드]를 드로우 하기 쉽게 시즈 르나 [타라] 등을 편성하면 좋을 것입니다.\n공격을 받기 쉬운 샬롯을 지킬 수 있도록 [아리나],[아르카나] 등의 회복역도 편성합시다.',
     descLink: 'https://gamerch.com/resonance/877307',
   },
 
@@ -275,7 +275,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: FLAN },
       { character: ARCANA },
     ],
-    desc: '배포 캐릭터를 중심으로 매우 편성하기 쉬운 SR 페니아 번개 덱입니다.\n프란(R)이 탱커로 녹기 쉽기 때문에, 아르카나(R)로 HP나 코스트의 회복을 돕습니다.',
+    desc: '배포 캐릭터를 중심으로 매우 편성하기 쉬운 SR 페니아 번개 덱입니다.\n프란(R)이 탱커로 녹기 쉽기 때문에, [아르카나](R)로 HP나 코스트의 회복을 돕습니다.',
     descLink: 'https://gamerch.com/resonance/877307',
   },
 
@@ -290,7 +290,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: ARCANA },
       { character: KAREN },
     ],
-    desc: '네즈미(R)의 레드 카드를 끌어당기는 덱입니다.\n앞열이 버틸수 있도록 카렌(R) 등의 힐러를 편성합시다.\n타라(R)도 궁합이 좋습니다.',
+    desc: '네즈미(R)의 [레드카드]를 끌어당기는 덱입니다.\n앞열이 버틸수 있도록 카렌(R) 등의 힐러를 편성합시다.\n[타라](R)도 궁합이 좋습니다.',
     descLink: 'https://gamerch.com/resonance/877307',
   },
 
@@ -341,7 +341,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '17',
-    title: '레드 카드 샬롯 덱',
+    title: '[레드카드] 샬롯 덱',
     leaderName: CHARLOTTE.name,
     characters: [
       { character: CHARLOTTE },
@@ -350,7 +350,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: ARCANA },
       { character: RACHEL },
     ],
-    desc: '드로우 범용으로서 나유타,스텔라를 편성해, 한층 더 레드 카드를 드로우 하기 쉽게 시즈루, 타라 등을 편성하면 좋을 것입니다.\n공격을 받기 쉬운 샬롯을 지킬 수 있도록 아리나, 아르카나 등의 회복역도 편성합시다.',
+    desc: '드로우 범용으로서 [나유타],[스텔라]를 편성해, 한층 더 [레드카드]를 드로우 하기 쉽게 시즈루, [타라] 등을 편성하면 좋을 것입니다.\n공격을 받기 쉬운 샬롯을 지킬 수 있도록 [아리나], [아르카나] 등의 회복역도 편성합시다.',
     descLink: 'https://gamerch.com/resonance/877307',
   },
 
@@ -419,7 +419,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '21',
-    title: '나유타 무한 순환 덱',
+    title: '[나유타] 무한 순환 덱',
     leaderName: NAYUTA.name,
     characters: [
       { character: NAYUTA },
@@ -446,7 +446,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: PRIMING },
       { character: YEJUE },
     ],
-    desc: '나유타(SSR) / 아오바(SR) / 리나 본(SR) / 레이카(R)\n위 4명 승무원을 고정 후 각 코어별 1개의 승무원만 추가하면 됨\n장점: 편성에 한명만 제외하고 나머지가 동일 승무원이라 성장 재화를 아낄수 있음',
+    desc: '[나유타](SSR) / [아오바](SR) / 리나 본(SR) / 레이카(R)\n위 4명 승무원을 고정 후 각 코어별 1개의 승무원만 추가하면 됨\n장점: 편성에 한명만 제외하고 나머지가 동일 승무원이라 성장 재화를 아낄수 있음',
     descLink: 'https://arca.live/b/resonance/129243432',
     owner: EXTERNAL_USERS['4'],
     autoPreset:
@@ -464,7 +464,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: PRIMING },
       { character: KALEYA },
     ],
-    desc: '나유타(SSR) / 아오바(SR) / 리나 본(SR) / 레이카(R)\n위 4명 승무원을 고정 후 각 코어별 1개의 승무원만 추가하면 됨\n장점: 편성에 한명만 제외하고 나머지가 동일 승무원이라 성장 재화를 아낄수 있음',
+    desc: '[나유타](SSR) / [아오바](SR) / 리나 본(SR) / 레이카(R)\n위 4명 승무원을 고정 후 각 코어별 1개의 승무원만 추가하면 됨\n장점: 편성에 한명만 제외하고 나머지가 동일 승무원이라 성장 재화를 아낄수 있음',
     descLink: 'https://arca.live/b/resonance/129243432',
     owner: EXTERNAL_USERS['4'],
     autoPreset:
@@ -482,7 +482,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: PRIMING },
       { character: YER },
     ],
-    desc: '나유타(SSR) / 아오바(SR) / 리나 본(SR) / 레이카(R)\n위 4명 승무원을 고정 후 각 코어별 1개의 승무원만 추가하면 됨\n장점: 편성에 한명만 제외하고 나머지가 동일 승무원이라 성장 재화를 아낄수 있음',
+    desc: '[나유타](SSR) / [아오바](SR) / 리나 본(SR) / 레이카(R)\n위 4명 승무원을 고정 후 각 코어별 1개의 승무원만 추가하면 됨\n장점: 편성에 한명만 제외하고 나머지가 동일 승무원이라 성장 재화를 아낄수 있음',
     descLink: 'https://arca.live/b/resonance/129243432',
     owner: EXTERNAL_USERS['4'],
     autoPreset:
@@ -524,7 +524,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '26',
-    title: '니콜라 오토 프리셋 (니콜라 나유타 캐롤라인 테니 스텔라)',
+    title: '니콜라 오토 프리셋 (니콜라 [나유타] [캐롤라인] 테니 [스텔라])',
     leaderName: NICOLA.name,
     characters: [
       {
@@ -548,7 +548,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
         equipments: ['마술봉', '공간이동', '춘추합성인장'],
       },
     ],
-    desc: '니콜라 오토 프리셋 (니콜라 나유타 캐롤라인 테니 스텔라)',
+    desc: '니콜라 오토 프리셋 (니콜라 [나유타] [캐롤라인] 테니 [스텔라])',
     descLink: 'https://arca.live/b/resonance/129397795',
     owner: EXTERNAL_USERS['2'],
     autoPreset:
@@ -575,7 +575,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '28',
-    title: '카타스 점화덱',
+    title: '[카타스] 점화덱',
     leaderName: KATAS.name,
     characters: [
       {
@@ -599,7 +599,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
         equipments: ['에비서레이터MK0', '춘추합성인장'],
       },
     ],
-    desc: '카타스 점화덱',
+    desc: '[카타스] 점화덱',
     descLink: 'https://arca.live/b/resonance/129295335',
     owner: EXTERNAL_USERS['7'],
     autoPreset:
@@ -608,7 +608,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '29',
-    title: '니콜라 스텔라 케롤라인 나유타 예주',
+    title: '니콜라 [스텔라] 케롤라인 [나유타] 예주',
     leaderName: NICOLA.name,
     characters: [
       { character: NICOLA },
@@ -617,7 +617,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: NAYUTA },
       { character: YEJUE },
     ],
-    desc: '니콜라 스텔라 케롤라인 나유타 예주',
+    desc: '니콜라 [스텔라] 케롤라인 [나유타] 예주',
     descLink: 'https://arca.live/b/resonance/129343448',
     owner: EXTERNAL_USERS['8'],
     autoPreset:
@@ -626,7 +626,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '30',
-    title: '카타스 순환덱',
+    title: '[카타스] 순환덱',
     leaderName: KATAS.name,
     characters: [
       { character: KATAS },
@@ -635,7 +635,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: NAYUTA },
       { character: STELLA },
     ],
-    desc: '카타스 순환덱',
+    desc: '[카타스] 순환덱',
     descLink: 'https://arca.live/b/resonance/129240119',
     owner: EXTERNAL_USERS['9'],
     autoPreset:
@@ -644,7 +644,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '31',
-    title: '아리나없찐 무한순환덱(나유타 메인딜)',
+    title: '[아리나]없찐 무한순환덱([나유타] 메인딜)',
     leaderName: NAYUTA.name,
     characters: [
       { character: NAYUTA },
@@ -653,7 +653,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: ARCANA },
       { character: RINA_F },
     ],
-    desc: '아리나없찐 무한순환덱(나유타 메인딜)',
+    desc: '[아리나]없찐 무한순환덱([나유타] 메인딜)',
     descLink: 'https://arca.live/b/resonance/129521925',
     owner: EXTERNAL_USERS['10'],
     autoPreset:
@@ -695,7 +695,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '33',
-    title: '리비아 쓰는 나유타 순환덱',
+    title: '리비아 쓰는 [나유타] 순환덱',
     leaderName: NAYUTA.name,
     characters: [
       { character: NAYUTA },
@@ -704,7 +704,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: LIVIA },
       { character: ARCANA },
     ],
-    desc: '리비아 쓰는 나유타 순환덱',
+    desc: '리비아 쓰는 [나유타] 순환덱',
     descLink: 'https://arca.live/b/resonance/129616233',
     owner: EXTERNAL_USERS['12'],
     autoPreset:
@@ -713,7 +713,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '34',
-    title: '대충 정리한 카타스 덱',
+    title: '대충 정리한 [카타스] 덱',
     leaderName: KATAS.name,
     characters: [
       {
@@ -725,7 +725,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: VALENTINE },
       { character: VERLAINE },
     ],
-    desc: '대충 정리한 카타스 덱',
+    desc: '대충 정리한 [카타스] 덱',
     descLink: 'https://arca.live/b/resonance/129574796',
     owner: EXTERNAL_USERS['13'],
     autoPreset:
@@ -743,7 +743,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: FENIA },
       { character: NAYUTA },
     ],
-    desc: '간야를 리더로 부메랑 도끼를 메인딜로 넣는 덱임\n\n장점\n1. 패수급 운만 좋으면 연속으로 리더스킬 사용해서 폭딜 가능함\n2. 모든 범위의 적 공격 가능\n3. 수동 조작 시 코스트가 남아돔\n4. 간야 페니아 나유타 3명만 있으면 굴릴 수 있음\n\n단점\n1. 패수급 ㅈ박으면 딜도 ㅈ박음\n2. 자동전투로 스테이지가 나뉜 적을 상대할 경우 맵 이동전에 패를 버리는 경우가 있음\n3. 특정 장비+간야5공명 없으면 덱 내구도가 많이 낮음',
+    desc: '간야를 리더로 부메랑 도끼를 메인딜로 넣는 덱임\n\n장점\n1. 패수급 운만 좋으면 연속으로 리더스킬 사용해서 폭딜 가능함\n2. 모든 범위의 적 공격 가능\n3. 수동 조작 시 코스트가 남아돔\n4. 간야 페니아 [나유타] 3명만 있으면 굴릴 수 있음\n\n단점\n1. 패수급 ㅈ박으면 딜도 ㅈ박음\n2. 자동전투로 스테이지가 나뉜 적을 상대할 경우 맵 이동전에 패를 버리는 경우가 있음\n3. 특정 장비+간야5공명 없으면 덱 내구도가 많이 낮음',
     descLink: 'https://arca.live/b/resonance/129504461',
     owner: EXTERNAL_USERS['14'],
     autoPreset:
@@ -776,7 +776,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
         equipments: ['비트레이얼', '시뮬레이트 스타', '춘추합성인장'],
       },
     ],
-    desc: '완전한 생존 전문화를 갖춘 팀은 주로 고압 환경과 장기 전투에 사용됩니다.\n일반적인 사업 운영에는 권장되지 않습니다.\n교활함과 배신은 필수는 아니지만, 악마가 많을수록 더 빨리 나타납니다.\n\n다크아츠 셔플 초반에는 아리나가 쓰이겠지만, 압박이 커질수록 보스의 데미지가 너무 높아서 체력이 가득 찬 상태에서도 즉사할 수 있고, 아리나의 회복도 잘 안 되기 때문에 여기서는 가장 안정적인 포지션을 가진 팀으로 전환합니다.',
+    desc: '완전한 생존 전문화를 갖춘 팀은 주로 고압 환경과 장기 전투에 사용됩니다.\n일반적인 사업 운영에는 권장되지 않습니다.\n교활함과 배신은 필수는 아니지만, 악마가 많을수록 더 빨리 나타납니다.\n\n다크아츠 셔플 초반에는 [아리나]가 쓰이겠지만, 압박이 커질수록 보스의 데미지가 너무 높아서 체력이 가득 찬 상태에서도 즉사할 수 있고, [아리나]의 회복도 잘 안 되기 때문에 여기서는 가장 안정적인 포지션을 가진 팀으로 전환합니다.',
     descLink:
       'https://wiki.biligame.com/resonance/%E7%88%AC%E5%A1%94-%E6%B4%97%E7%89%8C%E6%9A%97%E8%89%BA',
     autoPreset:
@@ -785,7 +785,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '37',
-    title: '조나아리+아리나',
+    title: '조나아리+[아리나]',
     leaderName: NAYUTA.name,
     characters: [
       { character: NAYUTA },
@@ -797,7 +797,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: RINA_F },
       { character: ARINA },
     ],
-    desc: '조나아리+아리나\n\n조슈아+아리나 암예덱',
+    desc: '조나아리+[아리나]\n\n[조슈아]+[아리나] 암예덱',
     descLink: 'https://arca.live/b/resonance/130152631',
     owner: EXTERNAL_USERS[15],
     autoPreset:
@@ -891,14 +891,14 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
         equipments: ['이차 상전이', '시뮬레이트 스타', '여명의 옥새'],
       },
     ],
-    desc: `더스틴의 [천화] 메커니즘으로 인해 [레드카드], [옐로카드] 사용 시, 그리고 [옐로카드] 폐기 시 더스틴은 [천화]를 생성합니다.
-    [천화]는 최대 18개의 [폭발물]입니다. 최대 한계를 초과하면 자동으로 방출됩니다.
-    따라서 나유타+더스틴의 순환 팀은 [옐로카드]를 반복해서 섞어서 [천화]를 생성하고, 핵폭탄을 터뜨려 대규모 데미지를 입힐 수 있습니다.
-    사이클 동안 [천화]의 생성은 [혈액 회복]을 유발하고, [천화]의 방출은 [비용 회복]을 유발합니다.
-    이 기간 동안 나유타의 [재구축의 힘]를 사용하여 피해를 피하고 더스틴, 여름-시즈루, 테니를 제어하여 팀은 극도로 강력한 생존력을 갖게 되었습니다.
-    나유타+소머의 조합과 비교했을 때, 여름-시즈루 자체는 일정한 장기적 출력 능력을 제공할 수 있습니다.
+    desc: `[더스틴]의 [천상의 불] 메커니즘으로 인해 [레드카드], [옐로카드] 사용 시, 그리고 [옐로카드] 폐기 시 [더스틴]은 [천상의 불]를 생성합니다.
+    [천상의 불]는 최대 18개의 [폭발물]입니다. 최대 한계를 초과하면 자동으로 방출됩니다.
+    따라서 [나유타]+[더스틴]의 순환 팀은 [옐로카드]를 반복해서 섞어서 [천상의 불]를 생성하고, 핵폭탄을 터뜨려 대규모 데미지를 입힐 수 있습니다.
+    사이클 동안 [천상의 불]의 생성은 [혈액 회복]을 유발하고, [천상의 불]의 방출은 [비용 회복]을 유발합니다.
+    이 기간 동안 [나유타]의 [재구축의 힘]를 사용하여 피해를 피하고 [더스틴], 여름-시즈루, 테니를 제어하여 팀은 극도로 강력한 생존력을 갖게 되었습니다.
+    [나유타]+소머의 조합과 비교했을 때, 여름-시즈루 자체는 일정한 장기적 출력 능력을 제공할 수 있습니다.
     동시에, 여름-시즈루의 궁극기로 인한 동결은 테니와 조합하여 코스트 회수를 상당히 증가시킬 수 있으므로 소머를 대체할 수 있습니다.
-    캐릭터의 각성과 공명이 낮고 코스트 압박이 클 경우, 테니 대신 아오바를 들고 다니는 것이 좋습니다.`,
+    캐릭터의 각성과 공명이 낮고 코스트 압박이 클 경우, 테니 대신 [아오바]를 들고 다니는 것이 좋습니다.`,
     descLink:
       'https://wiki.biligame.com/resonance/%E6%B4%97%E7%89%8C%E6%A0%B8%E7%88%86%E9%98%9F-%E6%B0%B4%E9%9D%99%E6%B5%81%E7%89%88',
     autoPreset:
@@ -931,10 +931,10 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
         equipments: ['이차 상전이', '시뮬레이트 스타', '여명의 옥새'],
       },
     ],
-    desc: `[레드카드], [옐로카드] 사용 시, [옐로카드] 폐기 시. 더스틴이 [천화]를 생성합니다.
-    [천화]는 상한이 18인 폭발물입니다. 상한을 초과하면 자동으로 방출됩니다.
-    [천화]가 방출되면 더스틴은 자신과 HP가 가장 낮은 팀원을 발동시켜 HP를 회복합니다.
-    [천화]가 방출되면 더스틴은 0.2 코스트 회수합니다.`,
+    desc: `[레드카드], [옐로카드] 사용 시, [옐로카드] 폐기 시. [더스틴]이 [천상의 불]를 생성합니다.
+    [천상의 불]는 상한이 18인 폭발물입니다. 상한을 초과하면 자동으로 방출됩니다.
+    [천상의 불]가 방출되면 [더스틴]은 자신과 HP가 가장 낮은 팀원을 발동시켜 HP를 회복합니다.
+    [천상의 불]가 방출되면 [더스틴]은 0.2 코스트 회수합니다.`,
     descLink:
       'https://wiki.biligame.com/resonance/%E7%88%AC%E5%A1%94-%E6%B4%97%E7%89%8C%E6%A0%B8%E7%88%86',
     autoPreset:
@@ -943,7 +943,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '43',
-    title: '카타스 천둥불검(2025.02.05)',
+    title: '[카타스] 천둥불검(2025.02.05)',
     leaderName: KATAS.name,
     characters: [
       {
@@ -970,25 +970,25 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     desc: `소방대 소개: 새로운 자기 훈련
 
 천둥과 불의 검은 불 팀의 하이엔드 유닛으로, 단기적으로 매우 강력한 버스트 능력을 가지고 있습니다.
-조슈아의 특수 기술은 카타스의 특수 기술을 직접 끌어낼 수 있습니다(특히 적이 여러 유닛으로 구성된 경우).
-불 팀의 느린 시작 문제를 해결합니다. 스텔라 [수선화]>[노래]의 시작 비용에 의존하여 2분 동안 카드를 지속적으로 출력하고 뽑을 수 있지만 3분 후에는 [다크 아트]와 [블랙카드]가 핸드 위치를 차지하기 때문에 사이클이 영향을 받습니다.
-이 팀은 주로 캐롤라인의 각성 효과에 의지해 카드를 뽑지만, 리더의 스킬이 발동되는 특수한 방식(즉, [점화] 효과), 카타스의 5코스트 [레드카드] [다크 엑스칼리버]의 무작위성, 그리고 코스트가 회복되는 방식(조슈아의 [검은 물결]는 [블랙카드]를 소모하고, 카타스의 [에너지 풍선껌]과 더스틴의 [천화])으로 인해, 팀의 카드 뽑기와 코스트 회복은 종종 폭발적이다.
-더스틴이 [플로잉 파이어]를 낼 때, 카타스는 리더의 스킬을 여러 개 연속으로 사용해, 폭발적인 카드 뽑기와 코스트 폭발을 초래한다.
+[조슈아]의 특수 기술은 [카타스]의 특수 기술을 직접 끌어낼 수 있습니다(특히 적이 여러 유닛으로 구성된 경우).
+불 팀의 느린 시작 문제를 해결합니다. [스텔라] [수선화]>[노래]의 시작 비용에 의존하여 2분 동안 카드를 지속적으로 출력하고 뽑을 수 있지만 3분 후에는 [다크 아트]와 [블랙카드]가 핸드 위치를 차지하기 때문에 사이클이 영향을 받습니다.
+이 팀은 주로 [캐롤라인]의 각성 효과에 의지해 카드를 뽑지만, 리더의 스킬이 발동되는 특수한 방식(즉, [점화] 효과), [카타스]의 5코스트 [레드카드] [다크 엑스칼리버]의 무작위성, 그리고 코스트가 회복되는 방식([조슈아]의 [검은 물결]는 [블랙카드]를 소모하고, [카타스]의 [에너지 풍선껌]과 [더스틴]의 [천상의 불])으로 인해, 팀의 카드 뽑기와 코스트 회복은 종종 폭발적이다.
+[더스틴]이 [흐르는 불]를 낼 때, [카타스]는 리더의 스킬을 여러 개 연속으로 사용해, 폭발적인 카드 뽑기와 코스트 폭발을 초래한다.
 
-하지만 꼭 언급해야 할 점은 조슈아의 [블랙 카드]가 바닥으로 가라앉을 수 있고, 카타스가 큰 움직임이 충분하지 않을 때 카드가 부족할 수 있다는 것입니다. [퍼플카드]의 낮은 우선순위는 불필요한 스텔라 카드와 [다크 아트]를 가능한 한 적게 플레이하는 것이고, 스텔라 [퍼플카드]는 [블랙카드]가 막혔을 때 핵심 카드 뽑기 효과를 낼 수도 있지만, 이는 이후 사이클에도 영향을 미칩니다.
+하지만 꼭 언급해야 할 점은 [조슈아]의 [블랙카드]가 바닥으로 가라앉을 수 있고, [카타스]가 큰 움직임이 충분하지 않을 때 카드가 부족할 수 있다는 것입니다. [퍼플카드]의 낮은 우선순위는 불필요한 [스텔라] 카드와 [다크 아트]를 가능한 한 적게 플레이하는 것이고, [스텔라] [퍼플카드]는 [블랙카드]가 막혔을 때 핵심 카드 뽑기 효과를 낼 수도 있지만, 이는 이후 사이클에도 영향을 미칩니다.
 
 
 역할 세부 정보:
 
-카타스: 카타스의 리더 스킬은 재사용 대기시간을 갱신하기 위해 점화/불타는 땅/초원의 불꽃에 의존하므로, 팀원은 주로 이 세 가지 효과를 발동할 수 있는 캐릭터에게 접근해야 합니다. 카타스의 두 장의 [옐로카드][에너지 풍선껌]도 출력 외에도 비용을 회수하는 중요한 수단입니다.
+[카타스]: [카타스]의 리더 스킬은 재사용 대기시간을 갱신하기 위해 점화/불타는 땅/초원의 불꽃에 의존하므로, 팀원은 주로 이 세 가지 효과를 발동할 수 있는 캐릭터에게 접근해야 합니다. [카타스]의 두 장의 [옐로카드][에너지 풍선껌]도 출력 외에도 비용을 회수하는 중요한 수단입니다.
 
-더스틴: 더스틴은 많은 양의 점화와 비용 회복을 제공할 수 있습니다. 2스트라이크 효과는 더스틴이 일정량의 치유를 제공할 수 있게 합니다. 4스트라이크 효과는 더스틴이 많은 비용을 제공할 수 있게 합니다. 5스트라이크 효과는 모든 팀의 [레드카드]가 더스틴에게 점화 효과를 제공할 수 있게 하며, 점화는 자연스럽게 카타스의 주장 기술을 새로 고칠 수 있습니다. 특히 [천화]이 대량으로 저장되어 있을 경우 [유화]을 사용하면 카타스의 궁극기를 빠르게 새로고침하고 대량의 마나를 제공할 수 있습니다. 동시에 [천화]이 폭발물인 만큼 화력팀은 UR [퇴각폭탄 3호]의 보조공격력도 함께 활용해 큰 데미지를 입힐 수 있다.
+[더스틴]: [더스틴]은 많은 양의 점화와 비용 회복을 제공할 수 있습니다. 2스트라이크 효과는 [더스틴]이 일정량의 치유를 제공할 수 있게 합니다. 4스트라이크 효과는 [더스틴]이 많은 비용을 제공할 수 있게 합니다. 5스트라이크 효과는 모든 팀의 [레드카드]가 [더스틴]에게 점화 효과를 제공할 수 있게 하며, 점화는 자연스럽게 [카타스]의 주장 기술을 새로 고칠 수 있습니다. 특히 [천상의 불]이 대량으로 저장되어 있을 경우 [흐르는 불]을 사용하면 [카타스]의 궁극기를 빠르게 새로고침하고 대량의 마나를 제공할 수 있습니다. 동시에 [천상의 불]이 폭발물인 만큼 화력팀은 UR [퇴각폭탄 3호]의 보조공격력도 함께 활용해 큰 데미지를 입힐 수 있다.
 
-스텔라: 스텔라는 이상적인 조건에서 팀에서 [뭇별]의 비용 감소 효과만 제공하면 됩니다. 다른 [퍼플카드]에 저장된 [옐로카드], [레드카드]도 사이클이 막혔을 때 역할을 할 수 있습니다.
+[스텔라]: [스텔라]는 이상적인 조건에서 팀에서 [뭇별]의 비용 감소 효과만 제공하면 됩니다. 다른 [퍼플카드]에 저장된 [옐로카드], [레드카드]도 사이클이 막혔을 때 역할을 할 수 있습니다.
 
-조슈아: 조슈아는 많은 불타는 땅 효과를 제공할 수 있습니다. UR [공간 위치 측정기]는 조슈아가 게임 시작 시 그의 시그니처 스킬을 사용할 수 있게 해줍니다. 상대가 여러 유닛을 보유하고 있다면, 그는 카타스의 리더 스킬을 직접 새로 고칠 수 있어, 불 팀을 시작하는 데 어려움이 있는 문제를 해결할 수 있습니다. [옐로카드] 자체도 자신이 생산한 [블랙카드]를 소모하여 많은 수수료를 제공할 수 있습니다.
+[조슈아]: [조슈아]는 많은 불타는 땅 효과를 제공할 수 있습니다. UR [공간 위치 측정기]는 [조슈아]가 게임 시작 시 그의 시그니처 스킬을 사용할 수 있게 해줍니다. 상대가 여러 유닛을 보유하고 있다면, 그는 [카타스]의 리더 스킬을 직접 새로 고칠 수 있어, 불 팀을 시작하는 데 어려움이 있는 문제를 해결할 수 있습니다. [옐로카드] 자체도 자신이 생산한 [블랙카드]를 소모하여 많은 수수료를 제공할 수 있습니다.
 
-캐롤라인: 파이어팀에서 캐롤라인의 주요 역할은 자신의 리더 스킬 드로우 효과를 통해 높은 빈도로 파이어팀에 많은 수의 카드 드로우를 제공하는 것입니다.`,
+[캐롤라인]: 파이어팀에서 [캐롤라인]의 주요 역할은 자신의 리더 스킬 드로우 효과를 통해 높은 빈도로 파이어팀에 많은 수의 카드 드로우를 제공하는 것입니다.`,
     descLink:
       'https://wiki.biligame.com/resonance/%E5%8D%A1%E5%A1%94%E6%96%AF%E9%9B%B7%E7%81%AB%E5%89%91',
     autoPreset:

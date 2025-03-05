@@ -19,6 +19,7 @@ import { RECOMMENDATION_CHARACTER_EQUIPMENT } from '@/const/character/character-
 import { toast, ToastContainer } from 'react-toastify'
 import { ALL_EQUIPMENTS } from '@/const/archive/equipment.const'
 import { RSHighlightedText } from '@/services/utils/highlight-text'
+import { CharacterThumbnailBox } from '@/app/components/character-frame/character-thumbnail-box'
 
 export default function RecommendationDeckDetailPage() {
   const { id } = useParams()
@@ -161,20 +162,7 @@ export default function RecommendationDeckDetailPage() {
                 key={createKey()}
                 className="flex items-center gap-[10px] border-b-2 border-cyan-400 mr-auto"
               >
-                <div className="w-[70px]">
-                  <div className="w-[70px] h-[70px] relative">
-                    <img
-                      src={getFrameBgUrl(character!.grade)}
-                      className="z-0 w-full h-full absolute"
-                    />
-                    <div
-                      className="min-h-full min-w-full bg-cover bg-no-repeat relative"
-                      style={{
-                        backgroundImage: `url(${convertCharacterThumbnailUrl(character!.thumbnail, 100)})`,
-                      }}
-                    />
-                  </div>
-                </div>
+                <CharacterThumbnailBox character={character!} />
                 <div className="flex flex-wrap gap-[2px]">
                   {recommendationEquipments.map((equipmentName) => {
                     const equipment = { name: equipmentName, ...ALL_EQUIPMENTS[equipmentName] }

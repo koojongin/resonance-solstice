@@ -13,6 +13,7 @@ import {
   CHARLOTTE,
   CONNOR,
   DESIREE,
+  DUSTIN,
   ELIOT,
   EXCALIBUR_BOX,
   FENIA,
@@ -65,7 +66,7 @@ import { MaterialBoxResponsive, MaterialTooltipBox } from '@/app/components/mate
 export default function TierListPage2() {
   const tierList: { [key: string]: RSCharacter[] } = {
     '0 Tier': [NAYUTA, STELLA, RINA_F],
-    '1 Tier': [JOSHUA, CAROLINE, NICOLA, FENIA, TENNIE],
+    '1 Tier': [JOSHUA, DUSTIN, CAROLINE, NICOLA, FENIA, TENNIE],
     '1.5 Tier': [KATAS, ARINA, AOBA, KALEYA, ARCANA, VERLAINE, KAREN],
     '2 Tier': [MARGIELA, LIVIA, SUEN, ILONA, YER, CONNOR, YEJUE, VALENTINE, WENSHENG],
     '3 Tier': [
@@ -139,17 +140,18 @@ export default function TierListPage2() {
   return (
     <div className="flex flex-col gap-[10px]">
       <div className="flex flex-col gap-[4px]">
-        <div className="ff-dh text-[30px]">
-          니콜라 출시 시점 티어 리스트 (작성일:25/02/21) +{' '}
+        <div className="ff-dh text-[30px] break-words whitespace-pre-line flex flex-wrap gap-[4px]">
+          니콜라 출시 시점 티어 리스트(작성일:25/02/21)
           <Tooltip content="해당 링크의 투표 결과와 댓글에 티어 토론을 참고하세요">
             <Link
               href="https://arca.live/b/resonance/130152046"
               className="underline text-blue-400"
               target="_blank"
             >
-              조슈아 추가(25/03/01)
+              +조슈아 추가(25/03/01)
             </Link>
           </Tooltip>
+          <span>+더스틴 추가(25/03/06)</span>
         </div>
         <div className="mt-[4px] flex gap-[4px] items-center cursor-pointer">
           <a href={EXTERNAL_USERS['1'].link} target="_blank">

@@ -771,11 +771,11 @@ export const CHARACTER_SKILLS: {
       'https://patchwiki.biligame.com/images/resonance/3/3c/d5isj07w1lrf8q2hito38p8lxc90dog.png',
   },
 
-  유화: {
+  '흐르는 불': {
     amount: 1,
     cost: 4,
-    name: '유화',
-    desc: '리더 스킬 조건: [천화]를 9개 생성\n무작위 적에게 모든 [천화]를 발동한다. 패에 있는 [블랙카드]와 [원소핵-불]을 모두 [소각]시키고, 소멸시킨 1장당 무작위 적에게 [작열]을 발동한다.\n적 필드에 [유화]를 1개 발사하여 적 전체에게 피해를 입히고, [광염]과 [폭발]을 발동한다. 사용 후 [블랙카드] [잿더미] 1장을 생성하여 패에 추가한다.\n[유화]는 [폭발물]이다.',
+    name: '흐르는 불',
+    desc: '리더 스킬 조건: [천상의 불]를 9개 생성\n무작위 적에게 모든 [천상의 불]를 발동한다. 패에 있는 [블랙카드]와 [원소핵-불]을 모두 [소각]시키고, 소멸시킨 1장당 무작위 적에게 [작열]을 발동한다.\n적 필드에 [흐르는 불]를 1개 발사하여 적 전체에게 피해를 입히고, [광염]과 [폭발]을 발동한다. 사용 후 [블랙카드] [잿더미] 1장을 생성하여 패에 추가한다.\n[유화]는 [폭발물]이다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/b/b4/64q65t2p9wup9jrgagmwxzmws4t4fmu.png',
   },
@@ -783,15 +783,15 @@ export const CHARACTER_SKILLS: {
     amount: 4,
     cost: 2,
     name: '경칩',
-    desc: '번개와 같은 일격으로 적 대상에게 1회 피해를 입혀 [기절]시키고, 동시에 [우레]를 발동시킨다.\n사용 후 [천화]를 1개 생성한다.',
+    desc: '번개와 같은 일격으로 적 대상에게 1회 피해를 입혀 [기절]시키고, 동시에 [우레]를 발동시킨다.\n사용 후 [천상의 불]를 1개 생성한다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/9/97/0a20yd54vmvdjrln2tcge3vrxw4zlm7.png',
   },
-  껍질비: {
+  곡우: {
     amount: 1,
     cost: 2,
-    name: '껍질비',
-    desc: '다음 카드의 비용을 0으로 만든다. 다음 카드를 낼 때, 그 카드의 원래 비용과 같은 양의 [천화]를 생성한다.\n이 카드를 버릴 때, [천화]를 1개 생성한다.',
+    name: '곡우',
+    desc: '다음 카드의 비용을 0으로 만든다. 다음 카드를 낼 때, 그 카드의 원래 비용과 같은 양의 [천상의 불]를 생성한다.\n이 카드를 버릴 때, [천상의 불]를 1개 생성한다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/9/97/15eclil695a745dawjye6p7a6nnokwb.png',
   },
