@@ -8,11 +8,13 @@ import clsx from 'clsx'
 import { CHARACTER_RESONANCES } from '@/const/character/character-resonance.const'
 import { RS_CHARACTERS } from '@/const/character/character.const'
 import { RSCharacter } from '@/const/character/character.interface'
-import { RsCharacterBorderBox } from '@/app/components/character-frame/rs-character-border-box'
 import { CharacterThumbnailBox } from '@/app/components/character-frame/character-thumbnail-box'
+import parse from 'html-react-parser'
+import { CHARACTER_AWAKENINGS } from '@/const/character/character-awakening.const'
 
 const TOTAL_ARCHIVE_WITH_RESONANCE = {
   ...TOTAL_ARCHIVE_MAP,
+  ...CHARACTER_AWAKENINGS,
   ...CHARACTER_RESONANCES,
 }
 
@@ -79,70 +81,103 @@ export function RSHighlightedText({
 
   const regex = /\[([^\]]+)\]/g
 
-  const formattedText = text.split(regex).map((part, index, array) => {
-    const archive = TOTAL_ARCHIVE_WITH_RESONANCE[part]
-    let classNameOfPart = highlightMap[`[${part}]`]
+  const handleHTMLTags = (hText: string) => {
+    return parse(hText)
+  }
 
-    if (archive && !classNameOfPart) {
-      classNameOfPart = NOT_SETTED_PART_COLOR
-    }
+  const formatHighlightText = (hText: string) => {
+    const formattedText = hText.split(regex).map((part, index, array) => {
+      const archive = TOTAL_ARCHIVE_WITH_RESONANCE[part]
+      let classNameOfPart = highlightMap[`[${part}]`]
 
-    if (classNameOfPart) {
-      return (
-        <Tooltip
-          key={index}
-          content={
-            <div className="max-w-[300px] whitespace-pre-line">
-              {archive && (
-                <div className="flex flex-col gap-[4px]">
-                  <div>{part}</div>
-                  <hr />
-                  <div>{archive.desc}</div>
-                </div>
-              )}
-            </div>
-          }
-        >
-          <span
-            className={`${classNameOfPart} ${highlightStyle} cursor-pointer ff-dh text-[${textSize || 20}px]`}
-            onClick={() => router.push(`/archive/${part}`)}
+      if (archive && !classNameOfPart) {
+        classNameOfPart = NOT_SETTED_PART_COLOR
+      }
+
+      if (classNameOfPart) {
+        return (
+          <Tooltip
+            key={index}
+            content={
+              <div className="max-w-[300px] whitespace-pre-line">
+                {archive && (
+                  <div className="flex flex-col gap-[4px]">
+                    <div>{part}</div>
+                    <hr />
+                    <div>{archive.desc}</div>
+                  </div>
+                )}
+              </div>
+            }
           >
-            [{part}]
-          </span>
-        </Tooltip>
-      )
-    }
-
-    const character = CHARACTER_KR_DICT[part]
-    if (character) {
-      return (
-        <Tooltip
-          key={index}
-          className="bg-transparent p-0 m-0 rounded-none"
-          content={
-            <div className="">
-              <CharacterThumbnailBox character={character} />
-            </div>
-          }
-        >
-          <span className="inline-flex bg-yellow-700">
             <span
-              className={`cursor-pointer ff-dh text-[${textSize || 20}px] bg-cyan-800/70 text-white px-[5px] py-0 pt-[1px] rounded`}
-              onClick={() => router.push(`/characters/${character.originName}`)}
+              className={`${classNameOfPart} ${highlightStyle} cursor-pointer ff-dh text-[${textSize || 20}px]`}
+              onClick={() => router.push(`/archive/${part}`)}
             >
-              {part}
+              [{part}]
             </span>
-          </span>
-        </Tooltip>
-      )
+          </Tooltip>
+        )
+      }
+
+      const character = CHARACTER_KR_DICT[part]
+      if (character) {
+        return (
+          <Tooltip
+            key={index}
+            className="bg-transparent p-0 m-0 rounded-none"
+            content={
+              <div className="">
+                <CharacterThumbnailBox character={character} />
+              </div>
+            }
+          >
+            <span className="inline-flex bg-yellow-700">
+              <span
+                className={`cursor-pointer ff-dh text-[${textSize || 20}px] bg-cyan-800/70 text-white px-[5px] py-0 pt-[1px] rounded`}
+                onClick={() => router.push(`/characters/${character.originName}`)}
+              >
+                {part}
+              </span>
+            </span>
+          </Tooltip>
+        )
+      }
+
+      const isSpecificText = text.indexOf(`[${part}]`) >= 0
+      if (isSpecificText) return `[${part}]`
+      return part
+    })
+    return formattedText
+  }
+
+  const recursivelyFormatChildren: any = (child: any) => {
+    if (typeof child === 'string') {
+      return formatHighlightText(child)
     }
 
-    const isSpecificText = text.indexOf(`[${part}]`) >= 0
-    if (isSpecificText) return `[${part}]`
-    return part
-  })
+    // React DOM node, recursively apply formatHighlightText to children
+    if (child.props && child.props.children) {
+      const updatedChildren = React.Children.map(child.props.children, recursivelyFormatChildren)
+      return React.cloneElement(child, {}, ...updatedChildren)
+    }
 
-  return <p className="whitespace-pre-line">{formattedText}</p>
+    return child
+  }
+
+  const parsedText = handleHTMLTags(text)
+
+  if (typeof parsedText === 'string') {
+    return formatHighlightText(parsedText)
+  }
+  return (handleHTMLTags(text) as any).map((textOrElement: any) => {
+    const isString = typeof textOrElement === 'string'
+    if (!isString) {
+      // return textOrElement
+      return recursivelyFormatChildren(textOrElement)
+    }
+    return formatHighlightText(textOrElement)
+  })
 }
 
 export function ArchiveTooltipBox({

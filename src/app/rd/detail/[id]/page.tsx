@@ -226,8 +226,12 @@ export default function RecommendationDeckDetailPage() {
                     <div className="flex flex-wrap gap-[2px]">
                       {relatedDeck.characters.map((characterData) => {
                         const { character } = characterData
+                        const isLeader = character.name === relatedDeck.leaderName
                         return (
-                          <div key={createKey()} className="w-[60px] h-[60px] relative">
+                          <div
+                            key={createKey()}
+                            className="w-[60px] h-[60px] relative overflow-hidden"
+                          >
                             <div className="absolute w-full h-full z-40 opacity-90">
                               <RsCharacterBorderBox grade={character.grade} borderSize={3} />
                             </div>
@@ -241,6 +245,11 @@ export default function RecommendationDeckDetailPage() {
                                 backgroundImage: `url(${convertCharacterThumbnailUrl(character.thumbnail, 100)})`,
                               }}
                             />
+                            {isLeader && (
+                              <div className="absolute bottom-0 w-full text-center text-white ff-dh text-[20px] text-shadow-outline">
+                                리더
+                              </div>
+                            )}
                             {/* <div */}
                             {/*   className="min-h-full min-w-full bg-cover" */}
                             {/*   style={{ backgroundImage: `url(${character.thumbnailLarge})` }} */}

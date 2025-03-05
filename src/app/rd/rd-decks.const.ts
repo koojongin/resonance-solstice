@@ -56,7 +56,7 @@ export interface RecommendationDeck {
 export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   {
     id: '1',
-    title: '싼마이 페니아 인뢰덱',
+    title: '싼마이 [페니아] 인뢰덱',
     leaderName: FENIA.name,
     characters: [
       { character: FENIA },
@@ -72,7 +72,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '2',
-    title: '순환 메인 페니아 인뢰덱1',
+    title: '순환 메인 [페니아] 인뢰덱1',
     leaderName: FENIA.name,
     characters: [
       { character: FENIA },
@@ -88,7 +88,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '3',
-    title: '순환 메인 페니아 인뢰덱2',
+    title: '순환 메인 [페니아] 인뢰덱2',
     leaderName: FENIA.name,
     characters: [
       { character: FENIA },
@@ -97,14 +97,14 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: RINA_F },
       { character: KALEYA },
     ],
-    desc: '장점 : [순환 메인 페니아 인뢰덱1]보다 순환력을 조금 줄이고 안정성을 챙김, [스텔라] 궁쓰고 코스트 감소 상태로 카드 난사가 재밌음\n단점 : 카드 쓸 때 생각 잘해야함',
+    desc: '장점 : [순환 메인 [페니아] 인뢰덱1]보다 순환력을 조금 줄이고 안정성을 챙김, [스텔라] 궁쓰고 코스트 감소 상태로 카드 난사가 재밌음\n단점 : 카드 쓸 때 생각 잘해야함',
     descLink: 'https://arca.live/b/resonance/128678257',
     owner: EXTERNAL_USERS['1'],
   },
 
   {
     id: '4',
-    title: '안정성 메인 페니아 인뢰덱',
+    title: '안정성 메인 [페니아] 인뢰덱',
     leaderName: FENIA.name,
     characters: [
       { character: FENIA },
@@ -113,7 +113,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: RINA_F },
       { character: KALEYA },
     ],
-    desc: '장점 : 안정성과 적당한 순환력을 챙김\n단점 : 화력은 [순환 메인 페니아 인뢰덱1]보다 딸림',
+    desc: '장점 : 안정성과 적당한 순환력을 챙김\n단점 : 화력은 [순환 메인 [페니아] 인뢰덱1]보다 딸림',
     descLink: 'https://arca.live/b/resonance/128678257',
     owner: EXTERNAL_USERS['1'],
   },
@@ -136,7 +136,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '6',
-    title: '마르기엘라덱 / 마키라덱',
+    title: '[마키라]덱',
     leaderName: MARGIELA.name,
     characters: [
       { character: MARGIELA },
@@ -218,7 +218,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '9',
-    title: '페니아 인뢰덱 찐종결 올인원덱',
+    title: '[페니아] 인뢰덱 찐종결 올인원덱',
     leaderName: FENIA.name,
     characters: [
       { character: FENIA },
@@ -236,7 +236,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '10',
-    title: '샬롯 덱 1',
+    title: '[샬롯] 덱 1',
     leaderName: CHARLOTTE.name,
     characters: [
       { character: CHARLOTTE },
@@ -245,13 +245,15 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: ARCANA },
       { character: SHIZURU },
     ],
-    desc: '주로 적이 많은 무대에서 활약할 수 있습니다.\n드로우 범용으로서 [나유타]나 [스텔라] 를 편성해, 한층 더 [레드카드]를 드로우 하기 쉽게 [시즈루]나 [타라] 등을 편성하면 좋을 것입니다.\n공격을 받기 쉬운 샬롯을 지킬 수 있도록 [아리나],[아르카나] 등의 회복역도 편성합시다.',
+    desc: `주로 적이 많은 무대에서 활약할 수 있습니다.
+    드로우 범용으로서 [나유타]나 [스텔라] 를 편성해, 한층 더 [레드카드]를 드로우 하기 쉽게 [시즈루]나 [타라] 등을 편성하면 좋을 것입니다.
+    공격을 받기 쉬운 [샬롯]을 지킬 수 있도록 [아리나],[아르카나] 등의 회복역도 편성합시다.`,
     descLink: 'https://gamerch.com/resonance/877307',
   },
 
   {
     id: '11',
-    title: '샬롯 덱 2',
+    title: '[샬롯] 덱 2',
     leaderName: CHARLOTTE.name,
     characters: [
       { character: CHARLOTTE },
@@ -260,7 +262,9 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: ARCANA },
       { character: SHIZURU },
     ],
-    desc: '주로 적이 많은 무대에서 활약할 수 있습니다.\n드로우 범용으로서 [나유타]나 [스텔라] 를 편성해, 한층 더 [레드카드]를 드로우 하기 쉽게 시즈 르나 [타라] 등을 편성하면 좋을 것입니다.\n공격을 받기 쉬운 샬롯을 지킬 수 있도록 [아리나],[아르카나] 등의 회복역도 편성합시다.',
+    desc: `주로 적이 많은 무대에서 활약할 수 있습니다.
+    드로우 범용으로서 [나유타]나 [스텔라] 를 편성해, 한층 더 [레드카드]를 드로우 하기 쉽게 [시즈루]나 [타라] 등을 편성하면 좋을 것입니다.
+    공격을 받기 쉬운 [샬롯]을 지킬 수 있도록 [아리나],[아르카나] 등의 회복역도 편성합시다.`,
     descLink: 'https://gamerch.com/resonance/877307',
   },
 
@@ -275,7 +279,8 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: FLAN },
       { character: ARCANA },
     ],
-    desc: '배포 캐릭터를 중심으로 매우 편성하기 쉬운 SR 페니아 번개 덱입니다.\n프란(R)이 탱커로 녹기 쉽기 때문에, [아르카나](R)로 HP나 코스트의 회복을 돕습니다.',
+    desc: `배포 캐릭터를 중심으로 매우 편성하기 쉬운 SR [페니아] 번개 덱입니다.
+    [프란](R)이 탱커로 녹기 쉽기 때문에, [아르카나](R)로 HP나 코스트의 회복을 돕습니다.`,
     descLink: 'https://gamerch.com/resonance/877307',
   },
 
@@ -290,7 +295,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: ARCANA },
       { character: KAREN },
     ],
-    desc: '네즈미(R)의 [레드카드]를 끌어당기는 덱입니다.\n앞열이 버틸수 있도록 카렌(R) 등의 힐러를 편성합시다.\n[타라](R)도 궁합이 좋습니다.',
+    desc: '[네즈미](R)의 [레드카드]를 끌어당기는 덱입니다.\n앞열이 버틸수 있도록 [카렌](R) 등의 힐러를 편성합시다.\n[타라](R)도 궁합이 좋습니다.',
     descLink: 'https://gamerch.com/resonance/877307',
   },
 
@@ -305,7 +310,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: LIVIA },
       { character: YER },
     ],
-    desc: '동결을 사용할 수 있는 캐릭터는 많지 않기 때문에 약간 제한이 있습니다만, 동결 상태의 적은 찢어지는 것이 효과가 있기 때문에 샬롯과도 궁합이 좋을 것입니다.',
+    desc: '[냉동]을 사용할 수 있는 캐릭터는 많지 않기 때문에 약간 제한이 있습니다만, [냉동] 상태의 적은 찢어지는 것이 효과가 있기 때문에 [샬롯]과도 궁합이 좋을 것입니다.',
     descLink: 'https://gamerch.com/resonance/877307',
   },
 
@@ -320,13 +325,13 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: LIVIA },
       { character: AKIRA },
     ],
-    desc: '동결을 사용할 수 있는 캐릭터는 많지 않기 때문에 약간 제한이 있습니다만, 동결 상태의 적은 찢어지는 것이 효과가 있기 때문에 샬롯과도 궁합이 좋을 것입니다.',
+    desc: '[냉동]을 사용할 수 있는 캐릭터는 많지 않기 때문에 약간 제한이 있습니다만, [냉동] 상태의 적은 찢어지는 것이 효과가 있기 때문에 [샬롯]과도 궁합이 좋을 것입니다.',
     descLink: 'https://gamerch.com/resonance/877307',
   },
 
   {
     id: '16',
-    title: '보라 카드 덱 1',
+    title: '퍼플카드 덱 1',
     leaderName: MARGIELA.name,
     characters: [
       { character: MARGIELA },
@@ -335,13 +340,13 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: NAYUTA },
       { character: VERLAINE },
     ],
-    desc: '마키라 의 강력한 일격으로 적을 닦을 수 있습니다.\n보라색 카드의 특징으로서 혼수 나 혼돈 등의 상태 이상 부여를 자랑으로 하는 캐릭터를 편성하고 있습니다.',
+    desc: '[마키라]의 강력한 일격으로 적을 닦을 수 있습니다.\n[퍼플카드]의 특징으로서 [혼란]등의 상태 이상 부여를 자랑으로 하는 캐릭터를 편성하고 있습니다.',
     descLink: 'https://gamerch.com/resonance/877307',
   },
 
   {
     id: '17',
-    title: '[레드카드] 샬롯 덱',
+    title: '[레드카드] [샬롯] 덱',
     leaderName: CHARLOTTE.name,
     characters: [
       { character: CHARLOTTE },
@@ -350,7 +355,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: ARCANA },
       { character: RACHEL },
     ],
-    desc: '드로우 범용으로서 [나유타],[스텔라]를 편성해, 한층 더 [레드카드]를 드로우 하기 쉽게 시즈루, [타라] 등을 편성하면 좋을 것입니다.\n공격을 받기 쉬운 샬롯을 지킬 수 있도록 [아리나], [아르카나] 등의 회복역도 편성합시다.',
+    desc: '드로우 범용으로서 [나유타],[스텔라]를 편성해, 한층 더 [레드카드]를 드로우 하기 쉽게 [시즈루], [타라] 등을 편성하면 좋을 것입니다.\n공격을 받기 쉬운 [샬롯]을 지킬 수 있도록 [아리나], [아르카나] 등의 회복역도 편성합시다.',
     descLink: 'https://gamerch.com/resonance/877307',
   },
 
@@ -368,7 +373,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: ELIOT },
       { character: RINA_F },
     ],
-    desc: '클릭 시 가이드 링크로 이동합니다.',
+    desc: '-',
     descLink: 'https://arca.live/b/resonance/129123153',
     owner: EXTERNAL_USERS['2'],
     autoPreset:
@@ -389,7 +394,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: ELIOT },
       { character: RINA_F },
     ],
-    desc: '클릭 시 가이드 링크로 이동합니다.',
+    desc: '-',
     descLink: 'https://arca.live/b/resonance/129123153',
     owner: EXTERNAL_USERS['2'],
     autoPreset:
@@ -410,7 +415,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: ELIOT },
       { character: RINA_F },
     ],
-    desc: '클릭 시 가이드 링크로 이동합니다.',
+    desc: '-',
     descLink: 'https://arca.live/b/resonance/129123153',
     owner: EXTERNAL_USERS['2'],
     autoPreset:
@@ -428,7 +433,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: AOBA },
       { character: RINA_F },
     ],
-    desc: '클릭 시 가이드 링크로 이동합니다.',
+    desc: '-',
     descLink: 'https://arca.live/b/resonance/129066118',
     owner: EXTERNAL_USERS['3'],
     autoPreset:
@@ -446,7 +451,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: PRIMING },
       { character: YEJUE },
     ],
-    desc: '[나유타](SSR) / [아오바](SR) / 리나 본(SR) / 레이카(R)\n위 4명 승무원을 고정 후 각 코어별 1개의 승무원만 추가하면 됨\n장점: 편성에 한명만 제외하고 나머지가 동일 승무원이라 성장 재화를 아낄수 있음',
+    desc: '[나유타](SSR) / [아오바](SR) / [리나 본](SR) / [레이카](R)\n위 4명 승무원을 고정 후 각 코어별 1개의 승무원만 추가하면 됨\n장점: 편성에 한명만 제외하고 나머지가 동일 승무원이라 성장 재화를 아낄수 있음',
     descLink: 'https://arca.live/b/resonance/129243432',
     owner: EXTERNAL_USERS['4'],
     autoPreset:
@@ -464,7 +469,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: PRIMING },
       { character: KALEYA },
     ],
-    desc: '[나유타](SSR) / [아오바](SR) / 리나 본(SR) / 레이카(R)\n위 4명 승무원을 고정 후 각 코어별 1개의 승무원만 추가하면 됨\n장점: 편성에 한명만 제외하고 나머지가 동일 승무원이라 성장 재화를 아낄수 있음',
+    desc: '[나유타](SSR) / [아오바](SR) / [리나 본](SR) / [레이카](R)\n위 4명 승무원을 고정 후 각 코어별 1개의 승무원만 추가하면 됨\n장점: 편성에 한명만 제외하고 나머지가 동일 승무원이라 성장 재화를 아낄수 있음',
     descLink: 'https://arca.live/b/resonance/129243432',
     owner: EXTERNAL_USERS['4'],
     autoPreset:
@@ -482,7 +487,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: PRIMING },
       { character: YER },
     ],
-    desc: '[나유타](SSR) / [아오바](SR) / 리나 본(SR) / 레이카(R)\n위 4명 승무원을 고정 후 각 코어별 1개의 승무원만 추가하면 됨\n장점: 편성에 한명만 제외하고 나머지가 동일 승무원이라 성장 재화를 아낄수 있음',
+    desc: '[나유타](SSR) / [아오바](SR) / [리나 본](SR) / [레이카](R)\n위 4명 승무원을 고정 후 각 코어별 1개의 승무원만 추가하면 됨\n장점: 편성에 한명만 제외하고 나머지가 동일 승무원이라 성장 재화를 아낄수 있음',
     descLink: 'https://arca.live/b/resonance/129243432',
     owner: EXTERNAL_USERS['4'],
     autoPreset:
@@ -491,7 +496,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '25',
-    title: '캐롤 테니 없찐이 몸 비틀어 쓰는 니콜라덱',
+    title: '캐롤 [테니] 없찐이 몸 비틀어 쓰는 [니콜라]덱',
     leaderName: NICOLA.name,
     characters: [
       {
@@ -515,7 +520,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
         equipments: ['사냥칼', '구급 아머', '고열량 식량'],
       },
     ],
-    desc: '캐롤 테니 없찐이 몸 비틀어 쓰는 니콜라덱(니나스아리)',
+    desc: '캐롤 [테니] 없찐이 몸 비틀어 쓰는 [니콜라]덱(니나스아리)',
     descLink: 'https://arca.live/b/resonance/129403908',
     owner: EXTERNAL_USERS['5'],
     autoPreset:
@@ -524,7 +529,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '26',
-    title: '니콜라 오토 프리셋 (니콜라 [나유타] [캐롤라인] 테니 [스텔라])',
+    title: '[니콜라] 오토 프리셋 ([니콜라] [나유타] [캐롤라인] [테니] [스텔라])',
     leaderName: NICOLA.name,
     characters: [
       {
@@ -548,7 +553,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
         equipments: ['마술봉', '공간이동', '춘추합성인장'],
       },
     ],
-    desc: '니콜라 오토 프리셋 (니콜라 [나유타] [캐롤라인] 테니 [스텔라])',
+    desc: '[니콜라] 오토 프리셋 ([니콜라] [나유타] [캐롤라인] [테니] [스텔라])',
     descLink: 'https://arca.live/b/resonance/129397795',
     owner: EXTERNAL_USERS['2'],
     autoPreset:
@@ -557,7 +562,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '27',
-    title: '테니없찐의 니콜라덱',
+    title: '[테니]없찐의 [니콜라]덱',
     leaderName: NICOLA.name,
     characters: [
       { character: NICOLA },
@@ -566,7 +571,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: RINA_F },
       { character: STELLA },
     ],
-    desc: '테니없찐의 니콜라덱',
+    desc: '[테니]없찐의 [니콜라]덱',
     descLink: 'https://arca.live/b/resonance/129347319',
     owner: EXTERNAL_USERS['6'],
     autoPreset:
@@ -608,7 +613,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '29',
-    title: '니콜라 [스텔라] 케롤라인 [나유타] 예주',
+    title: '[니콜라] [스텔라] 케롤라인 [나유타] 예주',
     leaderName: NICOLA.name,
     characters: [
       { character: NICOLA },
@@ -617,7 +622,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: NAYUTA },
       { character: YEJUE },
     ],
-    desc: '니콜라 [스텔라] 케롤라인 [나유타] 예주',
+    desc: '[니콜라] [스텔라] 케롤라인 [나유타] 예주',
     descLink: 'https://arca.live/b/resonance/129343448',
     owner: EXTERNAL_USERS['8'],
     autoPreset:
@@ -734,7 +739,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '35',
-    title: '깡딜)내가 쓰는 간야덱',
+    title: '깡딜)내가 쓰는 [간야]덱',
     leaderName: GANYA.name,
     characters: [
       { character: GANYA },
@@ -743,7 +748,18 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: FENIA },
       { character: NAYUTA },
     ],
-    desc: '간야를 리더로 부메랑 도끼를 메인딜로 넣는 덱임\n\n장점\n1. 패수급 운만 좋으면 연속으로 리더스킬 사용해서 폭딜 가능함\n2. 모든 범위의 적 공격 가능\n3. 수동 조작 시 코스트가 남아돔\n4. 간야 페니아 [나유타] 3명만 있으면 굴릴 수 있음\n\n단점\n1. 패수급 ㅈ박으면 딜도 ㅈ박음\n2. 자동전투로 스테이지가 나뉜 적을 상대할 경우 맵 이동전에 패를 버리는 경우가 있음\n3. 특정 장비+간야5공명 없으면 덱 내구도가 많이 낮음',
+    desc: `[간야]를 리더로 부메랑 도끼를 메인딜로 넣는 덱임
+    
+    장점
+    1. 패수급 운만 좋으면 연속으로 리더스킬 사용해서 폭딜 가능
+    2. 모든 범위의 적 공격 가능
+    3. 수동 조작 시 코스트가 남아돔
+    4. [간야] [페니아] [나유타] 3명만 있으면 굴릴 수 있음
+    
+    단점
+    1. 패수급 ㅈ박으면 딜도 ㅈ박음
+    2. 자동전투로 스테이지가 나뉜 적을 상대할 경우 맵 이동전에 패를 버리는 경우가 있음
+    3. 특정 장비+[간야]5공명 없으면 덱 내구도가 많이 낮음`,
     descLink: 'https://arca.live/b/resonance/129504461',
     owner: EXTERNAL_USERS['14'],
     autoPreset:
@@ -776,7 +792,11 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
         equipments: ['비트레이얼', '시뮬레이트 스타', '춘추합성인장'],
       },
     ],
-    desc: '완전한 생존 전문화를 갖춘 팀은 주로 고압 환경과 장기 전투에 사용됩니다.\n일반적인 사업 운영에는 권장되지 않습니다.\n교활함과 배신은 필수는 아니지만, 악마가 많을수록 더 빨리 나타납니다.\n\n다크아츠 셔플 초반에는 [아리나]가 쓰이겠지만, 압박이 커질수록 보스의 데미지가 너무 높아서 체력이 가득 찬 상태에서도 즉사할 수 있고, [아리나]의 회복도 잘 안 되기 때문에 여기서는 가장 안정적인 포지션을 가진 팀으로 전환합니다.',
+    desc: `완전한 생존 전문화를 갖춘 팀은 주로 고압 환경과 장기 전투에 사용됩니다.
+    일반적인 사업 운영에는 권장되지 않습니다.
+    교활함과 배신은 필수는 아니지만, 악마가 많을수록 더 빨리 나타납니다.
+    
+    [다크 아트] 셔플 초반에는 [아리나]가 쓰이겠지만, 압박이 커질수록 보스의 데미지가 너무 높아서 체력이 가득 찬 상태에서도 즉사할 수 있고, [아리나]의 회복도 잘 안 되기 때문에 여기서는 가장 안정적인 포지션을 가진 팀으로 전환합니다.`,
     descLink:
       'https://wiki.biligame.com/resonance/%E7%88%AC%E5%A1%94-%E6%B4%97%E7%89%8C%E6%9A%97%E8%89%BA',
     autoPreset:
@@ -867,7 +887,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '41',
-    title: '여름-시즈루 순환 핵폭발 (2025.01.21)',
+    title: '[SummerShizuru] 순환 핵폭발 (2025.01.21)',
     leaderName: NAYUTA.name,
     characters: [
       {
@@ -895,10 +915,10 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     [천상의 불]는 최대 18개의 [폭발물]입니다. 최대 한계를 초과하면 자동으로 방출됩니다.
     따라서 [나유타]+[더스틴]의 순환 팀은 [옐로카드]를 반복해서 섞어서 [천상의 불]를 생성하고, 핵폭탄을 터뜨려 대규모 데미지를 입힐 수 있습니다.
     사이클 동안 [천상의 불]의 생성은 [혈액 회복]을 유발하고, [천상의 불]의 방출은 [비용 회복]을 유발합니다.
-    이 기간 동안 [나유타]의 [재구축의 힘]를 사용하여 피해를 피하고 [더스틴], 여름-시즈루, 테니를 제어하여 팀은 극도로 강력한 생존력을 갖게 되었습니다.
-    [나유타]+소머의 조합과 비교했을 때, 여름-시즈루 자체는 일정한 장기적 출력 능력을 제공할 수 있습니다.
-    동시에, 여름-시즈루의 궁극기로 인한 동결은 테니와 조합하여 코스트 회수를 상당히 증가시킬 수 있으므로 소머를 대체할 수 있습니다.
-    캐릭터의 각성과 공명이 낮고 코스트 압박이 클 경우, 테니 대신 [아오바]를 들고 다니는 것이 좋습니다.`,
+    이 기간 동안 [나유타]의 [재구축의 힘]를 사용하여 피해를 피하고 [더스틴], [SummerShizuru], [테니]를 제어하여 팀은 극도로 강력한 생존력을 갖게 되었습니다.
+    [나유타]+[Sommer]의 조합과 비교했을 때, [SummerShizuru] 자체는 일정한 장기적 출력 능력을 제공할 수 있습니다.
+    동시에, [SummerShizuru]의 궁극기로 인한 [냉동]은 [테니]와 조합하여 코스트 회수를 상당히 증가시킬 수 있으므로 [Sommer]를 대체할 수 있습니다.
+    캐릭터의 각성과 공명이 낮고 코스트 압박이 클 경우, [테니] 대신 [아오바]를 들고 다니는 것이 좋습니다.`,
     descLink:
       'https://wiki.biligame.com/resonance/%E6%B4%97%E7%89%8C%E6%A0%B8%E7%88%86%E9%98%9F-%E6%B0%B4%E9%9D%99%E6%B5%81%E7%89%88',
     autoPreset:
@@ -993,5 +1013,50 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       'https://wiki.biligame.com/resonance/%E5%8D%A1%E5%A1%94%E6%96%AF%E9%9B%B7%E7%81%AB%E5%89%91',
     autoPreset:
       'rVZNb9swDP0vPHuAKNnyx3WnAt0HsN2KHIxZW41mSWCn2IYg/32SnCxUm5LOkpzEiPLjIx8p7aAfv2zet0P3aQXN93Y5ugy6fvzm//n6Z+OgMZl3uXdt54YXbo/xT2hQxV+ewXr7OHlBozIY1kt3349baB7+ucSFrqtpgaaeFsrgcVEsMnhyLsb08fln/ FKI5q770G6g2QEqG/wLD5wdDF2dDNQlNZAY9Iy2mhi1oWeogTkx8sTNkgiom87VyVCqoGc0jbomhi3pTkKBRl3RcHROcahhqFutKZ+a0g5u+ym/h0rtoPfVO53MYNsOP9x2EoOvxfjUL5d33sfnSSmLZQbPo5u2/YfXv1ZuiNvHuobtz+3Q+lK+82AUIG RKACiqggMIUnoFMH1h1bnf0OiM4IUkvY0HEVD58rOUgtA5RJMiFjMQ88sRSZWQIxURUKiSBMBxOABUV+UsqZJhCcWcIca8csIrLqhSaASxSqUWEFmphwbnk4gWWamfBXiTUhiDEiW0vPDONheByI3YvaW6XS8ZVodHXdjrdIFJ95o580LQhcQxQQzzWeJ oVX1DjuHuEzkWUrcJ0nyxnQoV4bR7uOP9Pav2Z1pQyXpNmLBzJlymMnNJT2zXoxZvUGXZ0Sn1oJaHv2Z7UAQQm1yVeAVAeIgJADnPQKyBFVNkze0eGeHBJk/eGUqef2H69684GA0/psJT/H9b2MS7Jmnhh8XrCNJBqc9GwHav4UKo54RgzKUhLPZ/AQ==',
+  },
+
+  {
+    id: '44',
+    title: '코나 저격 덱(2025.01.21)',
+    leaderName: CONNOR.name,
+    characters: [
+      {
+        character: CONNOR,
+        equipments: ['부러진 검의 불', '시뮬레이트 스타', '베타 세계선 박스'],
+      },
+      {
+        character: ILONA,
+        equipments: ['블루 일루전', '시뮬레이트 스타', '해리슨 장치'],
+      },
+      {
+        character: TENNIE,
+        equipments: ['에비서레이터MK0', '시뮬레이트 스타', '뫼비우스'],
+      },
+      {
+        character: STELLA,
+        equipments: ['공간 위치 측정기', '시뮬레이트 스타', '뫼비우스'],
+      },
+      {
+        character: CAROLINE,
+        equipments: ['에비서레이터MK0', '시뮬레이트 스타', '뫼비우스'],
+      },
+    ],
+    desc: `이 팀에서 가장 중요하고 가장 어려운 숙제는 리더의 스킬 회복 비용 입니다.
+    <div className='text-red-600 ff-dh text-[18px]'>중요한 포인트는 [캐롤라인]의 1각성 효과-[추격]을 통해 카드를 뽑는 것입니다.</div>
+    리더의 스킬 회복 비용은 최소 3.2([나유타]가 포함된 저격수 덱 보다 높음)이며, 이는 초보자가 가볍게 구성할 수 있는 덱이 아니라는 것을 의미합니다.
+    
+    또 다른 오해는 [보호막] 관련 항목이 유용한지 여부입니다.
+    저는 개인적으로 [보호막] 관련 파밍을 권장하지 않습니다.
+    왜냐하면 [코나] 자신이 피해를 보충하고 체력을 회복하기 위해 [보호막]를 끊임없이 폭발시키기 때문에 [보호막] 내구성 및 지속 시간에 관련된 항목은 그다지 유용하지 않기 때문입니다.
+    [블루카드]는 방어 속성을 추가한다는 점을 언급할 가치가 있는데, 생존력이 부족하다면 분명 유용합니다.
+    하지만 [코나]의 방어에서 공격으로의 전환은 두 번째 리더 스킬에서 발생하기 때문에 그 전에는 최대 4장의 [블루카드]만 플레이되므로 출력에 큰 이득이 없습니다.
+    <hr className='border-blue-gray-800 border-dashed'/>
+    <교체 가능 포지션>
+    [이로나]: [예주]와 교체 가능. 예주도 [블루카드]를 가지고 있으며, [레드카드]로 범위 피해로 몹을 클리어 하는 효율이 최고이고, 여러 웨이브에서 몹을 처치할수 있지만, 순환이 느리고 고압 환경에서 저항력이 낮아 고압 환경에서는 사용을 추천하지 않습니다., 
+    [캐롤라인]: [캐롤라인]과 교체 가능 
+    `,
+    descLink: 'https://wiki.biligame.com/resonance/%E6%9F%AF%E7%8B%99%E5%8D%A1%E8%8B%94%E9%98%9F',
+    autoPreset:
+      'rVfBbtswDP0XnTVAoizJ8nWnAtuwQ29FD8YstEGzJnBSbEWQfx8VNwlDB1a1GMjBCmU+Pj6SkneiW2x+tX13/76OojFSrLbPsf+K/4hGSZFMd933di2andDKKaVtEI2WHwsAurDnhao0tZjzwkBNLY5YnKIW4gCqQLdVdJsnoL6mOIFaAvV GcbyirkmgyljqzVNQEoFSNCGeONCWbqsJjrKJ3F6K59h2scfn5EfZMGT822KzFc3DTixQhXMwUmzb/iluB61QnbdNHJ7R7+rPa+zvOuoKzT/bvv0tmi+4YfOyWC4PG8CkHNi9vABAGnMCYC4ZACZgEmB4/7WLfw+FeHInBn91JTjiKKRLxK RzASUI9TQlW7OcpeK7gZJ2OUoYEksiVvinEfWVJEJpElO/z1kX1juu0rwAUCvOoJoZALgoGQZUFLgiiikVJc2PWZvV8jqrMgDTlCCEDCUUhankzS29hL9SROMydTHNsdI617281NNZc0P34jQozirArCNQuZoDZGQrBfCaAxR1bxZAAx8Pk DlZp8tAu1zhjYZ4uvTMSskZVtlQcEqMKGltcqeENoH3UkH3Xqns7Agc9ZJxN10nKshNqHH3QsFMvHL2+uJCMYf7xSj1/x+EHubBZRDH1eGW//DIQwhlIUAm81hdY615CI9S9Ktl/LgHn86w44yTp744KiWPgeGbLzGu0wfMjzf0rvb/AA==',
   },
 ]

@@ -202,7 +202,12 @@ export const ARCHIVE_ABILITIES: { [key: string]: RSArchive } = {
       'https://patchwiki.biligame.com/images/resonance/3/3f/tncuypkgva1jxwcuo6ap44hax69gt2t.png',
   },
   보호막: {
-    desc: '[보호막]을 펼쳐 모든 아군이 받는 피해를 감소시킵니다.(5초간 지속,시간 중첩 가능)',
+    desc: '[보호막]을 펼쳐 모든 아군이 받는 피해를 감소시킵니다.(5초간 지속,시간 중첩 가능)\n*[실드]와 같음, 게임사에서 용어 두개를 혼용중',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a7/lkz6x2ngpnvbo4tas94u4wzuzgce494.png',
+  },
+  실드: {
+    desc: '[실드]을 펼쳐 모든 아군이 받는 피해를 감소시킵니다.(5초간 지속,시간 중첩 가능)\n*[보호막]과 같음, 게임사에서 용어 두개를 혼용중',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/a/a7/lkz6x2ngpnvbo4tas94u4wzuzgce494.png',
   },
