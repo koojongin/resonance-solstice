@@ -132,13 +132,11 @@ export function RSHighlightedText({
               </div>
             }
           >
-            <span className="inline-flex bg-yellow-700">
-              <span
-                className={`cursor-pointer ff-dh text-[${textSize || 20}px] bg-cyan-800/70 text-white px-[5px] py-0 pt-[1px] rounded`}
-                onClick={() => router.push(`/characters/${character.originName}`)}
-              >
-                {part}
-              </span>
+            <span
+              className={`cursor-pointer ff-dh text-[${textSize || 20}px] bg-cyan-800/70 text-white px-[5px] py-0 pt-[1px] rounded`}
+              onClick={() => router.push(`/characters/${character.originName}`)}
+            >
+              {part}
             </span>
           </Tooltip>
         )

@@ -534,7 +534,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     characters: [
       {
         character: NICOLA,
-        equipments: ['이차 상전이', '공명체 섬유', '모노폴 마그네타'],
+        equipments: ['이차 상전이', '자각몽 섬유', '모노폴 마그네타'],
       },
       {
         character: NAYUTA,
@@ -1010,7 +1010,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
 [캐롤라인]: 파이어팀에서 [캐롤라인]의 주요 역할은 자신의 리더 스킬 드로우 효과를 통해 높은 빈도로 파이어팀에 많은 수의 카드 드로우를 제공하는 것입니다.
 
-<iframe className='aspect-[10/4] w-full' src="//player.bilibili.com/player.html?autoplay=0&isOutside=true&aid=112818120558886&bvid=BV19q8gepES8&cid=500001621454510&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+<iframe className='aspect-[10/4] w-full' src='//player.bilibili.com/player.html?autoplay=0&isOutside=true&aid=112818120558886&bvid=BV19q8gepES8&cid=500001621454510&p=1' scrolling='no' border='0' frameborder='no' framespacing='0' allowfullscreen='true'></iframe>
 `,
     descLink:
       'https://wiki.biligame.com/resonance/%E5%8D%A1%E5%A1%94%E6%96%AF%E9%9B%B7%E7%81%AB%E5%89%91',
@@ -1065,5 +1065,70 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     descLink: 'https://wiki.biligame.com/resonance/%E6%9F%AF%E7%8B%99%E5%8D%A1%E8%8B%94%E9%98%9F',
     autoPreset:
       'rVfBbtswDP0XnTVAoizJ8nWnAtuwQ29FD8YstEGzJnBSbEWQfx8VNwlDB1a1GMjBCmU+Pj6SkneiW2x+tX13/76OojFSrLbPsf+K/4hGSZFMd933di2andDKKaVtEI2WHwsAurDnhao0tZjzwkBNLY5YnKIW4gCqQLdVdJsnoL6mOIFaAvV GcbyirkmgyljqzVNQEoFSNCGeONCWbqsJjrKJ3F6K59h2scfn5EfZMGT822KzFc3DTixQhXMwUmzb/iluB61QnbdNHJ7R7+rPa+zvOuoKzT/bvv0tmi+4YfOyWC4PG8CkHNi9vABAGnMCYC4ZACZgEmB4/7WLfw+FeHInBn91JTjiKKRLxK RzASUI9TQlW7OcpeK7gZJ2OUoYEksiVvinEfWVJEJpElO/z1kX1juu0rwAUCvOoJoZALgoGQZUFLgiiikVJc2PWZvV8jqrMgDTlCCEDCUUhankzS29hL9SROMydTHNsdI617281NNZc0P34jQozirArCNQuZoDZGQrBfCaAxR1bxZAAx8Pk DlZp8tAu1zhjYZ4uvTMSskZVtlQcEqMKGltcqeENoH3UkH3Xqns7Agc9ZJxN10nKshNqHH3QsFMvHL2+uJCMYf7xSj1/x+EHubBZRDH1eGW//DIQwhlIUAm81hdY615CI9S9Ktl/LgHn86w44yTp744KiWPgeGbLzGu0wfMjzf0rvb/AA==',
+  },
+
+  {
+    id: '45',
+    title: '하이엔드 니콜라 (2025.01.21)',
+    leaderName: NICOLA.name,
+    characters: [
+      {
+        character: NICOLA,
+        equipments: ['이차 상전이', '자각몽 섬유', '모노폴 마그네타'],
+      },
+      {
+        character: CAROLINE,
+        equipments: ['에비서레이터MK0', '시뮬레이트 스타', '거짓신의 속삭임'],
+      },
+      {
+        character: NAYUTA,
+        equipments: ['공간 위치 측정기', '시뮬레이트 스타', '뫼비우스'],
+      },
+      {
+        character: STELLA,
+        equipments: ['에비서레이터MK0', '공간이동', '헐튼 풍선'],
+      },
+      {
+        character: TENNIE,
+        equipments: ['블루 일루전', '시뮬레이트 스타', '뫼비우스'],
+      },
+    ],
+    desc: `<div className='flex flex-col'>
+    <div className='text-red-600 ff-dh text-[20px]'>* 필수 최소 각성 니콜라★★, 캐롤라인★, 나유타★, 스텔라★★, 테니★★</div>
+    <div>해당 덱의 비용이 상당히 높고, 완전한 팀 구성이 없다면 처음부터 해당 덱을 구성하는것을 권장하지 않습니다.</div>
+    <div>단점으로 덱 세팅이 비싸고(비싼대비 효율이 떨어집니다), 생존성이 낮습니다.</div>
+    <div className='border flex flex-col items-start gap-[1px] p-[10px] rounded bg-white'>
+    <span className='text-blue-gray-900 ff-dh text-[30px]'>중요한 장비 옵션</span>
+    [니콜라]
+    <span className='flex flex-wrap gap-[4px]'>
+    <span className='border border-blue-gray-400 rounded px-[4px]'>+30 공격력</span>
+    <span className='border border-blue-gray-400 rounded px-[4px]'>[버리기] 명령 시 +공격력</span>
+    <span className='border border-blue-gray-400 rounded px-[4px]'>[레드카드] 사용시 공격력+%</span>
+    <span className='border border-blue-gray-400 rounded px-[4px]'>주는 최종 피해+%</span>
+    <span className='border border-blue-gray-400 rounded px-[4px]'>[드론] 키워드를 가진 카드가 입히는 피해+%</span>
+    </span>위 옵션중 아무것도 사용할 수 없는 경우 아래가 대안 옵션입니다.
+    <span className='flex flex-wrap gap-[4px]'>
+    <span className='border border-blue-gray-400 rounded px-[4px]'>[인뢰] 발동 확률 +% 증가</span>
+    <span className='border border-blue-gray-400 rounded px-[4px]'>[인뢰],[낙뢰],[우레]와 [천둥]의 [낙뢰] 피해 +% 증가</span>
+    </span>
+    <div className='mt-[8px]'>[캐롤라인]</div>
+    <span className='flex flex-wrap gap-[4px]'>
+    <span className='border border-blue-gray-400 rounded px-[4px]'>자신이 부여하는 [자화]의 지속 시간 x초 증가</span>
+    </span>
+    <div className='mt-[8px]'>그 외의 팀원</div>
+    <div>최소한 하나 [무적] 관련 속성, [테니]는 가장 낮은 우선순위를 갖습니다.</div>
+    <div className='mt-[8px]'>추가적 고급 옵션</div>
+    <span className='flex flex-wrap gap-[4px] items-center'>[니콜라] 외에도
+    <span className='border border-blue-gray-400 rounded px-[4px]'>[리더 스킬] 사용시 비용 회복</span>
+    <span className='border border-blue-gray-400 rounded px-[4px]'>카드를 버릴때 체력 회복</span>
+    <span className='border border-blue-gray-400 rounded px-[4px]'>자신의 스킬 카드 사용 시 체력 회복</span>
+    <span>를 사용해 덱을 강화 할 수 있습니다.</span>
+    </span>
+    </div>
+    </div>
+`,
+    descLink: 'https://wiki.biligame.com/resonance/%E5%A6%AE%E8%94%BB%E6%8B%89%E9%9B%B7%E9%98%9F',
+    autoPreset:
+      'rZZNT8MwDIb/S85FSpx+XzlNAsSB27RDRSM2MdjUDgGa9t+xW9icraTJtp3qJfXj+LWdbsXcVLVpRKkk/TRE4rlq6kl9X61FuRVKpvRvgRuiXyPVzEjkwYAi4SvqYKBzti1mhoaMGzl3AMwBJNwb8HBivsKhYDnQ3ODvQMoNHk 4q+QpzrWOWEMgyngPytovEqzHrW8zkw8ebKGUkmtXS3C3ajSin+1R3D5Cl/YPSRf8gs7+lIp9Fol60JMnT99qIUvf6/HraivZ1sVxO3mvz1a19tKbfh/GsPt9NM6m5tLj8WDUVRnSDG/p3cYPA7EilUNhIbKrmxWx6Jxj2olv+ 0/DgoSuP6WwXbR1MjJ9RCCKTPDlh2FEdiFQobgBlygaouABvAMl4BiD2B2ATnAHQAQCvFB15s4UnL2K4NvZ1xUTBavdQ3U1U2LTeROpJN5E6x01USmt/Is27KxDBSQSbmF9DR/cZ7ebCYT2iIw4mHmI3Ho6QkA/MDEcEgcT4lB grFUKEQKIcIGI1BBD1FXR0dwfYOqY+/WhPYRz13iOG7scrNLz0PxJd9iNJ1KNJVKoIIMrROe1DDGg/+oa5fMSAe8TYV8XoGB26i/JTaf+/i8aONFCJMvUH0HHDAZkKAOgzeglkACC+vJdk5u6lIyJWNn5ErjZz09D3KHrc/QA=',
   },
 ]
