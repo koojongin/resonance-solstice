@@ -153,7 +153,7 @@ export default function TierListPage2() {
           </Tooltip>
           <span>+더스틴 추가(25/03/06)</span>
         </div>
-        <div className="mt-[4px] flex gap-[4px] items-center cursor-pointer">
+        <div className="mt-[4px] flex flex-wrap gap-[4px] items-center cursor-pointer">
           <a href={EXTERNAL_USERS['1'].link} target="_blank">
             <div className="font-bold p-[4px] rounded inline-flex items-center gap-[4px] border bg-blue-gray-900 text-white">
               출처: @{EXTERNAL_USERS['1'].name}
@@ -183,6 +183,11 @@ export default function TierListPage2() {
                 </div>
               </MaterialTooltipBox>{' '}
               선택 가이드]
+            </GradientButton>
+          </a>
+          <a href="https://arca.live/b/resonance/130543812" target="_blank">
+            <GradientButton className="p-[4px] rounded inline-flex items-center gap-[4px]">
+              [픽업 뭐해요?]
             </GradientButton>
           </a>
         </div>
