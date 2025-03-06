@@ -78,7 +78,7 @@ export const JOSHUA: RSCharacter = {
 export const SOMMER: RSCharacter = {
   cores: [],
   originName: 'SOMMER',
-  name: 'Sommer',
+  name: '소마',
   faction: RS_FACTION.SOURCE_CITADEL,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
