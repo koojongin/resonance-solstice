@@ -767,43 +767,6 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   },
 
   {
-    id: '36',
-    title: '셔플 더 다크 아트 (2025.01.21)',
-    leaderName: NAYUTA.name,
-    characters: [
-      {
-        character: NAYUTA,
-        equipments: ['비트레이얼', '시뮬레이트 스타', '초인과의 주사위'],
-      },
-      {
-        character: AOBA,
-        equipments: ['비트레이얼', '시뮬레이트 스타', '초인과의 주사위'],
-      },
-      {
-        character: JOSHUA,
-        equipments: ['후회의 갈고리', '시뮬레이트 스타', '트라페조헤드론'],
-      },
-      {
-        character: RINA_F,
-        equipments: ['비트레이얼', '시뮬레이트 스타', '초인과의 주사위'],
-      },
-      {
-        character: TENNIE,
-        equipments: ['비트레이얼', '시뮬레이트 스타', '춘추합성인장'],
-      },
-    ],
-    desc: `완전한 생존 전문화를 갖춘 팀은 주로 고압 환경과 장기 전투에 사용됩니다.
-    일반적인 사업 운영에는 권장되지 않습니다.
-    교활함과 배신은 필수는 아니지만, 악마가 많을수록 더 빨리 나타납니다.
-    
-    [다크 아트] 셔플 초반에는 [아리나]가 쓰이겠지만, 압박이 커질수록 보스의 데미지가 너무 높아서 체력이 가득 찬 상태에서도 즉사할 수 있고, [아리나]의 회복도 잘 안 되기 때문에 여기서는 가장 안정적인 포지션을 가진 팀으로 전환합니다.`,
-    descLink:
-      'https://wiki.biligame.com/resonance/%E7%88%AC%E5%A1%94-%E6%B4%97%E7%89%8C%E6%9A%97%E8%89%BA',
-    autoPreset:
-      'pVdRj5swDP4veWZSnBACvO6p0u02aXub7gGNbIeua3vQapsq/vscQg9TKCWXPuHE8Wf7s530zKrm6+FjUZefdyz/WWwbE7F6vzUPVXNk+Xfg9qdF5D4kuA+hE/ch06zf0vAUsRdjOmOPp98s5xHbH59NbRc6qWoeTFG6BQL33C2y/A2L/UCFTfmpOLD8zIAniKMAFSInAMhBkAkfBJFyuqPJmTQjOzERhCYCaEF2MoIDmaDWUqoWUzXqjhqpKeooOSMV9VpRDxIUxJuBhHqtaaTUWmK9bl0WexrPbP9nZ+pNeckyEslOjflS1AUy9cFJ3/4dTGeneam2205ZSM5jYblDafApYsei/mWO7gRum9dTddhc4BhAaqPX7KmNQrAhATXBGlyxDM8A6HUArIsOMJETCKezK83f7ggJHotlDlGsDynO4qWQsNCnALbNVvMlbYJvAthGeH8ELmfo5XLO5Dhn8yzdRhSTnKXpOEkzJXix1Y8NbALVBlMlF6nic3H5tFYCeokqHDnvB+ipUneoGpc3Trzg6uOL1ZcGALiQRHanY8U4iSEs9UnUM/V2u97xPgieSmjDAzGdi9Evq2jHo1DsPTlFtM+C9YgxgAeP9o4Lbmex1M7x7GD07LbEIyT7CAhNokilB232bRBMm8g8StM+z8KvG58Y7TsrtBkgvjNixu2n3FC70l/o/+GO4u343iMtBjbqsctXpXTtNag1fgg/P+yz088PbCXW4r+BsmrsG7RPcvsf',
-  },
-
-  {
     id: '37',
     title: '조나아리+[아리나]',
     leaderName: NAYUTA.name,
@@ -1130,5 +1093,78 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     descLink: 'https://wiki.biligame.com/resonance/%E5%A6%AE%E8%94%BB%E6%8B%89%E9%9B%B7%E9%98%9F',
     autoPreset:
       'rZZNT8MwDIb/S85FSpx+XzlNAsSB27RDRSM2MdjUDgGa9t+xW9icraTJtp3qJfXj+LWdbsXcVLVpRKkk/TRE4rlq6kl9X61FuRVKpvRvgRuiXyPVzEjkwYAi4SvqYKBzti1mhoaMGzl3AMwBJNwb8HBivsKhYDnQ3ODvQMoNHk4q+QpzrWOWEMgyngPytovEqzHrW8zkw8ebKGUkmtXS3C3ajSin+1R3D5Cl/YPSRf8gs7+lIp9Fol60JMnT99qIUvf6/HraivZ1sVxO3mvz1a19tKbfh/GsPt9NM6m5tLj8WDUVRnSDG/p3cYPA7EilUNhIbKrmxWx6Jxj2olv+0/DgoSuP6WwXbR1MjJ9RCCKTPDlh2FEdiFQobgBlygaouABvAMl4BiD2B2ATnAHQAQCvFB15s4UnL2K4NvZ1xUTBavdQ3U1U2LTeROpJN5E6x01USmt/Is27KxDBSQSbmF9DR/cZ7ebCYT2iIw4mHmI3Ho6QkA/MDEcEgcT4lBgrFUKEQKIcIGI1BBD1FXR0dwfYOqY+/WhPYRz13iOG7scrNLz0PxJd9iNJ1KNJVKoIIMrROe1DDGg/+oa5fMSAe8TYV8XoGB26i/JTaf+/i8aONFCJMvUH0HHDAZkKAOgzeglkACC+vJdk5u6lIyJWNn5ErjZz09D3KHrc/QA=',
+  },
+
+  {
+    id: '36',
+    title: '셔플 더 다크 아트 (2025.01.21)',
+    leaderName: NAYUTA.name,
+    characters: [
+      {
+        character: NAYUTA,
+        equipments: ['비트레이얼', '시뮬레이트 스타', '초인과의 주사위'],
+      },
+      {
+        character: AOBA,
+        equipments: ['비트레이얼', '시뮬레이트 스타', '초인과의 주사위'],
+      },
+      {
+        character: JOSHUA,
+        equipments: ['후회의 갈고리', '시뮬레이트 스타', '트라페조헤드론'],
+      },
+      {
+        character: RINA_F,
+        equipments: ['비트레이얼', '시뮬레이트 스타', '초인과의 주사위'],
+      },
+      {
+        character: TENNIE,
+        equipments: ['비트레이얼', '시뮬레이트 스타', '춘추합성인장'],
+      },
+    ],
+    desc: `<div className='flex flex-col gap-[4px]'>
+    <div className='ff-dh text-[20px] text-red-400'>최소 요구 각성: 아오바★★</div>
+    <div className='ff-dh text-[20px] text-blue-400'>권장 요구 각성: 아오바★★★★★, 조슈아★★★★★, 리나 본★★★★★</div>
+    <div className='text-[20px] mt-[20px]'>추천 장비 옵션</div>
+    <div className='flex flex-wrap gap-[4px]'>
+    <span className='border border-blue-gray-400 rounded px-[4px]'>[리더 스킬]사용 시 공격력 증가</span>
+    <span className='border border-blue-gray-400 rounded px-[4px]'>[레드카드] 사용할 때마다 공격력 +% 증가</span>
+    <span className='border border-blue-gray-400 rounded px-[4px]'>모든 확률형 메커니즘 발동확률 +% 증가</span>
+    <span className='border border-blue-gray-400 rounded px-[4px]'>카드를 1장 버릴 때마다 체력 +% 증가</span>
+    </div>
+    
+    <div className='text-[20px] mt-[20px]'>초반 저레벨 장비 대안</div>
+    <div className='flex flex-wrap gap-[4px]'>
+    <div className='flex flex-wrap gap-[4px] items-center justify-start border border-blue-gray-800 p-[4px]'>
+    [나유타][에비서레이터MK0][뫼비우스]
+    </div>
+    <div className='flex flex-wrap gap-[4px] items-center justify-start border border-blue-gray-800 p-[4px]'>
+    [아오바][에비서레이터MK0][해리슨 장치]
+    </div>
+    <div className='flex flex-wrap gap-[4px] items-center justify-start border border-blue-gray-800 p-[4px]'>
+    [조슈아][뫼비우스]
+    </div>
+    <div className='flex flex-wrap gap-[4px] items-center justify-start border border-blue-gray-800 p-[4px]'>
+    [리나 본][에비서레이터MK0]
+    </div>
+    <div className='flex flex-wrap gap-[4px] items-center justify-start border border-blue-gray-800 p-[4px]'>
+    [테니][에비서레이터MK0]
+    </div>
+    </div>
+    
+    <div className='mt-[20px]'>생존을 극한으로 끌어올린 조합입니다.
+    하드 콘텐츠와 장기전에 사용됩니다.
+    일반적인 전투에는 비추천합니다.
+    [비트레이얼]은 필수는 아니지만, 많을수록 [다크 아트]가 더 빨리 등장합니다.
+    
+    덱풀이 적을때는 [다크 아트] 순환을 위해 [아리나]를 채용할 순 있지만, 하드 컨텐츠로 갈수록 전투 압박이 심해지고 보스의 데미지도 높아져 체력이 가득 찬 상태에서도 즉사할 수 있습니다.
+    [아리나]의 회복도 효과를 보기 힘들기 때문에 그 시점에는 치유,방어 계열의 버프가 많은 조합으로 변경하는 것이 좋습니다.
+    </div>
+    </div>
+    <iframe className='aspect-[10/4] w-full' src='//player.bilibili.com/player.html?autoplay=0&isOutside=true&aid=1406330490&bvid=BV18r421M75c&cid=1629175623&p=1' scrolling='no' border='0' frameborder='no' framespacing='0' allowfullscreen='true'></iframe>
+    `,
+    descLink:
+      'https://wiki.biligame.com/resonance/%E7%88%AC%E5%A1%94-%E6%B4%97%E7%89%8C%E6%9A%97%E8%89%BA',
+    autoPreset:
+      'pVdRj5swDP4veWZSnBACvO6p0u02aXub7gGNbIeua3vQapsq/vscQg9TKCWXPuHE8Wf7s530zKrm6+FjUZefdyz/WWwbE7F6vzUPVXNk+Xfg9qdF5D4kuA+hE/ch06zf0vAUsRdjOmOPp98s5xHbH59NbRc6qWoeTFG6BQL33C2y/A2L/UCFTfmpOLD8zIAniKMAFSInAMhBkAkfBJFyuqPJmTQjOzERhCYCaEF2MoIDmaDWUqoWUzXqjhqpKeooOSMV9VpRDxIUxJuBhHqtaaTUWmK9bl0WexrPbP9nZ+pNeckyEslOjflS1AUy9cFJ3/4dTGeneam2205ZSM5jYblDafApYsei/mWO7gRum9dTddhc4BhAaqPX7KmNQrAhATXBGlyxDM8A6HUArIsOMJETCKezK83f7ggJHotlDlGsDynO4qWQsNCnALbNVvMlbYJvAthGeH8ELmfo5XLO5Dhn8yzdRhSTnKXpOEkzJXix1Y8NbALVBlMlF6nic3H5tFYCeokqHDnvB+ipUneoGpc3Trzg6uOL1ZcGALiQRHanY8U4iSEs9UnUM/V2u97xPgieSmjDAzGdi9Evq2jHo1DsPTlFtM+C9YgxgAeP9o4Lbmex1M7x7GD07LbEIyT7CAhNokilB232bRBMm8g8StM+z8KvG58Y7TsrtBkgvjNixu2n3FC70l/o/+GO4u343iMtBjbqsctXpXTtNag1fgg/P+yz088PbCXW4r+BsmrsG7RPcvsf',
   },
 ]

@@ -119,7 +119,7 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
   },
   '다크 아트': {
     name: '다크 아트',
-    desc: '자신의 슼리 카드 사용 시 50% 확률로 [다크 아트]를 1장 생성하여 손으로 가져옵니다.',
+    desc: '자신의 스킬 카드 사용 시 50% 확률로 [다크 아트]를 1장 생성하여 손으로 가져옵니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/2/25/dp83oo7xs1zofccsdnkotz9oipnp59i.png',
   },

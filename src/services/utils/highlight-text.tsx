@@ -11,11 +11,15 @@ import { RSCharacter } from '@/const/character/character.interface'
 import { CharacterThumbnailBox } from '@/app/components/character-frame/character-thumbnail-box'
 import parse from 'html-react-parser'
 import { CHARACTER_AWAKENINGS } from '@/const/character/character-awakening.const'
+import { ALL_EQUIPMENTS } from '@/const/archive/equipment.const'
+import { EquipmentBoxResponsive } from '@/app/equipments/rs-equipment-list'
+import { EquipmentTooltipContent } from '@/app/components/deck/equipment-tooltip-box'
 
 const TOTAL_ARCHIVE_WITH_RESONANCE = {
   ...TOTAL_ARCHIVE_MAP,
   ...CHARACTER_AWAKENINGS,
   ...CHARACTER_RESONANCES,
+  ...ALL_EQUIPMENTS,
 }
 
 const CHARACTER_KR_DICT: { [key: string]: RSCharacter } = RS_CHARACTERS.reduce((prev, next) => {
@@ -94,6 +98,44 @@ export function RSHighlightedText({
         classNameOfPart = NOT_SETTED_PART_COLOR
       }
 
+      const character = CHARACTER_KR_DICT[part]
+      if (character) {
+        return (
+          <Tooltip
+            key={index}
+            className="bg-transparent p-0 m-0 rounded-none"
+            content={
+              <div className="">
+                <CharacterThumbnailBox character={character} />
+              </div>
+            }
+          >
+            <span
+              className={`cursor-pointer ff-dh text-[${textSize || 20}px] bg-cyan-800/70 text-white px-[5px] py-0 pt-[1px] rounded`}
+              onClick={() => router.push(`/characters/${character.originName}`)}
+            >
+              {part}
+            </span>
+          </Tooltip>
+        )
+      }
+      const equipment = ALL_EQUIPMENTS[part]
+      if (equipment) {
+        const extendedEquipment = { name: part, ...equipment }
+        return (
+          <Tooltip
+            key={index}
+            className="bg-transparent p-0 m-0 rounded-none"
+            interactive
+            content={<EquipmentTooltipContent equipment={extendedEquipment} />}
+          >
+            <div className="w-[50px] inline-block cursor-pointer">
+              <EquipmentBoxResponsive equipment={extendedEquipment} />
+            </div>
+          </Tooltip>
+        )
+      }
+
       if (classNameOfPart) {
         return (
           <Tooltip
@@ -115,28 +157,6 @@ export function RSHighlightedText({
               onClick={() => router.push(`/archive/${part}`)}
             >
               [{part}]
-            </span>
-          </Tooltip>
-        )
-      }
-
-      const character = CHARACTER_KR_DICT[part]
-      if (character) {
-        return (
-          <Tooltip
-            key={index}
-            className="bg-transparent p-0 m-0 rounded-none"
-            content={
-              <div className="">
-                <CharacterThumbnailBox character={character} />
-              </div>
-            }
-          >
-            <span
-              className={`cursor-pointer ff-dh text-[${textSize || 20}px] bg-cyan-800/70 text-white px-[5px] py-0 pt-[1px] rounded`}
-              onClick={() => router.push(`/characters/${character.originName}`)}
-            >
-              {part}
             </span>
           </Tooltip>
         )
