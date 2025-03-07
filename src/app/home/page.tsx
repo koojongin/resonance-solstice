@@ -34,6 +34,10 @@ export default function HomePage() {
       period: '3월 3일 00:00 ~ 3월 5일 23:59',
       code: 'RSCONTENT',
     },
+    {
+      period: '알수없음',
+      code: 'RS0306',
+    },
   ].reverse()
   return (
     <div className="flex flex-col gap-[10px]">
