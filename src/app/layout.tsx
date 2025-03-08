@@ -19,11 +19,6 @@ const doHyeonKr = Do_Hyeon({
   weight: ['400'],
 })
 
-export const metadata: Metadata = {
-  title: '레조넌스',
-  description: '레조넌스',
-}
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -32,6 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <title>레조넌스: 솔스티스 정보 공유 사이트</title>
         <meta name="application-name" content="레조넌스: 솔스티스 정보 공유 사이트" />
         <meta name="og:site_name" content="레조넌스: 솔스티스 정보 공유 사이트" />
         <meta name="description" content="레조넌스: 솔스티스 정보 공유 사이트" />
@@ -40,6 +36,7 @@ export default function RootLayout({
         <meta property="title" content="레조넌스: 솔스티스 정보 공유 사이트" />
         <meta name="robots" content="index, follow" />
         <meta name="thumbnail" content="https://res.ujoygames.com/krImg/kv.jpg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           property="og:image"
           content="https://res.cloudinary.com/dqihpypxi/image/upload/v1739699861/resonance/etc/banner_001_bkltao.png"
@@ -73,10 +70,6 @@ export default function RootLayout({
           <GoogleAnalyticsComponent />
         )}
         <Analytics />
-        {/* <div */}
-        {/*  className="bg-center bg-cover min-w-full h-full absolute -z-10 opacity-10 bg-repeat" */}
-        {/*  style={{ backgroundImage: `url('/img/bg-low.jpg')` }} */}
-        {/* /> */}
         <div className="flex flex-col w-full">
           <div className="w-full bg-[#3d414d]">
             <div className="w-[980px] m-auto py-[10px]">

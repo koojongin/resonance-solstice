@@ -78,9 +78,6 @@ export function RecommendationDeckCard({ deck }: { deck: RecommendationDeck }) {
                   </div>
                 )}
                 <RsCharacterCard size={RsCardSize.RESPONSIVE} character={character} height={120} />
-                {/* <div className="h-[30px] py-[4px] flex items-center justify-center"> */}
-                {/*   <img src={getColumnUrl(character.column)} className="h-full" /> */}
-                {/* </div> */}
                 <RsEquipmentCard equipments={equipments || []} />
               </div>
             )

@@ -9,6 +9,9 @@ module.exports = withMT({
     './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens: {
+      sm: '300px',
+    },
     extend: {
       boxShadow: {
         outline: '1px 1px 0 black, -1px 1px 0 black, 1px -1px 0 black, -1px -1px 0 black', // 작은 텍스트용 외곽선

@@ -146,7 +146,7 @@ export default function MainSideBar() {
   ]
 
   return (
-    <div className="relative z-[100] py-[10px] text-[22px] flex cursor-pointer border-b border-gray-300 mb-[10px] ff-dh text-[18px] text-blue-gray-800">
+    <div className="sm:flex-wrap relative z-[100] py-[10px] text-[22px] flex cursor-pointer border-b border-gray-300 mb-[10px] ff-dh text-[18px] text-blue-gray-800">
       {menuItems.map((menu) => (
         <div
           key={menu.label}

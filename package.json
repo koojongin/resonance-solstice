@@ -7,7 +7,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prod": "http-server .next"
   },
   "author": "",
   "license": "ISC",
@@ -49,6 +50,7 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "postcss": "^8.5.2",
     "prettier": "^3.4.1",
+    "serve": "^14.2.4",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.7.2"
   }
