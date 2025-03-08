@@ -29,35 +29,17 @@ import { convertCharacterThumbnailUrl, getFrameBgUrl } from '@/services/characte
 import { RECOMMENDATION_ES_DECKS } from '@/app/rd/eternal-scuffle/rd-eternal-scuffle.const'
 import createKey from '@/services/key-generator'
 import { RSHighlightedText } from '@/services/utils/highlight-text'
+import { RdEternalScuffleList } from '@/app/rd/eternal-scuffle/rd-eternal-scuffle-list'
+import { debounce } from 'lodash'
 
-const eternalScuffleCharacters = [
-  NAYUTA,
-  NICOLA,
-  SOMMER,
-  KATAS,
-  DUSTIN,
-  JOSHUA,
-  TENNIE,
-  CAROLINE,
-  CONNOR,
-  WENSHENG,
-  VERLAINE,
-  SUEN,
-  STELLA,
-  ARINA,
-  ANFIYA,
-  MARGIELA,
-  ILONA,
-]
-const eternalScuffleCharacterNames = new Set(eternalScuffleCharacters.map((c) => c.name))
-const TOTAL_DECKS = [...RECOMMENDATION_DECKS, ...RECOMMENDATION_ES_DECKS]
-const filteredDecks = TOTAL_DECKS.filter(
-  (deck) =>
-    deck.characters.filter((data) => eternalScuffleCharacterNames.has(data.character.name))
-      .length >= 5,
-)
 export default function RdEternalScufflePage() {
   const [isVisibleGuideBox, setIsVisibleGuideBox] = useState(false)
+  const [searchedKeyword, setSearchedKeyword] = useState('')
+
+  const handleSearchedKeywordChange = debounce((event: any) => {
+    setSearchedKeyword(event.target.value)
+  }, 300)
+
   return (
     <div className="flex flex-col gap-[10px]">
       <div className="flex flex-col gap-[10px]">
@@ -103,64 +85,30 @@ export default function RdEternalScufflePage() {
         </motion.div>
       </div>
 
-      <div>
-        {filteredDecks.length.toLocaleString()}개의 덱 - 아래 조합이 무조건 좋다가 아닌 구성을
-        이렇게도 할수있다 정도로 참고 해주세요. (왠만하면 소마를 포함한 덱이 클리어율이 높습니다)
+      <div className="ff-dh text-red-400 text-[18px] flex flex-col gap-[2px]">
+        <div>* 아래 조합이 무조건 좋다x</div>
+        <div>
+          구성을 이렇게도 할수있다 정도로 참고 해주세요. (왠만하면{' '}
+          <span className="underline bg-green-300 text-white px-[4px] py-[1px] text-[30px]">
+            소마
+          </span>
+          를 포함한 덱이 클리어율이 높습니다)
+        </div>
       </div>
 
-      <div className="flex flex-wrap gap-[4px]">
-        {filteredDecks.map((deck) => {
-          const { leaderName } = deck
-          return (
-            <div
-              key={createKey()}
-              className="flex flex-col w-[312px] gap-[2px] p-[4px] bg-gray-500 hover:drop-shadow-2xl hover:bg-blue-gray-500 hover:shadow-xl hover:shadow-blue-500/20"
-            >
-              <div className="flex gap-[2px] bg-blue-gray-200">
-                {deck.characters.map((characterData) => {
-                  const { character } = characterData
-                  const isLeader = leaderName === character.name
-                  return (
-                    <Link
-                      key={createKey()}
-                      href={`/characters/${character.originName}`}
-                      className="overflow-hidden"
-                    >
-                      <Tooltip content={<div>{character.name}</div>}>
-                        <div className="w-[60px] h-[60px] relative overflow-hidden">
-                          <div className="absolute w-full h-full z-40 opacity-90">
-                            <RsCharacterBorderBox grade={character.grade} borderSize={3} />
-                          </div>
-                          <img
-                            src={getFrameBgUrl(character.grade)}
-                            className="z-0 w-full h-full absolute"
-                          />
-                          <div
-                            className="min-h-full min-w-full bg-cover bg-no-repeat relative"
-                            style={{
-                              backgroundImage: `url(${convertCharacterThumbnailUrl(character.thumbnail, 100)})`,
-                            }}
-                          />
-                          {isLeader && (
-                            <div className="absolute bottom-0 w-full text-center text-white ff-dh text-[20px] text-shadow-outline">
-                              리더
-                            </div>
-                          )}
-                        </div>
-                      </Tooltip>
-                    </Link>
-                  )
-                })}
-              </div>
-              <Link href={`/rd/detail/${deck.id}`} className="hover:underline">
-                <div className="text-white ff-dh truncate w-full text-[20px] px-[10px] py-[4px] pb-0 text-center">
-                  {deck.title}
-                </div>
-              </Link>
-            </div>
-          )
-        })}
+      <div className="flex items-center gap-[10px]">
+        <div>검색:</div>
+        <input
+          className="border border-gray-400 min-w-[300px] p-[4px]"
+          type="text"
+          onChange={handleSearchedKeywordChange}
+          placeholder="승무원 이름을 검색하세요."
+        />
       </div>
+
+      <>
+        <RdEternalScuffleList searchedKeyword={searchedKeyword} />
+      </>
     </div>
   )
 }

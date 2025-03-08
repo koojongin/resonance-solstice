@@ -73,4 +73,24 @@ export const RECOMMENDATION_ES_DECKS: RecommendationDeck[] = [
     desc: '무한난투 덱',
     descLink: '',
   },
+  {
+    id: '10004',
+    title: '무한난투 - 소마',
+    leaderName: SOMMER.name,
+    characters: [
+      { character: SOMMER },
+      { character: VERLAINE },
+      { character: ARINA },
+      { character: STELLA },
+      { character: MARGIELA },
+    ],
+    desc: `덱 돌리는 우선순위
+    1) 0코스트 스킬
+    1-2) [베를렌] 0코스트 회복([별의 꿈])을 가장 앞에 배치
+    2) [스텔라] [뭇별]
+    3) 탱킹 스킬
+    4) 낮은 코스트 난사
+    5) 카드 드로우`,
+    descLink: '',
+  },
 ]
