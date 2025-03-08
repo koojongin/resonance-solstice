@@ -9,7 +9,7 @@ import {
   RsEquipmentCard,
 } from '@/app/components/character-frame/rs-character-card'
 import { RsCardSize } from '@/app/components/character-frame/rs-card-size.enum'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { copyToClipboard } from '@/services/utils/copy-clipboard'
 import { Tooltip } from '@material-tailwind/react'
 import Link from 'next/link'
@@ -49,6 +49,8 @@ export default function RecommendationDeckDetailPage() {
       }
     })
     .filter((c) => c.recommendationEquipments.length > 0)
+
+  useEffect(() => {}, [])
   return (
     <div className="flex flex-col gap-[10px]">
       <div className="ff-dh text-[30px] bg-gray-100 p-[10px] pb-[8px] border-y border-gray-500 flex items-center gap-[4px]">
@@ -248,17 +250,20 @@ export default function RecommendationDeckDetailPage() {
         </div>
         <div className="flex flex-wrap gap-[10px]">
           {relatedDecks &&
-            relatedDecks.map((relatedDeck) => {
+            relatedDecks.map((relatedDeck, index) => {
               return (
-                <Link key={createKey()} href={`/rd/detail/${relatedDeck.id}`}>
-                  <div className="w-[312px] bg-gray-500 rounded overflow-hidden p-[2px] pb-0 shadow-md hover:drop-shadow-2xl hover:bg-blue-gray-500 hover:shadow-xl hover:shadow-blue-500/20">
+                <div
+                  key={`rd_${relatedDeck.id}_${index}`}
+                  className="w-[312px] bg-gray-500 rounded overflow-hidden p-[2px] pb-0 shadow-md hover:drop-shadow-2xl hover:bg-blue-gray-500 hover:shadow-xl hover:shadow-blue-500/20"
+                >
+                  <Link href={`/rd/detail/${relatedDeck.id}`}>
                     <div className="flex flex-wrap gap-[2px]">
-                      {relatedDeck.characters.map((characterData) => {
+                      {relatedDeck.characters.map((characterData, cIndex) => {
                         const { character } = characterData
                         const isLeader = character.name === relatedDeck.leaderName
                         return (
                           <div
-                            key={createKey()}
+                            key={`rd_${relatedDeck.id}_${cIndex}`}
                             className="w-[60px] h-[60px] relative overflow-hidden"
                           >
                             <div className="absolute w-full h-full z-40 opacity-90">
@@ -279,10 +284,10 @@ export default function RecommendationDeckDetailPage() {
                                 리더
                               </div>
                             )}
-                            {/* <div */}
-                            {/*   className="min-h-full min-w-full bg-cover" */}
-                            {/*   style={{ backgroundImage: `url(${character.thumbnailLarge})` }} */}
-                            {/* /> */}
+                            <div
+                              className="min-h-full min-w-full bg-cover"
+                              style={{ backgroundImage: `url(${character.thumbnailLarge})` }}
+                            />
                           </div>
                         )
                       })}
@@ -290,8 +295,8 @@ export default function RecommendationDeckDetailPage() {
                     <div className="text-white ff-dh truncate w-full text-[20px] px-[10px] py-[4px] text-center">
                       {relatedDeck.title}
                     </div>
-                  </div>
-                </Link>
+                  </Link>
+                </div>
               )
             })}
         </div>

@@ -9,11 +9,13 @@ import { CHARACTER_RESONANCES } from '@/const/character/character-resonance.cons
 import { RS_CHARACTERS } from '@/const/character/character.const'
 import { RSCharacter } from '@/const/character/character.interface'
 import { CharacterThumbnailBox } from '@/app/components/character-frame/character-thumbnail-box'
-import parse from 'html-react-parser'
+import parse, { DOMNode, domToReact } from 'html-react-parser'
 import { CHARACTER_AWAKENINGS } from '@/const/character/character-awakening.const'
 import { ALL_EQUIPMENTS } from '@/const/archive/equipment.const'
 import { EquipmentBoxResponsive } from '@/app/equipments/rs-equipment-list'
 import { EquipmentTooltipContent } from '@/app/components/deck/equipment-tooltip-box'
+import Link from 'next/link'
+import { isTag } from 'domhandler'
 
 const TOTAL_ARCHIVE_WITH_RESONANCE = {
   ...TOTAL_ARCHIVE_MAP,
@@ -28,6 +30,21 @@ const CHARACTER_KR_DICT: { [key: string]: RSCharacter } = RS_CHARACTERS.reduce((
     [next.name]: next,
   }
 }, {})
+
+const options = {
+  replace: (domNode: any) => {
+    if (domNode.name === 'link') {
+      const href = domNode.attribs?.href
+
+      // `domNode.children`에서 텍스트 노드를 처리하여 반환
+      const children = domNode.children?.map((child: any) =>
+        child.type === 'text' ? child.data : domToReact(child),
+      )
+
+      return <Link href={href}>{children}</Link>
+    }
+  },
+}
 
 export function RSHighlightedText({
   text,
@@ -86,7 +103,7 @@ export function RSHighlightedText({
   const regex = /\[([^\]]+)\]/g
 
   const handleHTMLTags = (hText: string) => {
-    return parse(hText)
+    return parse(hText, options)
   }
 
   const formatHighlightText = (hText: string) => {

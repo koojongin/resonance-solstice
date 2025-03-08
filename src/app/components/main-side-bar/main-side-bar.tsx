@@ -118,6 +118,11 @@ export default function MainSideBar() {
       label: '이벤트',
       subMenu: [
         {
+          label: '홍차전쟁',
+          path: '/event/black-tea-war',
+          className: 'text-[18px]',
+        },
+        {
           label: '마이레일',
           path: '/event/my-rail-transport',
           className: 'text-[18px]',

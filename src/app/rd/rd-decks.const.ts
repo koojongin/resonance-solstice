@@ -1064,22 +1064,28 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     <span className='text-blue-gray-900 ff-dh text-[30px]'>중요한 장비 옵션</span>
     [니콜라]
     <span className='flex flex-wrap gap-[4px]'>
-    <span className='border border-blue-gray-400 rounded px-[4px]'>+30 공격력</span>
-    <span className='border border-blue-gray-400 rounded px-[4px]'>[버리기] 명령 시 +공격력</span>
-    <span className='border border-blue-gray-400 rounded px-[4px]'>[레드카드] 사용시 공격력+%</span>
-    <span className='border border-blue-gray-400 rounded px-[4px]'>주는 최종 피해+%</span>
-    <span className='border border-blue-gray-400 rounded px-[4px]'>[드론] 키워드를 가진 카드가 입히는 피해+%</span>
-    </span>위 옵션중 아무것도 사용할 수 없는 경우 아래가 대안 옵션입니다.
-    <span className='flex flex-wrap gap-[4px]'>
-    <span className='border border-blue-gray-400 rounded px-[4px]'>[인뢰] 발동 확률 +% 증가</span>
-    <span className='border border-blue-gray-400 rounded px-[4px]'>[인뢰],[낙뢰],[우레]와 [천둥]의 [낙뢰] 피해 +% 증가</span>
+      <span className='border border-blue-gray-400 rounded px-[4px]'>+30 공격력</span>
+      <span className='border border-blue-gray-400 rounded px-[4px]'>[버리기] 명령 시 +공격력</span>
+      <span className='border border-blue-gray-400 rounded px-[4px]'>[레드카드] 사용시 공격력+%</span>
+      <span className='border border-blue-gray-400 rounded px-[4px]'>주는 최종 피해+%</span>
+      <span className='border border-blue-gray-400 rounded px-[4px]'>[드론] 키워드를 가진 카드 사용 시 공격력+%</span>
+      <span className='border border-blue-gray-400 rounded px-[4px]'>[드론] 키워드를 가진 카드가 입히는 피해+%</span>
     </span>
+    <a href='https://arca.live/b/resonance/130470153' target='_blank' className='underline text-blue-400'>[옵션 상세공략 바로가기]</a>
+    <div>위 옵션중 아무것도 사용할 수 없는 경우 아래가 대안 옵션입니다.</div>
+    <span className='flex flex-wrap gap-[4px]'>
+      <span className='border border-blue-gray-400 rounded px-[4px]'>[인뢰] 발동 확률 +% 증가</span>
+      <span className='border border-blue-gray-400 rounded px-[4px]'>[인뢰],[낙뢰],[우레]와 [천둥]의 [낙뢰] 피해 +% 증가</span>
+    </span>
+    
     <div className='mt-[8px]'>[캐롤라인]</div>
-    <span className='flex flex-wrap gap-[4px]'>
-    <span className='border border-blue-gray-400 rounded px-[4px]'>자신이 부여하는 [자화]의 지속 시간 x초 증가</span>
+      <span className='flex flex-wrap gap-[4px]'>
+      <span className='border border-blue-gray-400 rounded px-[4px]'>자신이 부여하는 [자화]의 지속 시간 x초 증가</span>
     </span>
+    
     <div className='mt-[8px]'>그 외의 팀원</div>
     <div>최소한 하나 [무적] 관련 속성, [테니]는 가장 낮은 우선순위를 갖습니다.</div>
+    
     <div className='mt-[8px]'>추가적 고급 옵션</div>
     <span className='flex flex-wrap gap-[4px] items-center'>[니콜라] 외에도
     <span className='border border-blue-gray-400 rounded px-[4px]'>[리더 스킬] 사용시 비용 회복</span>
