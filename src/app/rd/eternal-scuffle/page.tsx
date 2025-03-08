@@ -82,11 +82,13 @@ export default function RdEternalScufflePage() {
                 소모됩니다.
               </div>
               <div className="whitespace-pre-line leading-tight">
-                * 클리어시 [철도연맹 코인],[랜덤 장비],[교환 상점 코인]을 랜덤하게 획득합니다.
+                * 클리어시 [교환 상점 코인] + [철도연맹 코인],[랜덤 장비]을 랜덤하게 획득합니다.
                 <br />
-                <span className="font-bold">※ 각 단계 당 상자 1개</span>
-                <br />* 보상 결과에서 [철도연맹 코인]이 걸릴 확률이 가장 높은듯 8단계까지가면 보통
-                30만원짜리 두개 정도 나오는 것같음
+                <span className="font-bold">※ 각 단계 당 랜덤상자 1개</span>
+                <br />* 클리어 후 랜덤상자에서 [철도연맹 코인]이 걸릴 확률이 가장 높은듯
+                8단계까지가면 보통 30만원짜리 두개 정도 나오는 것 같음.
+                <br />
+                상자 1개는 반드시 [교환 상점 코인] 같음.
               </div>
               <div className="ff-dh text-[20px] mt-[15px]">예시 클리어 결과 이미지</div>
               <img src="https://nng-phinf.pstatic.net/MjAyNTAzMDdfMTAz/MDAxNzQxMzE3MTgwNDM4.Bq-gFzyggZQVHFy1SxXIfb7Albch9JoyhgfMktO21KMg._Gu7TThTJLMAfuT9Dz81lmPFM3yvbcJc0cwPYYUV0GMg.JPEG/KakaoTalk_20250307_120800107_01.jpg?type=w1678" />
