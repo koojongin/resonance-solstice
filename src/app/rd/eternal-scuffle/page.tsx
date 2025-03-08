@@ -103,7 +103,10 @@ export default function RdEternalScufflePage() {
         </motion.div>
       </div>
 
-      <div>{filteredDecks.length.toLocaleString()}개의 덱</div>
+      <div>
+        {filteredDecks.length.toLocaleString()}개의 덱 - 아래 조합이 무조건 좋다가 아닌 구성을
+        이렇게도 할수있다 정도로 참고 해주세요. (왠만하면 소마를 포함한 덱이 클리어율이 높습니다)
+      </div>
 
       <div className="flex flex-wrap gap-[4px]">
         {filteredDecks.map((deck) => {
