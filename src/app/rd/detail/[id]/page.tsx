@@ -50,7 +50,6 @@ export default function RecommendationDeckDetailPage() {
     })
     .filter((c) => c.recommendationEquipments.length > 0)
 
-  useEffect(() => {}, [])
   return (
     <div className="flex flex-col gap-[10px]">
       <div className="ff-dh text-[30px] bg-gray-100 p-[10px] pb-[8px] border-y border-gray-500 flex items-center gap-[4px]">

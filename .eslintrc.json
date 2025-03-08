@@ -30,7 +30,6 @@
     "next.config.ts"
   ],
   "rules": {
-    "import/extensions": "off",
     "react/no-unescaped-entities": "off",
     "no-console": "off",
     "jsx-a11y/no-static-element-interactions": "off",
