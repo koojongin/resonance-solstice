@@ -1,0 +1,76 @@
+import {
+  ANFIYA,
+  AOBA,
+  ARINA,
+  CONNOR,
+  DUSTIN,
+  ILONA,
+  JOSHUA,
+  MARGIELA,
+  NAYUTA,
+  RINA_F,
+  SOMMER,
+  STELLA,
+  TENNIE,
+  VERLAINE,
+} from '@/const/character/character.const'
+import { RecommendationDeck } from '@/app/rd/rd-decks.const'
+
+export const RECOMMENDATION_ES_DECKS: RecommendationDeck[] = [
+  {
+    id: '10000',
+    title: '무한난투 - 소마 덱1',
+    leaderName: SOMMER.name,
+    characters: [
+      { character: SOMMER },
+      { character: JOSHUA },
+      { character: STELLA },
+      { character: ILONA },
+      { character: DUSTIN },
+    ],
+    desc: '무한난투 덱',
+    descLink: '',
+  },
+  {
+    id: '10001',
+    title: '무한난투 - 퍼플카드 마키라 덱 2',
+    leaderName: MARGIELA.name,
+    characters: [
+      { character: MARGIELA },
+      { character: ARINA },
+      { character: STELLA },
+      { character: VERLAINE },
+      { character: JOSHUA },
+    ],
+    desc: '무한난투 덱',
+    descLink: '',
+  },
+  {
+    id: '10002',
+    title: '무한난투 - 블루카드 코나 덱',
+    leaderName: CONNOR.name,
+    characters: [
+      { character: CONNOR },
+      { character: TENNIE },
+      { character: STELLA },
+      { character: ILONA },
+      { character: NAYUTA },
+    ],
+    desc: '무한난투 덱',
+    descLink: '',
+  },
+  {
+    id: '10003',
+    title: '무한난투 - 블루카드 코나 덱 2',
+    leaderName: CONNOR.name,
+    characters: [
+      { character: CONNOR },
+      { character: ANFIYA },
+      { character: TENNIE },
+      { character: STELLA },
+      { character: ILONA },
+    ],
+    desc: '무한난투 덱',
+    descLink: '',
+  },
+]

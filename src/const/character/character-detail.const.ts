@@ -111,7 +111,24 @@ export const CHARACTER_DETAIL: {
       5: '유혹',
     },
   },
-  SOMMER: {},
+  SOMMER: {
+    SKILLS: ['피의 이빨', '피의 함성', '다크 아트', '피의 잠식', '핏빛 왕관', '음에너지'],
+    RESONANCES: {
+      1: '가시의 서약',
+      2: '저력',
+      3: '생기',
+      4: '감응',
+      5: '혈전',
+    },
+    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    AWAKENING: {
+      1: '철혈',
+      2: '하트킹',
+      3: '투지',
+      4: '혈맹',
+      5: '혈족',
+    },
+  },
   USHANA: {},
   SUMMERSHIZURU: {},
   NICOLA: {

@@ -76,6 +76,16 @@ export default function MainSideBar() {
     {
       label: '추천덱',
       path: '/rd',
+      subMenu: [
+        {
+          label: '일반 전투 추천덱',
+          path: '/rd',
+        },
+        {
+          label: '무한 난투',
+          path: '/rd/eternal-scuffle',
+        },
+      ],
     },
     {
       label: '티어표',

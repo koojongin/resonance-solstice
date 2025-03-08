@@ -21,19 +21,21 @@ import { ALL_EQUIPMENTS } from '@/const/archive/equipment.const'
 import { RSHighlightedText } from '@/services/utils/highlight-text'
 import { CharacterThumbnailBox } from '@/app/components/character-frame/character-thumbnail-box'
 import { motion } from 'framer-motion'
+import { RECOMMENDATION_ES_DECKS } from '@/app/rd/eternal-scuffle/rd-eternal-scuffle.const'
 
+const TOTAL_RD_DECKS = [...RECOMMENDATION_DECKS, ...RECOMMENDATION_ES_DECKS]
 export default function RecommendationDeckDetailPage() {
   const { id } = useParams()
   const [isVisibleGenericEqBox, setIsVisibleGenericEqBox] = useState(false)
 
-  const deck = RECOMMENDATION_DECKS.find((rDeck) => id === rDeck.id)
+  const deck = TOTAL_RD_DECKS.find((rDeck) => id === rDeck.id)
   if (!deck) {
     return <div>조회된 덱이 없습니다.</div>
   }
 
   const relatedDecks =
     deck.leaderName &&
-    RECOMMENDATION_DECKS.reverse().filter(
+    TOTAL_RD_DECKS.reverse().filter(
       (rDeck) => rDeck.characters.filter((c) => c.character.name === deck.leaderName).length > 0,
     )
   const isExistLeader = deck.leaderName

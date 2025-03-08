@@ -459,4 +459,23 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
       'https://patchwiki.biligame.com/images/resonance/f/fc/aargpykre5y82gepqeiyngvdqi0q5q6.png',
     clearMind: '청명도 상한 +8',
   },
+
+  '가시의 서약': {
+    name: '가시의 서약',
+    desc: '빈사상태 시 검은 가시덤불을 시전하여 적의 체력을 흡수하고 [속박]을 부여합니다. (3회 한정)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/7b/rp8sn1qol9n9qs4uty5pwiw8e89bcds.png',
+  },
+  감응: {
+    name: '감응',
+    desc: '전투 시작 후 손으로 가져오는 처음 5장 카드 중에 반드시 [피의 잠식]이 포함됩니다.\n자신이 리더일 경우 전투 시작 시 즉시 리더 스킬을 시전합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/43/ljakaf4ndnm98kay9yzhk1088jp5aft.png',
+  },
+  혈전: {
+    name: '혈전',
+    desc: '[피의 잠식] 사용 후 [다크 아트]를 1장 생성하여 손으로 가져옵니다.\n동시에 자신의 공격력과 방어력이 3% 증가합니다.(최대 39%)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/55/jmdubw5c0f2e8ff976dwcppribdalkb.png',
+  },
 }

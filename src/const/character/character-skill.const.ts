@@ -795,4 +795,38 @@ export const CHARACTER_SKILLS: {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/9/97/15eclil695a745dawjye6p7a6nnokwb.png',
   },
+
+  '피의 이빨': {
+    amount: 2,
+    cost: 3,
+    name: '피의 이빨',
+    desc: '강력한 힘을 휘둘러 전방 범위 내의 적에게 1단 피해를 입히고 [참열]을 부여하며, 동시에 [기절]과 [붕괴]를 발동합니다.\n동시에 덱과 버려진 덱에서 [피의 함성]을 1장 뽑아 손을 가져옵니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/d5/p6tn912747v7ugi6eb24ulttr71pbhi.png',
+  },
+  '피의 함성': {
+    amount: 2,
+    cost: 2,
+    name: '피의 함성',
+    desc: '현재 체력의 20%를 잃고, 지면을 내리쳐 전방 범위 내의 적에게 1단 피해를 입히고 [참열]을 부여합니다.\n사용 후 50% 확률로 [다크 아트] 1장을 생성하여 손으로 가져옵니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/3c/fk3bctmjr1ut684id5maugujydouao7.png',
+  },
+  '피의 잠식': {
+    amount: 1,
+    cost: 5,
+    name: '피의 잠식',
+    desc: '현재 체력의 50%를 잃고, 무기 [탐식의 도끼]의 공격 범위가 13초간 증가합니다.\n지속시간 동안 다음 효과를 발동합니다.\n자신에게 [광폭]을 부여합니다.\n자신의 [레드카드]가 입히는 피해가 100% 증가합니다.\n손에 있는 모든 [블랙카드]와 [다크 아트]를 [소각]합니다. 카드를 1장 [소각]할 때마다 자신의 [레드카드]가 입히는 피해가 26% 증가합니다.\n동시에 덱 혹은 버려진 덱에서 [피의 함성]을 2장 뽑아 손으로 가져옵니다.\n사용 후 [피의 잠식]은 [핏빛 왕관]으로 전환됩니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/7e/0bw7etu0wcgsnr8ts3cbg2evpj4b7uv.png',
+  },
+  '핏빛 왕관': {
+    amount: 0,
+    cost: 5,
+    name: '핏빛 왕관',
+    desc: '현재 체력의 50%를 잃고, 목표 구역을 향해 혼신의 일격을 가해 범위 내의 적에게 1단 피해를 입히며 [참열]을 부여합니다.\n피못에서 검은 가시덤불이 자라나 적의 체력을 흡수하고 [속박]을 부여합니다.\n동시에 [블랙카드] [음에너지]를 1장 생성하여 손으로 가져옵니다.\n사용 후 [핏빛 왕관]은 [피의 잠식]으로 전환됩니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/dd/lqz9wy2p72l1dnz4n3tz4lcygky3jtn.png',
+    isGeneratedCard: true,
+  },
 }

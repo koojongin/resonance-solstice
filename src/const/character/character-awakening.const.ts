@@ -460,4 +460,29 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/8/85/tlcmzxu1cah0yip4zs8i7jdowzjd874.png',
   },
+
+  철혈: {
+    name: '철혈',
+    desc: '체력이 50%/40%/30%/20%/10% 미만일 경우 입히는 최종 피해가 10%/15%/20%/25%/30% 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/f2/t4kxa70oetyxk82yzwtesva74bz078d.png',
+  },
+  하트킹: {
+    name: '하트킹',
+    desc: '[레드카드]를 연속으로 2장 냈을 경우, 다음 내는 자신의 [레드카드]의 피해가 39% 증가합니다. [하트킹] 버프를 받은 카드는 사용 시 횟수를 카운팅하지 않습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/21/3n0tgnszjjf1ux00jnzumwsmelyyemb.png',
+  },
+  혈맹: {
+    name: '혈맹',
+    desc: '아군이 빈사상태 시 검은 가시덤불을 시전하여 적의 체력을 흡수하고 [속박]을 부여합니다.(2회 한정)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/96/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  혈족: {
+    name: '혈족',
+    desc: '[다크 아트]를 1장 [소각]할 때마다 자신의 최대 체력이 13% 증가합니다.(13회 한정)\n[블랙카드]를 1장 [소각]할 때마다 자신의 공격력과 방어력이 2% 증가합니다.(13회 한정)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/7c/jcpxpqcx3r8d6jyax7srp0fzujv3huu.png',
+  },
 }
