@@ -1173,4 +1173,31 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     autoPreset:
       'pVdRj5swDP4veWZSnBACvO6p0u02aXub7gGNbIeua3vQapsq/vscQg9TKCWXPuHE8Wf7s530zKrm6+FjUZefdyz/WWwbE7F6vzUPVXNk+Xfg9qdF5D4kuA+hE/ch06zf0vAUsRdjOmOPp98s5xHbH59NbRc6qWoeTFG6BQL33C2y/A2L/UCFTfmpOLD8zIAniKMAFSInAMhBkAkfBJFyuqPJmTQjOzERhCYCaEF2MoIDmaDWUqoWUzXqjhqpKeooOSMV9VpRDxIUxJuBhHqtaaTUWmK9bl0WexrPbP9nZ+pNeckyEslOjflS1AUy9cFJ3/4dTGeneam2205ZSM5jYblDafApYsei/mWO7gRum9dTddhc4BhAaqPX7KmNQrAhATXBGlyxDM8A6HUArIsOMJETCKezK83f7ggJHotlDlGsDynO4qWQsNCnALbNVvMlbYJvAthGeH8ELmfo5XLO5Dhn8yzdRhSTnKXpOEkzJXix1Y8NbALVBlMlF6nic3H5tFYCeokqHDnvB+ipUneoGpc3Trzg6uOL1ZcGALiQRHanY8U4iSEs9UnUM/V2u97xPgieSmjDAzGdi9Evq2jHo1DsPTlFtM+C9YgxgAeP9o4Lbmex1M7x7GD07LbEIyT7CAhNokilB232bRBMm8g8StM+z8KvG58Y7TsrtBkgvjNixu2n3FC70l/o/+GO4u343iMtBjbqsctXpXTtNag1fgg/P+yz088PbCXW4r+BsmrsG7RPcvsf',
   },
+
+  {
+    id: '46',
+    title: '나유타&더스틴 흙순덱',
+    leaderName: NAYUTA.name,
+    characters: [
+      {
+        character: NAYUTA,
+      },
+      {
+        character: DUSTIN,
+      },
+      {
+        character: PRIMING,
+      },
+      {
+        character: SHIZURU,
+      },
+      {
+        character: ARCANA,
+      },
+    ],
+    desc: `-`,
+    descLink: 'https://arca.live/b/resonance/130739069',
+    autoPreset:
+      'tVZNb6MwEP0vc2alGRtj4LqnSP2S2lu1B7S4LWqappCoraL+99okcYfgzQZEchvCvHl+b2bMBv4WdXlRNSvI7zfQPFfz+WxRmg/IZQTrxtwUdfEC+S+KYFXUj2Z197k0kGMEVQk5ECaIUkmIdrntQyGR4iyBFmGbYPPN27pazvbF/kTw+r4wtcsgdD8tvqIuBXEyBdKqRwElxsMokNKOQremB90eK027RxfQozX80EcrZrJbEc9fMe5WpPNXFJ2KcTZFRd5KNKCV4lAryVGtxGAp6w9Jghn8ELsslluokFT+GEdkOVBBqh7N8bJgO88HshDSwCFP1Pghx0yHKIhRFLjhAViJyfmcIZUEnWETQP0mJEI1jJOYoFuY/IE1b3XSh5w2IG2tr6mI/UuscXcV6UAby72wo6dbUv/+sX4N7CE5qV8iNLF2twb9Eh2/xMl2ycDu/Q8v0mnIgvR8Wk3bQpgF+NPQC6K3hkQW+IRBKUeM15FdJE7yy7J134WzclfRz7+D9nPkA3c3+MCdgwXsH3cFMoD0J3AfNSwgDs1fixmAW5EMrRMojiZ4juLQmudonuNOaiWuX+dmJ4oXy0/f3sbI99h+N1j5nkxRmpprXDW3y99W1OsF5A/FvDHWidWTqd2z1pequWiTDl4qq8Z54cft2ZgW52r94vrgGw==',
+  },
 ]

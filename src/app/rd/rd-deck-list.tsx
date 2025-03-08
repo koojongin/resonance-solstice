@@ -3,7 +3,7 @@
 import { RecommendationDeckCard } from '@/app/components/deck/recommendation-deck-card'
 import createKey from '@/services/key-generator'
 import React, { useEffect, useState } from 'react'
-import { RECOMMENDATION_DECKS } from '@/app/rd/rd-decks.const'
+import { RECOMMENDATION_DECKS, RecommendationDeck } from '@/app/rd/rd-decks.const'
 import _ from 'lodash'
 import { EngineCore } from '@/const/character/character.interface'
 
@@ -19,7 +19,7 @@ export default function RdDeckList({
   checkedAutoPreset,
   checkedEngineCores,
 }: any) {
-  const [decks, setDecks] = useState(REVERSED_ALL_DECKS)
+  const [decks, setDecks] = useState<RecommendationDeck[]>([])
 
   useEffect(() => {
     setDecks(
@@ -41,6 +41,10 @@ export default function RdDeckList({
       }),
     )
   }, [checkedEngineCores, checkedAutoPreset, searchedKeyword])
+
+  useEffect(() => {
+    setDecks(REVERSED_ALL_DECKS)
+  }, [])
 
   return (
     <>

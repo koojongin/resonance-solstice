@@ -24,7 +24,7 @@ import {
   VERLAINE,
   WENSHENG,
 } from '@/const/character/character.const'
-import { RECOMMENDATION_DECKS } from '@/app/rd/rd-decks.const'
+import { RECOMMENDATION_DECKS, RecommendationDeck } from '@/app/rd/rd-decks.const'
 import { RECOMMENDATION_ES_DECKS } from '@/app/rd/eternal-scuffle/rd-eternal-scuffle.const'
 
 const eternalScuffleCharacters = [
@@ -60,15 +60,18 @@ const FILTERED_DECKS = TOTAL_DECKS.filter(
 })
 
 export function RdEternalScuffleList({ searchedKeyword }: any) {
-  const [decks, setDecks] = useState(FILTERED_DECKS)
+  const [decks, setDecks] = useState<RecommendationDeck[]>([])
   useEffect(() => {
     setDecks(
       FILTERED_DECKS.filter((deck) => {
-        console.log(deck.totalNames)
         return deck.totalNames.join(',').indexOf(searchedKeyword) >= 0
       }),
     )
   }, [searchedKeyword])
+
+  useEffect(() => {
+    setDecks(FILTERED_DECKS)
+  }, [])
 
   return (
     <>
