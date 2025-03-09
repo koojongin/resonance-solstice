@@ -155,14 +155,14 @@ export const CHARACTER_DETAIL: {
     SKILLS: ['초음속', '공습', '화력전개'],
     RESONANCES: {
       1: '질풍',
-      2: '용량 확장',
+      2: '용량 확장 - 니콜라',
       3: '생기',
-      4: '신속',
+      4: '신속 - 니콜라',
       5: '축전',
     },
     RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
     AWAKENING: {
-      1: '초전도',
+      1: '초전도 - 니콜라',
       2: '쌍권총',
       3: '투지',
       4: '과부하',
@@ -438,7 +438,7 @@ export const CHARACTER_DETAIL: {
   CAROLINE: {
     SKILLS: ['플라잉 플래시', '자석 폭탄', '번개 소용돌이'],
     RESONANCES: {
-      1: '자석 감응',
+      1: '자석 감응 - 캐롤라인',
       2: '고압',
       3: '생기',
       4: '감전',
@@ -477,11 +477,62 @@ export const CHARACTER_DETAIL: {
   LIN: {},
   NABI: {},
   GANYA: {},
-  YEJUE: {},
+  YEJUE: {
+    SKILLS: ['롤링 썬더', '플래시 코로나', '전광석화'],
+    RESONANCES: {
+      1: '자석 감응 - 예주',
+      2: '재난',
+      3: '생기',
+      4: '날벼락',
+      5: '부상',
+    },
+    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    AWAKENING: {
+      1: '분출',
+      2: '초전도',
+      3: '투지',
+      4: '뇌명',
+      5: '기상학 - 예주',
+    },
+  },
   AKIRA: {},
   ACHIWA: {},
-  KALEYA: {},
-  YER: {},
+  KALEYA: {
+    SKILLS: ['마이크로파', '위치 전송', '유산소 대기'],
+    RESONANCES: {
+      1: '보급 - 카리야',
+      2: '체크 포인트',
+      3: '생기',
+      4: '증폭',
+      5: '프로그 워프',
+    },
+    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    AWAKENING: {
+      1: '충분한 연소',
+      2: '연소 촉진',
+      3: '투지',
+      4: '연쇄 산화',
+      5: '기상학 - 카리야',
+    },
+  },
+  YER: {
+    SKILLS: ['출격', '에너지 절약', '재발동'],
+    RESONANCES: {
+      1: '신속 - 이엘',
+      2: '용량 확장 - 이엘',
+      3: '생기',
+      4: '구급',
+      5: '클러스트',
+    },
+    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    AWAKENING: {
+      1: '파이어 컨트롤',
+      2: '비상 장치',
+      3: '투지',
+      4: '벌떼 프로토콜',
+      5: '간섭',
+    },
+  },
   FENIA: {
     SKILLS: ['런닝 썬더', '음에너지', '복주머니', '승리의 아우라'],
     RESONANCES: {
@@ -549,7 +600,7 @@ export const CHARACTER_DETAIL: {
   ARCANA: {
     SKILLS: ['나비의 춤', '자연의 메아리', '태초의 꿈'],
     RESONANCES: {
-      1: '보급',
+      1: '보급 - 아르카나',
       2: '나비 서식',
       3: '생기',
       4: '세례',

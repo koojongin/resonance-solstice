@@ -7,11 +7,12 @@ export interface CharacterResonance {
 }
 
 export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
-  '자석 감응': {
-    name: '자석 감응',
+  '자석 감응 - 캐롤라인': {
+    name: '자석 감응 - 캐롤라인',
     desc: '[자석 폭탄] 사용 후 [인뢰] 키워드를 가진 카드를 우선으로 카드를 2장 뽑습니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/7/74/96jk1s8vjysxkrhi72jl87hfzl0ieb4.png',
+    clearMind: '전력 상한+5.0%',
   },
   고압: {
     name: '고압',
@@ -30,12 +31,14 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     desc: '[자화]의 지속 시간이 3초 증가합니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/6/6a/sn90hsmug036d65ze00sf5ia6114b6d.png',
+    clearMind: '구매 가능한 그래핀 수량+20.0%',
   },
   '전력 회수': {
     name: '전력 회수',
     desc: '적과 아군을 포함한 모든 유닛이 [인뢰]를 발동할 때마다 비용을 0.1 얻습니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/0/0e/bs60q2yjhhgxentalwedlbmzyxfu6cl.png',
+    clearMind: '구매 가능한 그래핀 수량+30.0%',
   },
 
   성맥: {
@@ -68,6 +71,7 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     desc: '[소실] 사용 후 레드카드를 우선으로 카드를 1장 뽑습니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/c/c8/oc22bcpieymhb0dle8eprw9y5u10hko.png',
+    clearMind: '거래소 가격 인상 횟수+1',
   },
   '사기 마술': {
     name: '사기 마술',
@@ -80,12 +84,14 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     desc: '전투 시작 시 손으로 가져오는 처음 5장의 카드 중에 반드시 [셔플]이 포함됩니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/6/67/2dktmnn7w48dkp7s1u5viq9vk2i3da7.png',
+    clearMind: '미끼 풍선 사용 성공률+3.0%',
   },
   "레비스의 '불가사의'": {
     name: `레비스의 '불가사의'`,
     desc: '[미스터리] 강화: [해체의 상자]를 활성화하여 손에 있는 모든 카드를 덱으로 섞어넣은 후 카드를 3장 뽑습니다.\n뽑은 레드카드의 수만큼 [구축의 화염]을 생성하여 손으로 가져옵니다.\n뽑은 옐로카드의 수만큼 [해체의 번개]를 생성하여 손으로 가져옵니다.\n뽑은 블루카드의 수만큼 [재구축의 힘]을 생성하여 손으로 가져옵니다.\n뽑은 그린카드의 수만큼 [음에너지]를 생성하여 손으로 가져옵니다.\n뽑은 퍼플카드의 수만큼 [정화의 빛]을 생성하여 손으로 가져옵니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/3/36/55k33f5ylyhp8ppvvu949uqpwldfkfl.png',
+    clearMind: '미끼 풍선 사용 성공률+5.0%',
   },
 
   얼음별: {
@@ -93,6 +99,7 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     desc: '블루카드를 낸 후 자신의 체력을 10% 회복합니다.\n동시에 자신은 5초간 [슈퍼아머]를 획득합니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/4/4d/3lnj8hkx9zmc4uy3ku37bqm0s73lgpw.png',
+    clearMind: '구매 가능한 벌집형 열단열재 및 티타늄 광석 수량+20.0%',
   },
   '자석 제어': {
     name: '자석 제어',
@@ -105,12 +112,14 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     desc: '비용이 2 이상인 블루카드를 낸 후 모든 아군에게 10초간 지속되는 [실드]를 부여합니다. [실드]의 내구도는 자신의 방어력의 500%입니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/4/4c/048gzikblascwxomtv48fowsd32tgys.png',
+    clearMind: '거래소 가격 인상 성공률+1.0%',
   },
   서리별: {
     name: '서리별',
     desc: '적과 아군을 포함한 임의 유닛이 [동결]을 발동할 때마다 비용을 0.3 획득합니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/e/e6/9xhcketifjjvid7mayx5d62h9ql87uf.png',
+    clearMind: '구매 가능한 벌집형 열단열재 및 티타늄 광석 수량+50.0%',
   },
 
   신생: {
@@ -118,6 +127,7 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     desc: '[무한 코어] 사용 후 무작위로 [과일씨], [신성] 혹은 [기이한 불꽃]을 1장 생성하여 손으로 가져옵니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/f/ff/i2qxfessshagn1ysd97yszxawgfmfpb.png',
+    clearMind: '거래소 가격 인상폭+0.3%',
   },
   갈망: {
     name: '갈망',
@@ -130,12 +140,14 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     desc: '[금단의 열매] 강화:\n사과 하나를 전송하여 적에게 1단 피해를 입히고 [기절]을 부여하며, 동시에 [혼란]을 발동합니다.\n퍼플카드를 우선으로 카드를 1장 뽑습니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/3/36/c552cp8ucsniaoga3qnjwslcexh9yrl.png',
+    clearMind: '거래소 가격 인상 횟수+1',
   },
   혈맹: {
     name: '혈맹',
     desc: '마키라의 치유를 받을 때마다 공격력이 3% 증가합니다.(중첩 가능)',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/e/ed/c64ubxircc43swcob6cqr4ib5zez8og.png',
+    clearMind: '거래소 가격 인상폭+0.5%',
   },
 
   질풍: {
@@ -143,24 +155,27 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     desc: '[일반공격]을 가 할 때마다 [일반공격]의 공격 속도가 3% 증가합니다. (최대 100%)',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/4/42/qj2ilbyo82w9kb80zhjcj8z9uzocg19.png',
+    clearMind: '열차 최고 시속+5km/시간',
   },
-  '용량 확장': {
-    name: '용량 확장',
+  '용량 확장 - 니콜라': {
+    name: '용량 확장 - 니콜라',
     desc: '[공습]의 카드 수가 1 증가합니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/9/91/addlj1pv9u6mr24i8t21ay1aob19o6r.png',
   },
-  신속: {
-    name: '신속',
+  '신속 - 니콜라': {
+    name: '신속 - 니콜라',
     desc: '[공습]이 시전하는 [606]의 공격 속도가 50% 증가합니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/a/aa/sgdl3wltrr0pyxdbuet1xkti7bdvl5h.png',
+    clearMind: '아니타 에너지 연구소 특산품 구매 가능한 수량+20.0%',
   },
   축전: {
     name: '축전',
     desc: '자신의 스킬 카드 사용 후 [일반공격]이 [인뢰]를 발동합니다. (8초간 지속, 중첩가능)',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/6/62/he7ev277sds21d1l9rynm9mf3fka9cc.png',
+    clearMind: '아니타 에너지 연구소 특산품 구매 가능한 수량+30.0%',
   },
 
   활력: {
@@ -168,6 +183,7 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     desc: '자신의 스킬 카드를 사용할 때마다 자신의 체력을 3% 회복합니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/0/0e/5gxcfyyfbjsnkmrpgnvtph3saujoxke.png',
+    clearMind: '구매 가능한 인조 수정 꽃 수량+20.0%',
   },
   격앙: {
     name: '격앙',
@@ -180,12 +196,14 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     desc: '[셀카] 사용 후 모든 아군의 [일반공격]의 공격 속도가 최대로 증가합니다.(6초간 지속, 중첩 가능)',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/a/a8/hzlszfaedujdjoupfb6prkaxt58s51p.png',
+    clearMind: '광고 홍보를 통한 승객 모집 효과+5.0%',
   },
   수선화: {
     name: '수선화',
     desc: '[리더 스킬] 사용 후 [노래] 1장을 생성하여 덱의 맨 위에 올려놓습니다.(1회 한정)',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/a/a6/g2494n0lvsl20xsxand77ivzqnkcn7d.png',
+    clearMind: '광고 홍보를 통한 승객 모집 효과+10.0%',
   },
 
   '체리 폭탄': {
@@ -293,6 +311,7 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     desc: '전투 시작 시 추가로 1장의 카드를 뽑습니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/5/5c/o2ucdjupzys04ezgzfgkp3gc7rzk1o8.png',
+    clearMind: '거래소 가격 인상 성공률+1.0%',
   },
   제압: {
     name: '제압',
@@ -305,12 +324,14 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     desc: '체력이 50% 이상일 경우 받는 최종 피해가 10% 감소합니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/0/05/lxet596cxuegys9u1oeck4lhdtpqwch.png',
+    clearMind: '열차 최대 화물 적재량+5',
   },
   "레비스의 '초개조' - 리나 본": {
     name: "레비스의 '초개조' - 리나 본",
     desc: `[디펜스 트리거] 강화:\n'이리를 피하니 범이 앞을 막는다'\n모든 아군에게 3초간 지속되는 [철벽 실드]를 부여합니다.\n[블랙카드]를 우선으로 카드를 3장 뽑으며 손패 상한을 초과할 수 있습니다. [블랙카드]를 뽑았을 경우 [블랙카드] 1장당 [철벽 실드]의 지속시간이 2초 증가합니다.`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/3/30/ron8pn2vxmaudbcp12gwpcj3js6hzko.png',
+    clearMind: '거래소 가격 인상 성공률+2.0%',
   },
 
   당분: {
@@ -343,6 +364,7 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     desc: '전투 시작 시 손으로 가져오는 첫 5장의 카드에 반드시 [승리의 아우라]가 포함됩니다.\n자신이 리더일 경우 전투 시작 시 즉시 리더 스킬을 시전합니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/9/9a/2dktmnn7w48dkp7s1u5viq9vk2i3da7.png',
+    clearMind: '펫 친밀도 획득+5.0%',
   },
   축복: {
     name: '축복',
@@ -355,12 +377,14 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     desc: '[복주머니]를 손에서 낼 때 8% 확률로 [블랙카드] [블랙 8] 1장을 생성하여 손으로 가져옵니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/f/f7/5z9kj876zd8temkolm96ozo1546881f.png',
+    clearMind: '구매 가능한 랍스터 수량+20.0%',
   },
   "레비스의 '초개조' - 페니아": {
     name: `레비스의 '초개조' - 페니아`,
     desc: '[런닝 썬더] 강화:\n[디펜스 썬더]를 활성화하여 목표 구역에 강력한 번개를 일으켜 범위 내의 적에게 7단 피해를 입히고, 동시에[인뢰]를 발동합니다.\n사용 후 [블랙카드] [음에너지]를 1장 생성하여 손으로 가져옵니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/4/41/ron8pn2vxmaudbcp12gwpcj3js6hzko.png',
+    clearMind: '구매 가능한 랍스터 수량+30.0%',
   },
 
   부채바람: {
@@ -368,6 +392,7 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     desc: '[부채술] 강화:\n부채를 흔들어 자신과 앞열 아군의 공격력을 2% 증가시킵니다.(중첩 가능)\n동시에 앞열 아군에게 걸린 [점화]를 제거합니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/0/0a/f9ecyf7aylutepcdbrhu4dh2ld3subb.png',
+    clearMind: '거래소 가격 인상 횟수+1',
   },
   경운: {
     name: '경운',
@@ -380,12 +405,14 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     desc: '[부채술] 사용 후 30% 확률로 카드를 다시 손으로 가져옵니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/2/2e/1nn5r6oqcic7dsq6d72vy3vzuvaeou4.png',
+    clearMind: '화초 평점+5.0%',
   },
   풍설: {
     name: '풍설',
     desc: '[오의-유풍] 강화:\n[오의-유풍]을 시전하여 모든 적에게 6단 피해를 입히고, 동시에 [냉동]을 발동합니다. 버려진 덱에 있는 [부채술] 1장당 자신의 공격력이 2% 증가합니다.(중첩 가능)',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/e/e9/9wnl8l3xmag1er33mcqy3u8hq9iwpgk.png',
+    clearMind: '화초 평점+8.0%',
   },
 
   서지: {
@@ -413,11 +440,12 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
       'https://patchwiki.biligame.com/images/resonance/2/28/nm3ryfs2arhz3gqzru7s5obrspvtuly.png',
   },
 
-  보급: {
-    name: '보급',
+  '보급 - 아르카나': {
+    name: '보급 - 아르카나',
     desc: '1웨이브의 적을 처치한 후 비용을 2 얻습니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/9/9c/rt04fk9f4lsbzel8wpz2uba5guhl5pk.png',
+    clearMind: '의료 평점+5.0%',
   },
   '나비 서식': {
     name: '나비 서식',
@@ -430,6 +458,7 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     desc: '[태초의 꿈]을 사용해 회수한 카드는 다음 한번 낼 때 비용이 1 감소합니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/8/81/2bnuy6xeefooh97fm7ufo684a3yubp2.png',
+    clearMind: '가격 흥정 실패 시 증가하는 피로도-1',
   },
 
   뇌명: {
@@ -606,5 +635,98 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/d/d1/bwrc8ryjslvr75yofetz0eklfir7ldw.png',
     clearMind: '케이프시 거래소 특산품 구매 가능한 수량+20.0%',
+  },
+
+  '신속 - 이엘': {
+    name: '신속 - 이엘',
+    desc: `자신의 [드론]의 공격 속도가 50% 증가합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a9/sgdl3wltrr0pyxdbuet1xkti7bdvl5h.png',
+    clearMind: '구매 가능한 아니타 101 드론 수량+20.0%',
+  },
+  '용량 확장 - 이엘': {
+    name: '용량 확장 - 이엘',
+    desc: `[출격]의 카드 수가 1 증가합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a3/addlj1pv9u6mr24i8t21ay1aob19o6r.png',
+  },
+  구급: {
+    name: '구급',
+    desc: `아군 1명의 체력이 20%보다 낮을 시 [404]를 2대 시전하여 1대당 체력을 초당 2% 회복시킵니다.(10초간 지속, 1회 한정)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/38/21ldn0pvuwelcwomtybav94umnn5k0y.png',
+    clearMind: '의료 평점+5.0%',
+  },
+  클러스트: {
+    name: '클러스트',
+    desc: `[출격] 사용 후 [드론] 키워드를 가진 카드를 우선으로 카드를 1장 뽑습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/77/3k5hqma6ip5ymbtlfq1ia4siertlim9.png',
+    clearMind: '구매 가능한 아니타 101 드론 수량+30.0%',
+  },
+
+  '자석 감응 - 예주': {
+    name: '자석 감응 - 예주',
+    desc: `[전광석화] 사용 후 [인뢰] 키워드를 가진 카드를 우선으로 카드를 1장 뽑습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/63/96jk1s8vjysxkrhi72jl87hfzl0ieb4.png',
+    clearMind: '구매 가능한 홍차 수량+20.0%',
+  },
+  재난: {
+    name: '재난',
+    desc: `[전광석화]의 지속 시간 동안 [롤링 썬더]를 한 번 더 냅니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/ab/pq6dj84arzxdpk7lobbwgmgsorea6vg.png',
+  },
+  날벼락: {
+    name: '날벼락',
+    desc: `[플래시 코로나] 강화:
+    아군에게 자기폭풍 코일 1개를 부여합니다.(6초간 지속)
+    지속시간 동안, 매초 범위 내의 적에게 1단 피해를 입히고, 동시에 [인뢰]를 발동합니다.
+    피해를 받으면 대상에게 아크를 반사하여 1단 피해를 입히며, 동시에 [인뢰]를 발동합니다.
+    자기폭풍 코일 생성 시 범위 내의 적에게 [기절]을 부여합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/78/7htgsyikwvbdmzo7ampyjyo06sf2zkq.png',
+    clearMind: '구매 가능한 가정용 태양전지 수량+20.0%',
+  },
+  부상: {
+    name: '부상',
+    desc: `[롤링 썬더]의 이동속도가 절반 감소합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/7f/sfiiw94yw24t8u4m8iu8uz7kq44dvk4.png',
+    clearMind: '구매 가능한 홍차 수량+30.0%',
+  },
+
+  '보급 - 카리야': {
+    name: '보급 - 카리야',
+    desc: `덱의 카드가 전부 뽑혀 셔플이 발동될 때마다 카드를 1장 뽑습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a0/rt04fk9f4lsbzel8wpz2uba5guhl5pk.png',
+    clearMind: '급행 탄환 최대 용량+1',
+  },
+  '체크 포인트': {
+    name: '체크 포인트',
+    desc: `[위치 전송] 강화:
+    [점화],[작열]과 [광염] 키워드를 가진 카드를 우선으로 카드를 2장 뽑습니다.
+    없다면 추가로 덱에서 무작위로 카드를 3장 뽑고 1장 선택하여 손으로 가져옵니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/39/74yv1jk2irvkgj8x151h9o4cb8sia2v.png',
+  },
+  증폭: {
+    name: '증폭',
+    desc: `[마이크로파] 강화:
+    [303]을 1대 시전하여 마이크로파를 5초간 발사한 후 회수합니다.
+    지속시간 동안 체력이 가장 낮은 아군의 체력을 10% 회복하고, 동시에 매초 무작위 적에게 [점화]를 발동합니다.
+    [303]은 [드론]입니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/d0/ls5d4lmy2efhwvfna43w1jaohx8r4j8.png',
+    clearMind: '의료 평점+5.0%',
+  },
+  '프로그 워프': {
+    name: '프로그 워프',
+    desc: `[위치 전송] 사용 후 다음에 [옐로카드]를 낼 때 카드를 추가로 1장 뽑습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/f7/oawczcem69kfsgfh19z0epn8y2f3r0t.png',
+    clearMind: '급행 탄환 최대 용량+2',
   },
 }

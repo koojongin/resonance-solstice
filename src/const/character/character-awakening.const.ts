@@ -136,8 +136,8 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
       'https://patchwiki.biligame.com/images/resonance/b/bd/asmq9tz3rvubicg5jpw4djd1s11wmda.png',
   },
 
-  초전도: {
-    name: '초전도',
+  '초전도 - 니콜라': {
+    name: '초전도 - 니콜라',
     desc: '자신이 [인뢰]를 부여할 확률이 10% 증가합니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/b/b6/oxv7efz5eyaxlzv6tzr4gafqczw06w7.png',
@@ -610,5 +610,82 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
     desc: '전투 시작 시 모든 아군의 공격력과 방어력이 3% 증가합니다.(중첩 가능)',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/8/83/rgdarvj82smp0rmifz119ylpmafnlem.png',
+  },
+
+  '파이어 컨트롤': {
+    name: '파이어 컨트롤',
+    desc: '아군 필드에 [드론] 있는 드론 1대당 아군의 [드론]이 입히는 최종 피해가 2% 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/f5/kdo2euycg9figy7njjm8ipfplrcnc09.png',
+  },
+  '비상 장치': {
+    name: '비상 장치',
+    desc: '[버리기] 명령 사용 시 [드론] 키워드를 가진 카드를 우선으로 카드를 1장 뽑습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/5c/1cmhnq296pvkhgumhj7bnbpzq82ksz4.png',
+  },
+  '벌떼 프로토콜': {
+    name: '벌떼 프로토콜',
+    desc: '[드론]이 회수될 때마다 자신의 공격력이 0.5% 증가합니다.(최대 30%)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/74/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  간섭: {
+    name: '간섭',
+    desc: '[에너지 절약]강화:\n간섭 신호를 보내 아군의 모든 [드론]을 회수하고 1대 회수할 때마다 비용을 1 얻습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/6e/n73yiidwfp9p1k319mcufq6jzp8umjk.png',
+  },
+
+  분출: {
+    name: '분출',
+    desc: '[전광석화] 지속 시간이 3초 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/eb/da50rxqg9kl43irutxn48ibdijs4lyu.png',
+  },
+  초전도: {
+    name: '초전도',
+    desc: '자신이 부여하는 [인뢰]의 발동 확률이 10% 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/8e/oxv7efz5eyaxlzv6tzr4gafqczw06w7.png',
+  },
+  뇌명: {
+    name: '뇌명',
+    desc: '[플래시 코로나] 사용 후 사용 대상의 카드를 1장 뽑아 손으로 가져옵니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/ce/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  '기상학 - 예주': {
+    name: '기상학 - 예주',
+    desc: `[전광석화] 사용 시 50% 확률로 [비]/[호우]/[폭우] 날씨를 발동합니다.(1회 한정)
+    동시에 [비]/[호우]/[폭우] 날씨에서 모든 아군이 입히는 전자기 피해가 10% 증가합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/79/l7eqs1dzdfav8pzzejugu3w8kwxr0fd.png',
+  },
+
+  '충분한 연소': {
+    name: '충분한 연소',
+    desc: `[유산소 대기]의 지속 시간이 3초 증가합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/92/gorbtot9nw0vnbuwtaw3tyhfychc2yd.png',
+  },
+  '연소 촉진': {
+    name: '연소 촉진',
+    desc: `자신이 부여하는 [점화],[작열]과 [광염]의 지속 시간이 3초 증가합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/fa/pkywp0ze6wrla26tpe6tqjj349mtrzw.png',
+  },
+  '연쇄 산화': {
+    name: '연쇄 산화',
+    desc: `[유산소 대기] 지속시간 동안, 자신의 [점화]를 부여할 때마다 비용을 0.1 얻습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/7c/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  '기상학 - 카리야': {
+    name: '기상학 - 카리야',
+    desc: `[유산소 대기] 사용 시 50% 확률로 [더위]/[폭염]/[열대야] 날씨를 발동합니다.(1회 한정)
+    동시에 [더위]/[폭염]/[열대야] 날씨에서 모든 아군이 입히는 화염 피해가 10% 증가합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/78/0xnv8jnt4mq3hnqwog92tln1bgli9fd.png',
   },
 }

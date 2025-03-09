@@ -999,4 +999,94 @@ export const CHARACTER_SKILLS: {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/3/39/j21dfh457iro3cj9d5ylp59m0it1lip.png',
   },
+
+  출격: {
+    amount: 2,
+    cost: 2,
+    name: '출격',
+    desc: `1대의 [404]를 출전시켜 10초 후 다시 회수합니다. 상대를 선택한 후 배치가 가능합니다.\n적에게 사용 시 무기를 사용해 공격합니다.\n지속시간 동안 매초 적에게 1단 피해를 입히고 50% 확률로 [냉동]을 발동합니다.
+    아군에게 사용 시 [보호막]을 펼쳐 아군을 보호합니다.\n지속시간 동안 아군이 받는 피해를 80% 감소시킵니다.
+    [404]는 [드론]입니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/0b/bgnk0jvncfs11jukme4j808sandib5r.png',
+  },
+  '에너지 절약': {
+    amount: 2,
+    cost: 0,
+    name: '에너지 절약',
+    desc: `신호를 보내 아군의 모든 [404]를 즉시 회수하며 1대를 회수할 때마다 비용을 1 얻습니다.
+    [404]는 [드론]입니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/5c/g30s4d22wystd4zf5dekwexn3ptlxlk.png',
+  },
+  재발동: {
+    amount: 1,
+    cost: 5,
+    name: '재발동',
+    desc: `2대의 [404]를 출전시키고 버려진 덱의 모든 [404]를 다시 활성화합니다. 10초 뒤 회수하며, 대상을 선택한 후 배치가 가능합니다.
+    적에게 사용 시 모든 [404]는 공격 진형을 갖춰 적을 공격합니다.
+    지속시간 동안 [404] 1대당 적에게 매초 1단 피해를 입히고 50%의 확률로 [냉동]을 발동합니다.
+    아군에게 사용 시 모든 [404]는 치유 진형을 갖춰 아군을 치유합니다.
+    지속시간 동안 [404] 1대당 매초 아군의 체력을 2% 회복시킵니다.
+    [404]는 [드론]입니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/38/jznj2h5csc77dyykqhyccrpvsanpea1.png',
+  },
+
+  '롤링 썬더': {
+    amount: 3,
+    cost: 3,
+    name: '롤링 썬더',
+    desc: `적을 [관통]하는 썬더볼 1개를 시전하여 명중할 때마다 1단 피해를 입히고, 동시에 [인뢰]를 발동합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e6/c5bcou8909hdelkzmu121ub2zxj0xzu.png',
+  },
+  '플래시 코로나': {
+    amount: 2,
+    cost: 2,
+    name: '플래시 코로나',
+    desc: `범위 내의 적을 [기절]시키고, 아군에게 자기폭풍 코일 1개를 부여합니다.(6초간 지속)
+    지속시간 동안, 매초 범위 내의 적에게 1단 피해를 입히며, 동시에 [인뢰]를 발동합니다.
+    자기폭풍 코일 생성 시 범위 내의 적에게 [기절]을 부여합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e7/7nompom9qd51edfcmpqr1ftrvb34ai3.png',
+  },
+  전광석화: {
+    amount: 1,
+    cost: 4,
+    name: '전광석화',
+    desc: `한계 측정 장치를 펼쳐 [전광석화] 환경을 조성합니다. 필드의 모든 [인뢰]가 적과 아군을 가리지 않고 추가로 [낙뢰]를 1회 발동합니다.(12초간 지속)
+    지속시간 동안,매초 무작위 적에게 1단 피해를 입히며 동시에 [인뢰]를 발동합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/b3/2jerypqzfsx2pmkre8cufxx1ditf5by.png',
+  },
+
+  마이크로파: {
+    amount: 2,
+    cost: 3,
+    name: '마이크로파',
+    desc: `[303] 1대를 시전하여 마이크로파를 5초간 발사한 후 회수합니다.
+    지속시간 동안 체력이 가장 낮은 아군의 체력을 초당 8% 회복시키며, 동시에 매초 무작위 적에게 [점화]를 발동합니다.
+    [303]은 [드론]입니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/eb/rljj9smqdgzs9y89jtn1lh4jrtjh0nm.png',
+  },
+  '위치 전송': {
+    amount: 2,
+    cost: 3,
+    name: '위치 전송',
+    desc: `[점화],[작열]과 [광염] 키워드를 가진 카드를 우선으로 카드를 2장 뽑습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/5a/ilf86cayla3anyst1wtb5jo35pev30h.png',
+  },
+  '유산소 대기': {
+    amount: 1,
+    cost: 4,
+    name: '유산소 대기',
+    desc: `산소 방출 장치를 펼쳐 [유산소 대기] 환경을 조성합니다.
+    발동된 모든 [점화],[작열],[광염]과 [불바다]의 피해가 12초간 2배로 증가합니다.
+    지속시간 동안, 매초 무작위 적에게 [점화]를 발동합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/99/1c4v4qnw6hy3spef35uac8mxhwcojul.png',
+  },
 }
