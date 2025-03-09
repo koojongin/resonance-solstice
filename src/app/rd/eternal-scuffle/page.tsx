@@ -115,13 +115,14 @@ export default function RdEternalScufflePage() {
         >
           <div className="flex flex-col gap-[8px] border border-gray-700 p-[8px] rounded">
             <RSHighlightedText
-              text={`<div>[소마]를 선택합니다.</div>
+              text={`<div>1. [소마]를 선택합니다.</div>
                   <div>
-                    [소마] 선택 후 안정성을 위해 [더스틴], [수엔], [아리나], [문생], [테니]등.. 을
+                    2. [소마] 선택 후 안정성을 위해 [베를렌★★★★], [스텔라★★★★], [더스틴★★★], [수엔★★], [아리나★★], [문생★★], [테니★]등.. 을
                     선택합니다.
                   </div>
-                  <div>안정성이 맞춰지면 [카타스]or나머지로 조합을 마무리합니다.</div>
-                  <div>[인뢰] 덱은 아이템의 영향이 커서 추천되지 않습니다.</div>`}
+                  <div>2-2. 소마 선택 후 만약 [베를렌] + [스텔라] + [전열 탱커] 조합에 성공하면 클리어률이 매우 높아집니다.</div>
+                  <div>3. 안정성이 맞춰지면 [카타스]or나머지로 조합을 마무리합니다.</div>
+                  <div>* [인뢰] 덱은 아이템의 영향이 커서 추천되지 않습니다.</div>`}
             />
           </div>
         </motion.div>

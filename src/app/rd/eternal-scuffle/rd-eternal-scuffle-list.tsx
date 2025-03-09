@@ -26,6 +26,8 @@ import {
 } from '@/const/character/character.const'
 import { RECOMMENDATION_DECKS, RecommendationDeck } from '@/app/rd/rd-decks.const'
 import { RECOMMENDATION_ES_DECKS } from '@/app/rd/eternal-scuffle/rd-eternal-scuffle.const'
+import { copyToClipboard } from '@/services/utils/copy-clipboard'
+import { toast } from 'react-toastify'
 
 const eternalScuffleCharacters = [
   NAYUTA,
@@ -89,9 +91,22 @@ export function RdEternalScuffleList({ searchedKeyword }: any) {
           return (
             <div
               key={createKey()}
-              className="flex flex-col w-[312px] gap-[2px] p-[4px] bg-gray-500 hover:drop-shadow-2xl hover:bg-blue-gray-500 hover:shadow-xl hover:shadow-blue-500/20"
+              className="inline-flex flex-col w-[312px] border border-gray-400 bg-gray-200 gap-[4px] p-[4px] rounded hover:drop-shadow-2xl hover:bg-blue-gray-200"
             >
-              <div className="flex gap-[2px] bg-blue-gray-200">
+              <div className="flex flex-wrap items-center gap-[4px]">
+                {deck.autoPreset && (
+                  <div
+                    className="text-white bg-deep-purple-500 px-[4px] py-[4px] pb-[2px] ff-dh rounded cursor-pointer"
+                    onClick={async () => {
+                      await copyToClipboard(deck.autoPreset!)
+                      toast(`"${deck.title}" 오토프리셋이 복사되었습니다.`)
+                    }}
+                  >
+                    오토프리셋
+                  </div>
+                )}
+              </div>
+              <div className="mt-auto flex gap-[2px] bg-blue-gray-200">
                 {deck.characters.map((characterData) => {
                   const { character } = characterData
                   const isLeader = leaderName === character.name
@@ -128,7 +143,7 @@ export function RdEternalScuffleList({ searchedKeyword }: any) {
                 })}
               </div>
               <Link href={`/rd/detail/${deck.id}`} className="hover:underline">
-                <div className="text-white ff-dh truncate w-full text-[20px] px-[10px] py-[4px] pb-0 text-center">
+                <div className="text-blue-gray-900 ff-dh truncate w-full text-[20px] px-[10px] py-[4px] pb-0 text-center">
                   {deck.title}
                 </div>
               </Link>
