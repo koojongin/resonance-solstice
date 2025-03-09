@@ -566,7 +566,23 @@ export const CHARACTER_DETAIL: {
   GALORE: {},
   RACHEL: {},
   TARA: {},
-  SHIZURU: {},
+  SHIZURU: {
+    SKILLS: ['쇼크탄', '강제 돌파', '강습 지령'],
+    RESONANCES: {
+      1: '아드레날린',
+      2: '예비탄',
+      3: '생기',
+      4: '폭탄 장전',
+    },
+    RESONANCE_UPGRADE_MATERIALS: RARE_RESONANCE_UPGRADE_MATERIALS,
+    AWAKENING: {
+      1: '유비무환',
+      2: '추가 탄창',
+      3: '투지',
+      4: '역습',
+      5: '지휘관',
+    },
+  },
   PRIMING: {
     SKILLS: ['폭파 작업', '레드 버튼', '가방 정리'],
     RESONANCES: {

@@ -587,6 +587,24 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     clearMind: '구매 가능한 맨더 공구함 수량+20.0%',
   },
 
-  // 도시락으로 회복하는 피로도+3
-  // 케이프시 거래소 특산품 구매 가능한 수량+20.0%
+  아드레날린: {
+    name: '아드레날린',
+    desc: `[강제 돌파] 사용 시, 아드레날린을 주사하여 자신의 체력을 15% 회복하고, 동시에 자신의 [일반공격]의 공격 속도가 최대로 증가합니다. (10초간 지속)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/c5/kpxsoo28bu5hhoao7kd26iz9b1tm9nh.png',
+    clearMind: '도시락으로 회복하는 피로도+3',
+  },
+  예비탄: {
+    name: '예비탄',
+    desc: `[쇼크탄] 사용 후 [쇼크탄]을 우선으로 카드를 1장 뽑습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/b1/qv38wdqtkxhcie5ok4uwsc1wze6muk4.png',
+  },
+  '폭탄 장전': {
+    name: '폭탄 장전',
+    desc: `[쇼크탄]의 폭발 범위가 증가하고, 동시에 [격파]를 발동합니다.\n[쇼크탄]은 [폭발물]입니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/d1/bwrc8ryjslvr75yofetz0eklfir7ldw.png',
+    clearMind: '케이프시 거래소 특산품 구매 가능한 수량+20.0%',
+  },
 }

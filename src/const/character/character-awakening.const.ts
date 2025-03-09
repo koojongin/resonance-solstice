@@ -565,21 +565,50 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
   정비: {
     name: '정비',
     desc: '전투 시작 시 맨 처음 내는 카드 3장의 비용이 1 감소합니다.',
-    thumbnail: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a4/9h5doh3kcaj70w5aj7j0hdaor427dgo.png',
   },
   '폭탄 장전': {
     name: '폭탄 장전',
     desc: '[레드 버튼]을 사용하여 터뜨린 [폭발물]이 입히는 최종 피해가 30% 증가합니다.',
-    thumbnail: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a5/blk4lrf2cbo2stdgjycaw0zxybkjdt5.png',
   },
   '폭발 지시': {
     name: '폭발 지시',
     desc: '[레드 버튼] 사용 시 앞열의 아군이 10초간 지속되는 [실드]를 얻습니다.\n[실드]의 내구도는 자신의 방어력의 2000%입니다.',
-    thumbnail: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/ec/9frhs5bteeq029t124i6j79dqq57y4w.png',
   },
   메아리: {
     name: '메아리',
     desc: '[폭파 작업] 추가효과:\n이 카드가 카드 효과로 인해 버려질 때 버려진 [폭파 작업] 카드가 이번 전투 동안 소모하는 비용이 1 감소합니다.(중첩 가능)',
-    thumbnail: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/86/3zytv8ts831977qk2gmg5zv096ca8h9.png',
+  },
+
+  유비무환: {
+    name: '유비무환',
+    desc: '[리더 스킬] 사용 시 비용을 1 얻습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/9c/7shns5n9qi0c7ady3grg18srvs487u5.png',
+  },
+  '추가 탄창': {
+    name: '추가 탄창',
+    desc: '[일반공격]의 탄약 수가 1 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/be/16vfugc41vc6cyaz7s4sjnjlvusnzf7.png',
+  },
+  역습: {
+    name: '역습',
+    desc: '임의 아군의 체력이 30% 미만일 때 [강습 지령]을 즉시 1회 시전합니다.(1회 한정)\n동시에 아군의 모든 [돌격대원]이 10초간 [슈퍼아머]를 얻습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/3a/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  지휘관: {
+    name: '지휘관',
+    desc: '전투 시작 시 모든 아군의 공격력과 방어력이 3% 증가합니다.(중첩 가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/83/rgdarvj82smp0rmifz119ylpmafnlem.png',
   },
 }
