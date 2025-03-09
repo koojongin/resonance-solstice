@@ -1,7 +1,8 @@
 import { RS_FACTION, RS_GRADE } from '@/const/character/character.enum'
 import _ from 'lodash'
-import { RSItemEarnPath, RSItemType } from '@/const/item/item.enum'
-import { DefaultRSItem } from '@/const/material/material.type'
+import { DefaultRSItem } from '@/const/material/default-rs-item.type'
+import { RSItemType } from '@/const/item/rs-item-type.type'
+import { RSItemEarnPath } from '@/const/item/rs-item-earn-path.interface'
 
 export enum RSEquipmentType {
   WEAPON = '무기',
@@ -22,6 +23,196 @@ export interface RSEquipment extends OriginRSEquipment {
 const DEFAULT_ALL_EQUIPMENTS: {
   [key: string]: OriginRSEquipment
 } = {
+  '엘모의 불': {
+    type: RSEquipmentType.WEAPON,
+    grade: RS_GRADE.SSR,
+    desc: '기본 속성: 공격력+39\n옵션: [원소핵-불] 생성 후 다음 내는 [점화]/[작열]/[광염]/[불바다] 키워드를 가진 [레드카드]의 피해가 50% 증가합니다.(중첩 가능)',
+    thumbnail:
+      'https://res.cloudinary.com/dqihpypxi/image/upload/v1741492649/resonance/weapons/fire_of_elmo_jfkbf2.webp',
+    faction: RS_FACTION.SOURCE_CITADEL,
+    earnsPath: [
+      {
+        desc: '케이프시 철도관리국 현상금 임무',
+        tags: ['케이프시'],
+      },
+      {
+        desc: '흑월 상점',
+        tags: ['흑월 상점'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-빙하 본드래곤',
+        tags: ['부표'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-혼란의 돌산호',
+        tags: ['부표'],
+      },
+      {
+        desc: '시타델 장비함',
+        tags: ['시타델 장비함'],
+      },
+    ],
+  },
+  '연소방지 아머': {
+    type: RSEquipmentType.ARMOR,
+    grade: RS_GRADE.SSR,
+    desc: '기본 속성: 방어력+37\n옵션: 받는 화염 피해가 15% 감소하고 동시에 30% 확률로 [점화] 피해에 면역됩니다.',
+    thumbnail:
+      'https://res.cloudinary.com/dqihpypxi/image/upload/v1741491957/resonance/weapons/fireproof_armor_h8ij6l.webp',
+    faction: RS_FACTION.RAILWAY,
+    earnsPath: [
+      {
+        desc: '슈그리스시 철도관리국 현상금 임무',
+        tags: ['슈그리스시'],
+      },
+      {
+        desc: '맨더 광산 철도관리국 현상금 임무',
+        tags: ['맨더 광산'],
+      },
+      {
+        desc: '황원역 작전 계획',
+        tags: ['황원역'],
+      },
+      {
+        desc: '흑월 상점',
+        tags: ['흑월 상점'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-베인링 퀸',
+        tags: ['부표'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-블리자드 기포체',
+        tags: ['부표'],
+      },
+      {
+        desc: '철도연맹 장비함',
+        tags: ['철도연맹 장비함'],
+      },
+    ],
+  },
+  '거짓 쪽지': {
+    type: RSEquipmentType.ACCESSORY,
+    grade: RS_GRADE.SSR,
+    desc: '기본 속성: 체력+3823\n옵션: 자신에게 [인뢰]가 부여될 때 비용을 0.1 회복합니다.',
+    thumbnail:
+      'https://res.cloudinary.com/dqihpypxi/image/upload/v1741487116/resonance/weapons/fake_note_qqcpel.webp',
+    faction: RS_FACTION.CHAOS,
+    earnsPath: [
+      {
+        desc: '철도 주변의 베툴라 부표-베인링 퀸',
+        tags: ['부표'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-더스트 리자드',
+        tags: ['부표'],
+      },
+      {
+        desc: '혼돈해 장비함',
+        tags: ['혼돈해 장비함'],
+      },
+    ],
+  },
+  '마법 방어 하머': {
+    type: RSEquipmentType.ARMOR,
+    grade: RS_GRADE.SSR,
+    desc: '기본 속성: 방어력+37\n옵션: 받는 잔향 피해가 15% 감소하고 동시에 30% 확률로 [변신] 효과에 면역됩니다.',
+    thumbnail:
+      'https://res.cloudinary.com/dqihpypxi/image/upload/v1741486657/resonance/weapons/magic_armor_hamor_jo6hux.webp',
+    faction: RS_FACTION.MUNDUS,
+    earnsPath: [
+      {
+        desc: '흑월 상점',
+        tags: ['흑월 상점'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-암흑의 매머드',
+        tags: ['부표'],
+      },
+      {
+        desc: '제국 장비함',
+        tags: ['제국 장비함'],
+      },
+    ],
+  },
+  '절연 아머': {
+    type: RSEquipmentType.ARMOR,
+    grade: RS_GRADE.SSR,
+    desc: '기본 속성: 방어력+38\n옵션: 받는 전자기 피해가 15% 감소하고 동시에 30% 확률로 [인뢰] 피해에 면역됩니다.',
+    thumbnail:
+      'https://res.cloudinary.com/dqihpypxi/image/upload/v1741486357/resonance/weapons/armor_lzbw7k.webp',
+    faction: RS_FACTION.GARDENERS,
+    earnsPath: [
+      {
+        desc: '자유 무역항-7 철도관리국 현상금 임무',
+        tags: ['자유 무역항-7'],
+      },
+      {
+        desc: '흑월 상점',
+        tags: ['흑월 상점'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-블리자드 기포체',
+        tags: ['부표'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-빙하 본드래곤',
+        tags: ['부표'],
+      },
+      {
+        desc: '아니타 장비함',
+        tags: ['아니타 장비함'],
+      },
+    ],
+  },
+  '스펙트럼 파편': {
+    type: RSEquipmentType.WEAPON,
+    grade: RS_GRADE.SSR,
+    desc: '기본 속성: 공격력+37\n옵션: 자신이 주는 전자기 피해가 15% 증가합니다.',
+    thumbnail:
+      'https://res.cloudinary.com/dqihpypxi/image/upload/v1741485795/resonance/weapons/spectrum_klsk1q.webp',
+    faction: RS_FACTION.GARDENERS,
+    earnsPath: [
+      {
+        desc: '자유 무역항-7 철도관리국 현상금 임무',
+        tags: ['자유 무역항-7'],
+      },
+      {
+        desc: '흑월 상점',
+        tags: ['흑월 상점'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-블리자드 기포체',
+        tags: ['부표'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-빙하 본드래곤',
+        tags: ['부표'],
+      },
+      {
+        desc: '아니타 장비함',
+        tags: ['아니타 장비함'],
+      },
+    ],
+  },
+  '구스 런처': {
+    type: RSEquipmentType.WEAPON,
+    grade: RS_GRADE.UR,
+    desc: '기본 속성: 공격력+48\n옵션: 효과가 바뀌면 [변신] 폭탄이 발사되어 범위 내의 적에게 1의 피해를 입히고 [혼란]을 유발합니다. [변신] 폭탄은 폭발물입니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/0/03/a4chummn0r5oq3g7juvkkf4cb5r6z4o.png/180px-%E9%B9%85%E5%88%B6%E5%8F%91%E5%B0%84%E5%99%A8.png',
+    faction: RS_FACTION.CHAOS,
+    earnsPath: [],
+  },
+  '세계 단합': {
+    type: RSEquipmentType.WEAPON,
+    grade: RS_GRADE.UR,
+    desc: '기본 속성: 공격력+47\n옵션: 전투 시작 시 모든 아군이 받는 최종 피해가 33% 감소합니다.(20초간 지속, 중첩가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/2/21/q8pwtms9cy3cyy3oinlvfcltx60c6ye.png/180px-%E4%B8%96%E7%95%8C%E5%9B%A2%E7%BB%93.png',
+    faction: RS_FACTION.RAILWAY,
+    earnsPath: [],
+  },
   '부러진 검의 불': {
     type: RSEquipmentType.WEAPON,
     grade: RS_GRADE.UR,
@@ -1084,10 +1275,10 @@ const DEFAULT_ALL_EQUIPMENTS: {
       },
     ],
   },
-  '메모리 청심': {
+  '메모리 청심 부적': {
     type: RSEquipmentType.ARMOR,
     grade: RS_GRADE.SSR,
-    desc: '기본 속성: 방어력+39\n옵션: 자신의 스킬 덱에 [블루카드]가 없을 경우 받는 최종 피해가15% 감소합니다.',
+    desc: '기본 속성: 방어력+39\n옵션: 자신의 스킬 덱에 [블루카드]가 없을 경우 받는 최종 피해가 15% 감소합니다.',
     thumbnail:
       'https://nng-phinf.pstatic.net/MjAyNTAyMTJfMTkz/MDAxNzM5MzQzMDYwOTU4.ymKykeD0INzw7hzW8XLSyvs8jmAfUyRrrodP5m_ME_Yg.nC6a-rSVBmXS7GSheU7XeQ4P39wJo2tYxtZMlH6vqa0g.PNG/%E5%86%85%E5%AD%98%E6%B8%85%E5%BF%83%E5%92%92.png',
     faction: RS_FACTION.NIGHT_CHAINS,
@@ -1116,6 +1307,10 @@ const DEFAULT_ALL_EQUIPMENTS: {
       {
         desc: '철도 주변의 베툴라 부표-혼란의 돌산호',
         tags: ['부표'],
+      },
+      {
+        desc: '흑월 장비함',
+        tags: ['흑월 장비함'],
       },
     ],
   },
@@ -3197,8 +3392,9 @@ const DEFAULT_ALL_EQUIPMENTS: {
     ],
   },
 }
+
 export const ALL_EQUIPMENTS: {
-  [key: string]: RSEquipment
+  [key: string]: RSEquipment & { iType: RSItemType }
 } = _.mapValues(DEFAULT_ALL_EQUIPMENTS, (value): RSEquipment & { iType: RSItemType } => {
   return {
     ...value,
@@ -3206,7 +3402,27 @@ export const ALL_EQUIPMENTS: {
   }
 })
 
-export const MAPPED_ALL_EQUIPMENTS = _.map(ALL_EQUIPMENTS, (value, key) => ({
+export const MAPPED_ALL_EQUIPMENTS: Array<
+  RSEquipment & {
+    iType: RSItemType
+  }
+> = _.map(ALL_EQUIPMENTS, (value, key) => ({
   name: key,
   ...value,
 }))
+
+export const MAPPED_ALL_EQUIPMENTS_SSR: Array<
+  RSEquipment & {
+    iType: RSItemType
+  }
+> = MAPPED_ALL_EQUIPMENTS.filter((eq) => eq.grade === RS_GRADE.SSR)
+export const MAPPED_ALL_EQUIPMENTS_SR: Array<
+  RSEquipment & {
+    iType: RSItemType
+  }
+> = MAPPED_ALL_EQUIPMENTS.filter((eq) => eq.grade === RS_GRADE.SR)
+export const MAPPED_ALL_EQUIPMENTS_R: Array<
+  RSEquipment & {
+    iType: RSItemType
+  }
+> = MAPPED_ALL_EQUIPMENTS.filter((eq) => eq.grade === RS_GRADE.R)

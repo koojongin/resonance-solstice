@@ -32,7 +32,7 @@ export function RsEquipmentList({
   const grades = Object.keys(RS_GRADE)
   const SORTED_ALL_EQUIPMENTS = _.sortBy(MAPPED_ALL_EQUIPMENTS, (item) =>
     grades.indexOf(item.grade),
-  )
+  ) as ExtendedRSEquipment[]
 
   const [equipments, setEquipments] = useState<ExtendedRSEquipment[]>(SORTED_ALL_EQUIPMENTS)
   const [viewMode, setViewMode] = useState<ItemBoxViewMode>(ItemBoxViewMode.MINIMIZED)
@@ -137,7 +137,13 @@ export function EquipmentBox({ equipment }: { equipment: ExtendedRSEquipment }) 
   )
 }
 
-export function EquipmentBoxResponsive({ equipment }: { equipment: ExtendedRSEquipment }) {
+export function EquipmentBoxResponsive({
+  equipment,
+  dropRate,
+}: {
+  dropRate?: number
+  equipment: ExtendedRSEquipment
+}) {
   return (
     <div className="relative">
       <img className="absolute bottom-0 z-0" src={getMaterialBgFrameUrl(equipment.grade)} />
@@ -147,6 +153,11 @@ export function EquipmentBoxResponsive({ equipment }: { equipment: ExtendedRSEqu
       </div>
       <img className="relative z-20 rounded w-full p-[4px]" src={equipment.thumbnail} />
       <img className="absolute z-10 bottom-0" src={getMaterialBottomFrameUrl(equipment.grade)} />
+      {dropRate !== 0 && (
+        <div className="absolute z-20 bottom-0 bg-gray-600/80 text-white w-full ff-dh pl-[4px] py-[2px] text-[14px]">
+          {(dropRate ?? 0).toFixed(4)}%
+        </div>
+      )}
     </div>
   )
 }

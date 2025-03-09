@@ -1,7 +1,7 @@
 import { RS_GRADE } from '@/const/character/character.enum'
 import _ from 'lodash'
-import { DefaultRSItem } from '@/const/material/material.type'
-import { RSItemType } from '@/const/item/item.enum'
+import { DefaultRSItem } from '@/const/material/default-rs-item.type'
+import { RSItemType } from '@/const/item/rs-item-type.type'
 
 export interface OriginRSTrainEquipment extends DefaultRSItem {
   trainEquipmentType: string

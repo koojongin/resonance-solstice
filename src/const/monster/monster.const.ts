@@ -337,7 +337,14 @@ export const MONSTERS: {
     camp: 'https://patchwiki.biligame.com/images/resonance/a/a3/8dqqd5k3eudc4iks8icdt7jksjfv61f.png',
   },
   '앰피 본드래곤': {
-    drops: ['앰피 본드래곤 두개골', '앰피 본드래곤 흉골'],
+    drops: [
+      '앰피 본드래곤 두개골',
+      '앰피 본드래곤 흉골',
+      '본드래곤 척추뼈',
+      '본드래곤 꼬리뼈',
+      '해룡 지느러미줄',
+      '해룡 꼬리 지느러미',
+    ],
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E8%A3%82%E9%A6%96%E9%AA%A8%E9%BE%99',
     thumbnail:
@@ -513,7 +520,7 @@ export const MONSTERS: {
       'https://patchwiki.biligame.com/images/resonance/0/0e/888buzqrr96ckuv9282vz2uxugwjdnt.png',
     camp: 'https://patchwiki.biligame.com/images/resonance/f/f2/72fwsi6q426gygxui8q4u6n5e42jd60.png',
   },
-  '다크 썬더 리추얼리스트': {
+  뇌정사제: {
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E5%86%A5%E9%9C%86%E4%BB%AA%E8%80%85',
     thumbnail:
@@ -1298,7 +1305,7 @@ export const MONSTERS: {
       'https://patchwiki.biligame.com/images/resonance/d/d5/6bz4znisiaqlc8m4f1tqpyvt53jm10k.png',
     camp: 'https://patchwiki.biligame.com/images/resonance/e/ef/jx24anrrg2438ypj6wqb5wrbcrm8j2a.png',
   },
-  '조상들의 보복': {
+  '원조의 과보': {
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E8%BF%9C%E7%A5%96%E7%9A%84%E6%9E%9C%E6%8A%A5',
     thumbnail:
@@ -1308,6 +1315,7 @@ export const MONSTERS: {
     defence: MonsterStatGrade.B,
     hp: MonsterStatGrade.SS,
     type: MonsterType.DORMANT,
+    drops: ['심면 고엽', '심면 뿌리', '심면 나뭇가지', '심면 나무', '원조의 뿌리', '원조의 참회'],
     traits: {
       skills: [
         {
@@ -1470,7 +1478,7 @@ export const MONSTERS: {
       'https://patchwiki.biligame.com/images/resonance/d/d5/7rg9rjhalp1r7lrxeqts676172b8x3z.png',
     camp: 'https://patchwiki.biligame.com/images/resonance/6/63/dc60cj3zxglq3um638rpqk1hkxtptjz.png',
   },
-  '슬레이어 전기톱': {
+  '슬레이어-체인소': {
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E5%B1%A0%E6%88%AE%E8%80%85%C2%B7%E9%93%BE%E9%94%AF',
     thumbnail:
@@ -1480,6 +1488,7 @@ export const MONSTERS: {
     defence: MonsterStatGrade.S,
     hp: MonsterStatGrade.SS,
     type: MonsterType.HUMAN,
+    drops: ['슬레이어의 체인소', '슬레이어의 가면'],
     traits: {
       skills: [
         {

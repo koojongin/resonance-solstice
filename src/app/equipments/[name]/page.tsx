@@ -22,7 +22,10 @@ export default function EquipmentDetailPage() {
 
   const decodedName = decodeURIComponent(name as string)
 
-  const equipment = { ...ALL_EQUIPMENTS[decodedName], name: decodedName }
+  const equipment = {
+    ...ALL_EQUIPMENTS[decodedName],
+    name: decodedName,
+  }
   if (!equipment) return <div>검색된 재료 데이터 없음.</div>
 
   const relatedMaps = ALL_NAMED_MAPS.filter((map) => {
@@ -56,11 +59,16 @@ export default function EquipmentDetailPage() {
             </div>
           </div>
           <div className="p-[10px] pt-0 pr-0 text-white ff-dh w-full flex flex-col gap-[4px]">
-            <div className="text-[20px]">{equipment.grade}</div>
-            <div className="text-[24px]">{decodedName}</div>
+            <div className="text-[20px] flex flex-wrap gap-[4px] items-center">
+              <div>{equipment.grade}</div>
+              <div className="text-shadow-outline-white-gray text-yellow-500">
+                {equipment.faction}
+              </div>
+            </div>
+            <div className="text-[30px]">{decodedName}</div>
             <div className="p-[10px] bg-gray-800/40 w-full min-h-[120px] rounded border-2 border-gray-700 shadow-md shadow-gray-600 ff-sdn">
               {equipment.desc && (
-                <div className="whitespace-pre-line break-words">
+                <div className="whitespace-pre-line break-words leading-tight">
                   <RSHighlightedText text={equipment.desc} />
                 </div>
               )}
@@ -77,15 +85,16 @@ export default function EquipmentDetailPage() {
       <div className="flex flex-col gap-[4px]">
         <GradientHeaderDiv>획득 정보</GradientHeaderDiv>
         <div className="inline-flex flex-wrap gap-[4px]">
-          {equipment.earnsPath.map((earnPath) => {
-            return (
-              <ItemStringLinkWithMap key={createKey()} text={earnPath.desc}>
-                <div className="inline-flex border-gray-500 border w-max rounded p-[4px]">
-                  {earnPath.desc}
-                </div>
-              </ItemStringLinkWithMap>
-            )
-          })}
+          {equipment.earnsPath &&
+            equipment.earnsPath.map((earnPath) => {
+              return (
+                <ItemStringLinkWithMap key={createKey()} text={earnPath.desc}>
+                  <div className="inline-flex border-gray-500 border w-max rounded p-[4px]">
+                    {earnPath.desc}
+                  </div>
+                </ItemStringLinkWithMap>
+              )
+            })}
         </div>
       </div>
 

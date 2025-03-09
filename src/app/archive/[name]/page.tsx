@@ -11,6 +11,8 @@ import { EquipmentBox } from '@/app/equipments/rs-equipment-list'
 import { useNextDepthNavigator } from '@/services/navigation'
 import { Tooltip } from '@material-tailwind/react'
 import { TOTAL_ARCHIVE_MAP } from '@/const/archive'
+import { ExtendedUnionRSItem } from '@/const/material/index.type'
+import { ExtendedRSEquipment } from '@/app/equipments/equipment.type'
 
 export default function ArchiveDetailPage() {
   const { name } = useParams()
@@ -25,7 +27,7 @@ export default function ArchiveDetailPage() {
 
   const linkedEquipments = Object.values(MAPPED_ALL_EQUIPMENTS).filter(
     (equipment) => (equipment.desc || '').indexOf(keyword) >= 0,
-  )
+  ) as ExtendedRSEquipment[]
 
   return (
     <div className="flex flex-col gap-[10px]">
@@ -68,7 +70,7 @@ export default function ArchiveDetailPage() {
                 key={createKey()}
                 content={
                   <div>
-                    [{equipment.type}] {equipment.name}
+                    [{equipment?.type}] {equipment.name}
                   </div>
                 }
               >

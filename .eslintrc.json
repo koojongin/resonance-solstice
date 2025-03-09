@@ -46,7 +46,6 @@
     "no-useless-return": "off",
     "jsx-a11y/alt-text": "off",
     "@next/next/no-img-element": "off",
-    "@typescript-eslint/no-explicit-any": "warn",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "consistent-return": "off",
     "react/no-array-index-key": "off",
@@ -57,9 +56,13 @@
     "class-methods-use-this": "off",
     "jsx-a11y/no-noninteractive-element-interactions": "off",
     "@typescript-eslint/naming-convention": "off",
+    "react/no-danger": "off",
+    "no-alert": "off",
+    "react-hooks/exhaustive-deps": "off",
     "no-param-reassign": "off",
     "import/no-extraneous-dependencies": "off",
     "jsx-a11y/control-has-associated-label": "off",
+    "@typescript-eslint/no-explicit-any": "off",
     "react/jsx-filename-extension": [
       "warn",
       {

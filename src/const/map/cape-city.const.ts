@@ -466,7 +466,7 @@ export const MAP_CAPE_CITY: RSMap = {
       recommendationLevel: 52,
       boss: {
         title: '다크 스톰',
-        name: '다크 썬더 리추얼리스트',
+        name: '뇌정사제',
       },
       rewards: [
         {

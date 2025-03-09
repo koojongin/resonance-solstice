@@ -4,19 +4,21 @@ import {
 } from '@/services/utils/material-box-converter'
 import React from 'react'
 import { ExtendedUnionRSItem } from '@/const/material/index.type'
-import { RSItemType } from '@/const/item/item.enum'
+import { RSItemType } from '@/const/item/rs-item-type.type'
 import { EquipmentBoxResponsive } from '@/app/equipments/rs-equipment-list'
 import { ExtendedRSEquipment } from '@/app/equipments/equipment.type'
 
 export function ItemBoxResponsive({
   item,
   withoutIconPadding,
+  dropRate,
 }: {
   withoutIconPadding?: boolean
   item: ExtendedUnionRSItem
+  dropRate?: number
 }) {
   if (item.iType === RSItemType.EQUIPMENT) {
-    return <EquipmentBoxResponsive equipment={item as ExtendedRSEquipment} />
+    return <EquipmentBoxResponsive dropRate={dropRate} equipment={item as ExtendedRSEquipment} />
   }
 
   // 메터리얼인데 일단 메터리얼,열차장비+나머지 다처리하도록

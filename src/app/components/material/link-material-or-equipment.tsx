@@ -6,7 +6,7 @@ import { ExtendedRSMaterial } from '@/const/material/material.type'
 import { ALL_EQUIPMENTS } from '@/const/archive/equipment.const'
 import { MATERIALS } from '@/const/material.const'
 import { ExtendedRSEquipment } from '@/app/equipments/equipment.type'
-import { RSItemType } from '@/const/item/item.enum'
+import { RSItemType } from '@/const/item/rs-item-type.type'
 import { ExtendedUnionRSItem } from '@/const/material/index.type'
 
 export function LinkItem({

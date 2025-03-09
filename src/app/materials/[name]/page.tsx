@@ -22,6 +22,7 @@ import { MaterialBoxResponsive } from '@/app/components/material/material-box'
 import { ItemBoxResponsive } from '@/app/components/item/item-box'
 import { ALL_EQUIPMENTS } from '@/const/archive/equipment.const'
 import { ItemTooltipBox } from '@/app/components/item/item-tooltip-box'
+import { getItemByNameOrItem } from '@/services/utils/included-item'
 
 export default function MaterialDetailPage() {
   const { name } = useParams()
@@ -82,15 +83,16 @@ export default function MaterialDetailPage() {
         <div className="flex flex-col gap-[4px]">
           <div className="ff-dh text-[20px] text-gray-800">다음 아이템이 포함되어 있습니다.</div>
           <div className="flex flex-wrap gap-[4px]">
-            {material.includedItems!.map((itemName) => {
-              const item = {
-                ...(MATERIALS[itemName] || ALL_EQUIPMENTS[itemName]),
-                name: itemName,
-              }
+            {material.includedItems!.map((itemNameOrItem: any) => {
+              const item = getItemByNameOrItem(itemNameOrItem)
+              const isExistRate = material.isSameRate
+              const itemDropRate = material.isSameRate
+                ? 100 / (material.includedItems || []).length
+                : 0
               return (
                 <ItemTooltipBox key={createKey()} item={item}>
                   <div className="w-[70px]">
-                    <ItemBoxResponsive item={item} withoutIconPadding />
+                    <ItemBoxResponsive item={item} withoutIconPadding dropRate={itemDropRate} />
                   </div>
                 </ItemTooltipBox>
               )
@@ -104,7 +106,7 @@ export default function MaterialDetailPage() {
           획득 정보({material?.earnsPath?.length.toLocaleString() || 0})
         </GradientHeaderDiv>
         <div className="inline-flex flex-wrap gap-[4px]">
-          {material?.earnsPath?.map((earnPath) => {
+          {material?.earnsPath?.map((earnPath: any) => {
             return (
               <ItemStringLinkWithMap key={createKey()} text={earnPath.desc}>
                 <div className="inline-flex border-gray-500 border w-max rounded p-[4px]">
