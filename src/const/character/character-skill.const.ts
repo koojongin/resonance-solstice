@@ -943,4 +943,28 @@ export const CHARACTER_SKILLS: {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/b/b4/5prwcj9vou568lbeoegtrp1np196leb.png',
   },
+
+  '폭파 작업': {
+    amount: 3,
+    cost: 2,
+    name: '폭파 작업',
+    desc: `1개의 [자동 폭탄]을 던집니다. [자동 폭탄]은 적의 필드 안으로 진입 후 자폭 카운트다운을 시작합니다.
+    [자동 폭탄]은 [폭발물]로 10초 후 폭발하여 작은 범위 내의 적에게 1단 피해를 입히고 동시에 [낙뢰]를 발동합니다. 폭발 시 카드를 1장 뽑습니다.`,
+    thumbnail: 'https://patchwiki.biligame.com/images/resonance/b/b6/ktnu6rmabbvna2l4l5865c653ef37n9.png',
+  },
+  '레드 버튼': {
+    amount: 1,
+    cost: 1,
+    name: '레드 버튼',
+    desc: `필드에 있는 모든 [폭발물]을 즉시 폭파시킵니다.`,
+    thumbnail: 'https://patchwiki.biligame.com/images/resonance/1/17/dlefo7fz4hgczbf5tqjyq5n0r2et99z.png',
+  },
+  '가방 정리': {
+    amount: 1,
+    cost: 5,
+    name: '가방 정리',
+    desc: `3개의 [자동 폭탄]을 던집니다. [자동 폭탄]은 적의 필드 안으로 진입 후 자폭 카운트다운을 시작합니다. [레드 버튼]이 손에 없다면 덱 혹은 버려진 덱에서 [레드 버튼]을 1장 뽑아 손으로 가져옵니다.
+    [자동 폭탄]은 [폭발물]로 10초 후에 폭발하여 작은 범위 내의 적에게 1단 피해를 입히고 동시에 [낙뢰]를 발동합니다. 폭발 시 카드를 1장 뽑습니다.`,
+    thumbnail: 'https://patchwiki.biligame.com/images/resonance/7/7c/niy1bs6e8pd7gyv7d4e6eq7iew9bo38.png',
+  },
 }

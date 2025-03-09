@@ -561,4 +561,25 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/2/28/4tqjk13m5mivv500xgrrywa5rg4op8e.png',
   },
+
+  정비: {
+    name: '정비',
+    desc: '전투 시작 시 맨 처음 내는 카드 3장의 비용이 1 감소합니다.',
+    thumbnail: '',
+  },
+  '폭탄 장전': {
+    name: '폭탄 장전',
+    desc: '[레드 버튼]을 사용하여 터뜨린 [폭발물]이 입히는 최종 피해가 30% 증가합니다.',
+    thumbnail: '',
+  },
+  '폭발 지시': {
+    name: '폭발 지시',
+    desc: '[레드 버튼] 사용 시 앞열의 아군이 10초간 지속되는 [실드]를 얻습니다.\n[실드]의 내구도는 자신의 방어력의 2000%입니다.',
+    thumbnail: '',
+  },
+  메아리: {
+    name: '메아리',
+    desc: '[폭파 작업] 추가효과:\n이 카드가 카드 효과로 인해 버려질 때 버려진 [폭파 작업] 카드가 이번 전투 동안 소모하는 비용이 1 감소합니다.(중첩 가능)',
+    thumbnail: '',
+  },
 }

@@ -565,4 +565,28 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
       'https://patchwiki.biligame.com/images/resonance/c/c8/rgl4s2wdqd5l772mijggx2eyvi68v9t.png',
     clearMind: '청명도 상한+8',
   },
+
+  '폭탄 해체 전문가': {
+    name: '폭탄 해체 전문가',
+    desc: `체력이 3600 증가하고, 5초마다 적의 [폭발물] 1개를 제거합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/52/mfl12t44fpq2pksjuuugdo9j4nku1ot.png',
+    clearMind: '어류 평점+5.0%',
+  },
+  '폭탄 마니아': {
+    name: '폭탄 마니아',
+    desc: `[가방 정리] 사용 시 [폭발물] 키워드를 가진 카드를 우선으로 카드를 1장 뽑습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/58/jsyjotqlomibangieswpf9xjgtevmwe.png',
+  },
+  침착: {
+    name: '침착',
+    desc: `자신의 방어력이 초당 0.3% 증가합니다. (최대 30%)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/65/0wogvvlp7ult4vfxycofegwvpd5f7cj.png',
+    clearMind: '구매 가능한 맨더 공구함 수량+20.0%',
+  },
+
+  // 도시락으로 회복하는 피로도+3
+  // 케이프시 거래소 특산품 구매 가능한 수량+20.0%
 }
