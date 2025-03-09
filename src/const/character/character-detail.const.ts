@@ -275,7 +275,24 @@ export const CHARACTER_DETAIL: {
     },
   },
   CHARLOTTE: {},
-  SUEN: {},
+  SUEN: {
+    SKILLS: ['복음', '음에너지', '다크 아트', '형벌', '다크 아트', '정화'],
+    RESONANCES: {
+      1: '은혜',
+      2: '지탱',
+      3: '생기',
+      4: '망녕',
+      5: '일념',
+    },
+    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    AWAKENING: {
+      1: '기적',
+      2: '무심',
+      3: '투지',
+      4: '유리',
+      5: '집념',
+    },
+  },
   NAYUTA: {
     SKILLS: ['소실', '셔플', '미스터리', '해체의 번개', '재구축의 힘', '구축의 화염', '정화의 빛'],
     RESONANCES: {

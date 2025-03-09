@@ -535,4 +535,34 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
       'https://patchwiki.biligame.com/images/resonance/2/2c/665hb7i4aflevhd29ej8xclkxiryff7.png',
     clearMind: '애완동물 평가 +8.0%',
   },
+
+  은혜: {
+    name: '은혜',
+    desc: `6초마다 무작위 아군 1명을 치유하여 체력을 5% 회복시킵니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/1/10/7uu597gsttu479jp83l77k2733r3tmb.png',
+    clearMind: '피로도 상한+8',
+  },
+  지탱: {
+    name: '지탱',
+    desc: `피해를 입을 때마다 자신의 방어력이 0.5% 증가합니다. (최대 30%)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/32/4ctvf1g3wkhxfea9zjgz7w6x5r3n872.png',
+  },
+  망녕: {
+    name: '망녕',
+    desc: `[형벌] 강화:
+    현재 체력의 13%를 잃고 [스칼렛 램프]를 흔들어 범위 내의 적에게 1단 피해를 입히며, 동시에 [족쇄], [작열]과 [저주]를 발동합니다.
+    사용 후 [다크 아트]를 1장 생성하여 손으로 가져옵니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/88/7vvqump1kv7m80n4gd2ytda86var374.png',
+    clearMind: '청명도 상한+4',
+  },
+  일념: {
+    name: '일념',
+    desc: `[다크 아트]가 1장 [소각]될 때마다 모든 아군의 체력을 2% 회복합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/c8/rgl4s2wdqd5l772mijggx2eyvi68v9t.png',
+    clearMind: '청명도 상한+8',
+  },
 }

@@ -536,4 +536,29 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/d/da/99i5tz2k4csxlp3qplfa6zzqmo5absf.png',
   },
+
+  기적: {
+    name: '기적',
+    desc: '체력이 20% 미만일 때 즉시 [정화]를 사용합니다.(1회 한정)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/fa/ifb58jslfp1fs8yvmqkdnp0l01c2y8a.png',
+  },
+  무심: {
+    name: '무심',
+    desc: '자신의 스킬 카드를 사용할 때마다 [광폭]을 얻습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/5a/h1mnvsozhu5c83e8oi582p6eal8ehsz.png',
+  },
+  유리: {
+    name: '유리',
+    desc: '[복음] 지속시간 동안, 모든 아군이 받는 최종 피해가 10% 감소합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/7f/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  집념: {
+    name: '집념',
+    desc: '[다크 아트]가 1장 생성될 때마다 비용을 0.5 얻습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/28/4tqjk13m5mivv500xgrrywa5rg4op8e.png',
+  },
 }

@@ -910,4 +910,37 @@ export const CHARACTER_SKILLS: {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/8/86/edhsncmyuwilfw8ha71w5qt5htbxjpk.png',
   },
+
+  복음: {
+    amount: 2,
+    cost: 3,
+    name: '복음',
+    desc: `현재 체력의 13%를 잃고 [스칼렛 램프]를 흔들어 [일반공격]을 다음과 같이 전환합니다.
+    자신을 제외한 모든 아군의 체력을 3% 회복합니다.(14초간 지속, 중첩 가능)
+    지속 시간이 종료되면 기본 [일반공격]으로 전환돱니다.
+    사용 후 [블랙카드] [음에너지]를 1장 생성하여 손으로 가져옵니다.
+    이 카드가 버려지면 [다크 아트]를 1장 생성하여 손으로 가져옵니다.
+    수엔의 기본 [일반공격]은 다음과 같습니다.
+    모든 적에게 1단 피해를 입히고, 자신의 체력을 3% 회복합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/6f/r879nqtbk8guze0volssyx5itv5jutv.png',
+  },
+  형벌: {
+    amount: 2,
+    cost: 3,
+    name: '형벌',
+    desc: `현재 체력의 13%를 잃고 [스칼렛 램프]를 흔들어 범위 내의 적에게 1단 피해를 입히고, 동시에 [족쇄]와 [작열]을 부여합니다.\n사용 후 50% 확률로 [다크 아트]를 1장 생성하여 손으로 가져옵니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/55/5w9nbda64d49lgfx9duedgl0j9e6arp.png',
+  },
+  정화: {
+    amount: 1,
+    cost: 5,
+    name: '정화',
+    desc: `[스칼렛 램프]의 정화 모드를 활성화하여 모든 아군이 받는 제어 및 피해형 효과를 제거합니다.
+    모든 아군의 체력을 30% 회복합니다.
+    동시에 손에 있는 모든 [블랙카드]를 [소각]하고, 카드를 1장 소각할 때마다 모든 아군의 체력을 10% 회복합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/b4/5prwcj9vou568lbeoegtrp1np196leb.png',
+  },
 }
