@@ -519,10 +519,10 @@ export const CHARACTER_SKILLS: {
     thumbnail: 'https://i.postimg.cc/nhbkkrTX/Zhen-Bo-red.png',
     isGeneratedCard: true,
   },
-  '콜러서스 군진': {
+  '콜로서스 군진': {
     amount: 1,
     cost: 3,
-    name: '콜러서스 군진',
+    name: '콜로서스 군진',
     desc: '모든 [진형 유지]가 [진형 유지II]로 전환됩니다.\n동시에 모든 아군의 공격력과 방어력이 5% 증가합니다.\n사용 후 [콜로서스 군진]이 [콜로서스 군진II]로 전환됩니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/1/19/iof58qutcymxzn9mrvb8gvgqseoyy1r.png',

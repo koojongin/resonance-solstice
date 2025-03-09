@@ -25,7 +25,7 @@ import { RECOMMENDATION_ES_DECKS } from '@/app/rd/eternal-scuffle/rd-eternal-scu
 import { CHARACTER_DETAIL } from '@/const/character/character-detail.const'
 import { CHARACTER_SKILLS } from '@/const/character/character-skill.const'
 
-const TOTAL_RD_DECKS = [...RECOMMENDATION_DECKS, ...RECOMMENDATION_ES_DECKS]
+const TOTAL_RD_DECKS = [...RECOMMENDATION_DECKS, ...RECOMMENDATION_ES_DECKS].reverse()
 export default function RecommendationDeckDetailPage() {
   const { id } = useParams()
   const [isVisibleGenericEqBox, setIsVisibleGenericEqBox] = useState(false)
@@ -37,7 +37,7 @@ export default function RecommendationDeckDetailPage() {
 
   const relatedDecks =
     deck.leaderName &&
-    TOTAL_RD_DECKS.reverse().filter(
+    TOTAL_RD_DECKS.filter(
       (rDeck) => rDeck.characters.filter((c) => c.character.name === deck.leaderName).length > 0,
     )
   const isExistLeader = deck.leaderName
