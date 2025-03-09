@@ -144,6 +144,8 @@ export function EquipmentBoxResponsive({
   dropRate?: number
   equipment: ExtendedRSEquipment
 }) {
+  const isExistDropRate = !!dropRate
+
   return (
     <div className="relative">
       <img className="absolute bottom-0 z-0" src={getMaterialBgFrameUrl(equipment.grade)} />
@@ -153,7 +155,7 @@ export function EquipmentBoxResponsive({
       </div>
       <img className="relative z-20 rounded w-full p-[4px]" src={equipment.thumbnail} />
       <img className="absolute z-10 bottom-0" src={getMaterialBottomFrameUrl(equipment.grade)} />
-      {dropRate !== 0 && (
+      {isExistDropRate && (
         <div className="absolute z-20 bottom-0 bg-gray-600/80 text-white w-full ff-dh pl-[4px] py-[2px] text-[14px]">
           {(dropRate ?? 0).toFixed(4)}%
         </div>
