@@ -1419,7 +1419,7 @@ export const MONSTERS: {
       'https://patchwiki.biligame.com/images/resonance/b/bc/jnqullmw3gqmytnc1uof0clplko9f4o.png',
     camp: 'https://patchwiki.biligame.com/images/resonance/0/00/qdastc7p24sf8r44ketmdkl4b1370j0.png',
   },
-  '위험방지장비-ENI': {
+  '디펜스 대첵 로봇-아이니': {
     detail:
       'https://wiki.biligame.com/resonance/%E6%95%8C%E4%BA%BA-%E5%BE%A1%E9%99%A9%E5%AF%B9%E7%AD%96%E6%9C%BA%E6%A2%B0%C2%B7%E8%89%BE%E5%B0%BC',
     thumbnail:

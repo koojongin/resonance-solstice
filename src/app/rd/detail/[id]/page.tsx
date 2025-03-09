@@ -22,6 +22,8 @@ import { RSHighlightedText } from '@/services/utils/highlight-text'
 import { CharacterThumbnailBox } from '@/app/components/character-frame/character-thumbnail-box'
 import { motion } from 'framer-motion'
 import { RECOMMENDATION_ES_DECKS } from '@/app/rd/eternal-scuffle/rd-eternal-scuffle.const'
+import { CHARACTER_DETAIL } from '@/const/character/character-detail.const'
+import { CHARACTER_SKILLS } from '@/const/character/character-skill.const'
 
 const TOTAL_RD_DECKS = [...RECOMMENDATION_DECKS, ...RECOMMENDATION_ES_DECKS]
 export default function RecommendationDeckDetailPage() {
@@ -114,10 +116,55 @@ export default function RecommendationDeckDetailPage() {
         <div className="flex gap-[10px] justify-center items-start">
           {deck.characters.map((characterData) => {
             const { character, equipments } = characterData
+            const detailCharacter = CHARACTER_DETAIL[character.originName]
             return (
               <div key={createKey()} className="relative w-[180px] flex flex-col gap-[6px]">
                 <RsCharacterCard size={RsCardSize.RESPONSIVE} character={character} height={200} />
                 <RsEquipmentCard equipments={equipments || []} width={60} gap={0} onShowName />
+                <hr className="border-cyan-800 border-[2px] border-b-0 border-dashed" />
+                <div className="flex flex-wrap w-full gap-[2px] items-center justify-center">
+                  {(detailCharacter.SKILLS || []).map((skillName: string) => {
+                    const skill = CHARACTER_SKILLS[skillName]
+                    return (
+                      <div
+                        key={`character_skill_${character.originName}_${skill.name}`}
+                        className="inline-flex bg-blue-gray-800/50 p-[2px]"
+                      >
+                        <Tooltip
+                          interactive
+                          className="max-w-[300px] whitespace-pre-line break-words leading-normal bg-white shadow-xl text-blue-gray-900"
+                          content={
+                            <div className="flex flex-col gap-[4px]">
+                              <div className="ff-dh text-[20px]">{skillName}</div>
+                              <hr className="border-blue-gray-700" />
+                              <div className="whitespace-pre-line break-all">
+                                <RSHighlightedText text={skill.desc} />
+                              </div>
+                            </div>
+                          }
+                        >
+                          <div className="w-[54px] h-[54px] bg-cover relative cursor-pointer">
+                            <div
+                              className="w-full h-full bg-cover"
+                              style={{ backgroundImage: `url(${skill.thumbnail})` }}
+                            />
+                            <div className="absolute bottom-0 right-0 p-[4px] pb-0 text-white ff-dh flex justify-between w-full">
+                              {skill.amount > 0 && (
+                                <span className="text-shadow-outline">x{skill.amount}</span>
+                              )}
+                              <span className="text-shadow-outline ml-auto">{skill.cost}c</span>
+                            </div>
+                            {skill.isGeneratedCard && (
+                              <div className="absolute top-0 left-0 p-[1px] pb-0 text-shadow-outline text-blue-200 ff-dh">
+                                파생
+                              </div>
+                            )}
+                          </div>
+                        </Tooltip>
+                      </div>
+                    )
+                  })}
+                </div>
               </div>
             )
           })}

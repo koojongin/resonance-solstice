@@ -88,7 +88,7 @@ const DEFAULT_RESONANCE_UPGRADE_MATERIALS = {
 }
 
 export const CHARACTER_DETAIL: {
-  [key: string]: CharacterDetail | any
+  [key: string]: CharacterDetail | { [key: string]: any }
 } = {
   RAZIEL_THE_REMINISCE: {},
   LYCAGIA: {
