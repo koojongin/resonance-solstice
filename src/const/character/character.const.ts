@@ -1,10 +1,23 @@
 import { RS_COLUMN, RS_FACTION, RS_GENDER, RS_GRADE } from '@/const/character/character.enum'
 import { EngineCore, RSCharacter } from '@/const/character/character.interface'
 
+export const LYCAGIA: RSCharacter = {
+  cores: [],
+  originName: 'LYCAGIA',
+  name: '리카지아',
+  faction: RS_FACTION.RAILWAY,
+  grade: RS_GRADE.SSR,
+  column: RS_COLUMN.MIDDLE,
+  thumbnail:
+    'https://patchwiki.biligame.com/images/resonance/f/fe/lrq1s72q7guhec4kildxpzy46ktxkie.png',
+  thumbnailLarge:
+    'https://patchwiki.biligame.com/images/resonance/8/8d/luqzinye881o0kp57qlhyesndkktlzy.png',
+  gender: RS_GENDER.FEMALE,
+}
 export const RAZIEL: RSCharacter = {
   cores: [],
   originName: 'RAZIEL',
-  name: 'Raziel',
+  name: '라지엘',
   faction: RS_FACTION.SOURCE_CITADEL,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
@@ -17,7 +30,7 @@ export const RAZIEL: RSCharacter = {
 export const RAZIEL_THE_REMINISCE: RSCharacter = {
   cores: [EngineCore.IGNITE],
   originName: 'RAZIEL_THE_REMINISCE',
-  name: 'Raziel_The_Reminisce',
+  name: '라지엘-추억',
   faction: RS_FACTION.SOURCE_CITADEL,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.BACK,
@@ -626,7 +639,7 @@ export const MHAR: RSCharacter = {
 export const MSGOLD: RSCharacter = {
   cores: [EngineCore.LIGHTNING_STRIKE],
   originName: 'MSGOLD',
-  name: 'MsGold',
+  name: '미스 골드',
   faction: RS_FACTION.MUNDUS,
   grade: RS_GRADE.R,
   column: RS_COLUMN.BACK,
@@ -833,6 +846,7 @@ export const BOX: RSCharacter = {
 }
 
 export const RS_CHARACTERS: RSCharacter[] = [
+  LYCAGIA,
   RAZIEL,
   RAZIEL_THE_REMINISCE,
   SHIRE,

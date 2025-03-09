@@ -829,4 +829,85 @@ export const CHARACTER_SKILLS: {
       'https://patchwiki.biligame.com/images/resonance/d/dd/lqz9wy2p72l1dnz4n3tz4lcygky3jtn.png',
     isGeneratedCard: true,
   },
+
+  의태: {
+    amount: 3,
+    cost: 1,
+    name: '의태',
+    desc: '안피아가 [백화]를 도와 분석을 진행합니다.\n[개조: 더스트리자드],[개조: 암흑의 매머드]와 [개조: 빙하 본드래곤] 중 1장을 선택하여 손으로 가져옵니다.\n사용 후 [소각]됩니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/b6/g8t4t87xzktu5spjt7grv6trr17ze7g.png',
+  },
+  '개조: 더스트 리자드': {
+    amount: 0,
+    cost: 2,
+    name: '개조: 더스트 리자드',
+    desc: '[백화]가 [더스트 리자드]의 형태를 모방합니다.\n앞열의 아군이 [더스트 본케이지]를 획득합니다.(6초간 지속)\n지속시간 동안 대상에게 [광폭]을 부여하고, 동시에 받는 피해가 80% 감소합니다.\n공격을 받을 때마다 비용을 0.1 얻습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/d0/eeft5so7mrfc3137z0uqvg52ql4g9xu.png',
+    isGeneratedCard: true,
+  },
+  '개조: 암흑의 매머드': {
+    amount: 0,
+    cost: 2,
+    name: '개조: 암흑의 매머드',
+    desc: '[백화]가 [암흑의 매머드]의 형태를 모방합니다.\n음에너지 초신성 1발을 발사하여 모든 적에게 1단 피해를 입히고 [붕괴]를 부여합니다.\n동시에 [수면]을 발동합니다.\n음에너지 초신성은 [파]입니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/52/8540pxdwhtx0igba9frfsau45ym7dyy.png',
+    isGeneratedCard: true,
+  },
+  '개조: 빙하 본드래곤': {
+    amount: 0,
+    cost: 2,
+    name: '개조: 빙하 본드래곤',
+    desc: '[백화]가 [빙하 본드래곤]의 형태를 모방합니다.\n모든 적에게 [속박]을 부여하고 5단 피해를 입힙니다.\n동시에 [냉동]을 발동합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a6/123ugjsnh3yldnewoovmje4yhjf149c.png',
+    isGeneratedCard: true,
+  },
+  '생과 사의 마법함': {
+    amount: 1,
+    cost: 3,
+    name: '생과 사의 마법함',
+    desc: '카드를 1장 뽑습니다.\n[퍼플카드]라면 5초마다 버려진 덱에서 카드를 1장 회수하여 손으로 가져옵니다.(2회 유효)\n아니라면 5초마다 카드를 1장 뽑습니다.(2회 유효)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/1/1f/6w8n7ufmwb07syg5yc8cakt75vfrowq.png',
+  },
+  '허와 실의 관': {
+    amount: 1,
+    cost: 5,
+    name: '허와 실의 관',
+    desc: '안피아가 [백화]를 석방합니다.\n[백화]가 모든 적은 5초간 삼켜버립니다.\n지속시간 동안 [백화]가 받는 피해를 모든 적에게 전이시킵니다.\n지속시간 종료 후 [백화]가 피해를 받은 횟수만큼 모든 적에게 1단 피해를 입힙니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/99/4rce1v6a3m0nvgk9a848rvrkwqs4gl3.png',
+  },
+
+  '끈적 끈적한 폭탄': {
+    amount: 3,
+    cost: 2,
+    name: '끈적 끈적한 폭탄',
+    desc: '5초 동안 무작위 적에게 부착할 끈적끈적한 폭탄 3개를 던집니다 .\n지속 시간 동안 적 대상에게 초당 1의 피해를 입히고 20% 확률로 끈적끈적한 폭탄을 [중단]하여 [폭발물] 로 만듭니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/42/ifqyme79jy9uz8hu00vtf33k1irow3k.png',
+  },
+  '환각성 가스': {
+    amount: 2,
+    cost: 2,
+    name: '환각성 가스',
+    desc: '환각 가스를 던져 적의 에너지를 3% 감소시키고 환각\n가스를 폭발물 로 만듭니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/95/jc2pu9rsyipni79unzunl8exlccccrn.png',
+  },
+  '기계 늑대 무리': {
+    amount: 1,
+    cost: 4,
+    name: '기계 늑대 무리',
+    desc: `기계 늑대 3마리를 소환하여 싸우게 하고 [일반공격] 지원을 수행합니다. 공격은 재활용되기 전에 10초 동안 지속됩니다.
+    지속 시간:
+    [레드카드]를 사용하거나 [레드카드]를 버리는 구역에 버릴 때마다 기계 늑대는 늑대 송곳니 미사일을 발사하여 적에게 1의 피해를 입히고 [인뢰]를 발동합니다. [블루카드]를 사용하거나 [블루카드]를 버리는 구역에 버릴 때마다 기계 늑대는 치유 미사일을 발사하여 체력이 가장 낮은 아군을 치료하고 체력의 6%를 회복합니다.
+    늑대 송곳니 미사일은 [폭발물] 입니다.
+    기계 늑대는 기계 유닛 입니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/86/edhsncmyuwilfw8ha71w5qt5htbxjpk.png',
+  },
 }

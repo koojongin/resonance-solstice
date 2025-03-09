@@ -169,4 +169,19 @@ export const RECOMMENDATION_ES_DECKS: RecommendationDeck[] = [
     autoPreset:
       'vZfBjtsgEIbfhbMrMWAg9rWnSLttpfZW5WA1tGttNkntRG0V5d0LToLHhhg7iXZPS8AzHzPzD3Agr1pvPxbV8tP+jeQ0IZvdi67sD81oWdY/zP/f/m01ySEhZf2ki+Vpwec1yXfVXifELnkq6x3Jvx/IvtZuef1arlZzY4oA45SCTEliF3wpquLtudiaDxYJ2RXVL707fWR8ls16Ks16psz6zZ+1rqwRoOaPZbOL3fVS/yU5T4j+vS+38wvConVB8g9wTA59Dw7LUoEEgZ1yaZ2GTLptdYkoh67H3hYPhBuvxxgHFbMOB0tpiCMQDYfGMYcIYYg4hgTVyUHG3isc2CaKg2Skb7DnkUKAsLurlFGv8gIIPcOiSyLAI/Gr/VSVg0TkjARkOoIYjcBGIAjaIFzXLKg062v2nMEB4VIFnnC5YvEQRYQbrhA645EKaXwPVwgo0a/UERXS6A83rIdWCFWx9Jj6ENPTwzLupaeR7Z3pwYE4i/ZKk7j0LRSniICpnEU88kd7VLE9pg/2CIxG1Cipp8bhExSyQKbF9EwPnup0egkCE/GjPSTa8WBG0TeAMTmidd0JBtQT7WAWOaTxLN7HZBqJvCFYsxDYiHNoygXNFBjvlo6cejEafSMZCpBik5LGshGxueHy6hBZ97b4mDOQjTkDryHIhyDwIMKQzsEr3WE5URmX+JjMDFRLyvm0ahE+U3P3u5mJBdrOxDiB36O9thNlWthX49ft5cX4s1jV5sn40jwjsSyqzUqfTbjdO5cuR279ReWL0/NzvjxL2TVxmxQnxHZgXlVuYE9HNCPRjHn1tAOGZmzLawcCzxgJuoGNXTsjkTV7W20HCrCfjlOBBxw7BewH4dinK/pG4W8wToZBKd426+BY08fjfw==',
   },
+
+  {
+    id: '10009',
+    title: '무한난투 - 소마 덱3',
+    leaderName: SOMMER.name,
+    characters: [
+      { character: SOMMER },
+      { character: STELLA },
+      { character: VERLAINE },
+      { character: TENNIE },
+      { character: ARINA },
+    ],
+    desc: `클리어 기록이 존재하는 덱입니다.`,
+    descLink: 'https://arca.live/b/resonance/130801564',
+  },
 ]

@@ -485,4 +485,55 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/7/7c/jcpxpqcx3r8d6jyax7srp0fzujv3huu.png',
   },
+
+  해체: {
+    name: '해체',
+    desc: '[의태] 사용 후 뒷열에 있는 아군의 공격력이 6% 증가합니다.(중첩 가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/d1/dxfllhnpfo4mpm82kfsjork6qd65fdx.png',
+  },
+  무실: {
+    name: '무실',
+    desc: '[허와 실의 관]의 지속시간이 3초 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/8a/6r0l2ev6wtzn84utbnobh7u1mb9am98.png',
+  },
+  허상: {
+    name: '허상',
+    desc: '[백화]가 [더스트 리자드]/[암흑의 매머드]/[빙하 본드래곤]으로 의태 시, 앞열/중간열/뒷열 아군의 공격력이 80 증가합니다.(6초간 지속)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/38/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  '독단 행동': {
+    name: '독단 행동',
+    desc: '모든 아군의 [일반 공격] 피해가 2배로 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/d4/nfceqbtpt7uv5ld4zfc1ur7zeemwu4o.png',
+  },
+
+  '반응이 심화되다': {
+    name: '반응이 심화되다',
+    desc: `[끈적 끈적한 폭탄]을 가진 적이 다른 폭발물에 의해 피해를 입으면 폭발물이 받는 피해가 25% 증가합니다.
+    강화된 반응이 발동되면 폭발물 소지자의 공격력이 1% 증가하며 최대 한도는 50%입니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/68/mm2tk4qll6w78dn34byepn9h4zu7sy4.png',
+  },
+  '폭발 충전': {
+    name: '폭발 충전',
+    desc: '[폭발물]이 터질 때 마다 비용이 0.15포인트 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/b5/lq9je21vgm5y9ubtikhpxuln0nel46d.png',
+  },
+  '섀도우 울프 가드': {
+    name: '섀도우 울프 가드',
+    desc: `각 기계 늑대의 지속시간 동안, 그것은 우리 팀원 모두의 12% 피해를 저항할 것입니다. [리더 스킬] 이나 특수 스킬 카드를 사용할 때, [은신]하고 5초간 싸우도록 추가 기계 늑대를 부릅니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/6f/lhcusg0w256u75xozse7sjbdauxe03p.png',
+  },
+  '잡지 수정': {
+    name: '잡지 수정',
+    desc: '[기계 늑대 무리] 탄약 수 +1',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/da/99i5tz2k4csxlp3qplfa6zzqmo5absf.png',
+  },
 }

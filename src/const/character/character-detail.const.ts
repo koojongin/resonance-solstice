@@ -1,3 +1,5 @@
+import { LYCAGIA } from '@/const/character/character.const'
+
 export interface CharacterDetail {
   SKILLS: string[]
   RESONANCES: { [key: string]: string }
@@ -89,6 +91,24 @@ export const CHARACTER_DETAIL: {
   [key: string]: CharacterDetail | any
 } = {
   RAZIEL_THE_REMINISCE: {},
+  LYCAGIA: {
+    SKILLS: ['끈적 끈적한 폭탄', '환각성 가스', '기계 늑대 무리'],
+    RESONANCES: {
+      1: '전술 커버',
+      2: '신경교세포 확산',
+      3: '생기',
+      4: '전술적 그림자',
+      5: '삼각형 형성',
+    },
+    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    AWAKENING: {
+      1: '반응이 심화되다',
+      2: '폭발 충전',
+      3: '투지',
+      4: '섀도우 울프 가드',
+      5: '잡지 수정',
+    },
+  },
   RAZIEL: {},
   SHIRE: {},
   PELOTA: {},
@@ -117,7 +137,7 @@ export const CHARACTER_DETAIL: {
       1: '가시의 서약',
       2: '저력',
       3: '생기',
-      4: '감응',
+      4: '감응 - 소마',
       5: '혈전',
     },
     RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
@@ -167,7 +187,31 @@ export const CHARACTER_DETAIL: {
       5: '순환',
     },
   },
-  ANFIYA: {},
+  ANFIYA: {
+    SKILLS: [
+      '의태',
+      '개조: 더스트 리자드',
+      '개조: 암흑의 매머드',
+      '개조: 빙하 본드래곤',
+      '생과 사의 마법함',
+      '허와 실의 관',
+    ],
+    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCES: {
+      1: '소환곡',
+      2: '감응',
+      3: '생기',
+      4: '밀물',
+      5: '탐욕',
+    },
+    AWAKENING: {
+      1: '해체',
+      2: '무실',
+      3: '투지',
+      4: '허상',
+      5: '독단 행동',
+    },
+  },
   HAYABUSA: {},
   JALHAY: {},
   ITHOS: {},

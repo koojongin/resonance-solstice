@@ -92,6 +92,12 @@ export default function MainSideBar() {
       path: '/reset-marathon/002',
       subMenu: [
         {
+          label: '명경지수 티어',
+          path: '/reset-marathon/004',
+          className: 'text-[18px] w-[300px]',
+        },
+        { isHtml: true },
+        {
           label: '장비 티어',
           path: '/reset-marathon/equipment',
           className: 'text-[18px] w-[300px]',
@@ -107,6 +113,7 @@ export default function MainSideBar() {
           path: '/reset-marathon/002',
           className: 'text-[18px] w-[300px]',
         },
+        { isHtml: true },
         {
           label: '01. 한섭 오픈 ~ 니콜라 출시 전(25/02/20)',
           path: '/reset-marathon/001',

@@ -466,8 +466,8 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/7/7b/rp8sn1qol9n9qs4uty5pwiw8e89bcds.png',
   },
-  감응: {
-    name: '감응',
+  '감응 - 소마': {
+    name: '감응 - 소마',
     desc: '전투 시작 후 손으로 가져오는 처음 5장 카드 중에 반드시 [피의 잠식]이 포함됩니다.\n자신이 리더일 경우 전투 시작 시 즉시 리더 스킬을 시전합니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/4/43/ljakaf4ndnm98kay9yzhk1088jp5aft.png',
@@ -477,5 +477,62 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     desc: '[피의 잠식] 사용 후 [다크 아트]를 1장 생성하여 손으로 가져옵니다.\n동시에 자신의 공격력과 방어력이 3% 증가합니다.(최대 39%)',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/5/55/jmdubw5c0f2e8ff976dwcppribdalkb.png',
+  },
+
+  소환곡: {
+    name: '소환곡',
+    desc: '[의태] 사용 후 [옐로카드]를 우선으로 카드를 1장 뽑습니다.\n[개조] 사용 후 자신은 [광폭]을 얻습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/f4/ko1dhhzwem8lhm8q9ui4tw5mvsu3jux.png',
+  },
+  감응: {
+    name: '감응',
+    desc: '전투 시작 후 손으로 가져오는 처음 5장 카드 중에 반드시 [의태]가 포함됩니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/0c/ljakaf4ndnm98kay9yzhk1088jp5aft.png',
+  },
+  밀물: {
+    name: '밀물',
+    desc: '매초 비용을 0.1 얻습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/cb/a1i1z36nr6f0ndl5stlj1wdvmfxhg3e.png',
+  },
+  탐욕: {
+    name: '탐욕',
+    desc: '[생과 사의 마법함] 강화:\n카드를 1장 뽑습니다.\n[퍼플카드]라면 5초마다 버려진 덱에서 카드를 1장 회수하여 손으로 가져옵니다.(3회 유효)\n아니라면 5초마다 카드를 1장 뽑습니다.(3회 유효)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/5f/cd7x02lgometd58tcn31wcfbfn8ktln.png',
+  },
+
+  '전술 커버': {
+    name: '전술 커버',
+    desc: '적의 물결에 마주칠 때마다 환각성 가스를 방출합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a0/cdfimvbj93tl2iu39j7h5q0w2lblilz.png',
+    clearMind: '애완동물 평가 +5.0%',
+  },
+  '신경교세포 확산': {
+    name: '신경교세포 확산',
+    desc: `[끈적 끈적한 폭탄] 강화:
+    [끈적 끈적한 폭탄] 3개를 던져 5초 동안 무작위 적에게 부착합니다.
+    지속 시간 동안 적 대상에게 초당 1의 피해를 입히고 50% 확률로 무작위로 [중단]/[기절]/[끈적 끈적한 폭탄]을 [폭발물]로 [점화]시킵니다 .`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/c9/kokf5ssy9egqsk0pk7u8pp0v8jpnd9y.png',
+    clearMind: '청명 데이터 센터 거래소에서 구매 가능한 특산품 수량 +20.0%',
+  },
+  '전술적 그림자': {
+    name: '전술적 그림자',
+    desc: `[환각성 가스]를 폐기 더미에 버리면 사용된 것으로 간주됩니다. [환각성 가스]를 사용한 후, 진형의 뒷열은 5초간 [은신]상태가 됩니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/29/8ctd8y9mqxrdkvzp6cb2gu8hvgfpblr.png',
+  },
+  '삼각형 형성': {
+    name: '삼각형 형성',
+    desc: `[환각성 가스]가 지속되는 동안:
+    우리 전선의 최종 피해가 25% 감소합니다.
+    우리 기계 유닛이 [광폭]상태가됩니다. 우리 후방의 최종 피해가 25% 증가합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2c/665hb7i4aflevhd29ej8xclkxiryff7.png',
+    clearMind: '애완동물 평가 +8.0%',
   },
 }
