@@ -53,6 +53,9 @@ export function RSHighlightedText({
     '[냉동]': 'text-blue-800',
     '[은신]': 'text-blue-800',
     '[역장]': 'text-blue-800',
+    '[빙결]': 'text-blue-800',
+    '[동결]': 'text-blue-800',
+    '[블록]': 'text-blue-800',
 
     '[인뢰]': 'text-yellow-500',
     '[낙뢰]': 'text-yellow-500',

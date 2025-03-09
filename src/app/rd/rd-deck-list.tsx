@@ -1,19 +1,10 @@
 'use client'
 
 import { RecommendationDeckCard } from '@/app/components/deck/recommendation-deck-card'
-import createKey from '@/services/key-generator'
 import React, { useEffect, useState } from 'react'
-import { RECOMMENDATION_DECKS, RecommendationDeck } from '@/app/rd/rd-decks.const'
+import { RecommendationDeck, REVERSED_ALL_DECKS } from '@/app/rd/rd-decks.const'
 import _ from 'lodash'
 import { EngineCore } from '@/const/character/character.interface'
-
-const REVERSED_ALL_DECKS = _.reverse(RECOMMENDATION_DECKS).map((deck) => {
-  return {
-    ...deck,
-    totalNames: deck.characters.map((c) => c.character.name),
-    totalCores: _.uniq(deck.characters.map((c) => c.character.cores).flat()),
-  }
-})
 
 export default function RdDeckList({
   searchedKeyword,

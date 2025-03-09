@@ -103,9 +103,11 @@ export function CharacterResonanceBox({ resonances }: { resonances: { [key: stri
                 <div className="whitespace-pre-line leading-normal">
                   <RSHighlightedText text={resonance.desc} />
                   {resonance?.clearMind && (
-                    <div className="flex items-center mt-[4px]">
-                      <div className="bg-blue-gray-700 inline-flex p-[4px]">명경지수</div>
-                      <div className="bg-blue-gray-900 inline-flex py-[4px] px-[8px]">
+                    <div className="flex items-stretch mt-[4px]">
+                      <div className="bg-blue-gray-700 inline-flex p-[4px] min-w-[65px] items-center justify-center">
+                        명경지수
+                      </div>
+                      <div className="bg-blue-gray-900 inline-flex py-[4px] px-[8px] items-center">
                         {resonance.clearMind}
                       </div>
                     </div>

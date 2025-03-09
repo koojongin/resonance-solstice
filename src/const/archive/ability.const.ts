@@ -264,15 +264,18 @@ export const ARCHIVE_ABILITIES: { [key: string]: RSArchive } = {
   },
   '원소핵-얼음': {
     desc: '대상에게 [냉동]을 부여합니다.\n아군에게 걸린 [점화]를 제거합니다.\n손에서 내면 [소각]됩니다.',
-    thumbnail: 'https://i.postimg.cc/xcvNx0fH/Yuan-Su-He-Bing.png',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/d/dd/2unhxm5p4kdregrynewn3iu5lq4qpb7.png/128px-%E5%85%83%E7%B4%A0%E6%A0%B8%C2%B7%E5%86%B0.png',
   },
   '원소핵-불': {
     desc: '대상에게 [점화]를 부여합니다.\n아군에게 걸린 [냉동]을 제거합니다.\n손에서 내면 [소각]됩니다.',
-    thumbnail: 'https://i.postimg.cc/Hr3cmB7k/Yuan-Su-He-Huo.png',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/3/36/8lweotwckbwzd5gnuwcr4ryl4tz90jt.png/128px-%E5%85%83%E7%B4%A0%E6%A0%B8%C2%B7%E7%81%AB.png',
   },
   '원소핵-전기': {
     desc: '대상에게 한 번의 [낙뢰]를 입힙니다.\n손에서 내면 [소각]됩니다.',
-    thumbnail: 'https://i.postimg.cc/FYhdw2z6/Yuan-Su-He-Dian.png',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/d/df/pv8au5jot4aybfkyafi1r8n9hhcst9o.png/128px-%E5%85%83%E7%B4%A0%E6%A0%B8%C2%B7%E9%9B%B7.png',
   },
   신성: {
     desc: '목표 구역을 향해 비술의 신성을 1개 발사하여 범위 내의 적에게 1단 피해를 입히고 [붕괴]를 부여합니다.\n이 카드의 [원소변화]:\n손에 [신성]과 [원소핵-전기]가 있을 때 자동으로 [번개 신성]으로 융합됩니다.\n손에 [신성]과 [원소핵-불]이 있을 때 자동으로 [화염 신성]으로 융합됩니다.\n손에 [신성]과 [원소핵-얼음]이 있을 때 자동으로 [서리 신성]으로 융합됩니다.\n이 카드의 [광붕괴]:\n손에 [신성]이 3장 있을 때 자동으로 [초신성]으로 융합됩니다.\n[신성]/[원소 신성]/[초신성]은 [파]입니다.\n사용 후 [소각]됩니다.',
