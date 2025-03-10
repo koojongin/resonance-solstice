@@ -3413,7 +3413,9 @@ export const MAPPED_ALL_EQUIPMENTS: Array<
 }))
 
 const grades = Object.keys(RS_GRADE)
-export const SORTED_ALL_EQUIPMENTS = _.sortBy(MAPPED_ALL_EQUIPMENTS, (item) => grades.indexOf(item.grade))
+export const SORTED_ALL_EQUIPMENTS = _.sortBy(MAPPED_ALL_EQUIPMENTS, (item) =>
+  grades.indexOf(item.grade),
+)
 
 export const MAPPED_ALL_EQUIPMENTS_SSR: Array<
   RSEquipment & {
