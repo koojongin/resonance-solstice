@@ -33,4 +33,10 @@ export const NORMAL_ARCHIVES: { [key: string]: RSArchive } = {
   드론: {
     desc: '특정 지속 시간동안 날아다니는 비행 기체 입니다.',
   },
+  '꾀꼬리의 야상곡': {
+    desc: '[리비아]의 스킬 카드',
+  },
+  '종막의 원무곡': {
+    desc: '[리비아]의 스킬 카드',
+  },
 }

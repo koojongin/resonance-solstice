@@ -244,11 +244,11 @@ export const CHARACTER_SKILLS: {
       'https://patchwiki.biligame.com/images/resonance/c/c7/pajvu76k7mxw5iaxq5rokjzyxz113ij.png',
     isGeneratedCard: true,
   },
-  '기이한 불꽃': {
+  '기이한 불꽃 - 마키라': {
     amount: 0,
     cost: 3,
-    name: '기이한 불꽃',
-    desc: '기이한 에너지가 넘치는 불꽃, 문두스의 소원탑에서 뿜어져나오는 빛을 닮았습니다.\n버려진 덱에서 기이한 불꽃을 1개 시전하여 모든 적에게 1단 방어 무시 피해를 입힙니다.\n버려진 덱에 있는 카드수가 많을수록 피해가 높습니다.\n손에 있는 [기이한 불꽃]은 동시에 3장을 초과할 수 없습니다.\n손에서 내면 [소각]됩니다.',
+    name: '기이한 불꽃 - 마키라',
+    desc: '기이한 에너지가 넘치는 불꽃, 문두스의 소원탑에서 뿜어져나오는 빛을 닮았습니다.\n버려진 덱에서 [기이한 불꽃 - 마키라]을 1개 시전하여 모든 적에게 1단 방어 무시 피해를 입힙니다.\n버려진 덱에 있는 카드수가 많을수록 피해가 높습니다.\n손에 있는 [기이한 불꽃]은 동시에 3장을 초과할 수 없습니다.\n손에서 내면 [소각]됩니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/a/a5/ruq3gf2ht3awk8s0rjgxen85ia65ccz.png',
     isGeneratedCard: true,
@@ -656,6 +656,14 @@ export const CHARACTER_SKILLS: {
     cost: 4,
     name: '런닝 썬더',
     desc: '[디펜스 썬더]를 활성화 하여 목표 구역에 강력한 번개를 일으켜 범위 내의 적에게 5단 피해를 입히고 동시에 [인뢰]를 발동합니다. 사용 후 자신은 [기절]되며 [블랙카드] [음에너지]를 덱에 추가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/f0/it7uvep7iux92kngq9s7ktfdh02fanj.png',
+  },
+  '디펜스 썬더': {
+    amount: 2,
+    cost: 4,
+    name: '디펜스 썬더',
+    desc: '[디펜스 썬더]를 활성화 하여 목표 구역에 강력한 번개를 일으켜 범위 내의 적에게 5단 피해를 입히고 동시에 [인뢰]를 발동합니다. 사용 후 자신은 [기절]되며 [블랙카드] [음에너지]를 덱에 추가합니다.\n*[런닝 썬더]와 같은것 같은데 게임사에서 혼용중',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/f/f0/it7uvep7iux92kngq9s7ktfdh02fanj.png',
   },
@@ -1088,5 +1096,128 @@ export const CHARACTER_SKILLS: {
     지속시간 동안, 매초 무작위 적에게 [점화]를 발동합니다.`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/9/99/1c4v4qnw6hy3spef35uac8mxhwcojul.png',
+  },
+
+  충격검: {
+    amount: 2,
+    cost: 3,
+    name: '충격검',
+    desc: `지팡이검을 휘둘러 범의 내의 적에게 3단 피해를 입히고 [중단]을 발동합니다.
+    [꾀고리의 야상곡]을 1장 뽑아 손으로 가져옵니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/f5/3ep9zzdizzvqki3u5vupr500amc44y5.png',
+  },
+  '꾀꼬리의 야상곡-레드': {
+    amount: 2,
+    cost: 3,
+    name: '꾀꼬리의 야상곡-레드',
+    desc: `지팡이 검을 휘둘러 범위 내의 적에게 1단 피해를 입히고 [격파]를 발동합니다.
+    다음 내는 [레드카드]의 피해가 30% 증가합니다.(중첩 가능)
+    이 카드의 [공명]: 앞에서 낸 카드에 따라 컬러가 바뀝니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/6b/demfzaualkmlf3x23syzumfxdw0wm78.png',
+  },
+  '꾀꼬리의 야상곡-블루': {
+    amount: 0,
+    cost: 3,
+    name: '꾀꼬리의 야상곡-블루',
+    desc: `아군이 10초간 지속되는 [실드]를 획득합니다. [실드]의 내구도는 자신의 방어력의 3000%입니다.
+    이 카드의 [공명]: 앞에서 낸 카드에 따라 컬러가 바뀝니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a9/brhztwusvwxpo4crran3335barbla3f.png',
+    isGeneratedCard: true,
+  },
+  '꾀꼬리의 야상곡-옐로': {
+    amount: 0,
+    cost: 3,
+    name: '꾀꼬리의 야상곡-옐로',
+    desc: `[인뢰] 키워드를 가진 카드를 우선으로 카드를 2장 뽑습니다. 이 카드가 버려질 때 버려진 덱에서 카드를 1장 회수하여 손으로 가져옵니다.
+    이 카드의 [공명]: 앞에서 낸 카드에 따라 컬러가 바뀝니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/f5/jdwe3l7wj64iuxmtmkx9gcaa1evwr6j.png',
+    isGeneratedCard: true,
+  },
+  '꾀꼬리의 야상곡-그린': {
+    amount: 0,
+    cost: 3,
+    name: '꾀꼬리의 야상곡-그린',
+    desc: `체력이 가장 낮은 아군 1명의 체력을 30% 회복합니다.
+    이 카드의 [공명]: 앞에서 낸 카드에 따라 컬러가 바뀝니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/98/awgodxdof6xtfu0dg8ujwwhz8pk71xt.png',
+    isGeneratedCard: true,
+  },
+  '꾀꼬리의 야상곡-퍼플': {
+    amount: 0,
+    cost: 3,
+    name: '꾀꼬리의 야상곡-퍼플',
+    desc: `지팡이 검을 휘둘러 적에게 1단 피해를 입히고, 동시에 [변신]과 [혼란]을 발동합니다.
+    이 카드의 [공명]: 앞에서 낸 카드에 따라 컬러가 바뀝니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/01/4nocs7mhor5uujjvx031o0cm8gz81fb.png',
+    isGeneratedCard: true,
+  },
+  '종막의 원무곡-레드': {
+    amount: 1,
+    cost: 4,
+    name: '종막의 원무곡-레드',
+    desc: `모든 적에게 6단 피해를 입힙니다.
+    동시에 자신의 공격력이 1% 증가합니다.(중첩가능)
+    이 카드의 [공명]: 앞에서 낸 카드에 따라 컬러가 바뀝니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/bb/sxmrgxq6fpyhqdripgonhvrwqz9v0dm.png',
+  },
+  '종막의 원무곡-블루': {
+    amount: 0,
+    cost: 4,
+    name: '종막의 원무곡-블루',
+    desc: `모든 적에게 6단 피해를 입히며 동시에 모든 적에게 [냉동]을 부여합니다.
+    이 카드의 [공명]: 앞에서 낸 카드에 따라 컬러가 바뀝니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e4/j17om1xueh9vz1x8ar7348hi8zy7ny6.png',
+    isGeneratedCard: true,
+  },
+  '종막의 원무곡-옐로': {
+    amount: 0,
+    cost: 4,
+    name: '종막의 원무곡-옐로',
+    desc: `모든 적에게 6단 피해를 입히고 동시에 [인뢰]를 발동합니다.
+    이 카드의 [공명]: 앞에서 낸 카드에 따라 컬러가 바뀝니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/05/ofreo99x1j0yjjqi5o12lvnqs4ze2g6.png',
+    isGeneratedCard: true,
+  },
+  '종막의 원무곡-그린': {
+    amount: 0,
+    cost: 4,
+    name: '종막의 원무곡-그린',
+    desc: `모든 적에게 6단 피해를 입히고 모든 아군의 체력을 10% 회복시킵니다.
+    이 카드의 [공명]: 앞에서 낸 카드에 따라 컬러가 바뀝니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/56/sxec4pwvrlctxjhwmf93qigd5tgg6ur.png',
+    isGeneratedCard: true,
+  },
+  '종막의 원무곡-퍼플': {
+    amount: 0,
+    cost: 4,
+    name: '종막의 원무곡-퍼플',
+    desc: `모든 적에게 6단 피해를 입히고, [기이한 불꽃 - 리비아]을 1장 생성하여 손으로 가져옵니다.
+    이 카드의 [공명]: 앞에서 낸 카드에 따라 컬러가 바뀝니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/77/2ktpj52ho8lnr4wucm9slc6gkvlzilj.png',
+    isGeneratedCard: true,
+  },
+  '기이한 불꽃 - 리비아': {
+    amount: 0,
+    cost: 3,
+    name: '기이한 불꽃 - 리비아',
+    desc: `기이한 에너지가 넘치는 불꽃, 문두스의 소원탑에서 뿜어져나오는 빛을 닮았습니다.
+    버려진 덱에서 기이한 불꽃을 1개 시전하여 모든 적에게 1단 방어 무시 피해를 입힙니다.
+    버려진 덱에 있는 카드수가 많을수록 피해가 높습니다.
+    손에 있는 [기이한 불꽃 - 리비아]는 동시에 3장을 초과할 수 없습니다.
+    손에서 내면 [소각]됩니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a5/ruq3gf2ht3awk8s0rjgxen85ia65ccz.png',
+    isGeneratedCard: true,
   },
 }

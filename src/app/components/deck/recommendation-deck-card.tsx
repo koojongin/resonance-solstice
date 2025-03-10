@@ -63,6 +63,11 @@ export function RecommendationDeckCard({ deck }: { deck: RecommendationDeck }) {
             </div>
           </Tooltip>
         </div>
+        {deck.autoPresetPreviews && (
+          <div className="text-white bg-deep-purple-500 px-[4px] py-[4px] pb-[2px] ff-dh rounded">
+            프리셋 프리뷰
+          </div>
+        )}
       </div>
 
       <div className="flex gap-[4px] justify-between">

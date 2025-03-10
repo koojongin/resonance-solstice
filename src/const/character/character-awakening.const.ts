@@ -131,7 +131,7 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
   },
   자물쇠: {
     name: '자물쇠',
-    desc: '[기이한 불꽃] 사용 후 [과일씨]를 1장 생성하여 손으로 가져옵니다.\n자신은 [족쇄]와 [속박] 효과에 면역됩니다.',
+    desc: '[기이한 불꽃 - 마키라] 사용 후 [과일씨]를 1장 생성하여 손으로 가져옵니다.\n자신은 [족쇄]와 [속박] 효과에 면역됩니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/b/bd/asmq9tz3rvubicg5jpw4djd1s11wmda.png',
   },
@@ -367,8 +367,8 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/8/85/lm0kfugk17o3mykw2s8b13ivb9ew933.png',
   },
-  운명: {
-    name: '운명',
+  '운명 - 아오바': {
+    name: '운명 - 아오바',
     desc: '전투 시작 시 덱에서 [유세술]을 1장 뽑아 손으로 가져옵니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/f/f0/8bcu0bqa1gnyv6d60o7a74wm4suvq3u.png',
@@ -454,8 +454,8 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/3/3b/9frhs5bteeq029t124i6j79dqq57y4w.png',
   },
-  순환: {
-    name: '순환',
+  '순환 - 더스틴': {
+    name: '순환 - 더스틴',
     desc: '[블랙카드] 또는 [다크 아트]가 1장 생성될 때 마다 [천상의 불] 1개를 생성.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/8/85/tlcmzxu1cah0yip4zs8i7jdowzjd874.png',
@@ -687,5 +687,30 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
     동시에 [더위]/[폭염]/[열대야] 날씨에서 모든 아군이 입히는 화염 피해가 10% 증가합니다.`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/7/78/0xnv8jnt4mq3hnqwog92tln1bgli9fd.png',
+  },
+
+  '운명 - 리비아': {
+    name: '운명 - 리비아',
+    desc: `전투 시작 시 덱에서 [충격검]을 1장 뽑아 손으로 가져옵니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/46/8bcu0bqa1gnyv6d60o7a74wm4suvq3u.png',
+  },
+  사경: {
+    name: '사경',
+    desc: `빈사 시 [무적]을 3초간 얻고, 동시에 [종막의 원무곡-레드]를 즉시 사용합니다.(1회 한정)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/9b/scm0w7xu5zuxrnrd2egtpdlgbdyxnco.png',
+  },
+  '화음의 여운': {
+    name: '화음의 여운',
+    desc: `[기이한 불꽃 - 리비아] 사용 후 모든 아군의 공격력과 방어력이 1% 증가합니다. (최대 15%)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/8c/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  '순환 - 리비아': {
+    name: '순환 - 리비아',
+    desc: '[블랙카드]가 [소각]될 때마다 체력이 가장 낮은 아군의 체력을 5% 회복합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/0e/5scekfm7740r4w3eiv2jjfkixrbkb19.png',
   },
 }

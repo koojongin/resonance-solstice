@@ -354,8 +354,11 @@ export default function RecommendationDeckDetailPage() {
                               totalLength - index <= (deck.autoPresetPreviewBans || []).length
                             if (!skill || !originName) {
                               return (
-                                <div key={`deck_app_${key}_${index}`} className="w-[100px]">
-                                  <div>No Data</div>
+                                <div
+                                  key={`deck_app_${key}_${index}`}
+                                  className="text-center border border-red-400 w-[100px] flex flex-col gap-[2px] items-center justify-center"
+                                >
+                                  <div>NoData</div>
                                   <div>{key}</div>
                                 </div>
                               )

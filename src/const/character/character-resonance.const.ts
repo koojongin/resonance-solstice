@@ -124,7 +124,7 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
 
   신생: {
     name: '신생',
-    desc: '[무한 코어] 사용 후 무작위로 [과일씨], [신성] 혹은 [기이한 불꽃]을 1장 생성하여 손으로 가져옵니다.',
+    desc: '[무한 코어] 사용 후 무작위로 [과일씨], [신성] 혹은 [기이한 불꽃 - 마키라]을 1장 생성하여 손으로 가져옵니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/f/ff/i2qxfessshagn1ysd97yszxawgfmfpb.png',
     clearMind: '거래소 가격 인상폭+0.3%',
@@ -728,5 +728,30 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/f/f7/oawczcem69kfsgfh19z0epn8y2f3r0t.png',
     clearMind: '급행 탄환 최대 용량+2',
+  },
+
+  '공명-옐로': {
+    name: '공명-옐로',
+    desc: `[꾀꼬리의 야상곡]과 [종막의 원무곡]이 공명하여 [옐로카드]가 될 수 있습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/9b/p84zpidu6m7g5qpjggnimmdi6nqa0nq.png',
+  },
+  선물: {
+    name: '선물',
+    desc: `전투 시작 시 추가로 비용을 2 획득합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/1/11/awfppbmvg36tgxrfgcvuwfw0f61pwji.png',
+  },
+  숙련: {
+    name: '숙련',
+    desc: `[꾀꼬리의 야상곡]이 소모하는 비용이 1 감소합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/08/odq2fnoeubu72gvbvma725jxnuly0fm.png',
+  },
+  '공명-퍼플': {
+    name: '공명-퍼플',
+    desc: `[꾀꼬리의 야상곡]과 [종막의 원무곡]이 공명하여 [퍼플카드]가 될 수 있습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/9c/e410iijcswni96zijtuaio3prcc9uha.png',
   },
 }

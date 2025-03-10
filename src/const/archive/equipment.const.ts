@@ -705,7 +705,7 @@ const DEFAULT_ALL_EQUIPMENTS: {
   '라이트 체이서': {
     type: RSEquipmentType.WEAPON,
     grade: RS_GRADE.SSR,
-    desc: '기본 속성: 공격력+37\n옵션: [기이한 불꽃]이 입히는 피해가 20% 증가합니다.(중첩 가능)',
+    desc: '기본 속성: 공격력+37\n옵션: [기이한 불꽃 - 마키라][기이한 불꽃 - 리비아]이 입히는 피해가 20% 증가합니다.(중첩 가능)',
     thumbnail:
       'https://nng-phinf.pstatic.net/MjAyNTAyMDhfMTA2/MDAxNzM4OTgzODg0Mjk0.bMm6i2LkjXQCYkDnTd14ENuL6CGkKkGnb-dpv9Kkhtwg.t8Ly5W7KTUPc2bvKSGluZjVJ7UN3JtqgzDdKY8yhr3Qg.PNG/%E5%85%89%E8%8A%92%E8%BF%BD%E5%87%BB%E8%80%85.png',
     faction: RS_FACTION.MUNDUS,
@@ -911,7 +911,7 @@ const DEFAULT_ALL_EQUIPMENTS: {
   '이계의 별빛': {
     type: RSEquipmentType.ARMOR,
     grade: RS_GRADE.SR,
-    desc: '기본 속성: 방어력+29\n옵션: [기이한 불꽃]이 입히는 피해의 5%만큼 자신의 체력을 회복합니다.(중첩 가능)',
+    desc: '기본 속성: 방어력+29\n옵션: [기이한 불꽃 - 마키라][기이한 불꽃 - 리비아]이 입히는 피해의 5%만큼 자신의 체력을 회복합니다.(중첩 가능)',
     thumbnail:
       'https://nng-phinf.pstatic.net/MjAyNTAyMDdfMTU4/MDAxNzM4OTI1MzQ4MzU2.rLDvC9DwDRGusiCxfnpRWseTbWtW2u-orovq9_A3niQg.dWBJhXidYhAkP-ognJLndfmxijVHsB0_ZbgtsOLftRgg.PNG/%E5%BC%82%E7%95%8C%E6%98%9F%E5%85%89.png',
     faction: RS_FACTION.MUNDUS,
