@@ -53,6 +53,7 @@ export interface RecommendationDeck {
 
   autoPreset?: string
   autoPresetPreviews?: string[]
+  autoPresetPreviewBans?: string[]
 }
 
 export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
@@ -560,6 +561,30 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     owner: EXTERNAL_USERS['2'],
     autoPreset:
       'rVdNj5swEP0vPlPJMzaf155W2nZXam+rHlBxu2izSQREbYX477UhgB2MgSW3mLHnPY/fPDs1eRPi/Dktsq+Xd5JQj+Tlo0gzUahvT0eSVMVFeORUvXaf2jk/5Y+H7Et6JklNgAaUIqckAa8bsMAY8HEAVIsAhuMAw7BNfY2gPs3XE4CWWk8A1FgTaNN4rEeYnkCLMN9IoOFgrGfDSF+jZ/ONbRsR0FNzPbXaXKPK/u3cl/xXeihlzbO8VIX+/u8sSMK6qj/mZUWSl5pcSvGcFul7ewgvPzxSvuWHw4M8HyK3SAEkvqdmdcslXt7G+lPwSJUWv0XVhak3JCTJJzn59OcoCpVNzqVq0z3AMRN/JZvGq0dEBUj9yDfxzBQYR7cYNwRGfkpMEwDgMboAaIirAZQibAD8bgDywG0A7H4AXYkMGdREas5vvFvYKLofLE5hR/VdxWGimcKkIP3AgaBMYVE7ixTATQGYk4J0EmsHbKKACxRiNwXYRWG0ATZvA8r9NtkAsNhiA1MJ0maLIKSoXKVQFrso2SUeAxhGjnoEFlm46oFhcCO71TwgoPP2jJaCOHmo/jC0t4LHlQabZxGQBV+YsFi7fSlLdMgy2inLNdvvtTcvB3U1b7slQ1ySg61D0VWKcGcp1lCgHMDRFBa73tQU60+Dt4Y0tYrBReZNom0nC5EPmQQNXc0JO5tzhgezqZPrPJipzsDFgy2Kc3oshjI6AoH+csA9bzol8zWIIZiIega235CmiID0fnvkpJEAxekgrg/14eYeDmHo00GkPY5c+dr+9Rov/OY/',
+    autoPresetPreviews: [
+      '화력전개',
+      '노래',
+      '해체의 번개',
+      '구축의 화염',
+      '재구축의 힘',
+      '정화의 빛',
+      '뭇별',
+      '초음속',
+      '공습',
+      '번개 소용돌이',
+      '미스터리',
+      '자석 플라이휠',
+      '우아',
+      '셀카',
+      '자석 폭탄',
+      '소실',
+      '플라잉 플래시',
+      '동결의 자석별',
+      '빙수 눈사태',
+      'TATAKAE',
+      '셔플',
+    ],
+    autoPresetPreviewBans: ['TATAKAU!', 'TATAKAU!!', 'TATAKAU!!!'],
   },
 
   {
@@ -578,6 +603,32 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     owner: EXTERNAL_USERS['6'],
     autoPreset:
       'xZdLj9MwEMe/i89B8iMPO1dOlXYXJLghDhExbLSlLUkrQFW+O2MnVcdJ1m7Wi7anuH7Mz/OfmUzOpOk+Hd5Xbf1hR8rv1bbTCdkfH3Vr/iMlTciT1nbBw+mnHbf7rb5ruiMpvzAKPyZUYh9owccHMT5wJYcHIdXXhHyDUzb1fXUg5ZkwmsNenpGSJcNAZPQ64ArNMCnRQDHLMSzL0IzgeBnn6LSiwDMpGlDHaI5nON4j8AzDRhVexvDAMZrjPQW+NrZT4IHERysEKlKFD0BGeWqW9QnoeqeretARaWs0GNU7k+6p2W43u1r/IaVIxiGoTuC6lLFckIToX6fmsLnsARVPnf5YtRUEwzsweqzaH/r4+e9BW1Eau/viWLt4mGPXjTYAzEn73zvdGnuXqOmTAJP1tpcp8yCZYPEgnUlq94PSWT+lgwgO04EUEXQQo4hOzOgWuSDpDJdXFHeHScoruOXOZOaQpF7pLAntZxddyWHKhcvBUsUxh4nyN+IQDkcW9kf2Ao6p0dQ1yiZGF7Bf/+ZSuhD8P958SCM2T6PC+BuVEu53hY3oBQRshc+ssJzGlDee3RSbM9KVGkHdmWarEMwhkd4sMXcK+GZeyFieRvmmWFf6R7d49WJMcD8T9SCZ1mC9XNDahOMIylRE0YeO442KPrzeXdHyoIfS5VQPZLMItBHC659wmonn/BPgisv/IlwZ5wE1dhGx+e+SyNtCe3WB5KqIcZBa2f8tdFgLRZsF+r9ATzp9kazvSeeBBJUpiskbSM8yRSY/n1Ts9LXfIeCVGLcMjf4KtyzU6plUzHwUxjA57zV+K1OcVDSXrlQ8BBHXFS4hFG7HwcVaBPjr0X6OXoM4IXXTmc/RUeH+Hw==',
+    autoPresetPreviews: [
+      '화력전개',
+      '디펜스 트리거',
+      '미스터리',
+      '노래',
+      '해체의 번개',
+      '재구축의 힘',
+      '구축의 화염',
+      '정화의 빛',
+      'TATAKAE',
+      '우아',
+      '방열',
+      '뭇별',
+      '자석 폭탄',
+      '셔플',
+      '셀카',
+      '소실',
+      '흡수',
+      '반전',
+      '반사',
+      '공습',
+      '초음속',
+      'TATAKAU!!!',
+      '번개 소용돌이',
+    ],
+    autoPresetPreviewBans: ['플라잉 플래시', 'TATAKAU!', 'TATAKAU!!'],
   },
 
   {
@@ -665,6 +716,28 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     owner: EXTERNAL_USERS['10'],
     autoPreset:
       'tZdLj5swEID/y5yp5LF5mWtPkbYPqb1VOaDidtGmSQqJ2irKf+8YCBjjkJjN5mQDM/ON5+HJCcr6y/59XhWftpD9yDe1CuBFqebRx+MvyFgAzyovVAUZMv1LeEBCT80zS7DabdRTWR8g+9Z/2y2wW8RRu8AoaRcilesAirL+Trq+/tsryEQAetNpOsHuz1ZVq6ID0JJwrNXnvMqJ7x02u1aS1vVLudmstoX6C5kmJTFAFpNcEkEAh7z6qQ7t1+Sa+n0s96uLqfVFvBHiguhYCOfARiDmOQTLhoGQShgEP+T71uZ1iJZBoEYY27NsjPnaGPVmRcRgTDhvEUMptEXLxnWHb1hHf6cJIXwgQjg59xMI0ni+g4NP49+oH7NM1FxNAhFxJ0x0diVyz5Gm4ySQbJzr6NIpnR466sksk3BaJk6uS4UImKanSSbuPvobeSS8wEjAv3QtbuNYJC7oHly+DgHHkeH+CCToGR5ncVqRoS5ugDGZekUGb6aMncxLmGJPJrzBxB/AlHgycYtJzCM1lSW8K4vPnpVwVFb4RiU/6UV+QRRsQcnP3NbpwluDrmz28GRq3DAbEvM6G07J51d0C/s0l445qwfjjmx6i26QjFonT6Rf5aFvhvszIfoFEDH27FD3B9ACm7topwFEpKpbtzP7qugs94On9qSfe/oNMtmo7UcO4zMcNjqXBhniGt5QRIc30pDRc76xMYzqe2p4k5obZKY2ZsrE5iYx2WJTmzRdMED17GlQJ6bbWgGFZ3d4bv9K6Wj9Bw==',
+    autoPresetPreviews: [
+      '나비의 축복',
+      '방열',
+      '재구축의 힘',
+      '구축의 화염',
+      '해체의 번개',
+      '정화의 빛',
+      '자연의 메아리',
+      '미스터리',
+      '디펜스 트리거',
+      '흡수',
+      '가방 정리',
+      '폭파 작업',
+      '레드 버튼',
+      '셔플',
+      '태초의 꿈',
+      '반전',
+      '반사',
+      '부채술',
+      '오의-유풍',
+    ],
+    autoPresetPreviewBans: ['소실', '유세술'],
   },
 
   {
@@ -1132,6 +1205,32 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     descLink: 'https://wiki.biligame.com/resonance/%E5%A6%AE%E8%94%BB%E6%8B%89%E9%9B%B7%E9%98%9F',
     autoPreset:
       'rZZNT8MwDIb/S85FSpx+XzlNAsSB27RDRSM2MdjUDgGa9t+xW9icraTJtp3qJfXj+LWdbsXcVLVpRKkk/TRE4rlq6kl9X61FuRVKpvRvgRuiXyPVzEjkwYAi4SvqYKBzti1mhoaMGzl3AMwBJNwb8HBivsKhYDnQ3ODvQMoNHk4q+QpzrWOWEMgyngPytovEqzHrW8zkw8ebKGUkmtXS3C3ajSin+1R3D5Cl/YPSRf8gs7+lIp9Fol60JMnT99qIUvf6/HraivZ1sVxO3mvz1a19tKbfh/GsPt9NM6m5tLj8WDUVRnSDG/p3cYPA7EilUNhIbKrmxWx6Jxj2olv+0/DgoSuP6WwXbR1MjJ9RCCKTPDlh2FEdiFQobgBlygaouABvAMl4BiD2B2ATnAHQAQCvFB15s4UnL2K4NvZ1xUTBavdQ3U1U2LTeROpJN5E6x01USmt/Is27KxDBSQSbmF9DR/cZ7ebCYT2iIw4mHmI3Ho6QkA/MDEcEgcT4lBgrFUKEQKIcIGI1BBD1FXR0dwfYOqY+/WhPYRz13iOG7scrNLz0PxJd9iNJ1KNJVKoIIMrROe1DDGg/+oa5fMSAe8TYV8XoGB26i/JTaf+/i8aONFCJMvUH0HHDAZkKAOgzeglkACC+vJdk5u6lIyJWNn5ErjZz09D3KHrc/QA=',
+    autoPresetPreviews: [
+      '화력전개',
+      '노래',
+      '해체의 번개',
+      '구축의 화염',
+      '재구축의 힘',
+      '미스터리',
+      '뭇별',
+      '번개 소용돌이',
+      '자석 폭탄',
+      '소실',
+      '자석 플라이휠',
+      '동결의 자석별',
+      '빙수 눈사태',
+      '셔플',
+      '셀카',
+      '우아',
+      '공습',
+      '초음속',
+      '플라잉 플래시',
+      '정화의 빛',
+      'TATAKAU!',
+      'TATAKAU!!',
+      'TATAKAU!!!',
+      'TATAKAE',
+    ],
   },
 
   {

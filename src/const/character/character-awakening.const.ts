@@ -419,7 +419,7 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
   },
   '샘물-아르카나': {
     name: '샘물-아르카나',
-    desc: '[자연의 메아리]와 [나비의 춤] 지속 시간이 2초 증가합니다.',
+    desc: '[자연의 메아리]와 [나비의 축복] 지속 시간이 2초 증가합니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/c/c1/118kcf4cr86gj2jt4jn5azyvvfi40ks.png',
   },

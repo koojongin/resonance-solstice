@@ -598,7 +598,7 @@ export const CHARACTER_DETAIL: {
   ELIOT: {},
   HARUKA: {},
   ARCANA: {
-    SKILLS: ['나비의 춤', '자연의 메아리', '태초의 꿈'],
+    SKILLS: ['나비의 축복', '자연의 메아리', '태초의 꿈'],
     RESONANCES: {
       1: '보급 - 아르카나',
       2: '나비 서식',

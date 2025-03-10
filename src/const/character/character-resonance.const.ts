@@ -449,7 +449,7 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
   },
   '나비 서식': {
     name: '나비 서식',
-    desc: '동일 대상에게 [나비의 춤]을 연속으로 사용 시 초당 회복 효과가 3% 증가합니다.',
+    desc: '동일 대상에게 [나비의 축복]을 연속으로 사용 시 초당 회복 효과가 3% 증가합니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/0/0c/mtg9u6mkma44rtzfydx6yhwiwlnyve1.png',
   },

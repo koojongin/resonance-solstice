@@ -746,10 +746,10 @@ export const CHARACTER_SKILLS: {
     isGeneratedCard: true,
   },
 
-  '나비의 춤': {
+  '나비의 축복': {
     amount: 2,
     cost: 2,
-    name: '나비의 춤',
+    name: '나비의 축복',
     desc: '초당 아군 대상의 체력을 2.5% 회복시킵니다.(10초간 지속)',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/6/65/o9pbzcjqbtzdh5n51hkuunny1qj72e8.png',
