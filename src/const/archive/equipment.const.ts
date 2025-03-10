@@ -3395,7 +3395,7 @@ const DEFAULT_ALL_EQUIPMENTS: {
 
 export const ALL_EQUIPMENTS: {
   [key: string]: RSEquipment & { iType: RSItemType }
-} = _.mapValues(DEFAULT_ALL_EQUIPMENTS, (value): RSEquipment & { iType: RSItemType } => {
+} = _.mapValues(DEFAULT_ALL_EQUIPMENTS, (value, key): RSEquipment & { iType: RSItemType } => {
   return {
     ...value,
     iType: RSItemType.EQUIPMENT,
@@ -3405,11 +3405,15 @@ export const ALL_EQUIPMENTS: {
 export const MAPPED_ALL_EQUIPMENTS: Array<
   RSEquipment & {
     iType: RSItemType
+    name: string
   }
 > = _.map(ALL_EQUIPMENTS, (value, key) => ({
   name: key,
   ...value,
 }))
+
+const grades = Object.keys(RS_GRADE)
+export const SORTED_ALL_EQUIPMENTS = _.sortBy(MAPPED_ALL_EQUIPMENTS, (item) => grades.indexOf(item.grade))
 
 export const MAPPED_ALL_EQUIPMENTS_SSR: Array<
   RSEquipment & {

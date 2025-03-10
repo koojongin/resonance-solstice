@@ -713,4 +713,123 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/0/0e/5scekfm7740r4w3eiv2jjfkixrbkb19.png',
   },
+
+  비책: {
+    name: '비책',
+    desc: `[버리기] 명령의 쿨타임이 1초 감소합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/7d/a1b8g5zhxhkul7fh9182qgykozc2gsy.png',
+  },
+  운수: {
+    name: '운수',
+    desc: `[비전탄] 강화:
+    버려진 덱에서 필살기를 우선으로 카드를 1장 회수하여 손으로 가져옵니다.
+    회수한 카드 비용의 3배만큼 비전탄을 발사합니다. 비전탄 1개당 무작위 대상에게 1단 피해를 입히고, [인뢰]를 발동합니다.
+    [비전탄]은 [폭발물]입니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/28/49p4bkv63wy4eqbt3b7ecvxkjhi8hli.png',
+  },
+  '탄창 충전': {
+    name: '탄창 충전',
+    desc: `[비전탄]으로 회수한 카드를 다음 한번 낼 때 비용이 1 감소합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/1/16/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  '팡류게임 마스터': {
+    name: '팡류게임 마스터',
+    desc: `같은 색의 카드를 연속 3장 냈을 경우 카드를 1장 뽑습니다.(5회 한정)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/dd/gg9b3ek8zyctx1xpj6i4xeb7o8j5zsn.png',
+  },
+
+  일고작기: {
+    name: '일고작기',
+    desc: `도끼를 1자루 던질 때마다 25% 확률로 1회 추가 공격합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/3c/ba7xlgj8qr6ijm7y6lo1szuxsgh2lz9.png',
+  },
+  '전술 회전': {
+    name: '전술 회전',
+    desc: `[부메랑 도끼] 시전 시 25% 확률로 받은 공격을 [블록]합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/5d/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  올인: {
+    name: '올인',
+    desc: `빈사 시 3초간 [무적]을 얻고, 자신의 스킬 카드를 우선으로 카드를 3장 뽑습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/de/9gh1eyz4ugfps4h0vp92f46cys8i1zu.png',
+  },
+
+  응원: {
+    name: '응원',
+    desc: `[리더 스킬] 사용 시 리더의 체력을 5% 회복합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/da/f3x1yeqq0fjxgp8htxkbp7in2y4j81j.png',
+  },
+  '활력 장전': {
+    name: '활력 장전',
+    desc: `아군이 카렌의 치유를 받을 때마다 [일반공격]의 피해가 10% 증가합니다.(최대 100%)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a2/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  '경화 장전': {
+    name: '경화 장전',
+    desc: `[플라워탄] 강화:
+    아군의 여성에게만 적용되는 특수 치유탄을 발사하여 대상의 체력을 35% 회복합니다.
+    대상의 방어력이 3% 증가합니다.(중첩 가능)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/7f/18a2kd7i4ah7qe5nqmz97swtbb4qg3y.png',
+  },
+
+  불씨: {
+    name: '불씨',
+    desc: `[스파크] 사용 후 50% 확률로 [원소핵-불] 카드를 1장 생성하여 손으로 가져옵니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/56/e3gddk0ijwkywc1nbffx28cpr3ejj9s.png',
+  },
+  희망: {
+    name: '희망',
+    desc: `[원소핵-불] 사용 후 비용을 1 얻습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2a/lloryw21jjetyds52olmxf8kbjdwo5v.png',
+  },
+  협력: {
+    name: '협력',
+    desc: `[점화]를 부여할 때마다 무작위 아군의 체력을 1% 회복합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e4/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  재연소: {
+    name: '재연소',
+    desc: `[스파크] 사용 후 손에 있는 [블랙카드] [잿더미]를 [원소핵-불]로 전환합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/9f/4v4eeuknsvxpn6lrsmr6kui1rrk4hk6.png',
+  },
+
+  반항: {
+    name: '반항',
+    desc: `피해를 입힐 때 자신의 공격력이 대상의 방어력보다 낮다면 입히는 최종 피해가 10% 증가합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/62/2vcibyxfwlqb4gsd1at8qso0ehreq6z.png',
+  },
+  화양연화: {
+    name: '화양연화',
+    desc: `[단비],[봄꽃]과 [가을달]의 지속 시간이 1초 증가합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/5f/nturxwexqx49numk1oi069c9d94svma.png',
+  },
+  결실: {
+    name: '결실',
+    desc: `[화견지술]의 치유를 받은 아군의 공격력이 매초 0.2% 증가합니다.(최대 30%)
+    [월견지술]의 보호를 받은 아군의 방어력이 0.1% 증가합니다.(최대 30%)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/ca/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  영상개화: {
+    name: '영상개화',
+    desc: `같은 카드를 연속으로 4장 냈을 경우 손이 가득찰 때까지 카드를 뽑습니다.(1회 한정)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/eb/ddvwtrpa1gabw9byo13bwel50dxejuw.png',
+  },
 }

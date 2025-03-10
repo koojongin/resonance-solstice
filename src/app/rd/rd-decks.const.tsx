@@ -1,3 +1,6 @@
+import _ from 'lodash'
+import Link from 'next/link'
+import { ReactNode } from 'react'
 import {
   ACHIWA,
   AKIRA,
@@ -40,13 +43,12 @@ import {
 } from '@/const/character/character.const'
 import { EXTERNAL_USERS, ExternalUser } from '@/const/external-users'
 import { RSCharacter } from '@/const/character/character.interface'
-import _ from 'lodash'
 
 export interface RecommendationDeck {
   id: string
   title: string
   leaderName?: string
-  desc?: string
+  desc: ReactNode
   descLink?: string
   characters: { character: RSCharacter; equipments?: string[] }[]
   owner?: ExternalUser
@@ -187,39 +189,6 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   },
 
   {
-    id: '8',
-    title: '단일 냉기 [나유타] 덱',
-    leaderName: NAYUTA.name,
-    characters: [
-      {
-        character: NAYUTA,
-        equipments: ['에비서레이터MK0', '시뮬레이트 스타', '해리슨 장치'],
-      },
-      {
-        character: ELIOT,
-        equipments: ['에비서레이터MK0', '시뮬레이트 스타', '춘추합성인장'],
-      },
-      {
-        character: YER,
-        equipments: ['에비서레이터MK0', '시뮬레이트 스타', '모노폴 마그네타'],
-      },
-      {
-        character: RINA_F,
-        equipments: ['에비서레이터MK0', '시뮬레이트 스타', '베타 세계선 박스'],
-      },
-      {
-        character: AOBA,
-        equipments: ['에비서레이터MK0', '시뮬레이트 스타', '춘추합성인장'],
-      },
-    ],
-    desc: '-',
-    descLink:
-      'https://wiki.biligame.com/resonance/%E5%8D%95%E9%87%91%E5%86%B0%E6%A0%B8%EF%BC%9A%E9%82%A3%E7%94%B1%E4%BB%96',
-    autoPreset:
-      'tVdLj9sgEP4vnF2JYfwAX3uKtH1I7W21B6umXWuzSWonaqso/72A8xg7sA6R1yfGY2Y+hm8+8J413bfNx6qtv6xY+bNadjphP4y5qD9VG1buGfCcc8yAlZD0BuT8YmDGqYd8JlRGPxPEUxRkjkTiwYx6JPHQPJgqYkDOSn6aozidQwOkFJukqKWiqHM KlHigIEsAsKgPCXvWVa1bM+b2KUTC2vVSPzTdlpWP55f9IMPjoIB+AJj2A5Tqqa/7ceaedS/NcrmoTWSBHFKVJqwx1mU/Erbr9NeqrV5Z+cHg0r93zWZxCmDCrf+sdOsinLGZGd//bbRbx7Zqf+ltb/JDcp0Rhxn5O2fkiEAz2m2JzGjKeGtG5lKCYe Loq3HK8Zp8KPqoq1r/dVkpgst6LJk8EITM4yBY0twJwXauhUCLjCwY7YwRVSRGS/UgJLzMdRrz+OQpiyFc7M6IibJgeGcK5qMjH9JRvjsdhYqko8vw5qJFkAuK++hoXHNDCNPRKOqQjlakp+mY8tiuHdMRY+kIKp1bKMJ0lPyajkaPxUCP02h1jNDjk zRFLnpamsJ0NFcHHwR30M0KIVz3zNsRkM7elG9AkN6mRJxbDMPHlLm2jc4IuOWMAIgWbAhzQ4yacs/QctTTFlLOUJnrXNlhiIbehK5Uyx2PUwUyLXvHJt5RIALMHaLTchoLbCyntwAzeZvuwd2WR78b6+1z/84lftHa/Y983r06u246ey8+MvXwHw==',
-  },
-
-  {
     id: '9',
     title: '[페니아] 인뢰덱 찐종결 올인원덱',
     leaderName: FENIA.name,
@@ -235,6 +204,34 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     owner: EXTERNAL_USERS['1'],
     autoPreset:
       'vVfLrpswEP2XWVPJHj/AbLuKdPuQ2l3VBSpuL7ppbgpEbRXl32tIgDHQEOfSsvNrzvHMmfFwhC9ZmT8UVQ3ppyMUOaTAmWYMRQwRHCr78ffeQsojsD8OxX7T7f0cwfPPnS037gRn7hOMRVBn5Tdbn4+4YfVUbLebXW5/QSpaa++zMvsO6SveLbaA6A5LbeAUHYfpdlYlKqKsJIMZJiNYnxiaZAw9XGuCyKWRFFEoHozIYgxDFD5i+B2DEdFDlGZ9xME8x0AptRF7gZS4luBTEFoEUoj1VQp8gQImwldzx2w2tp2pN9ke0iMIB3eKPA8qCHVSiCAcL+Hj6X+YZmdXsPhGV6iRK3iwK7xgsb8LFY0KU0mbBC9QCRNiLFRMwihwYcJk4FPgXOCcUF1NuC060osOGj2JzpKTPIaSXF7M8lL3JBDGcTAvcaNqBJp1Q7ZQ3lzIJqrRct3ytqAaJjmfUGDrUljsF9CMKKAK9MJSy7KUvg5zJnc4R1zUaDNBJTSV55JKJuT6i2PDaYLmF3ymE7+qzlK+u+DfRCHmPgXx3ylwZD6F2aK3IoX+QRv1Y0nid4Dh0bjWj+FMIZU6uauQimmBX0qja8SaNKg+7F+7n5B3O0i/ZtvKRvBos9yW1HxeVM2PyuVhcAzqR1s2p1q08nlrL3foj/TR6bOpLzudwxx4Y3STX27bP2FNcvW9eD9oHpFhIOg2JCuNioZtkhho+myyTZFtRlFQJAPXuZIzgjLwQJEOYmqAMtCSsjYUlNOVhOAoSU1rOuDtawhP1rYhfHs4P5VF9dBGsAtrXR7s6Q8=',
+    autoPresetPreviews: [
+      '승리의 아우라',
+      '노래',
+      '구축의 화염',
+      '재구축의 힘',
+      '해체의 번개',
+      '뭇별',
+      '자석 플라이휠',
+      '우아',
+      '셀카',
+      'TATAKAE',
+      '소실',
+      '자석 폭탄',
+      '셔플',
+      '미스터리',
+      '번개 소용돌이',
+      '동결의 자석별',
+      '빙수 눈사태',
+      '런닝 썬더',
+    ],
+    autoPresetPreviewBans: [
+      '플라잉 플래시',
+      'TATAKAU!',
+      'TATAKAU!!',
+      'TATAKAU!!!',
+      '정화의 빛',
+      '복주머니',
+    ],
   },
 
   {
@@ -381,6 +378,27 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     owner: EXTERNAL_USERS['2'],
     autoPreset:
       'rZZNj5swEIb/i89U8ifYXHuKtO1Wam+rPaDidtFmkywkaquI/17bZMnYsATW5ITt8cyTmdcen9HPoi435ZfigPIzIjjFmAmMcpJ0AyLldUAzClZSYEalGeC3FWhGMwFWFNjDBDRj0Ewq6ICDgUoBAYGghAEzAamFF5RA19k1KOMwqBLwnxLoAMbJvIF10Caoar4fPpu03u9Q/qvYNjpBz1q7qa+nFxfxSRelro05tr+M2k13bi7YWFaNrdCPfwftIu2PT52Nc1Pvt/quao4of+g9XT5I98GY6D4I45cZqR4TV/bLzjM6NfpbURcvTgUPZtVM9BGPRf1bH7uhCalfT9Vh87bX2O7/7HS9KeF/aZ6r7dZNUYYJVzzpQ6D8k/FZmbVrPdokQDgjk1bRrs7BpjjwkCMuFSbRAYKpBnkfwar+gvBexAFd7x45/8QIOgzQmexK/dd5vJk3j8lqeglTX7kAjMo0EszqFyYrxcvB8BDMFH4SjM1TGhQSc2CDXYtJZ6gJT6lJLlbTiBSWZSaUo+LIYyLLijbikqpphdN5xxIwqWim1BzcOA3ZW9o7dTSeKfYmGDDxWKYMT5+1GbULmdg6l4C5TCKTFYjqWsCR6Ct3NTrR1fgHru+RBFHJIys3uL7JOmDm+RB39AIwKpb2Fe4mx9se4dOncMbN4AvLPmzXaXss+qHgtT37YPbA6Ie63I2eM6azMOVEBD3nVj+eQypGSIdHUcqpByZdJ0GD474wQeZSQH7lUtQ+tv8B',
+    autoPresetPreviews: [
+      '구축의 화염',
+      '재구축의 힘',
+      '방열',
+      '부채술',
+      '치유탄',
+      '미스터리',
+      '반전',
+      '오의-유풍',
+      '반사',
+      '전광석화',
+      '롤링 썬더',
+      '플래시 코로나',
+      '흡수',
+      '해체의 번개',
+      '폭염탄',
+      '비전탄',
+      '디펜스 트리거',
+      '소실',
+    ],
+    autoPresetPreviewBans: ['유세술', '정화의 빛', '셔플'],
   },
 
   {
@@ -423,6 +441,26 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     owner: EXTERNAL_USERS['2'],
     autoPreset:
       'tVbBTuMwEP0Xn7OS7XFSO9c9VYLdleCGOETEQEQp2aQVoCr/ju3QdBIHA3LozfV43pvJm2cfyE3RlOvyvKhJfiCMZpRCSknOkn7BpDwtuGBoJ0NhwDKS0+POiqMzq9VpB1KOE+BsDFC2FC24ynDYiBsOgxQtcAlc0hMDrkZhEoNiOgoXJxQGVbg4u+gS18Wzqt2R/OpA9q2+fK21C9sVzZ3e9UvDQf/fV/X6GHqdkKfnrW7WpYml9rfiCWkfqs3G/cWBMqFEYjP+K5rikeS/TM7K7J04d8niiBBCpJGIINUEkQKwjxFtwy1if2Rb6hcHGlMyQwSIY8CMSj+mYD/zohQYCI8Cl1mAgp22Ud/BwzwedbNsMScAoHyASUWfdS6F8ZcBry0Q92W4x9ooLtAW6xQ/IEcakqP0iuYxRY8JvGtBheRozWlROc5RMEAhCsbiI+UoqF/jREnfk6O9nRaW44xRKBFqC4t1x1k/5oEBEL41Rclx3pqCRWcL932WgrnpAgad+hMRRWFuIpgI3hGp7wuR19ScGUKIgnnbjNTHw0N5IOb9RDu/UOZb7kRfX5kcPBa9S3unvsU07b4yLFKGbgu+SIPM1EU3iI+/XLYIMUGjiU081dy+nQl60Lr+bd64f/aPjs29Lkrd4GLKqrWP4EHsVXvmYuypv1uS3xabVhu03X3/n0vTPG30O5Mh0yCggc9gCsfRvLbpL+pR6u4N',
+    autoPresetPreviews: [
+      '구축의 화염',
+      '재구축의 힘',
+      '방열',
+      '부채술',
+      '치유탄',
+      '출격',
+      '미스터리',
+      '반전',
+      '반사',
+      '흡수',
+      '재발동',
+      '오의-유풍',
+      '해체의 번개',
+      '폭염탄',
+      '비전탄',
+      '디펜스 트리거',
+      '소실',
+    ],
+    autoPresetPreviewBans: ['유세술', '정화의 빛', '셔플', '에너지 절약'],
   },
 
   {
@@ -459,6 +497,27 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     owner: EXTERNAL_USERS['4'],
     autoPreset:
       'tZdNj5swEIb/y5yp5LH5sLn2FGm3rdTeqh5Qcbtos1kKRG0V5b/XA6EMkIRA2JzsmMz7MF+eHCArH2yS2uJ9UqQfdxBXxd568GxtTt982L9ALDz47tab9DHJIT4AilAI5RuI0Ws2Moq6jTCab8Jug6jYRrPHMJJsY7AWbXQCyXV6BgzXibiO4AaQG2C/UYHgJ1xH85OQnwSc2vDHTMBNq45Ach/IyHebowfF69Y+ZGUF8VcU9Imkd1pgs1DanBYqOB2FwTcP0qykeHz5m9va7lMdQLdszbigfs7bgP5ItqVtIniSO4D9tc/yTbt3JrMU4i6UHlRJ8dNWjYJ7jX1pPyVF4nLhndMrn7PtdrNL7R+IVX34H6U5qo1JReSBM/b6e2cL+rIFPHpXESguQ80x0FiTJNE3aoki3vbSnYrfh2gfrkuEjJ9F4G6WcOZXA9eOkC8wNd4OXUH0qQZv1GdyWTXhFsrVPhMuiUtLF41y4RYEMycd8SoCRmMEV20TCNRaZiDI6whCjhHCKS9QF13PCwIXIFCvW80L0pzJBW2mEOqaWckLzuASBHdpLW1NLtvHNXiDorlHES8o8gpTU51Izu9Eet1ORNPGHVeCnOzHNLSs3Y9RqDlemK5BGj5Wu5vRX1KDNOWsV4NKXRoPmKIW60fG+LMi09wR3AvhkOkANPEd7ywcl+gcTE6CDZxFE/abgCEG88CmblWa6+eNXFr3AcZv6ernltEPEDUVUwT91A7l8k7ry7EPBB5pEKyemn9XFIV/',
+    autoPresetPreviews: [
+      '미스터리',
+      '재구축의 힘',
+      '구축의 화염',
+      '전광석화',
+      '롤링 썬더',
+      '부채술',
+      '레드 버튼',
+      '폭파 작업',
+      '반사',
+      '흡수',
+      '반전',
+      '방열',
+      '플래시 코로나',
+      '해체의 번개',
+      '가방 정리',
+      '디펜스 트리거',
+      '소실',
+      '오의-유풍',
+    ],
+    autoPresetPreviewBans: ['셔플', '유세술', '정화의 빛'],
   },
 
   {
@@ -477,6 +536,27 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     owner: EXTERNAL_USERS['4'],
     autoPreset:
       'rVZNj5wwDP0vPlPJTvgK155G2nZXam/VHlBJu2insxQYtdWI/94kzAxhYCEwcEqwYz/7OXZOkFcPMs1k+TEts8cDJHV5lB68SlnoP5+PvyBBD76r9S77lBaQnIAwRCSBkJDXblBE3YZF9iaIjYGzWmifiS01W8Ix6DYUW2o8YPaGd6ZJkGUtxk7CfWFbszfErTMh2hK047HPRDYC9G049hkR2BKNrfFUrr8Ulzz/SPeVSvSLSb4So/4i5kGWVzrbX/8V0pgo3/byIa9qSL5dlc4Lahc8Fu2C8PwHw+DZg7f6peX1SuHZzgnk72Ne7C57pVu95vv9TmkCMa5tBuDBsZJPaZmqEviggNRp+VPWLS40wivG9vQhk38h4SpOY+dSCwrIn4MstfFLAI03AqHv7QpI4yFf8L7HGzCdR02Dq8dbH/58yEZo7oE2YLsl6CMchdA331fR7A0xvh+oKr5JFgZobzgOMYbptLR6ZDhcVQvUrwUxwgy5QAgE2wZCOCwOlfY5ZtR1WsKM7obvA2LzzBAy2BxTOIGJXDCRU7UwsbpamA1Yz5fbmFWjc4GAhuX7q0X3elcIE80LOUfH5qWH3TYeydnj8FI6pjlEsQnTetyvuZTRonapR/pd7ZKEP34BpucWc51b/lh3nB0ai9tAfGcWkLsNDX91G+D9NkCr2wDn2wwNMaxPF2b0Y86dGdZv0Gx6aJxAv32bkZj9+cmx9OLwDYARBTN1096XOF7yBjPegqb/EGM3cIfMPTf/AQ==',
+    autoPresetPreviews: [
+      '미스터리',
+      '재구축의 힘',
+      '구축의 화염',
+      '유산소 대기',
+      '부채술',
+      '마이크로파',
+      '레드 버튼',
+      '폭파 작업',
+      '반사',
+      '흡수',
+      '반전',
+      '방열',
+      '위치 전송',
+      '오의-유풍',
+      '해체의 번개',
+      '가방 정리',
+      '디펜스 트리거',
+      '소실',
+    ],
+    autoPresetPreviewBans: ['셔플', '유세술', '정화의 빛'],
   },
 
   {
@@ -548,6 +628,34 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     owner: EXTERNAL_USERS['5'],
     autoPreset:
       'tVfLbtswEPwXnlWAL4mSrj0ZSB9AeytyECq2EeLYriSjLQz/e0nKjpePSGSq+KS1qd3hzuyQPqF+v5V33TCi+hvB+sNoNj2IywOtyumB5GJ6YGV1n6Fu+HJ43/Ttpx2qfzTbQWbouwo37YfmgOoTIrhQ7wiKapJNActBQKviFhAKgwrDXwR8J4e/MBBg6x0OAmEFVoIcYoMJyhIGFVjGK5iAQgQEZiOwKNwchj3gsChWqfFzD2ACCgIqdEPOuv93smllf+Vg7I+KggfznVpxJRO13aB5+fr3IFHNMvQopeHt4/HJ1NuPD1MSE+mlFz2ckPx17A6ba6w4Pw7yc9M3T4biyxdTYgVvbPqfcpxClalTCW/kZGh47Lbbza6VfwyMaypUv1Pv7n/vZL9pIe5pvUlCGSakYOicnZz37EWYYY6syopvuzL1cHqbtLFo1YNt+hBu1TSddku83E5tu5SetNuOzIbyMtcV54k4ITUJ+BzLhlKT3RMyz4YNa2o0FhitDyxAViowUuCATG5F9AA7TSa8oqlUaXeMVIV2Fr8ie9OKJFCRv2lF6lcsyxUqhgT2LCWoHbFkMQmjd5USj9V4YYmczYlc8LnpKzxkxn88m2NhZO6UstyyQ312/E+XIvmBzeEmjWpRHm0DletPC6eFuo74HaLV+v4kaJpxhoDhYn3j1NeiJGCGR08rL2jKB0Zjxa7veDOOTuNw8YChh7sF/aBAs91bOPUDR7G6gKyvKLc/C1IPm0EeQVzCZc0dv4VTOHBZU7e1mPFLwJQ4eWFM0QJ3tKT+DbhiYAwnOaexghTnjO9N5V6uF/gKuRKtRCRfsC3eTUq1xSNm/bbAKafOlL/6yL+Yc5kOga0LQbyiC3xVCITi8/35Hw==',
+    autoPresetPreviews: [
+      '화력전개',
+      '나비의 축복',
+      '노래',
+      'TATAKAE',
+      '우아',
+      '해체의 번개',
+      '재구축의 힘',
+      '구축의 화염',
+      '정화의 빛',
+      '뭇별',
+      '자연의 메아리',
+      '미스터리',
+      '디펜스 트리거',
+      '흡수',
+      '소실',
+      '셔플',
+      '셀카',
+      '태초의 꿈',
+      '공습',
+      '초음속',
+      '반전',
+      '반사',
+      '방열',
+      'TATAKAU!',
+      'TATAKAU!!',
+      'TATAKAU!!!',
+    ],
   },
 
   {
@@ -682,6 +790,33 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     owner: EXTERNAL_USERS['7'],
     autoPreset:
       'tVfLrpswEP2XWVPJD2we264i3T6kdld1gYrbi25ubgpEbRXx77VNgCGmuK0hO2cGn+Nz7PH4Co+qKFUNOSX2F0fwpajLh6ppIf90hbaov6n246+zgpxE0DxVx+OhhBwo4zqdcYjg5cdJ1ebPaY7KphBphzrl0qj3RV08Q/6KDrOcSvUTcmaDPYAOqe+X6nwY8D93kY8C5QsU4mRGIaM7UegZSH5PgGUpJkCZdAjcoSAKbEp9U5whvwLXqJ2Xh0iFhweLicMjSHxJMkd8SijG5ETs6r8W16Ug+Mz/hWVvSUFkCxTmKjC5TiHUCG2t/yCuG8GDKbgq3FPg67UgVAXKibcWxHxnCtJfjrKdjOgZ0MRjA6WuDWGIqRfR3XshiEQ6iE7JZdsiJtSL6O6sIFUZ8SJu66NIHMR7HxdOT2DRWLhA5tWbpsm+dUt4LxCt+05Fo79FxcL5ofOqta3TiVhweo6YbHZibzInbm129vN6n+ansDC9p+vyVHN7bWOGRpU/9Q7/0bgNMO7t7WgTegoW+pMgbSRJYd7oxbDKaabNXxXA2NfY/VNffU/B2iO6TudUzYN9Br3WT593J8jb+qL6h9ChvOWO/pt5xitmHJgeE0UojnAckdPAKDZFdJlDaTjCZhE0m+mnpghFA9PsIQY4klHMAKWZKjcNJMHfZGiQYA0oHuCVMiwIwcsmdtldBPXLUd18Gi+bce+PndO4XYcdYP36cB68+locG21WWTXGr95q8yBrH3s/7c56Usp+8PbybLB/Aw==',
+    autoPresetPreviews: [
+      '에너지 풍선껌',
+      '기원',
+      '노래',
+      '위치 전송',
+      '봄꽃',
+      '마이크로파',
+      '인터체인-I',
+      '플레임 슬래시',
+      '스파크',
+      '휠윈드',
+      '인터체인-II',
+      '인터체인-III',
+      'TATAKAU!',
+      'TATAKAU!!',
+      'TATAKAU!!!',
+      '다크 엑스칼리버',
+      '오의-유홍',
+      '단비',
+      '원소핵-불',
+      '화염 신성',
+      'TATAKAE',
+      '뭇별',
+      '유산소 대기',
+      '가을달',
+    ],
+    autoPresetPreviewBans: ['셀카', '우아'],
   },
 
   {
@@ -700,6 +835,32 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     owner: EXTERNAL_USERS['8'],
     autoPreset:
       'rZbLTuswEIbfxescyZ5J4iTbs0LiJsEOsYhOfCCitFVSBKji3bGT0E4mUKc1XWXqyzfj+WfsrXg0ZWUaUSjpfgiReDJm/bdsqsuXZ1HISNTtTWdfLUXxv1y0JhL/rHlWXZRrUWyFkqldmIDdI+oN0EiNeG9gQkYskkyLiaFA0TWKrhlxdOfhYACdRtdAQtbkKR2h7kBMt072WyNoOo0YCDl1dBRCSqdl1APiDsY5XeNC+HBHft6lhR17s1qY87rdiOJul67uA/Ks/1CY9x9SD0OIyX2fsGHlVqxel6Y5q4acu7WittY+D5F4ac3t+9p0rm3K5sFselN2Q9dlU1pt/LGD7VO9WHR7AUqZZMlHxAHOFQJwSjkVoOIsmwFQAYA8ngE4/YgsAL8B4AjgCmMM2O0huk1UiuLrz2Vl3kSBnDpyyR+SlWFASDDjzPBgSG5GYEhMyK5ODxJVGgcSXbXRGIEfIk8bhqZtQsx8RGBEOJJo+8eoPWhevexU0yz/7TymPxGHNKJHrV/WcF+ho87AJj75yMCjZSXibiZPiXDBwq9EPuk+vH/yyBVP8dGRc6JHVFbHjKhCZRz7ZKwDiZNSPdyOlLv8w4gTBXvyKDVXcDCRN/kj3g5SqxmA098OLqczAFwXRwAUzBHeXsm7RGj5fa85ocjv7mf0GU9nk5NryqML+8Cs6ta9Mft/bENebR7756sb/wQ=',
+    autoPresetPreviews: [
+      '노래',
+      '정화의 빛',
+      '구축의 화염',
+      '재구축의 힘',
+      '화력전개',
+      '해체의 번개',
+      '미스터리',
+      '뭇별',
+      '번개 소용돌이',
+      '자석 폭탄',
+      '전광석화',
+      '셀카',
+      '우아',
+      '셔플',
+      '공습',
+      '초음속',
+      '롤링 썬더',
+      '플라잉 플래시',
+      'TATAKAE',
+      'TATAKAU!!',
+      'TATAKAU!',
+      'TATAKAU!!!',
+      '플래시 코로나',
+      '소실',
+    ],
   },
 
   {
@@ -893,6 +1054,31 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     owner: EXTERNAL_USERS['14'],
     autoPreset:
       'vZdNj9sgEIb/C2dXGhhsYl97irTbVmpvVQ5WQ7vWZpPUTtRWUf57wXZixuCPTVZ7Y8DMPLwzMMmJ/cjL9XL9mO9ZdmIcEgCByDIeNQYkojMw5p0h0qQzOIJjSGcFQTp7lGIZXFzHyllJwN0Tu3EcA2Xq4jigyB0HAhP3CMRQrgNwV6S7Ilxvds85YuuisnJ9+7fX9eru8KTLj2amtp50vtalGRpfwLmIWFE91HP2k89blv3MN5W201/3valyt9EPRXVg2ffr9magoB0AbwYI7QwosYrYs9a1s0/Hl1paC9h6OrFDXv7Sh4bXrFXPxWaztLQCTZZSjNix0l/yMn9pC8AIGpuD7v5sdVl/2AaKmP59LPbLi+tVvfMqxMULyz4YqzAbO4HP0cnffCVhFsV8mrKoT0sh7PlJzMbFdq3/skyMIJhamoMAKp5EMLm4BcEW4DhCS7AIRuwxzdHd1rKNOJF/Eco/vGX+zXW1HK5QwaLDcFA3hltVyPz8oc1fB4KecL0TzCkKkcJkUXAxXBQ4LI19MfvS8OB99BNC7wK6bu076h0jTgXRJvarKiDOdNL8p4JeEaQ1qQJZUwnNWjyHbKysjUsVhA3IqHz3lN4BA3oWMS95YiDqgERxUCJJJBKzkjf+1nC58N6a+sLd8NbYVjmlhQWg0WwX69wLUsIYuN6yrh7K8AYlLL30UDB6tzCQHpmkBEzey+VrRa+7oN1N+kgJLO7UamZjGE1iEtLqXrDgJRvoWANgaRxqHvg+io2CBRQzHfQGsIm2LycrbqLjj/3cMn8RXv8a0CZKK5z7DY1DeossN+RrBMz+y/HABLwabHX+Dw==',
+    autoPresetPreviews: [
+      '재구축의 힘',
+      '위치 전송',
+      '긴급 대응',
+      '쾌속 장전',
+      '해체의 번개',
+      '미스터리',
+      '부메랑 도끼',
+      '마이크로파',
+      '플라워 가든',
+      '플라워탄',
+      '플럼프탄',
+      '정화의 빛',
+      '승리의 아우라',
+    ],
+    autoPresetPreviewBans: [
+      '런닝 썬더',
+      '유산소 대기',
+      '복주머니',
+      '소실',
+      '셔플',
+      '구축의 화염',
+      '도끼 투척',
+      '도끼 회수',
+    ],
   },
 
   {
@@ -1240,46 +1426,76 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
         equipments: ['블루 일루전', '시뮬레이트 스타', '뫼비우스'],
       },
     ],
-    desc: `<div className='flex flex-col'>
-    <div className='text-red-600 ff-dh text-[20px]'>* 필수 최소 각성 니콜라★★, 캐롤라인★, 나유타★, 스텔라★★, 테니★★</div>
-    <div>해당 덱의 비용이 상당히 높고, 완전한 팀 구성이 없다면 처음부터 해당 덱을 구성하는것을 권장하지 않습니다.</div>
-    <div>단점으로 덱 세팅이 비싸고(비싼대비 효율이 떨어집니다), 생존성이 낮습니다.</div>
-    <div className='border flex flex-col items-start gap-[1px] p-[10px] rounded bg-white'>
-    <span className='text-blue-gray-900 ff-dh text-[30px]'>중요한 장비 옵션</span>
-    [니콜라]
-    <span className='flex flex-wrap gap-[4px]'>
-      <span className='border border-blue-gray-400 rounded px-[4px]'>+30 공격력</span>
-      <span className='border border-blue-gray-400 rounded px-[4px]'>[버리기] 명령 시 +공격력</span>
-      <span className='border border-blue-gray-400 rounded px-[4px]'>[레드카드] 사용시 공격력+%</span>
-      <span className='border border-blue-gray-400 rounded px-[4px]'>주는 최종 피해+%</span>
-      <span className='border border-blue-gray-400 rounded px-[4px]'>[드론] 키워드를 가진 카드 사용 시 공격력+%</span>
-      <span className='border border-blue-gray-400 rounded px-[4px]'>[드론] 키워드를 가진 카드가 입히는 피해+%</span>
-    </span>
-    <a href='https://arca.live/b/resonance/130470153' target='_blank' className='underline text-blue-400'>[옵션 상세공략 바로가기]</a>
-    <div>위 옵션중 아무것도 사용할 수 없는 경우 아래가 대안 옵션입니다.</div>
-    <span className='flex flex-wrap gap-[4px]'>
-      <span className='border border-blue-gray-400 rounded px-[4px]'>[인뢰] 발동 확률 +% 증가</span>
-      <span className='border border-blue-gray-400 rounded px-[4px]'>[인뢰],[낙뢰],[우레]와 [천둥]의 [낙뢰] 피해 +% 증가</span>
-    </span>
-    
-    <div className='mt-[8px]'>[캐롤라인]</div>
-      <span className='flex flex-wrap gap-[4px]'>
-      <span className='border border-blue-gray-400 rounded px-[4px]'>자신이 부여하는 [자화]의 지속 시간 x초 증가</span>
-    </span>
-    
-    <div className='mt-[8px]'>그 외의 팀원</div>
-    <div>최소한 하나 [무적] 관련 속성, [테니]는 가장 낮은 우선순위를 갖습니다.</div>
-    
-    <div className='mt-[8px]'>추가적 고급 옵션</div>
-    <span className='flex flex-wrap gap-[4px] items-center'>[니콜라] 외에도
-    <span className='border border-blue-gray-400 rounded px-[4px]'>[리더 스킬] 사용시 비용 회복</span>
-    <span className='border border-blue-gray-400 rounded px-[4px]'>카드를 버릴때 체력 회복</span>
-    <span className='border border-blue-gray-400 rounded px-[4px]'>자신의 스킬 카드 사용 시 체력 회복</span>
-    <span>를 사용해 덱을 강화 할 수 있습니다.</span>
-    </span>
-    </div>
-    </div>
-`,
+    desc: (
+      <div className="flex flex-col">
+        <div className="text-red-600 ff-dh text-[20px]">
+          * 필수 최소 각성 니콜라★★, 캐롤라인★, 나유타★, 스텔라★★, 테니★★
+        </div>
+        <div>
+          해당 덱의 비용이 상당히 높고, 완전한 팀 구성이 없다면 처음부터 해당 덱을 구성하는것을
+          권장하지 않습니다.
+        </div>
+        <div>단점으로 덱 세팅이 비싸고(비싼대비 효율이 떨어집니다), 생존성이 낮습니다.</div>
+        <div className="border flex flex-col items-start gap-[1px] p-[10px] rounded bg-white">
+          <span className="text-blue-gray-900 ff-dh text-[30px]">중요한 장비 옵션</span>
+          [니콜라]
+          <span className="flex flex-wrap gap-[4px]">
+            <span className="border border-blue-gray-400 rounded px-[4px]">+30 공격력</span>
+            <span className="border border-blue-gray-400 rounded px-[4px]">
+              [버리기] 명령 시 +공격력
+            </span>
+            <span className="border border-blue-gray-400 rounded px-[4px]">
+              [레드카드] 사용시 공격력+%
+            </span>
+            <span className="border border-blue-gray-400 rounded px-[4px]">주는 최종 피해+%</span>
+            <span className="border border-blue-gray-400 rounded px-[4px]">
+              [드론] 키워드를 가진 카드 사용 시 공격력+%
+            </span>
+            <span className="border border-blue-gray-400 rounded px-[4px]">
+              [드론] 키워드를 가진 카드가 입히는 피해+%
+            </span>
+          </span>
+          <Link
+            href="https://arca.live/b/resonance/130470153"
+            target="_blank"
+            className="underline text-blue-400"
+          >
+            [옵션 상세공략 바로가기]
+          </Link>
+          <div>위 옵션중 아무것도 사용할 수 없는 경우 아래가 대안 옵션입니다.</div>
+          <span className="flex flex-wrap gap-[4px]">
+            <span className="border border-blue-gray-400 rounded px-[4px]">
+              [인뢰] 발동 확률 +% 증가
+            </span>
+            <span className="border border-blue-gray-400 rounded px-[4px]">
+              [인뢰],[낙뢰],[우레]와 [천둥]의 [낙뢰] 피해 +% 증가
+            </span>
+          </span>
+          <div className="mt-[8px]">[캐롤라인]</div>
+          <span className="flex flex-wrap gap-[4px]">
+            <span className="border border-blue-gray-400 rounded px-[4px]">
+              자신이 부여하는 [자화]의 지속 시간 x초 증가
+            </span>
+          </span>
+          <div className="mt-[8px]">그 외의 팀원</div>
+          <div>최소한 하나 [무적] 관련 속성, [테니]는 가장 낮은 우선순위를 갖습니다.</div>
+          <div className="mt-[8px]">추가적 고급 옵션</div>
+          <span className="flex flex-wrap gap-[4px] items-center">
+            [니콜라] 외에도
+            <span className="border border-blue-gray-400 rounded px-[4px]">
+              [리더 스킬] 사용시 비용 회복
+            </span>
+            <span className="border border-blue-gray-400 rounded px-[4px]">
+              카드를 버릴때 체력 회복
+            </span>
+            <span className="border border-blue-gray-400 rounded px-[4px]">
+              자신의 스킬 카드 사용 시 체력 회복
+            </span>
+            <span>를 사용해 덱을 강화 할 수 있습니다.</span>
+          </span>
+        </div>
+      </div>
+    ),
     descLink: 'https://wiki.biligame.com/resonance/%E5%A6%AE%E8%94%BB%E6%8B%89%E9%9B%B7%E9%98%9F',
     autoPreset:
       'rZZNT8MwDIb/S85FSpx+XzlNAsSB27RDRSM2MdjUDgGa9t+xW9icraTJtp3qJfXj+LWdbsXcVLVpRKkk/TRE4rlq6kl9X61FuRVKpvRvgRuiXyPVzEjkwYAi4SvqYKBzti1mhoaMGzl3AMwBJNwb8HBivsKhYDnQ3ODvQMoNHk4q+QpzrWOWEMgyngPytovEqzHrW8zkw8ebKGUkmtXS3C3ajSin+1R3D5Cl/YPSRf8gs7+lIp9Fol60JMnT99qIUvf6/HraivZ1sVxO3mvz1a19tKbfh/GsPt9NM6m5tLj8WDUVRnSDG/p3cYPA7EilUNhIbKrmxWx6Jxj2olv+0/DgoSuP6WwXbR1MjJ9RCCKTPDlh2FEdiFQobgBlygaouABvAMl4BiD2B2ATnAHQAQCvFB15s4UnL2K4NvZ1xUTBavdQ3U1U2LTeROpJN5E6x01USmt/Is27KxDBSQSbmF9DR/cZ7ebCYT2iIw4mHmI3Ho6QkA/MDEcEgcT4lBgrFUKEQKIcIGI1BBD1FXR0dwfYOqY+/WhPYRz13iOG7scrNLz0PxJd9iNJ1KNJVKoIIMrROe1DDGg/+oa5fMSAe8TYV8XoGB26i/JTaf+/i8aONFCJMvUH0HHDAZkKAOgzeglkACC+vJdk5u6lIyJWNn5ErjZz09D3KHrc/QA=',
@@ -1382,6 +1598,133 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       'https://wiki.biligame.com/resonance/%E7%88%AC%E5%A1%94-%E6%B4%97%E7%89%8C%E6%9A%97%E8%89%BA',
     autoPreset:
       'pVdRj5swDP4veWZSnBACvO6p0u02aXub7gGNbIeua3vQapsq/vscQg9TKCWXPuHE8Wf7s530zKrm6+FjUZefdyz/WWwbE7F6vzUPVXNk+Xfg9qdF5D4kuA+hE/ch06zf0vAUsRdjOmOPp98s5xHbH59NbRc6qWoeTFG6BQL33C2y/A2L/UCFTfmpOLD8zIAniKMAFSInAMhBkAkfBJFyuqPJmTQjOzERhCYCaEF2MoIDmaDWUqoWUzXqjhqpKeooOSMV9VpRDxIUxJuBhHqtaaTUWmK9bl0WexrPbP9nZ+pNeckyEslOjflS1AUy9cFJ3/4dTGeneam2205ZSM5jYblDafApYsei/mWO7gRum9dTddhc4BhAaqPX7KmNQrAhATXBGlyxDM8A6HUArIsOMJETCKezK83f7ggJHotlDlGsDynO4qWQsNCnALbNVvMlbYJvAthGeH8ELmfo5XLO5Dhn8yzdRhSTnKXpOEkzJXix1Y8NbALVBlMlF6nic3H5tFYCeokqHDnvB+ipUneoGpc3Trzg6uOL1ZcGALiQRHanY8U4iSEs9UnUM/V2u97xPgieSmjDAzGdi9Evq2jHo1DsPTlFtM+C9YgxgAeP9o4Lbmex1M7x7GD07LbEIyT7CAhNokilB232bRBMm8g8StM+z8KvG58Y7TsrtBkgvjNixu2n3FC70l/o/+GO4u343iMtBjbqsctXpXTtNag1fgg/P+yz088PbCXW4r+BsmrsG7RPcvsf',
+  },
+
+  {
+    id: '8',
+    title: '냉동 코어 나유타 덱',
+    leaderName: NAYUTA.name,
+    characters: [
+      {
+        character: NAYUTA,
+        equipments: ['에비서레이터MK0', '시뮬레이트 스타', '해리슨 장치'],
+      },
+      {
+        character: ELIOT,
+        equipments: ['에비서레이터MK0', '시뮬레이트 스타', '춘추합성인장'],
+      },
+      {
+        character: YER,
+        equipments: ['에비서레이터MK0', '시뮬레이트 스타', '모노폴 마그네타'],
+      },
+      {
+        character: RINA_F,
+        equipments: ['에비서레이터MK0', '시뮬레이트 스타', '베타 세계선 박스'],
+      },
+      {
+        character: AOBA,
+        equipments: ['에비서레이터MK0', '시뮬레이트 스타', '춘추합성인장'],
+      },
+    ],
+    desc: (
+      <div>
+        <div className="text-red-600 ff-dh text-[20px]">* 필수 최소 각성 아오바★★</div>
+        <div className="text-blue-600 ff-dh text-[20px]">
+          * 권장 각성 엘리엇★★★★★, 리나 본★★★★★, 아오바★★
+        </div>
+        <div className="text-red-600 text-[20px]">
+          이 덱의 목적은 열차 코어 엔진 200개 [냉동] 요구 사항을 완료하는 것입니다. 다른 경우에는
+          비추천합니다.
+        </div>
+        <div>장비에 대한 중요도는 높지 않습니다. 생존을 위해 레벨을 높이려고 노력하세요.</div>
+        <div>
+          만약 장비 파밍을 한다면 [아니타 탐색 장비함]에서 [리더 스킬 사용시 코스트회복]을 파밍해서,
+          스킬 사이클을 도울 수도 있습니다. 또한 [전체 확률 향상]을 통해 [냉동] 효율을 더욱 향상시킬
+          수도 있습니다.
+        </div>
+        <hr className="my-[10px] border-gray-700 border-dashed" />
+        <div>
+          <div>
+            [나유타] 이 덱 조합에서 카드를 순환시키는 핵심입니다. [미스터리]에 의지하여 손에 있는
+            카드를 덱으로 순환하고, 손에 있는 카드를 [버리기] 효과를 발동하여 싸이클을 돌립니다.
+            [소실]은 카드 뽑기에 도움이되고, [미스터리] 자체는 3장의 카드를 뽑을수 있으며, [셔플]을
+            버리면 3장의 카드를 더 뽑을 수 있습니다. 생성된 [해체의 번개]는 각각 다른 카드를 뽑을 수
+            있습니다. [정화의 빛]은 쓸모가 없으니 5단계 공명 효과를 비활성화하세요.
+          </div>
+        </div>
+        <hr className="my-[10px] border-gray-700 border-dashed" />
+        <div className="flex flex-col gap-[4px]">
+          <div className="flex items-center gap-[10px]">
+            <div className="flex">[에비서레이터MK0]</div>
+            <div className="flex">가장 중요한 [리더 스킬 사용시 코스트 회복]</div>
+          </div>
+          <div className="flex items-center gap-[10px]">
+            <div className="flex">[마술봉]</div>
+            <div className="flex">
+              비용 회복 장비의 낮은 난이도의 파밍 대안이지만, 덱 세팅에 큰 영향은 미치지 않습니다.
+              주로 장식용이니 무리하게 파밍하지 않아도 됩니다.
+            </div>
+          </div>
+          <div className="flex items-center gap-[10px]">
+            <div className="flex">[모노폴 마그네타]</div>
+            <div className="flex items-center">
+              드론 지속시간을 늘려주고, 각 드론이 0~3번 더 [냉동]할 수 있게 해줍니다. 꼭 가지고 있는
+              것이 좋습니다.
+            </div>
+          </div>
+          <div className="flex items-center gap-[10px]">
+            <div className="flex">[공간 위치 측정기]</div>
+            <div className="flex">
+              게임 시작시 팀이 카드 뽑기 작업을 도움. 강제할 필요는 없으며 천천히 파밍
+            </div>
+          </div>
+          <div className="flex items-center gap-[10px]">
+            <div className="flex">[베타 세계선 박스]</div>
+            <div className="flex">
+              카드를 뽑는데 사용됩니다. 게임 시작시 바로 적용됩니다. 매우 유용합니다.
+            </div>
+          </div>
+          <div className="flex items-center gap-[10px]">
+            <div className="flex">[춘추합성인장]</div>
+            <div className="flex">
+              스킬 코스트를 보충하고 덱의 안정성을 높입니다. 있으면 쓰지만 파밍이 강요되진 않습니다.
+            </div>
+          </div>
+          <div className="flex items-center gap-[10px]">
+            <div className="flex">[시뮬레이트 스타][뫼비우스]</div>
+            <div className="flex items-center">
+              아니타 장비입니다. 장비 추가옵션중 [리더 스킬 사용시 코스트 회복]을 뽑으면 스킬
+              사이클을 도울수있습니다. 없어도 장비 기본 옵션을 통해 수급 가능합니다. 추가 옵션을
+              강제로 파밍할 필요는 없습니다.
+            </div>
+          </div>
+        </div>
+      </div>
+    ),
+    descLink:
+      'https://wiki.biligame.com/resonance/%E5%8D%95%E9%87%91%E5%86%B0%E6%A0%B8%EF%BC%9A%E9%82%A3%E7%94%B1%E4%BB%96',
+    autoPreset:
+      'tVdLj9sgEP4vnF2JYfwAX3uKtH1I7W21B6umXWuzSWonaqso/72A8xg7sA6R1yfGY2Y+hm8+8J413bfNx6qtv6xY+bNadjphP4y5qD9VG1buGfCcc8yAlZD0BuT8YmDGqYd8JlRGPxPEUxRkjkTiwYx6JPHQPJgqYkDOSn6aozidQwOkFJukqKWiqHMKlHigIEsAsKgPCXvWVa1bM+b2KUTC2vVSPzTdlpWP55f9IMPjoIB+AJj2A5Tqqa/7ceaedS/NcrmoTWSBHFKVJqwx1mU/Erbr9NeqrV5Z+cHg0r93zWZxCmDCrf+sdOsinLGZGd//bbRbx7Zqf+ltb/JDcp0Rhxn5O2fkiEAz2m2JzGjKeGtG5lKCYeLoq3HK8Zp8KPqoq1r/dVkpgst6LJk8EITM4yBY0twJwXauhUCLjCwY7YwRVSRGS/UgJLzMdRrz+OQpiyFc7M6IibJgeGcK5qMjH9JRvjsdhYqko8vw5qJFkAuK++hoXHNDCNPRKOqQjlakp+mY8tiuHdMRY+kIKp1bKMJ0lPyajkaPxUCP02h1jNDjkzRFLnpamsJ0NFcHHwR30M0KIVz3zNsRkM7elG9AkN6mRJxbDMPHlLm2jc4IuOWMAIgWbAhzQ4yacs/QctTTFlLOUJnrXNlhiIbehK5Uyx2PUwUyLXvHJt5RIALMHaLTchoLbCyntwAzeZvuwd2WR78b6+1z/84lftHa/Y983r06u246ey8+MvXwHw==',
+    autoPresetPreviews: [
+      '구축의 화염',
+      '재구축의 힘',
+      '방열',
+      '부채술',
+      '치유탄',
+      '출격',
+      '미스터리',
+      '반전',
+      '반사',
+      '흡수',
+      '재발동',
+      '오의-유풍',
+      '해체의 번개',
+      '폭염탄',
+      '비전탄',
+      '디펜스 트리거',
+      '소실',
+    ],
+    autoPresetPreviewBans: ['유세술', '정화의 빛', '셔플', '에너지 절약'],
   },
 
   {

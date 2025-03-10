@@ -31,6 +31,9 @@
     "paths": {
       "@/*": [
         "./src/*"
+      ],
+      "@/const": [
+        "./src/const/*"
       ]
     },
     "target": "ES2017"

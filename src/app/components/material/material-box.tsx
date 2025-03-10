@@ -7,6 +7,7 @@ import React from 'react'
 import createKey from '@/services/key-generator'
 import { Tooltip } from '@material-tailwind/react'
 import clsx from 'clsx'
+import Link from 'next/link'
 
 export function MaterialBox({ material }: { material: ExtendedRSMaterial }) {
   return (
@@ -26,7 +27,7 @@ export function MaterialBoxResponsive({
   material: ExtendedRSMaterial
 }) {
   return (
-    <div className="relative">
+    <div className="relative min-w-0">
       <img className="absolute bottom-0 z-0" src={getMaterialBgFrameUrl(material.grade)} />
       <img
         className="relative z-20 rounded w-full"
@@ -57,7 +58,9 @@ export function MaterialTooltipBox({
       key={createKey()}
       content={
         <div className="flex flex-col gap-[4px]">
-          <div className="text-[20px]">{material.name}</div>
+          <Link href={`/materials/${material.name}`}>
+            <div className="text-[20px]">{material.name}</div>
+          </Link>
           {material.desc && (
             <>
               <hr className="border-gray-700 border-dashed" />

@@ -212,8 +212,8 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/b/b9/oj2b5ytj26h7ljla7uuwfowphyhup8u.png',
   },
-  인연: {
-    name: '인연',
+  '인연 - 아리나': {
+    name: '인연 - 아리나',
     desc: '아리나 스킬 카드의 치유를 받을 때마다 방어력이 3% 증가합니다.(중첩 가능)',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/5/5e/1qnhq8d8io3zf02grus67wv2d8eaksg.png',
@@ -616,8 +616,8 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     clearMind: '구매 가능한 맨더 공구함 수량+20.0%',
   },
 
-  아드레날린: {
-    name: '아드레날린',
+  '아드레날린 - 시즈루': {
+    name: '아드레날린 - 시즈루',
     desc: `[강제 돌파] 사용 시, 아드레날린을 주사하여 자신의 체력을 15% 회복하고, 동시에 자신의 [일반공격]의 공격 속도가 최대로 증가합니다. (10초간 지속)`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/c/c5/kpxsoo28bu5hhoao7kd26iz9b1tm9nh.png',
@@ -753,5 +753,128 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     desc: `[꾀꼬리의 야상곡]과 [종막의 원무곡]이 공명하여 [퍼플카드]가 될 수 있습니다.`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/9/9c/e410iijcswni96zijtuaio3prcc9uha.png',
+  },
+
+  추격: {
+    name: '추격',
+    desc: `1웨이브의 적을 처치한 후 추가로 카드를 1장 뽑습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/69/0dtqe6kv7w9hais6p96wuirbdr6rfpf.png',
+  },
+  '회심연사 - 엘리엇': {
+    name: '회심연사 - 엘리엇',
+    desc: `[치유탄]과 [폭염탄]을 30% 확률로 한번 더 냅니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/8b/jjh9dvgo35hmc9voxosha5i65wa6rha.png',
+  },
+  선택: {
+    name: '선택',
+    desc: `[버리기] 명령으로 카드를 버릴 때마다 버려진 덱에서 [치유탄]을 1장 회수하여 손으로 가져옵니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/62/cmo6bwo1eylm30m8kgopyon3es5plck.png',
+  },
+
+  투척: {
+    name: '투척',
+    desc: `[도끼 투척]이 버려지면 사용한 것으로 간주합니다. 단 공격 대상이 무작위로 변경됩니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/03/q8ibf9m1npjboer0x6g77ayn32wcpz2.png',
+  },
+  진정: {
+    name: '진정',
+    desc: `카드가 1장 버려질 때마다 자신의 체력을 2% 회복합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/0d/9h3b0dxgzj6ryr1axjbeq6yo0ni0ia2.png',
+  },
+  엔지니어: {
+    name: '엔지니어',
+    desc: `[도끼 회수] 강화:
+    버려진 덱의 모든 [도끼 회수]를 회수하여 손으로 가져옵니다.
+    1장 회수할 때마다 자신의 공격력이 1% 증가합니다.(최대 30%)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/1/14/7os0cwf28i27sa25fw9pxfapubqu33n.png',
+  },
+  '포화 공격': {
+    name: '포화 공격',
+    desc: `[부메랑 도끼] 강화:
+    손에 있는 카드를 최대 4장 버리고, 카드를 1장 버릴 때마다 부메랑 도끼르 1개 던져 모든 적에게 4단 피해를 입히며, [열상]을 부여합니다. 이 카드는 사용시 버려진 카드로 간주됩니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/fb/q9zdjkgqujpn7lw3xv1viqvx27gvbjd.png',
+  },
+
+  '아드레날린 - 카렌': {
+    name: '아드레날린 - 카렌',
+    desc: `[쾌속 장전] 사용 시 아드레날린을 주사하여 자신의 체력을 15% 회복하고, 동시에 자신의 [일반 공격]의 공격 속도가 최대로 증가합니다. (10초간 지속)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/38/kpxsoo28bu5hhoao7kd26iz9b1tm9nh.png',
+  },
+  '회심연사 - 카렌': {
+    name: '회심연사 - 카렌',
+    desc: `[플럼프탄] 사용 시 30% 확률로 한 번 더 시전합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/4c/jjh9dvgo35hmc9voxosha5i65wa6rha.png',
+  },
+  특효약: {
+    name: '특효약',
+    desc: `체력이 50% 미만인 아군을 치유할 때 추가로 체력을 10% 회복합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/31/prg3h3e4h5dww4utk5545h2jcz0sf6p.png',
+  },
+
+  잔화: {
+    name: '잔화',
+    desc: `[스파크] 사용 후 모든 앞열 아군이 가하는 [일반공격]이 [점화]를 발동합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/47/lircw0v7kcue8o83aadwg4bxeupaenb.png',
+  },
+  방화: {
+    name: '방화',
+    desc: `연소 상태의 아군이 입는 최종 피해가 10% 감소합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/80/bw0fx7wbgorlchs2p2z87sh547tfpyu.png',
+  },
+  '인연 - 발렌타인': {
+    name: '인연 - 발렌타인',
+    desc: `[기원] 사용 후 다음 내는 [그린카드]의 치유량이 100% 증가합니다.(중첩 가능)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/40/1qnhq8d8io3zf02grus67wv2d8eaksg.png',
+  },
+  '회오리 불': {
+    name: '회오리 불',
+    desc: `[휠윈드] 강화:
+    토네이도를 시전하여 모든 적에게 6단 피해를 입힙니다.
+    동시에 모든 적과 아군에게 부여된 [점화]를 흡수하고, 흡수한 [점화]의 수량만큼 추가로 6단 피해를 입힙니다.
+    사용 후 [블랙카드] [잿더미]를 2장 생성하여 손으로 가져옵니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/91/a34wzn7iv1r89m4ifdjz4y99g6hipar.png',
+  },
+
+  풍운: {
+    name: '풍운',
+    desc: `[단비] 강화:
+    목표 구역을 향해 [우견지술]을 시전하고 [작열]을 부여합니다. 매초 범위 내의 적에게 3단 피해를 입힙니다.(5초간 지속)
+    동시에 25% 확률로 [점화]를 발동합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/81/mvo04028q21tylrdmpxek0r06h7ildk.png',
+  },
+  '가려진 달': {
+    name: '가려진 달',
+    desc: `전투 시작 시 손에 자신의 카드가 없다면 덱에서 모든 [단비]를 뽑아 손으로 가져옵니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e7/p2rlff0buoghui011vjlr7uiun6u3uj.png',
+  },
+  발생: {
+    name: '발생',
+    desc: `[단비] 사용 후 [봄꽃] 혹은 [그린카드]를 우선으로 카드를 1장 뽑습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/3b/cwgtk3vdqhaz1rxk9kb46j3zlfrq5uq.png',
+  },
+  화천: {
+    name: '화천',
+    desc: `[오의-유홍] 강화:
+    [오의-유홍]을 시전하여 버려진 덱에 있는 [레드카드]만큼 [도깨비불]을 생성하며 [도깨비불] 1개당 적에게 1단 피해를 입힙니다.
+    동시에 [점화]를 발동합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/4b/ht20za151r5u0ax92u5p9kebnzbark7.png',
   },
 }

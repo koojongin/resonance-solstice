@@ -3,7 +3,7 @@
 import { Tooltip } from '@material-tailwind/react'
 import { useNextDepthNavigator } from '@/services/navigation'
 import { TOTAL_ARCHIVE_MAP, TOTAL_ARCHIVES } from '@/const/archive'
-import React from 'react'
+import React, { cloneElement, ReactNode } from 'react'
 import clsx from 'clsx'
 import { CHARACTER_RESONANCES } from '@/const/character/character-resonance.const'
 import { RS_CHARACTERS } from '@/const/character/character.const'
@@ -15,6 +15,9 @@ import { ALL_EQUIPMENTS } from '@/const/archive/equipment.const'
 import { EquipmentBoxResponsive } from '@/app/equipments/rs-equipment-list'
 import { EquipmentTooltipContent } from '@/app/components/deck/equipment-tooltip-box'
 import Link from 'next/link'
+import { MATERIALS } from '@/const/material.const'
+import { MaterialBoxResponsive, MaterialTooltipBox } from '@/app/components/material/material-box'
+import createKey from '@/services/key-generator'
 
 const TOTAL_ARCHIVE_WITH_RESONANCE = {
   ...TOTAL_ARCHIVE_MAP,
@@ -36,7 +39,7 @@ export function RSHighlightedText({
   highlightStyle,
 }: {
   highlightStyle?: string
-  text: string
+  text: ReactNode
   textSize?: number
 }) {
   if (!highlightStyle) {
@@ -89,10 +92,6 @@ export function RSHighlightedText({
 
   const regex = /\[([^\]]+)\]/g
 
-  const handleHTMLTags = (hText: string) => {
-    return parse(hText)
-  }
-
   const formatHighlightText = (hText: string) => {
     const formattedText = hText.split(regex).map((part, index, array) => {
       const archive = TOTAL_ARCHIVE_WITH_RESONANCE[part]
@@ -106,7 +105,7 @@ export function RSHighlightedText({
       if (character) {
         return (
           <Tooltip
-            key={index}
+            key={createKey()}
             className="bg-transparent p-0 m-0 rounded-none"
             content={
               <div className="">
@@ -128,15 +127,27 @@ export function RSHighlightedText({
         const extendedEquipment = { name: part, ...equipment }
         return (
           <Tooltip
-            key={index}
+            key={createKey()}
             className="bg-transparent p-0 m-0 rounded-none"
             interactive
             content={<EquipmentTooltipContent equipment={extendedEquipment} />}
           >
-            <div className="w-[50px] inline-block cursor-pointer">
+            <div className="w-[50px] min-w-[50px] inline-block cursor-pointer">
               <EquipmentBoxResponsive equipment={extendedEquipment} />
             </div>
           </Tooltip>
+        )
+      }
+
+      const material = MATERIALS[part]
+      if (material) {
+        const extendedMaterial = { name: part, ...material }
+        return (
+          <MaterialTooltipBox material={extendedMaterial} key={createKey()}>
+            <div className="w-[50px] min-w-[50px] inline-block">
+              <MaterialBoxResponsive material={extendedMaterial} withoutIconPadding />
+            </div>
+          </MaterialTooltipBox>
         )
       }
 
@@ -166,7 +177,7 @@ export function RSHighlightedText({
         )
       }
 
-      const isSpecificText = text.indexOf(`[${part}]`) >= 0
+      const isSpecificText = hText.indexOf(`[${part}]`) >= 0
       if (isSpecificText) return `[${part}]`
       return part
     })
@@ -177,29 +188,49 @@ export function RSHighlightedText({
     if (typeof child === 'string') {
       return formatHighlightText(child)
     }
-
-    // React DOM node, recursively apply formatHighlightText to children
     if (child.props && child.props.children) {
       const updatedChildren = React.Children.map(child.props.children, recursivelyFormatChildren)
       return React.cloneElement(child, {}, ...updatedChildren)
     }
-
     return child
   }
 
-  const parsedText = handleHTMLTags(text)
-
-  if (typeof parsedText === 'string') {
-    return formatHighlightText(parsedText)
-  }
-  return (handleHTMLTags(text) as any).map((textOrElement: any) => {
-    const isString = typeof textOrElement === 'string'
-    if (!isString) {
-      // return textOrElement
-      return recursivelyFormatChildren(textOrElement)
+  const extractTextContent = (node: any): string => {
+    if (typeof node === 'string') {
+      return node
     }
-    return formatHighlightText(textOrElement)
-  })
+
+    if (typeof node === 'number') {
+      return node.toString()
+    }
+
+    if (Array.isArray(node)) {
+      return node.map(extractTextContent).join('')
+    }
+
+    if (node && typeof node === 'object' && 'props' in node && (node as any).props.children) {
+      return extractTextContent((node as any).props.children)
+    }
+
+    return ''
+  }
+  const processTextNode = (node: any): any => {
+    if (typeof node === 'string' || typeof node === 'number') {
+      return formatHighlightText(node.toString())
+    }
+
+    if (Array.isArray(node)) {
+      return node.map(processTextNode)
+    }
+
+    if (node && typeof node === 'object' && 'props' in node && (node as any).props.children) {
+      const updatedChildren = processTextNode((node as any).props.children)
+      return cloneElement(node as any, {}, updatedChildren) // ✅ 감싸는 태그 유지
+    }
+
+    return node
+  }
+  return processTextNode(text)
 }
 
 export function ArchiveTooltipBox({

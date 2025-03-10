@@ -1,9 +1,10 @@
-import { RS_GRADE } from '@/const/character/character.enum'
+import { RS_FACTION, RS_GRADE } from '@/const/character/character.enum'
 import _ from 'lodash'
 import {
   MAPPED_ALL_EQUIPMENTS_R,
   MAPPED_ALL_EQUIPMENTS_SR,
   MAPPED_ALL_EQUIPMENTS_SSR,
+  SORTED_ALL_EQUIPMENTS,
 } from '@/const/archive/equipment.const'
 import { ExtendedRSEquipment } from '@/app/equipments/equipment.type'
 import { OriginRSMaterial } from '@/const/material/origin-rs-material.type'
@@ -183,12 +184,7 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/thumb/3/37/kl9btkjw6qzbwrez60smy15c2zia4za.png/180px-%E5%86%8D%E4%BA%A4%E6%B6%89%E8%AF%B7%E6%B1%82%E4%B9%A6.png',
   },
-  '아니타 일반 장비함': {
-    grade: RS_GRADE.R,
-    desc: '',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/2/25/082xcjkd8ifroajgj9st6fhqh7nneys.png',
-  },
+
   '사과 박하 사탕': {
     grade: RS_GRADE.R,
     desc: '',
@@ -200,12 +196,6 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
     desc: '',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/thumb/4/48/5ulh2fkueceuwcor6w22ltxsndvk1ba.png/180px-%E5%B9%BF%E5%91%8A%E6%8A%95%E6%94%BE%E5%88%B8.png',
-  },
-  '아니타 정예 장비함': {
-    grade: RS_GRADE.SR,
-    desc: '',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/0/0d/082xcjkd8ifroajgj9st6fhqh7nneys.png',
   },
   '소음 효소': {
     earnsPath: [
@@ -241,11 +231,30 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/thumb/4/44/r2rhxgq0646y6yw8hl22nxvlx4o6cky.png/180px-%E2%80%9C%E4%B8%80%E5%85%83%E4%BA%8C%E6%AC%A1%E2%80%9D.png',
   },
+  '아니타 일반 장비함': {
+    grade: RS_GRADE.R,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/25/082xcjkd8ifroajgj9st6fhqh7nneys.png',
+  },
+  '아니타 정예 장비함': {
+    grade: RS_GRADE.SR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/0d/082xcjkd8ifroajgj9st6fhqh7nneys.png',
+  },
   '아니타 탐색 장비함': {
     grade: RS_GRADE.SSR,
     desc: '',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/a/a6/082xcjkd8ifroajgj9st6fhqh7nneys.png',
+    includedItems: [
+      ...SORTED_ALL_EQUIPMENTS.filter(
+        (item) =>
+          [RS_GRADE.SSR, RS_GRADE.SR, RS_GRADE.R].includes(item.grade) &&
+          item.faction === RS_FACTION.GARDENERS,
+      ),
+    ],
   },
   '진저 릴리 향수': {
     grade: RS_GRADE.R,

@@ -1220,4 +1220,199 @@ export const CHARACTER_SKILLS: {
       'https://patchwiki.biligame.com/images/resonance/a/a5/ruq3gf2ht3awk8s0rjgxen85ia65ccz.png',
     isGeneratedCard: true,
   },
+
+  치유탄: {
+    amount: 3,
+    cost: 2,
+    name: '치유탄',
+    desc: `아군의 체력을 30% 회복합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/96/d6uguc2fii8oh32sqe5lsfv8ns7f0zg.png',
+  },
+  폭염탄: {
+    amount: 2,
+    cost: 3,
+    name: '폭염탄',
+    desc: `카드를 1장 뽑습니다.
+    적에게 폭염탄을 발사하여 대상 및 부근의 적에게 1단 피해를 입히고, 동시에 [점화]를 발동합니다.
+    [폭염탄]은 [폭발물]입니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/1/18/bowfw6ixy8cbvvbk1cwwyymzqvic7no.png',
+  },
+  비전탄: {
+    amount: 1,
+    cost: 4,
+    name: '비전탄',
+    desc: `비용이 3 이상인 카드를 우선으로 버려진 덱에서 카드를 1장 회수하여 손으로 가져옵니다.
+    회수한 카드의 비용의 3배만큼 비전탄을 발사합니다. 비전탄 1개당 무작위 적에게 1단 피해를 입히고, 동시에 [인뢰]를 발동합니다.
+    [비전탄]은 [폭발물]입니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/b6/rx5cs6afc07kd9g71sk11mte5248w1x.png',
+  },
+
+  '도끼 투척': {
+    amount: 4,
+    cost: 2,
+    name: '도끼 투척',
+    desc: `도끼를 투척하여 적에게 2단 피해를 입히고 [열상]을 부여합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/ea/milcd5ltqq168kt5v0pmgv9k1l61511.png',
+  },
+  '도끼 회수': {
+    amount: 1,
+    cost: 3,
+    name: '도끼 회수',
+    desc: `버려진 덱에서 [도끼 투척]을 최대 3장 회수하여 손으로 가져옵니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/32/j3zoygii8yyfrxhvomz2tsp0gncf52q.png',
+  },
+  '부메랑 도끼': {
+    amount: 1,
+    cost: 3,
+    name: '부메랑 도끼',
+    desc: `손에 있는 카드를 최대 4장 버립니다. 카드를 1장 버릴 때마다 모든 적에게 4단 피해를 입히는 부메랑 도끼를 1자루 투척합니다. 이 카드는 사용 시 버려진 카드로 간주됩니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/35/sfsocm21fqip9xjus121u5bgae67jw9.png',
+  },
+
+  플럼프탄: {
+    amount: 2,
+    cost: 1,
+    name: '플럼프탄',
+    desc: `아군의 체력을 15% 회복합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a8/c5bz07a4xqu5y835jn9b6a0antdhaxb.png',
+  },
+  '긴급 대응': {
+    amount: 1,
+    cost: 2,
+    name: '긴급 대응',
+    desc: `[플럼프탄]의 비용이 1 감소하고 동시에 2장의 [플라워탄]을 덱에 추가합니다. 사용 후 [긴급 대응]은 [쾌속 장전]으로 전환됩니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e0/41urphscrk33f14l876tqgsbwlc8lod.png',
+  },
+  '쾌속 장전': {
+    amount: 0,
+    cost: 2,
+    name: '쾌속 장전',
+    desc: `[플럼프탄]과 [플라워탄]을 우선으로 카드를 2장 뽑습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/6c/tfxz4r0qdmunejpi6j1tgy7zw2l4nxx.png',
+    isGeneratedCard: true,
+  },
+  플라워탄: {
+    amount: 0,
+    cost: 3,
+    name: '플라워탄',
+    desc: `아군의 여성에게만 적용되는 특수 치유탄을 발사하여 대상의 체력을 35% 회복합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/c2/8ipts4mddfegd40i8i1jsujke5e6vd5.png',
+    isGeneratedCard: true,
+  },
+  '플라워 가든': {
+    amount: 1,
+    cost: 5,
+    name: '플라워 가든',
+    desc: `자신의 제외한 모든 여성 파티원의 체력을 25% 회복합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/1/1a/r8z3h64lyh5457ojagjvdlhsxq4x8bu.png',
+  },
+
+  스파크: {
+    amount: 3,
+    cost: 2,
+    name: '스파크',
+    desc: `무작위 적 3명에게 1단 피해를 입히고 동시에 [점화]를 발동합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/73/i154rjgyokkrpokee75w2i47zdrx3kf.png',
+  },
+  '원소핵-불': {
+    amount: 0,
+    cost: 0,
+    name: '원소핵-불',
+    desc: `대상에게 [점화]를 부여합니다.
+    아군에게 걸린 [냉동]을 제거합니다.
+    손에서 내면 [소각]됩니다.`,
+    isGeneratedCard: true,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/36/8lweotwckbwzd5gnuwcr4ryl4tz90jt.png',
+  },
+  '화염 신성': {
+    amount: 0,
+    cost: 2,
+    name: '화염 신성',
+    desc: `목표 구역을 향해 화염 신성을 1개 발사하여 범위 내의 적에게 1단 피해를 입히고 [붕괴]를 부여합니다. 동시에 [광염]을 발동합니다.
+    이 카드의 [광붕괴]:
+    손에 [신성]이 3장 있을 때 자동으로 [초신성]으로 융합됩니다.
+    [신성]/[원소 신성]/[초신성]은 [파]입니다.
+    사용 후 [소각]됩니다.`,
+    isGeneratedCard: true,
+    thumbnail:
+      'https://res.cloudinary.com/dqihpypxi/image/upload/v1741598272/resonance/skills/HuoYanXinXing_el0tt0.png',
+  },
+  기원: {
+    amount: 1,
+    cost: 3,
+    name: '기원',
+    desc: `모든 적에게 [점화]를 부여합니다.
+    동시에 즉시 [리더 스킬]을 활성화합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e2/tay8sfsenxesfw673m1ic2h5qh7n5mc.png',
+  },
+  휠윈드: {
+    amount: 1,
+    cost: 4,
+    name: '휠윈드',
+    desc: `토네이도를 시전하여 범위 내에 적에게 5단 피해를 입힙니다.
+    동시에 모든 적에게 걸린 [점화]를 흡수하여 흡수한 [점화] 수만큼 추가로 5단 피해를 입힙니다.
+    사용 후 [블랙카드] [잿더미]를 1장 생성하여 손으로 가져옵니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/5e/286eeamhh4nputp5jvn5xdy24yusu2i.png',
+  },
+  잿더미: {
+    amount: 0,
+    cost: 0,
+    name: '잿더미',
+    desc: `연소에 의해 생성된 잿더미입니다.
+    손에서 내면 [소각]됩니다.`,
+    isGeneratedCard: true,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/93/lzihx3ecq1k8qoibnvlouoy0qr4qmcl.png',
+  },
+
+  단비: {
+    amount: 2,
+    cost: 4,
+    name: '단비',
+    desc: `목표 구역에 [우견지술]을 시전하여 [작열]을 부여합니다. 매초 범위 내의 적에게 3단 피해를 입힙니다.(5초간 지속)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/65/sgkx2c7br3nc4w3noz2ina938ov6fsj.png',
+  },
+  봄꽃: {
+    amount: 2,
+    cost: 3,
+    name: '봄꽃',
+    desc: `목표 구역에 [화견지술]을 시전하여 매초 범위 내 아군의 체력을 5% 회복합니다.(5초간 지속)
+    사용 후 [봄꽃]은 [가을달]로 전환됩니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/7a/lsl739zd958ocaeio7gne6314z6h7qz.png',
+  },
+  가을달: {
+    amount: 0,
+    cost: 3,
+    name: '가을달',
+    desc: `목표 구역에 [월견지술]을 시전하며 초승달 [보호막] 1개를 부여하여 범위 내 아군이 받는 피해가 80% 감소합니다.(10초간 지속)
+    사용 후 [가을달]은 [봄꽃]으로 전환됩니다.`,
+    isGeneratedCard: true,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/af/3vg9r39m0r5afs5ag3bxiul0i00lor3.png',
+  },
+  '오의-유홍': {
+    amount: 1,
+    cost: 5,
+    name: '오의-유홍',
+    desc: `[오의-유홍]을 시전하여 버려진 덱에 있는 [레드카드]만큼 [도깨비불]을 생성하며 [도깨비불] 1개당 무작위 적에게 1단 피해를 입힙니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/ac/f2ck8foh84sr0vphfhomc7fnklht0vp.png',
+  },
 }

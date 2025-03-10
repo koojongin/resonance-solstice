@@ -385,7 +385,7 @@ export const CHARACTER_DETAIL: {
     SKILLS: ['피치', '블랙베리', '애플'],
     RESONANCES: {
       1: '체리 폭탄',
-      2: '인연',
+      2: '인연 - 아리나',
       3: '생기',
       4: '레드주스',
       5: '정열의 럼주',
@@ -506,7 +506,24 @@ export const CHARACTER_DETAIL: {
   DESIREE: {},
   LIN: {},
   NABI: {},
-  GANYA: {},
+  GANYA: {
+    SKILLS: ['도끼 투척', '도끼 회수', '부메랑 도끼'],
+    RESONANCES: {
+      1: '투척',
+      2: '진정',
+      3: '생기',
+      4: '엔지니어',
+      5: '포화 공격',
+    },
+    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    AWAKENING: {
+      1: '철혈',
+      2: '일고작기',
+      3: '투지',
+      4: '전술 회전',
+      5: '올인',
+    },
+  },
   YEJUE: {
     SKILLS: ['롤링 썬더', '플래시 코로나', '전광석화'],
     RESONANCES: {
@@ -599,8 +616,42 @@ export const CHARACTER_DETAIL: {
       5: '순환 - 리나 본',
     },
   },
-  VALENTINE: {},
-  YOIDUKI: {},
+  VALENTINE: {
+    SKILLS: ['스파크', '원소핵-불', '화염 신성', '기원', '휠윈드', '잿더미'],
+    RESONANCES: {
+      1: '잔화',
+      2: '방화',
+      3: '생기',
+      4: '인연 - 발렌타인',
+      5: '회오리 불',
+    },
+    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    AWAKENING: {
+      1: '불씨',
+      2: '희망',
+      3: '투지',
+      4: '협력',
+      5: '재연소',
+    },
+  },
+  YOIDUKI: {
+    SKILLS: ['단비', '봄꽃', '가을달', '오의-유홍'],
+    RESONANCES: {
+      1: '풍운',
+      2: '가려진 달',
+      3: '생기',
+      4: '발생',
+      5: '화천',
+    },
+    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    AWAKENING: {
+      1: '반항',
+      2: '화양연화',
+      3: '투지',
+      4: '결실',
+      5: '영상개화',
+    },
+  },
   AOBA: {
     SKILLS: ['부채술', '유세술', '오의-유풍'],
     RESONANCES: {
@@ -625,7 +676,23 @@ export const CHARACTER_DETAIL: {
   YAMAARASHI: {},
   EXCALIBUR_BOX: {},
   FLAN: {},
-  ELIOT: {},
+  ELIOT: {
+    SKILLS: ['치유탄', '폭염탄', '비전탄'],
+    RESONANCES: {
+      1: '추격',
+      2: '회심연사 - 엘리엇',
+      3: '생기',
+      4: '선택',
+    },
+    RESONANCE_UPGRADE_MATERIALS: RARE_RESONANCE_UPGRADE_MATERIALS,
+    AWAKENING: {
+      1: '비책',
+      2: '운수',
+      3: '투지',
+      4: '탄창 충전',
+      5: '팡류게임 마스터',
+    },
+  },
   HARUKA: {},
   ARCANA: {
     SKILLS: ['나비의 축복', '자연의 메아리', '태초의 꿈'],
@@ -650,7 +717,7 @@ export const CHARACTER_DETAIL: {
   SHIZURU: {
     SKILLS: ['쇼크탄', '강제 돌파', '강습 지령'],
     RESONANCES: {
-      1: '아드레날린',
+      1: '아드레날린 - 시즈루',
       2: '예비탄',
       3: '생기',
       4: '폭탄 장전',
@@ -682,7 +749,23 @@ export const CHARACTER_DETAIL: {
     },
   },
   JULIAN: {},
-  KAREN: {},
+  KAREN: {
+    SKILLS: ['플럼프탄', '긴급 대응', '쾌속 장전', '플라워탄', '플라워 가든'],
+    RESONANCES: {
+      1: '아드레날린 - 카렌',
+      2: '회심연사 - 카렌',
+      3: '생기',
+      4: '특효약',
+    },
+    RESONANCE_UPGRADE_MATERIALS: RARE_RESONANCE_UPGRADE_MATERIALS,
+    AWAKENING: {
+      1: '응원',
+      2: '추가 탄창',
+      3: '투지',
+      4: '활력 장전',
+      5: '경화 장전',
+    },
+  },
   JERBOA: {},
   SOLUM: {},
   BOX: {},
