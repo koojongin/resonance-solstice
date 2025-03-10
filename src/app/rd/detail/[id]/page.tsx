@@ -336,8 +336,8 @@ export default function RecommendationDeckDetailPage() {
                       <div className="flex flex-wrap items-center gap-[2px] ff-dh text-[20px]">
                         <span>프리셋 미리보기</span>
                         <span className="ff-dh text-[16px] text-red-400">
-                          * 오토 프리셋 코드가, 코드를 복사해서 넣으면 아래 세팅으로 자동
-                          적용됩니다.
+                          * 오토 프리셋 코드가 있다면, 코드를 복사후 인게임 [자동전투 설정]을 하면
+                          자동 적용됩니다.
                         </span>
                       </div>
                       <div className="flex flex-wrap gap-[6px] justify-center border border-gray-300 rounded p-[4px]">
