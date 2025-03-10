@@ -812,6 +812,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   {
     id: '39',
     title: '조리수베마',
+    leaderName: JOSHUA.name,
     characters: [
       { character: MARGIELA },
       { character: VERLAINE },
@@ -832,6 +833,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   {
     id: '40',
     title: '조카스카시',
+    leaderName: JOSHUA.name,
     characters: [
       { character: KATAS },
       { character: STELLA },
