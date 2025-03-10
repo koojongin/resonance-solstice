@@ -1,5 +1,6 @@
 import { RS_COLUMN, RS_FACTION, RS_GENDER, RS_GRADE } from '@/const/character/character.enum'
 import { EngineCore, RSCharacter } from '@/const/character/character.interface'
+import _ from 'lodash'
 
 export const LYCAGIA: RSCharacter = {
   cores: [],
@@ -918,3 +919,5 @@ export const RS_CHARACTERS: RSCharacter[] = [
   SOLUM,
   BOX,
 ]
+
+export const RS_CHARACTER_DICT = _.keyBy(RS_CHARACTERS, 'originName')

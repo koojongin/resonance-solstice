@@ -52,6 +52,7 @@ export interface RecommendationDeck {
   owner?: ExternalUser
 
   autoPreset?: string
+  autoPresetPreviews?: string[]
 }
 
 export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
@@ -828,6 +829,35 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     descLink: 'https://arca.live/b/resonance/130145554',
     autoPreset:
       'xVdLj5swEP4vPlPJbwPXniJtH1J7q3pAxe2izSYpJGqrKP+9NpuYGRPhELRabiM8M59nvnn4SH5Ubf3QdHtSfjuS7qlZr1eb2v4lpcjI9s/GtqualIz6T7CMHDr7uWqrZ1K+c9K+an/Z/dd/O0tKmp3V3XnCuHAKhpOMNL1MNaW8kKS38KLg9O3vQ7NbXfx/P2XH2CSGIPJipBRjCiB6DMKDHiCwvIggXJQ/VLsLhLuv7T0yzRT0KLRJXxp7NKKY5ZH588CjEK/uUVLs8YbELr2jwR7ZXI8z80g1Qx5ZwdMeYf3w5fWjNK6ffH79RCYlO/N/4PyRCFJqdcqmq18oDtFrRHLOEeXEXcjMVWQxMJYAFuHSSyNmuLyKq6ApYFRJCKxAJUOlSkdskk4zKqi/CVNUIjoJ9epVK3PUfbmZn44opnSsND0AJEdx5zou4/QAoPMah+EaV+0NjWOZR50LHGY6r1WNqTu/Valo1N8wgyYhzKU3VQzTm6n8DbYNireNGMK4j9BTstKjDpcOhe53DtgGFw8OZ+ZqG0x2wT6IGDwIkFk8VHGTTcfGcMxUKhePCMGvD1XjjkpSyuRoxSGSKHWYxTIZoZH1OwopWjvwqEonafxymJskqgROkroBwrRJXoz2C1/N04U3yd3ihi67dOnN8dKbqhZ3oaZ7sFVt2/fuXfdpQ8p9e7AZqZvOP/SC4mN/Bnb7J2t3Xufj4blH4o+v6jOZw/T2uoEUQfDbeBB8roZjbtx60oZ2OPxxy+wgcGCaQtN+eg6CG2zAKTDACtajDu0OWIOo3VgadNxbECAQ8Bg0rSBqKPh8AAGaNhxiQwK8ggJ+/EOxZK5XtNu1PWc0pCeUUeBRIOhlRLjcb/ePL4nvY9F0X3YXFvys1p09/Qc=',
+    autoPresetPreviews: [
+      '예고',
+      '방열',
+      '계시',
+      '마력샘',
+      '별의 꿈',
+      '공포의 밤',
+      '검은 물결',
+      '지식',
+      '정화',
+      '복음',
+      '섭취',
+      '드림 파인더',
+      '드림 메이커',
+      '다크 아트',
+      '신성',
+      '기이한 불꽃',
+      '우매',
+      '스타 아크',
+      '반전',
+      '형벌',
+      '흡수',
+      '금단의 열매',
+      '디펜스 트리거',
+      '드림 이터',
+      '무한 코어',
+      '반사',
+      '진혼가',
+    ],
   },
 
   {
