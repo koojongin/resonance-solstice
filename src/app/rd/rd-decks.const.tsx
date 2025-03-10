@@ -70,7 +70,23 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: RINA_F },
       { character: KALEYA },
     ],
-    desc: '장점 : 싸고 맞추기 쉬움\n단점 : 싼마이인 만큼 화력이 비교적 딸림',
+    desc: (
+      <div>
+        <div>
+          장점 : 싸고 맞추기 쉬움
+          <br />
+          단점 : 싼마이인 만큼 화력이 비교적 딸림
+        </div>
+        <iframe
+          className="aspect-[10/5] w-full border-none"
+          src="https://www.youtube.com/embed/pYs-mFzGZ58?si=Gb_dGdkCFkmniz-g"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        />
+      </div>
+    ),
     descLink: 'https://arca.live/b/resonance/128678257',
     owner: EXTERNAL_USERS['1'],
   },
@@ -86,7 +102,22 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: RINA_F },
       { character: KALEYA },
     ],
-    desc: '장점 : 덱순환이 빨리 딜이 쎔\n단점 : 안정성을 포기함',
+    desc: (
+      <div>
+        <div>
+          장점 : 덱순환이 빨리 딜이 쎔<br />
+          단점 : 안정성을 포기함
+        </div>
+        <iframe
+          className="aspect-[10/5] w-full border-none"
+          src="https://www.youtube.com/embed/pYs-mFzGZ58?si=Gb_dGdkCFkmniz-g"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        />
+      </div>
+    ),
     descLink: 'https://arca.live/b/resonance/128678257',
     owner: EXTERNAL_USERS['1'],
   },
@@ -134,7 +165,22 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: ARCANA },
       { character: VALENTINE },
     ],
-    desc: '장점 : [카타스]만 있으면 됨, 쌈\n단점 : 다른 화염덱으로 파생이 어려움',
+    desc: (
+      <div>
+        <div>
+          장점 : [카타스]만 있으면 됨, 쌈<br />
+          단점 : 다른 화염덱으로 파생이 어려움
+        </div>
+        <iframe
+          className="aspect-[10/5] w-full border-none"
+          src="https://www.youtube.com/embed/9EeAMWtm7vk?si=TwikRYhIR8m5N8YW"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        />
+      </div>
+    ),
     descLink: 'https://arca.live/b/resonance/128678257',
     owner: EXTERNAL_USERS['1'],
   },
@@ -181,7 +227,19 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
         equipments: ['불꽃 침식자', '시뮬레이트 스타', '춘추합성인장'],
       },
     ],
-    desc: '-',
+    desc: (
+      <div>
+        <div className="text-red-500 ff-dh text-[20px]">최소 각성: 아오바★★</div>
+        <div className="text-blue-500 ff-dh text-[20px]">
+          권장 각성: 카리야★, 발렌타인★★★★★, 리나 본★★★★★
+        </div>
+        장비에 대한 수요는 그렇게 높지 않습니다.
+        <br />
+        그저 생존을 보장하기 위해 레벨을 높이려고 노력하세요.
+        <br />꼭 그래야 한다면 [아니타 탐색 장비함]에서 아니타 장비 전용 옵션인 [리더 스킬사용 시
+        코스트 회복]을 파밍해서 사이클을 도울 수 있습니다.
+      </div>
+    ),
     descLink:
       'https://wiki.biligame.com/resonance/%E5%8D%95%E9%87%91%E7%81%AB%E6%A0%B8%EF%BC%9A%E9%82%A3%E7%94%B1%E4%BB%96',
     autoPreset:
@@ -199,7 +257,23 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       { character: TENNIE },
       { character: NAYUTA },
     ],
-    desc: '해당 덱은 모든 캐릭터의 모든 장비와 옵션작이 되어 있는 상태이므로\n현재 실현 가능성이 매우 낮음',
+    desc: (
+      <div>
+        <div>
+          해당 덱은 모든 캐릭터의 모든 장비와 옵션작이 되어 있는 상태이므로
+          <br />
+          현재 실현 가능성이 매우 낮음
+        </div>
+        <iframe
+          className="aspect-[10/5] w-full border-none"
+          src="https://www.youtube.com/embed/5cghkdUR9mc?si=YtH3N5-uL32FBTdK"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        />
+      </div>
+    ),
     descLink: 'https://arca.live/b/resonance/129033582',
     owner: EXTERNAL_USERS['1'],
     autoPreset:
