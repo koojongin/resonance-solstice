@@ -1553,47 +1553,69 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
         equipments: ['비트레이얼', '시뮬레이트 스타', '춘추합성인장'],
       },
     ],
-    desc: `<div className='flex flex-col gap-[4px]'>
-    <div className='ff-dh text-[20px] text-red-400'>최소 요구 각성: 아오바★★</div>
-    <div className='ff-dh text-[20px] text-blue-400'>권장 요구 각성: 아오바★★★★★, 조슈아★★★★★, 리나 본★★★★★</div>
-    <div className='text-[20px] mt-[20px]'>추천 장비 옵션</div>
-    <div className='flex flex-wrap gap-[4px]'>
-    <span className='border border-blue-gray-400 rounded px-[4px]'>[리더 스킬]사용 시 공격력 증가</span>
-    <span className='border border-blue-gray-400 rounded px-[4px]'>[레드카드] 사용할 때마다 공격력 +% 증가</span>
-    <span className='border border-blue-gray-400 rounded px-[4px]'>모든 확률형 메커니즘 발동확률 +% 증가</span>
-    <span className='border border-blue-gray-400 rounded px-[4px]'>카드를 1장 버릴 때마다 체력 +% 증가</span>
-    </div>
-    
-    <div className='text-[20px] mt-[20px]'>초반 저레벨 장비 대안</div>
-    <div className='flex flex-wrap gap-[4px]'>
-    <div className='flex flex-wrap gap-[4px] items-center justify-start border border-blue-gray-800 p-[4px]'>
-    [나유타][에비서레이터MK0][뫼비우스]
-    </div>
-    <div className='flex flex-wrap gap-[4px] items-center justify-start border border-blue-gray-800 p-[4px]'>
-    [아오바][에비서레이터MK0][해리슨 장치]
-    </div>
-    <div className='flex flex-wrap gap-[4px] items-center justify-start border border-blue-gray-800 p-[4px]'>
-    [조슈아][뫼비우스]
-    </div>
-    <div className='flex flex-wrap gap-[4px] items-center justify-start border border-blue-gray-800 p-[4px]'>
-    [리나 본][에비서레이터MK0]
-    </div>
-    <div className='flex flex-wrap gap-[4px] items-center justify-start border border-blue-gray-800 p-[4px]'>
-    [테니][에비서레이터MK0]
-    </div>
-    </div>
-    
-    <div className='mt-[20px]'>생존을 극한으로 끌어올린 조합입니다.
-    하드 콘텐츠와 장기전에 사용됩니다.
-    일반적인 전투에는 비추천합니다.
-    [비트레이얼]은 필수는 아니지만, 많을수록 [다크 아트]가 더 빨리 등장합니다.
-    
-    덱풀이 적을때는 [다크 아트] 순환을 위해 [아리나]를 채용할 순 있지만, 하드 컨텐츠로 갈수록 전투 압박이 심해지고 보스의 데미지도 높아져 체력이 가득 찬 상태에서도 즉사할 수 있습니다.
-    [아리나]의 회복도 효과를 보기 힘들기 때문에 그 시점에는 치유,방어 계열의 버프가 많은 조합으로 변경하는 것이 좋습니다.
-    </div>
-    </div>
-    <iframe className='aspect-[10/4] w-full' src='//player.bilibili.com/player.html?autoplay=0&isOutside=true&aid=1406330490&bvid=BV18r421M75c&cid=1629175623&p=1' scrolling='no' border='0' frameborder='no' framespacing='0' allowfullscreen='true'></iframe>
-    `,
+    desc: (
+      <div>
+        <div className="flex flex-col gap-[4px]">
+          <div className="ff-dh text-[20px] text-red-400">최소 요구 각성: 아오바★★</div>
+          <div className="ff-dh text-[20px] text-blue-400">
+            권장 요구 각성: 아오바★★★★★, 조슈아★★★★★, 리나 본★★★★★
+          </div>
+          <div className="text-[20px] mt-[20px]">추천 장비 옵션</div>
+          <div className="flex flex-wrap gap-[4px]">
+            <span className="border border-blue-gray-400 rounded px-[4px]">
+              [리더 스킬]사용 시 공격력 증가
+            </span>
+            <span className="border border-blue-gray-400 rounded px-[4px]">
+              [레드카드] 사용할 때마다 공격력 +% 증가
+            </span>
+            <span className="border border-blue-gray-400 rounded px-[4px]">
+              모든 확률형 메커니즘 발동확률 +% 증가
+            </span>
+            <span className="border border-blue-gray-400 rounded px-[4px]">
+              카드를 1장 버릴 때마다 체력 +% 증가
+            </span>
+          </div>
+
+          <div className="text-[20px] mt-[20px]">초반 저레벨 장비 대안</div>
+          <div className="flex flex-col gap-[4px]">
+            <div className="flex gap-[4px] items-center justify-start">
+              <div className="flex min-w-[70px]">[나유타]</div>
+              <div>[에비서레이터MK0][뫼비우스]</div>
+            </div>
+            <div className="flex gap-[4px] items-center justify-start">
+              <div className="flex min-w-[70px]">[아오바]</div>
+              <div>[에비서레이터MK0][해리슨 장치]</div>
+            </div>
+            <div className="flex gap-[4px] items-center justify-start">
+              <div className="flex min-w-[70px]">[조슈아]</div>
+              <div>[뫼비우스]</div>
+            </div>
+            <div className="flex gap-[4px] items-center justify-start">
+              <div className="flex min-w-[70px]">[리나 본]</div>
+              <div>[에비서레이터MK0]</div>
+            </div>
+            <div className="flex gap-[4px] items-center justify-start">
+              <div className="flex min-w-[70px]">[테니]</div>
+              <div>[에비서레이터MK0]</div>
+            </div>
+          </div>
+
+          <div className="mt-[20px]">
+            생존을 극한으로 끌어올린 조합입니다. 하드 콘텐츠와 장기전에 사용됩니다. 일반적인
+            전투에는 비추천합니다. [비트레이얼]은 필수는 아니지만, 많을수록 [다크 아트]가 더 빨리
+            등장합니다. 덱풀이 적을때는 [다크 아트] 순환을 위해 [아리나]를 채용할 순 있지만, 하드
+            컨텐츠로 갈수록 전투 압박이 심해지고 보스의 데미지도 높아져 체력이 가득 찬 상태에서도
+            즉사할 수 있습니다. [아리나]의 회복도 효과를 보기 힘들기 때문에 그 시점에는 치유,방어
+            계열의 버프가 많은 조합으로 변경하는 것이 좋습니다.
+          </div>
+        </div>
+        <iframe
+          className="aspect-[10/5] w-full border-0"
+          src="//player.bilibili.com/player.html?autoplay=0&isOutside=true&aid=1406330490&bvid=BV18r421M75c&cid=1629175623&p=1"
+          allowFullScreen
+        />
+      </div>
+    ),
     descLink:
       'https://wiki.biligame.com/resonance/%E7%88%AC%E5%A1%94-%E6%B4%97%E7%89%8C%E6%9A%97%E8%89%BA',
     autoPreset:

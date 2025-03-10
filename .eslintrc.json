@@ -63,6 +63,7 @@
     "import/no-extraneous-dependencies": "off",
     "jsx-a11y/control-has-associated-label": "off",
     "@typescript-eslint/no-explicit-any": "off",
+    "jsx-a11y/iframe-has-title": "off",
     "react/jsx-filename-extension": [
       "warn",
       {
