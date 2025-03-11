@@ -832,4 +832,86 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/e/eb/ddvwtrpa1gabw9byo13bwel50dxejuw.png',
   },
+
+  암살술: {
+    name: '암살술',
+    desc: `자신이 [은신]할 때마다 공격력이 3% 증가합니다.(최대 60%)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/44/7i168thrxqdtvqm1stto640dqqxtbb5.png',
+  },
+  '소소한 마음': {
+    name: '소소한 마음',
+    desc: `[리더 스킬] 혹은 필살기 카드를 사용할 때 즉시 [변화무상]을 1장 냅니다.
+    [변화무상]을 손에서 내면 사용된 것으로 간주합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a6/nyc7kqynwhjfspxgeo984rcia6fr9k4.png',
+  },
+  중생팔고: {
+    name: '중생팔고',
+    desc: `[무상]이 33% 확률로 적에게 랜덤으로 1종의 [팔고] 상태를 부여합니다.
+    1종의 상태가 존재할 때마다 [무상-전륜]의 피해가 12% 증가합니다.
+    [팔고] 생고/노고/병고/사고/애별리고/원증회고/구부득고/오음성고`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/1/11/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  샤이닝: {
+    name: '샤이닝',
+    desc: `자신이 [은신] 상태일 때 입히는 최종 피해가 20% 증가합니다.
+    동시에 자신이 힙히는 [열상]/[참열]의 피해가 2배로 증가합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/d4/4cpyp813xfq011ikwc9nesgaxmb931l.png',
+  },
+
+  폭발객: {
+    name: '폭발객',
+    desc: `자신의 [폭발물]이 폭발할 때마다 자신의 공격력이 0.5% 증가합니다.(중첩 가능, 최대 60%)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/db/be5toh76j2lc6faeopa0xiuvtk3gh1p.png',
+  },
+  다발장전: {
+    name: '다발장전',
+    desc: `자신의 [폭발물]이 무작위로 [낙뢰]/[점화]/[냉동]을 발동합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/c7/c2ywjclscnq2nevmgb8xtq4ajsudh0r.png',
+  },
+  '연쇄폭발 반응': {
+    name: '연쇄폭발 반응',
+    desc: `[연쇄 폭발 지뢰]가 폭발 시 33% 확률로 피해가 2배로 증가합니다.
+    해당 효과 발동 시 33% 확률로 [다발장전]이 발동하는 효과가 [우레]/[작열]/[동결]로 업그레이드 됩니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e8/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  '폭발의 예술': {
+    name: '폭발의 예술',
+    desc: `모든 [폭발물]의 피해량을 20% 증가시킵니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/aa/7qyi8f7zouvv7h1ftok5vus792qhzn0.png',
+  },
+
+  해결사: {
+    name: '해결사',
+    desc: `체력이 30% 미만인 적에게 입히는 최종 피해가 50% 증가합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/94/4nu2htpnehqit5g5y3gyp6yikb00ini.png',
+  },
+  피투성이: {
+    name: '피투성이',
+    desc: `[다크 아트] 사용 후 다음 내는 자신의 [레드카드]의 피해가 39% 증가합니다.(중첩 가능)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/31/1zndtkvu6tve2uhtcyhgycz02o3b8sd.png',
+  },
+  추적: {
+    name: '추적',
+    desc: `[탐사] 사용 후 현재 손패 수와 비용 수에 비례하여 자신을 강화합니다.
+    손패 1장당 모든 아군의 공격력이 0.5% 증가합니다.(최대 30%)
+    비용 1당 모든 아군의 방어력이 0.5% 증가합니다.(최대 30%)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/d2/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  혈제: {
+    name: '혈제',
+    desc: `[유성]의 여진으로 발생하는 진동파의 피해가 2배로 증가합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e8/3txly6ibjgy3kvx33078do2yrlp0ymr.png',
+  },
 }

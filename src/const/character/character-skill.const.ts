@@ -1415,4 +1415,117 @@ export const CHARACTER_SKILLS: {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/a/ac/f2ck8foh84sr0vphfhomc7fnklht0vp.png',
   },
+
+  변화무상: {
+    amount: 3,
+    cost: 2,
+    name: '변화무상',
+    desc: `무작위로 아래 3종 암살 무기 중 하나를 시전합니다.
+    목비류-암살 무기 [배꽃], 적에게 12단 피해를 입히고 [화상]/[열상]을 발동합니다.
+    몽현류-암살 무기 [찰풍], 무작위 적 3명에게 1단 피해를 입히고 [화상]/[참열]을 발동합니다.
+    환우류-암살 무기 [흑사의 깃], 적에게 6단 피해를 입히고 [화상]/[점화]를 발동합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/fb/asifeitzn8gh8iskt0kprh72v2lskaw.png',
+  },
+  개안: {
+    amount: 2,
+    cost: 2,
+    name: '개안',
+    desc: `적 필드에 [광염]을 발동하고, 동시에 모든 적에게 [혼란]을 부여합니다.
+    덱의 맨 위에서부터 카드를 3장 확인한 후 1장 선택하여 손으로 가져오고 남은 카드는 덱에 다시 돌려놓습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/b3/33rst1hlt4ks86m2ftegkiagxkdnjgy.png',
+  },
+  '무상-전륜': {
+    amount: 1,
+    cost: 5,
+    name: '무상-전륜',
+    desc: `오의 [무상-전륜]을 시전하여 모든 적에게 10단 피해를 입히고 동시에 [열상]/[광염]/[족쇄]/[속박]을 1회 발동합니다.
+    동시에 1단 피해를 입힐 때마다 50% 확률로 [참열] 혹은 [화상]을 발동합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/f7/id94xlfjcznlsievft0526bsu2a15tm.png',
+  },
+
+  '조준 폭탄': {
+    amount: 3,
+    cost: 3,
+    name: '조준 폭탄',
+    desc: `1개의 [조준 폭탄]을 적에게 투척하고 [범위 조준]을 발동합니다.
+    [조준 폭탄]은 [폭발물]로 3초뒤에 폭발하여 범위 내의 적에게 3안 피해를 입힙니다.
+    [조준 폭탄]은 착지 후 1개의 [연쇄 폭발 지뢰]를 설치합니다.
+    [범위 조준]은 [일반공격]의 공격 대상을 새로운 목표 구역으로 변경합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/77/86vza0ncdt67r2susqe53avuo0t7ekl.png',
+  },
+  'Bingo!': {
+    amount: 1,
+    cost: 3,
+    name: 'Bingo!',
+    desc: `손에 있는 카드의 수만큼 [연쇄 폭발 지뢰]를 적에게 투척합니다.
+    [연쇄 폭발 지뢰]는 [폭발물]로 근처에 폭발이 일어날 때 폭발합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/c4/pz6vy5yb3l4a1j0vj71gduxhcqhca9u.png',
+  },
+  대폭주: {
+    amount: 1,
+    cost: 5,
+    name: '대폭주',
+    desc: `[레드카드]를 우선으로 카드를 3장 뽑습니다.
+    뽑은 카드의 비용을 합한만큼 [연쇄 폭발 지뢰]를 투척합니다.
+    [연쇄 폭발 지뢰]는 [폭발물]로 근처에 폭발이 일어날 때 폭발합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/b1/jmj81ivgrvn132nwbwuifo2i8oil5iy.png',
+  },
+
+  모색: {
+    amount: 2,
+    cost: 0,
+    name: '모색',
+    desc: `[무궁무진] 1장과 [과욕] 1장을 생성하여 손으로 가져옵니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/f7/ah25muood6fdewfgnhxy2hk5qg19cap.png',
+  },
+  무궁무진: {
+    amount: 0,
+    cost: 3,
+    name: '무궁무진',
+    desc: `[포말하우트]로 적을 힘껏 내리쳐 적에게 1단 피해를 입히고 [기절]시킵니다.
+    적의 체력이 50% 이상이라면 [다크 아트]를 1장 생성하여 손으로 가져옵니다.
+    이 카드가 다른 카드 효과로 인해 버려질 경우 [다크 아트]를 1장 생성하여 손으로 가져옵니다.
+    손에서 내면 [소각]됩니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/af/om2yslad554afo1i3axnnu9ed5d9ycz.png',
+    isGeneratedCard: true,
+  },
+  '끝없는 욕망': {
+    amount: 0,
+    cost: 3,
+    name: '끝없는 욕망',
+    desc: `[포말하우트]를 휘둘러 범위 내의 적에게 1단 피해를 입히고 [붕괴]를 부여합니다.
+    동시에 손에 있는 무작위 카드 1장을 버립니다. [무궁무진] 카드가 있다면 우선으로 버립니다. 동시에 [다크 아트]를 1장 생성하여 손으로 가져옵니다.
+    사용 후 [소각]됩니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/76/m7mavwlgn207bz15tuje7hhldr682em.png',
+    isGeneratedCard: true,
+  },
+  탐사: {
+    amount: 1,
+    cost: 3,
+    name: '탐사',
+    desc: `카드를 1장 뽑습니다.
+    [레드카드] 혹은 [퍼플카드]라면 비용을 6 얻습니다.
+    아닐 경우 모든 아군이 [철벽 실드]를 3초간 얻습니다. 손에 있는 카드 1장당 [철벽 실드]의 지속 시간이 0.5초 증가합니다. 동시에 [다크 아트]를 생성하여 손으로 가져옵니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/1/10/o9w29x3ep4borofg5lp4duyjp59ru74.png',
+  },
+  유성: {
+    amount: 1,
+    cost: 5,
+    name: '유성',
+    desc: `[포말하우트]로 힘껏 내리쳐 지진을 일으킵니다. 모든 적에게 7단 피해를 입히고 [기절]시키며, 동시에 [붕괴]와 [격파]를 부여합니다.
+    손에 있는 카드수만큼 진동파를 발사하여 지진파 1개당 모든 적에게 1단 피해를 입힙니다.
+    진동파는 [파]입니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/1/15/0e7gpi889pd6vua0qr4l4lto8436wp7.png',
+  },
 }

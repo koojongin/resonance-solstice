@@ -112,7 +112,24 @@ export const CHARACTER_DETAIL: {
   RAZIEL: {},
   SHIRE: {},
   PELOTA: {},
-  DOROTHY: {},
+  DOROTHY: {
+    SKILLS: ['조준 폭탄', 'Bingo!', '대폭주'],
+    RESONANCES: {
+      1: '선물!',
+      2: '서프라이즈!',
+      3: '생기',
+      4: '스텔스 폭탄',
+      5: '폭탄아, 안녕!',
+    },
+    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    AWAKENING: {
+      1: '폭발객',
+      2: '다발장전',
+      3: '투지',
+      4: '연쇄폭발 반응',
+      5: '폭발의 예술',
+    },
+  },
   JOSHUA: {
     SKILLS: ['우매', '음에너지', '지식', '검은 물결', '예고', '계시', '다크 아트'],
     RESONANCES: {
@@ -212,11 +229,45 @@ export const CHARACTER_DETAIL: {
       5: '독단 행동',
     },
   },
-  HAYABUSA: {},
+  HAYABUSA: {
+    SKILLS: ['변화무상', '개안', '무상-전륜'],
+    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCES: {
+      1: '무영',
+      2: '무형',
+      3: '생기',
+      4: '호시탐탐',
+      5: '심안',
+    },
+    AWAKENING: {
+      1: '암살술',
+      2: '소소한 마음',
+      3: '투지',
+      4: '중생팔고',
+      5: '샤이닝',
+    },
+  },
   JALHAY: {},
   ITHOS: {},
   IKUMA: {},
-  LISSANDRA: {},
+  LISSANDRA: {
+    SKILLS: ['모색', '무궁무진', '끝없는 욕망', '다크 아트', '탐사', '유성'],
+    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCES: {
+      1: '수혈',
+      2: '기백',
+      3: '생기',
+      4: '냉혈',
+      5: '선택 - 리산드라',
+    },
+    AWAKENING: {
+      1: '해결사',
+      2: '피투성이',
+      3: '투지',
+      4: '추적',
+      5: '혈제',
+    },
+  },
   MUMEI: {},
   PALADI: {},
   CONNOR: {
@@ -682,7 +733,7 @@ export const CHARACTER_DETAIL: {
       1: '추격',
       2: '회심연사 - 엘리엇',
       3: '생기',
-      4: '선택',
+      4: '선택 - 엘리엇',
     },
     RESONANCE_UPGRADE_MATERIALS: RARE_RESONANCE_UPGRADE_MATERIALS,
     AWAKENING: {

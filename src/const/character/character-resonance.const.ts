@@ -767,8 +767,8 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/8/8b/jjh9dvgo35hmc9voxosha5i65wa6rha.png',
   },
-  선택: {
-    name: '선택',
+  '선택 - 엘리엇': {
+    name: '선택 - 엘리엇',
     desc: `[버리기] 명령으로 카드를 버릴 때마다 버려진 덱에서 [치유탄]을 1장 회수하여 손으로 가져옵니다.`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/6/62/cmo6bwo1eylm30m8kgopyon3es5plck.png',
@@ -876,5 +876,82 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     동시에 [점화]를 발동합니다.`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/4/4b/ht20za151r5u0ax92u5p9kebnzbark7.png',
+  },
+
+  무영: {
+    name: '무영',
+    desc: `자신의 스킬 카드를 사용할 때마다 3초간 [은신]합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/60/hus7ub64y7tueuur1sm210adama36xc.png',
+  },
+  무형: {
+    name: '무형',
+    desc: `[은신]의 지속 시간이 2초 증가합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/8b/qyarwge42gga0xczet2c7k9tr7owmg2.png',
+  },
+  호시탐탐: {
+    name: '호시탐탐',
+    desc: `자신이 [은신]할 때마다 비용을 1 얻습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/88/2y38tllmxvublr3wqknhb41693400rb.png',
+  },
+  심안: {
+    name: '심안',
+    desc: `하야부사의 [일반공격]과 [변화무상]에 [튕김] 효과가 추가됩니다.
+    동시에 [화상]/[점화] 상태의 적이 받는 [열상]/[참열] 피해가 100% 증가합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e6/9fwyv61fwtcpd350n2srh3dy3noufdd.png',
+  },
+
+  '선물!': {
+    name: '선물!',
+    desc: `1웨이브의 적을 만날때 마다 [Bingo!]를 1회 시전합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/23/6yysxhnxetq3zibeyqk3rv9psvfi7ey.png',
+  },
+  '서프라이즈!': {
+    name: '서프라이즈!',
+    desc: `[조준 폭탄] 사용 후 30% 확률로 덱 혹은 버려진 덱에서 [Bingo!]를 1장 뽑아 손으로 가져오며, 그 카드의 비용이 0이 됩니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/76/g15uaklb3xfimb5y5gkkpn9ps3vzzl7.png',
+  },
+  '스텔스 폭탄': {
+    name: '스텔스 폭탄',
+    desc: `[조준 폭탄]이 버려진 덱으로 버려질 때 사용한 것으로 간주합니다.
+    [조준 폭탄]을 정상적으로 사용 시 [버리기] 명령의 쿨타임이 5초 감소됩니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a6/tbh1071si315vvw554o0jkleanuoee2.png',
+  },
+  '폭탄아, 안녕!': {
+    name: '폭탄아, 안녕!',
+    desc: `[버리기] 명령을 사용하여 카드를 버릴 때 버려진 카드의 수만큼 [연쇄 폭발 지뢰]를 적 구역으로 던집니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/8b/c5iarq5l0pw2r1o5jyszb8do2x7z0hh.png',
+  },
+
+  수혈: {
+    name: '수혈',
+    desc: `자신이 입힌 피해의 13%만큼 자신의 체력을 회복합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a1/f07eem07ylmkhue5hub1a5krioub28a.png',
+  },
+  기백: {
+    name: '기백',
+    desc: `자신의 스킬 카드 사용시 [슈퍼아머]를 2초간 얻습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/d8/9z2qb8bma12qa29c8bkesyux5kfprwo.png',
+  },
+  냉혈: {
+    name: '냉혈',
+    desc: `자신의 공격력이 초당 0.5% 증가합니다.(최대 50%)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/aa/8ksaa4q3mxextvee2fsj6vazbfc92eu.png',
+  },
+  '선택 - 리산드라': {
+    name: '선택 - 리산드라',
+    desc: `[무궁무진] 혹은 [과욕] 사용 후 다음 내는 [다크 아트]가 비용을 소모하지 않습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/b4/qa6h73yv40chgj05c5sxufuoyfi87ao.png',
   },
 }

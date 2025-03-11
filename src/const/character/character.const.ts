@@ -31,7 +31,7 @@ export const RAZIEL: RSCharacter = {
 export const RAZIEL_THE_REMINISCE: RSCharacter = {
   cores: [EngineCore.IGNITE],
   originName: 'RAZIEL_THE_REMINISCE',
-  name: '라지엘-추억',
+  name: '라지엘 - 회상',
   faction: RS_FACTION.SOURCE_CITADEL,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.BACK,
@@ -116,7 +116,7 @@ export const USHANA: RSCharacter = {
 export const SUMMERSHIZURU: RSCharacter = {
   cores: [EngineCore.IGNITE, EngineCore.FREEZING],
   originName: 'SUMMERSHIZURU',
-  name: 'SummerShizuru',
+  name: '시즈루 - 여름 바캉스',
   faction: RS_FACTION.RAILWAY,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.BACK,
@@ -176,7 +176,7 @@ export const HAYABUSA: RSCharacter = {
 export const JALHAY: RSCharacter = {
   cores: [],
   originName: 'JALHAY',
-  name: 'Jalhay',
+  name: '아일리',
   faction: RS_FACTION.SOURCE_CITADEL,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.BACK,
