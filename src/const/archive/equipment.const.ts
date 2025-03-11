@@ -3325,7 +3325,7 @@ const DEFAULT_ALL_EQUIPMENTS: {
   '인과 초월의 주사위': {
     type: RSEquipmentType.ACCESSORY,
     grade: RS_GRADE.UR,
-    desc: '기본 속성: 체력+4585\n옵션: 모든 팀원이 모든 확률 메커니즘을 발동할 확률 +3%, 중첩가능',
+    desc: '기본 속성: 체력+4585\n옵션: 모든 아군의 확률형 메커니즘 발동 확률이 3% 증가합니다.(중첩 가능)',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/d/dd/a8jqvtha6mao3msc4nj1pqm2khvdzzw.png',
     faction: RS_FACTION.SOURCE_CITADEL,

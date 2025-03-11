@@ -14,7 +14,7 @@ export const DEFAULT_EQUIPMENT_TIER_LIST_DATA: {
       '여명의 옥새',
       '공간 위치 측정기',
       '미초용작',
-      '자곡몽 섬유',
+      '자각몽 섬유',
       '공간이동',
       '비트레이얼',
     ],

@@ -1,26 +1,40 @@
 'use client'
 
 import createKey from '@/services/key-generator'
-import { ALL_EQUIPMENTS } from '@/const/archive/equipment.const'
+import { ALL_EQUIPMENTS, SORTED_ALL_EQUIPMENTS } from '@/const/archive/equipment.const'
 import { EquipmentBox } from '@/app/equipments/rs-equipment-list'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Tooltip } from '@material-tailwind/react'
 import { EquipmentTooltipContent } from '@/app/components/deck/equipment-tooltip-box'
 import { EXTERNAL_USERS } from '@/const/external-users'
 import { GradientButton } from '@/app/components/button/gradient-button'
-import { debounce } from 'lodash'
+import _, { debounce } from 'lodash'
 import { DEFAULT_EQUIPMENT_TIER_LIST_DATA } from '@/const/equipment-tier-list-data.const'
+import { ExtendedRSEquipment } from '@/app/equipments/equipment.type'
 
 export function EquipmentTierList() {
   const { comment } = DEFAULT_EQUIPMENT_TIER_LIST_DATA
-  const [tierList] = useState<{ [key: string]: string[] }>(
-    DEFAULT_EQUIPMENT_TIER_LIST_DATA.TIER_LIST,
-  )
+  const [tierList] = useState(DEFAULT_EQUIPMENT_TIER_LIST_DATA.TIER_LIST)
   const [searchedKeyword, setSearchedKeyword] = useState('')
+
+  const [remainItems, setRemainItems] = useState([])
 
   const handleSearchedKeywordChange = debounce((event: any) => {
     setSearchedKeyword(event.target.value)
   }, 300)
+
+  useEffect(() => {
+    if (!tierList) return
+
+    const allTierListItems = Object.values(tierList)
+      .flat()
+      .map((name) => ({
+        name,
+      }))
+
+    const items = _.differenceBy(SORTED_ALL_EQUIPMENTS, allTierListItems, 'name')
+    setRemainItems(items as any)
+  }, [tierList])
 
   return (
     <div className="flex flex-col gap-[10px]">
@@ -114,6 +128,31 @@ export function EquipmentTierList() {
         <div className="font-bold text-[20px]">작성자 코멘트</div>
         <div className="whitespace-pre-line border p-[10px] shadow-md border-gray-700 rounded">
           {comment}
+        </div>
+      </div>
+      <hr />
+      <div>
+        <div className="ff-dh text-[30px]">위 티어 리스트에서는 제외된 장비</div>
+        <div className="flex flex-wrap">
+          {remainItems &&
+            remainItems.map((equipment: any) => {
+              return (
+                <div key={createKey()}>
+                  <Tooltip
+                    interactive
+                    className="bg-transparent p-0 m-0"
+                    content={<EquipmentTooltipContent equipment={equipment} />}
+                  >
+                    <div className="flex flex-col gap-[2px] w-[80px] relative z-0">
+                      <EquipmentBox equipment={equipment} />
+                      <div className="px-[4px] text-center truncate text-[14px] py-[2px]">
+                        {equipment.name}
+                      </div>
+                    </div>
+                  </Tooltip>
+                </div>
+              )
+            })}
         </div>
       </div>
     </div>
