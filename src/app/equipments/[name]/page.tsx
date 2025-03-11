@@ -15,6 +15,10 @@ import { RSHighlightedText } from '@/services/utils/highlight-text'
 import { LinkedDeckListBox } from '@/app/characters/[name]/linked-deck-list-box'
 import { RECOMMENDATION_DECKS } from '@/app/rd/rd-decks.const'
 import { ItemStringLinkWithMap } from '@/app/components/material/material-link'
+import { RS_FACTION } from '@/const/character/character.enum'
+import { WEAPON_SUFFIXES } from '@/const/item/options/weapon.const'
+import { copyToClipboard } from '@/services/utils/copy-clipboard'
+import { toast } from 'react-toastify'
 
 export default function EquipmentDetailPage() {
   const { name } = useParams()
@@ -28,14 +32,15 @@ export default function EquipmentDetailPage() {
   }
   if (!equipment) return <div>검색된 재료 데이터 없음.</div>
 
-  const relatedMaps = ALL_NAMED_MAPS.filter((map) => {
-    const exchangeItems = map['거래소'] || []
-    return exchangeItems.filter((item) => item.name === decodedName).length > 0
-  })
-
   const linkedRecommendationDecks = RECOMMENDATION_DECKS.filter((deck) =>
     deck.characters.find((c) => c.equipments?.includes(decodedName)),
   )
+
+  const factionKey = Object.keys(RS_FACTION).find(
+    (key) => RS_FACTION[key as keyof typeof RS_FACTION] === equipment.faction,
+  )
+
+  const suffixes = WEAPON_SUFFIXES[factionKey as string]
 
   return (
     <div className="flex flex-col gap-[10px]">
@@ -98,9 +103,31 @@ export default function EquipmentDetailPage() {
         </div>
       </div>
 
-      {/* <div className="flex flex-col gap-[4px]"> */}
-      {/*   <GradientHeaderDiv>연관 추천덱</GradientHeaderDiv> */}
-      {/* </div> */}
+      {suffixes && (
+        <div className="flex flex-col gap-[4px]">
+          <GradientHeaderDiv>
+            장비 속성 접미사({suffixes.length.toLocaleString()}) -{' '}
+            <span className="text-yellow-600">{equipment.faction}</span>
+          </GradientHeaderDiv>
+          <div className="flex flex-col gap-[4px] max-h-[400px] overflow-y-scroll">
+            {suffixes.map((suffix, index) => {
+              return (
+                <div
+                  key={`eq_de_suffix_${index}`}
+                  className="flex items-center gap-[4px] p-[2px] py-[8px] hover:bg-blue-400 hover:text-white cursor-pointer"
+                  onClick={async () => {
+                    await copyToClipboard(suffix)
+                    toast(`접미사가 복사되었습니다.`)
+                  }}
+                >
+                  <div className="min-w-[50px] text-center">{index + 1}</div>
+                  <div>{suffix}</div>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      )}
 
       <LinkedDeckListBox title="아이템이 사용된 추천덱" decks={linkedRecommendationDecks} />
 
