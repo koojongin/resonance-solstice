@@ -57,4 +57,7 @@ export const NORMAL_ARCHIVES: { [key: string]: RSArchive } = {
   과욕: {
     desc: '[리산드라]의 스킬 [모색] 사용시 손패로 1장을 가져옵니다.',
   },
+  백화: {
+    desc: '[안피아]가 들고다니는 관을 관리하는 미지의 물체를 말하는 것 같음',
+  },
 }

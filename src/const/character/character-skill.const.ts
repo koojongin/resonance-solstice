@@ -842,7 +842,7 @@ export const CHARACTER_SKILLS: {
     amount: 3,
     cost: 1,
     name: '의태',
-    desc: '안피아가 [백화]를 도와 분석을 진행합니다.\n[개조: 더스트리자드],[개조: 암흑의 매머드]와 [개조: 빙하 본드래곤] 중 1장을 선택하여 손으로 가져옵니다.\n사용 후 [소각]됩니다.',
+    desc: '안피아가 [백화]를 도와 분석을 진행합니다.\n[개조: 더스트 리자드],[개조: 암흑의 매머드]와 [개조: 빙하 본드래곤] 중 1장을 선택하여 손으로 가져옵니다.\n사용 후 [소각]됩니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/b/b6/g8t4t87xzktu5spjt7grv6trr17ze7g.png',
   },
