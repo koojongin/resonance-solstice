@@ -3322,7 +3322,7 @@ const DEFAULT_ALL_EQUIPMENTS: {
       },
     ],
   },
-  '초인과의 주사위': {
+  '인과 초월의 주사위': {
     type: RSEquipmentType.ACCESSORY,
     grade: RS_GRADE.UR,
     desc: '기본 속성: 체력+4585\n옵션: 모든 팀원이 모든 확률 메커니즘을 발동할 확률 +3%, 중첩가능',

@@ -1303,7 +1303,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       },
       {
         character: SUMMERSHIZURU,
-        equipments: ['부러진 검의 불', '시뮬레이트 스타', '초인과의 주사위'],
+        equipments: ['부러진 검의 불', '시뮬레이트 스타', '인과 초월의 주사위'],
       },
       {
         character: DUSTIN,
@@ -1682,11 +1682,11 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     characters: [
       {
         character: NAYUTA,
-        equipments: ['비트레이얼', '시뮬레이트 스타', '초인과의 주사위'],
+        equipments: ['비트레이얼', '시뮬레이트 스타', '인과 초월의 주사위'],
       },
       {
         character: AOBA,
-        equipments: ['비트레이얼', '시뮬레이트 스타', '초인과의 주사위'],
+        equipments: ['비트레이얼', '시뮬레이트 스타', '인과 초월의 주사위'],
       },
       {
         character: JOSHUA,
@@ -1694,7 +1694,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       },
       {
         character: RINA_F,
-        equipments: ['비트레이얼', '시뮬레이트 스타', '초인과의 주사위'],
+        equipments: ['비트레이얼', '시뮬레이트 스타', '인과 초월의 주사위'],
       },
       {
         character: TENNIE,
