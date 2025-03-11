@@ -1528,4 +1528,46 @@ export const CHARACTER_SKILLS: {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/1/15/0e7gpi889pd6vua0qr4l4lto8436wp7.png',
   },
+
+  배드: {
+    amount: 4,
+    cost: 1,
+    name: '배드',
+    desc: `[폭발 망치]를 사용하여 적에게 1단 피해를 입히고 [중단]을 부여합니다.
+    동시에 [점화]를 발동합니다.
+    [폭발 장치]는 [폭발물]입니다.`,
+    descSub: 'Gonna lock you up',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/dc/h9g1dhg557c0m4tr2m5n674nr6gn1z3.png',
+  },
+  '디스 이즈 잇': {
+    amount: 1,
+    cost: 0,
+    name: '디스 이즈 잇',
+    desc: `비용이 가장 높은 카드를 우선으로 카드를 1장 뽑습니다.`,
+    descSub: 'I`m the light of the world',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/d6/56v1hhty8qghdg4cu45lc4oslqxn07m.png',
+  },
+  '아윌 비 데어': {
+    amount: 1,
+    cost: 5,
+    name: '아윌 비 데어',
+    desc: `앞에 [때리바] 1개를 놓아 피해를 막습니다. [때리바]의 내구도는 자신의 체력의 80%입니다.
+    사용 시 [아윌 비 데어]가 [유아 낫 얼론]으로 전환됩니다.
+    [때리바]는 아무 감정이 없는 철벽이기에 파손되면 수리하여 계속 사용할 수 있습니다.`,
+    descSub: 'Just call my name',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/7b/s2tu8yymzwxdwxtuwpf07pyggu19gfz.png',
+  },
+  '유 아 낫 얼론': {
+    amount: 0,
+    cost: 5,
+    name: '유 아 낫 얼론',
+    desc: `[때리바]를 수리하여 100%의 내구도를 회복합니다.`,
+    descSub: 'I am here to stay',
+    isGeneratedCard: true,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/81/1k0fpki3qh8bccpexexmhpy6cghpbdw.png',
+  },
 }

@@ -84,4 +84,16 @@ export const EXTERNAL_USERS = {
     name: 'ililiiili',
     link: 'https://arca.live/u/@ililiiili',
   },
+  21: {
+    name: '린',
+    link: 'https://arca.live/u/@%EB%A6%B0',
+  },
+  22: {
+    name: 'YYB미쿠',
+    link: 'https://arca.live/u/@YYB%EB%AF%B8%EC%BF%A0',
+  },
+  23: {
+    name: '캬다랑',
+    link: 'https://arca.live/u/@%EC%BA%AC%EB%8B%A4%EB%9E%91',
+  },
 }

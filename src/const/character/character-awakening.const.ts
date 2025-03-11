@@ -914,4 +914,33 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/e/e8/3txly6ibjgy3kvx33078do2yrlp0ymr.png',
   },
+
+  '비트 잇': {
+    name: '비트 잇',
+    desc: `'Just beat it'
+    하루카가 치명 공격을 1회 회피할 수 있으며 동시에 자신의 체력을 30% 회복합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/98/hwcvtbssgpqzvum3sqebtthfkdwzohi.png',
+  },
+  '그들은 우리를 신경 쓰지 않는다': {
+    name: '그들은 우리를 신경 쓰지 않는다',
+    desc: `'You can nver kill me'
+    [때리바]가 필드에 있는 동안:
+    30%의 내구도가 감소할 때마다 덱 혹은 버려진 덱에서 [배드]를 1장 손으로 가져옵니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/5a/5oni7nmm147l5hxkf5czqkubwt1wlcj.png',
+  },
+  '위 아 더 월드': {
+    name: '위 아 더 월드',
+    desc: `'Just you and me'
+    [디스 이즈 잇] 사용 후 매초 비용을 1 얻습니다.(5초간 지속)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/7f/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  커쯔: {
+    name: '커쯔',
+    desc: `손에 같은 카드를 3장 가지고 있을 시 비용을 2 얻습니다.(5회 한정)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/c1/a0be0v8hjiqv5wwprws54u5wklfhk62.png',
+  },
 }

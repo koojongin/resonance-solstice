@@ -163,7 +163,21 @@ export default function RecommendationDeckDetailPage() {
                       character={character}
                       height={200}
                     />
-                    <RsEquipmentCard equipments={equipments || []} width={60} gap={0} onShowName />
+                    {equipments && (
+                      <div className="min-h-[100px]">
+                        <RsEquipmentCard
+                          equipments={equipments || []}
+                          width={60}
+                          gap={0}
+                          onShowName
+                        />
+                      </div>
+                    )}
+                    {!equipments && (
+                      <div className="min-h-[100px] flex items-center justify-center border border-gray-400 border-dashed text-gray-600 ff-dh text-[20px]">
+                        장비 데이터 없음
+                      </div>
+                    )}
                     <hr className="border-cyan-800 border-[2px] border-b-0 border-dashed" />
                     <div className="flex flex-wrap w-full gap-[2px] items-center justify-center">
                       {(character.detail?.SKILLS || []).map((skillName: string, index: number) => {

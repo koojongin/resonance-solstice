@@ -94,15 +94,16 @@ export function RsEquipmentCard({
         return (
           <div
             key={createKey()}
-            className="relative rounded flex items-stretch"
+            className={`group relative rounded ${equipment ? 'flex items-stretch' : ''}`}
             style={{
               width: `${equipmentWidth}px`,
             }}
           >
             {!equipment && (
-              <div className="border border-gray-700 flex w-full items-center justify-center">
-                -
-              </div>
+              <div
+                className="border border-gray-400 flex w-full items-center justify-center border-dashed border-r-0 group-last:border-r"
+                style={{ height: `${equipmentWidth}px` }}
+              />
             )}
             {equipment && (
               <Tooltip

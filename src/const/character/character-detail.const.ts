@@ -744,7 +744,23 @@ export const CHARACTER_DETAIL: {
       5: '팡류게임 마스터',
     },
   },
-  HARUKA: {},
+  HARUKA: {
+    SKILLS: ['배드', '디스 이즈 잇', '아윌 비 데어', '유 아 낫 얼론'],
+    RESONANCES: {
+      1: '댄저러스',
+      2: '맨 인 더 미러',
+      3: '생기',
+      4: '힐 더 월드',
+    },
+    RESONANCE_UPGRADE_MATERIALS: RARE_RESONANCE_UPGRADE_MATERIALS,
+    AWAKENING: {
+      1: '비트 잇',
+      2: '그들은 우리를 신경 쓰지 않는다',
+      3: '투지',
+      4: '위 아 더 월드',
+      5: '커쯔',
+    },
+  },
   ARCANA: {
     SKILLS: ['나비의 축복', '자연의 메아리', '태초의 꿈'],
     RESONANCES: {

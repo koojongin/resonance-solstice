@@ -15,6 +15,7 @@ import {
   FENIA,
   FLAN,
   GANYA,
+  HARUKA,
   ILONA,
   JERBOA,
   JOSHUA,
@@ -43,6 +44,7 @@ import {
 } from '@/const/character/character.const'
 import { EXTERNAL_USERS, ExternalUser } from '@/const/external-users'
 import { RSCharacter } from '@/const/character/character.interface'
+import { RSHighlightedText } from '@/services/utils/highlight-text'
 
 export interface RecommendationDeck {
   id: string
@@ -1922,6 +1924,266 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     descLink: 'https://arca.live/b/resonance/130739069',
     autoPreset:
       'tVZNb6MwEP0vc2alGRtj4LqnSP2S2lu1B7S4LWqappCoraL+99okcYfgzQZEchvCvHl+b2bMBv4WdXlRNSvI7zfQPFfz+WxRmg/IZQTrxtwUdfEC+S+KYFXUj2Z197k0kGMEVQk5ECaIUkmIdrntQyGR4iyBFmGbYPPN27pazvbF/kTw+r4wtcsgdD8tvqIuBXEyBdKqRwElxsMokNKOQremB90eK027RxfQozX80EcrZrJbEc9fMe5WpPNXFJ2KcTZFRd5KNKCV4lAryVGtxGAp6w9Jghn8ELsslluokFT+GEdkOVBBqh7N8bJgO88HshDSwCFP1Pghx0yHKIhRFLjhAViJyfmcIZUEnWETQP0mJEI1jJOYoFuY/IE1b3XSh5w2IG2tr6mI/UuscXcV6UAby72wo6dbUv/+sX4N7CE5qV8iNLF2twb9Eh2/xMl2ycDu/Q8v0mnIgvR8Wk3bQpgF+NPQC6K3hkQW+IRBKUeM15FdJE7yy7J134WzclfRz7+D9nPkA3c3+MCdgwXsH3cFMoD0J3AfNSwgDs1fixmAW5EMrRMojiZ4juLQmudonuNOaiWuX+dmJ4oXy0/f3sbI99h+N1j5nkxRmpprXDW3y99W1OsF5A/FvDHWidWTqd2z1pequWiTDl4qq8Z54cft2ZgW52r94vrgGw==',
+  },
+
+  {
+    id: '47',
+    title: '나는 꼬추가 싫어!!! 나유타 없는 니콜라 인뢰덱',
+    leaderName: NICOLA.name,
+    characters: [
+      {
+        character: NICOLA,
+        equipments: ['이차 상전이', '자각몽 섬유', '모노폴 마그네타'],
+      },
+      {
+        character: CAROLINE,
+        equipments: ['구상 번개', '시뮬레이트 스타', '거짓신의 속삭임'],
+      },
+      {
+        character: STELLA,
+        equipments: ['구상 번개', '공간이동', '해리슨 장치'],
+      },
+      {
+        character: KALEYA,
+        equipments: ['에비서레이터MK0', '공명체 섬유', '모노폴 마그네타'],
+      },
+      {
+        character: ELIOT,
+        equipments: ['에비서레이터MK0', '선인장 판갑', '헐튼 풍선'],
+      },
+    ],
+    desc: (
+      <div>
+        <div>
+          단기전 포텐은 나유타덱과 비빌정도가 되긴 하는 요상한 덱 하루카 연습같이 오~래 가는 곳에선
+          아무래도 나유타보단 화력이 딸리는데 생각보다 패가 막히는건 적었음. 스텔라 1돌 효과로 패가
+          답도 없이 쌓이는게 좀 덜해서
+        </div>
+        <br />
+        <div>
+          니콜라가 풀돌인 만큼 아무래도 인뢰도 더 터뜨리고 하니 명함들로 구성된 덱과는 차이가
+          있을거고 카리야 엘리엇을 제외한 나머지 셋은 장비 부옵도 8할정도 완성된 애들이니 그부분은
+          감안해야함
+        </div>
+        <br />
+        <div>힐러가 둘이나 되어서 안정성은 아무래도 좋긴 할듯 ㅋㅋ</div>
+      </div>
+    ),
+    owner: EXTERNAL_USERS[21],
+    descLink: 'https://arca.live/b/resonance/130902678',
+    autoPreset:
+      'xVdNj9owEP0vc04lzzjOJrn2hLTtrtTeqj1EjduNlmVpEtRWiP9e24QwtiELAlROTIhn3ps3H2YNTXevq1q3H6u2flhA2bcrncB3Y903XQ/ltzU0NZSAIhMChYAEupdmPp8tav0HSpnAqtNf/y41lOi+P1Zt9fqpWpqjT7t3nQOSAjGTxsHb74Vu7UPjz3wkJdBX7U/db/2IBPSvVbOc7SA87R1D+QE3yXrv17oVKlcJg0mphRm49INSkfvIT4/omAjM0jgVLFN0B36AA/GjmAHkdyGEapAPQd0QwoAgIJ3dPu9YTJIWOEnaFdu5pLkdvbyPLYVNeOTcB2AA+vgCKgHdTBRgITCGkeo40YNrkFCqTeSX8ixqRJTp+Y3IgWGszDQwcQhYeh1gJ4pGLp2XiIYRB1UQnFM3VJwAQRbHIch40EoZ1I2kPG7OaXnkJgk4HMAUCB7RiIBRAIzUOUvlaN0ovE7dRPNGxu3G5w39v3njdswldROVLiKF8iCFbc17gU6UR9yJSB63Cy5b/CLL/QVEN1xAAxFff5K3jogk/Ijp9SPyJXbA/VG5Q18HB2fQ2u9MCAMih4153HRflrtb6Y9q3g3X0lk9FNo4vi3DcfnvDdMdo2FvhOwX4meYYWck+8U7k3HDi6NYHMXO2FQyQ/E4BXPgUaCUG5K/htyBJWfa7Nld3vmwqZvOpmmrl0n3i9YujZ9Xr07L9m2uh9yPh8ZJMZbPqN5ukNrB0j9v/yfYDv8H',
+    autoPresetPreviews: [
+      '화력전개',
+      '노래',
+      '뭇별',
+      '우아',
+      '셀카',
+      '공습',
+      '위치 전송',
+      '치유탄',
+      '폭염탄',
+      '마이크로파',
+      '번개 소용돌이',
+      '자석 폭탄',
+      '비전탄',
+      '초음속',
+      '플라잉 플래시',
+      'TATAKAU!',
+      'TATAKAU!!',
+      'TATAKAU!!!',
+    ],
+    autoPresetPreviewBans: ['TATAKAE', '유산소 대기'],
+  },
+  {
+    id: '48',
+    title: '조슈아 컷씬 1분 15초 0비트레이얼',
+    leaderName: NAYUTA.name,
+    characters: [
+      {
+        character: NAYUTA,
+        equipments: ['뫼비우스'],
+      },
+      {
+        character: RINA_F,
+        equipments: ['여명의 옥새'],
+      },
+      {
+        character: JOSHUA,
+      },
+      {
+        character: AOBA,
+        equipments: ['뫼비우스'],
+      },
+      {
+        character: ELIOT,
+        equipments: ['헐튼 풍선'],
+      },
+    ],
+    desc: (
+      <div>
+        <div>
+          드로우에 방해되는 [레드카드] 미리 써버리고 덱에 최대한 [옐로카드],[그린카드]만 남겨서
+          [그린카드] 넣다뺐다 하면서 [다크 아츠] 만드는 컨셉
+        </div>
+      </div>
+    ),
+    owner: EXTERNAL_USERS[2],
+    descLink: 'https://arca.live/b/resonance/130877623',
+    autoPreset:
+      'rVdLj9owEP4vPqeSx05iO9eekLYPqb2tOETF7UbLQpqA2iriv9d2gEwSb2ICnDyMme+bp4eGvOh8oyuSAbUfwSKyP7zo6mNebUhGI/LDHFabT3lJsoYATSnlqTDXo1ZgQrhrTqCMdgKTtLsGgDQ8gU7DE46uSYVMJxJpFLLGUoY0KeDfYFDFMFGFcZBpHmMNIDpMpVjoaRLsAsMCJipjZFr0WONryl47RWRT1Dbe3/+V2mlftS5tJj4f31z4ivrJpct+92VHsp/5ttYRqfZb/VTUB5I9X9PoDlyq9kA5nA/ifAAer63Bb+XAmCVwNtaQ+rXYblemEoBxSmNmORipS0NEjrX+mle5IfgBnHRlf9G44nk2aIe8+qUPrd5Y2v/Z6coZv1Ak+vexKFcX/PUpavpWGmKSQE9TqB0/W6ghoD0nTTklftgkFDZhs7C2z/qwsZQjWBuzMERYgqjixYi2UWcQbe0N6odzuDe0dJGj3OsoqmShJiu5tbfb6L9OnCGAS4o4x8FMyfdrGfEwM+ZhPPiYB02SMY9BKMwsCqXAl1AwU3COgqSPo+DLhnExJBv2aXocDzYOBb9mw9diyhuFftAwBXZTQ7YUmJoqzLBJIBdNAhqSAftkPqoffO4bDOf+wE6I33YDWJRz3gv45LSLZ4esd9qxoFEjw/t8rrL8oyZ1jg5e9F52UxhRGMBiRpMUzDozLm4Zj7LLA7Ob3FjV58kSC092B/ge4qMgvbtGXTM54Iap27kxDIXZEO7sczW/1YyWKZqC6MdDUJ9DwrK4KS58rvlxmfkCItOgN8D+H8ABoogDu7FLfE8ReB5kRwNgsBmkPR4A9xDxzSXTK+vTfw==',
+  },
+
+  {
+    id: '49',
+    title: '더스틴 카타스 점화덱(풀돌 아리나)',
+    leaderName: KATAS.name,
+    characters: [
+      {
+        character: KATAS,
+        equipments: ['부러진 검의 불', '데몬베인의 갑옷', '베타 세계선 박스'],
+      },
+      {
+        character: AOBA,
+      },
+      {
+        character: DUSTIN,
+      },
+      {
+        character: ARINA,
+      },
+      {
+        character: KALEYA,
+      },
+    ],
+    desc: (
+      <div>
+        <div>
+          <Link
+            className="text-blue-500"
+            href="https://arca.live/b/resonance/130533641?category=deck&p=1"
+            target="_blank"
+          >
+            https://arca.live/b/resonance/130533641?category=deck&p=1
+          </Link>{' '}
+          에서 [아오바] 어떠냐는 댓글보고 개량했음.
+        </div>
+        <div>[발렌타인]이 원체 애매했었어서 원래꺼보다 고점 높아지고 초반 예열이 빨라짐.</div>
+        <div>[아리나]는 풀돌아니면 [발렌타인] 넣는게 나을듯.</div>
+        <div>장비는 그냥 [에비서레이터MK0]-[시뮬레이트 스타]-[뫼비우스] 도배하면됨.</div>
+        <div>난 [카타스] 불검-데몬베인-베타세계선 이렇게 줬음</div>
+      </div>
+    ),
+    owner: EXTERNAL_USERS[22],
+    descLink: 'https://arca.live/b/resonance/130837661',
+    autoPreset:
+      'tZdNb6MwEIb/i8+sNGNjvq57itR2V9reqhxQ8W5R04QFot0qyn+vbUgZII0htDnZMPY88+EX58Dy6kalmSq/p2X2Y8uSutwrjz0rVZgnd/sXloCnrX4VJ4vf6abSJllePeon96+FYonwmJmsstu0YMmBIQQAiJIl6DUTHkm7U/tGdG8QfWImsZsA9DYAuiamZmQDEGQi6BvuU7M47nC4JH5EjzqOqFlAzXp+yBr0SXA8JKBcUKeBiefosXK3UTd5VbPkAcH+fK8ZhNgOhGwHsn2CgOsm5e3KA9tX6mdapi9tBTQD6M2r53yzWW0z9Z8l3GN1Wv5RdVMzDaLXNGNNuPu3VeUq0+MTBMv1rEux9+6CJd/wtLU14QJMdNpE/d3nxepEtT56A7CH9QImnQbCZCpwmQlR12U+k1iSJ+nOkz+RiXrtXKANewB4BuoDCMuAGC5DkJ+AELkRzrYxLiiPmNDG/IqWmcXUb2MjZY42DiCeyNRta4Rn5FkLSg9swDyI6GKeMAwnMNkCyiU6JHudZ5TaAeZLuBZsThW1AvfAAnCByXhqZ31w6nyx+NTJEK48dXOKNsiNcIvitA63YOLYPz3C0eZjNR+E1YGJcZfjlA+I5YoW6dSwzbGXsQjGbc7xqz9tQ6bAefTENVeAOUyjznLqeQDR5zJx57XE1e36WhLM1/MIHI0+PqGDiC7reTzlWvIuDdQrgfSdd5NQxA6JOnc30al4sn9TqNDt6qfmf4tBegM=',
+    autoPresetPreviews: [
+      '에너지 풍선껌',
+      '곡우',
+      '인터체인-I',
+      '인터체인-II',
+      '인터체인-III',
+      '플레임 슬래시',
+      '경칩',
+      '부채술',
+      '블랙베리',
+      '마이크로파',
+      '다크 엑스칼리버',
+      '위치 전송',
+      '유세술',
+      '피치',
+      '애플',
+      '유산소 대기',
+    ],
+    autoPresetPreviewBans: ['흐르는 불', '오의-유풍'],
+  },
+  {
+    id: '50',
+    title: '코나+테니 덱, 근데 이제 하루카를 곁들인',
+    leaderName: CONNOR.name,
+    characters: [
+      {
+        character: CONNOR,
+        equipments: ['베타 세계선 박스'],
+      },
+      {
+        character: STELLA,
+      },
+      {
+        character: HARUKA,
+      },
+      {
+        character: SHIZURU,
+      },
+      {
+        character: TENNIE,
+      },
+    ],
+    desc: (
+      <div>
+        <div>
+          <div className="text-[30px] ff-dh">주요 장비 설명</div>
+          <div>
+            <div>[헐튼 풍선] 앞라인 캐릭</div>
+            <div>- '비용 3 이상 옐로 카드 사용 후 1장 드로우'</div>
+            <div>- 시즈루와 테니의 3코, 5코 옐로 카드에 활용</div>
+          </div>
+          <br />
+          <div>
+            <div>[해리슨 장치] [하루카], [시즈루] 제외 모든 캐릭(낮은 스탯)</div>
+            <div>- '옐로 카드 사용 시 비용 +0.3'</div>
+            <div>- 덱에 [옐로카드] 비중이 많아 필요 시 채용 가능</div>
+            <div>- *주의. 기본 스텟이 낮음, 고난이도 돌파에는 권장x</div>
+          </div>
+          <br />
+          <div>
+            <div>[기타 범용 장비]</div>
+            <div>[에비서레이터MK0][시뮬레이트 스타][뫼비우스]</div>
+            <div>'리더 스킬 사용 시 코스트 회복' 옵션작이 필수</div>
+            <div>- [시즈루] 1각 효과 [유비무환]에도 '[리더 스킬] 사용 시 1 코스트 회복'이 있음</div>
+          </div>
+          <hr className="my-[10px] border-gray-500" />
+        </div>
+
+        <div>
+          <div className="text-[30px] ff-dh">[하루카] 사이클 설명</div>
+          <RSHighlightedText
+            text={`[배드] [레드카드] COST 1
+ - 저코스트 리더 스킬 쿨타임 감소용
+ - [시즈루]와 개인 공명, 각성 효과(아래 후술)와 연계하여 빠른 드로우 순환 가능
+
+[디스 이즈 잇] [옐로카드] COST 0
+ - '비용이 가장 높은 카드 드로우 1장'
+ - [스텔라]의 [뭇별], [테니]의 [빙수 눈사태] 등 고벨류 카드 서치용
+
+[아윌 비 데어] & [유 아 낫 얼론] [퍼플카드] > [블루카드] COST 5
+ - 1번 사용 이후로 [블루카드]인 [유 아 낫 얼론]으로 지속
+ - 리더 스킬 쿨타임 감소 및 [테니] [실드] 트리거용
+
+[그들은 우리를 신경 쓰지 않는다] 각성 2단계
+ - '[때리바]의 내구소 30% 감소마다 [배드] 드로우'
+ - 기타 코스트 없이 쿨타임 감소용 레드 카드 서치 가능
+
+[위 아 더 월드] 각성 4단계
+ - '[디스 이즈 잇] 사용 후 매초 비용 +1(5초 동안)'
+ - 높은 코스트 카드 드로우 이후 비용 습득으로 사이클의 부담을 감소
+
+[커쯔] 각성 5단계
+ - '손에 같은 카드 3장 보유시 비용 +2(5회 한정)'
+ - **스텔라 카드와 매우 매끄러운 연계로 코스트 회복 GOAT 각성 효과`}
+          />
+        </div>
+        <hr className="my-[10px] border-gray-500" />
+        <div className="text-blue-500 ff-dh text-[20px]">
+          총평: #미친 코스트 뻠핑 #드로우 수단 #레드 블루 카드 둘 다 보유 #유지력
+        </div>
+      </div>
+    ),
+    owner: EXTERNAL_USERS[23],
+    descLink: 'https://arca.live/b/resonance/130345279',
+    autoPreset:
+      'tVdNb9swDP0vPHuAKFkf9nWnAN06YLsNOxiztgZN09ROsA1B/vssp3EYWJbkJs2NkUw+kU+P1B5+Vk19t2y3UH7fw661X6qmeoLyA2awrKEEZIoxXjDI3Oq3fxsLZbf2/Gdtm0W3AZn7cZ3Btmp+2+1xB8ugfVyuVot1bf9CyTOwL7vlZnEK9eO03ofggrFCIRyyaQjMRCDIIghBxCEwk3sgzAtJALMCQjGPIYW6YUQh4xF5LkNpFioPpplrdW2lc/RV+mR9qjbHr0ZuAlHRU0sepwtJnTYxTHsQUHa5mwWMe4CJecCKCCdHiZtDGZR5AmUMnwFhyNMs6kpMuCzShKiLXIepW5hrFQJVTCHGqWCjVPiAEK3NWTwV0nhu8c1YwfME6eKGXQeBYZCYCRCk9qgn8aHChIh1LUzpWuzdCYFcxVOBSqToF7tav1CF+3B/FgpeJgnrXGBjxecRYe07F210Ylazj9WIJ+iX8ujX2yOKhIgabxkxoVcg96gC9YFXaXTClWR64kre/CoIFtYXlOqyx00w7oZzD6KUczBhPjH3JKu4R0PpuyHhWhQ+6aI+wpSJqXhCWy8UD749REzzIkNxAoScT8x5byeH8BDW0HPwGDmmhuKpSgQ7OjdjLgCicbqIMGKF5urg2LZ9sM3H7o169NZ+3Tjjfg3lr2rV2gya55V99TZMNoOUDAQZjneqV+favXwX9asgDEOHO9Ywkp4NRlbcSQbDTZ3nbd0LjKwoalx8Q7Y5fhODnQ33FiMGWXGPYeJNUIN846b78zddNck2pK4FPTb1psjh3FRIDApH0xWt+1oNFDp7yw09KU1I/00nyA+2qm1z8RRq7/r/TmXfNruu6o/W9kT4vHvqg9XL1pXzSDtx+A8=',
   },
 ]
 

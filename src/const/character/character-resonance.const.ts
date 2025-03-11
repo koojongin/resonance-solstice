@@ -954,4 +954,26 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/b/b4/qa6h73yv40chgj05c5sxufuoyfi87ao.png',
   },
+
+  댄저러스: {
+    name: '댄저러스',
+    desc: `'The girl is so dangerous'
+    [배드] 사용 후 이번 전투 동안 [배드]의 피해가 10% 증가합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/0a/rtg4t7szhl9tmzy4w3fuoy9bz9yz4t3.png',
+  },
+  '맨 인 더 미러': {
+    name: '맨 인 더 미러',
+    desc: `'I\`m gonna make a change'
+    1웨이브의 적을 만날 때 마다 [배드]를 우선으로 카드를 1~2장 뽑습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a7/8d241xohnjdklesfib8hp5skpte96aa.png',
+  },
+  '힐 더 월드': {
+    name: '힐 더 월드',
+    desc: `'Make a better place'
+    [레드카드]를 1장 낼 때마다, 자신의 체력을 8% 회복합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/df/htxe41kqffmu2g17nbcxj32gk2uy3aj.png',
+  },
 }
