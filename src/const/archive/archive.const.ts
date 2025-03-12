@@ -60,4 +60,7 @@ export const NORMAL_ARCHIVES: { [key: string]: RSArchive } = {
   백화: {
     desc: '[안피아]가 들고다니는 관을 관리하는 미지의 물체를 말하는 것 같음',
   },
+  '원소 신성': {
+    desc: '[화염 신성]/[번개 신성]/[서리 신성]',
+  },
 }

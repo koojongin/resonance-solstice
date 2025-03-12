@@ -37,12 +37,14 @@ export default function MapNamedListBox() {
 }
 
 function getCityIconUrl(type: RSCityType) {
-  if (type === RSCityType.CORE_CITY) return 'https://i.postimg.cc/cKY5J8hb/icon-city01.webp'
-  if (type === RSCityType.SMALL_CITY_SQUARE) return 'https://i.postimg.cc/0yn1JR56/icon-city02.webp'
+  if (type === RSCityType.CORE_CITY)
+    return 'https://res.cloudinary.com/dqihpypxi/image/upload/v1741782969/resonance/city/icon_city01_ahhyxe.webp'
+  if (type === RSCityType.SMALL_CITY_SQUARE)
+    return 'https://res.cloudinary.com/dqihpypxi/image/upload/v1741782969/resonance/city/icon_city02_nqowd3.webp'
   if (type === RSCityType.SMALL_CITY_RHOMBUS) {
-    return 'https://i.postimg.cc/255RQc30/icon-city03.webp'
+    return 'https://res.cloudinary.com/dqihpypxi/image/upload/v1741782969/resonance/city/icon_city03_cs8erq.webp'
   }
   if (type === RSCityType.SMALL_CITY_RECYCLE) {
-    return 'https://i.postimg.cc/4dKDMY6t/icon-city04.webp'
+    return 'https://res.cloudinary.com/dqihpypxi/image/upload/v1741782968/resonance/city/icon_city04_scfurd.webp'
   }
 }

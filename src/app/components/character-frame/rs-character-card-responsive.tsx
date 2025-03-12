@@ -12,9 +12,11 @@ import { Tooltip } from '@material-tailwind/react'
 export function RsCharacterCardResponsive({
   character,
   height,
+  onHideName,
 }: {
   character: RSCharacter
   height: number
+  onHideName?: boolean
 }) {
   return (
     <div className="border-2 border-gray-400/80 rounded-[6px] shadow-md shadow-gray-800/70 p-[2px] cursor-pointer">
@@ -32,11 +34,13 @@ export function RsCharacterCardResponsive({
         </div>
         <RsCharacterBorderBox grade={character.grade} />
       </div>
-      <Tooltip content={character.name}>
-        <div className="font-bold text-gray-700 mt-[4px] text-[15px] text-center truncate px-[4px]">
-          {character.name}
-        </div>
-      </Tooltip>
+      {!onHideName && (
+        <Tooltip content={character.name}>
+          <div className="font-bold text-gray-700 mt-[4px] text-[15px] text-center truncate px-[4px]">
+            {character.name}
+          </div>
+        </Tooltip>
+      )}
     </div>
   )
 }

@@ -3417,6 +3417,18 @@ export const SORTED_ALL_EQUIPMENTS = _.sortBy(MAPPED_ALL_EQUIPMENTS, (item) =>
   grades.indexOf(item.grade),
 )
 
+export const SORTED_ALL_EQUIPMENT_WEAPONS = SORTED_ALL_EQUIPMENTS.filter(
+  (e) => e.type === RSEquipmentType.WEAPON,
+)
+
+export const SORTED_ALL_EQUIPMENT_ARMORS = SORTED_ALL_EQUIPMENTS.filter(
+  (e) => e.type === RSEquipmentType.ARMOR,
+)
+
+export const SORTED_ALL_EQUIPMENT_ACCESSORIES = SORTED_ALL_EQUIPMENTS.filter(
+  (e) => e.type === RSEquipmentType.ACCESSORY,
+)
+
 export const MAPPED_ALL_EQUIPMENTS_SSR: Array<
   RSEquipment & {
     iType: RSItemType

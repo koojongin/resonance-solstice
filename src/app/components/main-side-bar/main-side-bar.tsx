@@ -78,6 +78,10 @@ export default function MainSideBar() {
       path: '/rd',
       subMenu: [
         {
+          label: '유저 추천덱',
+          path: '/rd/user',
+        },
+        {
           label: '일반 전투 추천덱',
           path: '/rd',
         },

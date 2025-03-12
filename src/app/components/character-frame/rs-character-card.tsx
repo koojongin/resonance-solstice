@@ -21,10 +21,12 @@ export function RsCharacterCard({
   character,
   size = RsCardSize.MEDIUM,
   height,
+  onHideName,
 }: {
   character: RSCharacter
   size?: RsCardSize
   height?: number
+  onHideName?: boolean
 }) {
   const router = useRouter()
   const routeToDetail = (selectedCharacter: RSCharacter) => {
@@ -37,7 +39,11 @@ export function RsCharacterCard({
       {size === RsCardSize.SMALL && <RsCharacterCardSmall character={character} />}
       {size === RsCardSize.MEDIUM && <RsCharacterCardMedium character={character} />}
       {size === RsCardSize.RESPONSIVE && (
-        <RsCharacterCardResponsive character={character} height={height || 100} />
+        <RsCharacterCardResponsive
+          onHideName={onHideName}
+          character={character}
+          height={height || 100}
+        />
       )}
     </div>
   )

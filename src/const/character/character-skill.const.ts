@@ -266,7 +266,7 @@ export const CHARACTER_SKILLS: {
     amount: 0,
     cost: 3,
     name: '초신성',
-    desc: '목표 구역을 향해 초신성을 1개 발사하여 모든 적에게 1단 피해를 입히고 [붕괴]를 부여합니다.\n동시에 중성미자 펄스를 5초간 시전하여 매초 모든 적에게 1단 피해를 입히고 [부식]을 발동합니다.\n이 카드의 [원소 핵분열]:\n1개의 [번개 신성]이 융합에 참여할 때마다 번개 운석 1개를 즉시 발사하여 모든적에게 1단 피해를 입히고 [우레]를 발동합니다.\n1개의 [화염 신성]이 융햡에 참여할 때마다 폭염 운석 1개를 즉시 발사하여 모든 적에게 1단 피해를 입히고 [광염]을 발동합니다.\n1개의 [서리 신성]이 융합에 참여할 때마다 서리 운석 1개를 즉시 발사하여 모든 적에게 1단 피해를 입히고 [동결]을 발동합니다.\n[신성]/[원소 신성]/[초신성]은 [파]입니다.\n사용 후 [소각]되며 블랙카드 [음에너지]를 1장 생성하여 덱의 가장 아래에 추가합니다.',
+    desc: '목표 구역을 향해 초신성을 1개 발사하여 모든 적에게 1단 피해를 입히고 [붕괴]를 부여합니다.\n동시에 중성미자 펄스를 5초간 시전하여 매초 모든 적에게 1단 피해를 입히고 [부식]을 발동합니다.\n이 카드의 [원소 핵분열]:\n1개의 [번개 신성]이 융합에 참여할 때마다 번개 운석 1개를 즉시 발사하여 모든적에게 1단 피해를 입히고 [우레]를 발동합니다.\n1개의 [화염 신성]이 융합에 참여할 때마다 폭염 운석 1개를 즉시 발사하여 모든 적에게 1단 피해를 입히고 [광염]을 발동합니다.\n1개의 [서리 신성]이 융합에 참여할 때마다 서리 운석 1개를 즉시 발사하여 모든 적에게 1단 피해를 입히고 [동결]을 발동합니다.\n[신성]/[원소 신성]/[초신성]은 [파]입니다.\n사용 후 [소각]되며 블랙카드 [음에너지]를 1장 생성하여 덱의 가장 아래에 추가합니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/5/54/0j8n5afo12ssnkc3z551qndy3uu0ymb.png',
     isGeneratedCard: true,
@@ -423,7 +423,8 @@ export const CHARACTER_SKILLS: {
     cost: 2,
     name: '서리 신성',
     desc: '목표 구역을 향해 서리 신성을 1개 발사하여 범위 내의 적에게 1단 피해를 입히고 [붕괴]를 부여합니다. 동시에 [동결]을 발동합니다.\n이 카드의 [광붕괴]:\n손에 [신성]이 3장 있을 때 자동으로 [초신성]으로 융합됩니다.\n[신성]/[원소 신성]/[초신성]은 [파]입니다.\n사용 후 [소각]됩니다.',
-    thumbnail: 'https://i.postimg.cc/jjTY3z9L/Shuang-Dong-Xin-Xing.png',
+    thumbnail:
+      'https://res.cloudinary.com/dqihpypxi/image/upload/v1741782686/resonance/skills/ShuangDongXinXing_lvo46q.png',
     isGeneratedCard: true,
   },
   급습: {
@@ -516,7 +517,8 @@ export const CHARACTER_SKILLS: {
     cost: 0,
     name: '진동파',
     desc: '하늘에서 떨어지는 중력 진동파를 시전하여 모든 적을 [기절]시킵니다.\n동시에 다음 내는 [레드카드]의 피해가 50% 증가합니다.(중첩 가능)\n손에서 내면 [소각]됩니다.',
-    thumbnail: 'https://i.postimg.cc/nhbkkrTX/Zhen-Bo-red.png',
+    thumbnail:
+      'https://res.cloudinary.com/dqihpypxi/image/upload/v1741782860/resonance/skills/ZhenBo-red_rfr420.png',
     isGeneratedCard: true,
   },
   '콜로서스 군진': {
@@ -1349,6 +1351,19 @@ export const CHARACTER_SKILLS: {
     isGeneratedCard: true,
     thumbnail:
       'https://res.cloudinary.com/dqihpypxi/image/upload/v1741598272/resonance/skills/HuoYanXinXing_el0tt0.png',
+  },
+  '번개 신성': {
+    amount: 0,
+    cost: 2,
+    name: '화염 신성',
+    desc: `목표 구역을 향해 번개 신성을 1개 발사하여 범위 내의 적에게 1단 피해를 입히고 [붕괴]를 부여합니다. 동시에 [우레]을 발동합니다.
+    이 카드의 [광붕괴]:
+    손에 [신성]이 3장 있을 때 자동으로 [초신성]으로 융합됩니다.
+    [신성]/[원소 신성]/[초신성]은 [파]입니다.
+    사용 후 [소각]됩니다.`,
+    isGeneratedCard: true,
+    thumbnail:
+      'https://res.cloudinary.com/dqihpypxi/image/upload/v1741782681/resonance/skills/ShanDianXinXing_ctmiwz.png',
   },
   기원: {
     amount: 1,

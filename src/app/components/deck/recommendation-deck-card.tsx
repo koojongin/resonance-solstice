@@ -68,6 +68,12 @@ export function RecommendationDeckCard({ deck }: { deck: RecommendationDeck }) {
             프리셋 프리뷰
           </div>
         )}
+        {(deck as any).reads && (
+          <div className="border border-blue-gray-900 text-blue-gray-900 bg-white px-[4px] h-[24px] ff-dh rounded flex items-center gap-[4px]">
+            <i className="fa-solid fa-eye" />
+            {(deck as any)?.reads.toLocaleString()}
+          </div>
+        )}
       </div>
 
       <div className="flex gap-[4px] justify-between">
@@ -97,7 +103,11 @@ export function RecommendationDeckCard({ deck }: { deck: RecommendationDeck }) {
         <div className="ff-dh text-[18px] flex-1 flex-col flex gap-[4px] items-start justify-start">
           <Link
             className="w-full p-[4px] py-[8px] pb-[6px] items-center justify-center rounded flex bg-blue-gray-600 text-white"
-            href={`${locationOrigin}/rd/detail/${deck.id}`}
+            href={
+              deck.id.length > 10
+                ? `${locationOrigin}/rd/user/detail/${deck.id}`
+                : `${locationOrigin}/rd/detail/${deck.id}`
+            }
           >
             상세 보기
           </Link>

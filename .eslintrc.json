@@ -29,7 +29,32 @@
     "next.config.js",
     "next.config.ts"
   ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      },
+      "alias": {
+        "map": [
+          ["@", "./src"]
+        ],
+        "extensions": [".ts", ".tsx", ".js", ".jsx"]
+      }
+    }
+  },
   "rules": {
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never",
+        "mjs": "never",
+        "cjs": "never"
+      }
+    ],
     "react/no-unescaped-entities": "off",
     "no-console": "off",
     "jsx-a11y/no-static-element-interactions": "off",

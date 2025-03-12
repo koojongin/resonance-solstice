@@ -1,24 +1,22 @@
-import type { Metadata } from 'next'
 import './globals.css'
 import { Analytics } from '@vercel/analytics/react'
-import { Do_Hyeon, Nanum_Gothic } from 'next/font/google'
 import React, { ReactNode } from 'react'
 import MainSideBar from '@/app/components/main-side-bar/main-side-bar'
 import MainHeaderBar from '@/app/components/main-side-bar/main-header-bar'
 import GoogleAnalyticsComponent from '@/services/google-analytics'
 import 'react-toastify/dist/ReactToastify.css'
 import { ToastContainer } from 'react-toastify'
+import { Do_Hyeon, Nanum_Gothic } from 'next/font/google'
 
 const nanumGothic = Nanum_Gothic({
   subsets: ['latin'],
   weight: ['400', '700', '800'],
 })
 
-const doHyeonKr = Do_Hyeon({
+const doHyeon = Do_Hyeon({
   subsets: ['latin'],
   weight: ['400'],
 })
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -56,7 +54,7 @@ export default function RootLayout({
         />
       </head>
       {/* <body className={`relative bg-contain ${cls(nanumGothic.className)}`}> */}
-      <body className="relative bg-contain ff-sdn">
+      <body className={`relative bg-contain ff-sdn ${nanumGothic.className} ${doHyeon.className}`}>
         <ToastContainer className="custom-toast-container" />
         <div
           className="absolute -z-10 w-full h-full opacity-20 bg-contain"

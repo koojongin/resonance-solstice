@@ -282,8 +282,4 @@ export const ARCHIVE_ABILITIES: { [key: string]: RSArchive } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/thumb/c/c7/pajvu76k7mxw5iaxq5rokjzyxz113ij.png/128px-%E6%96%B0%E6%98%9F.png',
   },
-  진동파: {
-    desc: '하늘에서 떨어지는 중력 진동파를 시전하여 모든 적을 [기절]시킵니다.\n동시에 다음 내는 [레드카드]의 피해가 50% 증가합니다.(중첩 가능)\n손에서 내면 [소각]됩니다.',
-    thumbnail: 'https://i.postimg.cc/nhbkkrTX/Zhen-Bo-red.png',
-  },
 }

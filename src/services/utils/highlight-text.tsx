@@ -52,6 +52,7 @@ export function RSHighlightedText({
     '[속박]': 'text-purple-500/90',
     '[혼란]': 'text-purple-500/90',
     '[퍼플카드]': 'text-purple-500/90',
+    '[변신]': 'text-purple-500/90',
 
     '[냉동]': 'text-blue-800',
     '[은신]': 'text-blue-800',
@@ -59,6 +60,8 @@ export function RSHighlightedText({
     '[빙결]': 'text-blue-800',
     '[동결]': 'text-blue-800',
     '[블록]': 'text-blue-800',
+    '[슈퍼아머]': 'text-blue-800',
+    '[무적]': 'text-blue-800',
 
     '[인뢰]': 'text-yellow-500',
     '[낙뢰]': 'text-yellow-500',
@@ -69,6 +72,7 @@ export function RSHighlightedText({
 
     '[점화]': 'text-red-500',
     '[기절]': 'text-red-500',
+    '[화상]': 'text-red-500',
     '[붕괴]': 'text-red-500',
     '[중상]': 'text-red-500',
     '[관통]': 'text-red-500',
@@ -83,6 +87,7 @@ export function RSHighlightedText({
     '[중단]': 'text-red-500',
     '[넉백]': 'text-red-500',
     '[에어본]': 'text-red-500',
+    '[급속 연소]': 'text-red-500',
 
     '[소각]': 'text-gray-800',
     '[일반공격]': 'text-gray-800',
