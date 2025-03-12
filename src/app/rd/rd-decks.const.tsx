@@ -4,6 +4,7 @@ import { ReactNode } from 'react'
 import {
   ACHIWA,
   AKIRA,
+  ANFIYA,
   AOBA,
   ARCANA,
   ARINA,
@@ -2184,6 +2185,42 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
     descLink: 'https://arca.live/b/resonance/130345279',
     autoPreset:
       'tVdNb9swDP0vPHuAKFkf9nWnAN06YLsNOxiztgZN09ROsA1B/vssp3EYWJbkJs2NkUw+kU+P1B5+Vk19t2y3UH7fw661X6qmeoLyA2awrKEEZIoxXjDI3Oq3fxsLZbf2/Gdtm0W3AZn7cZ3Btmp+2+1xB8ugfVyuVot1bf9CyTOwL7vlZnEK9eO03ofggrFCIRyyaQjMRCDIIghBxCEwk3sgzAtJALMCQjGPIYW6YUQh4xF5LkNpFioPpplrdW2lc/RV+mR9qjbHr0ZuAlHRU0sepwtJnTYxTHsQUHa5mwWMe4CJecCKCCdHiZtDGZR5AmUMnwFhyNMs6kpMuCzShKiLXIepW5hrFQJVTCHGqWCjVPiAEK3NWTwV0nhu8c1YwfME6eKGXQeBYZCYCRCk9qgn8aHChIh1LUzpWuzdCYFcxVOBSqToF7tav1CF+3B/FgpeJgnrXGBjxecRYe07F210Ylazj9WIJ+iX8ujX2yOKhIgabxkxoVcg96gC9YFXaXTClWR64kre/CoIFtYXlOqyx00w7oZzD6KUczBhPjH3JKu4R0PpuyHhWhQ+6aI+wpSJqXhCWy8UD749REzzIkNxAoScT8x5byeH8BDW0HPwGDmmhuKpSgQ7OjdjLgCicbqIMGKF5urg2LZ9sM3H7o169NZ+3Tjjfg3lr2rV2gya55V99TZMNoOUDAQZjneqV+favXwX9asgDEOHO9Ywkp4NRlbcSQbDTZ3nbd0LjKwoalx8Q7Y5fhODnQ33FiMGWXGPYeJNUIN846b78zddNck2pK4FPTb1psjh3FRIDApH0xWt+1oNFDp7yw09KU1I/00nyA+2qm1z8RRq7/r/TmXfNruu6o/W9kT4vHvqg9XL1pXzSDtx+A8=',
+  },
+
+  {
+    id: '51',
+    title: '안피아 덱 1',
+    leaderName: NICOLA.name,
+    characters: [
+      {
+        character: NICOLA,
+        equipments: ['이차 상전이', '자각몽 섬유', '모노폴 마그네타'],
+      },
+      {
+        character: CAROLINE,
+        equipments: ['에비서레이터MK0', '시뮬레이트 스타', '거짓신의 속삭임'],
+      },
+      {
+        character: NAYUTA,
+        equipments: ['공간 위치 측정기', '시뮬레이트 스타', '뫼비우스'],
+      },
+      {
+        character: STELLA,
+        equipments: ['에비서레이터MK0', '공간이동', '헐튼 풍선'],
+      },
+      {
+        character: ANFIYA,
+        equipments: ['에비서레이터MK0', '시뮬레이트 스타', '뫼비우스'],
+      },
+    ],
+    desc: (
+      <div>
+        <div className="text-blue-500 ff-dh text-[20px]">
+          추천 각성: 니콜라★★,캐롤라인★,나유타★,스텔라★★,안피아★★
+        </div>
+      </div>
+    ),
+    // descLink: 'https://www.bilibili.com/video/BV17a1aY3EAe/?spm_id_from=333.337.search-card.all.click&vd_source=0940a2f1d94b67c9a6abcb5c5a81c044',
   },
 ]
 
