@@ -2,7 +2,7 @@ import axios from 'axios'
 import { toast } from 'react-toastify'
 
 const apiClient = axios.create({
-  baseURL: 'https://rsns.duckdns.org:3001',
+  baseURL: 'https://resonance-solstice.store:3001/',
   // baseURL: 'http://localhost:3001',
   headers: { 'Content-Type': 'application/json' },
 })
