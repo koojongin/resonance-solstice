@@ -2,7 +2,8 @@ import axios from 'axios'
 import { toast } from 'react-toastify'
 
 const apiClient = axios.create({
-  baseURL: !process.env.VERCEL ? 'http://localhost:3001' : 'http://rsns.duckdns.org:3001',
+  baseURL: 'http://rsns.duckdns.org:3001',
+  // baseURL: 'http://localhost:3001',
   headers: { 'Content-Type': 'application/json' },
 })
 
