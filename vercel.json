@@ -1,8 +1,0 @@
-{
-  "rewrites": [
-    {
-      "source": "/:path*",
-      "destination": "http://rsns.duckdns.org:3001/:path*"
-    }
-  ]
-}
