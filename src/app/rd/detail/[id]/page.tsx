@@ -1,7 +1,7 @@
 'use client'
 
 import { useParams } from 'next/navigation'
-import { RecommendationDeck } from '@/app/rd/rd-decks.const'
+import { RECOMMENDATION_DECKS, RecommendationDeck } from '@/app/rd/rd-decks.const'
 import createKey from '@/services/key-generator'
 import {
   EquipmentTooltipBox,
@@ -9,7 +9,7 @@ import {
   RsEquipmentCard,
 } from '@/app/components/character-frame/rs-character-card'
 import { RsCardSize } from '@/app/components/character-frame/rs-card-size.enum'
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { copyToClipboard } from '@/services/utils/copy-clipboard'
 import { Tooltip } from '@material-tailwind/react'
 import Link from 'next/link'
@@ -21,11 +21,13 @@ import { ALL_EQUIPMENTS } from '@/const/archive/equipment.const'
 import { RSHighlightedText } from '@/services/utils/highlight-text'
 import { CharacterThumbnailBox } from '@/app/components/character-frame/character-thumbnail-box'
 import { motion } from 'framer-motion'
+import { RECOMMENDATION_ES_DECKS } from '@/app/rd/eternal-scuffle/rd-eternal-scuffle.const'
 import { CHARACTER_DETAIL } from '@/const/character/character-detail.const'
 import { CHARACTER_SKILLS, CharacterSkill } from '@/const/character/character-skill.const'
 import { RS_CHARACTER_DICT } from '@/const/character/character.const'
 import { GradientButton } from '@/app/components/button/gradient-button'
-import { api } from '@/services/api/api.interceptor'
+
+const TOTAL_RD_DECKS = [...RECOMMENDATION_DECKS, ...RECOMMENDATION_ES_DECKS].reverse()
 
 function mixCharacterData(
   originDeck: RecommendationDeck | undefined,
@@ -62,25 +64,19 @@ function mixCharacterData(
   }
 }
 
-export default function RecommendationUserDeckDetailPage() {
+export default function RecommendationDeckDetailPage() {
   const { id } = useParams()
   const [isVisibleGenericEqBox, setIsVisibleGenericEqBox] = useState(false)
-  const [deck, setDeck] = useState<(RecommendationDeck & { skillDict: object }) | undefined>()
 
-  const loadDeck = useCallback(async () => {
-    const result = await api.post(`/recommendation-deck/get/${id}`)
-    const { data } = result
-    const { deck: rDeck } = data
-    const fixedDeck = { ...rDeck }
-    fixedDeck.characters = fixedDeck.characters.map((c: any) => {
-      return {
-        character: RS_CHARACTER_DICT[c.name],
-        equipments: (c?.equipments || []).map((equipment: any) => equipment?.name),
-      }
-    })
-    setDeck(mixCharacterData(fixedDeck))
-  }, [])
+  const originDeck = TOTAL_RD_DECKS.find((rDeck) => id === rDeck.id)
+  const deck: (RecommendationDeck & { skillDict: object }) | undefined =
+    mixCharacterData(originDeck)
 
+  const relatedDecks =
+    deck?.leaderName &&
+    TOTAL_RD_DECKS.filter(
+      (rDeck) => rDeck.characters.filter((c) => c.character.name === deck.leaderName).length > 0,
+    )
   const isExistLeader = deck?.leaderName
   const leaderIndex = deck?.characters.findIndex((c) => c.character.name === deck.leaderName)
 
@@ -93,13 +89,9 @@ export default function RecommendationUserDeckDetailPage() {
     })
     .filter((c) => c.recommendationEquipments.length > 0)
 
-  useEffect(() => {
-    loadDeck()
-  }, [])
-
   return (
     <div>
-      {!deck && <div>데이터 로드중...</div>}
+      {!deck && <div>조회된 덱이 없습니다.</div>}
       {deck && (
         <div className="flex flex-col gap-[10px]">
           <div className="ff-dh text-[30px] bg-gray-100 p-[10px] pb-[8px] border-y border-gray-500 flex items-center gap-[4px]">
@@ -171,7 +163,7 @@ export default function RecommendationUserDeckDetailPage() {
                       character={character}
                       height={200}
                     />
-                    {equipments?.length > 0 && (
+                    {equipments && (
                       <div className="min-h-[100px]">
                         <RsEquipmentCard
                           equipments={equipments || []}
@@ -181,12 +173,11 @@ export default function RecommendationUserDeckDetailPage() {
                         />
                       </div>
                     )}
-                    {!equipments ||
-                      (equipments.length === 0 && (
-                        <div className="min-h-[100px] flex items-center justify-center border border-gray-400 border-dashed text-gray-600 ff-dh text-[20px]">
-                          장비 데이터 없음
-                        </div>
-                      ))}
+                    {!equipments && (
+                      <div className="min-h-[100px] flex items-center justify-center border border-gray-400 border-dashed text-gray-600 ff-dh text-[20px]">
+                        장비 데이터 없음
+                      </div>
+                    )}
                     <hr className="border-cyan-800 border-[2px] border-b-0 border-dashed" />
                     <div className="flex flex-wrap w-full gap-[2px] items-center justify-center">
                       {(character.detail?.SKILLS || []).map((skillName: string, index: number) => {
@@ -430,6 +421,64 @@ export default function RecommendationUserDeckDetailPage() {
               <hr />
             </>
           )}
+
+          <div className="flex flex-col gap-[6px]">
+            <div className="ff-dh text-[24px]">
+              해당 리더가 포함되어 있는 추천 덱({relatedDecks?.length.toLocaleString() || 0})
+            </div>
+            <div className="flex flex-wrap gap-[10px]">
+              {relatedDecks &&
+                relatedDecks.map((relatedDeck, index) => {
+                  return (
+                    <div
+                      key={`rd_${relatedDeck.id}_${index}`}
+                      className="w-[312px] bg-gray-500 rounded overflow-hidden p-[2px] pb-0 shadow-md hover:drop-shadow-2xl hover:bg-blue-gray-500 hover:shadow-xl hover:shadow-blue-500/20"
+                    >
+                      <Link href={`/rd/detail/${relatedDeck.id}`}>
+                        <div className="flex flex-wrap gap-[2px]">
+                          {relatedDeck.characters.map((characterData, cIndex) => {
+                            const { character } = characterData
+                            const isLeader = character.name === relatedDeck.leaderName
+                            return (
+                              <div
+                                key={`rd_${relatedDeck.id}_${cIndex}`}
+                                className="w-[60px] h-[60px] relative overflow-hidden"
+                              >
+                                <div className="absolute w-full h-full z-40 opacity-90">
+                                  <RsCharacterBorderBox grade={character.grade} borderSize={3} />
+                                </div>
+                                <img
+                                  src={getFrameBgUrl(character.grade)}
+                                  className="z-0 w-full h-full absolute"
+                                />
+                                <div
+                                  className="min-h-full min-w-full bg-cover bg-no-repeat relative"
+                                  style={{
+                                    backgroundImage: `url(${convertCharacterThumbnailUrl(character.thumbnail, 100)})`,
+                                  }}
+                                />
+                                {isLeader && (
+                                  <div className="absolute bottom-0 w-full text-center text-white ff-dh text-[20px] text-shadow-outline">
+                                    리더
+                                  </div>
+                                )}
+                                <div
+                                  className="min-h-full min-w-full bg-cover"
+                                  style={{ backgroundImage: `url(${character.thumbnailLarge})` }}
+                                />
+                              </div>
+                            )
+                          })}
+                        </div>
+                        <div className="text-white ff-dh truncate w-full text-[20px] px-[10px] py-[4px] text-center">
+                          {relatedDeck.title}
+                        </div>
+                      </Link>
+                    </div>
+                  )
+                })}
+            </div>
+          </div>
         </div>
       )}
     </div>

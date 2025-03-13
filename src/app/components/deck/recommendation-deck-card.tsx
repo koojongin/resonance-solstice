@@ -22,6 +22,7 @@ export function RecommendationDeckCard({ deck }: { deck: RecommendationDeck }) {
 
   const { autoPreset, title, desc, characters, leaderName, owner, descLink } = deck
 
+  console.log(deck)
   useEffect(() => {
     setLocationOrigin(window.location.origin) // ✅ 브라우저에서 실행됨
   }, [])
@@ -32,7 +33,13 @@ export function RecommendationDeckCard({ deck }: { deck: RecommendationDeck }) {
       className="flex flex-col p-[8px] border w-full border-gray-300 rounded shadow-md shadow-gray-400/30"
     >
       <div className="flex items-center gap-[4px] mb-[4px]">
-        <Link href={`/rd/detail/${deck.id}`}>
+        <Link
+          href={
+            (deck as any)?._id
+              ? `${locationOrigin}/rd/user/detail/${deck.id}`
+              : `${locationOrigin}/rd/detail/${deck.id}`
+          }
+        >
           <div className="text-[17px] underline cursor-pointer">{title}</div>
         </Link>
         {autoPreset && (
@@ -104,7 +111,7 @@ export function RecommendationDeckCard({ deck }: { deck: RecommendationDeck }) {
           <Link
             className="w-full p-[4px] py-[8px] pb-[6px] items-center justify-center rounded flex bg-blue-gray-600 text-white"
             href={
-              deck.id.length > 10
+              (deck as any)?._id
                 ? `${locationOrigin}/rd/user/detail/${deck.id}`
                 : `${locationOrigin}/rd/detail/${deck.id}`
             }
