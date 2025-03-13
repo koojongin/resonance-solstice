@@ -37,7 +37,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           property="og:image"
-          content="https://imgproxy.shelter.id/sig/Z3M6Ly9zaGVsdGVyLW1lZGlhL3UvbmdBNTZkN1VqWFpnQVhDQXd3WlBack5SQmZKMy9pbWFnZXMvMTcyNzQ5MTI5NDM4MF81NDM2M2ExYy0zODkxLTQ0MGQtOWVlNS0zZTlhMjgxNzUyMzEuanBn"
+          content="https://imgproxy.shelter.id/sig/Z3M6Ly9zaGVsdGVyLW1lZGlhL3UvbmdBNTZkN1VqWFpnQVhDQXd3WlBack5SQmZKMy9pbWFnZXMvMTcyNzQ5MTI5NDM4MF81NDM2M2ExYy0zODkxLTQ0MGQtOWVlNS0zZTlhMjgxNzUyMzEuanBn?v=12345"
         />
         <meta property="og:url" content="https://resonance-solstice.vercel.app/" />
         <meta
