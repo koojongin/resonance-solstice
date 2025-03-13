@@ -17,11 +17,11 @@ export default function ClearMindTierList() {
       <div className="text-[30px] ff-dh">명경지수 티어 리스트</div>
       <Link
         target="_blank"
-        href="https://res.cloudinary.com/dqihpypxi/image/upload/v1741479590/resonance/clear-mind_xfnf6b.webp"
+        href="https://imgproxy.shelter.id/sig/Z3M6Ly9zaGVsdGVyLW1lZGlhL3UvYkI1OHJHc2Z1SU0wVEQ2SUtKNDNFTTM3Ukt4MS9pbWFnZXMvMTc0MTg2ODIxNjMyM18zYWYxZjUxZC0xY2EzLTQ5MmItODJlYy01ZmY5MGZhZmE2NGMud2VicA=="
       >
         <img
           className="mx-auto"
-          src="https://res.cloudinary.com/dqihpypxi/image/upload/v1741479590/resonance/clear-mind_xfnf6b.webp"
+          src="https://imgproxy.shelter.id/sig/Z3M6Ly9zaGVsdGVyLW1lZGlhL3UvYkI1OHJHc2Z1SU0wVEQ2SUtKNDNFTTM3Ukt4MS9pbWFnZXMvMTc0MTg2ODIxNjMyM18zYWYxZjUxZC0xY2EzLTQ5MmItODJlYy01ZmY5MGZhZmE2NGMud2VicA=="
         />
       </Link>
     </div>
