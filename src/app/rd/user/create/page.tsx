@@ -210,12 +210,15 @@ function UserRecommendationDeckCreatePage() {
         onSelect={onEquipmentSelect}
         data={equipmentSelectData}
       />
-      <input
-        value={deck.title}
-        onChange={handleTitleChange}
-        placeholder="덱 제목을 입력하세요."
-        className="border rounded border-gray-500 p-[10px]"
-      />
+      <div className="flex flex-col">
+        <div className="ff-dh text-[20px] flex gap-[10px]">덱 제목</div>
+        <input
+          value={deck.title}
+          onChange={handleTitleChange}
+          placeholder="덱 제목을 입력하세요."
+          className="border rounded border-gray-500 p-[10px]"
+        />
+      </div>
       <div className="flex flex-col">
         <div className="ff-dh text-[20px] flex gap-[10px]">
           승무원<span className="text-red-500">*첫번째 캐릭터가 리더입니다.</span>

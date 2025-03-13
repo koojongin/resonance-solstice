@@ -4,6 +4,7 @@ import { RecommendationDeckCard } from '@/app/components/deck/recommendation-dec
 import React, { useEffect, useState } from 'react'
 import { RecommendationDeck } from '@/app/rd/rd-decks.const'
 import { Pagination } from '@/const/api/pagination.interface'
+import { RecommendationUserDeckCard } from '@/app/components/deck/recommendation-user-deck-card'
 
 export default function RdUserDeckList({
   searchedKeyword,
@@ -38,7 +39,7 @@ export default function RdUserDeckList({
           </div>
           <div className="flex flex-col gap-[8px]">
             {decks.map((deck) => (
-              <RecommendationDeckCard deck={deck} key={`rdl_deck_${deck.id}`} />
+              <RecommendationUserDeckCard deck={deck} key={`rdl_deck_${deck.id}`} />
             ))}
           </div>
         </div>

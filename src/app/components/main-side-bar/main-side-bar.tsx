@@ -78,7 +78,7 @@ export default function MainSideBar() {
       path: '/rd',
       subMenu: [
         {
-          label: '유저 추천덱',
+          label: '유저 덱',
           path: '/rd/user',
         },
         {

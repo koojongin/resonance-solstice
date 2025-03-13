@@ -83,7 +83,7 @@ export default function RootLayout({
             {children}
           </div>
         </div>
-        <div className="bg-white/50 flex justify-center p-[8px] py-[20px] text-[14px] py-[30px]">
+        <div className="bg-white/50 flex justify-center p-[8px] py-[20px] text-[14px] py-[100px]">
           2025년 02월 14일, 이 프로젝트가 시작되었습니다.
         </div>
       </body>
