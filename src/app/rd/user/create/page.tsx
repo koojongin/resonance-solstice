@@ -34,6 +34,8 @@ function UserRecommendationDeckCreatePage() {
     characters: [undefined, undefined, undefined, undefined, undefined],
     password: '',
     id: '',
+    autoPreset: '',
+    descLink: '',
   })
   const [characterSelectedIndex, setCharacterSelectedIndex] = useState<number>()
   const [selectedEquipment, setSelectedEquipment] = useState<ExtendedRSEquipment>()
@@ -67,6 +69,12 @@ function UserRecommendationDeckCreatePage() {
     setDeck({
       ...deck,
       autoPreset: e.target.value,
+    })
+  }
+  const handleDescLinkChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setDeck({
+      ...deck,
+      descLink: e.target.value,
     })
   }
   const closeCharacterModal = (): void => {
@@ -351,7 +359,23 @@ function UserRecommendationDeckCreatePage() {
         />
       </div>
       <div className="flex flex-col">
-        <div className="ff-dh text-[20px]">비밀번호(최대10자)</div>
+        <div className="ff-dh text-[20px]">
+          관련링크<span className="text-gray-500">(선택 사항)</span>
+        </div>
+        <input
+          maxLength={200}
+          type="url"
+          value={deck.descLink}
+          onChange={handleDescLinkChange}
+          placeholder="관련 링크를 입력하세요"
+          className="border rounded border-gray-500 p-[10px]"
+        />
+      </div>
+      <div className="flex flex-col">
+        <div className="ff-dh text-[20px] text-red-500">
+          비밀번호(최대10자)
+          <span className="text-gray-500"> - 덱 수정 및 삭제에 사용됩니다.</span>
+        </div>
         <input
           type="password"
           maxLength={10}

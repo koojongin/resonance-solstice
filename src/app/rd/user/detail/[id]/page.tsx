@@ -342,7 +342,7 @@ export default function RecommendationUserDeckDetailPage() {
                     </GradientButton>
                   </Link>
                 </div>
-                <div>
+                <div className="w-full">
                   <Tooltip content="클릭시 오토 프리셋이 복사됩니다.">
                     <div
                       className="cursor-pointer max-h-[60px] overflow-y-scroll border p-[10px] rounded bg-gray-100 whitespace-pre-line flex mx-auto w-full break-all"
