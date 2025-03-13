@@ -41,7 +41,7 @@ export default function HomePage() {
   ].reverse()
   return (
     <div className="flex flex-col gap-[10px]">
-      <img src="https://res.cloudinary.com/dqihpypxi/image/upload/v1739699861/resonance/etc/banner_001_bkltao.png" />
+      <img src="https://imgproxy.shelter.id/sig/Z3M6Ly9zaGVsdGVyLW1lZGlhL3UvbmdBNTZkN1VqWFpnQVhDQXd3WlBack5SQmZKMy9pbWFnZXMvMTcyNzQ5MTI5NDM4MF81NDM2M2ExYy0zODkxLTQ0MGQtOWVlNS0zZTlhMjgxNzUyMzEuanBn" />
 
       <div className="border border-gray-400 p-[10px] rounded">
         <div className="text-[20px]">쿠폰</div>

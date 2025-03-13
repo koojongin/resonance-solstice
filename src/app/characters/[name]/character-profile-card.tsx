@@ -8,7 +8,6 @@ export function CharacterProfileCard({ character }: { character: RSCharacter }) 
     <div className="relative w-full rounded-[4px] border overflow-hidden shadow-md shadow-gray-800">
       <img
         className="w-full z-0 top-[30px]"
-        // src="https://res.cloudinary.com/dqihpypxi/image/upload/w_600/v1739699861/resonance/etc/profile-bg_pxdpv5.png"
         src="https://patchwiki.biligame.com/images/resonance/1/15/rnk1ixlziks176gslros7c3tfon5xz7.png"
       />
       {!character.thumbnailLarge && (

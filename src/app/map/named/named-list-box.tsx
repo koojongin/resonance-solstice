@@ -27,7 +27,7 @@ export default function MapNamedListBox() {
             className={`flex gap-[2px] items-center cursor-pointer p-[4px] border border-blue-gray-900 ${activeCss} ${isActiveMap && 'bg-blue-gray-900 text-white'}`}
             onClick={() => router.push(`/map/named/${map.name}`)}
           >
-            <img className="w-[20px]" src={getCityIconUrl(map.type)} />
+            {/* <img className="w-[20px]" src={getCityIconUrl(map.type)} /> */}
             {map.name}
           </div>
         )
