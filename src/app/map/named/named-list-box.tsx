@@ -27,7 +27,7 @@ export default function MapNamedListBox() {
             className={`flex gap-[2px] items-center cursor-pointer p-[4px] border border-blue-gray-900 ${activeCss} ${isActiveMap && 'bg-blue-gray-900 text-white'}`}
             onClick={() => router.push(`/map/named/${map.name}`)}
           >
-            {/* <img className="w-[20px]" src={getCityIconUrl(map.type)} /> */}
+            <img className="w-[20px]" src={getCityIconUrl(map.type)} />
             {map.name}
           </div>
         )
@@ -37,14 +37,16 @@ export default function MapNamedListBox() {
 }
 
 function getCityIconUrl(type: RSCityType) {
-  if (type === RSCityType.CORE_CITY)
-    return 'https://res.cloudinary.com/dqihpypxi/image/upload/v1741782969/resonance/city/icon_city01_ahhyxe.webp'
-  if (type === RSCityType.SMALL_CITY_SQUARE)
-    return 'https://res.cloudinary.com/dqihpypxi/image/upload/v1741782969/resonance/city/icon_city02_nqowd3.webp'
+  if (type === RSCityType.CORE_CITY) {
+    return 'https://imgproxy.shelter.id/sig/w:67/rt:fill/Z3M6Ly9zaGVsdGVyLW1lZGlhL3UvYkI1OHJHc2Z1SU0wVEQ2SUtKNDNFTTM3Ukt4MS9pbWFnZXMvMTc0MTg2ODM1ODU3Ml83ZDg5ZTAzOC01ZmRiLTRmOGQtODA0MC05NmI4NDQ4ZmUzNTcud2VicA=='
+  }
+  if (type === RSCityType.SMALL_CITY_SQUARE) {
+    return 'https://imgproxy.shelter.id/sig/w:37/rt:fill/Z3M6Ly9zaGVsdGVyLW1lZGlhL3UvYkI1OHJHc2Z1SU0wVEQ2SUtKNDNFTTM3Ukt4MS9pbWFnZXMvMTc0MTg2ODM1ODU3Ml84MTA3NWU1ZC0xNTY2LTQzOTAtOTgzOS1lNjM5YWU1N2YzNTUud2VicA=='
+  }
   if (type === RSCityType.SMALL_CITY_RHOMBUS) {
-    return 'https://res.cloudinary.com/dqihpypxi/image/upload/v1741782969/resonance/city/icon_city03_cs8erq.webp'
+    return 'https://imgproxy.shelter.id/sig/w:51/rt:fill/Z3M6Ly9zaGVsdGVyLW1lZGlhL3UvYkI1OHJHc2Z1SU0wVEQ2SUtKNDNFTTM3Ukt4MS9pbWFnZXMvMTc0MTg2ODM1ODU3Ml8zYjE1ZjVkZC1mYzIwLTRlMzEtOGJiMy0xNzdlM2FmZmFmNWMud2VicA=='
   }
   if (type === RSCityType.SMALL_CITY_RECYCLE) {
-    return 'https://res.cloudinary.com/dqihpypxi/image/upload/v1741782968/resonance/city/icon_city04_scfurd.webp'
+    return 'https://imgproxy.shelter.id/sig/w:43/rt:fill/Z3M6Ly9zaGVsdGVyLW1lZGlhL3UvYkI1OHJHc2Z1SU0wVEQ2SUtKNDNFTTM3Ukt4MS9pbWFnZXMvMTc0MTg2ODM1ODU3Ml8xZDRmMjRlNy0yOGJhLTQzNGUtOTNiNi05ZTZhNDkxZmU5OTcud2VicA=='
   }
 }
