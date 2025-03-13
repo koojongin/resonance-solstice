@@ -35,7 +35,8 @@ export const RAZIEL_THE_REMINISCE: RSCharacter = {
   faction: RS_FACTION.SOURCE_CITADEL,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.BACK,
-  thumbnail: '061Raziel_The_Reminisce_pc9t1x.webp',
+  thumbnail:
+    'https://patchwiki.biligame.com/images/resonance/6/6f/4kzapk57banre12zs90982f8wqxza4b.png',
   thumbnailLarge:
     'https://patchwiki.biligame.com/images/resonance/7/70/7gs2pbi5d6ik1aoupvevwx06ginu2pz.png',
   gender: RS_GENDER.FEMALE,
@@ -47,7 +48,8 @@ export const SHIRE: RSCharacter = {
   faction: RS_FACTION.CHAOS,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.BACK,
-  thumbnail: '058Shire_zzadoa.webp',
+  thumbnail:
+    'https://patchwiki.biligame.com/images/resonance/b/b0/9ie7g5kbg77kxa3wpma3qkwijb585ma.png',
   thumbnailLarge:
     'https://patchwiki.biligame.com/images/resonance/6/68/9mmcj7lmk4g2zltt3hs9n1c7p6fhf8t.png',
   gender: RS_GENDER.FEMALE,
@@ -59,7 +61,8 @@ export const PELOTA: RSCharacter = {
   faction: RS_FACTION.GARDENERS,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.BACK,
-  thumbnail: '048Pelota_abdwxs.webp',
+  thumbnail:
+    'https://patchwiki.biligame.com/images/resonance/3/34/6xw8nyrrm1ioa97qj48f9y0k4d255zl.png',
   thumbnailLarge:
     'https://patchwiki.biligame.com/images/resonance/a/af/ls5mioc4m8xbpy9xvkzcqlvh6ljtun5.png',
   gender: RS_GENDER.FEMALE,
@@ -72,7 +75,8 @@ export const DOROTHY: RSCharacter = {
   faction: RS_FACTION.RAILWAY,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.BACK,
-  thumbnail: '041Dorothy_yuuxgr.webp',
+  thumbnail:
+    'https://patchwiki.biligame.com/images/resonance/5/55/824lzhgqjvy0tdxuleasjmhcd43xl54.png',
   thumbnailLarge:
     'https://patchwiki.biligame.com/images/resonance/0/05/f8qhtxzx5f58jq7mbfetsxib42t8nic.png',
   gender: RS_GENDER.FEMALE,
@@ -84,7 +88,8 @@ export const JOSHUA: RSCharacter = {
   faction: RS_FACTION.SOURCE_CITADEL,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.MIDDLE,
-  thumbnail: '020Joshua_zmpjhn.webp',
+  thumbnail:
+    'https://patchwiki.biligame.com/images/resonance/9/9e/jn2p7d9fuxa2b4kijg6vljnsyctac2x.png',
   thumbnailLarge:
     'https://patchwiki.biligame.com/images/resonance/5/57/3kup3cenwdozp42f8vdc325slyohgr0.png',
   gender: RS_GENDER.UNKNOWN,
@@ -96,7 +101,8 @@ export const SOMMER: RSCharacter = {
   faction: RS_FACTION.SOURCE_CITADEL,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
-  thumbnail: '023Sommer_qe2idd.webp',
+  thumbnail:
+    'https://patchwiki.biligame.com/images/resonance/8/83/l2wwi95nt3abfwicfoqm26rmt494mnx.png',
   thumbnailLarge:
     'https://patchwiki.biligame.com/images/resonance/b/b6/07qf581995pkz0uaiyke42d912jkyu6.png',
   gender: RS_GENDER.FEMALE,
@@ -108,7 +114,8 @@ export const USHANA: RSCharacter = {
   faction: RS_FACTION.SOURCE_CITADEL,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
-  thumbnail: '032Ushana_dd3xwt.webp',
+  thumbnail:
+    'https://patchwiki.biligame.com/images/resonance/5/5f/pr38j4z0f3mod09k705odrz9vg0rdfw.png',
   thumbnailLarge:
     'https://patchwiki.biligame.com/images/resonance/a/a8/7y2podgu54y2130do72ivzfkpghdvfc.png',
   gender: RS_GENDER.FEMALE,
@@ -120,7 +127,8 @@ export const SUMMERSHIZURU: RSCharacter = {
   faction: RS_FACTION.RAILWAY,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.BACK,
-  thumbnail: '027SummerShizuru_bja7jh.webp',
+  thumbnail:
+    'https://patchwiki.biligame.com/images/resonance/d/de/qqrft9tlz1ldjit0hzayp4n7gtr3tvh.png',
   thumbnailLarge:
     'https://patchwiki.biligame.com/images/resonance/d/df/kp7ts66zs784d7875s28l5p52130skq.png',
   gender: RS_GENDER.FEMALE,
@@ -132,7 +140,8 @@ export const NICOLA: RSCharacter = {
   faction: RS_FACTION.GARDENERS,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.BACK,
-  thumbnail: '017Nicola_hp0hvx.webp',
+  thumbnail:
+    'https://patchwiki.biligame.com/images/resonance/0/01/23b1it2iy06w1ijt2ncayvr3i768ehk.png',
   thumbnailLarge:
     'https://patchwiki.biligame.com/images/resonance/0/05/hfa2364b0y8776o60zavvmaana3aksg.png',
   gender: RS_GENDER.FEMALE,
@@ -144,7 +153,8 @@ export const DUSTIN: RSCharacter = {
   faction: RS_FACTION.SOURCE_CITADEL,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
-  thumbnail: '033Dustin_cvrvso.webp',
+  thumbnail:
+    'https://patchwiki.biligame.com/images/resonance/7/76/lpcgzcy77vj8pba9o4zavicup2cdtod.png',
   thumbnailLarge:
     'https://patchwiki.biligame.com/images/resonance/c/c6/9waw3wiw3pthlqvgmahgk2inkgyhgem.png',
   gender: RS_GENDER.MALE,
@@ -156,7 +166,8 @@ export const ANFIYA: RSCharacter = {
   faction: RS_FACTION.GARDENERS,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.MIDDLE,
-  thumbnail: '019Anfiya_tsmwz5.webp',
+  thumbnail:
+    'https://patchwiki.biligame.com/images/resonance/0/0d/5btj9lbwex4qirctyegw5ebpfurrbyf.png',
   thumbnailLarge:
     'https://patchwiki.biligame.com/images/resonance/b/ba/nnvs3gmn6u4sl9hbrr7ry19eplvvtqf.png',
   gender: RS_GENDER.FEMALE,
@@ -168,7 +179,8 @@ export const HAYABUSA: RSCharacter = {
   faction: RS_FACTION.NIGHT_CHAINS,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.MIDDLE,
-  thumbnail: '014Hayabusa_htq8bi.webp',
+  thumbnail:
+    'https://patchwiki.biligame.com/images/resonance/a/a0/glwdfxwjiavsd3yzfay2anv9bf4h8kn.png',
   thumbnailLarge:
     'https://patchwiki.biligame.com/images/resonance/f/f8/t64gzdu51up59c7rgmjfznj2gq4hf0r.png',
   gender: RS_GENDER.MALE,
@@ -180,7 +192,8 @@ export const JALHAY: RSCharacter = {
   faction: RS_FACTION.SOURCE_CITADEL,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.BACK,
-  thumbnail: '008Jalhay_sm91ha.webp',
+  thumbnail:
+    'https://patchwiki.biligame.com/images/resonance/b/bd/2oliq2vbvvpqkqqjx4aea6sk0bgd5d2.png',
   thumbnailLarge:
     'https://patchwiki.biligame.com/images/resonance/3/32/5plh6grqi7bop057usmeg2llvpjn72x.png',
   gender: RS_GENDER.FEMALE,
@@ -192,7 +205,8 @@ export const ITHOS: RSCharacter = {
   faction: RS_FACTION.SOURCE_CITADEL,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.BACK,
-  thumbnail: '005Ithos_gswwyz.webp',
+  thumbnail:
+    'https://patchwiki.biligame.com/images/resonance/6/62/bj6gl08kvk8i5ffzkgcp98e44br82wg.png',
   thumbnailLarge:
     'https://patchwiki.biligame.com/images/resonance/c/ce/82nthbmin655kajh2nx9ytaxxdxg9hw.png',
   gender: RS_GENDER.MALE,
@@ -204,7 +218,8 @@ export const IKUMA: RSCharacter = {
   faction: RS_FACTION.CREW_STRANGER,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
-  thumbnail: '012Ikuma_bdadfk.webp',
+  thumbnail:
+    'https://patchwiki.biligame.com/images/resonance/2/27/f47u5ewt5kqcx9vatieyqnxjh05szr5.png',
   thumbnailLarge:
     'https://patchwiki.biligame.com/images/resonance/c/cb/7fgnp0pxb86bbwq4rit2xxg9uk4uc7k.png',
   gender: RS_GENDER.MALE,
@@ -216,7 +231,8 @@ export const LISSANDRA: RSCharacter = {
   faction: RS_FACTION.SOURCE_CITADEL,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
-  thumbnail: '004Lissandra_t7kok4.webp',
+  thumbnail:
+    'https://patchwiki.biligame.com/images/resonance/4/42/r2nhhrokbtj6mv8seu8853xkzai2036.png',
   thumbnailLarge:
     'https://patchwiki.biligame.com/images/resonance/b/b3/r6y79wdsj5qbifib04lcj6ve1prv4iy.png',
   gender: RS_GENDER.FEMALE,
@@ -228,7 +244,8 @@ export const MUMEI: RSCharacter = {
   faction: RS_FACTION.CREW_STRANGER,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
-  thumbnail: '018Mumei_itervx.webp',
+  thumbnail:
+    'https://patchwiki.biligame.com/images/resonance/3/39/pslrd8s3yh7kmiln9g7j5gu4tnolz6a.png',
   thumbnailLarge:
     'https://patchwiki.biligame.com/images/resonance/f/fc/5jdzkm0t3u9s6dribvpi9da9drkar55.png',
   gender: RS_GENDER.FEMALE,
@@ -240,7 +257,8 @@ export const PALADI: RSCharacter = {
   faction: RS_FACTION.RAILWAY,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.MIDDLE,
-  thumbnail: '016Paladi_awt63u.webp',
+  thumbnail:
+    'https://patchwiki.biligame.com/images/resonance/b/b5/823ef03z3minqh0v7h09zm1j7yrloh3.png',
   thumbnailLarge:
     'https://patchwiki.biligame.com/images/resonance/5/5a/pe6oaj0kexh9t9kpqlfjdm9yiq6flh0.png',
   gender: RS_GENDER.FEMALE,
@@ -253,7 +271,8 @@ export const CONNOR: RSCharacter = {
   faction: RS_FACTION.MUNDUS,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
-  thumbnail: '010_ixpccf.png',
+  thumbnail:
+    'https://patchwiki.biligame.com/images/resonance/d/da/693zk462exf86w0saftvznuqupwmuej.png',
   thumbnailLarge:
     'https://patchwiki.biligame.com/images/resonance/0/05/9a0t69tjgc5kdplwl14qtjrvwoktl0l.png',
   gender: RS_GENDER.FEMALE,
@@ -266,7 +285,8 @@ export const VERLAINE: RSCharacter = {
   faction: RS_FACTION.MUNDUS,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.BACK,
-  thumbnail: '025_dpzzhb.png',
+  thumbnail:
+    'https://patchwiki.biligame.com/images/resonance/9/99/lxsqzm2j1w49tk8z12vnlp092r7yqdj.png',
   thumbnailLarge:
     'https://patchwiki.biligame.com/images/resonance/b/bf/6ojswpyudt2itmzc18etludn6upy1jw.png',
   gender: RS_GENDER.FEMALE,
@@ -279,7 +299,8 @@ export const CHARLOTTE: RSCharacter = {
   faction: RS_FACTION.MUNDUS,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
-  thumbnail: '029_tylcoe.png',
+  thumbnail:
+    'https://patchwiki.biligame.com/images/resonance/2/28/bqsrujv5775aocb9p7op05xrx852q7a.png',
   thumbnailLarge:
     'https://patchwiki.biligame.com/images/resonance/b/b0/41834ks3migirhg4rpeny08yn82kac9.png',
   gender: RS_GENDER.FEMALE,
@@ -292,7 +313,8 @@ export const SUEN: RSCharacter = {
   faction: RS_FACTION.SOURCE_CITADEL,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
-  thumbnail: '047_w33fbf.png',
+  thumbnail:
+    'https://patchwiki.biligame.com/images/resonance/a/a3/6j4kheodb9w0wd4hfkqh1zkt72m6lih.png',
   thumbnailLarge:
     'https://patchwiki.biligame.com/images/resonance/c/cf/0tqy7eq6ssf7ig3awcbz5ryhj99enuo.png',
   gender: RS_GENDER.FEMALE,
@@ -304,7 +326,8 @@ export const NAYUTA: RSCharacter = {
   faction: RS_FACTION.SOURCE_CITADEL,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.MIDDLE,
-  thumbnail: '036_fchyle.png',
+  thumbnail:
+    'https://patchwiki.biligame.com/images/resonance/0/00/js1l3c6ehy556lhpbvpmbxwkc3sbldp.png',
   thumbnailLarge:
     'https://patchwiki.biligame.com/images/resonance/a/a5/qivpzu3hp9xcf8pbee78v62mamhcg54.png',
   gender: RS_GENDER.MALE,
@@ -317,7 +340,8 @@ export const KATAS: RSCharacter = {
   faction: RS_FACTION.SOURCE_CITADEL,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
-  thumbnail: '001_b2n6ti.png',
+  thumbnail:
+    'https://patchwiki.biligame.com/images/resonance/e/ea/g7qvkhgksqc6dmeoeogo5cg6xdyb8r4.png',
   thumbnailLarge:
     'https://patchwiki.biligame.com/images/resonance/2/26/d0zmjdgbaavvz65rt1x75wmz98mzhlf.png',
   gender: RS_GENDER.FEMALE,
@@ -329,7 +353,8 @@ export const WENSHENG: RSCharacter = {
   faction: RS_FACTION.NIGHT_CHAINS,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
-  thumbnail: '015_zihuk6.png',
+  thumbnail:
+    'https://patchwiki.biligame.com/images/resonance/9/94/pmucfxwidn1kpu7ni3rp1n5trgw8c5v.png',
   thumbnailLarge:
     'https://patchwiki.biligame.com/images/resonance/5/57/9ee53solbl2ad9nnnqgi66d4qz65jt5.png',
   gender: RS_GENDER.MALE,
@@ -342,7 +367,8 @@ export const MARGIELA: RSCharacter = {
   faction: RS_FACTION.NIGHT_CHAINS,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.BACK,
-  thumbnail: '059_truhkd.png',
+  thumbnail:
+    'https://patchwiki.biligame.com/images/resonance/a/a0/djgvzxvmqbiky8n0pze1ybsksxqus3w.png',
   thumbnailLarge:
     'https://patchwiki.biligame.com/images/resonance/c/c8/j6u0kb1tkny7frnqpb31dh5lqtjeuhm.png',
   gender: RS_GENDER.FEMALE,
@@ -354,7 +380,8 @@ export const ARINA: RSCharacter = {
   faction: RS_FACTION.NIGHT_CHAINS,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
-  thumbnail: '066.png',
+  thumbnail:
+    'https://patchwiki.biligame.com/images/resonance/9/9d/pxkxvbdqdbtdh35t8o2rjzigmkw5pqu.png',
   thumbnailLarge:
     'https://patchwiki.biligame.com/images/resonance/b/b3/0hgvwlxnn90ej5gdegr626qfu2qd3k6.png',
   gender: RS_GENDER.FEMALE,
@@ -367,7 +394,8 @@ export const ILONA: RSCharacter = {
   faction: RS_FACTION.RAILWAY,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.BACK,
-  thumbnail: '064_lfv9yi.png',
+  thumbnail:
+    'https://patchwiki.biligame.com/images/resonance/1/1a/51urp8w56ytk1yu5qbcokrijok8og2i.png',
   thumbnailLarge:
     'https://patchwiki.biligame.com/images/resonance/3/36/6sxqoudj4yquts61juhjndbjjkizkg8.png',
   gender: RS_GENDER.FEMALE,
@@ -379,7 +407,8 @@ export const STELLA: RSCharacter = {
   faction: RS_FACTION.GARDENERS,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
-  thumbnail: '052_njx0wo.png',
+  thumbnail:
+    'https://patchwiki.biligame.com/images/resonance/3/39/gkf4tscz3e7u5ahmzl4frhliehe4f97.png',
   thumbnailLarge:
     'https://patchwiki.biligame.com/images/resonance/f/f0/p4cfdxs2i4o1en2a0frfazvdrrgco7b.png',
   gender: RS_GENDER.FEMALE,
@@ -391,7 +420,8 @@ export const CAROLINE: RSCharacter = {
   faction: RS_FACTION.GARDENERS,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.MIDDLE,
-  thumbnail: '026_xunqec.png',
+  thumbnail:
+    'https://patchwiki.biligame.com/images/resonance/4/41/o3nffkahbbrvahbx087u6t7qy8719ed.png',
   thumbnailLarge:
     'https://patchwiki.biligame.com/images/resonance/0/05/3frnu76sjtpwxxgcxanptudema2wcny.png',
   gender: RS_GENDER.FEMALE,
@@ -404,7 +434,8 @@ export const TENNIE: RSCharacter = {
   faction: RS_FACTION.GARDENERS,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
-  thumbnail: '007_ptpyvu.png',
+  thumbnail:
+    'https://patchwiki.biligame.com/images/resonance/f/f3/02wi2sboshumw98nf7xh9sci7li57ct.png',
   thumbnailLarge:
     'https://patchwiki.biligame.com/images/resonance/0/01/4szdlgh32hs2a2ix0xrykkda6r3n59t.png',
   gender: RS_GENDER.FEMALE,
