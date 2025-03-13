@@ -104,7 +104,10 @@ export default function RecommendationUserDeckDetailPage() {
       {deck && (
         <div className="flex flex-col gap-[4px]">
           <div className="flex w-full justify-end gap-[4px]">
-            <div className="bg-blue-300 inline-block text-white ff-dh text-[20px] min-w-[50px] h-[30px] flex items-center justify-center rounded shadow-md cursor-pointer">
+            <div
+              className="bg-blue-300 inline-block text-white ff-dh text-[20px] min-w-[50px] h-[30px] flex items-center justify-center rounded shadow-md cursor-pointer"
+              onClick={() => toast('개발중')}
+            >
               수정
             </div>
             <Tooltip
