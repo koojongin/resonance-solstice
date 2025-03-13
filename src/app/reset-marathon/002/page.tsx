@@ -4,6 +4,7 @@ import createKey from '@/services/key-generator'
 import {
   ACHIWA,
   AKIRA,
+  ANFIYA,
   AOBA,
   ARCANA,
   ARINA,
@@ -67,7 +68,7 @@ export default function TierListPage2() {
   const tierList: { [key: string]: RSCharacter[] } = {
     '0 Tier': [NAYUTA, STELLA, RINA_F],
     '1 Tier': [JOSHUA, DUSTIN, CAROLINE, NICOLA, FENIA, TENNIE],
-    '1.5 Tier': [KATAS, ARINA, AOBA, KALEYA, ARCANA, VERLAINE, KAREN],
+    '1.5 Tier': [ANFIYA, KATAS, ARINA, AOBA, KALEYA, ARCANA, VERLAINE, KAREN],
     '2 Tier': [MARGIELA, LIVIA, SUEN, ILONA, YER, CONNOR, YEJUE, VALENTINE, WENSHENG],
     '3 Tier': [
       FLAN,
@@ -152,6 +153,7 @@ export default function TierListPage2() {
             </Link>
           </Tooltip>
           <span>+더스틴 추가(25/03/06)</span>
+          <span>+안피아 추가(25/03/13)</span>
         </div>
         <div className="mt-[4px] flex flex-wrap gap-[4px] items-center cursor-pointer">
           <a href={EXTERNAL_USERS['1'].link} target="_blank">
