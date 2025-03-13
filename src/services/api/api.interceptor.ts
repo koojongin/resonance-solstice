@@ -1,9 +1,10 @@
 import axios from 'axios'
 import { toast } from 'react-toastify'
 
+const isProduction = process.env.NODE_ENV === 'production'
 const apiClient = axios.create({
-  baseURL: 'https://resonance-solstice.store:3001/',
-  // baseURL: 'http://localhost:3001',
+  baseURL: isProduction ? 'https://resonance-solstice.store:3001/' : 'http://localhost:3001',
+  // baseURL: 'https://resonance-solstice.store:3001/',
   headers: { 'Content-Type': 'application/json' },
 })
 
@@ -21,7 +22,15 @@ apiClient.interceptors.response.use(
     return response
   },
   (error) => {
-    toast(error.message)
+    if (error.status === 429) {
+      try {
+        const { message, statusCode } = error.response.data
+        toast(message || error.message || 'Unexpected Error.')
+        return Promise.reject(error)
+      } catch (e) {
+        /* empty */
+      }
+    }
     return Promise.reject(error)
   },
 )

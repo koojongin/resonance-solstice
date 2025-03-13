@@ -64,7 +64,7 @@ function EquipmentSelectModal({
           justifyContent: 'center', // 수평 중앙 정렬
           alignItems: 'center', // 수직 중앙 정렬
         }}
-        className="modal-container max-w-[800px] mx-auto"
+        className="modal-container max-w-[800px] mx-auto min-w-[90%]"
       >
         <div className="bg-white p-[15px] rounded-md">
           <Typography id="modal-title" variant="h6" component="h2">
@@ -74,8 +74,9 @@ function EquipmentSelectModal({
             {selectableEquipments?.map((equipment, index) => {
               return (
                 <div key={`c_s_modal_${index}`} onClick={() => handleItemSelect(equipment)}>
-                  <div className="w-[100px]">
+                  <div className="w-[90px]">
                     <EquipmentBoxResponsive equipment={equipment} />
+                    <div className="text-center">{equipment.name}</div>
                   </div>
                 </div>
               )

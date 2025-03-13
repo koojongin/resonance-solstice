@@ -26,6 +26,7 @@ import { CHARACTER_SKILLS, CharacterSkill } from '@/const/character/character-sk
 import { RS_CHARACTER_DICT } from '@/const/character/character.const'
 import { GradientButton } from '@/app/components/button/gradient-button'
 import { api } from '@/services/api/api.interceptor'
+import { DeleteDeckTooltip } from '@/app/rd/user/detail/delete-deck-tooltip'
 
 function mixCharacterData(
   originDeck: RecommendationDeck | undefined,
@@ -101,7 +102,21 @@ export default function RecommendationUserDeckDetailPage() {
     <div>
       {!deck && <div>데이터 로드중...</div>}
       {deck && (
-        <div className="flex flex-col gap-[10px]">
+        <div className="flex flex-col gap-[4px]">
+          <div className="flex w-full justify-end gap-[4px]">
+            <div className="bg-blue-300 inline-block text-white ff-dh text-[20px] min-w-[50px] h-[30px] flex items-center justify-center rounded shadow-md cursor-pointer">
+              수정
+            </div>
+            <Tooltip
+              interactive
+              className="bg-transparent p-0 m-0"
+              content={<DeleteDeckTooltip id={deck.id} />}
+            >
+              <div className="bg-red-400 inline-block text-white ff-dh text-[20px] min-w-[50px] h-[30px] flex items-center justify-center rounded shadow-md cursor-pointer">
+                삭제
+              </div>
+            </Tooltip>
+          </div>
           <div className="ff-dh text-[30px] bg-gray-100 p-[10px] pb-[8px] border-y border-gray-500 flex items-center gap-[4px]">
             <Tooltip content="클릭시 페이지 링크가 복사됩니다.">
               <div

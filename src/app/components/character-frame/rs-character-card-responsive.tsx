@@ -6,7 +6,6 @@ import {
   getFrameBgUrl,
 } from '@/services/character-url'
 import { RsCharacterBorderBox } from '@/app/components/character-frame/rs-character-border-box'
-import { RsCardSize } from '@/app/components/character-frame/rs-card-size.enum'
 import { Tooltip } from '@material-tailwind/react'
 
 export function RsCharacterCardResponsive({

@@ -28,7 +28,7 @@ const DEFAULT_ALL_EQUIPMENTS: {
     grade: RS_GRADE.SSR,
     desc: '기본 속성: 공격력+39\n옵션: [원소핵-불] 생성 후 다음 내는 [점화]/[작열]/[광염]/[불바다] 키워드를 가진 [레드카드]의 피해가 50% 증가합니다.(중첩 가능)',
     thumbnail:
-      'https://res.cloudinary.com/dqihpypxi/image/upload/v1741492649/resonance/weapons/fire_of_elmo_jfkbf2.webp',
+      'https://imgproxy.shelter.id/sig/w:200/rt:fill/Z3M6Ly9zaGVsdGVyLW1lZGlhL3UvYkI1OHJHc2Z1SU0wVEQ2SUtKNDNFTTM3Ukt4MS9pbWFnZXMvMTc0MTg3MTAwODQ2Nl80MjdiOGVkMi1jZTc5LTRkMDQtOTNjMi1lNWJjYjQ0NDQzZTMud2VicA==',
     faction: RS_FACTION.SOURCE_CITADEL,
     earnsPath: [
       {
@@ -58,7 +58,7 @@ const DEFAULT_ALL_EQUIPMENTS: {
     grade: RS_GRADE.SSR,
     desc: '기본 속성: 방어력+37\n옵션: 받는 화염 피해가 15% 감소하고 동시에 30% 확률로 [점화] 피해에 면역됩니다.',
     thumbnail:
-      'https://res.cloudinary.com/dqihpypxi/image/upload/v1741491957/resonance/weapons/fireproof_armor_h8ij6l.webp',
+      'https://imgproxy.shelter.id/sig/w:200/rt:fill/Z3M6Ly9zaGVsdGVyLW1lZGlhL3UvYkI1OHJHc2Z1SU0wVEQ2SUtKNDNFTTM3Ukt4MS9pbWFnZXMvMTc0MTg3MTAwODQ2Nl83NTc0ZTBjMi1mNGYzLTRjNDUtOTZkOC0yNGU2MTdjMWJkZjMud2VicA==',
     faction: RS_FACTION.RAILWAY,
     earnsPath: [
       {
@@ -96,7 +96,7 @@ const DEFAULT_ALL_EQUIPMENTS: {
     grade: RS_GRADE.SSR,
     desc: '기본 속성: 체력+3823\n옵션: 자신에게 [인뢰]가 부여될 때 비용을 0.1 회복합니다.',
     thumbnail:
-      'https://res.cloudinary.com/dqihpypxi/image/upload/v1741487116/resonance/weapons/fake_note_qqcpel.webp',
+      'https://imgproxy.shelter.id/sig/w:200/rt:fill/Z3M6Ly9zaGVsdGVyLW1lZGlhL3UvYkI1OHJHc2Z1SU0wVEQ2SUtKNDNFTTM3Ukt4MS9pbWFnZXMvMTc0MTg3MTAwODQ2Nl81ODQ0OTJhMS0xMTQyLTRkYmYtYjNkNS1iOGJlZGFjNGVlOWEud2VicA==',
     faction: RS_FACTION.CHAOS,
     earnsPath: [
       {
@@ -118,7 +118,7 @@ const DEFAULT_ALL_EQUIPMENTS: {
     grade: RS_GRADE.SSR,
     desc: '기본 속성: 방어력+37\n옵션: 받는 잔향 피해가 15% 감소하고 동시에 30% 확률로 [변신] 효과에 면역됩니다.',
     thumbnail:
-      'https://res.cloudinary.com/dqihpypxi/image/upload/v1741486657/resonance/weapons/magic_armor_hamor_jo6hux.webp',
+      'https://imgproxy.shelter.id/sig/w:200/rt:fill/Z3M6Ly9zaGVsdGVyLW1lZGlhL3UvYkI1OHJHc2Z1SU0wVEQ2SUtKNDNFTTM3Ukt4MS9pbWFnZXMvMTc0MTg3MTAwODQ2Nl8yMDQxYTVjMC0yZTljLTQxMDAtOGQwMS00MmI4MzdlNTA2M2Eud2VicA==',
     faction: RS_FACTION.MUNDUS,
     earnsPath: [
       {
@@ -140,7 +140,7 @@ const DEFAULT_ALL_EQUIPMENTS: {
     grade: RS_GRADE.SSR,
     desc: '기본 속성: 방어력+38\n옵션: 받는 전자기 피해가 15% 감소하고 동시에 30% 확률로 [인뢰] 피해에 면역됩니다.',
     thumbnail:
-      'https://res.cloudinary.com/dqihpypxi/image/upload/v1741486357/resonance/weapons/armor_lzbw7k.webp',
+      'https://imgproxy.shelter.id/sig/w:200/rt:fill/Z3M6Ly9zaGVsdGVyLW1lZGlhL3UvYkI1OHJHc2Z1SU0wVEQ2SUtKNDNFTTM3Ukt4MS9pbWFnZXMvMTc0MTg3MTAwODQ2NV81MzA0NmJhMy1lZWI0LTQ0YWYtODlhYy0wYmRjZTliZTUxM2Yud2VicA==',
     faction: RS_FACTION.GARDENERS,
     earnsPath: [
       {
@@ -170,7 +170,7 @@ const DEFAULT_ALL_EQUIPMENTS: {
     grade: RS_GRADE.SSR,
     desc: '기본 속성: 공격력+37\n옵션: 자신이 주는 전자기 피해가 15% 증가합니다.',
     thumbnail:
-      'https://res.cloudinary.com/dqihpypxi/image/upload/v1741485795/resonance/weapons/spectrum_klsk1q.webp',
+      'https://imgproxy.shelter.id/sig/w:200/rt:fill/Z3M6Ly9zaGVsdGVyLW1lZGlhL3UvYkI1OHJHc2Z1SU0wVEQ2SUtKNDNFTTM3Ukt4MS9pbWFnZXMvMTc0MTg3MTAwODQ2Nl82M2M1ZjVlMS1jZDM0LTQxZmUtYWIyYi1jYTYzOTc2Y2UxNzUud2VicA==',
     faction: RS_FACTION.GARDENERS,
     earnsPath: [
       {

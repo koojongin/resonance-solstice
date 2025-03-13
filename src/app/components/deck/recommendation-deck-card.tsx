@@ -22,9 +22,8 @@ export function RecommendationDeckCard({ deck }: { deck: RecommendationDeck }) {
 
   const { autoPreset, title, desc, characters, leaderName, owner, descLink } = deck
 
-  console.log(deck)
   useEffect(() => {
-    setLocationOrigin(window.location.origin) // ✅ 브라우저에서 실행됨
+    setLocationOrigin(window.location.origin)
   }, [])
 
   return (

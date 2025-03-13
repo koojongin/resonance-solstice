@@ -19,7 +19,7 @@ export function EquipmentTierList() {
 
   const [remainItems, setRemainItems] = useState([])
 
-  const handleSearchedKeywordChange = debounce((event: any) => {
+  const handleSearchedKeywordChange = debounce((event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchedKeyword(event.target.value)
   }, 300)
 
