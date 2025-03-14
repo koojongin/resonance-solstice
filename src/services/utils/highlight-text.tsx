@@ -84,6 +84,7 @@ const highlightMap: Record<string, string> = {
   '[에어본]': 'text-red-500',
   '[급속 연소]': 'text-red-500',
   '[참열]': 'text-red-500',
+  '[격파]': 'text-red-500',
 
   '[소각]': 'text-gray-800',
   '[일반공격]': 'text-gray-800',

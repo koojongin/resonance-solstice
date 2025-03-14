@@ -943,4 +943,23 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/c/c1/a0be0v8hjiqv5wwprws54u5wklfhk62.png',
   },
+
+  강습: {
+    name: '강습',
+    desc: `체력이 50% 이상인 적에게 입히는 최종 피해가 10% 증가합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/de/3fcwdfb74rolwxcj5aybqzy5ac6qh5q.png',
+  },
+  '독성 가스': {
+    name: '독성 가스',
+    desc: `[연막탄]의 타게팅 대상이 받는 최종 피해가 20% 감소합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/96/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  우정: {
+    name: '우정',
+    desc: `[돌진] 사용 후 생존한 아군 인원수만큼 비용을 추가로 얻습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e1/mq3x85s3pmsj7w6a81u6zrng63i7ocl.png',
+  },
 }

@@ -976,4 +976,23 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/d/df/htxe41kqffmu2g17nbcxj32gk2uy3aj.png',
   },
+
+  '아드레날린 - 줄리안': {
+    name: '아드레날린 - 줄리안',
+    desc: `[엄호 사격] 사용 시 아드레날린을 주사하여 자신의 체력을 15% 회복하고 동시에 자신의 [일반공격]의 공격 속도가 최대로 증가합니다.(10초간 지속)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/77/kpxsoo28bu5hhoao7kd26iz9b1tm9nh.png',
+  },
+  신뢰: {
+    name: '신뢰',
+    desc: `[돌진] 사용 시 자신의 체력을 초당 5% 회복합니다.(5초간 지속)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/33/siaqamj2cy4dsu5lfbhlonz6apz9wb5.png',
+  },
+  단결: {
+    name: '단결',
+    desc: `모든 아군이 살아있을 시 받는 최종 피해가 10% 감소합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/d0/9glevbgoni5p95bpvpvf8c2xwl3r8hv.png',
+  },
 }

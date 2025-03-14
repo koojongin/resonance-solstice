@@ -424,7 +424,7 @@ export const CHARACTER_SKILLS: {
     name: '서리 신성',
     desc: '목표 구역을 향해 서리 신성을 1개 발사하여 범위 내의 적에게 1단 피해를 입히고 [붕괴]를 부여합니다. 동시에 [동결]을 발동합니다.\n이 카드의 [광붕괴]:\n손에 [신성]이 3장 있을 때 자동으로 [초신성]으로 융합됩니다.\n[신성]/[원소 신성]/[초신성]은 [파]입니다.\n사용 후 [소각]됩니다.',
     thumbnail:
-      'https://res.cloudinary.com/dqihpypxi/image/upload/v1741782686/resonance/skills/ShuangDongXinXing_lvo46q.png',
+      'https://imgproxy.shelter.id/sig/w:150/rt:fill/Z3M6Ly9zaGVsdGVyLW1lZGlhL3UvYkI1OHJHc2Z1SU0wVEQ2SUtKNDNFTTM3Ukt4MS9pbWFnZXMvMTc0MTk3MTI1MDkzMF9jMTgxMjNjNS0xMzlkLTQ0NWYtYWEzNi01MjExY2Y3MzZiMWQucG5n',
     isGeneratedCard: true,
   },
   급습: {
@@ -518,7 +518,7 @@ export const CHARACTER_SKILLS: {
     name: '진동파',
     desc: '하늘에서 떨어지는 중력 진동파를 시전하여 모든 적을 [기절]시킵니다.\n동시에 다음 내는 [레드카드]의 피해가 50% 증가합니다.(중첩 가능)\n손에서 내면 [소각]됩니다.',
     thumbnail:
-      'https://res.cloudinary.com/dqihpypxi/image/upload/v1741782860/resonance/skills/ZhenBo-red_rfr420.png',
+      'https://imgproxy.shelter.id/sig/w:150/rt:fill/Z3M6Ly9zaGVsdGVyLW1lZGlhL3UvYkI1OHJHc2Z1SU0wVEQ2SUtKNDNFTTM3Ukt4MS9pbWFnZXMvMTc0MTk3MTExNzE0MV84ZTE1ZjQ5Zi1kYTQ3LTQ3YjMtOTQwMC00MDYxZDE1NmIyYjMucG5n',
     isGeneratedCard: true,
   },
   '콜로서스 군진': {
@@ -1350,7 +1350,7 @@ export const CHARACTER_SKILLS: {
     사용 후 [소각]됩니다.`,
     isGeneratedCard: true,
     thumbnail:
-      'https://res.cloudinary.com/dqihpypxi/image/upload/v1741598272/resonance/skills/HuoYanXinXing_el0tt0.png',
+      'https://imgproxy.shelter.id/sig/w:150/rt:fill/Z3M6Ly9zaGVsdGVyLW1lZGlhL3UvYkI1OHJHc2Z1SU0wVEQ2SUtKNDNFTTM3Ukt4MS9pbWFnZXMvMTc0MTk3MTI1MDkyOV85ZTgyMGQ2Yy1iMjY5LTRiNGEtYjJhNS04NjRiZjE0NmUzY2IucG5n',
   },
   '번개 신성': {
     amount: 0,
@@ -1363,7 +1363,7 @@ export const CHARACTER_SKILLS: {
     사용 후 [소각]됩니다.`,
     isGeneratedCard: true,
     thumbnail:
-      'https://res.cloudinary.com/dqihpypxi/image/upload/v1741782681/resonance/skills/ShanDianXinXing_ctmiwz.png',
+      'https://imgproxy.shelter.id/sig/w:150/rt:fill/Z3M6Ly9zaGVsdGVyLW1lZGlhL3UvYkI1OHJHc2Z1SU0wVEQ2SUtKNDNFTTM3Ukt4MS9pbWFnZXMvMTc0MTk3MTI1MDkzMF84Nzc3ODg4Yy0xNzg2LTRkMzUtYTBmZS1mY2Q1MTdlMjkxODAucG5n',
   },
   기원: {
     amount: 1,
@@ -1584,5 +1584,43 @@ export const CHARACTER_SKILLS: {
     isGeneratedCard: true,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/8/81/1k0fpki3qh8bccpexexmhpy6cghpbdw.png',
+  },
+
+  일촉즉발: {
+    amount: 2,
+    cost: 2,
+    name: '일촉즉발',
+    desc: `고스건 차지모드로 적에게 1단 피해를 입히고 [격파]를 발동합니다.
+    사용 후 [일촉즉발]은 [돌진]으로 전환됩니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/c9/7cx93nievnizibuzpeqgevur2wulseq.png',
+  },
+  돌진: {
+    amount: 0,
+    cost: 2,
+    name: '돌진',
+    desc: `방탄 조끼의 고성능 모드를 활성화하여 10초간 자신의 방어력을 2배 증가시킵니다.
+    지속시간 동안, 자신은 [슈퍼아머]를 획득합니다.
+    사용 후 [돌진]이 [일촉즉발]로 전환합니다.`,
+    isGeneratedCard: true,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/45/865zwudmm2orxfj6xh40gkngj05awjw.png',
+  },
+  연막탄: {
+    amount: 2,
+    cost: 2,
+    name: '연막탄',
+    desc: `한 개의 연막탄을 투척하여 모든 적이 공격할 수 없게 합니다.(5초간 지속)
+    [연막탄]은 [폭발물]입니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/45/fx9w8apf8utwb7m9dgufu5okkobpvx1.png',
+  },
+  '엄호 사격': {
+    amount: 1,
+    cost: 0,
+    name: '엄호 사격',
+    desc: `모든 비용을 소모하여 사격합니다. 1 비용당 4발의 총알을 발사하여 총알마다 무작위 적에게 1단 피해를 입힙니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/54/ckmlw9h20poz2vwazivhq22qa13khao.png',
   },
 }

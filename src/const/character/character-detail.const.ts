@@ -815,7 +815,23 @@ export const CHARACTER_DETAIL: {
       5: '메아리',
     },
   },
-  JULIAN: {},
+  JULIAN: {
+    SKILLS: ['일촉즉발', '돌진', '연막탄', '엄호 사격'],
+    RESONANCES: {
+      1: '아드레날린 - 줄리안',
+      2: '신뢰',
+      3: '생기',
+      4: '단결',
+    },
+    RESONANCE_UPGRADE_MATERIALS: RARE_RESONANCE_UPGRADE_MATERIALS,
+    AWAKENING: {
+      1: '강습',
+      2: '추가 탄창',
+      3: '투지',
+      4: '독성 가스',
+      5: '우정',
+    },
+  },
   KAREN: {
     SKILLS: ['플럼프탄', '긴급 대응', '쾌속 장전', '플라워탄', '플라워 가든'],
     RESONANCES: {

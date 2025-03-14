@@ -13,8 +13,7 @@ import React, { useCallback, useEffect, useState } from 'react'
 import { copyToClipboard } from '@/services/utils/copy-clipboard'
 import { Tooltip } from '@material-tailwind/react'
 import Link from 'next/link'
-import { convertCharacterThumbnailUrl, getFrameBgUrl } from '@/services/character-url'
-import { RsCharacterBorderBox } from '@/app/components/character-frame/rs-character-border-box'
+import { convertCharacterThumbnailUrl } from '@/services/character-url'
 import { RECOMMENDATION_CHARACTER_EQUIPMENT } from '@/const/character/character-recommendation-equipment.const'
 import { toast } from 'react-toastify'
 import { ALL_EQUIPMENTS } from '@/const/archive/equipment.const'
@@ -27,10 +26,17 @@ import { RS_CHARACTER_DICT } from '@/const/character/character.const'
 import { GradientButton } from '@/app/components/button/gradient-button'
 import { api } from '@/services/api/api.interceptor'
 import { DeleteDeckTooltip } from '@/app/rd/user/detail/delete-deck-tooltip'
+import { formatDateAgo, formatDateNormal } from '@/services/utils/date.format'
+import { MongooseDocument } from '@/const/api/mongoose-document.interface'
+
+interface RecommendationUserDeck extends Omit<RecommendationDeck, 'id'>, MongooseDocument {
+  skillDict: object
+  reads: number
+}
 
 function mixCharacterData(
   originDeck: RecommendationDeck | undefined,
-): (RecommendationDeck & { skillDict: object }) | undefined {
+): RecommendationUserDeck | undefined {
   if (!originDeck) return originDeck
   const skillDict: any = {}
   const fixedCharacters = originDeck.characters.map((characterData) => {
@@ -60,13 +66,13 @@ function mixCharacterData(
     ...originDeck,
     characters: fixedCharacters,
     skillDict,
-  }
+  } as any
 }
 
 export default function RecommendationUserDeckDetailPage() {
   const { id } = useParams()
   const [isVisibleGenericEqBox, setIsVisibleGenericEqBox] = useState(false)
-  const [deck, setDeck] = useState<(RecommendationDeck & { skillDict: object }) | undefined>()
+  const [deck, setDeck] = useState<RecommendationUserDeck>()
 
   const loadDeck = useCallback(async () => {
     const result = await api.post(`/recommendation-deck/get/${id}`)
@@ -103,9 +109,19 @@ export default function RecommendationUserDeckDetailPage() {
       {!deck && <div>데이터 로드중...</div>}
       {deck && (
         <div className="flex flex-col gap-[4px]">
-          <div className="flex w-full justify-end gap-[4px]">
+          <div className="flex w-full gap-[4px]">
+            <div className="flex items-center divide-x divide-gray-800 text-[15px]">
+              <div className="flex items-center gap-[6px] px-[4px]">
+                <div className="">조회수</div>
+                <div className="bg-gray-200">{deck.reads.toLocaleString()}</div>
+              </div>
+              <div className="flex items-center gap-[6px] px-[4px]">
+                <div className="">작성일</div>
+                <div className="bg-gray-200">{formatDateNormal(deck.createdAt!)}</div>
+              </div>
+            </div>
             <div
-              className="bg-blue-300 inline-block text-white ff-dh text-[20px] min-w-[50px] h-[30px] flex items-center justify-center rounded shadow-md cursor-pointer"
+              className="ml-auto bg-blue-300 inline-block text-white ff-dh text-[20px] min-w-[50px] h-[30px] flex items-center justify-center rounded shadow-md cursor-pointer"
               onClick={() => toast('개발중')}
             >
               수정
@@ -113,7 +129,7 @@ export default function RecommendationUserDeckDetailPage() {
             <Tooltip
               interactive
               className="bg-transparent p-0 m-0"
-              content={<DeleteDeckTooltip id={deck.id} />}
+              content={<DeleteDeckTooltip id={deck.id!} />}
             >
               <div className="bg-red-400 inline-block text-white ff-dh text-[20px] min-w-[50px] h-[30px] flex items-center justify-center rounded shadow-md cursor-pointer">
                 삭제

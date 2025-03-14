@@ -81,26 +81,30 @@ export function RecommendationUserDeckCard({ deck }: { deck: RecommendationDeck 
         <div className="flex flex-wrap min-w-[650px] gap-[10px]">
           {characters.map((characterData) => {
             const { character, equipments } = characterData
-            const isLeader = leaderName === character.name
+            const isLeader = leaderName === character.name || leaderName === character.originName
+            const height = 120
             return (
               <div key={createKey()} className="relative w-[120px] flex flex-col gap-[6px]">
-                {isLeader && (
-                  <div className="top-[100px] absolute text-[18px] z-20 text-white w-full text-center font-bold mt-[4px]">
-                    Leader
-                  </div>
-                )}
-                <RsCharacterCard size={RsCardSize.RESPONSIVE} character={character} height={120} />
+                <div className="relative">
+                  <RsCharacterCard
+                    size={RsCardSize.RESPONSIVE}
+                    character={character}
+                    height={height}
+                  />
+                  {isLeader && (
+                    <div
+                      className="absolute text-[18px] top-0 flex items-end justify-center z-20 w-full text-center font-bold mt-[4px] text-shadow-outline text-white ff-dh text-[24px]"
+                      style={{ height: `${height}px` }}
+                    >
+                      리더
+                    </div>
+                  )}
+                </div>
                 <RsEquipmentCard equipments={equipments || []} />
               </div>
             )
           })}
         </div>
-        {/* <div */}
-        {/*   className={`max-h-[200px] ff-sdn overflow-y-scroll w-full whitespace-pre-line break-words p-[8px] border border-gray-300 rounded-[4px] shadow-gray-400/30 shadow-md ${descLink ? 'cursor-pointer hover:bg-blue-300/10' : ''}`} */}
-        {/*   onClick={() => openLink(descLink)} */}
-        {/* > */}
-        {/*   {desc} */}
-        {/* </div> */}
         <div className="ff-dh text-[18px] flex-1 flex-col flex gap-[4px] items-start justify-start">
           <Link
             className="w-full p-[4px] py-[8px] pb-[6px] items-center justify-center rounded flex bg-blue-gray-600 text-white"
