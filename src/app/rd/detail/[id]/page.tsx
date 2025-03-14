@@ -18,7 +18,7 @@ import { RsCharacterBorderBox } from '@/app/components/character-frame/rs-charac
 import { RECOMMENDATION_CHARACTER_EQUIPMENT } from '@/const/character/character-recommendation-equipment.const'
 import { toast } from 'react-toastify'
 import { ALL_EQUIPMENTS } from '@/const/archive/equipment.const'
-import { RSHighlightedText } from '@/services/utils/highlight-text'
+import { filterRSKeyword, RSHighlightedText } from '@/services/utils/highlight-text'
 import { CharacterThumbnailBox } from '@/app/components/character-frame/character-thumbnail-box'
 import { motion } from 'framer-motion'
 import { RECOMMENDATION_ES_DECKS } from '@/app/rd/eternal-scuffle/rd-eternal-scuffle.const'
@@ -26,17 +26,23 @@ import { CHARACTER_DETAIL } from '@/const/character/character-detail.const'
 import { CHARACTER_SKILLS, CharacterSkill } from '@/const/character/character-skill.const'
 import { RS_CHARACTER_DICT } from '@/const/character/character.const'
 import { GradientButton } from '@/app/components/button/gradient-button'
+import _ from 'lodash'
 
 const TOTAL_RD_DECKS = [...RECOMMENDATION_DECKS, ...RECOMMENDATION_ES_DECKS].reverse()
 
+interface CharacterDataAdditionalKeys {
+  skillDict: object
+}
+
 function mixCharacterData(
   originDeck: RecommendationDeck | undefined,
-): (RecommendationDeck & { skillDict: object }) | undefined {
+): (RecommendationDeck & CharacterDataAdditionalKeys) | undefined {
   if (!originDeck) return originDeck
   const skillDict: any = {}
   const fixedCharacters = originDeck.characters.map((characterData) => {
     const { character } = characterData
 
+    const skillKeywords: string[][] = []
     const detail = CHARACTER_DETAIL[character.originName]
     if (detail?.SKILLS) {
       detail?.SKILLS.forEach((skillName: string) => {
@@ -45,11 +51,13 @@ function mixCharacterData(
           originName: character.originName,
           skill,
         }
+        skillKeywords.push(filterRSKeyword(skill.desc))
       })
     }
     const fixedCharacter = {
       ...character,
       detail,
+      skillKeywords: _.uniq(skillKeywords.flat()),
     }
     return {
       ...characterData,
@@ -69,7 +77,7 @@ export default function RecommendationDeckDetailPage() {
   const [isVisibleGenericEqBox, setIsVisibleGenericEqBox] = useState(false)
 
   const originDeck = TOTAL_RD_DECKS.find((rDeck) => id === rDeck.id)
-  const deck: (RecommendationDeck & { skillDict: object }) | undefined =
+  const deck: (RecommendationDeck & CharacterDataAdditionalKeys) | undefined =
     mixCharacterData(originDeck)
 
   const relatedDecks =
@@ -210,6 +218,14 @@ export default function RecommendationDeckDetailPage() {
                         )
                       })}
                     </div>
+                    {character.skillKeywords?.length > 0 && (
+                      <div className="flex flex-wrap gap-[2px] bg-white p-[4px] rounded border border-gray-500">
+                        <RSHighlightedText
+                          textSize={18}
+                          text={character.skillKeywords.map((keyword: string) => `[${keyword}]`)}
+                        />
+                      </div>
+                    )}
                   </div>
                 )
               })}

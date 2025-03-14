@@ -301,7 +301,7 @@ export const CHARACTER_SKILLS: {
     amount: 1,
     cost: 0,
     name: 'TATAKAE',
-    desc: '2장의 [TATAKAU]를 생성하여 손으로 가져옵니다.',
+    desc: '2장의 [TATAKAU!]를 생성하여 손으로 가져옵니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/4/4d/4ge1c4gh4hx27d6b7h90lnor95x2kdo.png',
   },

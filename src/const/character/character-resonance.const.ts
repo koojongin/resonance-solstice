@@ -187,7 +187,7 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
   },
   격앙: {
     name: '격앙',
-    desc: '[TATAKAE] 강화:\n[TATAKAU]를 3장 생성하여 손으로 가져옵니다.',
+    desc: '[TATAKAE] 강화:\n[TATAKAU!]를 3장 생성하여 손으로 가져옵니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/2/2b/okop1hrrs7rqxlza0mps6p9plm4dpcs.png',
   },
