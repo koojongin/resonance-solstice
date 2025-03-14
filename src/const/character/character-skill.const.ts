@@ -1623,4 +1623,32 @@ export const CHARACTER_SKILLS: {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/5/54/ckmlw9h20poz2vwazivhq22qa13khao.png',
   },
+
+  '재앙의 달': {
+    amount: 3,
+    cost: 1,
+    name: '재앙의 달',
+    desc: `적을 [관통]하는 검기를 날립니다.
+    모든 적에게 1단 피해를 입히고 [참열]을 부여합니다.
+    검기는 [파]입니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a8/6gwc3kczwtdqqi8dtwamclij9nikf9l.png',
+  },
+  '적막의 달': {
+    amount: 1,
+    cost: 3,
+    name: '적막의 달',
+    desc: `[재앙의 달]을 우선으로 카드를 3장 뽑습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/1/11/9dys9gl3z75xajckk3j42ppjiz25w2c.png',
+  },
+  '지옥의 달': {
+    amount: 1,
+    cost: 6,
+    name: '지옥의 달',
+    desc: `모든 적에게 1단 피해를 입히고 [참열]을 부여합니다.
+    동시에 버려진 덱의 모든 [재앙의 달]을 냅니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/d7/9ixkjpz6zq5qn3pwhkd4ha3gh2vr8uz.png',
+  },
 }

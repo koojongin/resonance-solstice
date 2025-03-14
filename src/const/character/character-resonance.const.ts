@@ -514,8 +514,8 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/f/f4/ko1dhhzwem8lhm8q9ui4tw5mvsu3jux.png',
   },
-  감응: {
-    name: '감응',
+  '감응 - 안피아': {
+    name: '감응 - 안피아',
     desc: '전투 시작 후 손으로 가져오는 처음 5장 카드 중에 반드시 [의태]가 포함됩니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/0/0c/ljakaf4ndnm98kay9yzhk1088jp5aft.png',
@@ -994,5 +994,31 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     desc: `모든 아군이 살아있을 시 받는 최종 피해가 10% 감소합니다.`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/d/d0/9glevbgoni5p95bpvpvf8c2xwl3r8hv.png',
+  },
+
+  '감응 - 샬롯': {
+    name: '감응 - 샬롯',
+    desc: `전투 시작 후 손으로 가져오는 처음 5장 카드 중에 반드시 [작막의 달]이 포함됩니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/03/2dktmnn7w48dkp7s1u5viq9vk2i3da7.png',
+  },
+  참월: {
+    name: '참월',
+    desc: `필살기 카드 사용 시 [재앙의 달]을 1장 생성하여 덱의 맨 위에 올려놓습니다.(3회 한정)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/06/akq81nryzj2xqny60tyiikisl9e5azy.png',
+  },
+  완강: {
+    name: '완강',
+    desc: `체력이 60%/30% 미만일 때 자신의 체력을 30% 회복합니다.(각각 1회 한정)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/7e/49deaaog92xhqk0ua2b6fddpc9wlj8t.png',
+  },
+  활성: {
+    name: '활성',
+    desc: `캐릭터의 치유를 받을 때 추가로 자신의 체력을 10% 회복하고 공격력이 1% 증가합니다.(최대 30%)
+    초당 회복 효과 제외`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/28/hmeox7a9h4qeith7rnb8i5c3djw5th8.png',
   },
 }

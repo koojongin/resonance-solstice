@@ -216,7 +216,7 @@ export const CHARACTER_DETAIL: {
     RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
     RESONANCES: {
       1: '소환곡',
-      2: '감응',
+      2: '감응 - 안피아',
       3: '생기',
       4: '밀물',
       5: '탐욕',
@@ -325,7 +325,24 @@ export const CHARACTER_DETAIL: {
       5: '단꿈',
     },
   },
-  CHARLOTTE: {},
+  CHARLOTTE: {
+    SKILLS: ['재앙의 달', '적막의 달', '지옥의 달'],
+    RESONANCES: {
+      1: '감응 - 샬롯',
+      2: '참월',
+      3: '생기',
+      4: '완강',
+      5: '활성',
+    },
+    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    AWAKENING: {
+      1: '여유만만',
+      2: '연월',
+      3: '투지',
+      4: '명월',
+      5: '죄월',
+    },
+  },
   SUEN: {
     SKILLS: ['복음', '음에너지', '다크 아트', '형벌', '다크 아트', '정화'],
     RESONANCES: {

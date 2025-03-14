@@ -962,4 +962,30 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/e/e1/mq3x85s3pmsj7w6a81u6zrng63i7ocl.png',
   },
+
+  여유만만: {
+    name: '여유만만',
+    desc: `체력이 50% 이상일 때 입히는 최종 피해가 10% 증가합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/5b/thvykuefoqnfv9wk2bf8p3zcfa60dep.png',
+  },
+  연월: {
+    name: '연월',
+    desc: `[옐로카드]/[그린카드]/[블루카드]/[퍼플카드] 사용 시 50% 확률로 버려진 덱에서 [재앙의 달] 1장을 회수하여 손으로 가져옵니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/1/17/rib3ed9249l301w8giygkbw8vm8v4l5.png',
+  },
+  명월: {
+    name: '명월',
+    desc: `자신을 제외한 아군이 필살기 혹은 [리더 스킬] 사용 시 즉시 [재앙의 달]을 1회 시전합니다. 동시에 자신이 입히는 [참열] 피해가 10% 증가합니다.(최대 100%)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/9e/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  죄월: {
+    name: '죄월',
+    desc: `[재앙의 달]이 2단 피해를 입히는 대신 비용이 1 증가합니다.
+    [리더 스킬] 조건 변경: [재앙의 달] 2회 사용`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a2/r1nm72pq5lyibdwe6ukb55iop6dajqt.png',
+  },
 }
