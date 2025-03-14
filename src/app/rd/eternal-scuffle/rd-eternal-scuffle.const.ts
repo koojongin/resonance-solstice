@@ -291,7 +291,7 @@ export const RECOMMENDATION_ES_DECKS: RecommendationDeck[] = [
       '드림 이터',
       '예고',
       '신성',
-      '기이한 불꽃',
+      '기이한 불꽃 - 마키라',
       '초신성',
     ],
     autoPresetPreviewBans: ['공포의 밤'],
