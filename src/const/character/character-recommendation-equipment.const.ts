@@ -1,4 +1,10 @@
-const COMMON_EQUIPMENT = ['에비서레이터MK0', '시뮬레이트 스타', '뫼비우스', '인챈티드 단검']
+const COMMON_EQUIPMENT = [
+  '에비서레이터MK0',
+  '시뮬레이트 스타',
+  '뫼비우스',
+  '인챈티드 단검',
+  '마술봉',
+]
 export const RECOMMENDATION_CHARACTER_EQUIPMENT: { [key: string]: string[] } = {
   COMMON: COMMON_EQUIPMENT,
   NICOLA: ['이차 상전이', '모노폴 마그네타', '거짓신의 속삭임'],

@@ -285,7 +285,8 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
     grade: RS_GRADE.N,
     desc: '',
     thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/f/fb/d2kyjtvwjwplb49n5e7whzoa0fdz24o.png',
+      // 'https://patchwiki.biligame.com/images/resonance/f/fb/d2kyjtvwjwplb49n5e7whzoa0fdz24o.png',
+      'https://imgproxy.shelter.id/sig/w:371/rt:fill/Z3M6Ly9zaGVsdGVyLW1lZGlhL3UvYkI1OHJHc2Z1SU0wVEQ2SUtKNDNFTTM3Ukt4MS9pbWFnZXMvMTc0MjAyMjk4OTYwNF8zMDJmZDIzNy02ZjNiLTQyMDQtOTVmMy0wMTU2ODZkZGI5M2I=',
   },
   '고급 식기': {
     grade: RS_GRADE.N,
@@ -2488,7 +2489,7 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
     grade: RS_GRADE.UR,
     desc: '[마이레일 I기] 일상 임무 오픈기간 출시되는 카드팩입니다. 사용 시 기존에 획득하지 못한 카드 1장을 획득하게 됩니다.',
     thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/1/1b/f57m0nd8zgwhbz31acsecejzjq1dya4.png',
+      'https://imgproxy.shelter.id/sig/w:954/rt:fill/Z3M6Ly9zaGVsdGVyLW1lZGlhL3UvYkI1OHJHc2Z1SU0wVEQ2SUtKNDNFTTM3Ukt4MS9pbWFnZXMvMTc0MjAxOTYwODUzOF9mNjM5OWRkNS0yMjRkLTRkNTUtYmU1Yy04M2E3NmE0ZDhlY2UucG5n',
   },
   '특수 무기 개조 특허': {
     grade: RS_GRADE.SSR,

@@ -40,25 +40,36 @@ export default function MaterialDetailPage() {
 
   const dropMonsters = CONVERTED_MONSTERS.filter((monster) => monster.drops?.includes(decodedName))
 
+  const isCardPack = decodedName.indexOf('카드팩') >= 0
   return (
     <div className="flex flex-col gap-[10px]">
       <div className="flex flex-col gap-[4px]">
         <GradientHeaderDiv>아이템 정보</GradientHeaderDiv>
         <div className="flex items-stretch bg-gray-800/80 p-[10px] rounded shadow-md shadow-gray-600">
           <div>
-            <div className="min-w-[160px] w-[160px] relative border rounded overflow-hidden shadow-md shadow-gray-600">
+            <div className="min-w-[160px] w-[160px] h-[160px] relative border rounded overflow-hidden shadow-md shadow-gray-600">
+              {!isCardPack && (
+                <img
+                  className="w-full top-0 absolute z-0"
+                  src={getMaterialBgFrameUrl(material.grade)}
+                />
+              )}
+              {isCardPack && (
+                <img
+                  className="w-full top-0 absolute z-0"
+                  src="https://imgproxy.shelter.id/sig/w:196/rt:fill/Z3M6Ly9zaGVsdGVyLW1lZGlhL3UvYkI1OHJHc2Z1SU0wVEQ2SUtKNDNFTTM3Ukt4MS9pbWFnZXMvMTc0MjAyMDY4MTA2OV9lNmY1Zjc2ZS1kYjIxLTQyY2ItOTdhZC0yNGM0YzhkZmMzYmQucG5n"
+                />
+              )}
               <img
-                className="w-full top-0 absolute z-0"
-                src={getMaterialBgFrameUrl(material.grade)}
-              />
-              <img
-                className="w-full top-0 relative z-20 rounded w-full p-[4px]"
+                className="w-full top-0 relative z-20 rounded p-[4px] w-full h-full object-contain"
                 src={material.thumbnail}
               />
-              <img
-                className="w-full absolute z-10 top-0"
-                src={getMaterialBottomFrameUrl(material.grade)}
-              />
+              {!isCardPack && (
+                <img
+                  className="w-full absolute z-10 top-0"
+                  src={getMaterialBottomFrameUrl(material.grade)}
+                />
+              )}
             </div>
           </div>
           <div className="p-[10px] pt-0 pr-0 text-white ff-dh w-full flex flex-col gap-[4px]">

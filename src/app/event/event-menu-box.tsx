@@ -7,6 +7,10 @@ import React from 'react'
 
 const SIDE_MENU = [
   {
+    path: '/event/start-dash',
+    name: '출발 체크인',
+  },
+  {
     path: '/event/black-tea-war',
     name: '홍차전쟁',
   },

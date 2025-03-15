@@ -10,11 +10,26 @@ import clsx from 'clsx'
 import Link from 'next/link'
 
 export function MaterialBox({ material }: { material: ExtendedRSMaterial }) {
+  const { name } = material
+  const isCardPack = name.indexOf('카드팩') >= 0
   return (
     <div className="h-[80px] w-[80px] relative border-2">
-      <img className="absolute bottom-0 z-0" src={getMaterialBgFrameUrl(material.grade)} />
-      <img className="relative z-20 rounded w-full p-[4px]" src={material.thumbnail} />
-      <img className="absolute z-10 bottom-0" src={getMaterialBottomFrameUrl(material.grade)} />
+      {!isCardPack && (
+        <img className="absolute bottom-0 z-0" src={getMaterialBgFrameUrl(material.grade)} />
+      )}
+      {isCardPack && (
+        <img
+          className="absolute bottom-0 z-0"
+          src="https://imgproxy.shelter.id/sig/w:196/rt:fill/Z3M6Ly9zaGVsdGVyLW1lZGlhL3UvYkI1OHJHc2Z1SU0wVEQ2SUtKNDNFTTM3Ukt4MS9pbWFnZXMvMTc0MjAyMDY4MTA2OV9lNmY1Zjc2ZS1kYjIxLTQyY2ItOTdhZC0yNGM0YzhkZmMzYmQucG5n"
+        />
+      )}
+      <img
+        className="relative z-20 rounded p-[4px] w-full h-full object-contain"
+        src={material.thumbnail}
+      />
+      {!isCardPack && (
+        <img className="absolute z-10 bottom-0" src={getMaterialBottomFrameUrl(material.grade)} />
+      )}
     </div>
   )
 }
@@ -26,15 +41,27 @@ export function MaterialBoxResponsive({
   withoutIconPadding?: boolean
   material: ExtendedRSMaterial
 }) {
+  const { name } = material
+  const isCardPack = name.indexOf('카드팩') >= 0
   return (
-    <div className="relative min-w-0">
-      <img className="absolute bottom-0 z-0" src={getMaterialBgFrameUrl(material.grade)} />
+    <div className="relative min-w-0 w-full h-full">
+      {isCardPack && (
+        <img
+          className="absolute bottom-0 z-0"
+          src="https://imgproxy.shelter.id/sig/w:196/rt:fill/Z3M6Ly9zaGVsdGVyLW1lZGlhL3UvYkI1OHJHc2Z1SU0wVEQ2SUtKNDNFTTM3Ukt4MS9pbWFnZXMvMTc0MjAyMDY4MTA2OV9lNmY1Zjc2ZS1kYjIxLTQyY2ItOTdhZC0yNGM0YzhkZmMzYmQucG5n"
+        />
+      )}
+      {!isCardPack && (
+        <img className="absolute bottom-0 z-0" src={getMaterialBgFrameUrl(material.grade)} />
+      )}
       <img
-        className="relative z-20 rounded w-full"
+        className="relative z-20 rounded w-full h-full object-contain"
         src={material.thumbnail || 'https://static.hdslb.com/images/member/noface.gif'}
         style={{ padding: `${withoutIconPadding ? '0' : '4px'}` }}
       />
-      <img className="absolute z-10 bottom-0" src={getMaterialBottomFrameUrl(material.grade)} />
+      {!isCardPack && (
+        <img className="absolute z-10 bottom-0" src={getMaterialBottomFrameUrl(material.grade)} />
+      )}
     </div>
   )
 }

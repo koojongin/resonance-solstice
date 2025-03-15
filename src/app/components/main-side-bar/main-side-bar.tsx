@@ -129,6 +129,11 @@ export default function MainSideBar() {
       label: '이벤트',
       subMenu: [
         {
+          path: '/event/start-dash',
+          label: '출발 체크인',
+          className: 'text-[18px]',
+        },
+        {
           label: '홍차전쟁',
           path: '/event/black-tea-war',
           className: 'text-[18px]',
