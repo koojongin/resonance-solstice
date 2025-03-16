@@ -148,6 +148,16 @@ export default function MainSideBar() {
           path: '/event/virtual-record/exchange',
           className: 'text-[18px]',
         },
+        {
+          label: '청명 이문록',
+          path: '/event/cheongmyeong-chronicles',
+          className: 'text-[18px]',
+        },
+        {
+          label: '서머 아일랜드',
+          path: '/event/summer-island',
+          className: 'text-[18px]',
+        },
       ],
     },
     {

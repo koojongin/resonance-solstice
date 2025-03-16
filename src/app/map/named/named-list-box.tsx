@@ -38,15 +38,15 @@ export default function MapNamedListBox() {
 
 function getCityIconUrl(type: RSCityType) {
   if (type === RSCityType.CORE_CITY) {
-    return 'https://imgproxy.shelter.id/sig/w:67/rt:fill/Z3M6Ly9zaGVsdGVyLW1lZGlhL3UvYkI1OHJHc2Z1SU0wVEQ2SUtKNDNFTTM3Ukt4MS9pbWFnZXMvMTc0MTg2ODM1ODU3Ml83ZDg5ZTAzOC01ZmRiLTRmOGQtODA0MC05NmI4NDQ4ZmUzNTcud2VicA=='
+    return 'https://imgproxy.shelter.id/sig/w:74/rt:fill/Z3M6Ly9zaGVsdGVyLW1lZGlhL3UvYkI1OHJHc2Z1SU0wVEQ2SUtKNDNFTTM3Ukt4MS9pbWFnZXMvMTc0MjEyMzI5MzI2Nl9hYWIwNGM0NC02M2ViLTQzMWQtYWMzZi03MTU1MTcxOGMwYTkucG5n'
   }
   if (type === RSCityType.SMALL_CITY_SQUARE) {
-    return 'https://imgproxy.shelter.id/sig/w:37/rt:fill/Z3M6Ly9zaGVsdGVyLW1lZGlhL3UvYkI1OHJHc2Z1SU0wVEQ2SUtKNDNFTTM3Ukt4MS9pbWFnZXMvMTc0MTg2ODM1ODU3Ml84MTA3NWU1ZC0xNTY2LTQzOTAtOTgzOS1lNjM5YWU1N2YzNTUud2VicA=='
+    return 'https://imgproxy.shelter.id/sig/w:42/rt:fill/Z3M6Ly9zaGVsdGVyLW1lZGlhL3UvYkI1OHJHc2Z1SU0wVEQ2SUtKNDNFTTM3Ukt4MS9pbWFnZXMvMTc0MjEyMzI5MzI2N18zNmVjMjQ4MC1mNzQ2LTQwNDYtODZhZS1hNGM3ZTM0YjUyM2YucG5n'
   }
   if (type === RSCityType.SMALL_CITY_RHOMBUS) {
-    return 'https://imgproxy.shelter.id/sig/w:51/rt:fill/Z3M6Ly9zaGVsdGVyLW1lZGlhL3UvYkI1OHJHc2Z1SU0wVEQ2SUtKNDNFTTM3Ukt4MS9pbWFnZXMvMTc0MTg2ODM1ODU3Ml8zYjE1ZjVkZC1mYzIwLTRlMzEtOGJiMy0xNzdlM2FmZmFmNWMud2VicA=='
+    return 'https://imgproxy.shelter.id/sig/w:58/rt:fill/Z3M6Ly9zaGVsdGVyLW1lZGlhL3UvYkI1OHJHc2Z1SU0wVEQ2SUtKNDNFTTM3Ukt4MS9pbWFnZXMvMTc0MjEyMzI5MzI2N181YWNhOGU2Zi0wMzZiLTQ0NjUtYmZhMS01ZDAxMTBlNTE4NjYucG5n'
   }
   if (type === RSCityType.SMALL_CITY_RECYCLE) {
-    return 'https://imgproxy.shelter.id/sig/w:43/rt:fill/Z3M6Ly9zaGVsdGVyLW1lZGlhL3UvYkI1OHJHc2Z1SU0wVEQ2SUtKNDNFTTM3Ukt4MS9pbWFnZXMvMTc0MTg2ODM1ODU3Ml8xZDRmMjRlNy0yOGJhLTQzNGUtOTNiNi05ZTZhNDkxZmU5OTcud2VicA=='
+    return 'https://imgproxy.shelter.id/sig/w:48/rt:fill/Z3M6Ly9zaGVsdGVyLW1lZGlhL3UvYkI1OHJHc2Z1SU0wVEQ2SUtKNDNFTTM3Ukt4MS9pbWFnZXMvMTc0MjEyMzI5MzI2N19mYWVlYWIxMC1iYzk0LTQyM2UtYjkxMC0yYWQ1NGM2YmQ0ZmMucG5n'
   }
 }

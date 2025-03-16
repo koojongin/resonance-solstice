@@ -31,6 +31,15 @@ const SIDE_MENU = [
     path: '/event/virtual-record/exchange',
     name: '버추얼 레코드 교환소',
   },
+
+  {
+    path: '/event/cheongmyeong-chronicles',
+    name: '청명 이문록',
+  },
+  {
+    path: '/event/summer-island',
+    name: '서머 아일랜드',
+  },
 ]
 
 export function EventMenuBox() {
