@@ -5,6 +5,7 @@ import { copyToClipboard } from '@/services/utils/copy-clipboard'
 import createKey from '@/services/key-generator'
 import { GradientButton } from '@/app/components/button/gradient-button'
 import { OfficialUpdatePostBox } from '@/app/home/official-update-post-box'
+import { CommentBox } from '@/app/components/comment/comment-box'
 
 export default function HomePage() {
   const coupons = [
@@ -114,6 +115,15 @@ export default function HomePage() {
       {/* <div className="border border-gray-400 p-[10px] rounded"> */}
       {/*   <OfficialUpdatePostBox /> */}
       {/* </div> */}
+
+      <div className="mt-[50px]">
+        <CommentBox
+          data={{
+            target: `home`,
+            refId: '123456789012345678901234' as string,
+          }}
+        />
+      </div>
     </div>
   )
 }
