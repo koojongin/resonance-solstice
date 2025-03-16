@@ -75,7 +75,7 @@ function EquipmentSelectModal({
               return (
                 <>
                   {index === 0 && (
-                    <div key={`c_s_modal_remove`} onClick={() => handleItemSelect({})}>
+                    <div key="c_s_modal_remove" onClick={() => handleItemSelect({})}>
                       <div className="w-[90px] h-[90px] flex items-center justify-center border-2 border-red-500">
                         <div className="text-center text-red-500 ff-dh text-[20px]">제거</div>
                       </div>
