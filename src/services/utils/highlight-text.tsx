@@ -180,7 +180,7 @@ export function RSHighlightedText({
       if (classNameOfPart) {
         return (
           <Tooltip
-            key={index}
+            key={createKey()}
             content={
               <div className="max-w-[300px] whitespace-pre-line">
                 {archive && (

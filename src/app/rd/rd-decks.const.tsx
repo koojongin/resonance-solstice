@@ -29,7 +29,6 @@ import {
   NICOLA,
   PRIMING,
   RACHEL,
-  RAZIEL_THE_REMINISCE,
   RINA_F,
   SHIZURU,
   STELLA,
@@ -45,7 +44,6 @@ import {
 } from '@/const/character/character.const'
 import { EXTERNAL_USERS, ExternalUser } from '@/const/external-users'
 import { RSCharacter } from '@/const/character/character.interface'
-import { RSHighlightedText } from '@/services/utils/highlight-text'
 
 export interface RecommendationDeck {
   id: string
@@ -2157,31 +2155,29 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
         <div>
           <div className="text-[30px] ff-dh">[하루카] 사이클 설명</div>
-          <RSHighlightedText
-            text={`[배드] [레드카드] COST 1
- - 저코스트 리더 스킬 쿨타임 감소용
- - [시즈루]와 개인 공명, 각성 효과(아래 후술)와 연계하여 빠른 드로우 순환 가능
-
-[디스 이즈 잇] [옐로카드] COST 0
- - '비용이 가장 높은 카드 드로우 1장'
- - [스텔라]의 [뭇별], [테니]의 [빙수 눈사태] 등 고벨류 카드 서치용
-
-[아윌 비 데어] & [유 아 낫 얼론] [퍼플카드] > [블루카드] COST 5
- - 1번 사용 이후로 [블루카드]인 [유 아 낫 얼론]으로 지속
- - 리더 스킬 쿨타임 감소 및 [테니] [실드] 트리거용
-
-[그들은 우리를 신경 쓰지 않는다] 각성 2단계
- - '[때리바]의 내구소 30% 감소마다 [배드] 드로우'
- - 기타 코스트 없이 쿨타임 감소용 레드 카드 서치 가능
-
-[위 아 더 월드] 각성 4단계
- - '[디스 이즈 잇] 사용 후 매초 비용 +1(5초 동안)'
- - 높은 코스트 카드 드로우 이후 비용 습득으로 사이클의 부담을 감소
-
-[커쯔] 각성 5단계
- - '손에 같은 카드 3장 보유시 비용 +2(5회 한정)'
- - **스텔라 카드와 매우 매끄러운 연계로 코스트 회복 GOAT 각성 효과`}
-          />
+          <div>[배드] [레드카드] COST 1</div>
+          <div>- 저코스트 리더 스킬 쿨타임 감소용</div>
+          <div>- [시즈루]와 개인 공명, 각성 효과(아래 후술)와 연계하여 빠른 드로우 순환 가능</div>
+          <br />
+          <div>[디스 이즈 잇] [옐로카드] COST 0</div>
+          <div> - '비용이 가장 높은 카드 드로우 1장'</div>
+          <div> - [스텔라]의 [뭇별], [테니]의 [빙수 눈사태] 등 고벨류 카드 서치용</div>
+          <br />
+          <div>[아윌 비 데어] & [유 아 낫 얼론] [퍼플카드] &gt; [블루카드] COST 5</div>
+          <div> - 1번 사용 이후로 [블루카드]인 [유 아 낫 얼론]으로 지속</div>
+          <div> - 리더 스킬 쿨타임 감소 및 [테니] [실드] 트리거용</div>
+          <br />
+          <div>[그들은 우리를 신경 쓰지 않는다] 각성 2단계</div>
+          <div> - '[때리바]의 내구소 30% 감소마다 [배드] 드로우'</div>
+          <div> - 기타 코스트 없이 쿨타임 감소용 레드 카드 서치 가능</div>
+          <br />
+          <div>[위 아 더 월드] 각성 4단계</div>
+          <div>- '[디스 이즈 잇] 사용 후 매초 비용 +1(5초 동안)'</div>
+          <div> - 높은 코스트 카드 드로우 이후 비용 습득으로 사이클의 부담을 감소</div>
+          <br />
+          <div>[커쯔] 각성 5단계</div>
+          <div>- '손에 같은 카드 3장 보유시 비용 +2(5회 한정)'</div>
+          <div>- **스텔라 카드와 매우 매끄러운 연계로 코스트 회복 GOAT 각성 효과</div>
         </div>
         <hr className="my-[10px] border-gray-500" />
         <div className="text-blue-500 ff-dh text-[20px]">

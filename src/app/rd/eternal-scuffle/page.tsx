@@ -2,32 +2,6 @@
 
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import Link from 'next/link'
-import { Tooltip } from '@material-tailwind/react'
-import {
-  ANFIYA,
-  ARINA,
-  CAROLINE,
-  CONNOR,
-  DUSTIN,
-  ILONA,
-  JOSHUA,
-  KATAS,
-  MARGIELA,
-  NAYUTA,
-  NICOLA,
-  SOMMER,
-  STELLA,
-  SUEN,
-  TENNIE,
-  VERLAINE,
-  WENSHENG,
-} from '@/const/character/character.const'
-import { RECOMMENDATION_DECKS } from '@/app/rd/rd-decks.const'
-import { RsCharacterBorderBox } from '@/app/components/character-frame/rs-character-border-box'
-import { convertCharacterThumbnailUrl, getFrameBgUrl } from '@/services/character-url'
-import { RECOMMENDATION_ES_DECKS } from '@/app/rd/eternal-scuffle/rd-eternal-scuffle.const'
-import createKey from '@/services/key-generator'
 import { RSHighlightedText } from '@/services/utils/highlight-text'
 import { RdEternalScuffleList } from '@/app/rd/eternal-scuffle/rd-eternal-scuffle-list'
 import { debounce } from 'lodash'

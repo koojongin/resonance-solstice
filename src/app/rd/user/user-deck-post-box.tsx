@@ -167,6 +167,7 @@ function UserDeckPostBoxBase({ id, password }: { id?: string; password?: string 
     return false
   }
   const updateDeck = async () => {
+    if (isSaving) return
     setIsSaving(true)
     const fixedDeck = {
       ...deck,
