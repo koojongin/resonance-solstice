@@ -1590,7 +1590,8 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
         <div className="border flex flex-col items-start gap-[1px] p-[10px] rounded bg-white">
           <span className="text-blue-gray-900 ff-dh text-[30px]">중요한 장비 옵션</span>
           [니콜라]
-          <span className="flex flex-wrap gap-[4px]">
+          <span className="flex flex-wrap gap-[4px] border-green-500 border p-[4px]">
+            <div className="text-green-500 w-full">중국 위키 원문에서 제안 옵션</div>
             <span className="border border-blue-gray-400 rounded px-[4px]">+30 공격력</span>
             <span className="border border-blue-gray-400 rounded px-[4px]">
               [버리기] 명령 시 +공격력
@@ -1606,13 +1607,20 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
               [드론] 키워드를 가진 카드가 입히는 피해+%
             </span>
           </span>
-          {/* <Link */}
-          {/*   href="https://arca.live/b/resonance/130470153" */}
-          {/*   target="_blank" */}
-          {/*   className="underline text-blue-400" */}
-          {/* > */}
-          {/*   [옵션 상세공략 바로가기] */}
-          {/* </Link> */}
+          <span className="flex flex-wrap gap-[4px] border-green-500 border p-[4px] w-full">
+            <div className="text-green-500 w-full">다른 한국 공략 제안 옵션</div>
+            <div className="w-full">
+              * 중국 위키 원문 공략의 옵션은 과도기에 선택하는 옵션이고, 아래 링크의 옵션이 엔드에
+              적합하다고 합니다.
+            </div>
+            <Link
+              href="https://arca.live/b/resonance/130470153"
+              target="_blank"
+              className="underline text-blue-400"
+            >
+              [옵션 상세공략 바로가기]
+            </Link>
+          </span>
           <div>위 옵션중 아무것도 사용할 수 없는 경우 아래가 대안 옵션입니다.</div>
           <span className="flex flex-wrap gap-[4px]">
             <span className="border border-blue-gray-400 rounded px-[4px]">
