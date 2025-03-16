@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { Suspense, useEffect, useState } from 'react'
 import { MaterialListBox } from '@/app/materials/material-list-box'
 import { RS_GRADE } from '@/const/character/character.enum'
 import createKey from '@/services/key-generator'
@@ -8,7 +8,6 @@ import { CheckBoxGroup } from '@/services/common.enum'
 import { ExtendedRSMaterial } from '@/const/material/material.type'
 import _, { debounce } from 'lodash'
 import { MATERIALS } from '@/const/material.const'
-import { useNextDepthNavigator } from '@/services/navigation'
 import { usePathname, useSearchParams } from 'next/navigation'
 
 const grades = Object.keys(RS_GRADE)
@@ -18,7 +17,7 @@ const MAPPED_MATERIALS: ExtendedRSMaterial[] = _.map(MATERIALS, (value, key) => 
 }))
 
 const SORTED_MATERIALS = _.sortBy(MAPPED_MATERIALS, (item) => grades.indexOf(item.grade))
-export default function MaterialsPage() {
+function MaterialsPageBase() {
   const searchParams = useSearchParams()
   const pathname = usePathname()
   const [searchedKeyword, setSearchedKeyword] = useState('')
@@ -100,5 +99,13 @@ export default function MaterialsPage() {
         checkedGrades={checkedGrades}
       />
     </div>
+  )
+}
+
+export default function MaterialsPage() {
+  return (
+    <Suspense>
+      <MaterialsPageBase />
+    </Suspense>
   )
 }
