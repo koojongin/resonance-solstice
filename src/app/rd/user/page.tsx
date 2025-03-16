@@ -49,7 +49,7 @@ function RdUserPage() {
     try {
       const current = new URLSearchParams(Array.from(searchParams.entries()))
       current.set('page', String(pageNumber))
-      router.push(`${pathname}?${current.toString()}`)
+      router.replace(`${pathname}?${current.toString()}`)
       await loadDecks(pageNumber)
     } finally {
       /* empty */

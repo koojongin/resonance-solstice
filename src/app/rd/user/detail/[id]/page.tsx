@@ -120,12 +120,11 @@ export default function RecommendationUserDeckDetailPage() {
                 <div className="bg-gray-200">{formatDateNormal(deck.createdAt!)}</div>
               </div>
             </div>
-            <div
-              className="ml-auto bg-blue-300 inline-block text-white ff-dh text-[20px] min-w-[50px] h-[30px] flex items-center justify-center rounded shadow-md cursor-pointer"
-              onClick={() => toast('개발중')}
-            >
-              수정
-            </div>
+            <Link href={`/rd/user/detail/${deck.id}/check-password`} className="ml-auto">
+              <div className="bg-blue-300 inline-block text-white ff-dh text-[20px] min-w-[50px] h-[30px] flex items-center justify-center rounded shadow-md cursor-pointer">
+                수정
+              </div>
+            </Link>
             <Tooltip
               interactive
               className="bg-transparent p-0 m-0"

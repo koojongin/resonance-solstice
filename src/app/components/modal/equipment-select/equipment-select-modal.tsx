@@ -71,14 +71,23 @@ function EquipmentSelectModal({
             장비 선택
           </Typography>
           <div className="flex flex-wrap gap-[4px] overflow-y-scroll max-h-[50vh]">
-            {selectableEquipments?.map((equipment, index) => {
+            {(selectableEquipments || []).map((equipment, index) => {
               return (
-                <div key={`c_s_modal_${index}`} onClick={() => handleItemSelect(equipment)}>
-                  <div className="w-[90px]">
-                    <EquipmentBoxResponsive equipment={equipment} />
-                    <div className="text-center">{equipment.name}</div>
+                <>
+                  {index === 0 && (
+                    <div key={`c_s_modal_remove`} onClick={() => handleItemSelect({})}>
+                      <div className="w-[90px] h-[90px] flex items-center justify-center border-2 border-red-500">
+                        <div className="text-center text-red-500 ff-dh text-[20px]">제거</div>
+                      </div>
+                    </div>
+                  )}
+                  <div key={`c_s_modal_${index}`} onClick={() => handleItemSelect(equipment)}>
+                    <div className="w-[90px]">
+                      <EquipmentBoxResponsive equipment={equipment} />
+                      <div className="text-center">{equipment.name}</div>
+                    </div>
                   </div>
-                </div>
+                </>
               )
             })}
           </div>

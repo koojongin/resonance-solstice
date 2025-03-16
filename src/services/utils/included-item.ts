@@ -4,7 +4,7 @@ import { ExtendedUnionRSItem } from '@/const/material/index.type'
 
 export function getItemByNameOrItem(
   itemNameOrItem: string | ExtendedUnionRSItem,
-): ExtendedUnionRSItem {
+): ExtendedUnionRSItem | (ExtendedUnionRSItem & { dropRate: number }) {
   if (typeof itemNameOrItem === 'string') {
     return {
       ...(MATERIALS[itemNameOrItem] || ALL_EQUIPMENTS[itemNameOrItem]),

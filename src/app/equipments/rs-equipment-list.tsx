@@ -157,7 +157,7 @@ export function EquipmentBoxResponsive({
       <img className="absolute z-10 bottom-0" src={getMaterialBottomFrameUrl(equipment.grade)} />
       {isExistDropRate && (
         <div className="absolute z-20 bottom-0 bg-gray-600/80 text-white w-full ff-dh pl-[4px] py-[2px] text-[14px]">
-          {(dropRate ?? 0).toFixed(4)}%
+          {_.floor(dropRate ?? 0, 4)}%
         </div>
       )}
     </div>

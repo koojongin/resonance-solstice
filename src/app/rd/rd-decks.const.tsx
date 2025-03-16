@@ -1606,13 +1606,13 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
               [드론] 키워드를 가진 카드가 입히는 피해+%
             </span>
           </span>
-          <Link
-            href="https://arca.live/b/resonance/130470153"
-            target="_blank"
-            className="underline text-blue-400"
-          >
-            [옵션 상세공략 바로가기]
-          </Link>
+          {/* <Link */}
+          {/*   href="https://arca.live/b/resonance/130470153" */}
+          {/*   target="_blank" */}
+          {/*   className="underline text-blue-400" */}
+          {/* > */}
+          {/*   [옵션 상세공략 바로가기] */}
+          {/* </Link> */}
           <div>위 옵션중 아무것도 사용할 수 없는 경우 아래가 대안 옵션입니다.</div>
           <span className="flex flex-wrap gap-[4px]">
             <span className="border border-blue-gray-400 rounded px-[4px]">

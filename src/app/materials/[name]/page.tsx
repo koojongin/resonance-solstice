@@ -97,9 +97,9 @@ export default function MaterialDetailPage() {
             {material.includedItems!.map((itemNameOrItem: any) => {
               const item = getItemByNameOrItem(itemNameOrItem)
               const isExistRate = material.isSameRate
-              const itemDropRate = material.isSameRate
-                ? 100 / (material.includedItems || []).length
-                : 0
+              const sameDropRate = isExistRate ? 100 / (material.includedItems || []).length : 0
+              const singleDropRate = (item as any)?.dropRate || 0
+              const itemDropRate = singleDropRate || sameDropRate || 0
               return (
                 <ItemTooltipBox key={createKey()} item={item}>
                   <div className="w-[70px]">

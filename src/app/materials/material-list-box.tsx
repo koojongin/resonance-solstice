@@ -72,7 +72,9 @@ export function MaterialListBox({ items, searchedKeyword, checkedGrades }: any) 
                 <div className="flex items-center justify-center relative">
                   <MaterialBox material={material} />
                   {viewMode === ItemBoxViewMode.MINIMIZED && (
-                    <div className="absolute left-0 bottom-0 z-20 ff-dh text-[16px] text-white text-shadow-outline truncate w-full px-[4px] text-center">
+                    <div
+                      className={`absolute left-0 bottom-0 z-20 ff-dh text-[14px] text-white text-shadow-outline w-full px-[4px] text-center ${material.name.length > 14 && 'truncate'}`}
+                    >
                       {material.name}
                     </div>
                   )}

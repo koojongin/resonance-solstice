@@ -8,6 +8,6 @@ export interface OriginRSMaterial extends DefaultRSItem {
   type?: RSMaterialType
   dressType?: RSDressType
   earnsPath?: RSItemEarnPath[]
-  includedItems?: Array<string | ExtendedUnionRSItem>
+  includedItems?: Array<string | ExtendedUnionRSItem | (ExtendedUnionRSItem & { dropRate: number })>
   isSameRate?: boolean
 }

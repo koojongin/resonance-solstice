@@ -4,7 +4,6 @@ import {
   MAPPED_ALL_EQUIPMENTS_R,
   MAPPED_ALL_EQUIPMENTS_SR,
   MAPPED_ALL_EQUIPMENTS_SSR,
-  SORTED_ALL_EQUIPMENTS,
 } from '@/const/archive/equipment.const'
 import { ExtendedRSEquipment } from '@/app/equipments/equipment.type'
 import { OriginRSMaterial } from '@/const/material/origin-rs-material.type'
@@ -12,6 +11,13 @@ import { RSMaterial } from '@/const/material/rs-material.type'
 import { RSItemType } from '@/const/item/rs-item-type.type'
 import { RSMaterialType } from '@/const/material/rs-material-type.type'
 import { RSDressType } from '@/const/material/rs-dress-type.type'
+import { ExtendedUnionRSItem } from '@/const/material/index.type'
+import {
+  getFilteredIncludedItems,
+  getRMixedIncludedItems,
+  getSRMixedIncludedItems,
+  getSSRMixedIncludedItems,
+} from '@/services/utils/filter-equipment-box-converter'
 
 const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
   '디지털화 사고': {
@@ -230,31 +236,6 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
     desc: '',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/thumb/4/44/r2rhxgq0646y6yw8hl22nxvlx4o6cky.png/180px-%E2%80%9C%E4%B8%80%E5%85%83%E4%BA%8C%E6%AC%A1%E2%80%9D.png',
-  },
-  '아니타 일반 장비함': {
-    grade: RS_GRADE.R,
-    desc: '',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/2/25/082xcjkd8ifroajgj9st6fhqh7nneys.png',
-  },
-  '아니타 정예 장비함': {
-    grade: RS_GRADE.SR,
-    desc: '',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/0/0d/082xcjkd8ifroajgj9st6fhqh7nneys.png',
-  },
-  '아니타 탐색 장비함': {
-    grade: RS_GRADE.SSR,
-    desc: '',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/a/a6/082xcjkd8ifroajgj9st6fhqh7nneys.png',
-    includedItems: [
-      ...SORTED_ALL_EQUIPMENTS.filter(
-        (item) =>
-          [RS_GRADE.SSR, RS_GRADE.SR, RS_GRADE.R].includes(item.grade) &&
-          item.faction === RS_FACTION.GARDENERS,
-      ),
-    ],
   },
   '진저 릴리 향수': {
     grade: RS_GRADE.R,
@@ -2509,43 +2490,6 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/thumb/1/10/qe5kc3tdv4njzt2c5w9oc1aq64101p9.png/180px-%E8%BF%BD%E5%8A%A0%E6%B3%A8%E8%B5%84%E7%94%B3%E8%AF%B7%E4%B9%A6.png',
   },
-  '분실된 흑월 예봉 장비함': {
-    grade: RS_GRADE.SSR,
-    desc: '전장에서 주울 수 있는 박스로 안에 아니타 진귀 장비가 들어 있습니다.',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/a/a6/082xcjkd8ifroajgj9st6fhqh7nneys.png',
-    includedItems: [
-      '전술 풍수 드론',
-      '번개 에너지 부적',
-      '춘추합성인장',
-      '헤븐 아머',
-      '흑월 메테오',
-      '스피릿 보우',
-      '데몬베인의 갑옷',
-    ],
-  },
-  '분실된 흑월 우수 장비함': {
-    grade: RS_GRADE.SR,
-    desc: '전장에서 주울 수 있는 박스로 안에 아니타 우수 장비가 들어 있습니다.',
-    includedItems: [
-      '창위의 약탈자',
-      '청산',
-      '범죄의 증거',
-      '흑월 연막탄',
-      '케블라 수트',
-      '어장 단검',
-      '흑월 독화살',
-    ],
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/a/a6/082xcjkd8ifroajgj9st6fhqh7nneys.png',
-  },
-  '분실된 흑월 일반 장비함': {
-    grade: RS_GRADE.R,
-    desc: '전장에서 주울 수 있는 박스로 안에 아니타 일반 장비가 들어 있습니다.',
-    includedItems: ['흑월 연막탄', '케블라 수트', '어장 단검', '흑월 독화살'],
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/a/a6/082xcjkd8ifroajgj9st6fhqh7nneys.png',
-  },
 
   '맨더 광산의 잃어버린 화물': {
     grade: RS_GRADE.R,
@@ -2615,45 +2559,279 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
       'https://patchwiki.biligame.com/images/resonance/5/5a/1vdcf84mw54r7bjyj46l2m6r0rjreh8.png',
   },
 
-  '분실된 시타델 탐색 장비함': {
+  /// ////////////////////////
+  // 장비함
+  /// ///////////////////
+  '혼돈해 운명 장비함': {
     grade: RS_GRADE.SSR,
-    desc: '전장에서 주울 수 있는 박스로 안에 아니타 진귀 장비가 들어 있습니다.',
+    desc: '해당하는 진영의 전투 장비가 들어있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/0/0b/8p9neu0xmjsfmddwg9hnobqndr5o9sz.png/180px-%E6%B7%B7%E6%B2%8C%E6%B5%B7%E5%A4%A9%E5%91%BD%E8%A3%85%E5%A4%87%E7%AE%B1.png',
+    includedItems: getFilteredIncludedItems(RS_FACTION.CHAOS, RS_GRADE.SSR, true),
+  },
+
+  '분실된 혼돈해 우수 장비함': {
+    grade: RS_GRADE.SR,
+    desc: '해당하는 진영의 전투 장비가 들어있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/d5/2jjcdx48y9xhv3gf3uoeom6soljtklx.png',
+    includedItems: getFilteredIncludedItems(RS_FACTION.CHAOS, RS_GRADE.SR),
+  },
+  '혼돈해 우수 장비함': {
+    grade: RS_GRADE.SR,
+    desc: '해당하는 진영의 전투 장비가 들어있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/d5/2jjcdx48y9xhv3gf3uoeom6soljtklx.png',
+    includedItems: getSRMixedIncludedItems(RS_FACTION.CHAOS),
+  },
+  '분실된 혼돈해 일반 장비함': {
+    grade: RS_GRADE.R,
+    desc: '해당하는 진영의 전투 장비가 들어있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/d5/2jjcdx48y9xhv3gf3uoeom6soljtklx.png',
+    includedItems: getFilteredIncludedItems(RS_FACTION.CHAOS, RS_GRADE.R),
+  },
+  '혼돈해 일반 장비함': {
+    grade: RS_GRADE.R,
+    desc: '해당하는 진영의 전투 장비가 들어있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/d5/2jjcdx48y9xhv3gf3uoeom6soljtklx.png',
+    includedItems: getSRMixedIncludedItems(RS_FACTION.CHAOS),
+  },
+
+  '제국 운명 장비함': {
+    grade: RS_GRADE.SSR,
+    desc: '해당하는 진영의 전투 장비가 들어있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/0/0c/eupch8yh9w6z1ocjw4ll9gwjyiew7p1.png/180px-%E5%B8%9D%E5%9B%BD%E5%A4%A9%E5%91%BD%E8%A3%85%E5%A4%87%E7%AE%B1.png',
+    includedItems: getFilteredIncludedItems(RS_FACTION.MUNDUS, RS_GRADE.SSR, true),
+  },
+  '제국 신월 장비함': {
+    grade: RS_GRADE.SSR,
+    desc: '해당하는 진영의 전투 장비가 들어있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/a/a3/cfhts7ts85b4r05j9ii4lh7jawj501d.png/180px-%E5%B8%9D%E5%9B%BD%E6%96%B0%E6%9C%88%E8%A3%85%E5%A4%87%E7%AE%B1.png',
+    includedItems: getSSRMixedIncludedItems(RS_FACTION.MUNDUS),
+  },
+  '분실된 제국 신월 장비함': {
+    grade: RS_GRADE.SSR,
+    desc: '해당하는 진영의 전투 장비가 들어있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/a/a3/cfhts7ts85b4r05j9ii4lh7jawj501d.png/180px-%E5%B8%9D%E5%9B%BD%E6%96%B0%E6%9C%88%E8%A3%85%E5%A4%87%E7%AE%B1.png',
+    includedItems: getFilteredIncludedItems(RS_FACTION.MUNDUS, RS_GRADE.SSR),
+  },
+  '제국 우수 장비함': {
+    grade: RS_GRADE.SR,
+    desc: '해당하는 진영의 전투 장비가 들어있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/a/a3/cfhts7ts85b4r05j9ii4lh7jawj501d.png/180px-%E5%B8%9D%E5%9B%BD%E6%96%B0%E6%9C%88%E8%A3%85%E5%A4%87%E7%AE%B1.png',
+    includedItems: getSRMixedIncludedItems(RS_FACTION.MUNDUS),
+  },
+  '분실된 제국 우수 장비함': {
+    grade: RS_GRADE.SR,
+    desc: '해당하는 진영의 전투 장비가 들어있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/a/a3/cfhts7ts85b4r05j9ii4lh7jawj501d.png/180px-%E5%B8%9D%E5%9B%BD%E6%96%B0%E6%9C%88%E8%A3%85%E5%A4%87%E7%AE%B1.png',
+    includedItems: getFilteredIncludedItems(RS_FACTION.MUNDUS, RS_GRADE.SR).concat(
+      getFilteredIncludedItems(RS_FACTION.MUNDUS, RS_GRADE.R),
+    ),
+  },
+  '제국 일반 장비함': {
+    grade: RS_GRADE.R,
+    desc: '해당하는 진영의 전투 장비가 들어있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/a/a3/cfhts7ts85b4r05j9ii4lh7jawj501d.png/180px-%E5%B8%9D%E5%9B%BD%E6%96%B0%E6%9C%88%E8%A3%85%E5%A4%87%E7%AE%B1.png',
+    includedItems: getRMixedIncludedItems(RS_FACTION.MUNDUS),
+  },
+  '분실된 제국 일반 장비함': {
+    grade: RS_GRADE.R,
+    desc: '해당하는 진영의 전투 장비가 들어있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/a/a3/cfhts7ts85b4r05j9ii4lh7jawj501d.png/180px-%E5%B8%9D%E5%9B%BD%E6%96%B0%E6%9C%88%E8%A3%85%E5%A4%87%E7%AE%B1.png',
+    includedItems: getFilteredIncludedItems(RS_FACTION.MUNDUS, RS_GRADE.R),
+  },
+
+  '흑월 운명 장비함': {
+    grade: RS_GRADE.SSR,
+    desc: '해당하는 진영의 전투 장비가 들어있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/8/8c/2sa8bmkdjqcxcrssnx6adupgi6rdo67.png/180px-%E9%BB%91%E6%9C%88%E5%A4%A9%E5%91%BD%E8%A3%85%E5%A4%87%E7%AE%B1.png',
+    includedItems: getFilteredIncludedItems(RS_FACTION.NIGHT_CHAINS, RS_GRADE.SSR, true),
+  },
+  '흑월 예봉 장비함': {
+    grade: RS_GRADE.SSR,
+    desc: '해당하는 진영의 전투 장비가 들어있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/3/3a/oimvp4lchvwke3jdbtgup0zsys1j5ut.png/180px-%E9%81%97%E8%90%BD%E7%9A%84%E9%BB%91%E6%9C%88%E6%9C%BA%E9%94%8B%E8%A3%85%E5%A4%87%E7%AE%B1.png',
+    includedItems: getSSRMixedIncludedItems(RS_FACTION.NIGHT_CHAINS),
+  },
+  '분실된 흑월 예봉 장비함': {
+    grade: RS_GRADE.SSR,
+    desc: '장비가 들어 있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/3/3a/oimvp4lchvwke3jdbtgup0zsys1j5ut.png/180px-%E9%81%97%E8%90%BD%E7%9A%84%E9%BB%91%E6%9C%88%E6%9C%BA%E9%94%8B%E8%A3%85%E5%A4%87%E7%AE%B1.png',
+    includedItems: getFilteredIncludedItems(RS_FACTION.NIGHT_CHAINS, RS_GRADE.SSR),
+  },
+  '흑월 우수 장비함': {
+    grade: RS_GRADE.SR,
+    desc: '장비가 들어 있습니다.',
+    includedItems: getSRMixedIncludedItems(RS_FACTION.NIGHT_CHAINS),
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/3/3a/oimvp4lchvwke3jdbtgup0zsys1j5ut.png/180px-%E9%81%97%E8%90%BD%E7%9A%84%E9%BB%91%E6%9C%88%E6%9C%BA%E9%94%8B%E8%A3%85%E5%A4%87%E7%AE%B1.png',
+  },
+  '분실된 흑월 우수 장비함': {
+    grade: RS_GRADE.SR,
+    desc: '장비가 들어 있습니다.',
+    includedItems: getFilteredIncludedItems(RS_FACTION.NIGHT_CHAINS, RS_GRADE.SR).concat(
+      getFilteredIncludedItems(RS_FACTION.NIGHT_CHAINS, RS_GRADE.R),
+    ),
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/3/3a/oimvp4lchvwke3jdbtgup0zsys1j5ut.png/180px-%E9%81%97%E8%90%BD%E7%9A%84%E9%BB%91%E6%9C%88%E6%9C%BA%E9%94%8B%E8%A3%85%E5%A4%87%E7%AE%B1.png',
+  },
+  '분실된 흑월 일반 장비함': {
+    grade: RS_GRADE.R,
+    desc: '장비가 들어 있습니다.',
+    includedItems: getFilteredIncludedItems(RS_FACTION.NIGHT_CHAINS, RS_GRADE.R),
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/3/3a/oimvp4lchvwke3jdbtgup0zsys1j5ut.png/180px-%E9%81%97%E8%90%BD%E7%9A%84%E9%BB%91%E6%9C%88%E6%9C%BA%E9%94%8B%E8%A3%85%E5%A4%87%E7%AE%B1.png',
+  },
+  '흑월 일반 장비함': {
+    grade: RS_GRADE.R,
+    desc: '장비가 들어 있습니다.',
+    includedItems: getRMixedIncludedItems(RS_FACTION.NIGHT_CHAINS),
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/3/3a/oimvp4lchvwke3jdbtgup0zsys1j5ut.png/180px-%E9%81%97%E8%90%BD%E7%9A%84%E9%BB%91%E6%9C%88%E6%9C%BA%E9%94%8B%E8%A3%85%E5%A4%87%E7%AE%B1.png',
+  },
+
+  '아니타 운명 장비함': {
+    grade: RS_GRADE.SSR,
+    desc: '해당하는 진영의 전투 장비가 들어있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/1/1a/7a03g9wc2ddp4zbedvc6c2ssuo5nnfh.png/180px-%E9%98%BF%E5%A6%AE%E5%A1%94%E5%A4%A9%E5%91%BD%E8%A3%85%E5%A4%87%E7%AE%B1.png',
+    includedItems: getFilteredIncludedItems(RS_FACTION.GARDENERS, RS_GRADE.SSR, true),
+  },
+  '아니타 일반 장비함': {
+    grade: RS_GRADE.R,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/25/082xcjkd8ifroajgj9st6fhqh7nneys.png',
+    includedItems: getRMixedIncludedItems(RS_FACTION.GARDENERS),
+  },
+  '아니타 정예 장비함': {
+    grade: RS_GRADE.SR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/0d/082xcjkd8ifroajgj9st6fhqh7nneys.png',
+    includedItems: getSRMixedIncludedItems(RS_FACTION.GARDENERS),
+  },
+  '아니타 탐색 장비함': {
+    grade: RS_GRADE.SSR,
+    desc: '',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a6/082xcjkd8ifroajgj9st6fhqh7nneys.png',
+    includedItems: getSSRMixedIncludedItems(RS_FACTION.GARDENERS),
+  },
+
+  '철도연맹 운명 장비함': {
+    grade: RS_GRADE.SSR,
+    desc: '해당하는 진영의 전투 장비가 들어있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/8/85/ob4b01thvxzi91p2dec6uvl2mtn5lh6.png/180px-%E9%93%81%E7%9B%9F%E5%A4%A9%E5%91%BD%E8%A3%85%E5%A4%87%E7%AE%B1.png',
+    includedItems: getFilteredIncludedItems(RS_FACTION.RAILWAY, RS_GRADE.SSR, true),
+  },
+  '철도연맹 특제 장비함': {
+    grade: RS_GRADE.SSR,
+    desc: '해당하는 진영의 전투 장비가 들어있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/a/a3/27zasxdzq68l186xsrvl6r80hdloq62.png/270px-%E9%93%81%E7%9B%9F%E7%89%B9%E5%88%B6%E8%A3%85%E5%A4%87%E7%AE%B1.png',
+    includedItems: getSSRMixedIncludedItems(RS_FACTION.RAILWAY),
+  },
+  '분실된 철도연맹 정예 장비함': {
+    grade: RS_GRADE.SSR,
+    desc: '전장에서 주울 수 있는 박스로 안에 철도연맹 진귀 장비가 들어 있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/a/a3/27zasxdzq68l186xsrvl6r80hdloq62.png/180px-%E9%93%81%E7%9B%9F%E7%89%B9%E5%88%B6%E8%A3%85%E5%A4%87%E7%AE%B1.png',
+    includedItems: getFilteredIncludedItems(RS_FACTION.RAILWAY, RS_GRADE.SSR),
+  },
+  '분실된 철도연맹 우수 장비함': {
+    grade: RS_GRADE.SR,
+    desc: '전장에서 주울 수 있는 박스로 안에 철도연맹 우수 장비가 들어 있습니다.',
+    includedItems: getFilteredIncludedItems(RS_FACTION.RAILWAY, RS_GRADE.SR).concat(
+      getFilteredIncludedItems(RS_FACTION.RAILWAY, RS_GRADE.R),
+    ),
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/a/a3/27zasxdzq68l186xsrvl6r80hdloq62.png/180px-%E9%93%81%E7%9B%9F%E7%89%B9%E5%88%B6%E8%A3%85%E5%A4%87%E7%AE%B1.png',
+  },
+  '철도연맹 우수 장비함': {
+    grade: RS_GRADE.SR,
+    desc: '전장에서 주울 수 있는 박스로 안에 철도연맹 우수 장비가 들어 있습니다.',
+    includedItems: getSRMixedIncludedItems(RS_FACTION.RAILWAY),
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/a/a3/27zasxdzq68l186xsrvl6r80hdloq62.png/180px-%E9%93%81%E7%9B%9F%E7%89%B9%E5%88%B6%E8%A3%85%E5%A4%87%E7%AE%B1.png',
+  },
+  '분실된 철도연맹 일반 장비함': {
+    grade: RS_GRADE.R,
+    desc: '전장에서 주울 수 있는 박스로 안에 철도연맹 일반 장비가 들어 있습니다.',
+    includedItems: getFilteredIncludedItems(RS_FACTION.RAILWAY, RS_GRADE.R),
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/a/a3/27zasxdzq68l186xsrvl6r80hdloq62.png/180px-%E9%93%81%E7%9B%9F%E7%89%B9%E5%88%B6%E8%A3%85%E5%A4%87%E7%AE%B1.png',
+  },
+  '철도연맹 일반 장비함': {
+    grade: RS_GRADE.R,
+    desc: '장비가 들어 있습니다.',
+    includedItems: getRMixedIncludedItems(RS_FACTION.RAILWAY),
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/a/a3/27zasxdzq68l186xsrvl6r80hdloq62.png/180px-%E9%93%81%E7%9B%9F%E7%89%B9%E5%88%B6%E8%A3%85%E5%A4%87%E7%AE%B1.png',
+  },
+
+  '시타델 운명 장비함': {
+    grade: RS_GRADE.SSR,
+    desc: '장비가 들어 있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/thumb/9/9c/bkxnzdth9twrkxyyonsh6dsi4lxuh8u.png/180px-%E5%AD%A6%E4%BC%9A%E5%A4%A9%E5%91%BD%E8%A3%85%E5%A4%87%E7%AE%B1.png',
+    includedItems: getFilteredIncludedItems(RS_FACTION.SOURCE_CITADEL, RS_GRADE.SSR, true),
+  },
+  '시타델 연구 장비함': {
+    grade: RS_GRADE.SSR,
+    desc: '장비가 들어 있습니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/b/bd/hp3k73ikaa04eijjewqe4jsywlfw9l4.png',
-    includedItems: [
-      '스타 웨이브',
-      '심해 시험침',
-      '무한 비확률 아머',
-      '변화의 눈동자',
-      '고차원 구조체',
-      '인비져블 터치',
-      '비트레이얼',
-      '메모리 매트릭스',
-      '넥타르의 마지막 해',
-      '클라드니 아크',
-      '진홍의 예언',
-    ],
+    includedItems: getSSRMixedIncludedItems(RS_FACTION.SOURCE_CITADEL),
+  },
+  '분실된 시타델 연구 장비함': {
+    grade: RS_GRADE.SSR,
+    desc: '장비가 들어 있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/bd/hp3k73ikaa04eijjewqe4jsywlfw9l4.png',
+    includedItems: getFilteredIncludedItems(RS_FACTION.SOURCE_CITADEL, RS_GRADE.SSR),
   },
   '분실된 시타델 우수 장비함': {
     grade: RS_GRADE.SR,
-    desc: '전장에서 주울 수 있는 박스로 안에 아니타 우수 장비가 들어 있습니다.',
-    includedItems: [
-      '블락 플래셔',
-      '해부 도구C',
-      '무의식 학습 장치',
-      '임계질량',
-      '질량 투사기',
-      '2호 장난감',
-      '기본 방어 섬유',
-      '원기 회복 기기',
-    ],
+    desc: '장비가 들어 있습니다.',
+    includedItems: getFilteredIncludedItems(RS_FACTION.SOURCE_CITADEL, RS_GRADE.SR).concat(
+      getFilteredIncludedItems(RS_FACTION.SOURCE_CITADEL, RS_GRADE.R),
+    ),
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/bd/hp3k73ikaa04eijjewqe4jsywlfw9l4.png',
+  },
+  '시타델 우수 장비함': {
+    grade: RS_GRADE.SR,
+    desc: '장비가 들어 있습니다.',
+    includedItems: getSRMixedIncludedItems(RS_FACTION.SOURCE_CITADEL),
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/b/bd/hp3k73ikaa04eijjewqe4jsywlfw9l4.png',
   },
   '분실된 시타델 일반 장비함': {
     grade: RS_GRADE.R,
-    desc: '전장에서 주울 수 있는 박스로 안에 아니타 일반 장비가 들어 있습니다.',
-    includedItems: ['질량 투사기', '2호 장난감', '기본 방어 섬유', '원기 회복 기기'],
+    desc: '장비가 들어 있습니다.',
+    includedItems: getFilteredIncludedItems(RS_FACTION.SOURCE_CITADEL, RS_GRADE.R),
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/bd/hp3k73ikaa04eijjewqe4jsywlfw9l4.png',
+  },
+  '시타델 일반 장비함': {
+    grade: RS_GRADE.R,
+    desc: '장비가 들어 있습니다.',
+    includedItems: getRMixedIncludedItems(RS_FACTION.SOURCE_CITADEL),
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/b/bd/hp3k73ikaa04eijjewqe4jsywlfw9l4.png',
   },
@@ -2663,87 +2841,26 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
     desc: '전장에서 주울 수 있는 박스로 안에 아니타 진귀 장비가 들어 있습니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/a/a6/082xcjkd8ifroajgj9st6fhqh7nneys.png',
-    includedItems: [
-      '스펙트럼 파편',
-      '절연 아머',
-      '반엔트로피',
-      '라바 파이어',
-      '뫼비우스',
-      '모노폴 마그네타',
-      '시뮬레이트 스타',
-      '구상 번개',
-    ],
+    includedItems: getFilteredIncludedItems(RS_FACTION.GARDENERS, RS_GRADE.SSR),
   },
   '분실된 아니타 우수 장비함': {
     grade: RS_GRADE.SR,
     desc: '전장에서 주울 수 있는 박스로 안에 아니타 우수 장비가 들어 있습니다.',
-    includedItems: [
-      '공명체 섬유',
-      "'극좌표' 지휘 드론",
-      '번개 소환 권선기MK1',
-      '에비서레이터MK0',
-      'A77 우주 비행 권총',
-      '다용도 오프너',
-      '비금속 도금 재료',
-      '제세동기',
-    ],
+    includedItems: getFilteredIncludedItems(RS_FACTION.GARDENERS, RS_GRADE.SR).concat(
+      getFilteredIncludedItems(RS_FACTION.GARDENERS, RS_GRADE.R),
+    ),
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/a/a6/082xcjkd8ifroajgj9st6fhqh7nneys.png',
   },
   '분실된 아니타 일반 장비함': {
     grade: RS_GRADE.R,
     desc: '전장에서 주울 수 있는 박스로 안에 아니타 일반 장비가 들어 있습니다.',
-    includedItems: ['A77 우주 비행 권총', '다용도 오프너', '비금속 도금 재료', '제세동기'],
+    includedItems: getFilteredIncludedItems(RS_FACTION.GARDENERS, RS_GRADE.R),
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/a/a6/082xcjkd8ifroajgj9st6fhqh7nneys.png',
   },
 
-  '분실된 철도연맹 정예 장비함': {
-    grade: RS_GRADE.SSR,
-    desc: '전장에서 주울 수 있는 박스로 안에 철도연맹 진귀 장비가 들어 있습니다.',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/a/a6/082xcjkd8ifroajgj9st6fhqh7nneys.png',
-    includedItems: [
-      '리프팅 수술 장비',
-      '흑석 아머',
-      '타임라인 익스텐더',
-      '축퇴 흑석',
-      '치유 방탄 조끼',
-      '액체 질소 분사기',
-    ],
-  },
-  '분실된 철도연맹 우수 장비함': {
-    grade: RS_GRADE.SR,
-    desc: '전장에서 주울 수 있는 박스로 안에 철도연맹 우수 장비가 들어 있습니다.',
-    includedItems: [
-      '동력식 회수 기계',
-      '북부동맹 방어 섬유',
-      '동력식 도끼',
-      '라이플총',
-      '파편 커버',
-      '기능성 음료수',
-      '고열량 식량',
-      '구급 아머',
-      '사냥칼',
-      '사냥용 리볼버',
-    ],
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/a/a6/082xcjkd8ifroajgj9st6fhqh7nneys.png',
-  },
-  '분실된 철도연맹 일반 장비함': {
-    grade: RS_GRADE.R,
-    desc: '전장에서 주울 수 있는 박스로 안에 철도연맹 일반 장비가 들어 있습니다.',
-    includedItems: [
-      '파편 커버',
-      '기능성 음료수',
-      '고열량 식량',
-      '구급 아머',
-      '사냥칼',
-      '사냥용 리볼버',
-    ],
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/a/a6/082xcjkd8ifroajgj9st6fhqh7nneys.png',
-  },
+  /// //////////////////
 }
 export const MATERIALS: { [key: string]: RSMaterial & { iType: string } } = _.mapValues(
   DEFAULT_MATERIALS,
