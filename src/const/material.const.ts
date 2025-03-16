@@ -2562,13 +2562,13 @@ const DEFAULT_MATERIALS: { [key: string]: OriginRSMaterial } = {
   /// ////////////////////////
   // 장비함
   /// ///////////////////
-  '혼돈해 운명 장비함': {
-    grade: RS_GRADE.SSR,
-    desc: '해당하는 진영의 전투 장비가 들어있습니다.',
-    thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/thumb/0/0b/8p9neu0xmjsfmddwg9hnobqndr5o9sz.png/180px-%E6%B7%B7%E6%B2%8C%E6%B5%B7%E5%A4%A9%E5%91%BD%E8%A3%85%E5%A4%87%E7%AE%B1.png',
-    includedItems: getFilteredIncludedItems(RS_FACTION.CHAOS, RS_GRADE.SSR, true),
-  },
+  // '혼돈해 운명 장비함': {
+  //   grade: RS_GRADE.SSR,
+  //   desc: '해당하는 진영의 전투 장비가 들어있습니다.',
+  //   thumbnail:
+  //     'https://patchwiki.biligame.com/images/resonance/thumb/0/0b/8p9neu0xmjsfmddwg9hnobqndr5o9sz.png/180px-%E6%B7%B7%E6%B2%8C%E6%B5%B7%E5%A4%A9%E5%91%BD%E8%A3%85%E5%A4%87%E7%AE%B1.png',
+  //   includedItems: getFilteredIncludedItems(RS_FACTION.CHAOS, RS_GRADE.SSR, true),
+  // },
 
   '분실된 혼돈해 우수 장비함': {
     grade: RS_GRADE.SR,
