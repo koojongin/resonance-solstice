@@ -13,6 +13,7 @@ import { Tooltip } from '@material-tailwind/react'
 import { TOTAL_ARCHIVE_MAP } from '@/const/archive'
 import { ExtendedUnionRSItem } from '@/const/material/index.type'
 import { ExtendedRSEquipment } from '@/app/equipments/equipment.type'
+import { CommentBox } from '@/app/components/comment/comment-box'
 
 export default function ArchiveDetailPage() {
   const { name } = useParams()
@@ -103,6 +104,15 @@ export default function ArchiveDetailPage() {
             )
           })}
         </div>
+      </div>
+
+      <div className="mt-[50px]">
+        <CommentBox
+          data={{
+            target: `archive-${archiveName}`,
+            refId: '123456789012345678901234' as string,
+          }}
+        />
       </div>
     </div>
   )

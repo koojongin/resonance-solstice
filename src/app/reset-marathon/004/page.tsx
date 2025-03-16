@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import { GradientButton } from '@/app/components/button/gradient-button'
+import { CommentBox } from '@/app/components/comment/comment-box'
 
 export default function ClearMindTierList() {
   return (
@@ -24,6 +25,15 @@ export default function ClearMindTierList() {
           src="https://imgproxy.shelter.id/sig/Z3M6Ly9zaGVsdGVyLW1lZGlhL3UvYkI1OHJHc2Z1SU0wVEQ2SUtKNDNFTTM3Ukt4MS9pbWFnZXMvMTc0MTg2ODIxNjMyM18zYWYxZjUxZC0xY2EzLTQ5MmItODJlYy01ZmY5MGZhZmE2NGMud2VicA=="
         />
       </Link>
+
+      <div className="mt-[50px]">
+        <CommentBox
+          data={{
+            target: 'reset-marathon-clear-mind',
+            refId: '123456789012345678901234' as string,
+          }}
+        />
+      </div>
     </div>
   )
 }

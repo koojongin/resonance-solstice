@@ -19,6 +19,7 @@ import { RS_FACTION } from '@/const/character/character.enum'
 import { WEAPON_SUFFIXES } from '@/const/item/options/weapon.const'
 import { copyToClipboard } from '@/services/utils/copy-clipboard'
 import { toast } from 'react-toastify'
+import { CommentBox } from '@/app/components/comment/comment-box'
 
 export default function EquipmentDetailPage() {
   const { name } = useParams()
@@ -131,7 +132,14 @@ export default function EquipmentDetailPage() {
 
       <LinkedDeckListBox title="아이템이 사용된 추천덱" decks={linkedRecommendationDecks} />
 
-      {/* // */}
+      <div className="mt-[50px]">
+        <CommentBox
+          data={{
+            target: `equipment-${decodedName}`,
+            refId: '123456789012345678901234' as string,
+          }}
+        />
+      </div>
     </div>
   )
 }

@@ -1,6 +1,8 @@
 'use client'
 
 import { GradientHeaderDiv } from '@/app/components/div/gradient-header-div'
+import { CommentBox } from '@/app/components/comment/comment-box'
+import React from 'react'
 
 export default function EventCheongMyeongChroniclesPage() {
   return (
@@ -13,6 +15,14 @@ export default function EventCheongMyeongChroniclesPage() {
         />
       </div>
       <div>한섭 미출시</div>
+      <div className="mt-[50px]">
+        <CommentBox
+          data={{
+            target: 'event-cheongmyeong-chronicles',
+            refId: '123456789012345678901234' as string,
+          }}
+        />
+      </div>
     </div>
   )
 }

@@ -1,3 +1,6 @@
+import React from 'react'
+import { CommentBox } from '@/app/components/comment/comment-box'
+
 export default function EventSummerIslandPage() {
   return (
     <div className="flex flex-col gap-[10px]">
@@ -16,6 +19,12 @@ export default function EventSummerIslandPage() {
       </div>
 
       <div className="">한섭 미출시</div>
+
+      <div className="mt-[50px]">
+        <CommentBox
+          data={{ target: 'event-summer-island', refId: '123456789012345678901234' as string }}
+        />
+      </div>
     </div>
   )
 }

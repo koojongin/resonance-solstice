@@ -23,6 +23,7 @@ import { ItemBoxResponsive } from '@/app/components/item/item-box'
 import { ALL_EQUIPMENTS } from '@/const/archive/equipment.const'
 import { ItemTooltipBox } from '@/app/components/item/item-tooltip-box'
 import { getItemByNameOrItem } from '@/services/utils/included-item'
+import { CommentBox } from '@/app/components/comment/comment-box'
 
 export default function MaterialDetailPage() {
   const { name } = useParams()
@@ -165,6 +166,14 @@ export default function MaterialDetailPage() {
             )
           })}
         </div>
+      </div>
+      <div className="mt-[50px]">
+        <CommentBox
+          data={{
+            target: `material-${decodedName}`,
+            refId: '123456789012345678901234' as string,
+          }}
+        />
       </div>
     </div>
   )

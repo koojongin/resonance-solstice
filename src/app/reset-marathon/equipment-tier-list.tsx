@@ -11,6 +11,7 @@ import { GradientButton } from '@/app/components/button/gradient-button'
 import _, { debounce } from 'lodash'
 import { DEFAULT_EQUIPMENT_TIER_LIST_DATA } from '@/const/equipment-tier-list-data.const'
 import { ExtendedRSEquipment } from '@/app/equipments/equipment.type'
+import { CommentBox } from '@/app/components/comment/comment-box'
 
 export function EquipmentTierList() {
   const { comment } = DEFAULT_EQUIPMENT_TIER_LIST_DATA
@@ -154,6 +155,14 @@ export function EquipmentTierList() {
               )
             })}
         </div>
+      </div>
+      <div className="mt-[50px]">
+        <CommentBox
+          data={{
+            target: 'reset-marathon-equipment',
+            refId: '123456789012345678901234' as string,
+          }}
+        />
       </div>
     </div>
   )

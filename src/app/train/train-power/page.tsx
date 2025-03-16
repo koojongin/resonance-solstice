@@ -10,6 +10,7 @@ import { useNextDepthNavigator } from '@/services/navigation'
 import { TRAIN_POWER_DATA } from '@/const/item/train-power-data'
 import { GradientHeaderDiv } from '@/app/components/div/gradient-header-div'
 import { formatNumber } from '@/services/utils/number.formatter'
+import { CommentBox } from '@/app/components/comment/comment-box'
 
 export default function TrainPowerPage() {
   const { router } = useNextDepthNavigator()
@@ -109,6 +110,15 @@ export default function TrainPowerPage() {
         <div className="flex flex-col gap-[2px]">
           <div>아니타 걸이식 배터리팩 : 레벨 당 500파워 (최대 3레벨)</div>
         </div>
+      </div>
+
+      <div className="mt-[50px]">
+        <CommentBox
+          data={{
+            target: `train-power`,
+            refId: '123456789012345678901234' as string,
+          }}
+        />
       </div>
     </div>
   )
