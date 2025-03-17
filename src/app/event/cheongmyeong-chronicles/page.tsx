@@ -3,6 +3,7 @@
 import { GradientHeaderDiv } from '@/app/components/div/gradient-header-div'
 import { CommentBox } from '@/app/components/comment/comment-box'
 import React from 'react'
+import { CommentTarget } from '@/const/api/comment-target'
 
 export default function EventCheongMyeongChroniclesPage() {
   return (
@@ -18,7 +19,7 @@ export default function EventCheongMyeongChroniclesPage() {
       <div className="mt-[50px]">
         <CommentBox
           data={{
-            target: 'event-cheongmyeong-chronicles',
+            target: CommentTarget.EventCMChronicles,
             refId: '123456789012345678901234' as string,
           }}
         />

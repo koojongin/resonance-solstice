@@ -2,6 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 import { GradientButton } from '@/app/components/button/gradient-button'
 import { CommentBox } from '@/app/components/comment/comment-box'
+import { CommentTarget } from '@/const/api/comment-target'
 
 export default function ClearMindTierList() {
   return (
@@ -29,7 +30,7 @@ export default function ClearMindTierList() {
       <div className="mt-[50px]">
         <CommentBox
           data={{
-            target: 'reset-marathon-clear-mind',
+            target: CommentTarget.ResetMaraClearMind,
             refId: '123456789012345678901234' as string,
           }}
         />

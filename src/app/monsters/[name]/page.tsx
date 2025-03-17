@@ -16,6 +16,7 @@ import { MATERIALS } from '@/const/material.const'
 import { Tooltip } from '@material-tailwind/react'
 import { getMonsterFrameCss } from '@/services/utils/monster-box-converter'
 import { CommentBox } from '@/app/components/comment/comment-box'
+import { CommentTarget } from '@/const/api/comment-target'
 
 export default function MonsterDetailPage() {
   const { name } = useParams()
@@ -178,7 +179,7 @@ export default function MonsterDetailPage() {
       <div className="mt-[50px]">
         <CommentBox
           data={{
-            target: `monster-${decodedName}`,
+            target: `${CommentTarget.Monster}${decodedName}`,
             refId: '123456789012345678901234' as string,
           }}
         />

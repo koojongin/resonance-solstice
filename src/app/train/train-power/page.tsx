@@ -11,6 +11,7 @@ import { TRAIN_POWER_DATA } from '@/const/item/train-power-data'
 import { GradientHeaderDiv } from '@/app/components/div/gradient-header-div'
 import { formatNumber } from '@/services/utils/number.formatter'
 import { CommentBox } from '@/app/components/comment/comment-box'
+import { CommentTarget } from '@/const/api/comment-target'
 
 export default function TrainPowerPage() {
   const { router } = useNextDepthNavigator()
@@ -115,7 +116,7 @@ export default function TrainPowerPage() {
       <div className="mt-[50px]">
         <CommentBox
           data={{
-            target: `train-power`,
+            target: CommentTarget.TrainPower,
             refId: '123456789012345678901234' as string,
           }}
         />

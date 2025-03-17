@@ -19,6 +19,7 @@ import {
 import { injectCharacterDetail } from '@/app/components/deck/inject-character-data'
 import { AutoPresetBox } from '@/app/components/deck/auto-preset-box'
 import { CommentBox } from '@/app/components/comment/comment-box'
+import { CommentTarget } from '@/const/api/comment-target'
 
 export default function RecommendationUserDeckDetailPage() {
   const { id } = useParams()
@@ -121,7 +122,7 @@ export default function RecommendationUserDeckDetailPage() {
           <GenericEquipmentBox characters={deck.characters.map((c) => c.character.originName)} />
           <CharacterDetailDescBox desc={(deck?.desc as string) || ''} />
           <AutoPresetBox deck={deck} />
-          <CommentBox data={{ target: 'deck-detail', refId: id as string }} />
+          <CommentBox data={{ target: CommentTarget.DeckDetail, refId: id as string }} />
         </div>
       )}
     </div>

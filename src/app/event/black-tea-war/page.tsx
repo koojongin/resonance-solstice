@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { GradientButton } from '@/app/components/button/gradient-button'
 import { CommentBox } from '@/app/components/comment/comment-box'
 import React from 'react'
+import { CommentTarget } from '@/const/api/comment-target'
 
 export default function EventBlackTeaWarPage() {
   return (
@@ -15,7 +16,7 @@ export default function EventBlackTeaWarPage() {
       </GradientButton>
       <CommentBox
         data={{
-          target: 'event-cheongmyeong-chronicles',
+          target: CommentTarget.EventBlackTeaWar,
           refId: '123456789012345678901234' as string,
         }}
       />

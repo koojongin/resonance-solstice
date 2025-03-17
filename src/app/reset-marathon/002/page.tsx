@@ -65,6 +65,7 @@ import { MATERIALS } from '@/const/material.const'
 import { MaterialBoxResponsive, MaterialTooltipBox } from '@/app/components/material/material-box'
 import { CommentBox } from '@/app/components/comment/comment-box'
 import React from 'react'
+import { CommentTarget } from '@/const/api/comment-target'
 
 export default function TierListPage2() {
   const tierList: { [key: string]: RSCharacter[] } = {
@@ -233,7 +234,7 @@ export default function TierListPage2() {
       <div className="mt-[50px]">
         <CommentBox
           data={{
-            target: 'reset-marathon-002',
+            target: CommentTarget.ResetMara002,
             refId: '123456789012345678901234' as string,
           }}
         />

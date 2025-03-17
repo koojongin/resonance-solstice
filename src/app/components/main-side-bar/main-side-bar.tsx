@@ -15,6 +15,7 @@ export default function MainSideBar() {
     {
       label: '메인',
       path: '/home',
+      className: 'first:border-l',
     },
     {
       label: 'DB',
@@ -169,14 +170,23 @@ export default function MainSideBar() {
         },
       ],
     },
+
+    {
+      label: '전체 댓글',
+      path: '/comments',
+      className: 'ml-auto border-l',
+    },
   ]
 
   return (
     <div className="sm:flex-wrap relative z-[100] py-[10px] text-[22px] flex cursor-pointer border-b border-gray-300 mb-[10px] ff-dh text-[18px] text-blue-gray-800">
-      {menuItems.map((menu) => (
+      {menuItems.map((menu, index) => (
         <div
           key={menu.label}
-          className="first:border-l hover:bg-gray-200 border border-l-0 border-gray-400 px-[8px] py-[4px] relative"
+          className={clsx(
+            `hover:bg-gray-200 border border-gray-400 px-[8px] py-[4px] relative ${menuItems.length - 1 !== index && 'border-l-0'}`,
+            menu.className,
+          )}
           onClick={() => router.push(menu.path || '')}
           onMouseEnter={() => setHoveredMenu(menu.label)}
           onMouseLeave={() => setHoveredMenu(null)}

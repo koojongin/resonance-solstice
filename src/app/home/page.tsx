@@ -6,6 +6,7 @@ import createKey from '@/services/key-generator'
 import { GradientButton } from '@/app/components/button/gradient-button'
 import { OfficialUpdatePostBox } from '@/app/home/official-update-post-box'
 import { CommentBox } from '@/app/components/comment/comment-box'
+import { CommentTarget } from '@/const/api/comment-target'
 
 export default function HomePage() {
   const coupons = [
@@ -119,7 +120,7 @@ export default function HomePage() {
       <div className="mt-[50px]">
         <CommentBox
           data={{
-            target: `home`,
+            target: CommentTarget.Home,
             refId: '123456789012345678901234' as string,
           }}
         />

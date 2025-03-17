@@ -1,5 +1,6 @@
 import React from 'react'
 import { CommentBox } from '@/app/components/comment/comment-box'
+import { CommentTarget } from '@/const/api/comment-target'
 
 export default function EventSummerIslandPage() {
   return (
@@ -22,7 +23,10 @@ export default function EventSummerIslandPage() {
 
       <div className="mt-[50px]">
         <CommentBox
-          data={{ target: 'event-summer-island', refId: '123456789012345678901234' as string }}
+          data={{
+            target: CommentTarget.EventSummerIsland,
+            refId: '123456789012345678901234' as string,
+          }}
         />
       </div>
     </div>

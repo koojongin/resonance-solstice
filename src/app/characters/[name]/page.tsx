@@ -11,6 +11,7 @@ import { CharacterDetailBox } from '@/app/characters/[name]/character-detail'
 import Link from 'next/link'
 import createKey from '@/services/key-generator'
 import { CommentBox } from '@/app/components/comment/comment-box'
+import { CommentTarget } from '@/const/api/comment-target'
 
 enum CSectionName {
   PROFILE = '프로필',
@@ -131,7 +132,7 @@ export default function CharacterDetailPage() {
       <div className="mt-[50px]">
         <CommentBox
           data={{
-            target: `character-${name}`,
+            target: `${CommentTarget.Character}${name}`,
             refId: '123456789012345678901234' as string,
           }}
         />

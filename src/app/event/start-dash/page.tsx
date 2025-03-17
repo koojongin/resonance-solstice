@@ -2,6 +2,7 @@ import { EVENT_START_DASH_DATA } from '@/app/event/start-dash/start-dash.const'
 import { GradientButton } from '@/app/components/button/gradient-button'
 import { CommentBox } from '@/app/components/comment/comment-box'
 import React from 'react'
+import { CommentTarget } from '@/const/api/comment-target'
 
 export default function EventStartDashPage() {
   return (
@@ -33,7 +34,7 @@ export default function EventStartDashPage() {
       <div className="mt-[50px]">
         <CommentBox
           data={{
-            target: 'event-start-dash',
+            target: CommentTarget.EventStartDash,
             refId: '123456789012345678901234' as string,
           }}
         />

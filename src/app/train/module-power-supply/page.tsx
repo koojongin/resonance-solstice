@@ -11,6 +11,7 @@ import { GradientHeaderDiv } from '@/app/components/div/gradient-header-div'
 import { formatNumber } from '@/services/utils/number.formatter'
 import { TRAIN_MODULE_POWER_SUPPLY_DATA } from '@/const/item/train-module-power-supply-data'
 import { CommentBox } from '@/app/components/comment/comment-box'
+import { CommentTarget } from '@/const/api/comment-target'
 
 export default function TrainModulePowerSupplyPage() {
   const { router } = useNextDepthNavigator()
@@ -84,7 +85,7 @@ export default function TrainModulePowerSupplyPage() {
         <div className="mt-[50px]">
           <CommentBox
             data={{
-              target: `train-module-power-supply`,
+              target: CommentTarget.TrainModulePowerSupply,
               refId: '123456789012345678901234' as string,
             }}
           />

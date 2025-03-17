@@ -12,6 +12,7 @@ import _, { debounce } from 'lodash'
 import { DEFAULT_EQUIPMENT_TIER_LIST_DATA } from '@/const/equipment-tier-list-data.const'
 import { ExtendedRSEquipment } from '@/app/equipments/equipment.type'
 import { CommentBox } from '@/app/components/comment/comment-box'
+import { CommentTarget } from '@/const/api/comment-target'
 
 export function EquipmentTierList() {
   const { comment } = DEFAULT_EQUIPMENT_TIER_LIST_DATA
@@ -159,7 +160,7 @@ export function EquipmentTierList() {
       <div className="mt-[50px]">
         <CommentBox
           data={{
-            target: 'reset-marathon-equipment',
+            target: CommentTarget.ResetMaraEquipment,
             refId: '123456789012345678901234' as string,
           }}
         />
