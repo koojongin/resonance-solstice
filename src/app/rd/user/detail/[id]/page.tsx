@@ -137,7 +137,7 @@ export default function RecommendationUserDeckDetailPage() {
             }}
           />
           <hr className="my-[10px] mt-[50px]" />
-          <RdUserRelatedDeckList leaderName={deck.leaderName!} />
+          <RdUserRelatedDeckList name={deck.leaderName!} isLeader />
         </div>
       )}
     </div>

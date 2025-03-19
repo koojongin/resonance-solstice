@@ -60,7 +60,7 @@ export function EquipmentRelatedBox({ name }: { name: string }) {
   return (
     <div className="flex flex-col gap-[6px]">
       <GradientHeaderDiv>
-        해당 장비가 포함되어 있는 추천 덱({decks?.length.toLocaleString() || 0})
+        해당 장비가 포함되어 있는 추천 덱({pagination?.total.toLocaleString() || 0})
       </GradientHeaderDiv>
       <div className="flex flex-wrap gap-[10px]">
         {decks &&

@@ -20,17 +20,21 @@ function convertCharacterData(decks: []) {
     return fixedDeck
   })
 }
-export function RdUserRelatedDeckList({ leaderName }: { leaderName: string }) {
+export function RdUserRelatedDeckList({ name, isLeader }: { isLeader?: boolean; name: string }) {
   const [decks, setDecks] = useState<RecommendationUserDeck[]>([])
   const [pagination, setPagination] = useState<Pagination>()
   const loadDecks = useCallback(async (selectedPage?: number) => {
+    const condition: any = {}
+    if (isLeader) {
+      condition.leaderName = name
+    } else {
+      condition['characters.name'] = { $in: [name] }
+    }
     const result = await api.post('/recommendation-deck/list', {
-      condition: {
-        leaderName,
-      },
+      condition,
       opts: {
         page: selectedPage,
-        limit: 20,
+        limit: 18,
       },
     })
     const { decks: rDecks, page, total, totalPages } = result.data
@@ -49,7 +53,8 @@ export function RdUserRelatedDeckList({ leaderName }: { leaderName: string }) {
   return (
     <div className="flex flex-col gap-[6px]">
       <div className="ff-dh text-[24px]">
-        해당 리더가 포함되어 있는 추천 덱({decks?.length.toLocaleString() || 0})
+        해당 {isLeader ? '리더가' : '승무원이'} 포함되어 있는 추천 덱(
+        {pagination?.total.toLocaleString() || 0})
       </div>
       <div className="flex flex-wrap gap-[10px]">
         {decks &&
@@ -63,7 +68,7 @@ export function RdUserRelatedDeckList({ leaderName }: { leaderName: string }) {
                   <div className="flex flex-wrap gap-[2px]">
                     {deck.characters.map((characterData, cIndex) => {
                       const { character } = characterData
-                      const isLeader = character.name === deck.leaderName
+                      const isLeaderC = character.name === deck.leaderName
                       return (
                         <div
                           key={`rd_${deck.id}_${cIndex}`}
@@ -82,7 +87,7 @@ export function RdUserRelatedDeckList({ leaderName }: { leaderName: string }) {
                               backgroundImage: `url(${convertCharacterThumbnailUrl(character.thumbnail, 100)})`,
                             }}
                           />
-                          {isLeader && (
+                          {isLeaderC && (
                             <div className="absolute bottom-0 w-full text-center text-white ff-dh text-[20px] text-shadow-outline">
                               리더
                             </div>

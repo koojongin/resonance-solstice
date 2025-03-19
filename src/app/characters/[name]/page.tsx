@@ -123,7 +123,7 @@ export default function CharacterDetailPage() {
       </div>
 
       <div className="mt-[50px]">
-        <RdUserRelatedDeckList leaderName={name as string} />
+        <RdUserRelatedDeckList name={name as string} />
       </div>
     </div>
   )
