@@ -17,8 +17,8 @@ export function AutoPresetBox({
 }) {
   return (
     <div className="">
-      <div className="flex items-stretch min-h-[100px]">
-        <div className="min-w-[100px] flex items-center justify-center ff-dh text-[20px] flex-col gap-[4px]">
+      <div className="flex items-stretch">
+        <div className="min-w-[100px] min-h-[100px] flex items-center justify-center ff-dh text-[20px] flex-col gap-[4px]">
           <div>오토 프리셋</div>
           <Link href="/wiki/auto-preset" target="_blank">
             <GradientButton className="p-[4px] ff-sdn text-[14px] rounded inline-flex items-center gap-[4px]">
@@ -27,7 +27,7 @@ export function AutoPresetBox({
             </GradientButton>
           </Link>
         </div>
-        <div className="w-full h-full">
+        <div className="w-full flex flex-col min-h-[100px]">
           {deck.autoPreset && (
             <>
               <Tooltip content="클릭시 오토 프리셋이 복사됩니다.">
@@ -44,7 +44,7 @@ export function AutoPresetBox({
             </>
           )}
           {!deck.autoPreset && (
-            <div className="h-full border p-[10px] rounded bg-gray-100 flex items-center justify-center w-full ff-dh text-gray-600 text-[20px]">
+            <div className="h-full border p-[10px] rounded bg-gray-100/50 flex items-center justify-center w-full ff-dh text-gray-500 text-[20px]">
               등록된 오토 프리셋이 없습니다.
             </div>
           )}

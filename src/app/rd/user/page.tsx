@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
-import { Suspense, useCallback, useEffect, useState } from 'react'
+import React, { Suspense, useCallback, useEffect, useState } from 'react'
 import { api } from '@/services/api/api.interceptor'
 import { Pagination } from '@/const/api/pagination.interface'
 import createKey from '@/services/key-generator'
@@ -10,6 +10,7 @@ import RdUserDeckList from '@/app/rd/user/rd-user-deck-list'
 import { RS_CHARACTER_DICT } from '@/const/character/character.const'
 import { RecommendationDeck } from '@/app/rd/rd-decks.const'
 import { RecommendationUserDeck } from '@/app/rd/user/user-deck.interface'
+import { PaginationList } from '@/app/components/pagination/pagination-list'
 
 function convertCharacterData(decks: []) {
   return decks.map((deck: any) => {
@@ -79,25 +80,7 @@ function RdUserPage() {
         <RdUserDeckList decks={decks} pagination={pagination} />
       </div>
 
-      {/* PAGINATION START */}
-      {pagination && (
-        <div className="w-full flex justify-center mt-[15px]">
-          <div className="flex gap-[4px]">
-            {new Array(pagination.totalPages).fill(1).map((value, index) => {
-              return (
-                <div
-                  onClick={() => initPage(index + 1)}
-                  className={`cursor-pointer flex justify-center items-center w-[24px] h-[24px] text-[14px] font-bold ${index + 1 === pagination.page ? 'border text-[#5795dd]' : ''} hover:text-[#5795dd] hover:border`}
-                  key={createKey()}
-                >
-                  {index + 1}
-                </div>
-              )
-            })}
-          </div>
-        </div>
-      )}
-      {/* PAGINATION END */}
+      {pagination && <PaginationList pagination={pagination} onSelectPage={initPage} />}
     </div>
   )
 }
