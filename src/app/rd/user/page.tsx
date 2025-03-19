@@ -38,11 +38,11 @@ interface SearchQuery {
 const findAndOrOptions = [
   {
     value: '$all',
-    label: 'AND',
+    label: '모두 포함',
   },
   {
     value: '$in',
-    label: 'OR',
+    label: '한명 이상 포함',
   },
 ]
 
