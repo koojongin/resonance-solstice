@@ -46,6 +46,11 @@ const findAndOrOptions = [
   },
 ]
 
+const usePreviewOptions = [
+  { value: {}, label: '상관없음' },
+  { value: true, label: '설정됨' },
+]
+
 function RdUserPage() {
   const { openNewTab } = useNextDepthNavigator()
   const [searchParams, setSearchParams] = useState<URLSearchParams | null>(null)
@@ -66,6 +71,9 @@ function RdUserPage() {
   const [decks, setDecks] = useState<Array<RecommendationDeck>>()
   const [pagination, setPagination] = useState<Pagination>()
   const searchedTitleRef = useRef<HTMLInputElement>(null)
+  const [usePreviewOption, setUsePreviewOption] = useState<{ value: any; label: string }>(
+    usePreviewOptions[0],
+  )
   const [searchedLeader, setSearchedLeader] = useState<{ value: string; label: string } | null>(
     null,
   )
@@ -101,9 +109,14 @@ function RdUserPage() {
           [selectedPartyOption!.value]: searchedCharacters.map((c: any) => c?.value),
         }
       }
+      if (usePreviewOption) {
+        if (typeof usePreviewOption.value !== 'object') {
+          _lastQuery.condition.usePreview = usePreviewOption.value
+        }
+      }
       return _lastQuery
     },
-    [searchedCharacters, searchedLeader, selectedPartyOption],
+    [searchedCharacters, searchedLeader, selectedPartyOption, usePreviewOption],
   )
 
   const loadDecks = async (selectedPage?: number, _condition?: any) => {
@@ -196,8 +209,6 @@ function RdUserPage() {
         return
       }
     })
-
-    console.log('오냐?>')
     loadDecks()
   }, [searchParams])
 
@@ -246,7 +257,7 @@ function RdUserPage() {
         <div className="ff-dh text-[20px]">상세 검색</div>
         <div className="flex flex-col gap-[4px]">
           <div className="flex items-center gap-[10px]">
-            <div className="min-w-[50px]">제목</div>
+            <div className="min-w-[100px]">제목</div>
             <input
               className="border border-gray-400 min-w-[300px] p-[4px]"
               type="text"
@@ -261,7 +272,7 @@ function RdUserPage() {
             />
           </div>
           <div className="flex items-center gap-[10px]">
-            <div className="min-w-[50px]">리더</div>
+            <div className="min-w-[100px]">리더</div>
             <Select
               className="relative z-[60] w-[300px]"
               onChange={setSearchedLeader}
@@ -273,7 +284,7 @@ function RdUserPage() {
             />
           </div>
           <div className="flex items-center gap-[10px]">
-            <div className="min-w-[50px]">승무원</div>
+            <div className="min-w-[100px]">승무원</div>
             <Select
               className="relative z-[50] w-[300px]"
               isMulti
@@ -290,6 +301,15 @@ function RdUserPage() {
               components={{ Option: PartySelectRadioOptionBox }}
             />
           </div>
+        </div>
+        <div className="flex items-center gap-[10px]">
+          <div className="min-w-[100px]">카드 순서 설정</div>
+          <Select
+            options={usePreviewOptions}
+            value={usePreviewOption}
+            onChange={setUsePreviewOption as any}
+            components={{ Option: PreviewCheckboxOptionBox }}
+          />
         </div>
         <div
           className="bg-green-400 text-white p-[10px] text-center ff-dh text-[20px]"
@@ -362,6 +382,20 @@ export default function RdUserPageS() {
   )
 }
 
+function PreviewCheckboxOptionBox(props: any) {
+  const { data, innerRef, innerProps, isSelected } = props
+
+  return (
+    <div
+      ref={innerRef}
+      {...innerProps}
+      className="p-[10px] flex items-center gap-[4px] cursor-pointer hover:bg-gray-100 transition"
+    >
+      <input type="radio" checked={isSelected} readOnly />
+      <span>{data.label}</span>
+    </div>
+  )
+}
 function PartySelectRadioOptionBox(props: any) {
   const { data, isSelected, innerRef, innerProps } = props
   return (
