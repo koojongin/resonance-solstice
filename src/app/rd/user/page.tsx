@@ -80,7 +80,7 @@ function RdUserPage() {
         condition: {},
         opts: {
           page: selectedPage || lastQuery?.opts.page || 1,
-          limit: 10,
+          limit: 20,
         },
         timestamp: new Date(),
       }

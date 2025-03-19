@@ -3,7 +3,6 @@
 import { useParams } from 'next/navigation'
 import React from 'react'
 import { GradientHeaderDiv } from '@/app/components/div/gradient-header-div'
-import { ALL_NAMED_MAPS } from '@/const/archive/named-map.const'
 import { useNextDepthNavigator } from '@/services/navigation'
 import { ALL_EQUIPMENTS } from '@/const/archive/equipment.const'
 import {
@@ -12,7 +11,6 @@ import {
 } from '@/services/utils/material-box-converter'
 import createKey from '@/services/key-generator'
 import { RSHighlightedText } from '@/services/utils/highlight-text'
-import { LinkedDeckListBox } from '@/app/characters/[name]/linked-deck-list-box'
 import { RECOMMENDATION_DECKS } from '@/app/rd/rd-decks.const'
 import { ItemStringLinkWithMap } from '@/app/components/material/material-link'
 import { RS_FACTION } from '@/const/character/character.enum'
@@ -21,6 +19,7 @@ import { copyToClipboard } from '@/services/utils/copy-clipboard'
 import { toast } from 'react-toastify'
 import { CommentBox } from '@/app/components/comment/comment-box'
 import { CommentTarget } from '@/const/api/comment-target'
+import { EquipmentRelatedBox } from '@/app/components/deck/equipment-related-box'
 
 export default function EquipmentDetailPage() {
   const { name } = useParams()
@@ -131,7 +130,10 @@ export default function EquipmentDetailPage() {
         </div>
       )}
 
-      <LinkedDeckListBox title="아이템이 사용된 추천덱" decks={linkedRecommendationDecks} />
+      {/* <LinkedDeckListBox title="아이템이 사용된 추천덱" decks={linkedRecommendationDecks} /> */}
+      <div>
+        <EquipmentRelatedBox name={decodedName} />
+      </div>
 
       <div className="mt-[50px]">
         <CommentBox
