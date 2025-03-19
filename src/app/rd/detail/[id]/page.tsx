@@ -2,7 +2,7 @@
 
 import { useParams } from 'next/navigation'
 import { RECOMMENDATION_DECKS, RecommendationDeck } from '@/app/rd/rd-decks.const'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { copyToClipboard } from '@/services/utils/copy-clipboard'
 import { Tooltip } from '@material-tailwind/react'
 import Link from 'next/link'
@@ -24,7 +24,6 @@ export default function RecommendationDeckDetailPage() {
   const { id } = useParams()
   const originDeck = TOTAL_RD_DECKS.find((rDeck) => id === rDeck.id)
 
-  router.replace(`/rd/user/detail/${originDeck!.docId}`)
   const deck: RecommendationDeck | undefined = injectCharacterDetail(
     originDeck,
   ) as RecommendationDeck
@@ -34,6 +33,10 @@ export default function RecommendationDeckDetailPage() {
     TOTAL_RD_DECKS.filter(
       (rDeck) => rDeck.characters.filter((c) => c.character.name === deck.leaderName).length > 0,
     )
+
+  useEffect(() => {
+    router.push(`/rd/user/detail/${originDeck!.docId}`)
+  }, [])
 
   return (
     <div>
