@@ -23,6 +23,239 @@ export interface RSEquipment extends OriginRSEquipment {
 const DEFAULT_ALL_EQUIPMENTS: {
   [key: string]: OriginRSEquipment
 } = {
+  비트레이얼: {
+    type: RSEquipmentType.WEAPON,
+    grade: RS_GRADE.SSR,
+    desc: '기본 속성: 공격력+37\n옵션: [리더 스킬] 사용 시 20% 확률로 [다크 아트]를 1장 생성하여 덱의 맨 위에 올려놓습니다. (확률 중첩 가능)',
+    thumbnail:
+      'https://nng-phinf.pstatic.net/MjAyNTAyMDhfMjMw/MDAxNzM4OTk4OTE1MDM5.owM7QkEcC3hCyLqYSIgUCI_1bmeMXzP1AUVlMl7WQ-sg.kPVNGrvOtnzdI5rO8YoIlgGcGEdgFZz3NVz7pm7EQAkg.PNG/%E7%8B%A1%E8%AF%88%E8%83%8C%E5%8F%9B.png',
+    faction: RS_FACTION.SOURCE_CITADEL,
+    earnsPath: [
+      {
+        desc: '케이프시 철도관리국 임무',
+        tags: [],
+        map: '케이프시',
+      },
+      {
+        desc: '흑월 상점',
+        tags: ['흑월 상점'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-빙하 본드래곤',
+        tags: ['부표'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-혼란의 돌산호',
+        tags: ['부표'],
+      },
+    ],
+  },
+  '시뮬레이트 스타': {
+    type: RSEquipmentType.ARMOR,
+    grade: RS_GRADE.SSR,
+    desc: '기본 속성: 방어력+37\n옵션: [리더스킬] 사용 시, 자신의 체력을 5% 회복합니다.(중첩 가능)',
+    thumbnail:
+      'https://nng-phinf.pstatic.net/MjAyNTAyMDhfMjc0/MDAxNzM5MDAxOTI1Mzgx.V9YhHqMBikl9-2dYLbqK5kg0IW4F4KzMXoPHeUeO7Hgg.gTY9LD52DyUk46T8FQu8cQZFFzyUjKQO5QP5jPuNcOcg.PNG/%E6%A8%A1%E6%8B%9F%E6%98%9F%E8%BE%B0.png',
+    faction: RS_FACTION.GARDENERS,
+    earnsPath: [
+      {
+        desc: '자유 무역항-7 철도관리국 현상금 임무',
+        tags: ['현상금 임무'],
+        map: '자유 무역항-7',
+      },
+      {
+        desc: '흑월 상점',
+        tags: ['흑월 상점'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-블리자드 기포체',
+        tags: ['부표'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-빙하 본드래곤',
+        tags: ['부표'],
+      },
+    ],
+  },
+  '사면 직물': {
+    type: RSEquipmentType.ARMOR,
+    grade: RS_GRADE.UR,
+    desc: '기본 속성: 방어력+47\n옵션: [다크 아트] 생성 시 자신의 방어력이 +2.5% 증가합니다. (최대 65%, 중첩가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/72/0fwpj0d3zu8x9kxyaolkyj6f6x69lgw.png',
+    faction: RS_FACTION.SOURCE_CITADEL,
+    earnsPath: [],
+  },
+  '드래곤 체인': {
+    type: RSEquipmentType.WEAPON,
+    grade: RS_GRADE.UR,
+    desc: '기본 속성: 공격력+47\n옵션: 비용이 2 이상인 [족쇄] 키워드를 가진 카드를 사용할 때 마다 무작위 적의 공격력이 1% 감소합니다.(최대 15%)\n비용이 2 이상인 [속박] 키워드를 가진 카드를 사용할 때 마다 무작위 적의 방어력이 1% 감소합니다.(최대 15%)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/04/elis0i72m658wfs4vvej2u0ur0k1ylo.png',
+    faction: RS_FACTION.NIGHT_CHAINS,
+    earnsPath: [],
+  },
+  '퍼플 클라우드 아머': {
+    type: RSEquipmentType.ARMOR,
+    grade: RS_GRADE.UR,
+    desc: '기본 속성: 방어력+45\n옵션: 자신이 [은신] 상태일 때 자신을 제외한 아군이 받는 피해가 10% 감소합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/81/bz2isfp1ut28h07bglc7kedicjmnh3g.png',
+    faction: RS_FACTION.NIGHT_CHAINS,
+    earnsPath: [],
+  },
+  '바람의 연기 아머': {
+    type: RSEquipmentType.ARMOR,
+    grade: RS_GRADE.UR,
+    desc: '기본 속성: 방어력+45\n옵션: 아군이 [은신]할 때마다 자신의 체력을 10% 회복합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/32/1wfa0a62uu5euofd33o16bnhgwvtjiz.png',
+    faction: RS_FACTION.NIGHT_CHAINS,
+    earnsPath: [],
+  },
+  팔방타용진: {
+    type: RSEquipmentType.ACCESSORY,
+    grade: RS_GRADE.UR,
+    desc: '기본 속성: 체력+4640\n옵션: 카드를 8장 뽑을 때마다 비용을 0.8 얻습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/7a/m2ie2i3hi6arp0phlfvhzo5bx7lf97e.png',
+    faction: RS_FACTION.NIGHT_CHAINS,
+    earnsPath: [],
+  },
+  신대곡옥: {
+    type: RSEquipmentType.ACCESSORY,
+    grade: RS_GRADE.UR,
+    desc: '기본 속성: 체력+4600\n옵션: 빈사 시 [무적]/[은신]을 1초간 얻고, 동시에 자신의 체력을 60% 회복합니다.(1회 한정)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/7a/m2ie2i3hi6arp0phlfvhzo5bx7lf97e.png',
+    faction: RS_FACTION.NIGHT_CHAINS,
+    earnsPath: [],
+  },
+  '113번 몰수품': {
+    type: RSEquipmentType.ACCESSORY,
+    grade: RS_GRADE.UR,
+    desc: '기본 속성: 체력+4855\n옵션: 자신의 비용이 5 이상인 스킬 카드의 비용이 1 감소합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/82/fsgbawbdejfqb0r5eeaadi676lyr53c.png',
+    faction: RS_FACTION.CHAOS,
+    earnsPath: [],
+  },
+  '로고스의 눈': {
+    type: RSEquipmentType.ACCESSORY,
+    grade: RS_GRADE.UR,
+    desc: '기본 속성: 체력+4640\n옵션: 전투 시작 시 [버리기] 명령을 활성화합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/ed/aqtq93lbvwji00ccc7zp64b11wt2gy1.png',
+    faction: RS_FACTION.SOURCE_CITADEL,
+    earnsPath: [],
+  },
+  '백만 슈퍼마그넷': {
+    type: RSEquipmentType.ACCESSORY,
+    grade: RS_GRADE.UR,
+    desc: '기본 속성: 체력+4855\n옵션: 비용이 3 이상인 [레드카드]/[블루카드] 사용 시 덱에서 [레드카드]/[블루카드] 2장을 손으로 가져옵니다(1회 한정)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/c7/1p192n7rlcfijz2e77mrnfqdzl4b9vr.png',
+    faction: RS_FACTION.RAILWAY,
+    earnsPath: [],
+  },
+  '스타 스톤': {
+    type: RSEquipmentType.ACCESSORY,
+    grade: RS_GRADE.UR,
+    desc: '기본 속성: 체력+4695\n옵션: 덱에서 [블랙카드] [음에너지]를 뽑을 때마다 소각하고, 동시에 [신성]을 1장 생성하여 손으로 가져옵니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/5c/9f6rog2fsu4psvalntk8ptbd3wgr16u.png',
+    faction: RS_FACTION.SOURCE_CITADEL,
+    earnsPath: [],
+  },
+  에비서레이터MK0: {
+    type: RSEquipmentType.WEAPON,
+    grade: RS_GRADE.SR,
+    desc: '기본 속성: 공격력+30\n옵션: [리더 스킬] 사용 시 비용을 0.4 얻습니다.(중첩 가능)',
+    thumbnail:
+      'https://nng-phinf.pstatic.net/MjAyNTAyMDhfMjIg/MDAxNzM5MDAxMTY2Mzk4.dh4EWysAOPTnArXpkpC-8oE7Pxm2_sGBSKa73rejUCwg.RgZEwmiutzlq5bO9wSa7vmI8cX5NCIgfwjFWCPI15Ysg.PNG/%E5%86%85%E8%84%8F%E9%87%87%E9%9B%86%E5%99%A8MK0.png',
+    faction: RS_FACTION.GARDENERS,
+    earnsPath: [
+      {
+        desc: '자유 무역항-7 철도관리국 임무',
+        tags: [],
+        map: '자유 무역항-7',
+      },
+      {
+        desc: '에너지 연구소 작전 계획',
+        tags: ['작전 계획'],
+      },
+      {
+        desc: '흑월 상점',
+        tags: ['흑월 상점'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-블리자드 기포체',
+        tags: ['부표'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-빙하 본드래곤',
+        tags: ['부표'],
+      },
+    ],
+  },
+  뫼비우스: {
+    type: RSEquipmentType.ACCESSORY,
+    grade: RS_GRADE.SSR,
+    desc: '기본 속성: 체력+4026\n옵션: 손패 보충 쿨타임이 0.25초 감소합니다.(중첩 가능)',
+    thumbnail:
+      'https://nng-phinf.pstatic.net/MjAyNTAyMDhfMTA1/MDAxNzM5MDAyMjE0MTM5.6fZVX9VZEDogolK-fQ6oKUVOH5NnBpiN_Al7QMfZMcog.gYWshtnxzzHdglzHEN4PqRiR5gDOthtQxSnjvxL6CaYg.PNG/%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF.png',
+    faction: RS_FACTION.GARDENERS,
+    earnsPath: [
+      {
+        desc: '자유 무역항-7 철도관리국 현상금 임무',
+        tags: ['현상금 임무'],
+        map: '자유 무역항-7',
+      },
+      {
+        desc: '흑월 상점',
+        tags: ['흑월 상점'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-블리자드 기포체',
+        tags: ['부표'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-빙하 본드래곤',
+        tags: ['부표'],
+      },
+    ],
+  },
+  춘추합성인장: {
+    type: RSEquipmentType.ACCESSORY,
+    grade: RS_GRADE.SSR,
+    desc: '기본 속성: 체력+3734\n옵션: 전투 시작 시 추가로 비용을 2 얻습니다.(중첩 가능)',
+    thumbnail:
+      'https://nng-phinf.pstatic.net/MjAyNTAyMDdfMjMx/MDAxNzM4OTIyMzgzODUw.vpEDwSbHjWAZxDR1SpGFq7-JoptcfWNbMyTTREDH2NEg.gkAXbjeuTgXHtQsU24W47mrO-vqO5Asy03nZXQUvDuUg.PNG/%E6%98%A5%E7%A7%8B%E5%90%88%E8%AF%9A%E5%8D%B0.png',
+    faction: RS_FACTION.NIGHT_CHAINS,
+    earnsPath: [
+      {
+        desc: '청명 데이터 센터 철도관리국 현상금 임무',
+        tags: ['현상금 임무'],
+        map: '청명 데이터 센터',
+      },
+      {
+        desc: '흑월 상점',
+        tags: ['흑월 상점'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-더스트 리자드',
+        tags: ['부표'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-암흑의 매머드',
+        tags: ['부표'],
+      },
+      {
+        desc: '철도 주변의 베툴라 부표-혼란의 돌산호',
+        tags: ['부표'],
+      },
+    ],
+  },
   '엘모의 불': {
     type: RSEquipmentType.WEAPON,
     grade: RS_GRADE.SSR,
@@ -369,33 +602,6 @@ const DEFAULT_ALL_EQUIPMENTS: {
     desc: '기본 속성: 공격력+40\n옵션: [다크 아트]가 입히는 피해가 20% 증가합니다.(중첩 가능)',
     thumbnail:
       'https://nng-phinf.pstatic.net/MjAyNTAyMDhfMjMw/MDAxNzM4OTk5MjM0OTg5.etWPsZZy0KKQhzNYQN9hKrx0S1-aPrQ_7uesm4diohwg.ueKbWW5Sg0LS1d4Rd7epubqGhW_Yfkye74SwuI-vI9Ig.PNG/%E4%B8%8D%E5%8F%AF%E8%A7%81%E4%B9%8B%E8%A7%A6.png',
-    faction: RS_FACTION.SOURCE_CITADEL,
-    earnsPath: [
-      {
-        desc: '케이프시 철도관리국 임무',
-        tags: [],
-        map: '케이프시',
-      },
-      {
-        desc: '흑월 상점',
-        tags: ['흑월 상점'],
-      },
-      {
-        desc: '철도 주변의 베툴라 부표-빙하 본드래곤',
-        tags: ['부표'],
-      },
-      {
-        desc: '철도 주변의 베툴라 부표-혼란의 돌산호',
-        tags: ['부표'],
-      },
-    ],
-  },
-  비트레이얼: {
-    type: RSEquipmentType.WEAPON,
-    grade: RS_GRADE.SSR,
-    desc: '기본 속성: 공격력+37\n옵션: [리더 스킬] 사용 시 20% 확률로 [다크 아트]를 1장 생성하여 덱의 맨 위에 올려놓습니다. (확률 중첩 가능)',
-    thumbnail:
-      'https://nng-phinf.pstatic.net/MjAyNTAyMDhfMjMw/MDAxNzM4OTk4OTE1MDM5.owM7QkEcC3hCyLqYSIgUCI_1bmeMXzP1AUVlMl7WQ-sg.kPVNGrvOtnzdI5rO8YoIlgGcGEdgFZz3NVz7pm7EQAkg.PNG/%E7%8B%A1%E8%AF%88%E8%83%8C%E5%8F%9B.png',
     faction: RS_FACTION.SOURCE_CITADEL,
     earnsPath: [
       {
@@ -1085,37 +1291,6 @@ const DEFAULT_ALL_EQUIPMENTS: {
       },
     ],
   },
-  춘추합성인장: {
-    type: RSEquipmentType.ACCESSORY,
-    grade: RS_GRADE.SSR,
-    desc: '기본 속성: 체력+3734\n옵션: 전투 시작 시 추가로 비용을 2 얻습니다.(중첩 가능)',
-    thumbnail:
-      'https://nng-phinf.pstatic.net/MjAyNTAyMDdfMjMx/MDAxNzM4OTIyMzgzODUw.vpEDwSbHjWAZxDR1SpGFq7-JoptcfWNbMyTTREDH2NEg.gkAXbjeuTgXHtQsU24W47mrO-vqO5Asy03nZXQUvDuUg.PNG/%E6%98%A5%E7%A7%8B%E5%90%88%E8%AF%9A%E5%8D%B0.png',
-    faction: RS_FACTION.NIGHT_CHAINS,
-    earnsPath: [
-      {
-        desc: '청명 데이터 센터 철도관리국 현상금 임무',
-        tags: ['현상금 임무'],
-        map: '청명 데이터 센터',
-      },
-      {
-        desc: '흑월 상점',
-        tags: ['흑월 상점'],
-      },
-      {
-        desc: '철도 주변의 베툴라 부표-더스트 리자드',
-        tags: ['부표'],
-      },
-      {
-        desc: '철도 주변의 베툴라 부표-암흑의 매머드',
-        tags: ['부표'],
-      },
-      {
-        desc: '철도 주변의 베툴라 부표-혼란의 돌산호',
-        tags: ['부표'],
-      },
-    ],
-  },
   '헤븐 아머': {
     type: RSEquipmentType.ARMOR,
     grade: RS_GRADE.SSR,
@@ -1710,66 +1885,12 @@ const DEFAULT_ALL_EQUIPMENTS: {
       },
     ],
   },
-  뫼비우스: {
-    type: RSEquipmentType.ACCESSORY,
-    grade: RS_GRADE.SSR,
-    desc: '기본 속성: 체력+4026\n옵션: 손패 보충 쿨타임이 0.25초 감소합니다.(중첩 가능)',
-    thumbnail:
-      'https://nng-phinf.pstatic.net/MjAyNTAyMDhfMTA1/MDAxNzM5MDAyMjE0MTM5.6fZVX9VZEDogolK-fQ6oKUVOH5NnBpiN_Al7QMfZMcog.gYWshtnxzzHdglzHEN4PqRiR5gDOthtQxSnjvxL6CaYg.PNG/%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF.png',
-    faction: RS_FACTION.GARDENERS,
-    earnsPath: [
-      {
-        desc: '자유 무역항-7 철도관리국 현상금 임무',
-        tags: ['현상금 임무'],
-        map: '자유 무역항-7',
-      },
-      {
-        desc: '흑월 상점',
-        tags: ['흑월 상점'],
-      },
-      {
-        desc: '철도 주변의 베툴라 부표-블리자드 기포체',
-        tags: ['부표'],
-      },
-      {
-        desc: '철도 주변의 베툴라 부표-빙하 본드래곤',
-        tags: ['부표'],
-      },
-    ],
-  },
   '모노폴 마그네타': {
     type: RSEquipmentType.ACCESSORY,
     grade: RS_GRADE.SSR,
     desc: '기본 속성: 체력+3791\n옵션: 자신의 [드론]의 지속 시간이 2초 증가합니다.(중첩 가능)',
     thumbnail:
       'https://nng-phinf.pstatic.net/MjAyNTAyMDhfMjk3/MDAxNzM5MDAyMDEyNDkz.0JC2Lfwbj_0iMu5qObV5yMj9VEjH6YwZNVxYYikH8lwg.FrcXc37-xRbAYhpe5iyS9NMh9Wn6tPana4UaMWAdl5gg.PNG/%E5%8D%95%E6%9E%81%E7%A3%81%E6%80%A7.png',
-    faction: RS_FACTION.GARDENERS,
-    earnsPath: [
-      {
-        desc: '자유 무역항-7 철도관리국 현상금 임무',
-        tags: ['현상금 임무'],
-        map: '자유 무역항-7',
-      },
-      {
-        desc: '흑월 상점',
-        tags: ['흑월 상점'],
-      },
-      {
-        desc: '철도 주변의 베툴라 부표-블리자드 기포체',
-        tags: ['부표'],
-      },
-      {
-        desc: '철도 주변의 베툴라 부표-빙하 본드래곤',
-        tags: ['부표'],
-      },
-    ],
-  },
-  '시뮬레이트 스타': {
-    type: RSEquipmentType.ARMOR,
-    grade: RS_GRADE.SSR,
-    desc: '기본 속성: 방어력+37\n옵션: [리더스킬] 사용 시, 자신의 체력을 5% 회복합니다.(중첩 가능)',
-    thumbnail:
-      'https://nng-phinf.pstatic.net/MjAyNTAyMDhfMjc0/MDAxNzM5MDAxOTI1Mzgx.V9YhHqMBikl9-2dYLbqK5kg0IW4F4KzMXoPHeUeO7Hgg.gTY9LD52DyUk46T8FQu8cQZFFzyUjKQO5QP5jPuNcOcg.PNG/%E6%A8%A1%E6%8B%9F%E6%98%9F%E8%BE%B0.png',
     faction: RS_FACTION.GARDENERS,
     earnsPath: [
       {
@@ -1859,37 +1980,6 @@ const DEFAULT_ALL_EQUIPMENTS: {
     desc: '기본 속성: 공격력+30\n옵션: 자신이 부여하는 [인뢰]의 발동 확률이 8% 증가합니다.(중첩 가능)',
     thumbnail:
       'https://nng-phinf.pstatic.net/MjAyNTAyMDhfMjc3/MDAxNzM5MDAxMzM5ODQ5.Hb_sjot1VmZ601-0A0m6W1QW86dg6M7tycszNBtffxwg.wXSplIc9-3GHWG-5G8_vAwxImjrlB8lImdf3pPwjuQ8g.PNG/%E5%94%A4%E9%9B%B7%E7%BA%BF%E5%9C%88MK1.png',
-    faction: RS_FACTION.GARDENERS,
-    earnsPath: [
-      {
-        desc: '자유 무역항-7 철도관리국 임무',
-        tags: [],
-        map: '자유 무역항-7',
-      },
-      {
-        desc: '에너지 연구소 작전 계획',
-        tags: ['작전 계획'],
-      },
-      {
-        desc: '흑월 상점',
-        tags: ['흑월 상점'],
-      },
-      {
-        desc: '철도 주변의 베툴라 부표-블리자드 기포체',
-        tags: ['부표'],
-      },
-      {
-        desc: '철도 주변의 베툴라 부표-빙하 본드래곤',
-        tags: ['부표'],
-      },
-    ],
-  },
-  에비서레이터MK0: {
-    type: RSEquipmentType.WEAPON,
-    grade: RS_GRADE.SR,
-    desc: '기본 속성: 공격력+30\n옵션: [리더 스킬] 사용 시 비용을 0.4 얻습니다.(중첩 가능)',
-    thumbnail:
-      'https://nng-phinf.pstatic.net/MjAyNTAyMDhfMjIg/MDAxNzM5MDAxMTY2Mzk4.dh4EWysAOPTnArXpkpC-8oE7Pxm2_sGBSKa73rejUCwg.RgZEwmiutzlq5bO9wSa7vmI8cX5NCIgfwjFWCPI15Ysg.PNG/%E5%86%85%E8%84%8F%E9%87%87%E9%9B%86%E5%99%A8MK0.png',
     faction: RS_FACTION.GARDENERS,
     earnsPath: [
       {
@@ -3364,7 +3454,7 @@ const DEFAULT_ALL_EQUIPMENTS: {
   '블루 일루전': {
     type: RSEquipmentType.WEAPON,
     grade: RS_GRADE.UR,
-    desc: '기본 속성: 공격력+49\n옵션: [보호막]이 생성될 때마다 공격력이 0.5%씩 증가합니다. (중첩가능)',
+    desc: '기본 속성: 공격력+49\n옵션: [실드]를 1개 생성할 때마다 자신의 공격력이 0.5% 증가합니다.(중첩가능)',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/c/c2/7d3r94iruwid406wsevid46naxo05ou.png',
     faction: RS_FACTION.GARDENERS,
