@@ -12,6 +12,8 @@ import { PaginationList } from '@/app/components/pagination/pagination-list'
 import Select from 'react-select'
 import { GradientButton } from '@/app/components/button/gradient-button'
 import { useNextDepthNavigator } from '@/services/navigation'
+import { RsCharacterCardResponsiveShorten } from '@/app/components/character-frame/rs-character-card-responsive'
+import createKey from '@/services/key-generator'
 
 function convertCharacterData(decks: []) {
   return decks.map((deck: any) => {
@@ -173,10 +175,11 @@ function RdUserPage() {
           <div className="flex items-center gap-[10px]">
             <div className="min-w-[50px]">리더</div>
             <Select
-              className="relative z-[60]"
+              className="relative z-[60] w-[300px]"
               defaultValue={null}
               onChange={setSearchedLeader}
               options={CHARACTER_OPTIONS}
+              components={{ Option: CharacterSelectOptionBox }}
               placeholder="리더를 검색하세요"
               isClearable
             />
@@ -184,12 +187,13 @@ function RdUserPage() {
           <div className="flex items-center gap-[10px]">
             <div className="min-w-[50px]">승무원</div>
             <Select
-              className="relative z-[50]"
+              className="relative z-[50] w-[300px]"
               isMulti
               defaultValue={searchedCharacters}
               onChange={setSearchedCharacters}
               options={CHARACTER_OPTIONS}
-              placeholder="리더를 검색하세요"
+              components={{ Option: CharacterSelectOptionBox }}
+              placeholder="파티원을 추가하세요"
             />
           </div>
         </div>
@@ -206,24 +210,34 @@ function RdUserPage() {
         {lastQuery && (
           <div className="flex flex-wrap gap-[4px]">
             {lastQuery.condition.title && (
-              <div className="border border-blue-gray-900 p-[4px] rounded">
+              <div className="border border-blue-gray-900 p-[4px] rounded flex items-center justify-center">
                 [덱제목:"{lastQuery.condition.title.$regex}"]
               </div>
             )}
             {lastQuery.condition.leaderName && (
-              <div className="border border-blue-gray-900 p-[4px] rounded">
-                [리더:{RS_CHARACTER_DICT[lastQuery.condition.leaderName.$regex].name}]
+              <div className="border border-blue-gray-900 p-[4px] rounded flex items-center justify-center ">
+                [리더:
+                <span className="inline-flex p-[4px] bg-blue-400 text-white m-[2px]">
+                  {RS_CHARACTER_DICT[lastQuery.condition.leaderName.$regex].name}
+                </span>
+                ]
               </div>
             )}
             {lastQuery.condition['characters.name'] && (
-              <div className="border border-blue-gray-900 p-[4px] rounded">
-                [파티:
-                {lastQuery.condition['characters.name'].$in
-                  .map((originName: any) => {
-                    if (originName) return RS_CHARACTER_DICT[originName].name
-                    return null
-                  })
-                  .join(',')}
+              <div className="border border-blue-gray-900 p-[4px] rounded whitespace-pre-line">
+                [포함된 파티원:
+                <span className="m-[2px]">
+                  {lastQuery.condition['characters.name'].$in.map((originName: any) => {
+                    return (
+                      <span
+                        key={createKey()}
+                        className="inline-flex p-[4px] bg-green-400 text-white m-[2px] rounded"
+                      >
+                        {RS_CHARACTER_DICT[originName].name}
+                      </span>
+                    )
+                  })}
+                </span>
                 ]
               </div>
             )}
@@ -243,5 +257,23 @@ export default function RdUserPageS() {
     // <Suspense>
     <RdUserPage />
     // </Suspense>
+  )
+}
+
+function CharacterSelectOptionBox(props: any) {
+  const { data, innerRef, innerProps } = props
+
+  const character = RS_CHARACTER_DICT[data.value]
+  return (
+    <div
+      ref={innerRef}
+      {...innerProps}
+      className="flex items-center p-[2px] gap-[4px] cursor-pointer hover:bg-gray-100 transition"
+    >
+      <div className="w-[40px]">
+        <RsCharacterCardResponsiveShorten character={character} height={40} />
+      </div>
+      <div className="ff-dh text-[20px] text-blue-gray-800">{character.name}</div>
+    </div>
   )
 }
