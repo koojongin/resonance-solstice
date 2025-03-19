@@ -53,6 +53,7 @@ export interface RecommendationDeck {
   descLink?: string
   characters: { character: RSCharacter; equipments?: string[] }[]
   owner?: ExternalUser
+  docId?: string
 
   autoPreset?: string
   autoPresetPreviews?: string[]
@@ -62,6 +63,7 @@ export interface RecommendationDeck {
 export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   {
     id: '1',
+    docId: '67dad2ad0a7737aa616c2bb5',
     title: '싼마이 [페니아] 인뢰덱',
     leaderName: FENIA.name,
     characters: [
@@ -94,6 +96,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '2',
+    docId: '67dad2ad0a7737aa616c2bb7',
     title: '순환 메인 [페니아] 인뢰덱1',
     leaderName: FENIA.name,
     characters: [
@@ -125,6 +128,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '3',
+    docId: '67dad2ad0a7737aa616c2bb9',
     title: '순환 메인 [페니아] 인뢰덱2',
     leaderName: FENIA.name,
     characters: [
@@ -141,6 +145,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '4',
+    docId: '67dad2ad0a7737aa616c2bbb',
     title: '안정성 메인 [페니아] 인뢰덱',
     leaderName: FENIA.name,
     characters: [
@@ -157,6 +162,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '5',
+    docId: '67dad2ad0a7737aa616c2bbd',
     title: '[카타스] 화염덱',
     leaderName: KATAS.name,
     characters: [
@@ -188,6 +194,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '6',
+    docId: '67dad2ad0a7737aa616c2bbf',
     title: '[마키라]덱',
     leaderName: MARGIELA.name,
     characters: [
@@ -204,6 +211,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '7',
+    docId: '67dad2ad0a7737aa616c2bc1',
     title: '단일 화염 [나유타] 덱',
     leaderName: NAYUTA.name,
     characters: [
@@ -249,6 +257,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '9',
+    docId: '67dad2ad0a7737aa616c2bc3',
     title: '[페니아] 인뢰덱 찐종결 올인원덱',
     leaderName: FENIA.name,
     characters: [
@@ -311,6 +320,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '10',
+    docId: '67dad2ad0a7737aa616c2bc5',
     title: '[샬롯] 덱 1',
     leaderName: CHARLOTTE.name,
     characters: [
@@ -328,6 +338,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '11',
+    docId: '67dad2ad0a7737aa616c2bc7',
     title: '[샬롯] 덱 2',
     leaderName: CHARLOTTE.name,
     characters: [
@@ -345,6 +356,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '12',
+    docId: '67dad2ad0a7737aa616c2bc9',
     title: '초반 초보자용 무과금 덱 1',
     leaderName: FENIA.name,
     characters: [
@@ -361,6 +373,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '13',
+    docId: '67dad2ad0a7737aa616c2bcb',
     title: '초반 초보자용 무과금 덱 2',
     leaderName: JERBOA.name,
     characters: [
@@ -376,6 +389,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '14',
+    docId: '67dad2ad0a7737aa616c2bcd',
     title: '냉기 덱 1',
     leaderName: WENSHENG.name,
     characters: [
@@ -391,6 +405,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '15',
+    docId: '67dad2ad0a7737aa616c2bcf',
     title: '냉기 덱 2',
     leaderName: WENSHENG.name,
     characters: [
@@ -406,6 +421,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '16',
+    docId: '67dad2ad0a7737aa616c2bd1',
     title: '퍼플카드 덱 1',
     leaderName: MARGIELA.name,
     characters: [
@@ -421,6 +437,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '17',
+    docId: '67dad2ad0a7737aa616c2bd3',
     title: '[레드카드] [샬롯] 덱',
     leaderName: CHARLOTTE.name,
     characters: [
@@ -436,6 +453,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '18',
+    docId: '67dad2ad0a7737aa616c2bd5',
     title: '인뢰 30렙 코어 클리어 덱',
     leaderName: NAYUTA.name,
     characters: [
@@ -478,6 +496,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '19',
+    docId: '67dad2ad0a7737aa616c2bd7',
     title: '점화 30렙 코어 클리어 덱',
     leaderName: NAYUTA.name,
     characters: [
@@ -499,6 +518,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '20',
+    docId: '67dad2ad0a7737aa616c2bd9',
     title: '냉동 30렙 코어 클리어 덱',
     leaderName: NAYUTA.name,
     characters: [
@@ -540,6 +560,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '21',
+    docId: '67dad2ad0a7737aa616c2bdb',
     title: '[나유타] 무한 순환 덱',
     leaderName: NAYUTA.name,
     characters: [
@@ -558,6 +579,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '22',
+    docId: '67dad2ad0a7737aa616c2bdd',
     title: '코어 60렙 돌파 덱 - 과부화 - 인뢰',
     leaderName: NAYUTA.name,
     characters: [
@@ -597,6 +619,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '23',
+    docId: '67dad2ad0a7737aa616c2bdf',
     title: '코어 60렙 돌파 덱 - 용광로 - 점화',
     leaderName: NAYUTA.name,
     characters: [
@@ -636,6 +659,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '24',
+    docId: '67dad2ad0a7737aa616c2be1',
     title: '코어 60렙 돌파 덱 - 콘덴싱 - 냉동',
     leaderName: NAYUTA.name,
     characters: [
@@ -674,6 +698,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '25',
+    docId: '67dad2ad0a7737aa616c2be3',
     title: '캐롤 [테니] 없찐이 몸 비틀어 쓰는 [니콜라]덱',
     leaderName: NICOLA.name,
     characters: [
@@ -735,6 +760,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '26',
+    docId: '67dad2ad0a7737aa616c2be5',
     title: '[니콜라] 오토 프리셋 ([니콜라] [나유타] [캐롤라인] [테니] [스텔라])',
     leaderName: NICOLA.name,
     characters: [
@@ -792,6 +818,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '27',
+    docId: '67dad2ad0a7737aa616c2be7',
     title: '[테니]없찐의 [니콜라]덱',
     leaderName: NICOLA.name,
     characters: [
@@ -836,6 +863,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '28',
+    docId: '67dad2ad0a7737aa616c2be9',
     title: '[카타스] 점화덱',
     leaderName: KATAS.name,
     characters: [
@@ -896,6 +924,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '29',
+    docId: '67dad2ad0a7737aa616c2beb',
     title: '[니콜라] [스텔라] 케롤라인 [나유타] 예주',
     leaderName: NICOLA.name,
     characters: [
@@ -940,6 +969,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '30',
+    docId: '67dad2ad0a7737aa616c2bed',
     title: '[카타스] 순환덱',
     leaderName: KATAS.name,
     characters: [
@@ -958,6 +988,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '31',
+    docId: '67dad2ad0a7737aa616c2bef',
     title: '[아리나]없찐 무한순환덱([나유타] 메인딜)',
     leaderName: NAYUTA.name,
     characters: [
@@ -998,6 +1029,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '32',
+    docId: '67dad2ad0a7737aa616c2bf1',
     title: '이로나향 첨가 무순덱',
     leaderName: NAYUTA.name,
     characters: [
@@ -1031,6 +1063,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '33',
+    docId: '67dad2ad0a7737aa616c2bf3',
     title: '리비아 쓰는 [나유타] 순환덱',
     leaderName: NAYUTA.name,
     characters: [
@@ -1083,6 +1116,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   },
   {
     id: '34',
+    docId: '67dad2ad0a7737aa616c2bf5',
     title: '대충 정리한 [카타스] 덱',
     leaderName: KATAS.name,
     characters: [
@@ -1104,6 +1138,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '35',
+    docId: '67dad2ad0a7737aa616c2bf7',
     title: '깡딜)내가 쓰는 [간야]덱',
     leaderName: GANYA.name,
     characters: [
@@ -1158,6 +1193,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '37',
+    docId: '67dad2ad0a7737aa616c2bf9',
     title: '조나아리+[아리나]',
     leaderName: NAYUTA.name,
     characters: [
@@ -1179,6 +1215,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '38',
+    docId: '67dad2ad0a7737aa616c2bfb',
     title: '조나아리+수엔',
     leaderName: NAYUTA.name,
     characters: [
@@ -1224,6 +1261,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '39',
+    docId: '67dad2ad0a7737aa616c2bfd',
     title: '조리수베마',
     leaderName: JOSHUA.name,
     characters: [
@@ -1274,6 +1312,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '40',
+    docId: '67dad2ad0a7737aa616c2bff',
     title: '조카스카시',
     leaderName: JOSHUA.name,
     characters: [
@@ -1295,6 +1334,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '41',
+    docId: '67dad2ae0a7737aa616c2c01',
     title: '[SummerShizuru] 순환 핵폭발 (2025.01.21)',
     leaderName: NAYUTA.name,
     characters: [
@@ -1335,6 +1375,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '42',
+    docId: '67dad2ae0a7737aa616c2c03',
     title: '순환 핵폭발 (2025.01.21)',
     leaderName: NAYUTA.name,
     characters: [
@@ -1371,6 +1412,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '43',
+    docId: '67dad2ae0a7737aa616c2c05',
     title: '[카타스] 천둥불검(2025.02.05)',
     leaderName: KATAS.name,
     characters: [
@@ -1484,6 +1526,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '44',
+    docId: '67dad2ae0a7737aa616c2c07',
     title: '코나 저격 덱(2025.01.21)',
     leaderName: CONNOR.name,
     characters: [
@@ -1551,6 +1594,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '45',
+    docId: '67dad2ae0a7737aa616c2c09',
     title: '하이엔드 니콜라 (2025.01.21)',
     leaderName: NICOLA.name,
     characters: [
@@ -1686,6 +1730,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '36',
+    docId: '67dad2ae0a7737aa616c2c0b',
     title: '셔플 더 다크 아트 (2025.01.21)',
     leaderName: NAYUTA.name,
     characters: [
@@ -1781,6 +1826,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '8',
+    docId: '67dad2ae0a7737aa616c2c0d',
     title: '냉동 코어 나유타 덱',
     leaderName: NAYUTA.name,
     characters: [
@@ -1908,6 +1954,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '46',
+    docId: '67dad2ae0a7737aa616c2c0f',
     title: '나유타&더스틴 흙순덱',
     leaderName: NAYUTA.name,
     characters: [
@@ -1935,6 +1982,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '47',
+    docId: '67dad2ae0a7737aa616c2c11',
     title: '나는 꼬추가 싫어!!! 나유타 없는 니콜라 인뢰덱',
     leaderName: NICOLA.name,
     characters: [
@@ -2004,6 +2052,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   },
   {
     id: '48',
+    docId: '67dad2ae0a7737aa616c2c13',
     title: '조슈아 컷씬 1분 15초 0비트레이얼',
     leaderName: NAYUTA.name,
     characters: [
@@ -2043,6 +2092,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '49',
+    docId: '67dad2ae0a7737aa616c2c15',
     title: '더스틴 카타스 점화덱(풀돌 아리나)',
     leaderName: KATAS.name,
     characters: [
@@ -2107,6 +2157,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
   },
   {
     id: '50',
+    docId: '67dad2ae0a7737aa616c2c17',
     title: '코나+테니 덱, 근데 이제 하루카를 곁들인',
     leaderName: CONNOR.name,
     characters: [
@@ -2193,6 +2244,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
 
   {
     id: '51',
+    docId: '67dad2ae0a7737aa616c2c19',
     title: '안피아 덱 1',
     leaderName: NICOLA.name,
     characters: [

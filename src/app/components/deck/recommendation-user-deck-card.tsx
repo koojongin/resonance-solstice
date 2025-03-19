@@ -1,6 +1,5 @@
 'use client'
 
-import { RecommendationDeck } from '@/app/rd/rd-decks.const'
 import createKey from '@/services/key-generator'
 import { Tooltip } from '@material-tailwind/react'
 import {
@@ -13,12 +12,9 @@ import { copyToClipboard } from '@/services/utils/copy-clipboard'
 import Link from 'next/link'
 import { toast } from 'react-toastify'
 import { RecommendationUserDeck } from '@/app/rd/user/user-deck.interface'
+import { formatDateNormal } from '@/services/utils/date.format'
 
-export function RecommendationUserDeckCard({
-  deck,
-}: {
-  deck: RecommendationDeck | RecommendationUserDeck
-}) {
+export function RecommendationUserDeckCard({ deck }: { deck: RecommendationUserDeck }) {
   const [locationOrigin, setLocationOrigin] = useState<string>()
   const { autoPreset, title, characters, leaderName, owner, descLink } = deck
 
@@ -80,6 +76,9 @@ export function RecommendationUserDeckCard({
             {(deck as any)?.reads.toLocaleString()}
           </div>
         )}
+        <div className="ml-auto border border-blue-gray-900 text-blue-gray-900 bg-white px-[4px] h-[24px] ff-dh rounded flex items-center gap-[4px]">
+          {formatDateNormal(deck.createdAt)}
+        </div>
       </div>
 
       <div className="flex gap-[4px] justify-between">

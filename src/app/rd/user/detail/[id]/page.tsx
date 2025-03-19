@@ -24,6 +24,7 @@ import { RsCharacterBorderBox } from '@/app/components/character-frame/rs-charac
 import { convertCharacterThumbnailUrl, getFrameBgUrl } from '@/services/character-url'
 import { Pagination } from '@/const/api/pagination.interface'
 import { PaginationList } from '@/app/components/pagination/pagination-list'
+import { RECOMMENDATION_DECKS } from '@/app/rd/rd-decks.const'
 
 export default function RecommendationUserDeckDetailPage() {
   const { id } = useParams()
@@ -34,13 +35,19 @@ export default function RecommendationUserDeckDetailPage() {
     const { data } = result
     const { deck: rDeck } = data
     const fixedDeck = { ...rDeck }
+    const staticDeck = RECOMMENDATION_DECKS.find((stDeck) => stDeck?.docId === rDeck.id)
     fixedDeck.characters = fixedDeck.characters.map((c: any) => {
       return {
         character: RS_CHARACTER_DICT[c.name],
         equipments: (c?.equipments || []).map((equipment: any) => equipment?.name),
       }
     })
-    setDeck(injectCharacterDetail(fixedDeck) as RecommendationUserDeck)
+
+    const injectedDeck = injectCharacterDetail(fixedDeck) as RecommendationUserDeck
+    if (staticDeck) {
+      injectedDeck.desc = staticDeck.desc
+    }
+    setDeck(injectedDeck)
   }, [])
 
   useEffect(() => {

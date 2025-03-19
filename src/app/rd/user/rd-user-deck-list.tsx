@@ -29,7 +29,7 @@ export default function RdUserDeckList({
         <div>
           <div className="flex items-stretch gap-[10px] mb-[4px]">
             <div className="rounded-[4px] inline-flex p-[4px] text-white bg-gray-700 border-white/50 border-dotted border">
-              총 덱의 수 - {pagination?.total.toLocaleString()}
+              검색된 덱의 수 - {pagination?.total.toLocaleString()}
             </div>
             {searchedKeyword && (
               <div className="rounded-[4px] flex items-center">"{searchedKeyword}" 검색됨</div>

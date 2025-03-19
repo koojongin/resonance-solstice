@@ -71,17 +71,6 @@ export default function MainHeaderBar() {
           </div>
         </Link>
       </Tooltip>
-
-      <Tooltip content="버그 제보 / 기능 제안을 위한 소통창구입니다.">
-        <Link href="https://discord.gg/VxkcjVFDMY" target="_blank" className="ml-auto">
-          <div className="flex items-center text-white gap-[10px] cursor-pointer">
-            <img
-              className="w-[30px] rounded-full border-[2px] bg-white"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxBMhrJjoiD24rW6u6Xb9X5fBzGCCUWd_rE6rNdQzyQr7U8Cw7T98MABtG35QC6lE2L3Q&usqp=CAU"
-            />
-          </div>
-        </Link>
-      </Tooltip>
     </div>
   )
 }

@@ -15,13 +15,16 @@ import { GenericEquipmentBox } from '@/app/components/deck/generic-equipment-box
 import { CharacterDetailMainBox } from '@/app/components/deck/character-detail-main-box'
 import { injectCharacterDetail } from '@/app/components/deck/inject-character-data'
 import { AutoPresetBox } from '@/app/components/deck/auto-preset-box'
+import { useNextDepthNavigator } from '@/services/navigation'
 
 const TOTAL_RD_DECKS = [...RECOMMENDATION_DECKS, ...RECOMMENDATION_ES_DECKS].reverse()
 
 export default function RecommendationDeckDetailPage() {
+  const { router } = useNextDepthNavigator()
   const { id } = useParams()
-
   const originDeck = TOTAL_RD_DECKS.find((rDeck) => id === rDeck.id)
+
+  router.replace(`/rd/user/detail/${originDeck!.docId}`)
   const deck: RecommendationDeck | undefined = injectCharacterDetail(
     originDeck,
   ) as RecommendationDeck

@@ -86,6 +86,8 @@ export function AutoPresetPreviewEditBox({
             5명의 승무원중 스킬 데이터가 부족한 승무원이 있어,
             <br />
             프리뷰 설정 및 조회가 불가능합니다.
+            <br />
+            개발 당시 넣은 승무원 데이터가 충분하지 않은 상태
           </div>
         </div>
       )}
