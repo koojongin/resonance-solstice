@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
-import React, { useCallback, useEffect, useRef, useState } from 'react'
+import React, { Suspense, useCallback, useEffect, useRef, useState } from 'react'
 import { api } from '@/services/api/api.interceptor'
 import { Pagination } from '@/const/api/pagination.interface'
 import RdUserDeckList from '@/app/rd/user/rd-user-deck-list'
@@ -376,9 +376,9 @@ function RdUserPage() {
 
 export default function RdUserPageS() {
   return (
-    // <Suspense>
-    <RdUserPage />
-    // </Suspense>
+    <Suspense>
+      <RdUserPage />
+    </Suspense>
   )
 }
 
