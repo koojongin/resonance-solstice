@@ -12,6 +12,7 @@ import Link from 'next/link'
 import createKey from '@/services/key-generator'
 import { CommentBox } from '@/app/components/comment/comment-box'
 import { CommentTarget } from '@/const/api/comment-target'
+import { RdUserRelatedDeckList } from '@/app/components/deck/rd-user-related-deck-box'
 
 enum CSectionName {
   PROFILE = '프로필',
@@ -30,10 +31,6 @@ const sections = [
   {
     key: 'SKILL',
     name: CSectionName.SKILL,
-  },
-  {
-    key: 'RELATED_DECKS',
-    name: CSectionName.RELATED_DECKS,
   },
 ]
 export default function CharacterDetailPage() {
@@ -112,19 +109,6 @@ export default function CharacterDetailPage() {
                 </div>
               )
             }
-            if (sectionName === CSectionName.RELATED_DECKS) {
-              return (
-                <div
-                  key={section.key}
-                  id={section.key}
-                  ref={(el) => {
-                    sectionRefs.current[index] = el
-                  }}
-                >
-                  <LinkedDeckListBox title="관련된 추천덱" decks={linkedRecommendationDecks} />
-                </div>
-              )
-            }
             return
           })}
         </div>
@@ -136,6 +120,10 @@ export default function CharacterDetailPage() {
             refId: '123456789012345678901234' as string,
           }}
         />
+      </div>
+
+      <div className="mt-[50px]">
+        <RdUserRelatedDeckList leaderName={name as string} />
       </div>
     </div>
   )
