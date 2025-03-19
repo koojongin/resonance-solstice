@@ -158,7 +158,9 @@ function RdUserPage() {
       //   params.delete('characters')
       // }
     }
-    window.history.pushState({}, '', `${pathname}?${params.toString()}`)
+    if (typeof window !== 'undefined') {
+      window.history.pushState({}, '', `${pathname}?${params.toString()}`)
+    }
   }, [lastQuery])
 
   useEffect(() => {
