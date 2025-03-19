@@ -134,6 +134,9 @@ function RdUserPage() {
   }
 
   const updateSearchParams = useCallback(() => {
+    if (typeof window === 'undefined') {
+      return
+    }
     if (!lastQuery) return
     const params = new URLSearchParams(window.location.search)
     if (lastQuery?.opts?.page) {
@@ -158,9 +161,8 @@ function RdUserPage() {
       //   params.delete('characters')
       // }
     }
-    if (typeof window !== 'undefined') {
-      window.history.pushState({}, '', `${pathname}?${params.toString()}`)
-    }
+
+    window.history.pushState({}, '', `${pathname}?${params.toString()}`)
   }, [lastQuery])
 
   useEffect(() => {
