@@ -8,7 +8,13 @@ import React from 'react'
 import { RecommendationDeck } from '@/app/rd/rd-decks.const'
 import { AutoPresetPreviewBox } from '@/app/components/deck/auto-preset-preview-box'
 
-export function AutoPresetBox({ deck }: { deck: RecommendationUserDeck | RecommendationDeck }) {
+export function AutoPresetBox({
+  usePreview,
+  deck,
+}: {
+  usePreview?: boolean
+  deck: RecommendationUserDeck | RecommendationDeck
+}) {
   return (
     <div className="">
       <div className="flex items-stretch min-h-[100px]">
@@ -21,7 +27,7 @@ export function AutoPresetBox({ deck }: { deck: RecommendationUserDeck | Recomme
             </GradientButton>
           </Link>
         </div>
-        <div className="w-full">
+        <div className="w-full h-full">
           {deck.autoPreset && (
             <>
               <Tooltip content="클릭시 오토 프리셋이 복사됩니다.">
@@ -35,12 +41,27 @@ export function AutoPresetBox({ deck }: { deck: RecommendationUserDeck | Recomme
                   {deck.autoPreset}
                 </div>
               </Tooltip>
-              {deck.autoPresetPreviews && <AutoPresetPreviewBox deck={deck} />}
             </>
           )}
           {!deck.autoPreset && (
             <div className="h-full border p-[10px] rounded bg-gray-100 flex items-center justify-center w-full ff-dh text-gray-600 text-[20px]">
               등록된 오토 프리셋이 없습니다.
+            </div>
+          )}
+          {usePreview && (
+            <div className="mt-[20px] flex flex-col gap-[4px]">
+              <div className="flex flex-wrap items-center gap-[2px] ff-dh text-[20px]">
+                <span>프리셋 미리보기</span>
+                <span className="ff-dh text-[16px] text-red-400">
+                  * 오토 프리셋 코드가 있다면, 코드를 복사후 인게임 [자동전투 설정]을 하면 자동
+                  적용됩니다.
+                </span>
+              </div>
+              <AutoPresetPreviewBox
+                characterNames={deck.characters.map((c) => c.character.originName)}
+                autoPresetPreviews={deck.autoPresetPreviews}
+                autoPresetPreviewBans={deck.autoPresetPreviewBans}
+              />
             </div>
           )}
         </div>

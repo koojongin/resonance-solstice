@@ -233,7 +233,7 @@ export const CHARACTER_DETAIL: {
     SKILLS: ['변화무상', '개안', '무상-전륜'],
     RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
     RESONANCES: {
-      1: '무영',
+      1: '무영 - 하야부사',
       2: '무형',
       3: '생기',
       4: '호시탐탐',
@@ -571,8 +571,42 @@ export const CHARACTER_DETAIL: {
       5: '순환 - 리비아',
     },
   },
-  DESIREE: {},
-  LIN: {},
+  DESIREE: {
+    SKILLS: ['마그네틱 펄스', '듈리', '공명 펄스'],
+    RESONANCES: {
+      1: '비상용 활집',
+      2: '릴레이',
+      3: '생기',
+      4: '고성능 배터리',
+      5: '고감도 공명',
+    },
+    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    AWAKENING: {
+      1: '화살비',
+      2: '고탄력 화살',
+      3: '투지',
+      4: '펄스 공명',
+      5: '순환',
+    },
+  },
+  LIN: {
+    SKILLS: ['썬더 워킹', '청천벽력', '팬텀 서킷'],
+    RESONANCES: {
+      1: '무영 - 린',
+      2: '그림자 분신',
+      3: '생기',
+      4: '번개 소환',
+      5: '그림자 습격',
+    },
+    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    AWAKENING: {
+      1: '검무',
+      2: '그림자 환영',
+      3: '투지',
+      4: '신기루',
+      5: '그림자 캐스팅',
+    },
+  },
   NABI: {},
   GANYA: {
     SKILLS: ['도끼 투척', '도끼 회수', '부메랑 도끼'],

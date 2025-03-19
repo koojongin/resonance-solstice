@@ -988,4 +988,54 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/a/a2/r1nm72pq5lyibdwe6ukb55iop6dajqt.png',
   },
+
+  화살비: {
+    name: '화살비',
+    desc: `[일반공격] 과 [마그네틱 펄스] 사용 시 30% 확률로 3개의 화살을 동시에 발사합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/9b/pggyrs00b5yjtiqm85kc5br9g7hp92s.png',
+  },
+  '고탄력 화살': {
+    name: '고탄력 화살',
+    desc: `[튕김] 횟수가 2회 증가합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/b2/6luznkpcl342ocgclnza5faucc63uty.png',
+  },
+  '펄스 공명': {
+    name: '펄스 공명',
+    desc: `[마그네틱 펄스]를 획득할 때마다 자신의 공격력이 0.5% 증가합니다.(최대 30%)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/4f/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  순환: {
+    name: '순환',
+    desc: `[아기곰 듈리]가 필드에 있을 시 [블랙카드]를 손에 가지고 있다면 [아기곰 듈리]의 지속 시간 종료 후`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/28/5scekfm7740r4w3eiv2jjfkixrbkb19.png',
+  },
+
+  검무: {
+    name: '검무',
+    desc: `비용이 2 이하인 [레드카드]를 사용할 때마다 자신의 공격력이 2% 증가합니다.(최대 30%)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/7e/84gjc549tox1stz7zqgep2tfnkfx64h.png',
+  },
+  '그림자 환영': {
+    name: '그림자 환영',
+    desc: `15% 확률로 환영을 발동하여 받는 공격을 [회피]하고 해당 피해에 면역됩니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/91/po752wq8fgmlf8db71r01bg9rdih3yc.png',
+  },
+  신기루: {
+    name: '신기루',
+    desc: `[회피] 성공 시 자신이 3초간 [은신]합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/bc/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  '그림자 캐스팅': {
+    name: '그림자 캐스팅',
+    desc: `임의 아군이 [은신] 상태일 때 즉시 [썬더 워킹]을 1회 시전합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/ef/4ly0udc39dzneq8uwpjjqta9ipr35ku.png',
+  },
 }

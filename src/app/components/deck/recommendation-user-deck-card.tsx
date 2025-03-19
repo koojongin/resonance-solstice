@@ -12,8 +12,13 @@ import React, { useEffect, useState } from 'react'
 import { copyToClipboard } from '@/services/utils/copy-clipboard'
 import Link from 'next/link'
 import { toast } from 'react-toastify'
+import { RecommendationUserDeck } from '@/app/rd/user/user-deck.interface'
 
-export function RecommendationUserDeckCard({ deck }: { deck: RecommendationDeck }) {
+export function RecommendationUserDeckCard({
+  deck,
+}: {
+  deck: RecommendationDeck | RecommendationUserDeck
+}) {
   const [locationOrigin, setLocationOrigin] = useState<string>()
   const { autoPreset, title, characters, leaderName, owner, descLink } = deck
 
@@ -64,7 +69,7 @@ export function RecommendationUserDeckCard({ deck }: { deck: RecommendationDeck 
             </div>
           </Tooltip>
         </div>
-        {deck.autoPresetPreviews && (
+        {'usePreview' in deck && (deck.usePreview as any) && (
           <div className="text-white bg-deep-purple-500 px-[4px] py-[4px] pb-[2px] ff-dh rounded">
             프리셋 프리뷰
           </div>

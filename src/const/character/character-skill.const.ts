@@ -1651,4 +1651,60 @@ export const CHARACTER_SKILLS: {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/d/d7/9ixkjpz6zq5qn3pwhkd4ha3gh2vr8uz.png',
   },
+
+  '마그네틱 펄스': {
+    amount: 3,
+    cost: 1,
+    name: '마그네틱 펄스',
+    desc: `펄스 에로우를 발사하여 적에게 1단 피해를 입히고 [튕김]과 [인뢰]를 발동합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/54/mjsq7yvjeaenkyx2yrevbot2tvjc2sm.png',
+  },
+  듈리: {
+    amount: 1,
+    cost: 3,
+    name: '듈리',
+    desc: `카드를 1장 뽑습니다.
+    [레드카드] 혹은 [퍼플카드]를 뽑았다면 [아기곰 듈리-공격 모드]를 활성화합니다.
+    [블루카드] 혹은 [그린카드]를 뽑았다면 [아기곰 듈리-방어 모드]를 활성화합니다.
+    [옐로카드] 혹은 [블랙카드]를 뽑았다면 [듈리]를 활성화할 때까지 카드를 계속 뽑습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/4a/11pgzsckxdjquurueasvqvdfpxa3hwa.png',
+  },
+  '공명 펄스': {
+    amount: 1,
+    cost: 5,
+    name: '공명 펄스',
+    desc: `힘껏 사격하여 적에게 3단 피해를 입히고 [튕김]과 [인뢰]를 발동합니다.
+    덱에 있는 모든 [마그네틱 펄스]를 즉시 손으로 가져옵니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/85/g35mwdje1xcjhia5ghcdqabzea9w9si.png',
+  },
+
+  '썬더 워킹': {
+    amount: 3,
+    cost: 1,
+    name: '썬더 워킹',
+    desc: `분신을 하나 생성하여 범위 내의 적에게 1단 피해를 입히고 사라지며 동시에 [인뢰]/[참열]을 발동합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/0d/45mfz810phxwan1dv70qmiq8zyahj7e.png',
+  },
+  청천벽력: {
+    amount: 2,
+    cost: 3,
+    name: '청천벽력',
+    desc: `자신이 주는 [인뢰]의 발동 확률이 8% 증가합니다.(중첩 가능)
+    분신을 하나 생성하여 적에게 3단 피해를 입히고 사라집니다. 동시에 [인뢰]를 발동합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a7/azzjtj0xrfnt92tr2k8qpqbeiyfpomo.png',
+  },
+  '팬텀 서킷': {
+    amount: 1,
+    cost: 4,
+    name: '팬텀 서킷',
+    desc: `분신을 3개 생성하여 각 분신마다 적에게 3단 피해를 입히고 사라집니다.
+    동시에 [인뢰]를 발동합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/08/tvy8dpqcl8x1jfwfnxehm7sfcb7iw8y.png',
+  },
 }

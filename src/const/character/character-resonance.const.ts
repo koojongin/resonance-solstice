@@ -878,8 +878,8 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
       'https://patchwiki.biligame.com/images/resonance/4/4b/ht20za151r5u0ax92u5p9kebnzbark7.png',
   },
 
-  무영: {
-    name: '무영',
+  '무영 - 하야부사': {
+    name: '무영 - 하야부사',
     desc: `자신의 스킬 카드를 사용할 때마다 3초간 [은신]합니다.`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/6/60/hus7ub64y7tueuur1sm210adama36xc.png',
@@ -1020,5 +1020,59 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     초당 회복 효과 제외`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/2/28/hmeox7a9h4qeith7rnb8i5c3djw5th8.png',
+  },
+
+  '비상용 활집': {
+    name: '비상용 활집',
+    desc: `[마그네틱 펄스] 사용 시 30% 확률로 카드를 다시 손으로 가져옵니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/9d/84wxnuytsect5rkf5d5k504dbo8xrf0.png',
+  },
+  릴레이: {
+    name: '릴레이',
+    desc: `[듈리] 사용 후 다음 내는 [옐로카드]의 비용이 2 감소합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/84/qrgky5u87sfiryvdnd1wmnm91pi1zcn.png',
+  },
+  '고성능 배터리': {
+    name: '고성능 배터리',
+    desc: `[아기곰 듈리]의 지속 시간이 2초 증가합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/9c/4ofcszg4355pvu1iownf12p0eatl1zd.png',
+  },
+  '고감도 공명': {
+    name: '고감도 공명',
+    desc: `[공명 펄스] 강화:
+    차지샷을 시전하여 적에게 3단 피해를 입히고 [튕김]과 [인뢰]를 발동합니다.
+    동시에 덱에 버려진 덱에 있는 모든 [마그네틱 펄스]를 손으로 가져옵니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/4a/fmqk4l82x5vgcunyp4t9chmgvy5qj4l.png',
+  },
+
+  '무영 - 린': {
+    name: '무영 - 린',
+    desc: `체력이 60%/30%보다 낮을 시 5초간 [은신]합니다.(1회 한정)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/ec/9spyqgq8m01ddrp3w5dhvhlwesvxhrm.png',
+  },
+  '그림자 분신': {
+    name: '그림자 분신',
+    desc: `분신이 사라질 때 자신의 체력을 5% 회복합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/ac/3nbsc32l152cj45gvgc694sd8l6o8zy.png',
+  },
+  '번개 소환': {
+    name: '번개 소환',
+    desc: `[청천벽력] 강화:
+    분신을 하나 생성하여 적에게 3단 피해를 입히고 사라지며 동시에 [인뢰]를 발동합니다.
+    사용 후 자신이 주는 [인뢰]의 발동 확률이 13% 증가합니다.(중첩가능)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e8/r67a7n9nygyjjqdya4fn5ao3yeyexh2.png',
+  },
+  '그림자 습격': {
+    name: '그림자 습격',
+    desc: `분신이 사라지면 암살 무기를 발사하여 적에게 1단 피해를 입히고 동시에 [인뢰]를 발동합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/24/b3zraxc6c8zdza3ik1pfd4p7zdcbsmx.png',
   },
 }

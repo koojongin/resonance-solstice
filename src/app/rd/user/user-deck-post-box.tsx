@@ -1,6 +1,5 @@
 import React, { Suspense, useCallback, useEffect, useState } from 'react'
 import { useNextDepthNavigator } from '@/services/navigation'
-import { useSearchParams } from 'next/navigation'
 import { ExtendedRSEquipment } from '@/app/equipments/equipment.type'
 import { ALL_EQUIPMENTS, RSEquipmentType } from '@/const/archive/equipment.const'
 import { RSCharacter } from '@/const/character/character.interface'
@@ -14,13 +13,13 @@ import { RsCardSize } from '@/app/components/character-frame/rs-card-size.enum'
 import createKey from '@/services/key-generator'
 import { EquipmentBoxResponsive } from '@/app/equipments/rs-equipment-list'
 import { Tooltip } from '@material-tailwind/react'
-import { RecommendationDeck } from '@/app/rd/rd-decks.const'
+import { CHARACTER_DETAIL } from '@/const/character/character-detail.const'
+import { PreviewSkillCardBox } from '@/app/components/deck/auto-preset-preview-box'
+import { AutoPresetPreviewEditBox } from '@/app/components/deck/auto-preset-preview-edit-box'
+import { CHARACTER_SKILLS } from '@/const/character/character-skill.const'
+import { CreateRecommendationDeck } from '@/app/rd/user/create-rd-deck'
+import _ from 'lodash'
 
-export type CreateRecommendationDeck = Omit<RecommendationDeck, 'characters' | 'desc'> & {
-  desc: string
-  characters: Array<undefined | { name: string; equipments?: Array<{ name: string } | undefined> }>
-  password: string
-}
 function UserDeckPostBoxBase({ id, password }: { id?: string; password?: string }) {
   const { router } = useNextDepthNavigator()
   const [deck, setDeck] = useState<CreateRecommendationDeck>({
@@ -31,6 +30,7 @@ function UserDeckPostBoxBase({ id, password }: { id?: string; password?: string 
     id: '',
     autoPreset: '',
     descLink: '',
+    usePreview: false,
   })
   const [characterSelectedIndex, setCharacterSelectedIndex] = useState<number>()
   const [selectedEquipment, setSelectedEquipment] = useState<ExtendedRSEquipment>()
@@ -41,7 +41,9 @@ function UserDeckPostBoxBase({ id, password }: { id?: string; password?: string 
     equipment: selectedEquipment,
     index: 0,
   })
+  const [lastPresetPreviews, setLastPresetPreviews] = useState<string[]>([])
   const [isSaving, setIsSaving] = useState(false)
+  const [skillDict, setSkillDict] = useState<{ [key: string]: { character: RSCharacter } }>()
   const handleTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setDeck({
       ...deck,
@@ -190,7 +192,10 @@ function UserDeckPostBoxBase({ id, password }: { id?: string; password?: string 
     if (isInvalidDeck) return
 
     try {
-      await api.put(`/recommendation-deck/update/${id}`, { ...fixedDeck, originPassword: password })
+      await api.put(`/recommendation-deck/update/${id}`, {
+        ...fixedDeck,
+        originPassword: password,
+      })
       toast('수정 되었습니다.')
       router.push('/rd/user')
     } catch (error) {
@@ -234,16 +239,70 @@ function UserDeckPostBoxBase({ id, password }: { id?: string; password?: string 
     const result = await api.post(`/recommendation-deck/get/${id}`)
     const { data } = result
     const { deck: rDeck } = data
-    setDeck({ password, descLink: '', ...rDeck })
+    setDeck({
+      password,
+      descLink: '',
+      ...rDeck,
+    })
   }, [])
+
+  const moveToBanCard = (skillName: string) => {
+    setDeck({
+      ...deck,
+      autoPresetPreviews: (deck.autoPresetPreviews || []).filter((s) => s !== skillName),
+      autoPresetPreviewBans: [skillName, ...(deck.autoPresetPreviewBans || [])],
+    })
+  }
+  const moveToPreviewCard = (skillName: string) => {
+    setDeck({
+      ...deck,
+      autoPresetPreviews: [skillName, ...(deck.autoPresetPreviews || [])],
+      autoPresetPreviewBans: (deck.autoPresetPreviewBans || []).filter((s) => s !== skillName),
+    })
+  }
+
+  const onRefreshPreview = () => {
+    deck.autoPresetPreviewBans = []
+  }
 
   useEffect(() => {
     if (characterSelectedIndex !== undefined) setIsCharacterModalOpen(true)
   }, [characterSelectedIndex])
 
   useEffect(() => {
-    loadDeck()
+    if (id) loadDeck()
   }, [id])
+
+  useEffect(() => {
+    if (deck.characters.filter((d) => !!d).length !== 5) return
+    const skillDictTemp: any = {}
+    const skills = deck.characters.map((cData) => {
+      const { name } = cData || {}
+      const skillItems = (CHARACTER_DETAIL[name as string] || {}).SKILLS || []
+      skillItems.forEach((skillName: string) => {
+        skillDictTemp[skillName] = { character: RS_CHARACTER_DICT[name!] }
+      })
+      return skillItems
+    })
+
+    const difference = _.difference(
+      skills.flat(),
+      (deck.autoPresetPreviews || []).concat(deck.autoPresetPreviewBans || []),
+    )
+    if (
+      !deck.autoPresetPreviews ||
+      deck.autoPresetPreviews.length === 0 ||
+      // ||(lastPresetPreviews.length !== 0 && differenceSkills.length !== 0)
+      difference.length > 0
+    ) {
+      setDeck({
+        ...deck,
+        autoPresetPreviews: skills.flat(),
+      })
+    }
+    setSkillDict(skillDictTemp)
+    setLastPresetPreviews(deck?.autoPresetPreviews || [])
+  }, [deck.characters])
 
   return (
     <div className="flex flex-col gap-[20px]">
@@ -401,6 +460,113 @@ function UserDeckPostBoxBase({ id, password }: { id?: string; password?: string 
           onChange={handleAutoPresetChange}
           placeholder="오토 프리셋을 입력하세요."
         />
+      </div>
+      <div className="flex flex-col">
+        <div className="ff-dh text-[20px] flex items-center gap-[10px] mb-[4px]">
+          카드 사용 순서
+          <span className="text-gray-500 flex items-center h-[24px]">
+            <div
+              className={`cursor-pointer border h-full w-[70px] flex items-center justify-center border-r-0 ${deck.usePreview ? 'bg-green-400 text-white' : 'bg-gray-300 text-black/30'}`}
+              onClick={() =>
+                setDeck({
+                  ...deck,
+                  usePreview: true,
+                })
+              }
+            >
+              사용
+            </div>
+            <div
+              className={`cursor-pointer border h-full w-[70px] flex items-center justify-center ${!deck.usePreview ? 'bg-red-400 text-white' : 'bg-gray-300 text-black/30'}`}
+              onClick={() =>
+                setDeck({
+                  ...deck,
+                  usePreview: false,
+                })
+              }
+            >
+              미사용
+            </div>
+          </span>
+        </div>
+        <div className={!deck.usePreview ? 'hidden' : ''}>
+          {deck.characters.length < 5 && (
+            <div className="flex items-center justify-center p-[30px] border border-gray-500 rounded ff-dh text-[20px] text-gray-500 bg-gray-100 cursor-not-allowed">
+              승무원을 5명 설정 했을때 설정이 가능합니다.
+            </div>
+          )}
+          {deck.characters.length === 5 && (
+            <>
+              {deck.autoPresetPreviews && skillDict && (
+                <div className="flex flex-col gap-[10px] p-[10px] border border-gray-500 rounded">
+                  <div className="">
+                    <div className="ff-dh text-[20px] text-green-500 flex items-center gap-[8px]">
+                      사용 카드
+                      <span className="text-red-500 ff-sdn text-[14px] font-bold">
+                        *클릭 시 사용 금지 카드로 이동됩니다.
+                      </span>
+                    </div>
+                    <div className="bg-green-400/10">
+                      <AutoPresetPreviewEditBox
+                        onSelectBanCard={moveToBanCard}
+                        deck={deck}
+                        setDeck={setDeck}
+                        onRefreshPreview={onRefreshPreview}
+                      />
+                    </div>
+                  </div>
+                  <div className="">
+                    <div className="ff-dh text-[20px] text-red-500">사용 금지 카드</div>
+                    <div className="flex flex-wrap gap-[6px] justify-center border border-gray-300 rounded relative">
+                      {!deck.autoPresetPreviewBans ||
+                        (deck.autoPresetPreviewBans.length === 0 && (
+                          <div className="text-center bg-gray-100 w-full h-full p-[30px] ff-dh text-[24px]">
+                            <span className="">
+                              현재 설정된 <span className="text-red-400">사용 금지 카드</span>가
+                              없습니다.
+                            </span>
+                            <br />위 <span className="text-green-400">사용 카드</span> 목록중 하나를
+                            클릭시 <span className="text-red-400">사용 금지 카드</span>로
+                            이동됩니다.
+                          </div>
+                        ))}
+                      {deck.autoPresetPreviewBans && deck.autoPresetPreviewBans?.length > 0 && (
+                        <div className="p-[5px] flex flex-wrap gap-[6px] justify-center bg-red-400/10 w-full">
+                          {deck.autoPresetPreviewBans?.map((skillName) => {
+                            if (!skillDict[skillName]?.character) {
+                              return (
+                                <div
+                                  key={createKey()}
+                                  className="w-[100px] border bg-white flex items-center justify-center p-[10px] rounded text-center"
+                                >
+                                  데이터 없음
+                                </div>
+                              )
+                            }
+                            return (
+                              <PreviewSkillCardBox
+                                disableTooltip
+                                onSelectCard={moveToPreviewCard}
+                                key={createKey()}
+                                character={skillDict[skillName].character as any}
+                                skill={CHARACTER_SKILLS[skillName]}
+                              />
+                            )
+                          })}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              )}
+              {!deck.autoPresetPreviews && (
+                <div className="flex items-center justify-center p-[30px] border border-gray-500 rounded">
+                  캐릭터 선택
+                </div>
+              )}
+            </>
+          )}
+        </div>
       </div>
       <div className="flex flex-col">
         <div className="ff-dh text-[20px]">

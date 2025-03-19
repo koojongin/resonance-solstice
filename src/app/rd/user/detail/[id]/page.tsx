@@ -121,7 +121,7 @@ export default function RecommendationUserDeckDetailPage() {
           <CharacterDetailMainBox deck={deck} />
           <GenericEquipmentBox characters={deck.characters.map((c) => c.character.originName)} />
           <CharacterDetailDescBox desc={(deck?.desc as string) || ''} />
-          <AutoPresetBox deck={deck} />
+          <AutoPresetBox deck={deck} usePreview={(deck as RecommendationUserDeck).usePreview} />
           <CommentBox data={{ target: CommentTarget.DeckDetail, refId: id as string }} />
         </div>
       )}

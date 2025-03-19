@@ -8,13 +8,28 @@ import { Pagination } from '@/const/api/pagination.interface'
 import createKey from '@/services/key-generator'
 import RdUserDeckList from '@/app/rd/user/rd-user-deck-list'
 import { RS_CHARACTER_DICT } from '@/const/character/character.const'
+import { RecommendationDeck } from '@/app/rd/rd-decks.const'
+import { RecommendationUserDeck } from '@/app/rd/user/user-deck.interface'
+
+function convertCharacterData(decks: []) {
+  return decks.map((deck: any) => {
+    const fixedDeck = { ...deck }
+    fixedDeck.characters = fixedDeck.characters.map((c: any) => {
+      return {
+        character: RS_CHARACTER_DICT[c.name],
+        equipments: (c?.equipments || []).map((equipment: any) => equipment?.name),
+      }
+    })
+    return fixedDeck
+  })
+}
 
 function RdUserPage() {
   const searchParams = useSearchParams()
   const router = useRouter()
   const pathname = usePathname()
 
-  const [decks, setDecks] = useState([])
+  const [decks, setDecks] = useState<Array<RecommendationDeck>>()
   const [pagination, setPagination] = useState<Pagination>()
 
   const loadDecks = useCallback(async (selectedPage?: number) => {
@@ -26,18 +41,7 @@ function RdUserPage() {
       },
     })
     const { decks: rDecks, page, total, totalPages } = result.data
-    setDecks(
-      rDecks.map((deck: any) => {
-        const fixedDeck = { ...deck }
-        fixedDeck.characters = fixedDeck.characters.map((c: any) => {
-          return {
-            character: RS_CHARACTER_DICT[c.name],
-            equipments: (c?.equipments || []).map((equipment: any) => equipment?.name),
-          }
-        })
-        return fixedDeck
-      }),
-    )
+    setDecks(convertCharacterData(rDecks))
     setPagination({
       page,
       total,

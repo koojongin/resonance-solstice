@@ -99,7 +99,12 @@ export default function RecommendationDeckDetailPage() {
               <hr />
             </>
           )}
-          {deck.autoPreset && <AutoPresetBox deck={deck} />}
+          {deck.autoPreset && (
+            <AutoPresetBox
+              deck={deck}
+              usePreview={deck.autoPresetPreviews && deck.autoPresetPreviews.length > 0}
+            />
+          )}
 
           <div className="flex flex-col gap-[6px]">
             <div className="ff-dh text-[24px]">
