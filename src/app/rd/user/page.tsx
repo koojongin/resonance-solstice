@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { api } from '@/services/api/api.interceptor'
 import { Pagination } from '@/const/api/pagination.interface'
@@ -14,6 +14,7 @@ import { GradientButton } from '@/app/components/button/gradient-button'
 import { useNextDepthNavigator } from '@/services/navigation'
 import { RsCharacterCardResponsiveShorten } from '@/app/components/character-frame/rs-character-card-responsive'
 import createKey from '@/services/key-generator'
+import { formatDateNormal } from '@/services/utils/date.format'
 
 function convertCharacterData(decks: []) {
   return decks.map((deck: any) => {
@@ -31,16 +32,35 @@ function convertCharacterData(decks: []) {
 interface SearchQuery {
   condition: { [key: string]: any }
   opts: { page: number; limit: number }
+  timestamp: Date
 }
+
+const findAndOrOptions = [
+  {
+    value: '$all',
+    label: 'AND',
+  },
+  {
+    value: '$in',
+    label: 'OR',
+  },
+]
 
 function RdUserPage() {
   const { openNewTab } = useNextDepthNavigator()
   const [searchParams, setSearchParams] = useState<URLSearchParams | null>(null)
+  const [selectedPartyOption, setSelectedPartyOption] = useState<{
+    value: string
+    label: string
+  } | null>(findAndOrOptions[1])
   const router = useRouter()
   const pathname = usePathname()
 
   const CHARACTER_OPTIONS = RS_CHARACTERS.map((c) => {
-    return { value: c.originName, label: c.name }
+    return {
+      value: c.originName,
+      label: c.name,
+    }
   })
 
   const [decks, setDecks] = useState<Array<RecommendationDeck>>()
@@ -49,53 +69,89 @@ function RdUserPage() {
   const [searchedLeader, setSearchedLeader] = useState<{ value: string; label: string } | null>(
     null,
   )
-  const [searchedCharacters, setSearchedCharacters] = useState<any>([])
+  const [searchedCharacters, setSearchedCharacters] = useState<{ value: string; label: string }[]>(
+    [],
+  )
   const [lastQuery, setLastQuery] = useState<SearchQuery>()
 
-  const loadDecks = useCallback(
-    async (selectedPage?: number) => {
+  const getQuery = useCallback(
+    (selectedPage?: number): { condition: object; opts: { page: number; limit: number } } => {
       const _lastQuery: SearchQuery = {
         condition: {},
         opts: {
           page: selectedPage || lastQuery?.opts.page || 1,
-          limit: 20,
+          limit: 10,
         },
+        timestamp: new Date(),
       }
       if (searchedTitleRef.current && searchedTitleRef.current.value) {
-        _lastQuery.condition.title = { $regex: searchedTitleRef.current.value, $options: 'i' }
+        _lastQuery.condition.title = {
+          $regex: searchedTitleRef.current.value,
+          $options: 'i',
+        }
       }
       if (searchedLeader) {
-        _lastQuery.condition.leaderName = { $regex: searchedLeader.value, $options: 'i' }
+        _lastQuery.condition.leaderName = {
+          $regex: searchedLeader.value,
+          $options: 'i',
+        }
       }
       if (searchedCharacters && searchedCharacters.length > 0) {
         _lastQuery.condition['characters.name'] = {
-          $in: searchedCharacters.map((c: any) => c?.value),
+          [selectedPartyOption!.value]: searchedCharacters.map((c: any) => c?.value),
         }
       }
-      const result = await api.post('/recommendation-deck/list', _lastQuery)
-      const { decks: rDecks, page, total, totalPages } = result.data
-      setDecks(convertCharacterData(rDecks))
-      setPagination({
-        page,
-        total,
-        totalPages,
-      })
-      setLastQuery(_lastQuery)
+      return _lastQuery
     },
-    [searchedCharacters, searchedLeader],
+    [searchedCharacters, searchedLeader, selectedPartyOption],
   )
 
-  const initPage = async (pageNumber: number) => {
-    if (!searchParams) return
-    try {
-      const current = new URLSearchParams(Array.from(searchParams.entries()))
-      current.set('page', String(pageNumber))
-      router.replace(`${pathname}?${current.toString()}`)
-      await loadDecks(pageNumber)
-    } finally {
-      /* empty */
-    }
+  const loadDecks = async (selectedPage?: number, _condition?: any) => {
+    const _lastQuery = { ...getQuery(selectedPage), ..._condition }
+    const result = await api.post('/recommendation-deck/list', _lastQuery)
+    const { decks: rDecks, page, total, totalPages } = result.data
+    setDecks(convertCharacterData(rDecks))
+    setPagination({
+      page,
+      total,
+      totalPages,
+    })
+    setLastQuery({ ..._lastQuery, timestamp: new Date() })
+    updateSearchParams()
   }
+
+  const updateSearchParams = useCallback(() => {
+    if (!lastQuery) return
+    const params = new URLSearchParams(window.location.search)
+    if (lastQuery?.opts?.page) {
+      params.set('page', lastQuery.opts.page as any)
+    }
+    if (lastQuery.condition) {
+      if (lastQuery.condition.title?.$regex) {
+        params.set('title', lastQuery.condition.title.$regex)
+      } else {
+        params.delete('title')
+      }
+      // if (lastQuery.condition.leaderName?.$regex) {
+      //   params.set('leaderName', lastQuery.condition.leaderName.$regex)
+      // } else {
+      //   params.delete('leaderName')
+      // }
+      // if (lastQuery.condition['characters.name']) {
+      //   const characters: string[] =
+      //     (Object.values(lastQuery.condition['characters.name'])[0] as []) || []
+      //   params.set('characters', characters.join(','))
+      // } else {
+      //   params.delete('characters')
+      // }
+    }
+    window.history.pushState({}, '', `${pathname}?${params.toString()}`)
+  }, [lastQuery])
+
+  useEffect(() => {
+    if (!lastQuery) return
+    updateSearchParams()
+  }, [lastQuery])
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -106,8 +162,43 @@ function RdUserPage() {
 
   useEffect(() => {
     if (!searchParams) return
-    const pageNumber = parseInt(searchParams.get('page') || '', 10) || 1
-    initPage(pageNumber)
+    if (!searchParams.get('page')) {
+      const current = new URLSearchParams(Array.from(searchParams.entries()))
+      current.set('page', '1')
+      router.replace(`${pathname}?${current.toString()}`)
+    }
+    const condition: any = {}
+    searchParams.keys().forEach((key) => {
+      if (key === 'title' && searchedTitleRef?.current) {
+        searchedTitleRef.current.value = searchParams.get(key) || ''
+        return
+      }
+      if (key === 'leaderName') {
+        const originName = searchParams.get(key)
+        if (!originName) return
+        const value = {
+          value: originName,
+          label: RS_CHARACTER_DICT[originName].name,
+        }
+        condition.searchedLeader = value
+        return
+      }
+      if (key === 'characters') {
+        const characterNames = searchParams.get(key) || ''
+        const decodedCharacterNames = decodeURIComponent(characterNames)
+        if (decodedCharacterNames) {
+          const createdCharacters = decodedCharacterNames.split(',').map((cName) => {
+            const character = RS_CHARACTER_DICT[cName]
+            return { value: character.originName, label: character.name }
+          })
+          condition.searchedCharacters = createdCharacters
+        }
+        return
+      }
+    })
+
+    console.log('오냐?>')
+    loadDecks()
   }, [searchParams])
 
   return (
@@ -117,9 +208,6 @@ function RdUserPage() {
           <div className="text-gray-600/90 font-bold">
             * 모든 덱은 설명과, 가이드 링크를 읽어 보시는 것을 추천드립니다. 현재 한섭 상황과
             돌파수에 따라 가능성 유무가 존재합니다.
-          </div>
-          <div className="text-gray-600/90 font-bold">
-            * 리더 표기가 없는 덱도 있습니다. 오토프리셋 불러오기 시 자동으로 설정됩니다.
           </div>
         </div>
         <div className="flex items-center gap-[4px]">
@@ -176,10 +264,10 @@ function RdUserPage() {
             <div className="min-w-[50px]">리더</div>
             <Select
               className="relative z-[60] w-[300px]"
-              defaultValue={null}
               onChange={setSearchedLeader}
               options={CHARACTER_OPTIONS}
               components={{ Option: CharacterSelectOptionBox }}
+              value={searchedLeader}
               placeholder="리더를 검색하세요"
               isClearable
             />
@@ -190,10 +278,16 @@ function RdUserPage() {
               className="relative z-[50] w-[300px]"
               isMulti
               defaultValue={searchedCharacters}
-              onChange={setSearchedCharacters}
+              onChange={setSearchedCharacters as any}
               options={CHARACTER_OPTIONS}
               components={{ Option: CharacterSelectOptionBox }}
               placeholder="파티원을 추가하세요"
+            />
+            <Select
+              options={findAndOrOptions}
+              value={selectedPartyOption}
+              onChange={setSelectedPartyOption}
+              components={{ Option: PartySelectRadioOptionBox }}
             />
           </div>
         </div>
@@ -208,46 +302,54 @@ function RdUserPage() {
       </div>
       <div>
         {lastQuery && (
-          <div className="flex flex-wrap gap-[4px]">
-            {lastQuery.condition.title && (
-              <div className="border border-blue-gray-900 p-[4px] rounded flex items-center justify-center">
-                [덱제목:"{lastQuery.condition.title.$regex}"]
-              </div>
-            )}
-            {lastQuery.condition.leaderName && (
-              <div className="border border-blue-gray-900 p-[4px] rounded flex items-center justify-center ">
-                [리더:
-                <span className="inline-flex p-[4px] bg-blue-400 text-white m-[2px]">
-                  {RS_CHARACTER_DICT[lastQuery.condition.leaderName.$regex].name}
-                </span>
-                ]
-              </div>
-            )}
-            {lastQuery.condition['characters.name'] && (
-              <div className="border border-blue-gray-900 p-[4px] rounded whitespace-pre-line">
-                [포함된 파티원:
-                <span className="m-[2px]">
-                  {lastQuery.condition['characters.name'].$in.map((originName: any) => {
-                    return (
-                      <span
-                        key={createKey()}
-                        className="inline-flex p-[4px] bg-green-400 text-white m-[2px] rounded"
-                      >
-                        {RS_CHARACTER_DICT[originName].name}
-                      </span>
-                    )
-                  })}
-                </span>
-                ]
-              </div>
-            )}
+          <div className="flex flex-col gap-[4px]">
+            <div>검색일시: {formatDateNormal(lastQuery.timestamp)}</div>
+            <div className="flex flex-wrap gap-[4px]">
+              {lastQuery.condition.title && (
+                <div className="border border-blue-gray-900 p-[4px] rounded flex items-center justify-center">
+                  [덱제목:"{lastQuery.condition.title.$regex}"]
+                </div>
+              )}
+              {lastQuery.condition.leaderName && (
+                <div className="border border-blue-gray-900 p-[4px] rounded flex items-center justify-center ">
+                  [리더:
+                  <span className="inline-flex p-[4px] bg-blue-400 text-white m-[2px]">
+                    {RS_CHARACTER_DICT[lastQuery.condition.leaderName.$regex].name}
+                  </span>
+                  ]
+                </div>
+              )}
+              {lastQuery.condition['characters.name'] && (
+                <div className="border border-blue-gray-900 p-[4px] rounded whitespace-pre-line">
+                  [{selectedPartyOption?.value === '$in' ? '한명 이상 포함된' : '모두 포함된'}{' '}
+                  파티원:
+                  <span className="m-[2px]">
+                    {(Object.values(lastQuery.condition['characters.name']) as any)[0].map(
+                      (originName: any) => {
+                        const character = RS_CHARACTER_DICT[originName] || {}
+                        return (
+                          <span
+                            key={createKey()}
+                            className="inline-flex p-[4px] bg-green-400 text-white m-[2px] rounded"
+                          >
+                            {character.name || '-'}
+                          </span>
+                        )
+                      },
+                    )}
+                  </span>
+                  ]
+                </div>
+              )}
+            </div>
           </div>
         )}
+        <hr className="border-gray-500 border-dashed my-[4px]" />
       </div>
 
       <div>{decks && <RdUserDeckList decks={decks} pagination={pagination} />}</div>
 
-      {pagination && <PaginationList pagination={pagination} onSelectPage={initPage} />}
+      {pagination && <PaginationList pagination={pagination} onSelectPage={loadDecks} />}
     </div>
   )
 }
@@ -257,6 +359,20 @@ export default function RdUserPageS() {
     // <Suspense>
     <RdUserPage />
     // </Suspense>
+  )
+}
+
+function PartySelectRadioOptionBox(props: any) {
+  const { data, isSelected, innerRef, innerProps } = props
+  return (
+    <div
+      className="p-[10px] flex items-center gap-[4px] cursor-pointer hover:bg-gray-100 transition"
+      ref={innerRef}
+      {...innerProps}
+    >
+      <input type="radio" checked={isSelected} readOnly />
+      <label className="ml-[10px]">{data.label}</label>
+    </div>
   )
 }
 

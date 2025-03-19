@@ -1,7 +1,7 @@
 'use client'
 
 import createKey from '@/services/key-generator'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { debounce } from 'lodash'
 import { Tooltip } from '@material-tailwind/react'
 import { GradientButton } from '@/app/components/button/gradient-button'
@@ -40,6 +40,10 @@ export default function RecommendationDeckPage() {
       [name]: checked,
     }))
   }
+
+  useEffect(() => {
+    router.replace('/rd/user')
+  }, [])
 
   return (
     <div className="flex flex-col gap-[10px]">
