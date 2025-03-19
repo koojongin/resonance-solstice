@@ -185,7 +185,7 @@ function RdUserPage() {
       router.replace(`${pathname}?${current.toString()}`)
     }
     const condition: any = {}
-    searchParams.keys().forEach((key) => {
+    searchParams?.forEach((_value, key) => {
       if (key === 'title' && searchedTitleRef?.current) {
         searchedTitleRef.current.value = searchParams.get(key) || ''
         return
