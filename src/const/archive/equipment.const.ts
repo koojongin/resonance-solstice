@@ -127,7 +127,7 @@ const DEFAULT_ALL_EQUIPMENTS: {
     grade: RS_GRADE.UR,
     desc: '기본 속성: 체력+4600\n옵션: 빈사 시 [무적]/[은신]을 1초간 얻고, 동시에 자신의 체력을 60% 회복합니다.(1회 한정)',
     thumbnail:
-      'https://patchwiki.biligame.com/images/resonance/7/7a/m2ie2i3hi6arp0phlfvhzo5bx7lf97e.png',
+      'https://patchwiki.biligame.com/images/resonance/7/7f/b8gsk7fr8a023mh1w1rtovcsju20q6n.png',
     faction: RS_FACTION.NIGHT_CHAINS,
     earnsPath: [],
   },

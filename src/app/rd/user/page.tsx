@@ -5,11 +5,9 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import React, { Suspense, useCallback, useEffect, useState } from 'react'
 import { api } from '@/services/api/api.interceptor'
 import { Pagination } from '@/const/api/pagination.interface'
-import createKey from '@/services/key-generator'
 import RdUserDeckList from '@/app/rd/user/rd-user-deck-list'
 import { RS_CHARACTER_DICT } from '@/const/character/character.const'
 import { RecommendationDeck } from '@/app/rd/rd-decks.const'
-import { RecommendationUserDeck } from '@/app/rd/user/user-deck.interface'
 import { PaginationList } from '@/app/components/pagination/pagination-list'
 
 function convertCharacterData(decks: []) {
