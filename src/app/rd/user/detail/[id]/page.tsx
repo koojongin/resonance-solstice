@@ -22,6 +22,8 @@ import { CommentBox } from '@/app/components/comment/comment-box'
 import { CommentTarget } from '@/const/api/comment-target'
 import { RsCharacterBorderBox } from '@/app/components/character-frame/rs-character-border-box'
 import { convertCharacterThumbnailUrl, getFrameBgUrl } from '@/services/character-url'
+import { Pagination } from '@/const/api/pagination.interface'
+import { PaginationList } from '@/app/components/pagination/pagination-list'
 
 export default function RecommendationUserDeckDetailPage() {
   const { id } = useParams()
@@ -125,6 +127,7 @@ export default function RecommendationUserDeckDetailPage() {
           <CharacterDetailDescBox desc={(deck?.desc as string) || ''} />
           <AutoPresetBox deck={deck} usePreview={(deck as RecommendationUserDeck).usePreview} />
           <CommentBox data={{ target: CommentTarget.DeckDetail, refId: id as string }} />
+          <hr className="my-[10px] mt-[50px]" />
           <RelatedDeckList leaderName={deck.leaderName!} />
         </div>
       )}
@@ -132,8 +135,44 @@ export default function RecommendationUserDeckDetailPage() {
   )
 }
 
+function convertCharacterData(decks: []) {
+  return decks.map((deck: any) => {
+    const fixedDeck = { ...deck }
+    fixedDeck.characters = fixedDeck.characters.map((c: any) => {
+      return {
+        character: RS_CHARACTER_DICT[c.name],
+        equipments: (c?.equipments || []).map((equipment: any) => equipment?.name),
+      }
+    })
+    return fixedDeck
+  })
+}
 function RelatedDeckList({ leaderName }: { leaderName: string }) {
-  const [decks] = useState<RecommendationUserDeck[]>([])
+  const [decks, setDecks] = useState<RecommendationUserDeck[]>([])
+  const [pagination, setPagination] = useState<Pagination>()
+  const loadDecks = useCallback(async (selectedPage?: number) => {
+    const result = await api.post('/recommendation-deck/list', {
+      condition: {
+        leaderName,
+      },
+      opts: {
+        page: selectedPage,
+        limit: 20,
+      },
+    })
+    const { decks: rDecks, page, total, totalPages } = result.data
+    setDecks(convertCharacterData(rDecks))
+    setPagination({
+      page,
+      total,
+      totalPages,
+    })
+  }, [])
+
+  useEffect(() => {
+    loadDecks()
+  }, [])
+
   return (
     <div className="flex flex-col gap-[6px]">
       <div className="ff-dh text-[24px]">
@@ -147,7 +186,7 @@ function RelatedDeckList({ leaderName }: { leaderName: string }) {
                 key={`rd_${deck.id}_${index}`}
                 className="w-[312px] bg-gray-500 rounded overflow-hidden p-[2px] pb-0 shadow-md hover:drop-shadow-2xl hover:bg-blue-gray-500 hover:shadow-xl hover:shadow-blue-500/20"
               >
-                <Link href={`/rd/detail/${deck.id}`}>
+                <Link href={`/rd/user/detail/${deck.id}`}>
                   <div className="flex flex-wrap gap-[2px]">
                     {deck.characters.map((characterData, cIndex) => {
                       const { character } = characterData
@@ -191,6 +230,7 @@ function RelatedDeckList({ leaderName }: { leaderName: string }) {
             )
           })}
       </div>
+      {pagination && <PaginationList onSelectPage={loadDecks} pagination={pagination} />}
     </div>
   )
 }
