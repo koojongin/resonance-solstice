@@ -35,6 +35,7 @@ export default function RootLayout({
         <meta name="robots" content="index, follow" />
         <meta name="thumbnail" content="https://res.ujoygames.com/krImg/kv.jpg" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
         <meta
           property="og:image"
           content="https://imgproxy.shelter.id/sig/Z3M6Ly9zaGVsdGVyLW1lZGlhL3UvbmdBNTZkN1VqWFpnQVhDQXd3WlBack5SQmZKMy9pbWFnZXMvMTcyNzQ5MTI5NDM4MF81NDM2M2ExYy0zODkxLTQ0MGQtOWVlNS0zZTlhMjgxNzUyMzEuanBn?v=12345"

@@ -17,8 +17,8 @@ export function AutoPresetBox({
 }) {
   return (
     <div className="">
-      <div className="flex items-stretch">
-        <div className="min-w-[100px] min-h-[100px] flex items-center justify-center ff-dh text-[20px] flex-col gap-[4px]">
+      <div className="flex items-stretch sm:flex-col">
+        <div className="min-w-[100px] min-h-[100px] flex items-center justify-center ff-dh text-[20px] flex-col gap-[4px] sm:min-h-[initial] sm:flex-row sm:justify-start">
           <div>오토 프리셋</div>
           <Link href="/wiki/auto-preset" target="_blank">
             <GradientButton className="p-[4px] ff-sdn text-[14px] rounded inline-flex items-center gap-[4px]">

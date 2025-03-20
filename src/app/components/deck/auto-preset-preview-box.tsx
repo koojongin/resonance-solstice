@@ -58,7 +58,7 @@ export function AutoPresetPreviewBox({
   }, [characterNames])
 
   return (
-    <div className="flex flex-wrap gap-[6px] justify-center border border-gray-300 rounded p-[4px] relative">
+    <div className="flex flex-wrap gap-[6px] justify-center border border-gray-300 rounded p-[4px] relative sm:grid sm:grid-cols-6 sm:p-0 sm:gap-[1px]">
       {!isAvailable && (
         <div className="w-full h-full absolute top-0">
           <div className="absolute w-full h-full bg-red-300/80 z-10" />
@@ -116,7 +116,7 @@ export function PreviewSkillCardBox({
 }) {
   return (
     <div
-      className="w-[100px] border-2 border-black/50 shadow-md shadow-gray-800 relative rounded overflow-hidden bg-white"
+      className="w-[100px] border-2 border-black/50 shadow-md shadow-gray-800 relative rounded overflow-hidden bg-white sm:w-auto sm:shadow-none"
       onClick={() => onSelectCard && onSelectCard(skill.name)}
     >
       <div className="absolute right-0 top-0 m-[2px] font-bold w-[24px] h-[24px] flex items-center justify-center bg-gray-700 text-white border-2 border-gray-800 rounded-full shadow-md shadow-gray-800">
