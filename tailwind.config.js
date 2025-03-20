@@ -15,7 +15,7 @@ module.exports = withMT({
   ],
   theme: {
     screens: {
-      sm: '300px',
+      sm: { max: '600px' },
     },
     extend: {
       boxShadow: {

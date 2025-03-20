@@ -5,7 +5,8 @@
       "node"
     ],
     "typeRoots": [
-      "node_modules/@types"
+      "node_modules/@types",
+      "./types"
     ],
     "lib": [
       "dom",
@@ -36,7 +37,7 @@
         "./src/const/*"
       ]
     },
-    "target": "ES2017"
+    "target": "esnext"
   },
   "include": [
     "next-env.d.ts",

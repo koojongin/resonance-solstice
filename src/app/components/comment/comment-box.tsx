@@ -241,7 +241,7 @@ function CommentListBoxWithDestination({ comments }: { comments: Comment[] }) {
 
         return (
           <div key={createKey()} className="border border-gray-400">
-            <div className="bg-gray-200 gap-[4px] p-[5px] border-b border-dashed border-gray-500 flex items-center text-[15px]">
+            <div className="sm:flex-wrap bg-gray-200 gap-[4px] p-[5px] border-b border-dashed border-gray-500 flex items-center text-[15px]">
               <Link href={href}>
                 <div
                   className={`flex items-center gap-[4px] ${href ? 'cursor-pointer hover:underline' : 'cursor-auto'}`}

@@ -27,7 +27,8 @@
     "node_modules/",
     "tailwind.config.js",
     "next.config.js",
-    "next.config.ts"
+    "next.config.ts",
+    "next-env.d.ts"
   ],
   "settings": {
     "import/resolver": {

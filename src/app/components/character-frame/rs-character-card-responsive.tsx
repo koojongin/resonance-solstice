@@ -18,14 +18,17 @@ export function RsCharacterCardResponsive({
   onHideName?: boolean
 }) {
   return (
-    <div className="border-2 border-gray-400/80 rounded-[6px] shadow-md shadow-gray-800/70 p-[2px] cursor-pointer">
+    <div className="border-2 border-gray-400/80 rounded-[6px] shadow-md shadow-gray-800/70 p-[2px] cursor-pointer sm:shadow-none sm:border-0">
       <div className="overflow-hidden relative rounded-[4px]" style={{ height: `${height}px` }}>
-        <img src={getFrameBgUrl(character.grade)} className="absolute z-0 w-full bottom-[-40px]" />
         <img
-          src={convertCharacterThumbnailUrl(character.thumbnail, 200)}
-          className="w-full z-10 absolute"
+          src={getFrameBgUrl(character.grade)}
+          className="absolute z-0 w-full bottom-[-40px] sm:h-full sm:bottom-0 sm:object-cover"
         />
-        <div className="z-20 absolute w-[40px] flex justify-center items-center m-[4px] right-0">
+        <img
+          src={character.thumbnail}
+          className="w-full z-10 absolute sm:h-full sm:object-contain"
+        />
+        <div className="z-20 absolute w-[40px] flex justify-center items-center m-[4px] right-0 sm:w-[30%]">
           <img src={getFactionUrl(character.faction)} className="w-full" />
         </div>
         <div className="z-20 absolute w-[40px] flex justify-center items-center m-[4px] left-0">

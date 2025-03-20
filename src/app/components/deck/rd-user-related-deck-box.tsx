@@ -62,17 +62,17 @@ export function RdUserRelatedDeckList({ name, isLeader }: { isLeader?: boolean; 
             return (
               <div
                 key={`rd_${deck.id}_${index}`}
-                className="w-[312px] bg-gray-500 rounded overflow-hidden p-[2px] pb-0 shadow-md hover:drop-shadow-2xl hover:bg-blue-gray-500 hover:shadow-xl hover:shadow-blue-500/20"
+                className="sm:w-full w-[312px] bg-gray-500 rounded overflow-hidden p-[2px] pb-0 shadow-md hover:drop-shadow-2xl hover:bg-blue-gray-500 hover:shadow-xl hover:shadow-blue-500/20"
               >
                 <Link href={`/rd/user/detail/${deck.id}`}>
-                  <div className="flex flex-wrap gap-[2px]">
+                  <div className="flex flex-wrap gap-[2px] sm:grid sm:grid-cols-5">
                     {deck.characters.map((characterData, cIndex) => {
                       const { character } = characterData
                       const isLeaderC = character.name === deck.leaderName
                       return (
                         <div
                           key={`rd_${deck.id}_${cIndex}`}
-                          className="w-[60px] h-[60px] relative overflow-hidden"
+                          className="sm:aspect-square sm:w-auto sm:h-auto w-[60px] h-[60px] relative overflow-hidden"
                         >
                           <div className="absolute w-full h-full z-40 opacity-90">
                             <RsCharacterBorderBox grade={character.grade} borderSize={3} />

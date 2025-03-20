@@ -260,7 +260,7 @@ function RdUserPage() {
             돌파수에 따라 가능성 유무가 존재합니다.
           </div>
         </div>
-        <div className="flex items-center gap-[4px]">
+        <div className="flex items-center gap-[4px] sm:flex-wrap">
           <GradientButton
             className="p-[4px] rounded inline-flex items-center gap-[4px]"
             onClick={() => router.push('/wiki/auto-preset')}
@@ -286,19 +286,19 @@ function RdUserPage() {
       </div>
       <div className="">
         <Link href="/rd/user/create">
-          <div className="w-[200px] text-center bg-blue-500 text-white inline-block p-[10px] shadow-md cursor-pointer">
+          <div className="w-[200px] text-center bg-blue-500 text-white inline-block p-[10px] shadow-md cursor-pointer sm:w-full">
             덱 생성하기
           </div>
         </Link>
       </div>
 
-      <div className="flex flex-col gap-[4px] border border-gray-500 p-[10px] rounded">
+      <div className="flex flex-col gap-[4px] border border-gray-500 p-[10px] rounded sm:max-w-full">
         <div className="ff-dh text-[20px]">상세 검색</div>
         <div className="flex flex-col gap-[4px]">
-          <div className="flex items-center gap-[10px]">
+          <div className="flex items-center gap-[10px] sm:flex-col sm:items-start sm:mt-[20px]">
             <div className="min-w-[100px]">제목</div>
             <input
-              className="border border-gray-400 min-w-[300px] p-[4px]"
+              className="border border-gray-400 min-w-[300px] p-[4px] sm:w-full"
               type="text"
               maxLength={50}
               placeholder="덱 제목을 검색하세요."
@@ -310,10 +310,10 @@ function RdUserPage() {
               }}
             />
           </div>
-          <div className="flex items-center gap-[10px]">
+          <div className="flex items-center gap-[10px] sm:flex-col sm:items-start sm:mt-[20px]">
             <div className="min-w-[100px]">리더</div>
             <Select
-              className="relative z-[70] w-[300px]"
+              className="relative z-[70] w-[300px] sm:w-full"
               onChange={setSearchedLeader}
               options={CHARACTER_OPTIONS}
               components={{ Option: CharacterSelectOptionBox }}
@@ -322,10 +322,10 @@ function RdUserPage() {
               isClearable
             />
           </div>
-          <div className="flex items-center gap-[10px]">
+          <div className="flex items-center gap-[10px] sm:flex-col sm:items-start sm:mt-[20px]">
             <div className="min-w-[100px]">승무원</div>
             <Select
-              className="relative z-[60] w-[300px]"
+              className="relative z-[60] w-[300px] sm:w-full"
               isMulti
               defaultValue={searchedCharacters}
               onChange={setSearchedCharacters as any}
@@ -334,16 +334,17 @@ function RdUserPage() {
               placeholder="포함할 파티원을 추가하세요"
             />
             <Select
+              className="sm:w-full"
               options={findAndOrOptions}
               value={selectedPartyOption}
               onChange={setSelectedPartyOption}
               components={{ Option: PartySelectRadioOptionBox }}
             />
           </div>
-          <div className="flex items-center gap-[10px]">
+          <div className="flex items-center gap-[10px] sm:flex-col sm:items-start sm:mt-[20px]">
             <div className="min-w-[100px] text-red-500 font-bold">제외하기</div>
             <Select
-              className="relative z-[50] w-[300px]"
+              className="relative z-[50] w-[300px] sm:w-full"
               isMulti
               defaultValue={searchedBanCharacters}
               onChange={setSearchedBanCharacters as any}
@@ -353,9 +354,10 @@ function RdUserPage() {
             />
           </div>
         </div>
-        <div className="flex items-center gap-[10px]">
+        <div className="flex items-center gap-[10px] sm:flex-col sm:items-start sm:mt-[20px]">
           <div className="min-w-[100px]">카드 순서 설정</div>
           <Select
+            className="sm:w-full"
             options={usePreviewOptions}
             value={usePreviewOption}
             onChange={setUsePreviewOption as any}
@@ -363,7 +365,7 @@ function RdUserPage() {
           />
         </div>
         <div
-          className="bg-green-400 text-white p-[10px] text-center ff-dh text-[20px]"
+          className="bg-green-400 text-white p-[10px] text-center ff-dh text-[20px] cursor-pointer"
           onClick={async () => {
             await loadDecks()
           }}

@@ -49,14 +49,17 @@ export function CharacterDetailMainBox({
           })}
         </div>
       )}
-      <div className="flex gap-[10px] justify-center items-start">
+      <div className="flex gap-[10px] justify-center items-start sm:flex-wrap sm:gap-[20px]">
         {deck.characters.map((characterData) => {
           const { character, equipments }: any = characterData
           return (
-            <div key={createKey()} className="relative w-[180px] flex flex-col gap-[6px]">
+            <div
+              key={createKey()}
+              className="relative w-[180px] flex flex-col gap-[6px] sm:w-full sm:border-b sm:border-b-2 sm:border-blue-gray-900 sm:pb-[10px]"
+            >
               <RsCharacterCard size={RsCardSize.RESPONSIVE} character={character} height={200} />
               {equipments?.length > 0 && (
-                <div className="min-h-[100px]">
+                <div className="min-h-[100px] sm:w-full sm:flex sm:justify-center">
                   <RsEquipmentCard equipments={equipments || []} width={60} gap={0} onShowName />
                 </div>
               )}
@@ -119,8 +122,10 @@ export function CharacterDetailMainBox({
 export function CharacterDetailDescBox({ desc }: { desc: string }) {
   return (
     <>
-      <div className="flex items-stretch min-h-[100px]">
-        <div className="min-w-[100px] flex items-center justify-center ff-dh text-[20px]">설명</div>
+      <div className="flex items-stretch min-h-[100px] sm:flex-col sm:min-h-[initial]">
+        <div className="min-w-[100px] flex items-center justify-center ff-dh text-[20px] sm:justify-start">
+          설명
+        </div>
         <div className="bg-gray-100/50 p-[10px] rounded border whitespace-pre-line leading-normal w-full">
           {desc && (
             <RSHighlightedText text={desc} highlightStyle="text-shadow-outline-white-gray" />

@@ -27,7 +27,7 @@ export function RecommendationUserDeckCard({ deck }: { deck: RecommendationUserD
       key={createKey()}
       className="flex flex-col p-[8px] border w-full border-gray-300 rounded shadow-md shadow-gray-400/30"
     >
-      <div className="flex items-center gap-[4px] mb-[4px]">
+      <div className="flex items-center flex-wrap gap-[4px] mb-[4px]">
         <Link
           href={
             (deck as any)?._id
@@ -81,14 +81,17 @@ export function RecommendationUserDeckCard({ deck }: { deck: RecommendationUserD
         </div>
       </div>
 
-      <div className="flex gap-[4px] justify-between">
-        <div className="flex flex-wrap min-w-[650px] gap-[10px]">
+      <div className="flex gap-[4px] justify-between sm:flex-col">
+        <div className="flex flex-wrap min-w-[650px] gap-[10px] sm:max-w-full sm:min-w-[initial] sm:grid sm:grid-cols-5 sm:gap-0">
           {characters.map((characterData) => {
             const { character, equipments } = characterData
             const isLeader = leaderName === character.name || leaderName === character.originName
             const height = 120
             return (
-              <div key={createKey()} className="relative w-[120px] flex flex-col gap-[6px]">
+              <div
+                key={createKey()}
+                className="relative w-[120px] flex flex-col gap-[6px] sm:w-auto"
+              >
                 <div className="relative">
                   <RsCharacterCard
                     size={RsCardSize.RESPONSIVE}

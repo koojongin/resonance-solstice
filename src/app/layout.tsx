@@ -68,9 +68,9 @@ export default function RootLayout({
           <GoogleAnalyticsComponent />
         )}
         <Analytics />
-        <div className="flex flex-col w-full">
+        <div className="flex flex-col w-full min-h-[90vh]">
           <div className="w-full bg-[#3d414d]">
-            <div className="w-[980px] m-auto py-[10px]">
+            <div className="w-[980px] m-auto py-[10px] sm:w-full px-[10px]">
               <MainHeaderBar />
             </div>
           </div>
@@ -79,11 +79,11 @@ export default function RootLayout({
               <MainSideBar />
             </div>
           </div>
-          <div className="w-[980px] min-h-[700px] m-auto bg-white px-[10px] pb-[10px]">
+          <div className="w-[980px] min-h-[700px] mx-auto bg-white px-[10px] pb-[10px] sm:max-w-full">
             {children}
           </div>
         </div>
-        <div className="bg-white/50 flex justify-center p-[8px] py-[20px] text-[14px] py-[100px]">
+        <div className="bg-white/50 flex justify-center p-[8px] py-[50px] text-[14px]">
           2025년 02월 14일, 이 프로젝트가 시작되었습니다.
         </div>
       </body>
