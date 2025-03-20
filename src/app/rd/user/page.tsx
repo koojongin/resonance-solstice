@@ -47,8 +47,14 @@ const findAndOrOptions = [
 ]
 
 const usePreviewOptions = [
-  { value: {}, label: '상관없음' },
-  { value: true, label: '설정됨' },
+  {
+    value: {},
+    label: '상관없음',
+  },
+  {
+    value: true,
+    label: '설정됨',
+  },
 ]
 
 function RdUserPage() {
@@ -80,6 +86,9 @@ function RdUserPage() {
   const [searchedCharacters, setSearchedCharacters] = useState<{ value: string; label: string }[]>(
     [],
   )
+  const [searchedBanCharacters, setSearchedBanCharacters] = useState<
+    { value: string; label: string }[]
+  >([])
   const [lastQuery, setLastQuery] = useState<SearchQuery>()
 
   const getQuery = useCallback(
@@ -104,10 +113,24 @@ function RdUserPage() {
           $options: 'i',
         }
       }
-      if (searchedCharacters && searchedCharacters.length > 0) {
-        _lastQuery.condition['characters.name'] = {
-          [selectedPartyOption!.value]: searchedCharacters.map((c: any) => c?.value),
-        }
+
+      const isExistCharacterQuery =
+        searchedCharacters?.length > 0 || searchedBanCharacters.length > 0
+
+      if (isExistCharacterQuery) {
+        _lastQuery.condition.$and = []
+      }
+      if (searchedCharacters.length > 0) {
+        _lastQuery.condition.$and.push({
+          'characters.name': {
+            [selectedPartyOption!.value]: searchedCharacters.map((c: any) => c?.value),
+          },
+        })
+      }
+      if (searchedBanCharacters.length > 0) {
+        _lastQuery.condition.$and.push({
+          'characters.name': { $nin: searchedBanCharacters.map((c: any) => c?.value) },
+        })
       }
       if (usePreviewOption) {
         if (typeof usePreviewOption.value !== 'object') {
@@ -116,7 +139,13 @@ function RdUserPage() {
       }
       return _lastQuery
     },
-    [searchedCharacters, searchedLeader, selectedPartyOption, usePreviewOption],
+    [
+      searchedBanCharacters,
+      searchedCharacters,
+      searchedLeader,
+      selectedPartyOption,
+      usePreviewOption,
+    ],
   )
 
   const loadDecks = async (selectedPage?: number, _condition?: any) => {
@@ -129,7 +158,10 @@ function RdUserPage() {
       total,
       totalPages,
     })
-    setLastQuery({ ..._lastQuery, timestamp: new Date() })
+    setLastQuery({
+      ..._lastQuery,
+      timestamp: new Date(),
+    })
     updateSearchParams()
   }
 
@@ -206,7 +238,10 @@ function RdUserPage() {
         if (decodedCharacterNames) {
           const createdCharacters = decodedCharacterNames.split(',').map((cName) => {
             const character = RS_CHARACTER_DICT[cName]
-            return { value: character.originName, label: character.name }
+            return {
+              value: character.originName,
+              label: character.name,
+            }
           })
           condition.searchedCharacters = createdCharacters
         }
@@ -296,13 +331,25 @@ function RdUserPage() {
               onChange={setSearchedCharacters as any}
               options={CHARACTER_OPTIONS}
               components={{ Option: CharacterSelectOptionBox }}
-              placeholder="파티원을 추가하세요"
+              placeholder="포함할 파티원을 추가하세요"
             />
             <Select
               options={findAndOrOptions}
               value={selectedPartyOption}
               onChange={setSelectedPartyOption}
               components={{ Option: PartySelectRadioOptionBox }}
+            />
+          </div>
+          <div className="flex items-center gap-[10px]">
+            <div className="min-w-[100px] text-red-500 font-bold">제외하기</div>
+            <Select
+              className="relative z-[50] w-[300px]"
+              isMulti
+              defaultValue={searchedBanCharacters}
+              onChange={setSearchedBanCharacters as any}
+              options={CHARACTER_OPTIONS}
+              components={{ Option: CharacterSelectOptionBox }}
+              placeholder="제외할 파티원을 추가하세요"
             />
           </div>
         </div>
@@ -343,28 +390,15 @@ function RdUserPage() {
                   ]
                 </div>
               )}
-              {lastQuery.condition['characters.name'] && (
-                <div className="border border-blue-gray-900 p-[4px] rounded whitespace-pre-line">
-                  [{selectedPartyOption?.value === '$in' ? '한명 이상 포함된' : '모두 포함된'}{' '}
-                  파티원:
-                  <span className="m-[2px]">
-                    {(Object.values(lastQuery.condition['characters.name']) as any)[0].map(
-                      (originName: any) => {
-                        const character = RS_CHARACTER_DICT[originName] || {}
-                        return (
-                          <span
-                            key={createKey()}
-                            className="inline-flex p-[4px] bg-green-400 text-white m-[2px] rounded"
-                          >
-                            {character.name || '-'}
-                          </span>
-                        )
-                      },
-                    )}
-                  </span>
-                  ]
-                </div>
-              )}
+              {lastQuery.condition.$and?.map((condition: any) => {
+                if (!condition['characters.name']) return <></>
+                const isIncludeQuery =
+                  condition['characters.name'].$in || condition['characters.name'].$all
+                if (isIncludeQuery) {
+                  return <CharacterIncludeQueryChip key={createKey()} condition={condition} />
+                }
+                return <CharacterExcludeQueryChip key={createKey()} condition={condition} />
+              })}
             </div>
           </div>
         )}
@@ -386,6 +420,60 @@ export default function RdUserPageS() {
   )
 }
 
+function CharacterExcludeQueryChip({ condition }: { condition: any }) {
+  const characters = condition['characters.name']?.$nin || []
+  return (
+    <div
+      key={createKey()}
+      className="border border-blue-gray-900 p-[4px] rounded whitespace-pre-line"
+    >
+      [제외된 파티원:
+      <span className="m-[2px]">
+        {characters?.map((originName: any) => {
+          const character = RS_CHARACTER_DICT[originName] || {}
+          return (
+            <span
+              key={createKey()}
+              className="inline-flex p-[4px] bg-red-400 text-white m-[2px] rounded"
+            >
+              {character.name || '-'}
+            </span>
+          )
+        })}
+      </span>
+      ]
+    </div>
+  )
+}
+
+function CharacterIncludeQueryChip({ condition }: { condition: any }) {
+  const charactersQuery = condition['characters.name']
+  const inOption = charactersQuery.$in
+  const characters = charactersQuery.$in || charactersQuery.$all
+  return (
+    <div
+      key={createKey()}
+      className="border border-blue-gray-900 p-[4px] rounded whitespace-pre-line"
+    >
+      [{inOption ? '한명 이상 포함된' : '모두 포함된'} 파티원:
+      <span className="m-[2px]">
+        {characters.map((originName: any) => {
+          const character = RS_CHARACTER_DICT[originName] || {}
+          return (
+            <span
+              key={createKey()}
+              className="inline-flex p-[4px] bg-green-400 text-white m-[2px] rounded"
+            >
+              {character.name || '-'}
+            </span>
+          )
+        })}
+      </span>
+      ]
+    </div>
+  )
+}
+
 function PreviewCheckboxOptionBox(props: any) {
   const { data, innerRef, innerProps, isSelected } = props
 
@@ -400,6 +488,7 @@ function PreviewCheckboxOptionBox(props: any) {
     </div>
   )
 }
+
 function PartySelectRadioOptionBox(props: any) {
   const { data, isSelected, innerRef, innerProps } = props
   return (
