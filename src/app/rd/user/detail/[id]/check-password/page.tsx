@@ -37,6 +37,11 @@ export default function RdUserDeckCheckPasswordPage() {
         placeholder="비밀번호를 입력하세요."
         value={password}
         onChange={handlePasswordChange}
+        onKeyUp={async (e) => {
+          if (e.key === 'Enter') {
+            await checkPassword()
+          }
+        }}
       />
       <div
         onClick={async () => {

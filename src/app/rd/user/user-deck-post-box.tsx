@@ -337,9 +337,11 @@ function UserDeckPostBoxBase({ id, password }: { id?: string; password?: string 
         <div className="flex flex-wrap justify-between gap-[10px] items-stretch">
           {deck.characters.map((value, index) => {
             const characterData = deck.characters[index]
-            const { name, equipments: eqs } = characterData || {}
+            const { name, equipments: eqs = [] } = characterData || {}
             const character = RS_CHARACTER_DICT[name || '']
-            const equipments = eqs || [undefined, undefined, undefined]
+            const equipments = eqs
+              .concat(Array(Math.max(0, 3 - eqs.length)).fill(undefined))
+              .slice(0, 3) || [undefined, undefined, undefined]
             return (
               <div key={`c_deck_index_${index}`}>
                 {character && (

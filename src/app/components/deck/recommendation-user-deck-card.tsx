@@ -125,7 +125,7 @@ export function RecommendationUserDeckCard({ deck }: { deck: RecommendationUserD
           </Link>
           {autoPreset && (
             <div
-              className="cursor-pointer w-full p-[4px] py-[8px] pb-[6px] items-center justify-center rounded flex bg-blue-gray-600 text-white"
+              className="cursor-pointer w-full p-[4px] py-[8px] pb-[6px] items-center justify-center rounded flex bg-deep-purple-400 text-white"
               onClick={async () => {
                 await copyToClipboard(autoPreset)
                 toast(`오토프리셋이 복사되었습니다.`)
@@ -135,7 +135,7 @@ export function RecommendationUserDeckCard({ deck }: { deck: RecommendationUserD
             </div>
           )}
           <div
-            className="cursor-pointer  w-full p-[4px] py-[8px] pb-[6px] items-center justify-center rounded flex bg-blue-gray-600 text-white"
+            className="cursor-pointer  w-full p-[4px] py-[8px] pb-[6px] items-center justify-center rounded flex bg-blue-400 text-white"
             onClick={async () => {
               await copyToClipboard(`${locationOrigin}/rd/detail/${deck.id}`)
               toast(`[${deck.title.substring(0, 10)}...] 덱 링크가 복사되었습니다.`)
@@ -145,7 +145,7 @@ export function RecommendationUserDeckCard({ deck }: { deck: RecommendationUserD
           </div>
           {descLink && (
             <Link
-              className="w-full p-[4px] py-[8px] pb-[6px] items-center justify-center rounded flex bg-blue-gray-600 text-white"
+              className="w-full p-[4px] py-[8px] pb-[6px] items-center justify-center rounded flex bg-blue-gray-900 text-white"
               href={descLink}
             >
               원문 링크
