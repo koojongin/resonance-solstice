@@ -35,7 +35,7 @@ export default function RecommendationDeckDetailPage() {
     )
 
   useEffect(() => {
-    router.push(`/rd/user/detail/${originDeck!.docId}`)
+    if (originDeck!.docId) router.push(`/rd/user/detail/${originDeck!.docId}`)
   }, [])
 
   return (
