@@ -1707,4 +1707,40 @@ export const CHARACTER_SKILLS: {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/0/08/tvy8dpqcl8x1jfwfnxehm7sfcb7iw8y.png',
   },
+
+  회복침: {
+    amount: 2,
+    cost: 3,
+    name: '회복침',
+    desc: `[회복침]을 발사하여 아군의 체력을 35% 회복시키며 방어력을 3% 증가시킵니다.(중첩 가능)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e5/hjez8zc51m2vlyav2p6x5didefgrpto.png',
+  },
+  공격침: {
+    amount: 3,
+    cost: 3,
+    name: '공격침',
+    desc: `[공격침]을 발사하여 적에게 1단 피해를 입히고 [기절] 시킵니다. 동시에 [화상]을 발동하여 적의 공격력을 2% 감소시킵니다.(중첩 가능)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/47/o5gylwj7iigrst6oq9emc40llru63o8.png',
+  },
+  미혹탄: {
+    amount: 1,
+    cost: 6,
+    name: '미혹탄',
+    desc: `[미혹탄]으로 모든 적에게 5단 피해를 입히고 [혼란]을 부여합니다. 동시에 모든 적의 방어력을 3% 감소시킵니다.(중첩 가능)
+    사용 후 [블랙카드] [스모킹 건]을 1장 생성하여 손으로 가져옵니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/94/hai7ppsomic06gd1mgy1feduvt66pdy.png',
+  },
+  '스모킹 건': {
+    amount: 0,
+    cost: 0,
+    name: '스모킹 건',
+    desc: `코끝에 남은 달짝지근한 향은 치명적인 독으로 다가옵니다.
+    손에서 내면 [소각]됩니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/04/6ycuxyz1zvbj90e1k4k3ttlako084le.png',
+    isGeneratedCard: true,
+  },
 }

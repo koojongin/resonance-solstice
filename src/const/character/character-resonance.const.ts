@@ -1075,4 +1075,29 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/2/24/b3zraxc6c8zdza3ik1pfd4p7zdcbsmx.png',
   },
+
+  '눈 녹은 7번째 밤': {
+    name: '눈 녹은 7번째 밤',
+    desc: ``,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/1/11/6lsvbqns3c8l9e4bgqsvduxrpkcxsw1.png',
+  },
+  '호박 감귤': {
+    name: '호박 감귤',
+    desc: ``,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/8b/5bqowdagrqrvic1nisbme4z1bogjx27.png',
+  },
+  '번 애프터 리딩': {
+    name: '번 애프터 리딩',
+    desc: ``,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/d8/7jnnbdt9ms80vqq06rwggfp10vg4tnm.png',
+  },
+  '우울한 탑노트': {
+    name: '우울한 탑노트',
+    desc: ``,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/32/g68sk5fkyjw6v4gf110gv6aqx576yhd.png',
+  },
 }

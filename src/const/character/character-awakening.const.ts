@@ -1038,4 +1038,29 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/e/ef/4ly0udc39dzneq8uwpjjqta9ipr35ku.png',
   },
+
+  조향사: {
+    name: '조향사',
+    desc: ``,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/98/dkjvczwfwas0808ne4ptpqqhr2rhuey.png',
+  },
+  '혼란의 베이스노트': {
+    name: '혼란의 베이스노트',
+    desc: ``,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2b/jj32hloigue10qaiwlwha4ze9754m22.png',
+  },
+  '붉은 노을': {
+    name: '붉은 노을',
+    desc: ``,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e3/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  '들새의 만남': {
+    name: '들새의 만남',
+    desc: ``,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/de/qvjcrq6pqvr93momzyt9cmiebnvf00c.png',
+  },
 }
