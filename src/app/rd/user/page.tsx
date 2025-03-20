@@ -313,7 +313,7 @@ function RdUserPage() {
           <div className="flex items-center gap-[10px]">
             <div className="min-w-[100px]">리더</div>
             <Select
-              className="relative z-[60] w-[300px]"
+              className="relative z-[70] w-[300px]"
               onChange={setSearchedLeader}
               options={CHARACTER_OPTIONS}
               components={{ Option: CharacterSelectOptionBox }}
@@ -325,7 +325,7 @@ function RdUserPage() {
           <div className="flex items-center gap-[10px]">
             <div className="min-w-[100px]">승무원</div>
             <Select
-              className="relative z-[50] w-[300px]"
+              className="relative z-[60] w-[300px]"
               isMulti
               defaultValue={searchedCharacters}
               onChange={setSearchedCharacters as any}
