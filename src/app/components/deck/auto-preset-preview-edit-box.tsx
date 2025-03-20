@@ -14,6 +14,7 @@ import {
 import { arrayMove, rectSortingStrategy, SortableContext, useSortable } from '@dnd-kit/sortable'
 import createKey from '@/services/key-generator'
 import { CreateRecommendationDeck } from '@/app/rd/user/create-rd-deck'
+import _ from 'lodash'
 
 export function AutoPresetPreviewEditBox({
   deck,
@@ -26,6 +27,7 @@ export function AutoPresetPreviewEditBox({
   onSelectBanCard: (skillName: string) => void
   onRefreshPreview: () => void
 }) {
+  console.log(deck.autoPresetPreviews)
   const [skillDict, setSkillDict] = useState<{
     [key: string]: { originName: string; skill: any }
   }>()
@@ -99,8 +101,11 @@ export function AutoPresetPreviewEditBox({
             onDragEnd={handleDragEnd}
           >
             {deck.autoPresetPreviews && (
-              <SortableContext items={deck.autoPresetPreviews} strategy={rectSortingStrategy}>
-                {deck.autoPresetPreviews.map((key, index) => {
+              <SortableContext
+                items={_.uniq(deck.autoPresetPreviews)}
+                strategy={rectSortingStrategy}
+              >
+                {_.uniq(deck.autoPresetPreviews).map((key, index) => {
                   return (
                     <SortableItem
                       skillDict={skillDict}

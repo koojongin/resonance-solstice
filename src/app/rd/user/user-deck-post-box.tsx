@@ -197,7 +197,7 @@ function UserDeckPostBoxBase({ id, password }: { id?: string; password?: string 
         originPassword: password,
       })
       toast('수정 되었습니다.')
-      router.push('/rd/user')
+      router.push(`/rd/user/detail/${id}`)
     } catch (error) {
       toast('비밀번호가 틀립니다.')
     } finally {

@@ -1743,4 +1743,31 @@ export const CHARACTER_SKILLS: {
       'https://patchwiki.biligame.com/images/resonance/0/04/6ycuxyz1zvbj90e1k4k3ttlako084le.png',
     isGeneratedCard: true,
   },
+
+  '배트 타격': {
+    amount: 2,
+    cost: 2,
+    name: '배트 타격',
+    desc: `배트로 내리쳐 적에게 1단 피해를 입히고 [기절]과 [점화]를 발동합니다`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/09/g0ix79oshbxr6u7hbb2yf4lbq5glk9u.png',
+  },
+  '어퍼 스윙': {
+    amount: 2,
+    cost: 3,
+    name: '어퍼 스윙',
+    desc: `전력으로 홈런을 쳐서 적에게 1단 피해를 입히고 [넉백]시킵니다. 동시에 20% 확률로 대상을 [에어본] 시킵니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/22/5kyxb166fea6qu2m95ri5rb2p9ifrx9.png',
+  },
+  무명: {
+    amount: 1,
+    cost: 4,
+    name: '무명',
+    desc: `지면을 내리쳐 범위 내에 적에게 1단 피해를 입힙니다.
+    연소 가능한 기체를 방출하여 범위 내의 아군과 적에게 [점화]를 부여합니다.
+    점화된 아군의 공격력이 3% 증가합니다.(중첩 가능)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/ab/0cs7vrf95zt9r7xojfoeuxyu1p7ndkh.png',
+  },
 }

@@ -1078,26 +1078,56 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
 
   '눈 녹은 7번째 밤': {
     name: '눈 녹은 7번째 밤',
-    desc: ``,
+    desc: `[회복침] 강화:
+    [회복침]을 발사하여 아군을 치유하여 체력을 30% 회복시키고, 동시에 대상의 방어력을 3% 증가시킵니다.(중첩 가능)
+    대상이 가하는 다음 3회의 [일반공격]이 [냉동]을 발동하고, 동시에 대상에게 부여된 [점화]를 제거합니다.`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/1/11/6lsvbqns3c8l9e4bgqsvduxrpkcxsw1.png',
   },
   '호박 감귤': {
     name: '호박 감귤',
-    desc: ``,
+    desc: `[공격침] 강화:
+    [공격침]을 발사하여 적에게 1단 피해를 입히고 [기절]을 부여합니다. 동시에 [혼란]과 [화상]을 발동하고, 대상의 공격력을 3% 감소시킵니다.(중첩 가능)`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/8/8b/5bqowdagrqrvic1nisbme4z1bogjx27.png',
   },
   '번 애프터 리딩': {
     name: '번 애프터 리딩',
-    desc: ``,
+    desc: `피해를 받으면 3초간 [은신]합니다. (쿨타임 15초)`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/d/d8/7jnnbdt9ms80vqq06rwggfp10vg4tnm.png',
   },
   '우울한 탑노트': {
     name: '우울한 탑노트',
-    desc: ``,
+    desc: `[스모킹 건]이 손에 있을 때 [회복침]과 [공격침]의 비용이 1 감소합니다.
+    [회복침]을 사용하면 [스모킹 건]을 1장 [소각]하고, [회복침]을 받은 대상에 [광폭]을 부여합니다.
+    [공격침]을 사용하면 [스모킹 건]을 1장 [소각]하고, [공격침]을 받은 대상에게 [붕괴]를 부여합니다.`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/3/32/g68sk5fkyjw6v4gf110gv6aqx576yhd.png',
+  },
+
+  깨달음: {
+    name: '깨달음',
+    desc: `[배트 타격] 사용 시 자신의 다음 [레드카드]의 비용이 1 감소합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/79/8e4puhbrs62k104as8dti8wwpossof6.png',
+  },
+  버닝: {
+    name: '버닝',
+    desc: `자신이 연소 상태일 경우 체력을 초당 3% 회복합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/b5/p1ueypudp0evucs3m0k72bd1yhup0od.png',
+  },
+  요지부동: {
+    name: '요지부동',
+    desc: `[어퍼 스윙] 사용 시 5초간 [슈퍼아머]를 획득합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/9e/qs4xfjwop2j2o7qw4ihk5kdrdi8xww7.png',
+  },
+  '요원의 불길': {
+    name: '요원의 불길',
+    desc: `자신이 연소 상태일 경우 입히는 최종 피해가 20% 증가합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/c6/sueke5tpgckupny73ngcpp92v54g2i2.png',
   },
 }

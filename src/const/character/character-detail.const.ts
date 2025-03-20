@@ -344,7 +344,7 @@ export const CHARACTER_DETAIL: {
     },
   },
   SUEN: {
-    SKILLS: ['복음', '음에너지', '다크 아트', '형벌', '다크 아트', '정화'],
+    SKILLS: ['복음', '음에너지', '다크 아트', '형벌', '정화'],
     RESONANCES: {
       1: '은혜',
       2: '지탱',
@@ -645,7 +645,24 @@ export const CHARACTER_DETAIL: {
     },
   },
   AKIRA: {},
-  ACHIWA: {},
+  ACHIWA: {
+    SKILLS: ['배트 타격', '어퍼 스윙', '무명', '원소핵-불', '화염 신성'],
+    RESONANCES: {
+      1: '깨달음',
+      2: '버닝',
+      3: '생기',
+      4: '요지부동',
+      5: '요원의 불길',
+    },
+    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    AWAKENING: {
+      1: '횃불',
+      2: '집착',
+      3: '투지',
+      4: '무명업화',
+      5: '비우기',
+    },
+  },
   KALEYA: {
     SKILLS: ['마이크로파', '위치 전송', '유산소 대기'],
     RESONANCES: {

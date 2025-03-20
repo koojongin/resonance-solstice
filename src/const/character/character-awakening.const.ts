@@ -1041,26 +1041,54 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
 
   조향사: {
     name: '조향사',
-    desc: ``,
+    desc: `이상 상태인 대상에게 입히는 최종 피해가 20% 증가합니다.`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/9/98/dkjvczwfwas0808ne4ptpqqhr2rhuey.png',
   },
   '혼란의 베이스노트': {
     name: '혼란의 베이스노트',
-    desc: ``,
+    desc: `자신이 부여하는 [혼란]과 [광폭]의 지속 시간이 3초 증가합니다.`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/2/2b/jj32hloigue10qaiwlwha4ze9754m22.png',
   },
   '붉은 노을': {
     name: '붉은 노을',
-    desc: ``,
+    desc: `[스모킹 건]이 [소각]될 때마다 뒷열 아군의 공격력이 1% 증가합니다.(최대 30%)`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/e/e3/9frhs5bteeq029t124i6j79dqq57y4w.png',
   },
   '들새의 만남': {
     name: '들새의 만남',
-    desc: ``,
+    desc: `전투 시작 시 덱의 맨 아래에 있는 카드 3장을 확인하고, 1장 선택하여 손으로 가져옵니다.`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/d/de/qvjcrq6pqvr93momzyt9cmiebnvf00c.png',
+  },
+
+  횃불: {
+    name: '횃불',
+    desc: `자신이 연소 상태일 때 [일반공격]이 [점화]를 발동합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/ef/7w54kgiiksxpbtyphntoiywykmwfmta.png',
+  },
+  집착: {
+    name: '집착',
+    desc: `[무명] 강화:
+    지면을 강타하여 범위 내의 적에게 1단 피해를 입힙니다.
+    대량의 가연성 기체를 방출하여 모든 아군과 적에게 [점화]를 부여합니다. 연소 상태인 아군의 공격력이 3% 증가합니다.(중첩 가능)
+    사용 후 [원소핵-불] 카드를 1장 생성하여 손으로 가져옵니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/20/kh00t3qn6ghpx23f11acs2wdvo2ydp1.png',
+  },
+  무명업화: {
+    name: '무명업화',
+    desc: `[무명] 사용 후 다음 내는 [어퍼 스윙]이 입히는 피해가 100% 증가합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/ff/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  비우기: {
+    name: '비우기',
+    desc: `[리더 스킬] 사용 시 자신의 체력을 5% 회복합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/49/5sosyxe7mjv5ro5xtf080bq8ejrgqpj.png',
   },
 }
