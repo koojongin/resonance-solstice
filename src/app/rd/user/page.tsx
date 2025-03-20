@@ -376,6 +376,9 @@ function RdUserPage() {
           <div className="flex flex-col gap-[4px]">
             <div>검색일시: {formatDateNormal(lastQuery.timestamp)}</div>
             <div className="flex flex-wrap gap-[4px]">
+              <div className="border border-blue-gray-900 bg-blue-gray-700 text-white p-[4px] rounded flex items-center justify-center">
+                {lastQuery.opts.page} 페이지
+              </div>
               {lastQuery.condition.title && (
                 <div className="border border-blue-gray-900 p-[4px] rounded flex items-center justify-center">
                   [덱제목:"{lastQuery.condition.title.$regex}"]
