@@ -162,7 +162,6 @@ function RdUserPage() {
       ..._lastQuery,
       timestamp: new Date(),
     })
-    updateSearchParams()
   }
 
   const updateSearchParams = () => {
@@ -174,6 +173,10 @@ function RdUserPage() {
     if (lastQuery?.opts?.page) {
       params.set('page', lastQuery.opts.page as any)
     }
+
+    params.delete('bans')
+    params.delete('characters')
+
     if (lastQuery.condition) {
       if (lastQuery.condition.title?.$regex) {
         params.set('title', lastQuery.condition.title.$regex)
@@ -191,12 +194,16 @@ function RdUserPage() {
           if (filterKey !== 'characters.name') return
           if (condition[filterKey].$in || condition[filterKey].$all) {
             const characters = condition[filterKey].$in || condition[filterKey].$all
-            params.set('characters', characters.join(','))
+            if (characters.length > 0) {
+              params.set('characters', characters.join(','))
+            }
           }
 
           if (condition[filterKey].$nin) {
             const characters = condition[filterKey].$nin
-            params.set('bans', characters.join(','))
+            if (characters.length > 0) {
+              params.set('bans', characters.join(','))
+            }
           }
         })
       }
@@ -206,6 +213,7 @@ function RdUserPage() {
 
   useEffect(() => {
     if (!lastQuery) return
+    console.log(lastQuery)
     updateSearchParams()
   }, [lastQuery])
 
