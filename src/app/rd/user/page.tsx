@@ -96,7 +96,7 @@ function RdUserPage() {
       const _lastQuery: SearchQuery = {
         condition: {},
         opts: {
-          page: selectedPage || lastQuery?.opts.page || 1,
+          page: selectedPage || (searchParams?.get('page') as any) || lastQuery?.opts.page || 1,
           limit: 20,
         },
         timestamp: new Date(),
@@ -165,7 +165,7 @@ function RdUserPage() {
     updateSearchParams()
   }
 
-  const updateSearchParams = useCallback(() => {
+  const updateSearchParams = () => {
     if (typeof window === 'undefined') {
       return
     }
@@ -180,22 +180,29 @@ function RdUserPage() {
       } else {
         params.delete('title')
       }
-      // if (lastQuery.condition.leaderName?.$regex) {
-      //   params.set('leaderName', lastQuery.condition.leaderName.$regex)
-      // } else {
-      //   params.delete('leaderName')
-      // }
-      // if (lastQuery.condition['characters.name']) {
-      //   const characters: string[] =
-      //     (Object.values(lastQuery.condition['characters.name'])[0] as []) || []
-      //   params.set('characters', characters.join(','))
-      // } else {
-      //   params.delete('characters')
-      // }
-    }
+      if (lastQuery.condition.leaderName?.$regex) {
+        params.set('leaderName', lastQuery.condition.leaderName.$regex)
+      } else {
+        params.delete('leaderName')
+      }
+      if (lastQuery.condition.$and) {
+        lastQuery.condition.$and.forEach((condition: { [key: string]: any }) => {
+          const [filterKey]: string[] = Object.keys(condition)
+          if (filterKey !== 'characters.name') return
+          if (condition[filterKey].$in || condition[filterKey].$all) {
+            const characters = condition[filterKey].$in || condition[filterKey].$all
+            params.set('characters', characters.join(','))
+          }
 
+          if (condition[filterKey].$nin) {
+            const characters = condition[filterKey].$nin
+            params.set('bans', characters.join(','))
+          }
+        })
+      }
+    }
     window.history.pushState({}, '', `${pathname}?${params.toString()}`)
-  }, [lastQuery])
+  }
 
   useEffect(() => {
     if (!lastQuery) return
@@ -216,7 +223,6 @@ function RdUserPage() {
       current.set('page', '1')
       router.replace(`${pathname}?${current.toString()}`)
     }
-    const condition: any = {}
     searchParams?.forEach((_value, key) => {
       if (key === 'title' && searchedTitleRef?.current) {
         searchedTitleRef.current.value = searchParams.get(key) || ''
@@ -229,7 +235,7 @@ function RdUserPage() {
           value: originName,
           label: RS_CHARACTER_DICT[originName].name,
         }
-        condition.searchedLeader = value
+        setSearchedLeader(value)
         return
       }
       if (key === 'characters') {
@@ -243,12 +249,27 @@ function RdUserPage() {
               label: character.name,
             }
           })
-          condition.searchedCharacters = createdCharacters
+          setSearchedCharacters(createdCharacters)
+        }
+        return
+      }
+
+      if (key === 'bans') {
+        const characterNames = searchParams.get(key) || ''
+        const decodedCharacterNames = decodeURIComponent(characterNames)
+        if (decodedCharacterNames) {
+          const createdCharacters = decodedCharacterNames.split(',').map((cName) => {
+            const character = RS_CHARACTER_DICT[cName]
+            return {
+              value: character.originName,
+              label: character.name,
+            }
+          })
+          setSearchedBanCharacters(createdCharacters)
         }
         return
       }
     })
-    loadDecks()
   }, [searchParams])
 
   return (
@@ -327,7 +348,7 @@ function RdUserPage() {
             <Select
               className="relative z-[60] w-[300px] sm:w-full"
               isMulti
-              defaultValue={searchedCharacters}
+              value={searchedCharacters}
               onChange={setSearchedCharacters as any}
               options={CHARACTER_OPTIONS}
               components={{ Option: CharacterSelectOptionBox }}
@@ -346,7 +367,7 @@ function RdUserPage() {
             <Select
               className="relative z-[50] w-[300px] sm:w-full"
               isMulti
-              defaultValue={searchedBanCharacters}
+              value={searchedBanCharacters}
               onChange={setSearchedBanCharacters as any}
               options={CHARACTER_OPTIONS}
               components={{ Option: CharacterSelectOptionBox }}
