@@ -93,10 +93,12 @@ function RdUserPage() {
 
   const getQuery = useCallback(
     (selectedPage?: number): { condition: object; opts: { page: number; limit: number } } => {
+      const currentSearchParams = new URLSearchParams(window.location.search)
       const _lastQuery: SearchQuery = {
         condition: {},
         opts: {
-          page: selectedPage || (searchParams?.get('page') as any) || lastQuery?.opts.page || 1,
+          page:
+            selectedPage || (currentSearchParams.get('page') as any) || lastQuery?.opts.page || 1,
           limit: 20,
         },
         timestamp: new Date(),
@@ -213,16 +215,8 @@ function RdUserPage() {
 
   useEffect(() => {
     if (!lastQuery) return
-    console.log(lastQuery)
     updateSearchParams()
   }, [lastQuery])
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const currentSearchParams = new URLSearchParams(window.location.search)
-      setSearchParams(currentSearchParams)
-    }
-  }, [])
 
   useEffect(() => {
     if (!searchParams) return
@@ -279,6 +273,18 @@ function RdUserPage() {
       }
     })
   }, [searchParams])
+
+  // useEffect(() => {
+  //   console.log(pathname)
+  //   console.log('호출됨', { searchedCharacters, searchedLeader, searchedBanCharacters })
+  // }, [pathname, searchedCharacters, searchedLeader, searchedBanCharacters])
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const currentSearchParams = new URLSearchParams(window.location.search)
+      setSearchParams(currentSearchParams)
+    }
+  }, [])
 
   return (
     <div className="flex flex-col gap-[10px]">

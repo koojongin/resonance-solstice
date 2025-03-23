@@ -164,7 +164,7 @@ function CommentContentSection({ comment }: { comment: Comment }) {
   return (
     <>
       <div
-        className={`whitespace-pre-line p-[5px] text-[14px] overflow-hidden ${isExpanded || !isLongText ? 'h-auto' : 'h-[30px]'}`}
+        className={`break-all whitespace-pre-line p-[5px] text-[14px] overflow-hidden ${isExpanded || !isLongText ? 'h-auto' : 'h-[30px]'}`}
         style={{
           display: '-webkit-box',
           overflow: 'hidden',
