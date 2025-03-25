@@ -8,7 +8,7 @@ import VisitCounter from '@/app/components/ga/visit-counter'
 export default function MainHeaderBar() {
   const router = useRouter()
   return (
-    <div className="flex flex-wrap gap-[10px] ff-dh text-[22px]">
+    <div className="flex flex-wrap gap-[10px] ff-dh text-[22px] items-center">
       <Tooltip content="아카라이브 채널">
         <Link href="https://arca.live/b/resonance" target="_blank">
           <div className="flex items-center gap-[10px] cursor-pointer">
@@ -68,6 +68,14 @@ export default function MainHeaderBar() {
               className="w-[30px] rounded-full border-[2px] bg-white"
               src="https://www.gamekee.com/favicon.ico"
             />
+          </div>
+        </Link>
+      </Tooltip>
+
+      <Tooltip content="실시간 시세 정보">
+        <Link href="https://res-price.mephistopheles.moe/" target="_blank">
+          <div className="flex items-center cursor-pointer bg-white text-blue-gray-800 p-[4px] pb-[2px] rounded shadow-md">
+            실시간 시세
           </div>
         </Link>
       </Tooltip>
