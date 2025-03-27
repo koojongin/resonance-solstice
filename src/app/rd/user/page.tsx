@@ -15,6 +15,7 @@ import { useNextDepthNavigator } from '@/services/navigation'
 import { RsCharacterCardResponsiveShorten } from '@/app/components/character-frame/rs-character-card-responsive'
 import createKey from '@/services/key-generator'
 import { formatDateNormal } from '@/services/utils/date.format'
+import { Tooltip } from '@material-tailwind/react'
 
 function convertCharacterData(decks: []) {
   return decks.map((deck: any) => {
@@ -327,7 +328,7 @@ function RdUserPage() {
         <div className="ff-dh text-[20px]">상세 검색</div>
         <div className="flex flex-col gap-[4px]">
           <div className="flex items-center gap-[10px] sm:flex-col sm:items-start sm:mt-[20px]">
-            <div className="min-w-[100px]">제목</div>
+            <div className="min-w-[120px]">제목</div>
             <input
               className="border border-gray-400 min-w-[300px] p-[4px] sm:w-full"
               type="text"
@@ -342,7 +343,7 @@ function RdUserPage() {
             />
           </div>
           <div className="flex items-center gap-[10px] sm:flex-col sm:items-start sm:mt-[20px]">
-            <div className="min-w-[100px]">리더</div>
+            <div className="min-w-[120px]">리더</div>
             <Select
               className="relative z-[70] w-[300px] sm:w-full"
               onChange={setSearchedLeader}
@@ -354,7 +355,7 @@ function RdUserPage() {
             />
           </div>
           <div className="flex items-center gap-[10px] sm:flex-col sm:items-start sm:mt-[20px]">
-            <div className="min-w-[100px]">승무원</div>
+            <div className="min-w-[120px]">승무원</div>
             <Select
               className="relative z-[60] w-[300px] sm:w-full"
               isMulti
@@ -373,7 +374,7 @@ function RdUserPage() {
             />
           </div>
           <div className="flex items-center gap-[10px] sm:flex-col sm:items-start sm:mt-[20px]">
-            <div className="min-w-[100px] text-red-500 font-bold">제외하기</div>
+            <div className="min-w-[120px] text-red-500 font-bold">제외하기</div>
             <Select
               className="relative z-[50] w-[300px] sm:w-full"
               isMulti
@@ -386,7 +387,12 @@ function RdUserPage() {
           </div>
         </div>
         <div className="flex items-center gap-[10px] sm:flex-col sm:items-start sm:mt-[20px]">
-          <div className="min-w-[100px]">카드 순서 설정</div>
+          <Tooltip content="덱 데이터에 카드 배치 순서의 포함 여부를 필터합니다.">
+            <div className="min-w-[120px] flex items-center gap-[2px]">
+              프리셋 프리뷰
+              <i className="fa-solid fa-circle-question text-[14px] cursor-pointer" />
+            </div>
+          </Tooltip>
           <Select
             className="sm:w-full"
             options={usePreviewOptions}
