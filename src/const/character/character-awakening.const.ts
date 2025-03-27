@@ -513,7 +513,7 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
 
   '반응이 심화되다': {
     name: '반응이 심화되다',
-    desc: `[끈적 끈적한 폭탄]을 가진 적이 다른 폭발물에 의해 피해를 입으면 폭발물이 받는 피해가 25% 증가합니다.
+    desc: `[비스코스 폭탄]을 가진 적이 다른 폭발물에 의해 피해를 입으면 폭발물이 받는 피해가 25% 증가합니다.
     강화된 반응이 발동되면 폭발물 소지자의 공격력이 1% 증가하며 최대 한도는 50%입니다.`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/6/68/mm2tk4qll6w78dn34byepn9h4zu7sy4.png',
@@ -532,7 +532,7 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
   },
   '잡지 수정': {
     name: '잡지 수정',
-    desc: '[기계 늑대 무리] 탄약 수 +1',
+    desc: '[울프팩] 탄약 수 +1',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/d/da/99i5tz2k4csxlp3qplfa6zzqmo5absf.png',
   },
@@ -1014,8 +1014,8 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
       'https://patchwiki.biligame.com/images/resonance/2/28/5scekfm7740r4w3eiv2jjfkixrbkb19.png',
   },
 
-  검무: {
-    name: '검무',
+  '검무 - 린': {
+    name: '검무 - 린',
     desc: `비용이 2 이하인 [레드카드]를 사용할 때마다 자신의 공격력이 2% 증가합니다.(최대 30%)`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/7/7e/84gjc549tox1stz7zqgep2tfnkfx64h.png',
@@ -1090,5 +1090,151 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
     desc: `[리더 스킬] 사용 시 자신의 체력을 5% 회복합니다.`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/4/49/5sosyxe7mjv5ro5xtf080bq8ejrgqpj.png',
+  },
+
+  '검무 - 네즈미': {
+    name: '검무 - 네즈미',
+    desc: `비용이 2 이하인 레드카드를 사용할 때마다 자신의 공격력이 2% 증가합니다.(최대 30%)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/0e/84gjc549tox1stz7zqgep2tfnkfx64h.png',
+  },
+  '바람의 형태': {
+    name: '바람의 형태',
+    desc: `[역풍] 사용 후 이번 전투 동안 [비검-날쥐 회귀]의 공격 단수가 3회 증가합니다. (12회 한정)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/4c/86te8apoc4f54qpovoe5rhq3l96rxrh.png',
+  },
+  '바람의 그림자': {
+    name: '바람의 그림자',
+    desc: `[역풍] 사용 후 자신이 3초간 [은신]합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/66/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  앙코르: {
+    name: '앙코르',
+    desc: `[레드카드] 사용 후 10% 확률로 레드카드를 우선으로 카드를 1장 회수합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/8b/poiuhrgke31jp2xzbuo9oh5fiyraeg3.png',
+  },
+
+  돌격: {
+    name: '돌격',
+    desc: `[전술 수류탄] 또는 [클러스터 폭탄] 사용 후 다음 내는 레드카드의 비용이 1 감소합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/d3/f9uvhla9bnhl5vgbhr667eko03ir9o9.png',
+  },
+  '전략적 위협': {
+    name: '전략적 위협',
+    desc: `손에 있는 [폭발물] 키워드를 가진 카드 1장당 적이 입히는 최종 피해가 3% 감소합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/bd/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  연쇄폭파: {
+    name: '연쇄폭파',
+    desc: `[클러스터 폭탄] 사용 후 다음 내는 [폭발물] 키워드를 가진 카드를 한 번 더 냅니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/d1/pdrot4gezj780pbc7xv8pmehosuabd0.png',
+  },
+
+  '화력 분무': {
+    name: '화력 분무',
+    desc: `[안령도]의 한쪽 끝에 세실이 특별 제작한 [화력 분무]를 뿌려 명중할 때마다 5% 확률로 [화상]을 발동합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/77/qg0t7l16bf6ziryxow5973beb6yrodq.png',
+  },
+  비약: {
+    name: '비약',
+    desc: `[블록] 상태 해제 후 자신에게 [광폭]을 부여합니다`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/c0/cfaz8qjbrwk53hvq2gh9e6u8nz4l3g3.png',
+  },
+  이중혼란: {
+    name: '이중혼란',
+    desc: `[화상]을 부여할 때마다 자신의 공격력이 1% 증가합니다.(최대 30%)
+    [혼란]을 부여할 때마다 자신의 방어력이 1% 증가합니다.(최대 30%)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/74/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  '썬더 고스트': {
+    name: '썬더 고스트',
+    desc: `자신의 모든 [레드카드]가 [인뢰]를 발동합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/d0/s89qqe869r0br63mkbr7odaptm6q8vg.png',
+  },
+
+  확성기: {
+    name: '확성기',
+    desc: `[켈빈 조크]의 지속 시간이 3초 증가합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/b6/esit35l9qw3ezgivngiyg9x888d7xse.png',
+  },
+  '급속 동결': {
+    name: '급속 동결',
+    desc: `자신이 부여하는 [냉동]의 지속 시간이 3초 증가합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/75/28q3mds0tf8tm8qwfk758z3reqd7jlm.png',
+  },
+  '얼음의 칼날': {
+    name: '얼음의 칼날',
+    desc: `[켈빈 조크] 지속시간 동안, 아군이 입히는 [참열]/[열상] 피해가 50% 증가합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2c/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  기상학: {
+    name: '기상학',
+    desc: `[켈빈 조크] 사용 시 50% 확률로 [눈]/[대설]/[폭설] 날씨를 발동합니다.(1회 한정)
+    동시에 [눈]/[대설]/[폭설] 날씨에서 모든 아군이 입히는 얼음 피해가 10% 증가합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/7a/n3xxrsn7qjyhayjmdlwdvamdebfnf5g.png',
+  },
+
+  검무: {
+    name: '검무',
+    desc: `비용이 2 이하인 레드카드를 사용할 때마다 자신의 공격력이 2% 증가합니다.(최대 30%)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/1/1e/84gjc549tox1stz7zqgep2tfnkfx64h.png',
+  },
+  서식: {
+    name: '서식',
+    desc: `자신이 [은신] 상태라면 레드카드를 1장 사용할 때마다 자신의 체력을 10% 회복합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/fb/eh5iwm9f8x30s69iu2oph2ion7hnvxi.png',
+  },
+  역날: {
+    name: '역날',
+    desc: `자신이 [은신] 상태일 경우, 즉시 [전신주 커터]를 1회 시전합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/8b/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  '플로잉 하트': {
+    name: '플로잉 하트',
+    desc: `[버리기] 명령어 사용 시 레드카드를 우선으로 카드를 1장 뽑습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/7b/0ayna4sm3t779v783qny5c0f03uh1li.png',
+  },
+
+  맹렬: {
+    name: '맹렬',
+    desc: `스킬을 명중할 때마다 자신의 공격력이 0.5% 증가합니다.(최대 30%, 피해형 특수 효과로 입히는 명중 제외)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/8d/nsjnnpq4g47cdi9etwtrm2ko2aep088.png',
+  },
+  산신령: {
+    name: '산신령',
+    desc: `[오의-풍둔 족제비술] 사용 후 버려진 덱에서 모든 [족제비술]을 회수하여 손으로 가져옵니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e5/lhtr7ddpbyfg7ohjysv84oh1stouuay.png',
+  },
+  '바람의 칼날': {
+    name: '바람의 칼날',
+    desc: `[열상] 상태의 적이 받는 최종 피해가 10% 증가합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/eb/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  맹화: {
+    name: '맹화',
+    desc: `[일반 공격]이 30% 확률로 [점화]를 발동합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/b1/k076yszlawp1f2fi6wzx9lh5slwj7cp.png',
   },
 }

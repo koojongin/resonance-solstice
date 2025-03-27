@@ -892,26 +892,26 @@ export const CHARACTER_SKILLS: {
       'https://patchwiki.biligame.com/images/resonance/9/99/4rce1v6a3m0nvgk9a848rvrkwqs4gl3.png',
   },
 
-  '끈적 끈적한 폭탄': {
+  '비스코스 폭탄': {
     amount: 3,
     cost: 2,
-    name: '끈적 끈적한 폭탄',
+    name: '비스코스 폭탄',
     desc: '5초 동안 무작위 적에게 부착할 끈적끈적한 폭탄 3개를 던집니다 .\n지속 시간 동안 적 대상에게 초당 1의 피해를 입히고 20% 확률로 끈적끈적한 폭탄을 [중단]하여 [폭발물] 로 만듭니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/4/42/ifqyme79jy9uz8hu00vtf33k1irow3k.png',
   },
-  '환각성 가스': {
+  '환각 가스': {
     amount: 2,
     cost: 2,
-    name: '환각성 가스',
+    name: '환각 가스',
     desc: '환각 가스를 던져 적의 에너지를 3% 감소시키고 환각\n가스를 폭발물 로 만듭니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/9/95/jc2pu9rsyipni79unzunl8exlccccrn.png',
   },
-  '기계 늑대 무리': {
+  울프팩: {
     amount: 1,
     cost: 4,
-    name: '기계 늑대 무리',
+    name: '울프팩',
     desc: `기계 늑대 3마리를 소환하여 싸우게 하고 [일반공격] 지원을 수행합니다. 공격은 재활용되기 전에 10초 동안 지속됩니다.
     지속 시간:
     [레드카드]를 사용하거나 [레드카드]를 버리는 구역에 버릴 때마다 기계 늑대는 늑대 송곳니 미사일을 발사하여 적에게 1의 피해를 입히고 [인뢰]를 발동합니다. [블루카드]를 사용하거나 [블루카드]를 버리는 구역에 버릴 때마다 기계 늑대는 치유 미사일을 발사하여 체력이 가장 낮은 아군을 치료하고 체력의 6%를 회복합니다.
@@ -1769,5 +1769,207 @@ export const CHARACTER_SKILLS: {
     점화된 아군의 공격력이 3% 증가합니다.(중첩 가능)`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/a/ab/0cs7vrf95zt9r7xojfoeuxyu1p7ndkh.png',
+  },
+
+  바람베기: {
+    amount: 2,
+    cost: 3,
+    name: '바람베기',
+    desc: `[건어도]를 발도하여 3연타를 시전하여 적에게 3단 피해를 입힙니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e8/7m1u5o6jfqff2qssvd9xqztrffzyjf6.png',
+  },
+  회천: {
+    amount: 2,
+    cost: 2,
+    name: '회천',
+    desc: `자신에게 6초간 [블록] 상태를 부여합니다.
+    덱의 맨 위에 있는 카드를 확인한 후, [레드카드]일 경우 손으로 가져오고 아닐 경우 카드를 버립니다.
+    [회천] 사용 후 [역풍]을 1장 생성하여 손으로 가져옵니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/f1/p7wkzwuck2q2khqcuyd62la9sct8fr2.png',
+  },
+  역풍: {
+    amount: 0,
+    cost: 0,
+    name: '역풍',
+    desc: `[건어도]를 발도하여 거합도를 시전하여 적에게 1단 피해를 입히고 [붕괴]를 부여합니다.
+    손에서 내면 [소각]됩니다`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/4d/oih5o6sxk3ftnzofgwr4d29jacamsz0.png',
+    isGeneratedCard: true,
+  },
+  '비검-날쥐 회귀': {
+    amount: 1,
+    cost: 4,
+    name: '비검-날쥐 회귀',
+    desc: `[건어도]를 발도하여 비천원무를 시전하여 적에게 #r단 피해를 입히고 [열상]을 부여합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/28/68izfdw5rrk9oj0ln6kuodpy3vwgkj0.png',
+  },
+
+  '전술 수류탄': {
+    amount: 3,
+    cost: 2,
+    name: '전술 수류탄',
+    desc: `전술 수류탄을 1개 던져 범위 내의 적에게 1단 피해를 입히며 [중단]을 부여합니다.
+    동시에 [냉동]을 발동합니다.
+    [수류탄]은 [폭발물]입니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/43/84huri99394suu7nrsfoneryy4hm7cb.png',
+  },
+  '폭파 지원': {
+    amount: 1,
+    cost: 3,
+    name: '폭파 지원',
+    desc: `[폭발물] 키워드를 가진 카드를 우선으로 카드를 2장 뽑습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/7c/7p2x095c69ecfplyp31sjs1hkrkcwk3.png',
+  },
+  '클러스터 폭탄': {
+    amount: 1,
+    cost: 4,
+    name: '클러스터 폭탄',
+    desc: `손에 있는 카드 중 비용이 가장 높은 카드의 비용만큼 [클러스터 폭탄]을 목표 구역에 던지고 범위 내 적에게 1단 피해를 입히며 [기절]을 부여합니다.
+    [클러스터 폭탄]은 [폭발물]입니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/66/iapmr0mpsuqexfp4csr5ze9uzr2q7lh.png',
+  },
+
+  '구름 베기': {
+    amount: 2,
+    cost: 3,
+    name: '구름 베기',
+    desc: `[안령도]를 휘둘러 적에게 2단 피해를 입히고 [참열]을 부여합니다.
+    자신이 [블록] 상태라면 추가로 [황야 슬래시]를 사용합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/4d/drjvd3qczbjmu8p43kmvih5jqy2z3ua.png',
+  },
+  '바람 막기': {
+    amount: 2,
+    cost: 2,
+    name: '바람 막기',
+    desc: `[안령도]로 막기를 시전하여 6초간 [블록] 상태에 진입합니다.
+    사용 후 덱에서 [구름 베기]를 1장 뽑아 손으로 가져옵니다.
+    [블록]상태 해제 후 [까마귀 깃]을 1장 생성하여 손으로 가져옵니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/8b/r89xcgo700dd1v4zats4riboqzpszoz.png',
+  },
+  '까마귀 깃': {
+    amount: 0,
+    cost: 0,
+    name: '까마귀 깃',
+    desc: `암살 무기인 [까마귀 깃]을 시전하여 적에게 3단 피해를 입히고 [튕김]과 [열상]을 발동합니다.
+    이 카드는 버려지면 사용된 것으로 간주합니다.
+    사용 후 [소각]됩니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e1/32r3x7g1zy9i3snihbudt5qcy0nbpv2.png',
+    isGeneratedCard: true,
+  },
+  '무상-난새 회귀': {
+    amount: 1,
+    cost: 4,
+    name: '무상-난새 회귀',
+    desc: `[안령도]로 회전 베기를 시전하여 범위 내에 적에게 8단 피해를 입히고 5% 확률로 [참열]을 발동합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/9c/aia662md64c818d8xikad2nj1vdw720.png',
+  },
+
+  눈사태: {
+    amount: 2,
+    cost: 3,
+    name: '눈사태',
+    desc: `자신의 앞에 눈덩이를 만들어 피해를 막습니다. 동시에 자신은 5초간 지속되는 [슈퍼아머]를 획득합니다.
+    지속시간 동안, 눈덩이는 매초 자신의 체력의 10%만큼 내구도를 획득합니다.
+    [슈퍼아머] 종료 후, 눈덩이를 적에게 던져 모든 적에게 1단 피해를 입히고 [냉동]을 발동합니다.
+    눈덩이의 크기와 피해는 명중 시 눈덩이의 내구도에 의해 결정됩니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/d8/2c85jq9oxuond30aqcr0jbiaw2fmlho.png',
+  },
+  디스코팡팡: {
+    amount: 2,
+    cost: 3,
+    name: '디스코팡팡',
+    desc: `공중에서 회전하며 범위 내의 적에게 5단 피해를 입히고, [넉백]시킵니다.
+    동시에 [냉동]과 [열상]을 발동합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/94/3dl2d29g7ljht9iijpx7346k3anif78.png',
+  },
+  '켈빈 조크': {
+    amount: 1,
+    cost: 4,
+    name: '켈빈 조크',
+    desc: `액체질소 살포 장치를 펼쳐 [켈빈 조크] 환경을 조성합니다.
+    필드의 모든 [냉동] 상태의 대상에게 [붕괴]를 부여합니다. (12초간 지속)
+    지속시간 동안 매초 무작위 적에게 [냉동]을 부여합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/cc/qs1ylnipt4lhx3k1twhbgvyyxsqmekk.png',
+  },
+
+  '전신주 커터': {
+    amount: 2,
+    cost: 3,
+    name: '전신주 커터',
+    desc: `[전신주 커터]를 발도하여 적에게 4단 피해를 입힙니다.
+    이 카드의 [협세]:
+    이 카드의 효과는 자신의 [은신] 상태에 따라 변화합니다.
+    자신이 [은신] 상태일 경우 손에 있는 [전신주 커터]는 [레일 커터]로 전환되고, [은신] 상태가 아닐 경우 손에 있는 [레일 커터]는 [전신주 커터]로 전환됩니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/00/0ylil7dc6u3lt4ytj5idkpywkdd5qgr.png',
+  },
+  '레일 커터': {
+    amount: 0,
+    cost: 3,
+    name: '레일 커터',
+    desc: `[레일 커터]로 적에게 1단 피해를 입히며 [참열]을 부여합니다.
+    이 카드의 [협세]:
+    이 카드의 효과는 자신의 [은신] 상태에 따라 변화합니다.
+    자신이 [은신] 상태일 경우 손에 있는 [전신주 커터]는 [레일 커터]로 전환되고, [은신] 상태가 아닐 경우 손에 있는 [레일 커터]는 [전신주 커터]로 전환됩니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/25/dntk40ipczqljfq32wbhvytva2k76k8.png',
+    isGeneratedCard: true,
+  },
+  '버드 헌팅': {
+    amount: 2,
+    cost: 2,
+    name: '버드 헌팅',
+    desc: `어둠속에 숨어 5초간 [은신]합니다.
+    이미 [은신] 상태일 경우 버려진 덱에서 최대 1장의 레드카드를 회수하여 손으로 가져옵니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/f7/p6y3cqn16io1fkz8bk8drhrh3tuuqkv.png',
+  },
+  '비검-철강 절단': {
+    amount: 1,
+    cost: 6,
+    name: '비검-철강 절단',
+    desc: `[전신주 커터]를 발도하여 전방 범위 내에 적에게 8단 피해를 입히고 [열상]을 부여합니다.
+    [레일 커터]를 발도하여 전방 범위 내에 적에게 1단 피해를 입히고 [참열]을 부여합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/44/efe0xtpuarvnj8kvb03fz833iyb50mi.png',
+  },
+
+  족제비술: {
+    amount: 3,
+    cost: 2,
+    name: '족제비술',
+    desc: `회오리 부채를 사용하여 적에게 3단 피해를 입히고 [열상]을 부여합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/03/fda5g2kcr71lzgoxeryxui454ngrhxz.png',
+  },
+  안개: {
+    amount: 1,
+    cost: 3,
+    name: '안개',
+    desc: `안갯속으로 몸을 숨겨 10초간 [은신]합니다. 지속시간 동안 [일반 공격]의 부채 수량이 1개 증가합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/b7/p1lagdz3kry4c4ko51gmfjuz5cqaz0b.png',
+  },
+  '오의-풍둔 족제비술': {
+    amount: 1,
+    cost: 4,
+    name: '오의-풍둔 족제비술',
+    desc: `바람속으로 몸을 숨겨 목표 구역에 [오의-풍둔 족제비술]을 시전하여 범위 내의 적에게 6단 피해를 입히고 [열상]을 부여합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/30/sz67op01rhecr6cu24eswm2dz0zentf.png',
   },
 }

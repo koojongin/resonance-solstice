@@ -7,7 +7,7 @@ export interface CharacterDetail {
   AWAKENING: { [key: string]: string }
 }
 
-const RARE_RESONANCE_UPGRADE_MATERIALS = {
+const RESONANCE_UPGRADE_MATERIALS_4 = {
   1: [
     {
       name: '디지털화 사고',
@@ -65,8 +65,8 @@ const RARE_RESONANCE_UPGRADE_MATERIALS = {
     },
   ],
 }
-const DEFAULT_RESONANCE_UPGRADE_MATERIALS = {
-  ...RARE_RESONANCE_UPGRADE_MATERIALS,
+const RESONANCE_UPGRADE_MATERIALS_5 = {
+  ...RESONANCE_UPGRADE_MATERIALS_4,
   5: [
     {
       name: '디지털화 사고',
@@ -92,7 +92,7 @@ export const CHARACTER_DETAIL: {
 } = {
   RAZIEL_THE_REMINISCE: {},
   LYCAGIA: {
-    SKILLS: ['끈적 끈적한 폭탄', '환각성 가스', '기계 늑대 무리'],
+    SKILLS: ['비스코스 폭탄', '환각 가스', '울프팩'],
     RESONANCES: {
       1: '전술 커버',
       2: '신경교세포 확산',
@@ -100,7 +100,7 @@ export const CHARACTER_DETAIL: {
       4: '전술적 그림자',
       5: '삼각형 형성',
     },
-    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     AWAKENING: {
       1: '반응이 심화되다',
       2: '폭발 충전',
@@ -121,7 +121,7 @@ export const CHARACTER_DETAIL: {
       4: '스텔스 폭탄',
       5: '폭탄아, 안녕!',
     },
-    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     AWAKENING: {
       1: '폭발객',
       2: '다발장전',
@@ -139,7 +139,7 @@ export const CHARACTER_DETAIL: {
       4: '징수',
       5: '치열',
     },
-    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     AWAKENING: {
       1: '영감',
       2: '역류',
@@ -157,7 +157,7 @@ export const CHARACTER_DETAIL: {
       4: '감응 - 소마',
       5: '혈전',
     },
-    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     AWAKENING: {
       1: '철혈',
       2: '하트킹',
@@ -171,13 +171,13 @@ export const CHARACTER_DETAIL: {
   NICOLA: {
     SKILLS: ['초음속', '공습', '화력전개'],
     RESONANCES: {
-      1: '질풍',
+      1: '질풍 - 니콜라',
       2: '용량 확장 - 니콜라',
       3: '생기',
       4: '신속 - 니콜라',
       5: '축전',
     },
-    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     AWAKENING: {
       1: '초전도 - 니콜라',
       2: '쌍권총',
@@ -188,7 +188,7 @@ export const CHARACTER_DETAIL: {
   },
   DUSTIN: {
     SKILLS: ['경칩', '곡우', '흐르는 불'],
-    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     RESONANCES: {
       1: '뇌명',
       2: '청명',
@@ -213,7 +213,7 @@ export const CHARACTER_DETAIL: {
       '생과 사의 마법함',
       '허와 실의 관',
     ],
-    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     RESONANCES: {
       1: '소환곡',
       2: '감응 - 안피아',
@@ -231,12 +231,12 @@ export const CHARACTER_DETAIL: {
   },
   HAYABUSA: {
     SKILLS: ['변화무상', '개안', '무상-전륜'],
-    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     RESONANCES: {
       1: '무영 - 하야부사',
       2: '무형',
       3: '생기',
-      4: '호시탐탐',
+      4: '호시탐탐 - 하야부사',
       5: '심안',
     },
     AWAKENING: {
@@ -252,7 +252,7 @@ export const CHARACTER_DETAIL: {
   IKUMA: {},
   LISSANDRA: {
     SKILLS: ['모색', '무궁무진', '끝없는 욕망', '다크 아트', '탐사', '유성'],
-    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     RESONANCES: {
       1: '수혈',
       2: '기백',
@@ -282,7 +282,7 @@ export const CHARACTER_DETAIL: {
       '콜로서스 군진II',
       '신성 돌격',
     ],
-    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     RESONANCES: {
       1: '고수',
       2: '저력',
@@ -309,7 +309,7 @@ export const CHARACTER_DETAIL: {
       '별의 꿈',
       '드림 이터',
     ],
-    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     RESONANCES: {
       1: '성맥',
       2: '몽유',
@@ -334,7 +334,7 @@ export const CHARACTER_DETAIL: {
       4: '완강',
       5: '활성',
     },
-    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     AWAKENING: {
       1: '여유만만',
       2: '연월',
@@ -352,7 +352,7 @@ export const CHARACTER_DETAIL: {
       4: '망녕',
       5: '일념',
     },
-    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     AWAKENING: {
       1: '기적',
       2: '무심',
@@ -370,7 +370,7 @@ export const CHARACTER_DETAIL: {
       4: '감응 - 나유타',
       5: `레비스의 '불가사의'`,
     },
-    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     AWAKENING: {
       1: '강적',
       2: '아라야',
@@ -395,7 +395,7 @@ export const CHARACTER_DETAIL: {
       4: "레비스의 '생일 선물'",
       5: '잔열',
     },
-    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     AWAKENING: {
       1: '광전',
       2: '열혈',
@@ -413,7 +413,7 @@ export const CHARACTER_DETAIL: {
       4: '개혁',
       5: '톱스핀',
     },
-    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     AWAKENING: {
       1: '얼음 칼날',
       2: '서리꽃',
@@ -440,7 +440,7 @@ export const CHARACTER_DETAIL: {
       4: '비밀의 샘',
       5: '혈맹',
     },
-    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     AWAKENING: {
       1: '마녀의 조건',
       2: '다크 아트',
@@ -458,7 +458,7 @@ export const CHARACTER_DETAIL: {
       4: '레드주스',
       5: '정열의 럼주',
     },
-    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     AWAKENING: {
       1: '사랑',
       2: '동반',
@@ -476,7 +476,7 @@ export const CHARACTER_DETAIL: {
       4: '연속 조준',
       5: '전술 타격',
     },
-    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     AWAKENING: {
       1: '저격 강화',
       2: '페이탈 껌',
@@ -494,7 +494,7 @@ export const CHARACTER_DETAIL: {
       4: '성원',
       5: '수선화',
     },
-    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     AWAKENING: {
       1: '계략',
       2: '별의 꽃',
@@ -512,7 +512,7 @@ export const CHARACTER_DETAIL: {
       4: '감전',
       5: '전력 회수',
     },
-    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     AWAKENING: {
       1: '추격',
       2: '격전',
@@ -530,7 +530,7 @@ export const CHARACTER_DETAIL: {
       4: '성막',
       5: '서리별',
     },
-    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     AWAKENING: {
       1: '자기 냉각',
       2: '별자리',
@@ -539,7 +539,24 @@ export const CHARACTER_DETAIL: {
       5: '얼음 조각',
     },
   },
-  HEINRICH: {},
+  HEINRICH: {
+    SKILLS: ['전술 수류탄', '폭파 지원', '클러스터 폭탄'],
+    RESONANCES: {
+      1: '돌진 전술',
+      2: '안정',
+      3: '생기',
+      4: '생존법칙',
+      5: '폭파 전문가',
+    },
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
+    AWAKENING: {
+      1: '비책',
+      2: '돌격',
+      3: '투지',
+      4: '전략적 위협',
+      5: '연쇄폭파',
+    },
+  },
   LIVIA: {
     SKILLS: [
       '충격검',
@@ -562,7 +579,7 @@ export const CHARACTER_DETAIL: {
       4: '숙련',
       5: '공명-퍼플',
     },
-    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     AWAKENING: {
       1: '운명 - 리비아',
       2: '사경',
@@ -580,7 +597,7 @@ export const CHARACTER_DETAIL: {
       4: '고성능 배터리',
       5: '고감도 공명',
     },
-    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     AWAKENING: {
       1: '화살비',
       2: '고탄력 화살',
@@ -598,16 +615,33 @@ export const CHARACTER_DETAIL: {
       4: '번개 소환',
       5: '그림자 습격',
     },
-    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     AWAKENING: {
-      1: '검무',
+      1: '검무 - 린',
       2: '그림자 환영',
       3: '투지',
       4: '신기루',
       5: '그림자 캐스팅',
     },
   },
-  NABI: {},
+  NABI: {
+    SKILLS: ['구름 베기', '바람 막기', '까마귀 깃', '무상-난새 회귀'],
+    RESONANCES: {
+      1: '감응',
+      2: '혼란 분무',
+      3: '생기',
+      4: '활성 분무',
+      5: '난무',
+    },
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
+    AWAKENING: {
+      1: '화력 분무',
+      2: '비약',
+      3: '투지',
+      4: '이중혼란',
+      5: '썬더 고스트',
+    },
+  },
   GANYA: {
     SKILLS: ['도끼 투척', '도끼 회수', '부메랑 도끼'],
     RESONANCES: {
@@ -617,7 +651,7 @@ export const CHARACTER_DETAIL: {
       4: '엔지니어',
       5: '포화 공격',
     },
-    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     AWAKENING: {
       1: '철혈',
       2: '일고작기',
@@ -635,7 +669,7 @@ export const CHARACTER_DETAIL: {
       4: '날벼락',
       5: '부상',
     },
-    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     AWAKENING: {
       1: '분출',
       2: '초전도',
@@ -644,7 +678,24 @@ export const CHARACTER_DETAIL: {
       5: '기상학 - 예주',
     },
   },
-  AKIRA: {},
+  AKIRA: {
+    SKILLS: ['눈사태', '디스코팡팡', '켈빈 조크'],
+    RESONANCES: {
+      1: '풍화',
+      2: '눈꽃',
+      3: '생기',
+      4: '결벽증',
+      5: '설옥',
+    },
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
+    AWAKENING: {
+      1: '확성기',
+      2: '급속 동결',
+      3: '투지',
+      4: '얼음의 칼날',
+      5: '기상학',
+    },
+  },
   ACHIWA: {
     SKILLS: ['배트 타격', '어퍼 스윙', '무명', '원소핵-불', '화염 신성'],
     RESONANCES: {
@@ -654,7 +705,7 @@ export const CHARACTER_DETAIL: {
       4: '요지부동',
       5: '요원의 불길',
     },
-    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     AWAKENING: {
       1: '횃불',
       2: '집착',
@@ -672,7 +723,7 @@ export const CHARACTER_DETAIL: {
       4: '증폭',
       5: '프로그 워프',
     },
-    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     AWAKENING: {
       1: '충분한 연소',
       2: '연소 촉진',
@@ -690,7 +741,7 @@ export const CHARACTER_DETAIL: {
       4: '구급',
       5: '클러스트',
     },
-    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     AWAKENING: {
       1: '파이어 컨트롤',
       2: '비상 장치',
@@ -708,7 +759,7 @@ export const CHARACTER_DETAIL: {
       4: '묘책',
       5: `레비스의 '초개조' - 페니아`,
     },
-    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     AWAKENING: {
       1: '자신감',
       2: '여명',
@@ -726,7 +777,7 @@ export const CHARACTER_DETAIL: {
       4: '인내력',
       5: "레비스의 '초개조' - 리나 본",
     },
-    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     AWAKENING: {
       1: '에너지 흡수',
       2: '속박',
@@ -744,7 +795,7 @@ export const CHARACTER_DETAIL: {
       4: '인연 - 발렌타인',
       5: '회오리 불',
     },
-    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     AWAKENING: {
       1: '불씨',
       2: '희망',
@@ -762,7 +813,7 @@ export const CHARACTER_DETAIL: {
       4: '발생',
       5: '화천',
     },
-    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     AWAKENING: {
       1: '반항',
       2: '화양연화',
@@ -780,7 +831,7 @@ export const CHARACTER_DETAIL: {
       4: '회전',
       5: '풍설',
     },
-    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     AWAKENING: {
       1: '종횡',
       2: '운명 - 아오바',
@@ -798,7 +849,7 @@ export const CHARACTER_DETAIL: {
       4: '번 애프터 리딩',
       5: '우울한 탑노트',
     },
-    RESONANCE_UPGRADE_MATERIALS: DEFAULT_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     AWAKENING: {
       1: '조향사',
       2: '혼란의 베이스노트',
@@ -807,9 +858,42 @@ export const CHARACTER_DETAIL: {
       5: '들새의 만남',
     },
   },
-  MHAR: {},
+  MHAR: {
+    SKILLS: ['전신주 커터', '레일 커터', '버드 헌팅', '비검-철강 절단'],
+    RESONANCES: {
+      1: '무영',
+      2: '참새 귀환',
+      3: '생기',
+      4: '호시탐탐 - 마루하',
+      5: '잔심',
+    },
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
+    AWAKENING: {
+      1: '검무',
+      2: '서식',
+      3: '투지',
+      4: '역날',
+      5: '플로잉 하트',
+    },
+  },
   MSGOLD: {},
-  YAMAARASHI: {},
+  YAMAARASHI: {
+    SKILLS: ['족제비술', '안개', '오의-풍둔 족제비술'],
+    RESONANCES: {
+      1: '질풍 - 야마아라시',
+      2: '호시탐탐 - 야마아라시',
+      3: '생기',
+      4: '눈보라',
+    },
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_4,
+    AWAKENING: {
+      1: '맹렬',
+      2: '산신령',
+      3: '투지',
+      4: '바람의 칼날',
+      5: '맹화',
+    },
+  },
   EXCALIBUR_BOX: {},
   FLAN: {},
   ELIOT: {
@@ -820,7 +904,7 @@ export const CHARACTER_DETAIL: {
       3: '생기',
       4: '선택 - 엘리엇',
     },
-    RESONANCE_UPGRADE_MATERIALS: RARE_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_4,
     AWAKENING: {
       1: '비책',
       2: '운수',
@@ -837,7 +921,7 @@ export const CHARACTER_DETAIL: {
       3: '생기',
       4: '힐 더 월드',
     },
-    RESONANCE_UPGRADE_MATERIALS: RARE_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_4,
     AWAKENING: {
       1: '비트 잇',
       2: '그들은 우리를 신경 쓰지 않는다',
@@ -854,7 +938,7 @@ export const CHARACTER_DETAIL: {
       3: '생기',
       4: '세례',
     },
-    RESONANCE_UPGRADE_MATERIALS: RARE_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_4,
     AWAKENING: {
       1: '천년의 노래',
       2: '샘물-아르카나',
@@ -874,7 +958,7 @@ export const CHARACTER_DETAIL: {
       3: '생기',
       4: '폭탄 장전',
     },
-    RESONANCE_UPGRADE_MATERIALS: RARE_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_4,
     AWAKENING: {
       1: '유비무환',
       2: '추가 탄창',
@@ -891,7 +975,7 @@ export const CHARACTER_DETAIL: {
       3: '생기',
       4: '침착',
     },
-    RESONANCE_UPGRADE_MATERIALS: RARE_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_4,
     AWAKENING: {
       1: '정비',
       2: '폭탄 장전',
@@ -908,7 +992,7 @@ export const CHARACTER_DETAIL: {
       3: '생기',
       4: '단결',
     },
-    RESONANCE_UPGRADE_MATERIALS: RARE_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_4,
     AWAKENING: {
       1: '강습',
       2: '추가 탄창',
@@ -925,7 +1009,7 @@ export const CHARACTER_DETAIL: {
       3: '생기',
       4: '특효약',
     },
-    RESONANCE_UPGRADE_MATERIALS: RARE_RESONANCE_UPGRADE_MATERIALS,
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_4,
     AWAKENING: {
       1: '응원',
       2: '추가 탄창',
@@ -934,7 +1018,23 @@ export const CHARACTER_DETAIL: {
       5: '경화 장전',
     },
   },
-  JERBOA: {},
+  JERBOA: {
+    SKILLS: ['바람베기', '회천', '역풍', '비검-날쥐 회귀'],
+    RESONANCES: {
+      1: '선의선',
+      2: '후의선',
+      3: '생기',
+      4: '스파이크 스텝',
+    },
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_4,
+    AWAKENING: {
+      1: '검무 - 네즈미',
+      2: '바람의 형태',
+      3: '투지',
+      4: '바람의 그림자',
+      5: '앙코르',
+    },
+  },
   SOLUM: {},
   BOX: {},
 }

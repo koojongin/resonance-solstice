@@ -219,6 +219,7 @@ function RdUserPage() {
   }, [lastQuery])
 
   useEffect(() => {
+    console.log('얼마나 콜될까', searchParams)
     if (!searchParams) return
     if (!searchParams.get('page')) {
       const current = new URLSearchParams(Array.from(searchParams.entries()))
@@ -273,11 +274,6 @@ function RdUserPage() {
       }
     })
   }, [searchParams])
-
-  // useEffect(() => {
-  //   console.log(pathname)
-  //   console.log('호출됨', { searchedCharacters, searchedLeader, searchedBanCharacters })
-  // }, [pathname, searchedCharacters, searchedLeader, searchedBanCharacters])
 
   useEffect(() => {
     if (typeof window !== 'undefined') {

@@ -150,8 +150,8 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     clearMind: '거래소 가격 인상폭+0.5%',
   },
 
-  질풍: {
-    name: '질풍',
+  '질풍 - 니콜라': {
+    name: '질풍 - 니콜라',
     desc: '[일반공격]을 가 할 때마다 [일반공격]의 공격 속도가 3% 증가합니다. (최대 100%)',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/4/42/qj2ilbyo82w9kb80zhjcj8z9uzocg19.png',
@@ -535,29 +535,29 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
 
   '전술 커버': {
     name: '전술 커버',
-    desc: '적의 물결에 마주칠 때마다 환각성 가스를 방출합니다.',
+    desc: '적의 물결에 마주칠 때마다 환각 가스를 방출합니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/a/a0/cdfimvbj93tl2iu39j7h5q0w2lblilz.png',
     clearMind: '애완동물 평가 +5.0%',
   },
   '신경교세포 확산': {
     name: '신경교세포 확산',
-    desc: `[끈적 끈적한 폭탄] 강화:
-    [끈적 끈적한 폭탄] 3개를 던져 5초 동안 무작위 적에게 부착합니다.
-    지속 시간 동안 적 대상에게 초당 1의 피해를 입히고 50% 확률로 무작위로 [중단]/[기절]/[끈적 끈적한 폭탄]을 [폭발물]로 [점화]시킵니다 .`,
+    desc: `[비스코스 폭탄] 강화:
+    [비스코스 폭탄] 3개를 던져 5초 동안 무작위 적에게 부착합니다.
+    지속 시간 동안 적 대상에게 초당 1의 피해를 입히고 50% 확률로 무작위로 [중단]/[기절]/[비스코스 폭탄]을 [폭발물]로 [점화]시킵니다 .`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/c/c9/kokf5ssy9egqsk0pk7u8pp0v8jpnd9y.png',
     clearMind: '청명 데이터 센터 거래소에서 구매 가능한 특산품 수량 +20.0%',
   },
   '전술적 그림자': {
     name: '전술적 그림자',
-    desc: `[환각성 가스]를 폐기 더미에 버리면 사용된 것으로 간주됩니다. [환각성 가스]를 사용한 후, 진형의 뒷열은 5초간 [은신]상태가 됩니다.`,
+    desc: `[환각 가스]를 폐기 더미에 버리면 사용된 것으로 간주됩니다. [환각 가스]를 사용한 후, 진형의 뒷열은 5초간 [은신]상태가 됩니다.`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/2/29/8ctd8y9mqxrdkvzp6cb2gu8hvgfpblr.png',
   },
   '삼각형 형성': {
     name: '삼각형 형성',
-    desc: `[환각성 가스]가 지속되는 동안:
+    desc: `[환각 가스]가 지속되는 동안:
     우리 전선의 최종 피해가 25% 감소합니다.
     우리 기계 유닛이 [광폭]상태가됩니다. 우리 후방의 최종 피해가 25% 증가합니다.`,
     thumbnail:
@@ -890,8 +890,8 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/8/8b/qyarwge42gga0xczet2c7k9tr7owmg2.png',
   },
-  호시탐탐: {
-    name: '호시탐탐',
+  '호시탐탐 - 하야부사': {
+    name: '호시탐탐 - 하야부사',
     desc: `자신이 [은신]할 때마다 비용을 1 얻습니다.`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/8/88/2y38tllmxvublr3wqknhb41693400rb.png',
@@ -1129,5 +1129,148 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     desc: `자신이 연소 상태일 경우 입히는 최종 피해가 20% 증가합니다.`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/c/c6/sueke5tpgckupny73ngcpp92v54g2i2.png',
+  },
+
+  선의선: {
+    name: '선의선',
+    desc: `1웨이브의 적을 만날 때마다 [역풍]을 1장 생성하여 손으로 가져옵니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/9c/e40zcy436z4bqykquev5wrlgqq35wrf.png',
+  },
+  후의선: {
+    name: '후의선',
+    desc: `[회천] 추가 효과:\n뒤집은 카드가 레드카드가 아니면 1장 더 뒤집습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/ca/0w04pka1lq1pnvqmun9k95f7yisfozw.png',
+  },
+  '스파이크 스텝': {
+    name: '스파이크 스텝',
+    desc: '[비검-날쥐 회귀] 추가 효과:\n추가로 1단 스텝을 시전하여 적에게 1단 피해를 입히고 자신의 체력을 20% 회복합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/fa/7ynbpugh37quh4vm8eaj5x4qs37iyn4.png',
+  },
+
+  '돌진 전술': {
+    name: '돌진 전술',
+    desc: '1웨이브의 적을 만날 때마다 [전술 수류탄]을 즉시 1회 시전합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/92/cybvx9uogtfirz12qlkd22c8tzelcjw.png',
+  },
+  안정: {
+    name: '안정',
+    desc: `[폭파 지원] 사용 후 모든 아군이 [실드]를 획득합니다.(10초간 지속)
+    [실드]의 내구도는 방어력의 1000%입니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/47/048gzikblascwxomtv48fowsd32tgys.png',
+  },
+  생존법칙: {
+    name: '생존법칙',
+    desc: `[전술 수류탄]이 버려진 덱으로 버려질 때 사용한 것으로 간주합니다.
+    [전술 수류탄] 사용 후 자신의 체력을 10% 회복합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/cc/silnf3w3n8wbrgtqsb6toetnwli7d8b.png',
+  },
+  '폭파 전문가': {
+    name: '폭파 전문가',
+    desc: `[클러스트 폭탄]의 폭발 범위가 증가하고, 동시에 [격파]와 [붕괴]를 발동합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/9f/lpkueziwhimejb8w1b3dfz1grfzzzqh.png',
+  },
+
+  감응: {
+    name: '감응',
+    desc: `전투 시작 후 손으로 가져오는 처음 5장 카드 중에 반드시 [바람 막기]가 포함됩니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/d7/2dktmnn7w48dkp7s1u5viq9vk2i3da7.png',
+  },
+  '혼란 분무': {
+    name: '혼란 분무',
+    desc: `[안령도]의 한쪽 끝에 세실이 특별 제작한 [혼란 분무]를 뿌려 명중할 때마다 5% 확률로 [혼란]을 발동합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/42/7ankl1t4us4a2e1cbmr9u94fd1un059.png',
+  },
+  '활성 분무': {
+    name: '활성 분무',
+    desc: `자신의 [블록] 상태 해제 휴 자신의 체력을 10% 회복합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/49/g3qzhtzq1g6645afj9y6fir43ktc006.png',
+  },
+  난무: {
+    name: '난무',
+    desc: `자신이 [블록] 혹은 [은신] 상태일 경우 [무상-난새 회귀]가 추가로 4단 피해를 입힙니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/38/ngi69pw7aptdhp4tux7muw6287x7sgk.png',
+  },
+
+  풍화: {
+    name: '풍화',
+    desc: `[디스코팡팡] 사용 후 앞열 아군의 방어력이 2% 증가합니다.(중첩 가능)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/65/15bxuz5wxv8kdpm9hj9gwx8wmc1tl5h.png',
+  },
+  눈꽃: {
+    name: '눈꽃',
+    desc: `[눈사태] 사용 후 다음 내는 [블루카드]가 자신의 체력을 10% 회복시켜줍니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/1/14/c8t2f4c1d604689bhu1gdnudlfpo149.png',
+  },
+  결벽증: {
+    name: '결벽증',
+    desc: `10초마다 1회 발동, 피해를 받으면 방어의 보호막을 전개하여 자신이 받는 피해를 50% 감소시킵니다. (3초간 지속)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/56/dlwiufnqyskx68b68h40yv6ncrp7zww.png',
+  },
+  설옥: {
+    name: '설옥',
+    desc: `[눈사태]의 눈덩이 시작 내구도가 증가합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/04/gf1c59a9le4y56s6b879l9n22a8ek1d.png',
+  },
+
+  무영: {
+    name: '무영',
+    desc: `[전신주 커터] 사용 후 그림자 속으로 몸을 감춰 5초간 [은신]합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/c0/9spyqgq8m01ddrp3w5dhvhlwesvxhrm.png',
+  },
+  '참새 귀환': {
+    name: '참새 귀환',
+    desc: `[버드 헌팅] 강화:
+    그림자 속으로 몸을 감춰 5초간 [은신]합니다.
+    자신이 [은신] 상태일 경우 버려진 덱에서 레드카드를 최대 2장 회수하여 손으로 가져옵니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/37/p3rchm2yugh5tlflyxhcx2blrl4nr1o.png',
+  },
+  '호시탐탐 - 마루하': {
+    name: '호시탐탐 - 마루하',
+    desc: `자신이 [은신] 상태일 경우, 즉시 [전신주 커터]를 1회 시전합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2b/7iku1yy91vzrmcwzfiqgsn0sw1f51u9.png',
+  },
+  잔심: {
+    name: '잔심',
+    desc: `[비검-철강 절단] 사용 후, 버려진 덱에서 이 카드를 제외한 레드카드를 1장 회수하여 손으로 가져옵니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/1/1d/3yneahoxqwglwaaeffsg00hfn3hbnkv.png',
+  },
+
+  '질풍 - 야마아라시': {
+    name: '질풍 - 야마아라시',
+    desc: `[족제비술]을 사용할 때마다 자신의 [일반 공격]의 공격 속도가 10% 증가합니다. (최대 100%)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/32/qj2ilbyo82w9kb80zhjcj8z9uzocg19.png',
+  },
+  '호시탐탐 - 야마아라시': {
+    name: '호시탐탐 - 야마아라시',
+    desc: `자신이 [은신] 상태일 경우 자신의 레드카드의 비용이 1 감소합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/0/09/7iku1yy91vzrmcwzfiqgsn0sw1f51u9.png',
+  },
+  눈보라: {
+    name: '눈보라',
+    desc: `[족제비술] 강화:
+    회오리 부채를 시전하여 대상에게 3단 피해를 입히고 [열상]을 부여하며, 동시에 [냉동]을 발동합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e0/teb2zo1knfwjfgzujibwq4vh85qc8uv.png',
   },
 }
