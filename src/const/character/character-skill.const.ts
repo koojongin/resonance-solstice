@@ -1972,4 +1972,67 @@ export const CHARACTER_SKILLS: {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/3/30/sz67op01rhecr6cu24eswm2dz0zentf.png',
   },
+
+  '방패 타격': {
+    amount: 3,
+    cost: 2,
+    name: '방패 타격',
+    desc: `방패를 내리쳐 범위 내에 적에게 1단 피해를 입히고 [중단]을 발동합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2f/5iowo2cpgv150vbalaoao8whksan1sj.png',
+  },
+  '에너지 실드': {
+    amount: 2,
+    cost: 2,
+    name: '에너지 실드',
+    desc: `아군이 10초간 지속되는 [실드]를 획득합니다. [실드]의 내구도는 자신의 방어력의 #r입니다.
+    이 카드의 [공명]: 앞에서 낸 카드에 따라 컬러가 바뀝니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/da/dhevxrtq9uv4dwz7e33r5wtmvz49l3j.png',
+  },
+  '절대 승리': {
+    amount: 1,
+    cost: 5,
+    name: '절대 승리',
+    desc: `몸을 날려 방패로 지면을 강타하여 범위 내의 적에게 1단 피해를 입히고 [붕괴]를 부여합니다.
+    주변 아군이 10초간 지속되는 [실드]를 획득합니다. [실드]의 내구도는 자신의 방어력의 2000%입니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/32/n7b1a8k6b0y0sbyswm8awkjprzaaqrs.png',
+  },
+
+  '마술 사탕': {
+    amount: 3,
+    cost: 2,
+    name: '마술 사탕',
+    desc: `아군의 체력을 25% 회복합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/1/1a/8a9lrv51h95s63suw961zy7tjwc9vnm.png',
+  },
+  '무지개 병': {
+    amount: 1,
+    cost: 0,
+    name: '무지개 병',
+    desc: `2장의 [에너지 콩]을 덱에 추가합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/9c/kszup1jqrw8xp6yhrny0s6n73sn0u5f.png',
+  },
+  '에너지 콩': {
+    amount: 0,
+    cost: 0,
+    name: '에너지 콩',
+    desc: `비용을 2 얻습니다.
+    사용 후 [소각]됩니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/d3/roz2493gyo17abkcrxh81ppigaa0yqj.png',
+    isGeneratedCard: true,
+  },
+  '전장의 의사': {
+    amount: 1,
+    cost: 4,
+    name: '전장의 의사',
+    desc: `앞열의 모든 아군을 치유하여 체력을 #r 회복합니다.
+    덱에 있는 모든 [마술 사탕]을 손으로 가져옵니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/5a/o1ior1551scnfdlu474yp2jix75iby0.png',
+  },
 }

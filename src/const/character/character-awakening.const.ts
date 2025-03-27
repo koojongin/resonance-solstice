@@ -1237,4 +1237,56 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/b/b1/k076yszlawp1f2fi6wzx9lh5slwj7cp.png',
   },
+
+  충전: {
+    name: '충전',
+    desc: `자신의 [실드]가 사라질 때 체력을 10% 회복합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/eb/bdyvpy1if73ysi3t3nkfqfzrct8okao.png',
+  },
+  후원: {
+    name: '후원',
+    desc: `[절대 승리] 강화:
+    몸을 날려 방패로 지면을 강타하여 범위 내의 적에게 1단 피해를 입히고 [붕괴]를 부여합니다.
+    모든 아군이 10초간 지속되는 [실드]를 얻습니다. [실드]의 내구도는 자신의 방어력의 2000%입니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/1/18/34raog2c70o62cyusb9uu8xl9w2r1m7.png',
+  },
+  '철막의 반향': {
+    name: '철막의 반향',
+    desc: `자신의 [실드]가 존재하는 동안 자신의 일반 공격이 15% 확률로 [방패 타격]을 즉시 1회 시전합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/81/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  강심장: {
+    name: '강심장',
+    desc: `자신의 [실드], [무적] 혹은 [은신]의 지속 시간이 2초 증가합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/58/om1gy5hkjdzp1wncb9jkkvnson1tdrb.png',
+  },
+
+  리필: {
+    name: '리필',
+    desc: `[무지개병] 사용 후 30% 확률로 무지개병을 하나 더 얻습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/58/r1libpdfdacqcqqctx6140fpi0mkm5z.png',
+  },
+  '의료 부서': {
+    name: '의료 부서',
+    desc: `전투 시작 시 덱에서 그린카드를 1장 뽑아 손으로 가져옵니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/5f/1v19igr7yqu8x6d9vj8fjgn7gk3s5ay.png',
+  },
+  의료자원: {
+    name: '의료자원',
+    desc: `[아드레날린] 발동 시 덱 혹은 버려진 덱에서 그린카드를 1장 뽑아 손으로 가져옵니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/dc/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  녹일색: {
+    name: '녹일색',
+    desc: `손에 그린카드를 5장 가지고 있을 시 비용을 10 얻습니다.(비용 상한 초과 가능, 1회 한정)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e8/3hcertb5ou8vqeuw7gl7zlg4c7fxvr0.png',
+  },
 }

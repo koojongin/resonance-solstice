@@ -895,7 +895,23 @@ export const CHARACTER_DETAIL: {
     },
   },
   EXCALIBUR_BOX: {},
-  FLAN: {},
+  FLAN: {
+    SKILLS: ['방패 타격', '에너지 실드', '절대 승리'],
+    RESONANCES: {
+      1: '연속작전',
+      2: '기절 강타',
+      3: '생기',
+      4: '단결',
+    },
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_4,
+    AWAKENING: {
+      1: '충전',
+      2: '후원',
+      3: '투지',
+      4: '철막의 반향',
+      5: '강심장',
+    },
+  },
   ELIOT: {
     SKILLS: ['치유탄', '폭염탄', '비전탄'],
     RESONANCES: {
@@ -948,7 +964,23 @@ export const CHARACTER_DETAIL: {
     },
   },
   GALORE: {},
-  RACHEL: {},
+  RACHEL: {
+    SKILLS: ['마술 사탕', '무지개 병', '에너지 콩', '전장의 의사'],
+    RESONANCES: {
+      1: '아드레날린 - 레이첼',
+      2: '약리학',
+      3: '생기',
+      4: '인연',
+    },
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_4,
+    AWAKENING: {
+      1: '리필',
+      2: '의료 부서',
+      3: '투지',
+      4: '의료자원',
+      5: '녹일색',
+    },
+  },
   TARA: {},
   SHIZURU: {
     SKILLS: ['쇼크탄', '강제 돌파', '강습 지령'],

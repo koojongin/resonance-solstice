@@ -1273,4 +1273,38 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/e/e0/teb2zo1knfwjfgzujibwq4vh85qc8uv.png',
   },
+
+  연속작전: {
+    name: '연속작전',
+    desc: `1웨이브의 적을 처치한 후 자신의 체력을 30% 회복합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/bd/8l41q1b4tsdu2jgboyicdqyrddflnsi.png',
+  },
+  '기절 강타': {
+    name: '기절 강타',
+    desc: `[방패 타격] 강화:
+    방패로 내리쳐 범위 내의 적에게 1단 피해를 입히고 [기절]을 부여합니다.
+    동시에 대상의 방어력을 3% 감소시킵니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2e/9glevbgoni5p95bpvpvf8c2xwl3r8hv.png',
+  },
+
+  '아드레날린 - 레이첼': {
+    name: '아드레날린 - 레이첼',
+    desc: `아군 1명의 체력이 30%보다 낮을 경우 아드레날린을 주사하여 체력을 20% 회복시키고, 동시에 [일반공격]의 공격 속도를 최대로 증가시킵니다. (10초간 지속, 1회 한정)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/c2/kpxsoo28bu5hhoao7kd26iz9b1tm9nh.png',
+  },
+  약리학: {
+    name: '약리학',
+    desc: `[마술 사탕], [전장의 의사]와 [아드레날린]의 치유량이 5% 증가합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a1/jesdoo0cbh2n71kxwheqa8daflhsoxe.png',
+  },
+  인연: {
+    name: '인연',
+    desc: `[무지개 병] 사용 후 다음 내는 그린카드의 치유량이 100% 증가합니다.(중첩 가능)`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/45/kirhuf2qlkdhsnqvrm3nmw2xehb0nuk.png',
+  },
 }
