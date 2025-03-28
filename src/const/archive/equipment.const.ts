@@ -3466,10 +3466,10 @@ const DEFAULT_ALL_EQUIPMENTS: {
       },
     ],
   },
-  '축퇴 폭탄 3호': {
+  '퇴각 폭탄 3호': {
     type: RSEquipmentType.WEAPON,
     grade: RS_GRADE.UR,
-    desc: '기본 속성: 공격력+50\n옵션: [폭발물]이 33개 폭발 할 때 마다 적의 진영에 [축퇴 폭탄 3호]가 투하되고 [광염]을 부여합니다.\n폭탄의 폭발력은 누적된 [폭발물]의 개수에 따라 증가하며, [축퇴 폭탄 3호]는 [폭발물]입니다.',
+    desc: '기본 속성: 공격력+50\n옵션: [폭발물]이 33개 폭발 할 때 마다 적의 진영에 [퇴각 폭탄 3호]가 투하되고 [광염]을 부여합니다.\n폭탄의 폭발력은 누적된 [폭발물]의 개수에 따라 증가하며, [퇴각 폭탄 3호]는 [폭발물]입니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/1/19/n5i1ju6wx0403o5vcfksrr4u2xw04hh.png',
     faction: RS_FACTION.RAILWAY,

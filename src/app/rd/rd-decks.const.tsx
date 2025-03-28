@@ -1352,7 +1352,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       },
       {
         character: TENNIE,
-        equipments: ['축퇴 폭탄 3호', '시뮬레이트 스타', '베타 세계선 박스'],
+        equipments: ['퇴각 폭탄 3호', '시뮬레이트 스타', '베타 세계선 박스'],
       },
       {
         character: STELLA,
@@ -1393,7 +1393,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       },
       {
         character: TENNIE,
-        equipments: ['축퇴 폭탄 3호', '시뮬레이트 스타', '베타 세계선 박스'],
+        equipments: ['퇴각 폭탄 3호', '시뮬레이트 스타', '베타 세계선 박스'],
       },
       {
         character: STELLA,
@@ -1422,7 +1422,7 @@ export const RECOMMENDATION_DECKS: RecommendationDeck[] = [
       },
       {
         character: DUSTIN,
-        equipments: ['축퇴 폭탄 3호', '시뮬레이트 스타', '뫼비우스'],
+        equipments: ['퇴각 폭탄 3호', '시뮬레이트 스타', '뫼비우스'],
       },
       {
         character: STELLA,

@@ -14,6 +14,6 @@ export const RECOMMENDATION_CHARACTER_EQUIPMENT: { [key: string]: string[] } = {
   ARINA: ['방출 코드 생성기', '사자 엠블럼'],
   JOSHUA: ['후회의 갈고리', '트라페조헤드론', '부러진 검의 불'],
   SOMMER: ['미초용작', '인과 초월의 주사위', '자각몽 섬유'],
-  DUSTIN: ['트라페조헤드론', '축퇴 폭탄 3호'],
+  DUSTIN: ['트라페조헤드론', '퇴각 폭탄 3호'],
   WENSHENG: ['여명의 옥새'],
 }
