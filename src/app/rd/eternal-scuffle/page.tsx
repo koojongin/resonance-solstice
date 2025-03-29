@@ -5,6 +5,8 @@ import { motion } from 'framer-motion'
 import { RSHighlightedText } from '@/services/utils/highlight-text'
 import { RdEternalScuffleList } from '@/app/rd/eternal-scuffle/rd-eternal-scuffle-list'
 import { debounce } from 'lodash'
+import Link from 'next/link'
+import { GradientButton } from '@/app/components/button/gradient-button'
 
 export default function RdEternalScufflePage() {
   const [isVisibleChoiceGuideBox, setIsVisibleChoiceGuideBox] = useState(false)
@@ -117,6 +119,9 @@ export default function RdEternalScufflePage() {
       </div>
 
       <div className="ff-dh text-red-400 text-[18px] flex flex-col gap-[2px]">
+        <GradientButton className="mr-auto p-[8px] rounded pb-[6px]">
+          <Link href="/rd/user?page=1&title=난투">유저 덱 난투 덱 바로가기</Link>
+        </GradientButton>
         <div>
           * 아래 조합이 무조건 좋은건 아닙니다. 구성을 이렇게도 할수있다 정도로 참고 해주세요.
           (왠만하면{' '}
