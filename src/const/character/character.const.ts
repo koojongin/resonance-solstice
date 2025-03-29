@@ -5,7 +5,7 @@ import _ from 'lodash'
 export const LYCAGIA: RSCharacter = {
   cores: [],
   originName: 'LYCAGIA',
-  name: '리카지아',
+  name: '레카지아',
   faction: RS_FACTION.RAILWAY,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.MIDDLE,
@@ -110,7 +110,7 @@ export const SOMMER: RSCharacter = {
 export const USHANA: RSCharacter = {
   cores: [],
   originName: 'USHANA',
-  name: 'Ushana',
+  name: '우샤나',
   faction: RS_FACTION.SOURCE_CITADEL,
   grade: RS_GRADE.SSR,
   column: RS_COLUMN.FRONT,
