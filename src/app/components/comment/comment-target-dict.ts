@@ -1,11 +1,14 @@
 export const COMMENT_TARGET_DICT: {
   [key: string]: { name: string; path: string; isExistRefId?: boolean }
 } = {
-  'reset-marathon-clear-mind': { name: '명경지수', path: '' },
-  'reset-marathon-equipment': { name: '장비 티어', path: '' },
-  'reset-marathon-002': { name: '승무원 티어 02', path: '' },
-  'train-power': { name: '열차 전력 업그레이드 요구사항', path: '' },
-  'train-module-power-supply': { name: '열차 모듈 전원 공급 업그레이드 요구사항', path: '' },
+  'reset-marathon-clear-mind': { name: '명경지수', path: '/reset-marathon/clear-mind' },
+  'reset-marathon-equipment': { name: '장비 티어', path: '/reset-marathon/equipment' },
+  'reset-marathon-002': { name: '승무원 티어 02', path: '/reset-marathon/002' },
+  'train-power': { name: '열차 전력 업그레이드 요구사항', path: '/train/train-power' },
+  'train-module-power-supply': {
+    name: '열차 모듈 전원 공급 업그레이드 요구사항',
+    path: '/train/module-power-supply',
+  },
   'archive-': { name: '용어집', path: '/archives' },
   'character-': { name: '승무원 명부', path: '/characters' },
   'equipment-': { name: '장비 도감', path: '/equipments' },
