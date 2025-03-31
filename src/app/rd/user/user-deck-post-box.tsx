@@ -19,6 +19,7 @@ import { AutoPresetPreviewEditBox } from '@/app/components/deck/auto-preset-prev
 import { CHARACTER_SKILLS } from '@/const/character/character-skill.const'
 import { CreateRecommendationDeck } from '@/app/rd/user/create-rd-deck'
 import _ from 'lodash'
+import { RECOMMENDATION_ES_DECKS } from '@/app/rd/eternal-scuffle/rd-eternal-scuffle.const'
 
 function UserDeckPostBoxBase({ id, password }: { id?: string; password?: string }) {
   const { router } = useNextDepthNavigator()

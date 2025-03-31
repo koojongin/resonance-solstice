@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { Tooltip } from '@material-tailwind/react'
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import _ from 'lodash'
 import createKey from '@/services/key-generator'
 import { RsCharacterBorderBox } from '@/app/components/character-frame/rs-character-border-box'
@@ -28,6 +28,12 @@ import { RECOMMENDATION_DECKS, RecommendationDeck } from '@/app/rd/rd-decks.cons
 import { RECOMMENDATION_ES_DECKS } from '@/app/rd/eternal-scuffle/rd-eternal-scuffle.const'
 import { copyToClipboard } from '@/services/utils/copy-clipboard'
 import { toast } from 'react-toastify'
+import { api } from '@/services/api/api.interceptor'
+import { Pagination } from '@/const/api/pagination.interface'
+import { injectCharacterDetail } from '@/services/inject-character-detail'
+import { PaginationList } from '@/app/components/pagination/pagination-list'
+import { RecommendationUserDeck } from '@/app/rd/user/user-deck.interface'
+import { formatNumber } from '@/services/utils/number.formatter'
 
 const eternalScuffleCharacters = [
   NAYUTA,
@@ -61,29 +67,43 @@ const FILTERED_DECKS = TOTAL_DECKS.filter(
   }
 })
 
-export function RdEternalScuffleList({ searchedKeyword }: any) {
-  const [decks, setDecks] = useState<RecommendationDeck[]>([])
-  useEffect(() => {
-    setDecks(
-      FILTERED_DECKS.filter((deck) => {
-        return deck.totalNames.join(',').indexOf(searchedKeyword) >= 0
-      }),
-    )
-  }, [searchedKeyword])
+export function RdEternalScuffleList() {
+  const [decks, setDecks] = useState<RecommendationUserDeck[]>([])
+  const [pagination, setPagination] = useState<Pagination>()
+
+  const loadDecks = useCallback(async (selectedPage?: number) => {
+    const condition: any = {
+      title: {
+        $regex: '난투',
+        $options: 'i',
+      },
+    }
+    const result = await api.post('/recommendation-deck/list', {
+      condition,
+      opts: {
+        page: selectedPage,
+        limit: 18,
+      },
+    })
+    const { decks: rDecks, page, total, totalPages } = result.data
+    setDecks(rDecks.map((d: any) => injectCharacterDetail(d)))
+    setPagination({
+      page,
+      total,
+      totalPages,
+    })
+  }, [])
 
   useEffect(() => {
-    setDecks(FILTERED_DECKS)
+    loadDecks()
   }, [])
 
   return (
     <>
       <div className="flex items-stretch gap-[10px] mb-[4px]">
         <div className="rounded-[4px] inline-flex p-[4px] text-white bg-gray-700 border-white/50 border-dotted border">
-          덱 - {decks.length} / {FILTERED_DECKS.length}
+          {pagination?.total.toLocaleString()}개의 덱이 검색됨 - `난투`
         </div>
-        {searchedKeyword && (
-          <div className="rounded-[4px] flex items-center">"{searchedKeyword}" 검색됨</div>
-        )}
       </div>
       <div className="flex flex-wrap gap-[4px]">
         {decks.map((deck) => {
@@ -105,11 +125,15 @@ export function RdEternalScuffleList({ searchedKeyword }: any) {
                     오토프리셋
                   </div>
                 )}
+                <div className="ml-auto bg-gray-700 text-white px-[4px] py-[4px] rounded flex items-center gap-[4px]">
+                  <i className="fa-solid fa-eye text-[12px] pt-[2px]" />
+                  {formatNumber(deck.reads)}
+                </div>
               </div>
               <div className="mt-auto flex gap-[2px] bg-blue-gray-200">
                 {deck.characters.map((characterData) => {
                   const { character } = characterData
-                  const isLeader = leaderName === character.name
+                  const isLeader = leaderName === character.originName
                   return (
                     <Link
                       key={createKey()}
@@ -142,7 +166,7 @@ export function RdEternalScuffleList({ searchedKeyword }: any) {
                   )
                 })}
               </div>
-              <Link href={`/rd/detail/${deck.id}`} className="hover:underline">
+              <Link href={`/rd/user/detail/${deck.id}`} className="hover:underline">
                 <div className="text-blue-gray-900 ff-dh truncate w-full text-[20px] px-[10px] py-[4px] pb-0 text-center">
                   {deck.title}
                 </div>
@@ -151,6 +175,7 @@ export function RdEternalScuffleList({ searchedKeyword }: any) {
           )
         })}
       </div>
+      {pagination && <PaginationList pagination={pagination} onSelectPage={loadDecks} />}
     </>
   )
 }

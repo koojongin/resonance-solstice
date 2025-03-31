@@ -118,11 +118,11 @@ export default function RdEternalScufflePage() {
         </div>
       </div>
 
-      <div className="ff-dh text-red-400 text-[18px] flex flex-col gap-[2px]">
-        <GradientButton className="mr-auto p-[8px] rounded pb-[6px]">
-          <Link href="/rd/user?page=1&title=난투">유저 덱 난투 덱 바로가기</Link>
+      <div className="ff-dh text-red-400 text-[14px] flex flex-col gap-[2px]">
+        <GradientButton className="mr-auto p-[4px] rounded ff-sdn">
+          <Link href="/rd/user?page=1&title=난투">난투 덱 상세 검색 바로가기</Link>
         </GradientButton>
-        <div>
+        <div className="text-[18px]">
           * 아래 조합이 무조건 좋은건 아닙니다. 구성을 이렇게도 할수있다 정도로 참고 해주세요.
           (왠만하면{' '}
           <span className="underline bg-green-300 text-white px-[4px] py-[1px] text-[30px]">
@@ -132,18 +132,8 @@ export default function RdEternalScufflePage() {
         </div>
       </div>
 
-      <div className="flex items-center gap-[10px]">
-        <div>검색:</div>
-        <input
-          className="border border-gray-400 min-w-[300px] p-[4px]"
-          type="text"
-          onChange={handleSearchedKeywordChange}
-          placeholder="승무원 이름을 검색하세요."
-        />
-      </div>
-
       <>
-        <RdEternalScuffleList searchedKeyword={searchedKeyword} />
+        <RdEternalScuffleList />
       </>
     </div>
   )
