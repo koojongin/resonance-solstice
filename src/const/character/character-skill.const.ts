@@ -292,7 +292,7 @@ export const CHARACTER_SKILLS: {
     amount: 1,
     cost: 8,
     name: '화력전개',
-    desc: '모든 적에게 발사:\n[일반공격]이 빠른 속도로 연속사격하며, 덱과 버려진 덱에 있는 [초음속]과 [공습]을 모두 사용합니다.\n동시에 [인뢰]를 발동합니다.',
+    desc: '모든 적에게 발사:\n[일반 공격]이 빠른 속도로 연속사격하며, 덱과 버려진 덱에 있는 [초음속]과 [공습]을 모두 사용합니다.\n동시에 [인뢰]를 발동합니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/5/5c/mkmaptfsvg2c97lzany2zzlc4udbzda.png',
   },
@@ -448,7 +448,7 @@ export const CHARACTER_SKILLS: {
     amount: 4,
     cost: 1,
     name: '조준 저격',
-    desc: '저격할 대상을 [조준]하여 적에게 1단 피해를 입힙니다.\n[조준]은 공격 대상을 새로 조준한 대상으로 변경하며 해당 효과는 [일반공격]도 포함합니다.',
+    desc: '저격할 대상을 [조준]하여 적에게 1단 피해를 입힙니다.\n[조준]은 공격 대상을 새로 조준한 대상으로 변경하며 해당 효과는 [일반 공격]도 포함합니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/f/f6/83wfllilacqcaauubcxw6sjsxvaiyks.png',
   },
@@ -912,7 +912,7 @@ export const CHARACTER_SKILLS: {
     amount: 1,
     cost: 4,
     name: '울프팩',
-    desc: `기계 늑대 3마리를 소환하여 싸우게 하고 [일반공격] 지원을 수행합니다. 공격은 재활용되기 전에 10초 동안 지속됩니다.
+    desc: `기계 늑대 3마리를 소환하여 싸우게 하고 [일반 공격] 지원을 수행합니다. 공격은 재활용되기 전에 10초 동안 지속됩니다.
     지속 시간:
     [레드카드]를 사용하거나 [레드카드]를 버리는 구역에 버릴 때마다 기계 늑대는 늑대 송곳니 미사일을 발사하여 적에게 1의 피해를 입히고 [인뢰]를 발동합니다. [블루카드]를 사용하거나 [블루카드]를 버리는 구역에 버릴 때마다 기계 늑대는 치유 미사일을 발사하여 체력이 가장 낮은 아군을 치료하고 체력의 6%를 회복합니다.
     늑대 송곳니 미사일은 [폭발물] 입니다.
@@ -925,12 +925,12 @@ export const CHARACTER_SKILLS: {
     amount: 2,
     cost: 3,
     name: '복음',
-    desc: `현재 체력의 13%를 잃고 [스칼렛 램프]를 흔들어 [일반공격]을 다음과 같이 전환합니다.
+    desc: `현재 체력의 13%를 잃고 [스칼렛 램프]를 흔들어 [일반 공격]을 다음과 같이 전환합니다.
     자신을 제외한 모든 아군의 체력을 3% 회복합니다.(14초간 지속, 중첩 가능)
-    지속 시간이 종료되면 기본 [일반공격]으로 전환돱니다.
+    지속 시간이 종료되면 기본 [일반 공격]으로 전환돱니다.
     사용 후 [블랙카드] [음에너지]를 1장 생성하여 손으로 가져옵니다.
     이 카드가 버려지면 [다크 아트]를 1장 생성하여 손으로 가져옵니다.
-    수엔의 기본 [일반공격]은 다음과 같습니다.
+    수엔의 기본 [일반 공격]은 다음과 같습니다.
     모든 적에게 1단 피해를 입히고, 자신의 체력을 3% 회복합니다.`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/6/6f/r879nqtbk8guze0volssyx5itv5jutv.png',
@@ -1001,9 +1001,9 @@ export const CHARACTER_SKILLS: {
     amount: 1,
     cost: 4,
     name: '강습 지령',
-    desc: `모든 아군의 [일반공격] 공격 속도를 10초간 최대로 증가시킵니다.
-    지속시간 동안 아군의 모든 [돌격대원]의 [일반공격]이 [강습 모드]로 진입합니다.
-    [강습 모드]는 [돌격대원]의 무기를 연사모드로 전환하여 [일반공격]시 발사하는 탄약수를 증가시킵니다.
+    desc: `모든 아군의 [일반 공격] 공격 속도를 10초간 최대로 증가시킵니다.
+    지속시간 동안 아군의 모든 [돌격대원]의 [일반 공격]이 [강습 모드]로 진입합니다.
+    [강습 모드]는 [돌격대원]의 무기를 연사모드로 전환하여 [일반 공격]시 발사하는 탄약수를 증가시킵니다.
     [돌격대원]은 [시즈루], [카렌], [줄리안]이 포함됩니다.`,
     descSub: '돌격!',
     thumbnail:
@@ -1468,7 +1468,7 @@ export const CHARACTER_SKILLS: {
     desc: `1개의 [조준 폭탄]을 적에게 투척하고 [범위 조준]을 발동합니다.
     [조준 폭탄]은 [폭발물]로 3초뒤에 폭발하여 범위 내의 적에게 3안 피해를 입힙니다.
     [조준 폭탄]은 착지 후 1개의 [연쇄 폭발 지뢰]를 설치합니다.
-    [범위 조준]은 [일반공격]의 공격 대상을 새로운 목표 구역으로 변경합니다.`,
+    [범위 조준]은 [일반 공격]의 공격 대상을 새로운 목표 구역으로 변경합니다.`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/7/77/86vza0ncdt67r2susqe53avuo0t7ekl.png',
   },
@@ -2034,5 +2034,463 @@ export const CHARACTER_SKILLS: {
     덱에 있는 모든 [마술 사탕]을 손으로 가져옵니다.`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/5/5a/o1ior1551scnfdlu474yp2jix75iby0.png',
+  },
+
+  분수: {
+    amount: 2,
+    cost: 2,
+    name: '분수',
+    desc: `카드를 1장 뽑습니다. 비용이 홀수라면 이번 전투동안 [일반 공격]이 발사하는 탄약수가 1 증가합니다.(10회 한정) 동시에 물총이 6초간 연사 모드에 진입합니다. 지속 시간 동안 [일반 공격]이 발사하는 탄약수가 2배로 증가합니다. 동시에 [일반 공격]을 선택된 대상에게로 전환합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2f/1f0qnk083f6l5rkmjk029oig2do9e6k.png',
+  },
+  '해변의 꽃': {
+    amount: 3,
+    cost: 2,
+    name: '해변의 꽃',
+    desc: `카드를 2장 뽑습니다. 카드를 1장 뽑을 때마다 모든 아군의 공격력이 +2% 증가합니다.(중첩 가능) 블루카드를 1장 뽑을 때마다 모든 아군의 방어력이 2%증가합니다.(중첩 가능) 옐로카드를 1장 뽑을 때마다 카드를 1장 뽑습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a1/j68p7wf4rhih2vkqdyg7k2buek2e43c.png',
+  },
+  '한여름의 물거품': {
+    amount: 4,
+    cost: 1,
+    name: '한여름의 물거품',
+    desc: `[일반 공격]을 다음과 같이 전환합니다. [일반 공격]의 탄약수만큼 [유영탄]을 발사합니다.(10초간 지속) [유영탄] 1발당 무작위 적에게 1단 피해를 입히고, 동시에 50% 확률로 [냉동]을 발동합니다. [유영탄]의 피해는 [일반 공격] 탄약의 3배입니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2a/f4mkxj5lvdwavv5whwtcypz2npc6znn.png',
+  },
+
+  메로페: {
+    name: '메로페',
+    amount: 3,
+    cost: 3,
+    desc: '[메로페]를 부릅니다. 지속시간:8초\n사용한 레드카드에 따라:\n레드카드 사용 시 마이크로파 펄스를 발사하여 적에게 1단 피해를 입히고, 동시에 [점화]를 발동합니다.\n옐로카드 사용 시 전자기 펄스를 발사하여 적에게 1단 피해를 입히고, 동시에 [낙뢰]를 발동합니다.\n[메로페]는 [기계형 유닛]입니다.\n마이크로파 펄스/전자기 펄스는 [파]입니다.\n사용 후 블랙카드 [음에너지]를 1장 생성하여 덱의 맨아래에 추가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2b/5zn9z7kt06sfqmtg4bkhx4yoqhsov5g.png',
+  },
+  '비밀 통신': {
+    name: '비밀 통신',
+    amount: 3,
+    cost: 1,
+    desc: '다이얼을 돌려 0~9 중 하나를 무작위로 선택합니다.\n2/3/4/5/6/7/8이라면 해당 숫자에 따라 매초 비용을 0.2/0.3/0.4/0.5/0.6/0.7/0.8 회복합니다. (8초간 지속)\n0이라면 즉시 [버리기] 명령을 활성화합니다.\n1이라면 현재 손패에서 비용이 가장 높은 카드를 1장 선택하여 비용을 1로 변경합니다.\n9라면 즉시 [리더 스킬]을 활성화합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/38/k8vpgc6yqvzhtqjgn574kqlberx85at.png',
+  },
+  '조석의 비경': {
+    name: '조석의 비경',
+    amount: 1,
+    cost: 3,
+    desc: '명상하여 [조석의 비경]을 형성합니다.\n[조석의 비경]의 회복 속도가 100%초간 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/22/7tyaywz6fqez5a9zvcnbk3wir8iajeh.png',
+  },
+
+  수난: {
+    name: '수난',
+    amount: 3,
+    cost: 3,
+    desc: '앞방향의 범위 내에 있는 적에게 4단 피해를 입히고 [저주]를 부여합니다.\n사용 후 [성흔]을 1장 생성하여 손으로 가져옵니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/47/8h8guvxrb4jpwen8vrbjccv48dwebxp.png',
+  },
+  서언: {
+    name: '서언',
+    amount: 1,
+    cost: 3,
+    desc: '[진리의 눈]을 소환하여 8초간 유지합니다. (유지시간: 8초)\n카드가 생성될 때마다 광선을 1도 발사하여 모든 적에게 1단 피해를 입히고 [부식]을 부여합니다.\n사용 후 블랙카드 [음에너지]를 1장 생성하여 덱의 맨 아래에 추가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/6b/fc0xt3bsy7t5hanxn1g3ieb9tfg0wp3.png',
+  },
+  심판: {
+    name: '심판',
+    amount: 1,
+    cost: 6,
+    desc: '블랙카드를 우선으로 카드를 1장 뽑습니다.\n검은 감옥의 광선을 시전하여 모든 적에게 7단 피해를 입히고 [붕괴]를 부여합니다.\n손에 있는 블랙카드 1장당 입히는 피해가 30% 증가하고, 비 블랙카드는 10% 증가합니다.\n사용 후 손에 있는 모든 블랙카드를 버립니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/88/cuu30bw4zb9qtey26ycd2qknyf60lsw.png',
+  },
+
+  성흔: {
+    name: '성흔',
+    amount: 0,
+    cost: 2,
+    desc: '적에게 [성흔]을 부여합니다.(6초간 지속) 지속시간 동안 대상이 피해를 입을 때마다 [고통] 효과를 1중 스택을 증가시킵니다. [고통] 1중당 대상이 받는 피해가 2% 증가합니다.(12중첩 시 [성흔 붕괴] 발동) [성흔 붕괴]는 적에게 1단 피해를 입히며, 동시에 [고통] 효과를 모두 제거합니다. [성흥 붕괴]는 [파]입니다. 사용 후 [소각]됩니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/9a/301wrbc7l9u5p84twh9edkpv5tl9bs4.png',
+    isGeneratedCard: true,
+  },
+
+  '멘탈 붕괴 레일건': {
+    name: '멘탈 붕괴 레일건',
+    amount: 2,
+    cost: 3,
+    desc: "'Into your heart'\n차지샷을 시전하여 범위 내의 적에게 1단 피해를 입히고, 동시에 [변신]과 [수면]을 발동합니다.",
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/77/3rmu6z6vtvao6dulc25v4mhzweui4ae.png',
+  },
+  소란탄: {
+    name: '소란탄',
+    amount: 2,
+    cost: 1,
+    desc: "'Plays it cool'\n적을 향해 발사 시 목표 범위 내의 적에게 1단 피해를 입히고 [혼란]을 발동합니다.\n아군을 향해 발사 시 목표 범위 내의 아군을 대상으로 [광폭]을 발동합니다.\n[소란탄]은 [폭발물]입니다.",
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/81/4jba2mtmyzftras0te1qpfniubwgrlf.png',
+  },
+  'MEGA 혼돈캐넌': {
+    name: 'MEGA 혼돈캐넌',
+    amount: 1,
+    cost: 5,
+    desc: "'MEGA 혼돈의 캐넌 발사!!!'\n적을 [관통]하는 레이저포를 발사하여 모든 적에게 10단 피해를 입히고 필드에 존재하는 [광폭]/[붕괴]/[혼란]/[수면]/[변신]/[속박]/[족쇄/[저주] 효과 1개당 입히는 피해가 20% 증가합니다.",
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/35/gu0629w9oz5ngrrf4dhr8qvj6rjvhf2.png',
+  },
+  좌충우돌: {
+    name: '좌충우돌',
+    amount: 0,
+    cost: 0,
+    desc: "'Na na na na na na na na na' 모든 아군에게 [광폭]을 부여합니다. 동시에 모든 아군에게 [혼란]을 부여합니다. 사막 도적단의 동료들과 같이 돌격하여 범위 내의 적에게 다단 피해를 입힙니다. 사용 후 [소각]됩니다.",
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/aa/2ulrmw12zl4pzz9pqm6fbt4rg70oz3s.png',
+  },
+
+  '자기력 함정': {
+    name: '자기력 함정',
+    amount: 3,
+    cost: 2,
+    desc: '6초간 지속되는 자기력 함정을 제조합니다.\n발동 시 범위 내의 적에게 1회 [마비]를 부여합니다.\n지속시간 동안, 뒷열 아군이 입히는 [인뢰]의 확률이 10% 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a2/80f1keoe15u6gmrhlja69j2meu9lfvt.png',
+  },
+  '자기력 미끼': {
+    name: '자기력 미끼',
+    amount: 1,
+    cost: 3,
+    desc: '1장에 적힌 [인뢰] 키워드를 가진 레드카드/오렌지 카드를 사용한 즉시 덱 혹은 버려진 덱에서 2장의 [인뢰] 키워드를 가진 카드를 뽑아 손으로 가져옵니다.\n그 후 아군이 가진 [인뢰] 키워드를 가진 레드카드/오렌지 카드가 입히는 피해가 100% 증가합니다.(1회 유효)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/f9/4171m233x0h3298e5vxoahxkp0n3ig1.png',
+  },
+  '축전 자기장': {
+    name: '축전 자기장',
+    amount: 1,
+    cost: 4,
+    desc: '1개의 강력한 축전 자기장을 생성합니다. (10초간 지속)\n지속시간:\n필드의 아군 및 적이 1회 [인뢰]를 발동할 때마다 축전 자기장의 [볼트값]이 2000 증가합니다.\n[볼트값]을 1만큼 누적할 때마다 자기 파도를 1회 시전하여 모든 적에게 1단 피해를 입히고, 동시에 모든 아군의 체력을 2% 회복시킵니다.\n[볼트값]은 계속 누적되며, 감소하지 않습니다.\n자기 파도는 [파]입니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e9/lqf6z7s4p7hwnrickn28rgzf137pcnz.png',
+  },
+  십만볼트: {
+    name: '십만볼트',
+    amount: 0,
+    cost: 1,
+    desc: '십만볼트를 시전하여 모든 적에게 10단 피해를 입히고, 동시에 20% 확률로 [우레]를 발동합니다. 사용 후 아군의 모든 [인뢰] 키워드를 가진 카드의 피해가 2% 증가합니다.(중첩 가능) 사용 후 [소각]됩니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/31/bpgjnzrk267fephsrymc8jyvkxlab0s.png',
+  },
+  백만볼트: {
+    name: '백만볼트',
+    amount: 0,
+    cost: 5,
+    desc: '백만볼트를 시전하여 모든 적에게 10단 피해를 입히고 동시에 20% 확률로 [천둥]을 발동합니다. 사용 후 즉시 덱 혹은 버려진 덱에서 비용이 5 이고 [인뢰] 키워드를 가진 카드를 즉시 손으로 가져오며 손패 상한을 초과할 수 있습니다. 사용 후 [소각]됩니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/d6/rrig6bu585tstmtj8weye95zuq39hko.png',
+  },
+
+  '베기!': {
+    name: '베기!',
+    amount: 3,
+    cost: 2,
+    desc: '[열천]을 휘둘러 적에게 1단 피해를 입히고 1~3회의 [참열]을 부여합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/1/1f/rng3rzqbcwd8oileatyvuyyl0k5echl.png',
+  },
+  '잠식의 영역': {
+    name: '잠식의 영역',
+    amount: 1,
+    cost: 3,
+    desc: '10초간 지속되는 [열상 법계]를 전개합니다.(지속시간 동안:) 지속시간 동안 아군이 [참열]을 부여할 때, 동시에 [부식]을 발동합니다.\n사용 후 블랙카드 [음에너지]를 1장 생성하여 덱의 제일 아래에 추가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/52/mcocx46onkrkntgix3mj4q5acehmzby.png',
+  },
+  '밤을 베는 마력의 빛!': {
+    name: '밤을 베는 마력의 빛!',
+    amount: 1,
+    cost: 9,
+    desc: '모든 [열명]을 동시에 휘두르며 8도 열명파를 시전한 후 몸을 돌진하여 종결 참격을 시전해 모든 적에게 9단 피해를 입히고 [참열]을 부여합니다.\n열명파는 [파]입니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/88/t2wevfmd2jfzi01blimz49gclwx2jay.png',
+  },
+
+  '정신 포식': {
+    name: '정신 포식',
+    amount: 1,
+    cost: 4,
+    desc: '[동반체]가 혼돈을 감지합니다.\n아래 효과를 발동합니다.(3회 유효)\n퍼플카드 사용 시 강력한 정신 공격을 시전하여 대상에게 1단 피해를 입히고 [혼란]을 부여합니다. 동시에 대상의 공격력이 2% 감소하고, 자신의 공격력이 2% 증가합니다.(중첩 가능)\n이 카드는 사용 시 1회 카운트됩니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/3a/8i03esi2l7k4i8nr3un8xhgx7ll76j8.png',
+  },
+  감지: {
+    name: '감지',
+    amount: 1,
+    cost: 3,
+    desc: '손이 가득 찰 때까지 카드를 뽑습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/da/15sof8gt48ghzkf2s7gv9ewewgdoarx.png',
+  },
+  '정신 폭풍': {
+    name: '정신 폭풍',
+    amount: 1,
+    cost: 5,
+    desc: '아일리와 [동반체]가 정신 폭풍을 일으켜 모든 적에게 5단 피해를 입히고 [저주]를 부여합니다.\n아래 효과를 발동합니다.(3회 유효)\n레드카드 사용 시 [감정-분노]를 1장 생성하여 손으로 가져옵니다.\n옐로카드 사용 시 [감정-유쾌]를 1장 생성하여 손으로 가져옵니다.\n블루카드/그린카드 사용 시 [감정-냉정]을 1장 생성하여 손으로 가져옵니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/5c/1q5gxes1c0akzs89bojqzzz1b1vya3u.png',
+  },
+
+  '정서-냉정': {
+    name: '정서-냉정',
+    amount: 0,
+    cost: 1,
+    desc: '아일리가 공격 대상을 선택된 적으로 변경하여 대상에게 2단 피해를 입히고 [속박]을 부여합니다. 동시에 체력이 가장 낮은 아군 1명이 10초간 [실드]를 얻습니다. [실드]의 내구도는 자신의 방어력의 2000%입니다. 사용 후 [소각]됩니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/23/k7y2rrox66xdweu2qijkzd1eooe6mnh.png',
+  },
+  '정서-기쁨': {
+    name: '정서-기쁨',
+    amount: 0,
+    cost: 1,
+    desc: '아일리가 공격 대상을 선택된 적으로 전환하여 해당 대상에게 5단 피해를 입히고 카드를 1장 뽑습니다. 사용 후 [소각]됩니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2f/lpm7hwdb1pl16w7bedoru4lja0jf0z6.png',
+  },
+  '정서-분노': {
+    name: '정서-분노',
+    amount: 0,
+    cost: 1,
+    desc: '아일리가 공격 대상을 선택된 적으로 전환하여 해당 대상에게 10단 피해를 입히고 자신은 [광폭]을 얻습니다. 사용 후 [소각]됩니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/de/2iwbi1qo2kjb66hn9fu0n6bo8puuore.png',
+  },
+
+  '지각 개입': {
+    name: '지각 개입',
+    amount: 2,
+    cost: 2,
+    desc: '아군을 표식하고 표식한 대상의 체력을 매초 5% 회복합니다.(6초간 지속)\n지속 시간 동안 대상이 받는 피해가 50% 감소합니다.\n동시에 [일반 공격]의 치유 대상을 표식한 아군으로 전환합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/c9/q93mjz8i529qstj7qp92zft8ca594ml.png',
+  },
+  '약물 각성': {
+    name: '약물 각성',
+    amount: 3,
+    cost: 1,
+    desc: '아군을 치유하여 대상의 체력을 25% 회복합니다.\n동시에 대상이 받는 제어와 피해형 특수 효과를 제거합니다.\n사용 후 덱에서 [약물 각성]을 1장 뽑아 손으로 가져옵니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/7a/j1krwiobh4xy4meqcrv2mjvansp9u5h.png',
+  },
+  계약: {
+    name: '계약',
+    amount: 1,
+    cost: 3,
+    desc: '생명의 계약을 체결합니다.(10초간 지속)\n지속 시간 동안 임의 아군이 빈사 상태 시 대상의 체력을 20%회복하고 자신의 현재 체력을 20% 잃습니다.\n효과 발동 시 덱 혹은 버려진 덱에서 [지각 개입] 1장을 손으로 가져옵니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/37/9p8ko49237rj6mondpr3qj1xam14ob4.png',
+  },
+
+  '관통통 사격': {
+    name: '관통통 사격',
+    amount: 2,
+    cost: 2,
+    desc: '[관통통]을 적의 사격에 맞춰 저지합니다.\n적에게 1단 피해를 입히고 [붕괴]를 부여합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/bd/bx9kbzntn2vr5hda7hriw8ptv9c0di7.png',
+  },
+  차지: {
+    name: '차지',
+    amount: 2,
+    cost: 1,
+    desc: '힘을 모아 다음에 내는 [관통통 사격] 혹은 [파열 사격]이 입히는 피해가 50% 증가합니다.(중첩 가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/3d/p4fz2m0tjlhmgn9nmysc2x9i4s07nuy.png',
+  },
+  '파열 사격': {
+    name: '파열 사격',
+    amount: 1,
+    cost: 5,
+    desc: '[관통통]을 적의 체내에 찔러 넣어 파열 사격합니다.\n적에게 5단 피해를 입히고 [참열]을 부여합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/33/59k3qnqg45sqknnqnv6fqqdnpji78ik.png',
+  },
+
+  '검은 물약': {
+    name: '검은 물약',
+    amount: 0,
+    cost: 4,
+    desc: '[검은 물약]을 주사하여 모든 적에게 방어력을 무시한 1단 피해를 입히고 매초 자신의 체력을 1%초간 제거합니다. 지속시간 동안 자신을 전면 강화합니다. 입히는 최종 피해가 30 증가합니다. 받는 최종 피해가 50% 감소합니다. 사용 후 [소각]됩니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/50/of8izub1keuw0u64m6pakshl2gjh0og.png',
+  },
+
+  철막: {
+    name: '철막',
+    amount: 1,
+    cost: 3,
+    desc: '[A-1SO]가 철막을 펼쳐 모든 아군의 피해를 막습니다. [철막]의 내구도는 파라디 최대 체력의 50%입니다.\n[철막]이 존재하는 동안 [일반 공격]이 [철막]의 내구도를 5% 수리합니다.\n[철막]의 방어력은 파라디의 방어력과 동일하며, 동시에 1개의 [철막]만 존재할 수 있습니다.\n[A-1SO]는 [기계 유닛]입니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/fa/dzmsucxv4eyhdxlvmloge9rasvak7rg.png',
+  },
+  화염벽: {
+    name: '화염벽',
+    amount: 2,
+    cost: 2,
+    desc: '[A-1SO]가 지면에 휘발유를 뿌리고 불을 붙여 적 필드에 [광염]을 발동하고 모든 적의 스태미나가 3% 감소합니다.\n동시에 모든 적의 공격력이 2% 감소합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/82/9ce8htka0liigu14qceemkguvso1jrz.png',
+  },
+  '강력 진압': {
+    name: '강력 진압',
+    amount: 1,
+    cost: 5,
+    desc: '파라디가 호루라기를 불어 로봇을 지휘하여 폭동을 진압합니다.\n[A-1SO]가 음파 빔을 발사하여 모든 적에게 8단 피해를 입히고 [기절]을 부여합니다.\n[A-1SO]가 고압 전류를 방출하여 모든 적에게 8단 피해를 입히고 [인뢰]를 발동합니다.\n[A-1SO]와 [A-2SO]는 [기계 유닛]입니다.\n음파 빔은 [파]입니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/ce/8xlqg3ox0tki11x2qt4qyixa9q8u9h9.png',
+  },
+
+  '나비의 춤': {
+    name: '나비의 춤',
+    amount: 3,
+    cost: 2,
+    desc: '숙련된 더블건 사격으로 적에게 6단 피해를 입힙니다.\n동시에 1단 피해를 입힐 때마다 10% 확률로 [점화]를 발동합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/1/12/2lrpzyrd5oallau40s2q10q1dt43bcn.png',
+  },
+  '유령의 춤': {
+    name: '유령의 춤',
+    amount: 2,
+    cost: 3,
+    desc: '적의 앞자리에 순간이동하여 적에게 3단 피해를 입힙니다.\n이후 대상에게 강력한 펀치를 날려 1단 피해를 입히고 대상의 공격력과 방어력을 3% 감소시킵니다.(최대 30%)\n동시에 [기절]/[중상]/[참열]을 발동합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a7/8f8tmb9dybbd2wg6m1tjyxd541nls1e.png',
+  },
+  '환영 난무': {
+    name: '환영 난무',
+    amount: 1,
+    cost: 5,
+    desc: '총검의 춤을 춰 모든 적에게 12단 피해를 입히고 [열상]을 부여합니다.\n동시에 [광염]을 발동합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/fe/5j2o6peli8i1stw6ldrudrpn08up1do.png',
+  },
+
+  무기고: {
+    name: '무기고',
+    amount: 2,
+    cost: 0,
+    desc: "'Drop the beat!'\nBO-X가 소형 무기고를 검색합니다.\n무작위로 [권총]/[돌격소총]/[연소 수류탄]을 1장 생성하여 손으로 가져옵니다.",
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/38/4tqcxtsdlez1eoi0bad49r5iqd5iivy.png',
+  },
+  '음료수 배달': {
+    name: '음료수 배달',
+    amount: 2,
+    cost: 0,
+    desc: "'Life tastes good'\nBO-X가 음료수를 1잔 만듭니다.\n무작위로 [특제 홍차]/[단백질 파우더]/[민트 아이스]를 1장을 생성하여 손으로 가져옵니다.",
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2d/th4b7vk6f3t8zd2gl8wydleiknnwagi.png',
+  },
+  '폐기 처분': {
+    name: '폐기 처분',
+    amount: 1,
+    cost: 0,
+    desc: "'I will be back!'\nBO-X가 자신을 폐기 처분하며 [디스크 복구] 1장을 생성하여 덱에 추가합니다.",
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/b7/m21k09il7vmphdr4dxzt3yupejv9zua.png',
+  },
+
+  권총: {
+    name: '권총',
+    amount: 0,
+    cost: 1,
+    desc: "'Bang! Bang! Bang!' 적에게 3단 피해를 입힙니다. 동시에 자신의 [일반 공격] 속도가 10% 증가합니다.(중첩 가능) 손에서 내면 [소각]됩니다.",
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/80/7r1jgu2xc83ttpw0gsjdl3cege4pa69.png',
+  },
+  돌격소총: {
+    name: '돌격소총',
+    amount: 0,
+    cost: 2,
+    desc: "'2! 2! 2! 2! 2! 2!' 적에게 6단 피해를 입힙니다. 동시에 자신의 공격력이 1% 증가합니다.(중첩 가능) 손에서 내면 [소각]됩니다.",
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/94/63713jdxuwytjurakb1tril0e3hhgbc.png',
+  },
+  '연소 수류탄': {
+    name: '연소 수류탄',
+    amount: 0,
+    cost: 3,
+    desc: "'Boom!' 목표 구역을 향해 연소 수류탄을 투척하여 범위 내의 적에게 1단 피해를 입히고, 동시에 [점화]를 발동합니다. 손에서 내면 [소각]됩니다.",
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/43/epyktd3yp5dlxyy9i3nrdedrez61hgc.png',
+  },
+  무전기: {
+    name: '무전기',
+    amount: 0,
+    cost: 4,
+    desc: "'Beee! Beee! Beee!' [플라잉 BO-X]를 호출하여 [BO-X MK2] 1개를 투하합니다. 여러개 존재할 수 있으며, 최대 5개입니다. 사용 후 [소각]됩니다.",
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/43/6kmqcdhnbej0maq44orib5b7uyh6119.png',
+  },
+  '디스크 복구': {
+    name: '디스크 복구',
+    amount: 0,
+    cost: 3,
+    desc: '파손된 [BO-X 시리즈] 하나의 체력을 30% 회복합니다. [BO-X 시리즈]: [BO-X]/[성검 BO-X]/[아이기스 BO-X]/[로켓펀치 BO-X]/[플라잉 BO-X]/[BO-F] [BO-X 시리즈]는 [로봇]입니다. 사용 후 [소각]됩니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/62/mp98y7mhra0ipeo4dgwqiicqqh7j9fy.png',
+  },
+  '특제 홍차': {
+    name: '특제 홍차',
+    amount: 0,
+    cost: 1,
+    desc: "'What you want is Livia' 리비아의 특제 홍차입니다. 아군의 체력을 20% 회복합니다. 손에서 내면 [소각]됩니다.",
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/5f/gedb65p1ggrn3d0v07c56oxllycg1qq.png',
+  },
+  '단백질 파우더': {
+    name: '단백질 파우더',
+    amount: 0,
+    cost: 1,
+    desc: "'Can’t beat the feeling' 근육맨의 필수 음료수입니다. 아군의 방어력을 3% 증가시킵니다.(중첩 가능) 손에서 내면 [소각]됩니다.",
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/5d/px3850typ1apsyahg8i5w9zictlxi70.png',
+  },
+  '민트 아이스': {
+    name: '민트 아이스',
+    amount: 0,
+    cost: 1,
+    desc: "'Thirst knows no reason' 3배 강력한 탄산입니다. 아군이 다음 내는 레드카드의 피해가 50% 증가합니다.(중첩 가능) 손에서 내면 [소각]됩니다.",
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/3/32/9667pfwidvsmozbzlhf6jcrt45etakt.png',
+  },
+
+  강타: {
+    name: '강타',
+    amount: 3,
+    cost: 2,
+    desc: '연속으로 공격하여 적에게 4단 피해를 입히고 동시에 [인뢰]를 발동합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/b1/6llaixawhouc6b43hcgh1iz8utkfn1l.png',
+  },
+  으르렁: {
+    name: '으르렁',
+    amount: 2,
+    cost: 0,
+    desc: '함성을 질러 모든 적을 [중단]시킵니다.\n비용을 1 얻습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/1/11/rnzgjgmbn95q87jegao9f5ypal6bigl.png',
+  },
+  '자기류-교란 강타': {
+    name: '자기류-교란 강타',
+    amount: 1,
+    cost: 4,
+    desc: '광란의 공격으로 적에게 8단 피해를 입히고 [기절]시킵니다. 동시에 [인뢰]를 발동합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/4a/2of6sxvk5n14c25foo8jof4gtudp3f0.png',
   },
 }

@@ -87,7 +87,7 @@ const highlightMap: Record<string, string> = {
   '[격파]': 'text-red-500',
 
   '[소각]': 'text-gray-800',
-  '[일반공격]': 'text-gray-800',
+  '[일반 공격]': 'text-gray-800',
 }
 export const filterRSKeyword = (hText: string): string[] => {
   return hText

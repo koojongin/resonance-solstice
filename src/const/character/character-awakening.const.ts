@@ -144,13 +144,13 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
   },
   쌍권총: {
     name: '쌍권총',
-    desc: '[일반공격] 강화: 가우스 권총 2자루를 동시에 들고 사격합니다.',
+    desc: '[일반 공격] 강화: 가우스 권총 2자루를 동시에 들고 사격합니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/e/ef/ka8g5wkqgt70vsbajmb4e4baa233lqj.png',
   },
   과부하: {
     name: '과부하',
-    desc: '자신이 [인뢰]를 30회 부여할 때마다 다음 [일반공격] 명중 시 반드시 [우레]를 발동합니다.\n동시에 자신의 공격력이 100 증가합니다.(6초간 지속)',
+    desc: '자신이 [인뢰]를 30회 부여할 때마다 다음 [일반 공격] 명중 시 반드시 [우레]를 발동합니다.\n동시에 자신의 공격력이 100 증가합니다.(6초간 지속)',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/8/83/9frhs5bteeq029t124i6j79dqq57y4w.png',
   },
@@ -386,8 +386,8 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
       'https://patchwiki.biligame.com/images/resonance/c/c9/ekenyyx3oy8cqhlj0g63neoaa68x35a.png',
   },
 
-  영감: {
-    name: '영감',
+  '영감 - 조슈아': {
+    name: '영감 - 조슈아ㅣ',
     desc: '1장의 [블랙카드]가 생성될 때마다 자신의 공격력이 3% 증가합니다.(최대 39%)',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/f/fd/72vjp3tqdv2yaqgh4wefk3bq9yid77q.png',
@@ -398,8 +398,8 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/a/a2/9vmu50kp3z8flrsmszscyqmvwxilfg1.png',
   },
-  신생: {
-    name: '신생',
+  '신생 - 마키라': {
+    name: '신생 - 마키라',
     desc: '[다크 아트]를 사용할 때마다 자신과 체력이 가장 낮은 아군에게 체력을 3% 회복합니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/9/98/9frhs5bteeq029t124i6j79dqq57y4w.png',
@@ -595,7 +595,7 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
   },
   '추가 탄창': {
     name: '추가 탄창',
-    desc: '[일반공격]의 탄약 수가 1 증가합니다.',
+    desc: '[일반 공격]의 탄약 수가 1 증가합니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/b/be/16vfugc41vc6cyaz7s4sjnjlvusnzf7.png',
   },
@@ -695,8 +695,8 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/4/46/8bcu0bqa1gnyv6d60o7a74wm4suvq3u.png',
   },
-  사경: {
-    name: '사경',
+  '사경 - 리비아': {
+    name: '사경 - 리비아',
     desc: `빈사 시 [무적]을 3초간 얻고, 동시에 [종막의 원무곡-레드]를 즉시 사용합니다.(1회 한정)`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/9/9b/scm0w7xu5zuxrnrd2egtpdlgbdyxnco.png',
@@ -769,7 +769,7 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
   },
   '활력 장전': {
     name: '활력 장전',
-    desc: `아군이 카렌의 치유를 받을 때마다 [일반공격]의 피해가 10% 증가합니다.(최대 100%)`,
+    desc: `아군이 카렌의 치유를 받을 때마다 [일반 공격]의 피해가 10% 증가합니다.(최대 100%)`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/a/a2/9frhs5bteeq029t124i6j79dqq57y4w.png',
   },
@@ -991,7 +991,7 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
 
   화살비: {
     name: '화살비',
-    desc: `[일반공격] 과 [마그네틱 펄스] 사용 시 30% 확률로 3개의 화살을 동시에 발사합니다.`,
+    desc: `[일반 공격] 과 [마그네틱 펄스] 사용 시 30% 확률로 3개의 화살을 동시에 발사합니다.`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/9/9b/pggyrs00b5yjtiqm85kc5br9g7hp92s.png',
   },
@@ -1066,7 +1066,7 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
 
   횃불: {
     name: '횃불',
-    desc: `자신이 연소 상태일 때 [일반공격]이 [점화]를 발동합니다.`,
+    desc: `자신이 연소 상태일 때 [일반 공격]이 [점화]를 발동합니다.`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/e/ef/7w54kgiiksxpbtyphntoiywykmwfmta.png',
   },
@@ -1288,5 +1288,335 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
     desc: `손에 그린카드를 5장 가지고 있을 시 비용을 10 얻습니다.(비용 상한 초과 가능, 1회 한정)`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/e/e8/3hcertb5ou8vqeuw7gl7zlg4c7fxvr0.png',
+  },
+  '잔잔한 물결': {
+    name: '잔잔한 물결',
+    desc: `[해변의 꽃] 강화: 카드를 2장 뽑습니다 레드카드를 1장 뽑을 때마다 모든 아군의 공격력이 2% 증가합니다.(중첩 가능) 블루카드를 뽑을 때마다 모든 아군의 방어력이 2% 증가합니다.(중첩 가능) 옐로카드를 뽑을 때마다 카드 1장을 추가로 뽑습니다. 그린카드를 뽑을 때마다 카드 1장을 회수합니다. 퍼플카드를 뽑을 때마다 비용을 1만큼 얻습니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/f9/bv0ry5yx6w36zqljbuw6bwdw0zo9hup.png',
+  },
+  '세찬 조수': {
+    name: '세찬 조수',
+    desc: `매번 [분수]와 [한여름의 물거품]을 사용할 때마다 모든 아군이 [광폭] 상태가 됩니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/9b/teauai01r0fwn6q09j1mgwts7yzx0pb.png',
+  },
+  '설레는 추억': {
+    name: '설레는 추억',
+    desc: `[여름의 추억] 강화: 손에 있는 모든 카드를 덱으로 섞어넣습니다. 기록 중인 비용에 따라 현재 비용을 수정합니다. 기록한 손패 수만큼 카드를 뽑습니다. 기록한 체력만큼 아군의 체력을 회복합니다. 모든 아군의 공격력과 방어력이 3% 증가합니다.(중첩 가능) 사용 후 [소각]됩니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/b7/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  습윤: {
+    name: '습윤',
+    desc: `이번 전투에서 [일반 공격]으로 발사되는 탄약 수가 1 증가합니다. 시즈루의 물탄환이 대상에게 [습윤] 상태를 부여합니다. 대상이 받는 전자기 피해가 20% 증가합니다. 대상이 주는 화염 피해가 20% 감소합니다. 대상이 [동결] 상태가 될 확률이 10% 증가합니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/67/7vahqn04z88a5y0gghav6ylty8e8sdh.png',
+  },
+
+  '태초의 조석': {
+    name: '태초의 조석',
+    desc: '[메로페]/[비밀 통신]/[조석의 비경]/[펄서]/[초신성]의 지속시간이 2초 증가합니다.\n[조석의 비경] 지속시간 동안 모든 아군의 공격력과 방어력이 15% 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/5c/exm26k5z8the0z7tfu429tvi5bg4qca.png',
+  },
+  '웨이브 가이드': {
+    name: '웨이브 가이드',
+    desc: '모든 아군의 [파]가 입히는 피해가 50% 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/cd/sc5cci31mtdbst1e9se11wfmly448fy.png',
+  },
+  성핵: {
+    name: '성핵',
+    desc: '[신성]/[원소 신성]/[초신성]이 1장 생성될 때마다 무작위 아군의 공격력이 1% 증가합니다.(최대 30%)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e1/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  '트리플 스타': {
+    name: '트리플 스타',
+    desc: '손에 같은 카드가 3장 있을 경우 비용이 0인 이 카드를 1장 복사하여 손으로 가져옵니다.(손패 상한 초과 가능, 1회 한정)\n파생 카드 제외',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/f0/4h6pr5k95tu6qtf1hsvuxdvg5ih69xt.png',
+  },
+
+  '영감 - 라지엘': {
+    name: '영감 - 라지엘',
+    desc: '[성흔 붕괴]를 입힐 때마다 자신의 공격력이 3% 증가하빈다.(최대 99%)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/8f/m3yyzdms2otf3fpzlw3jph7b49lvm5l.png',
+  },
+  '신성한 재판': {
+    name: '신성한 재판',
+    desc: '카드가 [소각]될 때마다 30% 확률로 [옥령탄]을 1발 발사하여 적 필드를 폭격하며 모든 적에게 1단 음에너지 피해를 입히고 [부식]을 부여합니다.\n블랙카드가 [소각]되었을 경우 확률이 100%로 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/9/9d/e9wuajf84vxh0yozfsx1rhmx2zwzk1s.png',
+  },
+  '신생 - 라지엘': {
+    name: '신생 - 라지엘',
+    desc: '카드가 생성될 때마다 체력이 가장 낮은 아군의 체력을 5% 회복합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e1/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  성은: {
+    name: '성은',
+    desc: '[진리의 눈]이 빛을 한 줄기 발사할 때마다 [동조의 눈]이 생성됩니다.(2초간 지속, 중첩 가능)\n지속시간 동안, 최대 손패 수+1, 자신의 공격력/방어력+아군의 평균 공격력/방어력의 10%',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e1/liug317en57s31xrcgks9tv9yxr2970.png',
+  },
+
+  '광란 공세': {
+    name: '광란 공세',
+    desc: "'Make it better'\n[광폭] 상태의 아군의 공격력이 2% 증가합니다.(최대 50%)\n[혼란] 상태의 적의 방어력이 2% 감소합니다.(최대 50%)",
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/5b/2wql7g97n098fogt6pexptg5mphaqfb.png',
+  },
+  '반란 세력': {
+    name: '반란 세력',
+    desc: "'Don't make it bad'\n자신이 레드카드를 획득할 때마다 쥬드가 무작위 대상에게 [소란탄]을 1개 발사합니다.",
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/8d/joyt23j9opg2bw3nngw0lfiemoq3pyf.png',
+  },
+  '수확의 기쁨': {
+    name: '수확의 기쁨',
+    desc: "'Better better better'\n[광폭] 상태에 처한 아군 1명당 매초 비용을 0.02 회복합니다.",
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e1/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  '혼돈 세력': {
+    name: '혼돈 세력',
+    desc: "'under your skin'\n[혼란]/[수면]/[변신]/[속박]/[족쇄]/[저주] 상태인 적에게 입히는 최종 피해가 25% 증가합니다.",
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/77/7t3iqfhtc9mtw885jzj0lxj9utp2d42.png',
+  },
+
+  '자기력 베리어': {
+    name: '자기력 베리어',
+    desc: '1만 [볼트]를 누적할 때마다 [축전 자기장]의 지속시간 동안 모든 아군이 받는 최종 피해가 1% 감소합니다.(최대 50%)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/ba/eyjd9m3tyubd40ztpuypya2b32fbi2m.png',
+  },
+  '자기극 반전': {
+    name: '자기극 반전',
+    desc: '[자기력 함정]의 지속시간 동안, 뒷열의 아군이 [인뢰]를 5회 발동할 때마다 공격력이 1% 증가합니다.(중첩 가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/47/mwrh46q7v8vj0gu3atpkc0hejzmsck3.png',
+  },
+  '볼트 과부하': {
+    name: '볼트 과부하',
+    desc: '[볼트]를 20만 이상 누적 시, 자기력 파도가 입히는 피해가 20% 증가합니다.\n[볼트]를 50만 이상 누적 시 자기력 파도가 입히는 피해가 30% 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/c6/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  '볼트 썬더': {
+    name: '볼트 썬더',
+    desc: '[볼트]를 추가로 500 얻습니다.\n[백만볼트] 사용 후 아군의 모든 [인뢰] 키워드를 가진 카드가 입히는 피해가 15% 증가합니다.(중첩 가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/ea/fxjlkeyrsowba4ujylu7erikvcs6vuu.png',
+  },
+
+  영감: {
+    name: '영감',
+    desc: '아군이 [부식]/[잠식]을 부여할 때마다 자신의 공격력이 0.5% 증가합니다.(최대 99%)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/dd/m3yyzdms2otf3fpzlw3jph7b49lvm5l.png',
+  },
+  정적: {
+    name: '정적',
+    desc: '분노치가 150 이상 도달 시 [밤을 베는 마력의 빛!]이 궁극의 검술을 시전하여 모든 [창공검]으로 적을 관통하여 검 하나당 1단 피해를 입히고 [잠식]을 부여합니다.\n동시에 덱에 있는 블랙카드의 수만큼 [창공검]을 추가로 시전하여 적을 관통합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/d7/2aitus0lq38temdwq99h0sg3jjhyrqv.png',
+  },
+  찰나: {
+    name: '찰나',
+    desc: '[잠식의 영역] 지속시간 동안 자신이 받는 피해가 50% 감소합니다. 동시에 매초 자신의 체력을 1% 회복합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e1/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  적멸: {
+    name: '적멸',
+    desc: '전투 시작 시 3장의 [베기!]를 손으로 가져옵니다.\n자신의 분노치가 높을수록 [잠식] 상태의 적이 받는 피해가 높아집니다.(최대 50%)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/d/d8/mmakhkgw6ey4qtk90y39v9wuimvldes.png',
+  },
+
+  '거센 파도': {
+    name: '거센 파도',
+    desc: '[정신 폭풍] 사용 후, 6초 동안 카드를 1장 낼 때마다 [동반체]가 10 스태미나를 소모하여 정신 파동을 한 번 방출하고 모든 적에게 1단 피해를 입히는 동시에 방어력을 1% 감소시킵니다.(중첩 가능)\n정신 파동은 [파]입니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/b/b9/0mbggv5i7nix1qbikmulrxc38hhhhd4.png',
+  },
+  '당신과 함께': {
+    name: '당신과 함께',
+    desc: '[동반체]는 최소 50 스태미나를 가집니다.\n동시에 카드를 획득할 때마다 추가로 3 스태미나를 획득합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/fa/gs9ucfdirjfvhwzjmp0t7ocuhpsq099.png',
+  },
+  멘탈에코: {
+    name: '멘탈에코',
+    desc: '[동반체]가 최대 300 스태미나를 가집니다.\n동시에 카드를 사용할 때마다 추가로 5 스태미나를 얻습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e1/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  극변체: {
+    name: '극변체',
+    desc: '[동반체]의 스태미나가 높을수록 아일리와 [동반체]가 입히는 최종 피해가 높아집니다.(최대 85%)\n동시에 받는 최종 피해도 높아집니다.(최대 30%)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2b/s31x9qygckjbiqxef7vjvdf6qvir73k.png',
+  },
+
+  '호르몬 유도': {
+    name: '호르몬 유도',
+    desc: '[리더 스킬] 사용 시 모든 아군의 체력을 3% 회복합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a0/80juvo1al28esxju4d4hdak4ta6rcxu.png',
+  },
+  계발: {
+    name: '계발',
+    desc: '[약물 각성] 강화:\n아군을 치유하여 25%의 체력을 회복합니다.\n동시에 대상에게 걸린 제어 및 피해형 특수 효과를 제거합니다.\n대상의 체력이 30% 이상일 경우, 대상의 공격력이 2% 증가합니다.(중첩 가능)\n대상의 체력이 30% 미만일 경우, 대상의 방어력이 2% 증가합니다.(중첩 가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/70/cx0iaazp7rdobao27limvxaez86rgfb.png',
+  },
+  약사: {
+    name: '약사',
+    desc: '치유량+20%\n방어력+150',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/a6/6vxpztrsln69oi0yp1z8ma37mlzfz4m.png',
+  },
+  '대체 요법': {
+    name: '대체 요법',
+    desc: '[버리기] 명령 사용 시, 카드를 1장 버릴 때마다 모든 아군의 체력을 5% 회복합니다. ',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e1/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  '성장 인자': {
+    name: '성장 인자',
+    desc: '자신의 [일반 공격]이 주는 치유량이 2배로 증가하고, 동시에 자신을 치유합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/c3/is8etmaktpgeeayjnx7qbf6hj5t1i6j.png',
+  },
+
+  '확고한 의지': {
+    name: '확고한 의지',
+    desc: '[리더 스킬] 혹은 필살기 사용 시 자신의 공격력과 방어력이 1% 증가합니다.(최대 50%)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/c3/er1kg8my22o4bt1zvk99vt4ys9466pz.png',
+  },
+  '강화 제트탄': {
+    name: '강화 제트탄',
+    desc: '[관통통 사격]과 [파열 사격]이 피해를 입히는 동시에 [점화]와 [중상]을 발동합니다.\n[차지] 사용 후 [관통통 사격]과 [파열 사격]의 피해가 5% 증가합니다.(최대 100%)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/fa/klt9ly274unmkfzzeylzdze9m8wjg7y.png',
+  },
+  '피의 사쿠라 - 이코마': {
+    name: '피의 사쿠라 - 이코마',
+    desc: '[카바네리의 힘]에 의해 체력이 흡수된 아군의 공격력과 방어력이 3% 증가합니다.(최대 30%)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e1/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  '사경 - 이코마': {
+    name: '사경 - 이코마',
+    desc: '[검은 물약] 효과 종료 시 자신의 체력이 50% 이상일 경우 [검은 물약]을 1장 생성하여 손으로 가져옵니다. 손패 상한을 초과할 수 있지만, 체력 소모가 1% 증가합니다.\n체력이 10% 미만일 경우 [무적]을 5초간 얻고 자신의 체력을 50% 회복합니다. 동시에 덱과 버려진 덱에서 자신의 모든 스킬 카드를 손으로 가져옵니다.(1회 한정)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/4/4d/pcfjauk7oujjqncl3o0j714ytnhc9kj.png',
+  },
+
+  '유연한 대처': {
+    name: '유연한 대처',
+    desc: '30초마다 1회 발동합니다. 피해를 입을 때 필드에 [철막]이 없을 경우, 덱 혹은 버려진 덱에서 [철막] 1장을 손으로 가져옵니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/2f/czzwvni3q4zdbu9e5w5y0krkfz54cr7.png',
+  },
+  '껌 미사일': {
+    name: '껌 미사일',
+    desc: '[A-2SO]가 2회 사격할 때마다 추가로 [껌 미사일]을 1개 발사하여 적에게 1단 피해를 입히고, 동시에 [인뢰]를 발동합니다.\n[껌 미사일]은 [폭발물]입니다.\n[A-2SO]의 사격 스킬은 [일반 스킬]과 [강력 진압] 두 가지가 있습니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/7/72/k7e1l0oiufjeph1ee4osqyjfhk1x88k.png',
+  },
+  '협동 모듈': {
+    name: '협동 모듈',
+    desc: '아군 필드에 있는 [기계 유닛] 1개당 아군의 [기계 유닛]이 입히는 최종 피해가 5% 증가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e1/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  '블루 파이어': {
+    name: '블루 파이어',
+    desc: '[광염] 상태의 적이 받는 최종 피해가 20% 증가합니다.\n[광염]이 1중첩 부여될 때마다 받는 최종 피해가 추가로 5% 증가합니다.(최대 6중첩)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/a/ad/qpa87r90cd3sxqwmf7ov67cf2au7orf.png',
+  },
+
+  '단단한 마음': {
+    name: '단단한 마음',
+    desc: '[리더 스킬] 혹은 필살기 사용 시 자신의 공격력이 3% 증가합니다.(최대 99%)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/67/eu4tahk066409wu1mevjm69jbbwidpi.png',
+  },
+  '원기 회복': {
+    name: '원기 회복',
+    desc: '[나비의 춤]/[유령의 춤]이 명중할 때마다 비용을 0.06 얻습니다. 동시에 입힌 피해의 5%만큼 자신의 체력을 치유합니다.\n[환영 난무] 사용 시/[회피] 성공 시, 모든 아군의 체력을 5% 회복합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/8/80/3ddebv3tg01e9beqyduxfls6f1cx18e.png',
+  },
+  '피의 사쿠라 - 무메이': {
+    name: '피의 사쿠라 - 무메이',
+    desc: '[카바네리의 힘]에 의해 체력이 흡수된 아군의 공격력과 방어력이 3% 증가합니다.(최대 30%)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e1/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  '나비의 부름': {
+    name: '나비의 부름',
+    desc: '자신을 제외한 아군이 [리더 스킬] 혹은 필살기 사용 시 즉시 [나비의 춤] 혹은 [유령의 춤]을 1회 시전합니다.\n[환영 난무] 사용 후 모든 적이 받는 피해가 20% 증가합니다.(5초간 지속)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/58/ismogoqlt8noyzi1u8d4de3x9mc8l3t.png',
+  },
+
+  '하드 디스크': {
+    name: '하드 디스크',
+    desc: '[디스크 복구] 강화:\n파손된 [BO-X 시리즈] 하나의 체력을 50% 회복합니다.\n[BO-X 시리즈]:\n[BO-X]/[성검 BO-X]/[아이기스 BO-X]/[로켓펀치 BO-X]/[플라잉 BO-X]/[BO-F]\n[BO-X 시리즈]는 [로봇]입니다.\n사용 후 [소각]됩니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/c/c3/l98p4elwzb0a5nm4hqwmeg7b8au8cb9.png',
+  },
+  '공중 투하': {
+    name: '공중 투하',
+    desc: "[무기고] 강화:\n'Drop the beat!'\nBO-X가 소형 무기고를 검색합니다.\n[권총]/[돌격소총]/[연소 수류탄]/[무전기]를 무작위로 1장 생성하여 손으로 가져옵니다.",
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/2/23/1nkooioktwxczya10a99lrm4ruu0zse.png',
+  },
+  '전술 준비': {
+    name: '전술 준비',
+    desc: "[무기고] 강화:\n'Drop the beat!'\nBO-X가 소형 무기고를 검색합니다.\n[권총]/[돌격소총]/[연소 수류탄]/[무전기] 중에서 1장 선택하여 손으로 가져옵니다.",
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e1/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  '봉사자 BO-X': {
+    name: '봉사자 BO-X',
+    desc: '[폐기 처분] 강화:\nBO-X가 자신을 폐기 처분하고 [디스크 복구]를 2장 생성하여 덱에 추가합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/6/68/e5r3weww5y42qmxdmgo6v25d3yfpj0i.png',
+  },
+
+  선전포고: {
+    name: '선전포고',
+    desc: '[강타] 사용 후 다음 내는 레드카드의 비용이 1 감소합니다.',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/f7/4poyhkb6gqc1xrcpb8179foy2287cq0.png',
+  },
+  '강타 콤보': {
+    name: '강타 콤보',
+    desc: '[강타] 사용 후 이번 전투 동안 [교란 강타]의 공격 단수가 1 증가합니다.(8회 한정)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/f/f1/krzz0hhqhycd3ptf1utuf2b8pdnmwi3.png',
+  },
+  MIX: {
+    name: 'MIX',
+    desc: '[으르렁] 사용 후 모든 아군의 방어력이 15% 증가합니다.(6초간 지속)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/e/e1/9frhs5bteeq029t124i6j79dqq57y4w.png',
+  },
+  치얼업: {
+    name: '치얼업',
+    desc: '[강타] 사용 후 모든 아군의 공격력이 0.5% 증가합니다.(중첩 가능)',
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/1/18/sdz6f5jd6r94tg7lxxxzghz4o9gefdy.png',
   },
 }

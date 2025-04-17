@@ -1,5 +1,3 @@
-import { LYCAGIA } from '@/const/character/character.const'
-
 export interface CharacterDetail {
   SKILLS: string[]
   RESONANCES: { [key: string]: string }
@@ -90,7 +88,24 @@ const RESONANCE_UPGRADE_MATERIALS_5 = {
 export const CHARACTER_DETAIL: {
   [key: string]: CharacterDetail | { [key: string]: any }
 } = {
-  RAZIEL_THE_REMINISCE: {},
+  RAZIEL_THE_REMINISCE: {
+    SKILLS: ['메로페', '비밀 통신', '조석의 비경', '신성', '초신성'],
+    RESONANCES: {
+      1: '플레어별',
+      2: '음원 흡수',
+      3: '생기',
+      4: '변화하는 별',
+      5: '펄서',
+    },
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
+    AWAKENING: {
+      1: '태초의 조석',
+      2: '웨이브 가이드',
+      3: '투지',
+      4: '성핵',
+      5: '트리플 스타',
+    },
+  },
   LYCAGIA: {
     SKILLS: ['비스코스 폭탄', '환각 가스', '울프팩'],
     RESONANCES: {
@@ -109,9 +124,60 @@ export const CHARACTER_DETAIL: {
       5: '잡지 수정',
     },
   },
-  RAZIEL: {},
-  SHIRE: {},
-  PELOTA: {},
+  RAZIEL: {
+    SKILLS: ['수난', '서언', '심판'],
+    RESONANCES: {
+      1: '복음',
+      2: '경고',
+      3: '생기',
+      4: '헌신',
+      5: '신의 법칙',
+    },
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
+    AWAKENING: {
+      1: '영감 - 라지엘',
+      2: '신성한 재판',
+      3: '투지',
+      4: '신생 - 라지엘',
+      5: '성은',
+    },
+  },
+  SHIRE: {
+    SKILLS: ['멘탈 붕괴 레일건', '소란탄', 'MEGA 혼돈캐넌', '좌충우돌'],
+    RESONANCES: {
+      1: '헤이, 쥬드',
+      2: '구원의 손길',
+      3: '생기',
+      4: '장난 공세',
+      5: '나나나~ 나~',
+    },
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
+    AWAKENING: {
+      1: '광란 공세',
+      2: '반란 세력',
+      3: '투지',
+      4: '수확의 기쁨',
+      5: '혼돈 세력',
+    },
+  },
+  PELOTA: {
+    SKILLS: ['자기력 함정', '자기력 미끼', '축전 자기장', '십만볼트', '백만볼트'],
+    RESONANCES: {
+      1: '자력 실드',
+      2: '자력 위치추적',
+      3: '생기',
+      4: '감응의 수칙',
+      5: '이중 감전',
+    },
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
+    AWAKENING: {
+      1: '자기력 베리어',
+      2: '자기극 반전',
+      3: '투지',
+      4: '볼트 과부하',
+      5: '볼트 썬더',
+    },
+  },
   DOROTHY: {
     SKILLS: ['조준 폭탄', 'Bingo!', '대폭주'],
     RESONANCES: {
@@ -141,7 +207,7 @@ export const CHARACTER_DETAIL: {
     },
     RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     AWAKENING: {
-      1: '영감',
+      1: '영감 - 조슈아',
       2: '역류',
       3: '투지',
       4: '신생',
@@ -166,8 +232,42 @@ export const CHARACTER_DETAIL: {
       5: '혈족',
     },
   },
-  USHANA: {},
-  SUMMERSHIZURU: {},
+  USHANA: {
+    SKILLS: ['베기!', '잠식의 영역', '밤을 베는 마력의 빛!'],
+    RESONANCES: {
+      1: '노 상대',
+      2: '핑거 스냅',
+      3: '생기',
+      4: '순간',
+      5: '찰나',
+    },
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
+    AWAKENING: {
+      1: '영감',
+      2: '정적',
+      3: '투지',
+      4: '찰나',
+      5: '적멸',
+    },
+  },
+  SUMMERSHIZURU: {
+    SKILLS: ['분수', '해변의 꽃', '한여름의 물거품'],
+    RESONANCES: {
+      1: '래피드 파이어',
+      2: '쿨썸머',
+      3: '생기',
+      4: '치유의 물결',
+      5: '여름의 추억',
+    },
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
+    AWAKENING: {
+      1: '잔잔한 물결',
+      2: '세찬 조수',
+      3: '투지',
+      4: '설레는 추억',
+      5: '습윤',
+    },
+  },
   NICOLA: {
     SKILLS: ['초음속', '공습', '화력전개'],
     RESONANCES: {
@@ -247,9 +347,60 @@ export const CHARACTER_DETAIL: {
       5: '샤이닝',
     },
   },
-  JALHAY: {},
-  ITHOS: {},
-  IKUMA: {},
+  JALHAY: {
+    SKILLS: ['정신 포식', '감지', '정신 폭풍', '정서-냉정', '정서-기쁨', '정서-분노'],
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
+    RESONANCES: {
+      1: "'보이지 않는 친구'",
+      2: '선물 - 아일리',
+      3: '생기',
+      4: '정신 위압',
+      5: '완벽체',
+    },
+    AWAKENING: {
+      1: '거센 파도',
+      2: '당신과 함께',
+      3: '투지',
+      4: '멘탈에코',
+      5: '극변체',
+    },
+  },
+  ITHOS: {
+    SKILLS: ['지각 개입', '약물 각성', '계약'],
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
+    RESONANCES: {
+      1: '서방성 약제',
+      2: '지각 유도',
+      3: '생기',
+      4: '표적 치료',
+      5: '휴양',
+    },
+    AWAKENING: {
+      1: '호르몬 유도',
+      2: '계발',
+      3: '약사',
+      4: '대체 요법',
+      5: '성장 인자',
+    },
+  },
+  IKUMA: {
+    SKILLS: ['관통통 사격', '차지', '파열 사격', '검은 물약'],
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
+    RESONANCES: {
+      1: '휘감기 - 이코마',
+      2: '회심연사',
+      3: '생기',
+      4: '카바네리의 힘 - 이코마',
+      5: '검은 물약',
+    },
+    AWAKENING: {
+      1: '확고한 의지',
+      2: '강화 제트탄',
+      3: '투지',
+      4: '피의 사쿠라 - 이코마',
+      5: '사경 - 이코마',
+    },
+  },
   LISSANDRA: {
     SKILLS: ['모색', '무궁무진', '끝없는 욕망', '다크 아트', '탐사', '유성'],
     RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
@@ -268,8 +419,42 @@ export const CHARACTER_DETAIL: {
       5: '혈제',
     },
   },
-  MUMEI: {},
-  PALADI: {},
+  MUMEI: {
+    SKILLS: ['나비의 춤', '유령의 춤', '환영 난무'],
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
+    RESONANCES: {
+      1: '휘감기 - 무메이',
+      2: '바람의 춤',
+      3: '생기',
+      4: '카바네리의 힘 - 무메이',
+      5: '플레잉',
+    },
+    AWAKENING: {
+      1: '단단한 마음',
+      2: '원기 회복',
+      3: '투지',
+      4: '피의 사쿠라 - 무메이',
+      5: '나비의 부름',
+    },
+  },
+  PALADI: {
+    SKILLS: ['철막', '화염벽', '강력 진압'],
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
+    RESONANCES: {
+      1: '태연',
+      2: '화재현장',
+      3: '생기',
+      4: '비상 경계',
+      5: '전면 봉쇄',
+    },
+    AWAKENING: {
+      1: '유연한 대처',
+      2: '껌 미사일',
+      3: '투지',
+      4: '협동 모듈',
+      5: '블루 파이어',
+    },
+  },
   CONNOR: {
     SKILLS: [
       '진형 유지',
@@ -347,7 +532,7 @@ export const CHARACTER_DETAIL: {
     SKILLS: ['복음', '음에너지', '다크 아트', '형벌', '정화'],
     RESONANCES: {
       1: '은혜',
-      2: '지탱',
+      2: '지탱 - 수엔',
       3: '생기',
       4: '망녕',
       5: '일념',
@@ -434,7 +619,7 @@ export const CHARACTER_DETAIL: {
       '초신성',
     ],
     RESONANCES: {
-      1: '신생',
+      1: '신생 - 마키라',
       2: '갈망',
       3: '생기',
       4: '비밀의 샘',
@@ -574,7 +759,7 @@ export const CHARACTER_DETAIL: {
     ],
     RESONANCES: {
       1: '공명-옐로',
-      2: '선물',
+      2: '선물 - 리비아',
       3: '생기',
       4: '숙련',
       5: '공명-퍼플',
@@ -582,7 +767,7 @@ export const CHARACTER_DETAIL: {
     RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_5,
     AWAKENING: {
       1: '운명 - 리비아',
-      2: '사경',
+      2: '사경 - 리비아',
       3: '투지',
       4: '화음의 여운',
       5: '순환 - 리비아',
@@ -1067,6 +1252,50 @@ export const CHARACTER_DETAIL: {
       5: '앙코르',
     },
   },
-  SOLUM: {},
-  BOX: {},
+  SOLUM: {
+    SKILLS: ['강타', '으르렁', '자기류-교란 강타'],
+    RESONANCES: {
+      1: '허장성세',
+      2: '집착',
+      3: '생기',
+      4: '지탱 - 솔럼',
+    },
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_4,
+    AWAKENING: {
+      1: '선전포고',
+      2: '강타 콤보',
+      3: '투지',
+      4: 'MIX',
+      5: '치얼업',
+    },
+  },
+  BOX: {
+    SKILLS: [
+      '무기고',
+      '음료수 배달',
+      '폐기 처분',
+      '권총',
+      '돌격소총',
+      '연소 수류탄',
+      '무전기',
+      '디스크 복구',
+      '특제 홍차',
+      '단백질 파우더',
+      '민트 아이스',
+    ],
+    RESONANCES: {
+      1: '탈출',
+      2: '용량 확장',
+      3: '생기',
+      4: '정복자 BO-X',
+    },
+    RESONANCE_UPGRADE_MATERIALS: RESONANCE_UPGRADE_MATERIALS_4,
+    AWAKENING: {
+      1: '하드 디스크',
+      2: '공중 투하',
+      3: '투지',
+      4: '전술 준비',
+      5: '봉사자 BO-X',
+    },
+  },
 }

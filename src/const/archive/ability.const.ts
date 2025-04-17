@@ -72,12 +72,12 @@ export const ARCHIVE_ABILITIES: { [key: string]: RSArchive } = {
       'https://patchwiki.biligame.com/images/resonance/d/d1/prlp1tlci5rsk2re76zdm2itcgb8418.png',
   },
   화상: {
-    desc: '대상이 [일반공격]을 가할 때마다 1단 피해를 받습니다.(5회 유효)',
+    desc: '대상이 [일반 공격]을 가할 때마다 1단 피해를 받습니다.(5회 유효)',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/8/82/1je3doeiph1fpk3hh6xx6ooc9bvt25j.png',
   },
   광폭: {
-    desc: '대상의 [일반공격] 공격 속도가 최대로 증가하고, 동시에 대상이 입히는 [일반공격]의 피해가 2배로 증가합니다.(6초간 지속)',
+    desc: '대상의 [일반 공격] 공격 속도가 최대로 증가하고, 동시에 대상이 입히는 [일반 공격]의 피해가 2배로 증가합니다.(6초간 지속)',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/f/f3/pei7cm3ienya3aten0tw0nw56qnt6i6.png',
   },
@@ -147,7 +147,7 @@ export const ARCHIVE_ABILITIES: { [key: string]: RSArchive } = {
       'https://patchwiki.biligame.com/images/resonance/6/6a/h9jdw42yd45mmrmrk7yc3suhe5t5622.png',
   },
   냉동: {
-    desc: '대상을 얼려 [일반공격]의 공격 속도를 절반으로 감소시킵니다.(6초간 지속)',
+    desc: '대상을 얼려 [일반 공격]의 공격 속도를 절반으로 감소시킵니다.(6초간 지속)',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/1/1c/5muvn20de4wk2slkikan12te0oz1s86.png',
   },
@@ -172,12 +172,12 @@ export const ARCHIVE_ABILITIES: { [key: string]: RSArchive } = {
       'https://patchwiki.biligame.com/images/resonance/2/2c/63f3m0glklxx9cjw9qeyzjw0gzb0nbz.png',
   },
   족쇄: {
-    desc: '대상이 [일반공격]을 사용할 수 없습니다.(6초간 지속)',
+    desc: '대상이 [일반 공격]을 사용할 수 없습니다.(6초간 지속)',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/9/9b/rml9rbi03vbfuppug358ohzrvcdd92d.png',
   },
   속박: {
-    desc: '대상이 [스킬공격]을 사용할 수 없고 [일반공격]만 사용할 수 있습니다.(6초간 지속)',
+    desc: '대상이 [스킬공격]을 사용할 수 없고 [일반 공격]만 사용할 수 있습니다.(6초간 지속)',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/4/46/d0nlg7cg8xhfkbq5uu81edi5j91td8o.png',
   },
@@ -192,7 +192,7 @@ export const ARCHIVE_ABILITIES: { [key: string]: RSArchive } = {
       'https://patchwiki.biligame.com/images/resonance/2/24/jcg9iqlaizafu5f8atku8k7oh7nol19.png',
   },
   블록: {
-    desc: '블록 기간 자신이 받는 피해가 80% 감소하는 대신 [일반공격]을 사용할 수 없습니다.\n동시에 [중단]과 [기절] 효과에 면역되며 자신의 스킬 카드 사용 시 [블록] 상태가 해제됩니다.',
+    desc: '블록 기간 자신이 받는 피해가 80% 감소하는 대신 [일반 공격]을 사용할 수 없습니다.\n동시에 [중단]과 [기절] 효과에 면역되며 자신의 스킬 카드 사용 시 [블록] 상태가 해제됩니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/1/10/sl4h60u51cdhix35jkijiocbfzw2fjn.png',
   },
@@ -241,7 +241,7 @@ export const ARCHIVE_ABILITIES: { [key: string]: RSArchive } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/9/9a/8ft27kjevk95e66wpecoro2x0saii7v.png',
   },
-  일반공격: {
+  '일반 공격': {
     desc: '1의 피해를 입힙니다.\n피해량: 200%',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/8/8d/i32syleugznlpez2z7ux3ial5wkfue9.png',
