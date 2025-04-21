@@ -14,6 +14,7 @@ import {
   CHARLOTTE,
   CONNOR,
   DESIREE,
+  DOROTHY,
   DUSTIN,
   ELIOT,
   EXCALIBUR_BOX,
@@ -40,11 +41,13 @@ import {
   PRIMING,
   RACHEL,
   RINA_F,
+  SHIRE,
   SHIZURU,
   SOLUM,
   SOMMER,
   STELLA,
   SUEN,
+  SUMMERSHIZURU,
   TARA,
   TENNIE,
   VALENTINE,
@@ -70,9 +73,9 @@ import { CommentTarget } from '@/const/api/comment-target'
 
 export default function TierListPage2() {
   const tierList: { [key: string]: RSCharacter[] } = {
-    '0 Tier': [NAYUTA, STELLA, RINA_F],
-    '1 Tier': [SOMMER, JOSHUA, DUSTIN, CAROLINE, NICOLA, FENIA, TENNIE],
-    '1.5 Tier': [ANFIYA, KATAS, ARINA, AOBA, KALEYA, ARCANA, VERLAINE, KAREN],
+    '0 Tier': [NAYUTA, STELLA, RINA_F, SUMMERSHIZURU],
+    '1 Tier': [DOROTHY, SHIRE, SOMMER, JOSHUA, DUSTIN, CAROLINE, NICOLA, FENIA, TENNIE],
+    '1.5 Tier': [ANFIYA, KATAS, ARINA, AOBA, KALEYA, ARCANA, VERLAINE, SHIZURU],
     '2 Tier': [MARGIELA, LIVIA, SUEN, ILONA, YER, CONNOR, YEJUE, VALENTINE, WENSHENG],
     '3 Tier': [
       FLAN,
@@ -101,10 +104,12 @@ export default function TierListPage2() {
       YAMAARASHI,
       BOX,
       EXCALIBUR_BOX,
+      KAREN,
     ],
   }
 
-  const comment = `대충 선정 기준
+  const comment = `[이 코멘트는 2025/02/21에 작성된 내용입니다.]
+  대충 선정 기준
 
 0 Tier : 이새기들 없으면 덱만들어도 덱이 덱이 아님
 
@@ -159,6 +164,7 @@ export default function TierListPage2() {
           <span>+더스틴 추가(25/03/06)</span>
           <span>+안피아 추가(25/03/13)</span>
           <span>+소마 추가(25/03/21)</span>
+          <span>+샤이어,도로시,여름 시즈루 추가(25/04/21)</span>
         </div>
         <div className="mt-[4px] flex flex-wrap gap-[4px] items-center cursor-pointer">
           <a href={EXTERNAL_USERS['1'].link} target="_blank">
