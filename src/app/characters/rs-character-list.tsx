@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 import { RS_CHARACTERS } from '@/const/character/character.const'
 import _ from 'lodash'
 import { RsCharacterCard } from '@/app/components/character-frame/rs-character-card'
+import { RsCardSize } from '@/app/components/character-frame/rs-card-size.enum'
 
 export function RsCharacterList({
   checkedGrades,
@@ -74,11 +75,11 @@ export function RsCharacterList({
           <div className="rounded-[4px] flex items-center">"{searchedKeyword}" 검색됨</div>
         )}
       </div>
-      <div className="flex flex-wrap gap-[10px]">
+      <div className="grid grid-cols-6 gap-[10px]">
         {characters.map((character) => {
           return (
             <div key={createKey()}>
-              <RsCharacterCard character={character} />
+              <RsCharacterCard character={character} size={RsCardSize.RESPONSIVE} />
             </div>
           )
         })}

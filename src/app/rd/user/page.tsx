@@ -32,7 +32,7 @@ function convertCharacterData(decks: []) {
 
 interface SearchQuery {
   condition: { [key: string]: any }
-  opts: { page: number; limit: number }
+  opts: { page: number; limit: number; sort?: object }
   timestamp: Date
 }
 
@@ -55,6 +55,19 @@ const usePreviewOptions = [
   {
     value: true,
     label: '설정됨',
+  },
+]
+
+const SORT_OPTIONS = [
+  {
+    value: {
+      createdAt: -1,
+    },
+    label: '작성일순',
+  },
+  {
+    value: { reads: -1 },
+    label: '조회순',
   },
 ]
 
@@ -81,6 +94,7 @@ function RdUserPage() {
   const [usePreviewOption, setUsePreviewOption] = useState<{ value: any; label: string }>(
     usePreviewOptions[0],
   )
+  const [sortOption, setSortOption] = useState<{ value: any; label: string }>(SORT_OPTIONS[0])
   const [searchedLeader, setSearchedLeader] = useState<{ value: string; label: string } | null>(
     null,
   )
@@ -101,6 +115,7 @@ function RdUserPage() {
           page:
             selectedPage || (currentSearchParams.get('page') as any) || lastQuery?.opts.page || 1,
           limit: 20,
+          sort: sortOption.value,
         },
         timestamp: new Date(),
       }
@@ -148,6 +163,7 @@ function RdUserPage() {
       searchedLeader,
       selectedPartyOption,
       usePreviewOption,
+      sortOption,
     ],
   )
 
@@ -220,7 +236,6 @@ function RdUserPage() {
   }, [lastQuery])
 
   useEffect(() => {
-    console.log('얼마나 콜될까', searchParams)
     if (!searchParams) return
     if (!searchParams.get('page')) {
       const current = new URLSearchParams(Array.from(searchParams.entries()))
@@ -304,7 +319,7 @@ function RdUserPage() {
             className="p-[4px] rounded inline-flex items-center gap-[4px]"
             onClick={() => openNewTab('https://arca.live/b/resonance/129293763')}
           >
-            자동 덱 만들기 가이드
+            자신의 덱 만들기 공략
             <i className="fa-solid fa-circle-question" />
           </GradientButton>
           <GradientButton
@@ -399,6 +414,16 @@ function RdUserPage() {
             value={usePreviewOption}
             onChange={setUsePreviewOption as any}
             components={{ Option: PreviewCheckboxOptionBox }}
+          />
+        </div>
+        <div className="flex items-center gap-[10px] sm:flex-col sm:items-start sm:mt-[20px]">
+          <div className="min-w-[120px]">정렬</div>
+          <Select
+            className="sm:w-full"
+            options={SORT_OPTIONS}
+            value={sortOption}
+            onChange={setSortOption as any}
+            components={{ Option: SortOptionBox }}
           />
         </div>
         <div
@@ -517,6 +542,21 @@ function CharacterIncludeQueryChip({ condition }: { condition: any }) {
 }
 
 function PreviewCheckboxOptionBox(props: any) {
+  const { data, innerRef, innerProps, isSelected } = props
+
+  return (
+    <div
+      ref={innerRef}
+      {...innerProps}
+      className="p-[10px] flex items-center gap-[4px] cursor-pointer hover:bg-gray-100 transition"
+    >
+      <input type="radio" checked={isSelected} readOnly />
+      <span>{data.label}</span>
+    </div>
+  )
+}
+
+function SortOptionBox(props: any) {
   const { data, innerRef, innerProps, isSelected } = props
 
   return (
