@@ -23,5 +23,5 @@ export const COMMENT_TARGET_DICT: {
   'event-start-dash': { name: '이벤트 - 출발 체크인', path: '/event/start-dash' },
   'event-summer-island': { name: '이벤트 - 서머 아일랜드', path: '/event/summer-island' },
   home: { name: '메인 페이지', path: '/home' },
-  free: { name: '자유', path: '' },
+  free: { name: '자유', path: '/comments' },
 }

@@ -110,11 +110,6 @@ export function CommentBox({
           댓글 [{pagination?.total.toLocaleString()}]
         </div>
       </div>
-      <div className="flex flex-col gap-[5px]">
-        {!onShowDestination && <CommentListBox comments={comments} />}
-        {onShowDestination && <CommentListBoxWithDestination comments={comments} />}
-        {pagination && <PaginationList pagination={pagination} onSelectPage={loadComments} />}
-      </div>
       <div className="flex flex-col border border-gray-500 rounded">
         <div className="p-[10px]">
           <div className="text-[14px]">댓글 작성</div>
@@ -139,6 +134,11 @@ export function CommentBox({
             작성
           </div>
         </div>
+      </div>
+      <div className="flex flex-col gap-[5px]">
+        {!onShowDestination && <CommentListBox comments={comments} />}
+        {onShowDestination && <CommentListBoxWithDestination comments={comments} />}
+        {pagination && <PaginationList pagination={pagination} onSelectPage={loadComments} />}
       </div>
     </div>
   )
