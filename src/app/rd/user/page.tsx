@@ -487,6 +487,7 @@ function RdUserPage() {
             onChange={setSortOption as any}
             components={{ Option: SortOptionBox }}
           />
+          <span className="text-blue-800 font-bold text-[16px]">* 조회순 정렬시 인기덱 확률↑</span>
         </div>
         <div className="flex items-center gap-[10px] sm:flex-col sm:items-start sm:mt-[20px]">
           <div className="min-w-[120px]">출처</div>
@@ -497,6 +498,7 @@ function RdUserPage() {
             onChange={setSourceOption as any}
             components={{ Option: SortOptionBox }}
           />
+          <span className="text-blue-800 font-bold text-[16px]">* 출처 선택시 인증글 확률↑</span>
         </div>
         <div
           className="bg-green-400 text-white p-[10px] text-center ff-dh text-[20px] cursor-pointer"
