@@ -71,6 +71,31 @@ const SORT_OPTIONS = [
   },
 ]
 
+const SOURCE_OPTIONS = [
+  {
+    value: null,
+    label: '상관없음',
+  },
+  {
+    value: {
+      descLink: {
+        $regex: 'arca.live',
+        $options: 'i',
+      },
+    },
+    label: '아카라이브',
+  },
+  {
+    value: {
+      descLink: {
+        $regex: 'bili',
+        $options: 'i',
+      },
+    },
+    label: 'bilibili',
+  },
+]
+
 function RdUserPage() {
   const { openNewTab } = useNextDepthNavigator()
   const [searchParams, setSearchParams] = useState<URLSearchParams | null>(null)
@@ -95,6 +120,7 @@ function RdUserPage() {
     usePreviewOptions[0],
   )
   const [sortOption, setSortOption] = useState<{ value: any; label: string }>(SORT_OPTIONS[0])
+  const [sourceOption, setSourceOption] = useState<{ value: any; label: string }>(SOURCE_OPTIONS[0])
   const [searchedLeader, setSearchedLeader] = useState<{ value: string; label: string } | null>(
     null,
   )
@@ -131,6 +157,9 @@ function RdUserPage() {
           $options: 'i',
         }
       }
+      if (sourceOption?.value) {
+        _lastQuery.condition = { ..._lastQuery.condition, ...sourceOption.value }
+      }
 
       const isExistCharacterQuery =
         searchedCharacters?.length > 0 || searchedBanCharacters.length > 0
@@ -164,6 +193,7 @@ function RdUserPage() {
       selectedPartyOption,
       usePreviewOption,
       sortOption,
+      sourceOption,
     ],
   )
 
@@ -195,6 +225,8 @@ function RdUserPage() {
 
     params.delete('bans')
     params.delete('characters')
+    params.delete('source')
+    params.delete('sort')
 
     if (lastQuery.condition) {
       if (lastQuery.condition.title?.$regex) {
@@ -207,6 +239,21 @@ function RdUserPage() {
       } else {
         params.delete('leaderName')
       }
+
+      if (lastQuery.opts?.sort) {
+        if ((lastQuery.opts.sort as any).reads) {
+          params.set('sort', 'reads')
+        }
+      }
+
+      if (lastQuery.condition.descLink) {
+        const searchRegex = lastQuery.condition.descLink.$regex
+        if (searchRegex) {
+          const option = SOURCE_OPTIONS.find((o: any) => o.value?.descLink?.$regex === searchRegex)
+          if (option) params.set('source', option.label)
+        }
+      }
+
       if (lastQuery.condition.$and) {
         lastQuery.condition.$and.forEach((condition: { [key: string]: any }) => {
           const [filterKey]: string[] = Object.keys(condition)
@@ -257,6 +304,7 @@ function RdUserPage() {
         setSearchedLeader(value)
         return
       }
+
       if (key === 'characters') {
         const characterNames = searchParams.get(key) || ''
         const decodedCharacterNames = decodeURIComponent(characterNames)
@@ -287,6 +335,20 @@ function RdUserPage() {
           setSearchedBanCharacters(createdCharacters)
         }
         return
+      }
+
+      if (key === 'sort') {
+        const sortType = searchParams.get(key) || ''
+        if (sortType === 'reads') {
+          setSortOption(SORT_OPTIONS[1])
+        }
+      }
+
+      if (key === 'source') {
+        const source = searchParams.get(key) || ''
+        if (source) {
+          setSourceOption(SOURCE_OPTIONS.find((o) => o.label === source)!)
+        }
       }
     })
   }, [searchParams])
@@ -423,6 +485,16 @@ function RdUserPage() {
             options={SORT_OPTIONS}
             value={sortOption}
             onChange={setSortOption as any}
+            components={{ Option: SortOptionBox }}
+          />
+        </div>
+        <div className="flex items-center gap-[10px] sm:flex-col sm:items-start sm:mt-[20px]">
+          <div className="min-w-[120px]">출처</div>
+          <Select
+            className="sm:w-full min-w-[200px]"
+            options={SOURCE_OPTIONS}
+            value={sourceOption}
+            onChange={setSourceOption as any}
             components={{ Option: SortOptionBox }}
           />
         </div>
@@ -566,7 +638,7 @@ function SortOptionBox(props: any) {
       className="p-[10px] flex items-center gap-[4px] cursor-pointer hover:bg-gray-100 transition"
     >
       <input type="radio" checked={isSelected} readOnly />
-      <span>{data.label}</span>
+      <span className="">{data.label}</span>
     </div>
   )
 }

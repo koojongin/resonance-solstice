@@ -19,8 +19,6 @@ export default function EventSummerIslandPage() {
         />
       </div>
 
-      <div className="">한섭 미출시</div>
-
       <div className="mt-[50px]">
         <CommentBox
           data={{

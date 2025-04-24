@@ -15,7 +15,6 @@ export default function EventCheongMyeongChroniclesPage() {
           src="https://imgproxy.shelter.id/sig/w:798/rt:fill/Z3M6Ly9zaGVsdGVyLW1lZGlhL3UvYkI1OHJHc2Z1SU0wVEQ2SUtKNDNFTTM3Ukt4MS9pbWFnZXMvMTc0MjEyNTY5MzQ4NF84OTRlM2ZmZi02MzU0LTQ2MWMtYTBiMS0yMTE5Zjk5MWUwNWEucG5n"
         />
       </div>
-      <div>한섭 미출시</div>
       <div className="mt-[50px]">
         <CommentBox
           data={{
