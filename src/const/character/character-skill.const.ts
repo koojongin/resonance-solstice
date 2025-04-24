@@ -2060,6 +2060,14 @@ export const CHARACTER_SKILLS: {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/2/2a/f4mkxj5lvdwavv5whwtcypz2npc6znn.png',
   },
+  '여름의 추억': {
+    amount: 0,
+    cost: 0,
+    name: '여름의 추억',
+    desc: `손에 있는 모든 카드를 덱에 섞어넣습니다. 기록 중인 비용에 근거하여 현재 비용을 수정합니다. 기록한 손패수만큼 카드를 뽑습니다. 사용 후 [소각]됩니다.`,
+    thumbnail:
+      'https://patchwiki.biligame.com/images/resonance/5/5f/rv5ab8044ib013045jgja760jzr2h54.png',
+  },
 
   메로페: {
     name: '메로페',

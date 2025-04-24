@@ -251,7 +251,7 @@ export const CHARACTER_DETAIL: {
     },
   },
   SUMMERSHIZURU: {
-    SKILLS: ['분수', '해변의 꽃', '한여름의 물거품'],
+    SKILLS: ['분수', '해변의 꽃', '한여름의 물거품', '여름의 추억'],
     RESONANCES: {
       1: '래피드 파이어',
       2: '쿨썸머',
