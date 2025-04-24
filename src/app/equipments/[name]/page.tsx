@@ -1,10 +1,10 @@
 'use client'
 
 import { useParams } from 'next/navigation'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { GradientHeaderDiv } from '@/app/components/div/gradient-header-div'
 import { useNextDepthNavigator } from '@/services/navigation'
-import { ALL_EQUIPMENTS } from '@/const/archive/equipment.const'
+import { ALL_EQUIPMENTS, RSEquipmentType } from '@/const/archive/equipment.const'
 import {
   getMaterialBgFrameUrl,
   getMaterialBottomFrameUrl,
@@ -20,10 +20,14 @@ import { toast } from 'react-toastify'
 import { CommentBox } from '@/app/components/comment/comment-box'
 import { CommentTarget } from '@/const/api/comment-target'
 import { EquipmentRelatedBox } from '@/app/components/deck/equipment-related-box'
+import { ARMOR_SUFFIXES } from '@/const/item/options/armor.const'
+import { ACCESSORY_SUFFIXES } from '@/const/item/options/accessory.const'
 
 export default function EquipmentDetailPage() {
   const { name } = useParams()
   const { router } = useNextDepthNavigator()
+
+  const [suffixes, setSuffixes] = useState<Array<string> | undefined | null>()
 
   const decodedName = decodeURIComponent(name as string)
 
@@ -31,7 +35,6 @@ export default function EquipmentDetailPage() {
     ...ALL_EQUIPMENTS[decodedName],
     name: decodedName,
   }
-  if (!equipment) return <div>검색된 재료 데이터 없음.</div>
 
   const linkedRecommendationDecks = RECOMMENDATION_DECKS.filter((deck) =>
     deck.characters.find((c) => c.equipments?.includes(decodedName)),
@@ -41,7 +44,28 @@ export default function EquipmentDetailPage() {
     (key) => RS_FACTION[key as keyof typeof RS_FACTION] === equipment.faction,
   )
 
-  const suffixes = WEAPON_SUFFIXES[factionKey as string]
+  const getSuffixes = () => {
+    if (equipment.type === RSEquipmentType.WEAPON) {
+      return WEAPON_SUFFIXES[factionKey as string]
+    }
+    if (equipment.type === RSEquipmentType.ARMOR) {
+      return ARMOR_SUFFIXES[factionKey as string]
+    }
+    if (equipment.type === RSEquipmentType.ACCESSORY) {
+      return ACCESSORY_SUFFIXES[factionKey as string]
+    }
+    return null
+  }
+
+  const originSuffixes = getSuffixes()
+
+  const onChangeAttribute = (value: string) => {
+    setSuffixes((originSuffixes || []).filter((suffix) => suffix.indexOf(value) >= 0))
+  }
+
+  useEffect(() => {
+    setSuffixes(originSuffixes)
+  }, [])
 
   return (
     <div className="flex flex-col gap-[10px]">
@@ -107,15 +131,22 @@ export default function EquipmentDetailPage() {
       {suffixes && (
         <div className="flex flex-col gap-[4px]">
           <GradientHeaderDiv>
-            장비 속성 접미사({suffixes.length.toLocaleString()}) -{' '}
+            장비 속성 접사({suffixes.length.toLocaleString()}) -{' '}
             <span className="text-yellow-600">{equipment.faction}</span>
           </GradientHeaderDiv>
-          <div className="flex flex-col gap-[4px] max-h-[400px] overflow-y-scroll">
+          <div>
+            <input
+              className="border border-gray-800 w-full p-[8px] rounded"
+              placeholder="장비 속성 접사를 필터하려면 내용을 입력하세요."
+              onChange={(e) => onChangeAttribute(e.target.value)}
+            />
+          </div>
+          <div className="flex flex-col max-h-[400px] overflow-y-scroll border border-gray-500 rounded">
             {suffixes.map((suffix, index) => {
               return (
                 <div
                   key={`eq_de_suffix_${index}`}
-                  className="flex items-center gap-[4px] p-[2px] py-[8px] hover:bg-blue-400 hover:text-white cursor-pointer"
+                  className="border-b border-blue-gray-700 border-dashed flex items-center gap-[4px] p-[2px] py-[10px] hover:bg-blue-400 hover:text-white cursor-pointer"
                   onClick={async () => {
                     await copyToClipboard(suffix)
                     toast(`접미사가 복사되었습니다.`)
