@@ -82,7 +82,7 @@ export function RdEternalScuffleList() {
       condition,
       opts: {
         page: selectedPage,
-        limit: 18,
+        limit: 18 * 5,
         sort: { _id: -1 },
       },
     })
@@ -106,18 +106,18 @@ export function RdEternalScuffleList() {
           {pagination?.total.toLocaleString()}개의 덱이 검색됨 - `난투`
         </div>
       </div>
-      <div className="flex flex-wrap gap-[4px]">
+      <div className="grid grid-cols-3 gap-[4px] sm:grid-cols-1">
         {decks.map((deck) => {
           const { leaderName } = deck
           return (
             <div
               key={createKey()}
-              className="inline-flex flex-col w-[312px] border border-gray-400 bg-gray-200 gap-[4px] p-[4px] rounded hover:drop-shadow-2xl hover:bg-blue-gray-200"
+              className="inline-flex flex-col border border-gray-400 bg-gray-200 gap-[4px] p-[4px] rounded hover:drop-shadow-2xl hover:bg-blue-gray-200"
             >
               <div className="flex flex-wrap items-center gap-[4px]">
                 {deck.autoPreset && (
                   <div
-                    className="text-white bg-deep-purple-500 px-[4px] py-[4px] pb-[2px] ff-dh rounded cursor-pointer"
+                    className="sm:text-[24px] text-white bg-deep-purple-500 px-[4px] py-[4px] pb-[2px] ff-dh rounded cursor-pointer"
                     onClick={async () => {
                       await copyToClipboard(deck.autoPreset!)
                       toast(`"${deck.title}" 오토프리셋이 복사되었습니다.`)
@@ -131,7 +131,7 @@ export function RdEternalScuffleList() {
                   {formatNumber(deck.reads)}
                 </div>
               </div>
-              <div className="mt-auto flex gap-[2px] bg-blue-gray-200">
+              <div className="mt-auto grid grid-cols-5 gap-[2px] bg-blue-gray-200">
                 {deck.characters.map((characterData) => {
                   const { character } = characterData
                   const isLeader = leaderName === character.originName
@@ -142,7 +142,7 @@ export function RdEternalScuffleList() {
                       className="overflow-hidden"
                     >
                       <Tooltip content={<div>{character.name}</div>}>
-                        <div className="w-[60px] h-[60px] relative overflow-hidden">
+                        <div className="relative aspect-square overflow-hidden">
                           <div className="absolute w-full h-full z-40 opacity-90">
                             <RsCharacterBorderBox grade={character.grade} borderSize={3} />
                           </div>
