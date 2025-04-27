@@ -71,7 +71,7 @@ export function RdEternalScuffleList() {
   const [decks, setDecks] = useState<RecommendationUserDeck[]>([])
   const [pagination, setPagination] = useState<Pagination>()
 
-  const loadDecks = useCallback(async (selectedPage?: number) => {
+  const loadDecks = useCallback(async (selectedPage = 1) => {
     const condition: any = {
       title: {
         $regex: '난투',
@@ -83,6 +83,7 @@ export function RdEternalScuffleList() {
       opts: {
         page: selectedPage,
         limit: 18,
+        sort: { _id: -1 },
       },
     })
     const { decks: rDecks, page, total, totalPages } = result.data
