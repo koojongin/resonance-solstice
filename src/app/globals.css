@@ -44,3 +44,39 @@ body {
 .custom-toast-container * {
     font-family: var(--font-secondary);
 }
+
+
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+}
+
+.custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #aaa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+}
+
+.custom-checkbox input:checked ~ .checkmark {
+    border-color: green;
+}
+
+.custom-checkbox .checkmark i {
+    color: green;
+    font-size: 14px;
+}

@@ -2053,8 +2053,8 @@ export const CHARACTER_SKILLS: {
       'https://patchwiki.biligame.com/images/resonance/a/a1/j68p7wf4rhih2vkqdyg7k2buek2e43c.png',
   },
   '한여름의 물거품': {
-    amount: 4,
-    cost: 1,
+    amount: 1,
+    cost: 4,
     name: '한여름의 물거품',
     desc: `[일반 공격]을 다음과 같이 전환합니다. [일반 공격]의 탄약수만큼 [유영탄]을 발사합니다.(10초간 지속) [유영탄] 1발당 무작위 적에게 1단 피해를 입히고, 동시에 50% 확률로 [냉동]을 발동합니다. [유영탄]의 피해는 [일반 공격] 탄약의 3배입니다.`,
     thumbnail:
@@ -2067,6 +2067,7 @@ export const CHARACTER_SKILLS: {
     desc: `손에 있는 모든 카드를 덱에 섞어넣습니다. 기록 중인 비용에 근거하여 현재 비용을 수정합니다. 기록한 손패수만큼 카드를 뽑습니다. 사용 후 [소각]됩니다.`,
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/5/5f/rv5ab8044ib013045jgja760jzr2h54.png',
+    isGeneratedCard: true,
   },
 
   메로페: {

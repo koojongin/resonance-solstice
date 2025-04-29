@@ -96,6 +96,17 @@ const SOURCE_OPTIONS = [
   },
 ]
 
+const TITLE_FILTER_OPTIONS = [
+  {
+    value: '난투',
+    label: '난투 덱',
+  },
+  {
+    value: '개인',
+    label: '개인 저장',
+  },
+]
+
 function RdUserPage() {
   const { openNewTab } = useNextDepthNavigator()
   const [searchParams, setSearchParams] = useState<URLSearchParams | null>(null)
@@ -131,6 +142,21 @@ function RdUserPage() {
     { value: string; label: string }[]
   >([])
   const [lastQuery, setLastQuery] = useState<SearchQuery>()
+
+  const [titleFilters, setTitleFilters] = useState(
+    TITLE_FILTER_OPTIONS.reduce((acc: any, option) => {
+      acc[option.value] = false
+      return acc
+    }, {}),
+  )
+
+  const handleCheckboxChange = (e: any) => {
+    const { name, checked } = e.target
+    setTitleFilters((prevFilters: any) => ({
+      ...prevFilters,
+      [name]: checked,
+    }))
+  }
 
   const getQuery = useCallback(
     (selectedPage?: number): { condition: object; opts: { page: number; limit: number } } => {
@@ -184,9 +210,33 @@ function RdUserPage() {
           _lastQuery.condition.usePreview = usePreviewOption.value
         }
       }
+
+      const activeTitleFilters = Object.keys(titleFilters).filter((key) => titleFilters[key])
+      if (activeTitleFilters.length > 0) {
+        if (!_lastQuery.condition.$and) {
+          _lastQuery.condition.$and = []
+        }
+        if (_lastQuery.condition.title) {
+          _lastQuery.condition.$and.push({ title: _lastQuery.condition.title })
+          delete _lastQuery.condition.title
+        }
+        const andConditions = activeTitleFilters.map((filter) => {
+          return {
+            title: {
+              $regex: filter,
+              $options: 'i',
+            },
+          }
+        })
+
+        _lastQuery.condition.$and.push({
+          $nor: andConditions,
+        })
+      }
       return _lastQuery
     },
     [
+      titleFilters,
       searchedBanCharacters,
       searchedCharacters,
       searchedLeader,
@@ -405,9 +455,9 @@ function RdUserPage() {
         <div className="ff-dh text-[20px]">상세 검색</div>
         <div className="flex flex-col gap-[4px]">
           <div className="flex items-center gap-[10px] sm:flex-col sm:items-start sm:mt-[20px]">
-            <div className="min-w-[120px]">제목</div>
+            <div className="min-w-[120px]">제목(이름)</div>
             <input
-              className="border border-gray-400 min-w-[300px] p-[4px] sm:w-full"
+              className="border border-gray-400 min-w-[300px] sm:w-full p-[8px] rounded"
               type="text"
               maxLength={50}
               placeholder="덱 제목을 검색하세요."
@@ -419,6 +469,7 @@ function RdUserPage() {
               }}
             />
           </div>
+          <hr />
           <div className="flex items-center gap-[10px] sm:flex-col sm:items-start sm:mt-[20px]">
             <div className="min-w-[120px]">리더</div>
             <Select
@@ -462,6 +513,7 @@ function RdUserPage() {
               placeholder="제외할 파티원을 추가하세요"
             />
           </div>
+          <hr />
         </div>
         <div className="flex items-center gap-[10px] sm:flex-col sm:items-start sm:mt-[20px]">
           <Tooltip content="덱 데이터에 카드 배치 순서의 포함 여부를 필터합니다.">
@@ -500,10 +552,50 @@ function RdUserPage() {
           />
           <span className="text-blue-800 font-bold text-[16px]">* 출처 선택시 인증글 확률↑</span>
         </div>
+        <hr className="my-[8px]" />
+        <div className="flex items-center gap-[10px] sm:flex-col sm:items-start sm:mt-[20px]">
+          <Tooltip
+            className="max-w-[400px] text-[20px] ff-dh bg-white border-blue-gray-900 border shadow-md shadow-gray-700 text-gray-900"
+            content={
+              <div>
+                <div>개인 저장 덱, 난투 덱등 체크된 덱을 제외시킵니다.</div>
+                <br />
+                <div>
+                  덱 제목에 <span className="text-red-500">"개인", "난투"</span>가 포함된 것을
+                  제외하기 때문에 제목에 표기가 없다면 검색에 포함됩니다.
+                </div>
+              </div>
+            }
+          >
+            <div className="min-w-[120px] text-red-500 font-bold flex items-center gap-[2px]">
+              특정 덱 제외
+              <i className="fa-solid fa-circle-question text-[14px] cursor-pointer" />
+            </div>
+          </Tooltip>
+          <div className="flex items-center gap-[10px]">
+            {TITLE_FILTER_OPTIONS.map((option) => (
+              <label key={option.label} className="custom-checkbox">
+                <input
+                  type="checkbox"
+                  name={option.value}
+                  checked={titleFilters[option.value]}
+                  onChange={handleCheckboxChange}
+                />
+                <span className="w-[20px] h-[20px] border border-gray-700 rounded flex items-center justify-center mr-[4px]">
+                  {titleFilters[option.value] && <i className="fa-solid fa-check" />}
+                </span>
+                {option.label}
+              </label>
+            ))}
+
+            <span className="text-blue-800 font-bold text-[16px]">* 체크시 해당덱 제외</span>
+          </div>
+        </div>
+        <hr className="my-[8px]" />
         <div
           className="bg-green-400 text-white p-[10px] text-center ff-dh text-[20px] cursor-pointer"
           onClick={async () => {
-            await loadDecks()
+            await loadDecks(1)
           }}
         >
           검색
