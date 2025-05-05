@@ -41,7 +41,14 @@ export function CharacterAwakeningBox({ awakenings }: { awakenings: { [key: stri
       <div className="flex flex-col gap-[4px]">
         {Object.keys(awakenings).map((awakeningNumber: string, index) => {
           const awakeningName = awakenings[awakeningNumber]
-          const awakening = CHARACTER_AWAKENINGS[awakeningName]
+          const awakening = CHARACTER_AWAKENINGS[awakeningName] || {
+            name: awakeningName,
+            desc: 'No Data',
+            thumbnail: '',
+          }
+
+          console.log(awakening)
+
           return (
             <div
               key={createKey()}

@@ -387,7 +387,7 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
   },
 
   '영감 - 조슈아': {
-    name: '영감 - 조슈아ㅣ',
+    name: '영감 - 조슈아',
     desc: '1장의 [블랙카드]가 생성될 때마다 자신의 공격력이 3% 증가합니다.(최대 39%)',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/f/fd/72vjp3tqdv2yaqgh4wefk3bq9yid77q.png',
@@ -398,8 +398,9 @@ export const CHARACTER_AWAKENINGS: { [key: string]: CharacterAwakening } = {
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/a/a2/9vmu50kp3z8flrsmszscyqmvwxilfg1.png',
   },
-  '신생 - 마키라': {
-    name: '신생 - 마키라',
+
+  '신생 - 조슈아': {
+    name: '신생 - 조슈아',
     desc: '[다크 아트]를 사용할 때마다 자신과 체력이 가장 낮은 아군에게 체력을 3% 회복합니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/9/98/9frhs5bteeq029t124i6j79dqq57y4w.png',

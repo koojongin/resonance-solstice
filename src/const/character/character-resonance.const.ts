@@ -122,8 +122,8 @@ export const CHARACTER_RESONANCES: { [key: string]: CharacterResonance } = {
     clearMind: '구매 가능한 벌집형 열단열재 및 티타늄 광석 수량+50.0%',
   },
 
-  신생: {
-    name: '신생',
+  '신생 - 마키라': {
+    name: '신생 - 마키라',
     desc: '[무한 코어] 사용 후 무작위로 [과일씨], [신성] 혹은 [기이한 불꽃 - 마키라]을 1장 생성하여 손으로 가져옵니다.',
     thumbnail:
       'https://patchwiki.biligame.com/images/resonance/f/ff/i2qxfessshagn1ysd97yszxawgfmfpb.png',
