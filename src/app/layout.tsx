@@ -7,6 +7,7 @@ import GoogleAnalyticsComponent from '@/services/google-analytics'
 import 'react-toastify/dist/ReactToastify.css'
 import { ToastContainer } from 'react-toastify'
 import { Do_Hyeon, Nanum_Gothic } from 'next/font/google'
+import HttpWarningPopup from '@/app/components/http-warning-popup/http-warning-popup'
 
 const nanumGothic = Nanum_Gothic({
   subsets: ['latin'],
@@ -57,6 +58,7 @@ export default function RootLayout({
       {/* <body className={`relative bg-contain ${cls(nanumGothic.className)}`}> */}
       <body className={`relative bg-contain ff-sdn ${nanumGothic.className} ${doHyeon.className}`}>
         <ToastContainer className="custom-toast-container" />
+        <HttpWarningPopup />
         <div
           className="absolute -z-10 w-full h-full opacity-20 bg-contain"
           style={{
