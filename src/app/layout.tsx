@@ -58,7 +58,6 @@ export default function RootLayout({
       {/* <body className={`relative bg-contain ${cls(nanumGothic.className)}`}> */}
       <body className={`relative bg-contain ff-sdn ${nanumGothic.className} ${doHyeon.className}`}>
         <ToastContainer className="custom-toast-container" />
-        <HttpWarningPopup />
         <div
           className="absolute -z-10 w-full h-full opacity-20 bg-contain"
           style={{
