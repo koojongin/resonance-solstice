@@ -74,6 +74,7 @@ export default function RootLayout({
           <div className="w-full bg-[#3d414d]">
             <div className="w-[980px] m-auto py-[10px] sm:w-full px-[10px]">
               <MainHeaderBar />
+              <HttpWarningPopup />
             </div>
           </div>
           <div className="w-full flex">

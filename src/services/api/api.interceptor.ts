@@ -4,7 +4,7 @@ import { toast } from 'react-toastify'
 const isProduction = process.env.NODE_ENV === 'production'
 const apiClient = axios.create({
   // baseURL: isProduction ? 'https://resonance-solstice.store:3001/' : 'http://localhost:3001',
-  baseURL: 'http://resonance-solstice.store:3001/',
+  baseURL: 'https://resonance-solstice.store:3001/',
   headers: { 'Content-Type': 'application/json' },
 })
 
